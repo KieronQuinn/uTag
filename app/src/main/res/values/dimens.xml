@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="shared_axis_x_slide_distance">96dp</dimen>
+    <dimen name="expanded_title_margin">24dp</dimen>
+    <dimen name="bottom_nav_height">64dp</dimen>
+    <dimen name="snackbar_padding">56dp</dimen>
+    <dimen name="bottom_nav_height_margins">104dp</dimen>
+    <dimen name="app_bar_height">179dp</dimen>
+    <dimen name="app_bar_scrim_height">174dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_4">4dp</dimen>
+    <dimen name="max_card_width">400dp</dimen>
+    <dimen name="app_picker_bottom_padding">48dp</dimen>
+    <dimen name="widget_status_height">48dp</dimen>
+    <dimen name="widget_status_padding">40dp</dimen>
+    <dimen name="widget_preview_width">250dp</dimen>
+    <dimen name="widget_preview_height">200dp</dimen>
+    <dimen name="widget_preview_height_with_padding">232dp</dimen>
+    <dimen name="widget_preview_width_with_padding">282dp</dimen>
+    <dimen name="widget_smartspacer_width">112dp</dimen>
+    <dimen name="widget_smartspacer_height">63dp</dimen>
+
+    <!-- Overrides -->
+    <dimen name="sesl_switch_divider_height">1.0px</dimen>
+    <dimen name="sesl_switch_width">35dp</dimen>
+    <dimen name="sesl_switchbar_height">58dp</dimen>
+    <dimen name="sesl_switchbar_margin_end">12dp</dimen>
+    <dimen name="sesl_switchbar_margin_start">12dp</dimen>
+    <dimen name="sesl_switchbar_progress_margin_right">12dp</dimen>
+</resources>

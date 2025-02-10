@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_unknown_tag_list_safe"
+        android:title="@string/settings_uts_list_unknown_tag_safe" />
+</menu>

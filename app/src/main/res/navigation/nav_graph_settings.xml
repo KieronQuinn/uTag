@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_settings"
+    app:startDestination="@id/settingsMainFragment">
+    <fragment
+        android:id="@+id/settingsMainFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.main.SettingsMainFragment"
+        android:label="@string/settings_main_title">
+        <action
+            android:id="@+id/action_settingsMainFragment_to_settingsSecurityFragment"
+            app:destination="@id/settingsSecurityFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsMainFragment_to_settingsMapFragment"
+            app:destination="@id/settingsMapFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsMainFragment_to_settingsLocationFragment"
+            app:destination="@id/settingsLocationFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsMainFragment_to_backupRestoreFragment"
+            app:destination="@id/backupRestoreFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsMainFragment_to_settingsAdvancedFragment"
+            app:destination="@id/settingsAdvancedFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsMainFragment_to_settingsFaqFragment"
+            app:destination="@id/settingsFaqFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsEncryptionFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.encryption.SettingsEncryptionFragment"
+        android:label="@string/settings_encryption_title">
+        <action
+            android:id="@+id/action_settingsEncryptionFragment_to_settingsEncryptionSetPINFragment"
+            app:destination="@id/settingsEncryptionSetPINFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsEncryptionFragment_to_pinTimeoutFragment"
+            app:destination="@id/pinTimeoutFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsEncryptionSetPINFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.encryption.set.SettingsEncryptionSetPINFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_settingsEncryptionSetPINFragment_to_settingsEncryptionConfirmPINFragment"
+            app:destination="@id/settingsEncryptionConfirmPINFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsEncryptionConfirmPINFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.encryption.confirm.SettingsEncryptionConfirmPINFragment"
+        android:label="">
+        <argument
+            android:name="pin"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsSecurityFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.security.SettingsSecurityFragment"
+        android:label="@string/settings_main_security_title">
+        <action
+            android:id="@+id/action_settingsSecurityFragment_to_settingsEncryptionFragment"
+            app:destination="@id/settingsEncryptionFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsMapFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.map.SettingsMapFragment"
+        android:label="@string/settings_main_map_title" />
+    <fragment
+        android:id="@+id/settingsLocationFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.location.SettingsLocationFragment"
+        android:label="@string/settings_main_location_title">
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_refreshFrequencyFragment"
+            app:destination="@id/refreshFrequencyFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_safeAreaListFragment"
+            app:destination="@id/safeAreaListFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_locationStalenessFragment"
+            app:destination="@id/locationStalenessFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_widgetFrequencyFragment"
+            app:destination="@id/widgetFrequencyFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_settingsChaserFragment"
+            app:destination="@id/settingsChaserFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"  />
+        <action
+            android:id="@+id/action_settingsLocationFragment_to_unknownTagSettingsFragment"
+            app:destination="@id/unknownTagSettingsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/refreshFrequencyFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.location.refreshfrequency.RefreshFrequencyFragment"
+        android:label="@string/settings_location_location_period_title">
+        <argument
+            android:name="selected"
+            app:argType="com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository$RefreshPeriod" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaTypeFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.type.SafeAreaTypeFragment"
+        android:label="@string/safe_area_type_title">
+        <action
+            android:id="@+id/action_safeAreaTypeFragment_to_safeAreaWiFiFragment"
+            app:destination="@id/safeAreaWiFiFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_safeAreaTypeFragment_to_safeAreaLocationFragment"
+            app:destination="@id/safeAreaLocationFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="true" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaWiFiFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.wifi.SafeAreaWiFiFragment"
+        android:label="@string/safe_area_type_wifi_title" >
+        <argument
+            android:name="current_id"
+            app:argType="string" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaListFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.list.SafeAreaListFragment"
+        android:label="@string/settings_location_location_safe_area_title" >
+        <action
+            android:id="@+id/action_safeAreaListFragment_to_safeAreaTypeFragment"
+            app:destination="@id/safeAreaTypeFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_safeAreaListFragment_to_safeAreaWiFiFragment"
+            app:destination="@id/safeAreaWiFiFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_safeAreaListFragment_to_safeAreaLocationFragment"
+            app:destination="@id/safeAreaLocationFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaLocationFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.location.SafeAreaLocationFragment"
+        android:label="@string/safe_area_type_location_title">
+        <argument
+            android:name="current_id"
+            app:argType="string" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/locationStalenessFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.location.staleness.LocationStalenessFragment"
+        android:label="@string/settings_location_location_staleness_title" >
+        <argument
+            android:name="current"
+            app:argType="com.kieronquinn.app.utag.model.LocationStaleness" />
+    </fragment>
+    <fragment
+        android:id="@+id/widgetFrequencyFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.location.widgetfrequency.WidgetFrequencyFragment"
+        android:label="@string/settings_location_widget_period_title" >
+        <argument
+            android:name="current"
+            app:argType="com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository$WidgetRefreshPeriod" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinTimeoutFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.encryption.pintimeout.PinTimeoutFragment"
+        android:label="@string/settings_encryption_pin_timeout_title" >
+        <argument
+            android:name="current"
+            app:argType="com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository$PinTimeout" />
+    </fragment>
+    <fragment
+        android:id="@+id/backupRestoreFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.backuprestore.BackupRestoreFragment"
+        android:label="@string/settings_main_backup_restore_title" >
+        <action
+            android:id="@+id/action_backupRestoreFragment_to_backupFragment"
+            app:destination="@id/backupFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_backupRestoreFragment_to_restoreConfigFragment"
+            app:destination="@id/restoreConfigFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/backupFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.backuprestore.backup.BackupFragment"
+        android:label="@string/backup_restore_backup_title" >
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri" />
+    </fragment>
+    <fragment
+        android:id="@+id/restoreConfigFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.backuprestore.restore.config.RestoreConfigFragment"
+        android:label="@string/backup_restore_restore_title" >
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri" />
+        <action
+            android:id="@+id/action_restoreConfigFragment_to_restoreProgressFragment"
+            app:destination="@id/restoreProgressFragment"
+            app:popUpTo="@id/backupRestoreFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/restoreProgressFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.backuprestore.restore.progress.RestoreProgressFragment"
+        android:label="@string/backup_restore_restore_title" >
+        <argument
+            android:name="backup"
+            app:argType="com.kieronquinn.app.utag.repositories.BackupRepository$UTagBackup" />
+        <argument
+            android:name="config"
+            app:argType="com.kieronquinn.app.utag.repositories.BackupRepository$RestoreConfig" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsContentCreatorFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.contentcreator.SettingsContentCreatorFragment"
+        android:label="@string/settings_content_creator_title" />
+    <include app:graph="@navigation/nav_graph_updates" />
+    <action
+        android:id="@+id/action_global_settingsMainFragment"
+        app:destination="@id/settingsMainFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <action
+        android:id="@+id/action_global_nav_graph_updates"
+        app:destination="@id/nav_graph_updates"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popEnterAnim="@android:anim/fade_in"
+        app:popExitAnim="@android:anim/fade_out" />
+    <fragment
+        android:id="@+id/settingsAdvancedFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.advanced.SettingsAdvancedFragment"
+        android:label="@string/settings_main_advanced_title" >
+        <action
+            android:id="@+id/action_settingsAdvancedFragment_to_settingsContentCreatorFragment"
+            app:destination="@id/settingsContentCreatorFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_settingsAdvancedFragment_to_settingsLanguageFragment"
+            app:destination="@id/settingsLanguageFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsChaserFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.location.chaser.SettingsChaserFragment"
+        android:label="@string/settings_chaser_title" />
+    <fragment
+        android:id="@+id/unknownTagSettingsFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.unknowntag.settings.UnknownTagSettingsFragment"
+        android:label="@string/settings_uts_title" >
+        <action
+            android:id="@+id/action_unknownTagSettingsFragment_to_nav_graph_include_unknown_tag"
+            app:destination="@id/nav_graph_include_unknown_tag"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <include app:graph="@navigation/nav_graph_include_unknown_tag" />
+    <fragment
+        android:id="@+id/settingsFaqFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.faq.SettingsFaqFragment"
+        android:label="@string/settings_main_faq_title" />
+    <fragment
+        android:id="@+id/settingsLanguageFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.advanced.language.SettingsLanguageFragment"
+        android:label="@string/settings_advanced_language" />
+</navigation>

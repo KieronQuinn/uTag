@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_tag_device_picker_all"
+        android:title="@string/tag_picker_menu_select_all"/>
+    <item android:id="@+id/menu_tag_device_picker_none"
+        android:title="@string/tag_picker_menu_select_none"/>
+</menu>

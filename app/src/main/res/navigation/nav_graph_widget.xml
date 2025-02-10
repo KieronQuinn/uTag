@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_widget"
+    app:startDestination="@id/decisionFragment3">
+    <fragment
+        android:id="@+id/decisionFragment3"
+        android:name="com.kieronquinn.app.utag.ui.screens.decision.DecisionFragment"
+        android:label="DecisionFragment" />
+    <action
+        android:id="@+id/action_global_decisionFragment3"
+        app:destination="@id/decisionFragment3"/>
+    <fragment
+        android:id="@+id/widgetLocationFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.widget.location.WidgetLocationFragment"
+        android:label="@string/widget_location" >
+        <action
+            android:id="@+id/action_widgetLocationFragment_to_widgetDevicePickerFragment"
+            app:destination="@id/widgetDevicePickerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/widgetHistoryFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.widget.history.WidgetHistoryFragment"
+        android:label="@string/widget_history" >
+        <action
+            android:id="@+id/action_widgetHistoryFragment_to_widgetDevicePickerFragment"
+            app:destination="@id/widgetDevicePickerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <action
+        android:id="@+id/action_global_widgetHistoryFragment"
+        app:destination="@id/widgetHistoryFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popExitAnim="@anim/sesl_fragment_close_exit"
+        app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    <action
+        android:id="@+id/action_global_widgetLocationFragment"
+        app:destination="@id/widgetLocationFragment"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popExitAnim="@anim/sesl_fragment_close_exit"
+        app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    <fragment
+        android:id="@+id/widgetDevicePickerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.widget.picker.WidgetDevicePickerFragment"
+        android:label=" ">
+        <argument
+            android:name="is_multi_select"
+            app:argType="boolean" />
+        <argument
+            android:name="key"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="integer" />
+        <argument
+            android:name="pop_up_to"
+            app:argType="integer" />
+        <argument
+            android:name="selected_device_ids"
+            app:argType="string[]" />
+        <argument
+            android:name="known_device_ids"
+            app:argType="string[]" />
+    </fragment>
+</navigation>

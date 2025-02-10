@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_updates"
+    app:startDestination="@id/updatesFragment">
+    <fragment
+        android:id="@+id/updatesFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.updates.UpdatesFragment"
+        android:label="@string/updates_title" >
+        <action
+            android:id="@+id/action_updatesFragment_to_ossLicensesMenuActivity"
+            app:destination="@id/ossLicensesMenuActivity" />
+        <action
+            android:id="@+id/action_updatesFragment_to_settingsContributorsFragment"
+            app:destination="@id/settingsContributorsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_updatesFragment_to_UTagUpdateFragment"
+            app:destination="@id/UTagUpdateFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+        <action
+            android:id="@+id/action_updatesFragment_to_smartThingsUpdateFragment"
+            app:destination="@id/smartThingsUpdateFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsContributorsFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.settings.contributors.SettingsContributorsFragment"
+        android:label="@string/about_contributors" />
+    <activity
+        android:id="@+id/ossLicensesMenuActivity"
+        android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+        tools:layout="@layout/libraries_social_licenses_license_menu_activity" />
+    <fragment
+        android:id="@+id/UTagUpdateFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.update.utag.UTagUpdateFragment"
+        android:label="@string/update_title_utag" >
+        <argument
+            android:name="release"
+            app:argType="com.kieronquinn.app.utag.model.Release" />
+    </fragment>
+    <fragment
+        android:id="@+id/smartThingsUpdateFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.update.smartthings.SmartThingsUpdateFragment"
+        android:label="@string/update_title_smartthings" >
+        <argument
+            android:name="release"
+            app:argType="com.kieronquinn.app.utag.networking.model.github.ModRelease" />
+    </fragment>
+</navigation>

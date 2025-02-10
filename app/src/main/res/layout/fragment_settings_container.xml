@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:animateLayoutChanges="true"
+    android:transitionGroup="true">
+
+    <com.kieronquinn.app.utag.ui.views.HeaderView
+        android:id="@+id/headerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="false">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_location="main_content">
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/nav_host_fragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:defaultNavHost="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:navGraph="@navigation/nav_graph_settings" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    </com.kieronquinn.app.utag.ui.views.HeaderView>
+
+    <FrameLayout
+        android:id="@+id/container_bottom_navigation_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:background="@drawable/bottom_navigation_background">
+
+        <dev.oneuiproject.oneui.widget.MarginsTabLayout
+            android:id="@+id/container_bottom_navigation"
+            style="?attr/tabStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/oui_surface_color_variant"
+            android:overScrollMode="never" />
+
+    </FrameLayout>
+
+</FrameLayout>

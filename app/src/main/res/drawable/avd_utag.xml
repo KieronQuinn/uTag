@@ -1,0 +1,177 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="1024dp"
+            android:height="1024dp"
+            android:viewportWidth="1024"
+            android:viewportHeight="1024">
+            <group
+                android:pivotX="512"
+                android:pivotY="512"
+                android:scaleX="0.75"
+                android:scaleY="0.75">
+                <group
+                    android:name="logo_t"
+                    android:scaleX="0.75"
+                    android:scaleY="0.75"
+                    android:translateX="512.73824485064006"
+                    android:translateY="387.72287713739104">
+                    <group
+                        android:name="logo_a"
+                        android:translateX="-512"
+                        android:translateY="-512">
+                        <group
+                            android:translateX="510.82450343290657"
+                            android:translateY="779.31647117362672">
+                            <group
+                                android:translateX="-510.825"
+                                android:translateY="-779.316">
+                                <path
+                                    android:name="logo_p1"
+                                    android:fillAlpha="0"
+                                    android:fillColor="@color/icon_foreground"
+                                    android:pathData="M 215.6 349.1 C 228.2 335.1 248.2 327.4 266.9 331.3 C 266.5 331.3 265.6 331.1 265.1 331 C 265.1 385.5 265.1 440 265.1 494.5 C 265.2 555.1 288.8 615.1 329.9 659.7 C 351.8 683.6 378.4 703.2 407.8 716.8 C 448.8 736 495.2 743 540 737.7 C 576.6 733.5 612.2 720.6 643.2 700.7 C 667 685.4 688.1 666 705.4 643.6 C 702.9 663.8 704 684.2 703.7 704.5 C 703.5 711.3 704.5 718.3 708.3 724.2 C 713.3 732.5 723.1 738 732.9 736.7 C 743.4 735.6 752.1 727.4 755.2 717.5 C 757 712.4 756.6 706.8 756.6 701.5 L 756.6 528.5 C 756.8 519.2 755.8 509.9 756.6 500.6 C 756.8 444.1 756.6 387.6 756.6 331 C 771 328.6 786.2 332.8 797.7 341.6 C 815 354.4 824.6 376.1 824.8 397.4 C 824.8 559.4 824.8 721.4 824.8 883.5 C 825 905.8 825.5 928.3 822.7 950.5 C 816.3 1005.1 795.1 1057.9 762 1101.9 C 733.4 1140 696.2 1171.7 653.9 1193.6 C 598.6 1222.3 534.5 1233.7 472.7 1226 C 412.9 1218.8 355.5 1193.6 309.6 1154.8 C 259.3 1112.7 222.5 1054.7 206.5 991.1 C 200.4 967.4 197.1 943 196.7 918.5 C 196.7 745.9 196.7 573.2 196.7 400.6 C 196.3 382 202.7 363 215.4 349.2 z"
+                                    android:strokeWidth="1" />
+                            </group>
+                        </group>
+                        <group
+                            android:translateX="511.06242753270936"
+                            android:translateY="535.1069031227222">
+                            <group
+                                android:translateX="-511.062"
+                                android:translateY="-535.107">
+                                <path
+                                    android:name="logo_p2"
+                                    android:fillAlpha="0"
+                                    android:fillColor="@color/icon_accent"
+                                    android:pathData="M 265.1 331.1 C 265.5 331.1 266.4 331.3 266.9 331.4 C 281.8 334 295.3 343.4 303.8 355.8 C 312.1 367.7 316.9 382 317.2 396.5 C 317.2 427.5 317.2 458.5 317.2 489.5 C 317.2 514.9 322 540.4 331.6 563.9 C 347.2 602.3 375.5 635.2 410.9 656.7 C 448.7 679.8 494.7 688.9 538.6 682.7 C 574.2 677.7 608.3 662.3 635.8 639.1 C 675.5 605.9 701.2 556.2 704.3 504.5 C 705.4 491.2 704.8 477.9 704.9 464.5 L 704.9 406.5 C 704.9 400.4 704.6 394.4 705.6 388.3 C 708.2 369.1 718.3 350.5 734.6 339.7 C 741.4 335.4 748.9 331.9 757 330.9 C 757 387.4 757 443.9 757 500.5 C 756.1 509.8 757.2 519.1 757 528.4 L 757 701.4 C 757 706.7 757.3 712.3 755.6 717.4 C 752.6 727.3 743.8 735.5 733.3 736.6 C 723.5 737.8 713.7 732.4 708.7 724.1 C 704.9 718.3 703.9 711.2 704.1 704.4 C 704.4 684.1 703.2 663.7 705.8 643.5 C 688.5 665.8 667.4 685.3 643.6 700.6 C 612.6 720.6 577 733.4 540.4 737.6 C 495.5 742.9 449.1 735.9 408.2 716.7 C 378.8 703.1 352.2 683.5 330.3 659.6 C 289.3 615.1 265.7 555 265.5 494.4 C 265.5 439.9 265.5 385.4 265.5 330.9 z"
+                                    android:strokeWidth="1" />
+                            </group>
+                        </group>
+                    </group>
+                </group>
+                <group
+                    android:name="tag_t"
+                    android:scaleX="2.0499999999999998"
+                    android:scaleY="2.0499999999999998"
+                    android:translateX="512"
+                    android:translateY="529.33017734204168">
+                    <group
+                        android:name="tag_a"
+                        android:translateX="-115"
+                        android:translateY="-193">
+                        <group
+                            android:translateX="115"
+                            android:translateY="193">
+                            <group
+                                android:translateX="-256"
+                                android:translateY="-256">
+                                <path
+                                    android:name="tag_p1"
+                                    android:fillColor="@color/icon_foreground"
+                                    android:pathData="M256,63C192.8,63,141,114.9,141,178.3L141,333.7C141,397.1,192.8,449,256,449C319.2,449,371,397.1,371,333.7L371,178.3C371,114.9,319.2,63,256,63zM256,250C216.8,250,185,218.2,185,179C185,139.8,216.8,108,256,108C295.2,108,327,139.8,327,179C327,218.2,295.2,250,256,250Z" />
+                            </group>
+                        </group>
+                        <group
+                            android:translateX="115"
+                            android:translateY="116.5">
+                            <group
+                                android:translateX="-256"
+                                android:translateY="-179.5">
+                                <path
+                                    android:name="tag_p2"
+                                    android:fillColor="@color/icon_accent"
+                                    android:pathData="M256,89C206.3,89,166,129.5,166,179.5C166,229.5,206.3,270,256,270C305.7,270,346,229.5,346,179.5C346,129.5,305.7,89,256,89ZM256,250C216.8,250,185,218.2,185,179C185,139.8,216.8,108,256,108C295.2,108,327,139.8,327,179C327,218.2,295.2,250,256,250Z" />
+                            </group>
+                        </group>
+                    </group>
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="logo_t">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="500"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="translateY"
+                    android:startOffset="200"
+                    android:valueFrom="387.72287713739104"
+                    android:valueTo="614.69266473504774"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="tag_t">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="500"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="translateY"
+                    android:startOffset="200"
+                    android:valueFrom="529.33017734204168"
+                    android:valueTo="756.29999999999995"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="tag_p1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="200"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="500"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="tag_p2">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="200"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="500"
+                    android:valueFrom="1"
+                    android:valueTo="0"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="logo_p1">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="400"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+    <target android:name="logo_p2">
+        <aapt:attr name="android:animation">
+            <set>
+                <objectAnimator
+                    android:duration="400"
+                    android:interpolator="@android:interpolator/linear"
+                    android:propertyName="fillAlpha"
+                    android:startOffset="400"
+                    android:valueFrom="0"
+                    android:valueTo="1"
+                    android:valueType="floatType" />
+            </set>
+        </aapt:attr>
+    </target>
+</animated-vector>

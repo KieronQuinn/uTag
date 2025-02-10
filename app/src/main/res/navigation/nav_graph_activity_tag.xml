@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_activity_tag"
+    app:startDestination="@id/tagRootFragment">
+    <fragment
+        android:id="@+id/tagRootFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.root.TagRootFragment"
+        android:label="TagRootFragment" />
+</navigation>

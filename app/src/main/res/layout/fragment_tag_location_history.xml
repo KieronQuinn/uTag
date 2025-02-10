@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kieronquinn.app.utag.ui.views.HeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/headerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:transitionGroup="true"
+    app:back_enabled="true"
+    app:expanded="false"
+    app:hide_expanded_title="true"
+    app:title="@string/map_location_history">
+
+    <ViewFlipper
+        android:id="@+id/tag_location_history_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        app:layout_location="main_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false">
+
+            <ImageView
+                android:id="@+id/tag_location_history_map_placeholder"
+                style="@style/LocationHistoryPlaceholder"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:alpha="0.5"
+                android:src="@drawable/utag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ViewFlipper
+                android:id="@+id/tag_location_history_map_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out">
+
+                <fragment
+                    android:id="@+id/tag_location_history_map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Constrained placeholder will be shown underneath -->
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </ViewFlipper>
+
+            <include
+                android:id="@+id/tag_location_history_card"
+                style="@style/LocationHistoryCard"
+                layout="@layout/include_tag_location_history_bottom_sheet"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ViewFlipper
+                android:id="@+id/tag_location_history_progress_flipper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:layout_gravity="center"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out">
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    android:id="@+id/tag_location_history_progress"
+                    style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <androidx.appcompat.widget.SeslProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </ViewFlipper>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                app:cardBackgroundColor="@color/oui_background_color"
+                app:cardCornerRadius="32dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_16"
+                    android:drawableStart="@drawable/ic_oui_info_outline"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:gravity="center"
+                    android:text="@string/tag_location_history_loading"
+                    android:textColor="?android:textColorPrimary" />
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <include
+            android:id="@+id/tag_location_history_intro"
+            layout="@layout/include_tag_location_history_intro" />
+
+    </ViewFlipper>
+
+</com.kieronquinn.app.utag.ui.views.HeaderView>

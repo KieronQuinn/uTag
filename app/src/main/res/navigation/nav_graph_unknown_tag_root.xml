@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_unknown_tag"
+    app:startDestination="@id/unknownTagContainerFragment">
+    <fragment
+        android:id="@+id/unknownTagContainerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.unknowntag.container.UnknownTagContainerFragment"
+        android:label="UnknownTagContainerFragment" />
+</navigation>

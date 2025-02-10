@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="overscroll_enabled">2</integer>
+    <integer name="common_depth_in_duration">450</integer>
+    <integer name="common_depth_out_duration">400</integer>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <font
+        android:font="@font/oneui_sans_thin"
+        app:fontWeight="200"
+        android:fontWeight="200" />
+    <font
+        android:font="@font/oneui_sans_light"
+        app:fontWeight="300"
+        android:fontWeight="300" />
+    <font
+        android:font="@font/oneui_sans_regular"
+        app:fontWeight="400"
+        android:fontWeight="400" />
+    <font
+        android:font="@font/oneui_sans_medium"
+        app:fontWeight="500"
+        android:fontWeight="500" />
+    <font
+        android:font="@font/oneui_sans_bold"
+        app:fontWeight="700"
+        android:fontWeight="700" />
+</font-family>

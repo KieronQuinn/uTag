@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_setup"
+    app:startDestination="@id/landingFragment">
+    <fragment
+        android:id="@+id/landingFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.landing.SetupLandingFragment"
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_landing">
+        <action
+            android:id="@+id/action_landingFragment_to_setupPrivacyFragment"
+            app:destination="@id/setupPrivacyFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_landingFragment_to_setupModFragment"
+            app:destination="@id/setupModFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupPermissionsFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.permissions.SetupPermissionsFragment"
+        android:label="@string/setup_permissions" >
+        <action
+            android:id="@+id/action_setupPermissionsFragment_to_setupChaserFragment"
+            app:destination="@id/setupChaserFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+        <action
+            android:id="@+id/action_setupPermissionsFragment_to_setupUtsFragment"
+            app:destination="@id/setupUtsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+        <action
+            android:id="@+id/action_setupPermissionsFragment_to_setupAccountFragment"
+            app:destination="@id/setupAccountFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupAccountFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.account.SetupAccountFragment"
+        android:label="@string/setup_account" >
+        <action
+            android:id="@+id/action_setupAccountFragment_to_setupLoginFragment"
+            app:destination="@id/setupLoginFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupPrivacyFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.privacy.SetupPrivacyFragment"
+        android:label="">
+        <action
+            android:id="@+id/action_setupPrivacyFragment_to_setupModFragment"
+            app:destination="@id/setupModFragment"
+            app:popUpTo="@id/landingFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupModFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.mod.SetupModFragment"
+        android:label="@string/setup_mod_title" >
+        <action
+            android:id="@+id/action_setupModFragment_to_setupPermissionsFragment"
+            app:destination="@id/setupPermissionsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupChaserFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.chaser.SetupChaserFragment"
+        android:label="" >
+        <action
+            android:id="@+id/action_setupChaserFragment_to_setupUtsFragment"
+            app:destination="@id/setupUtsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+        <action
+            android:id="@+id/action_setupChaserFragment_to_setupAccountFragment"
+            app:destination="@id/setupAccountFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupUtsFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.chaser.SetupUtsFragment"
+        android:label="" >
+        <action
+            android:id="@+id/action_setupUtsFragment_to_setupAccountFragment"
+            app:destination="@id/setupAccountFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popUpTo="@id/landingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupLoginFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.setup.account.login.SetupLoginFragment"
+        android:label="@string/account_sign_in">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+</navigation>

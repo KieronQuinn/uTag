@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginVertical="@dimen/margin_16"
+    app:cardCornerRadius="32dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/oui_background_color">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_16">
+
+        <ImageView
+            android:id="@+id/item_about_icon"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="@dimen/margin_8"
+            android:src="@drawable/utag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/item_about_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center_horizontal"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textSize="24sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintTop_toBottomOf="@id/item_about_icon" />
+
+        <TextView
+            android:id="@+id/item_about_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            android:gravity="center_horizontal"
+            android:text="@string/about_version"
+            android:textColor="?android:textColorPrimary"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintTop_toBottomOf="@id/item_about_title" />
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_8"
+            app:flexWrap="wrap"
+            app:justifyContent="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_about_content">
+
+            <Button
+                android:id="@+id/item_about_contributors"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/about_contributors"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_oui_community_outline" />
+
+            <Button
+                android:id="@+id/item_about_donate"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/donate"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_oui_heart_outline" />
+
+            <Button
+                android:id="@+id/item_about_github"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/github"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_github" />
+
+            <Button
+                android:id="@+id/item_about_crowdin"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/about_crowdin"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_oui_translate" />
+
+            <Button
+                android:id="@+id/item_about_bluesky"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/bluesky"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_bluesky" />
+
+            <Button
+                android:id="@+id/item_about_xda"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/xda_thread"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_xda" />
+
+            <Button
+                android:id="@+id/item_about_libraries"
+                style="@style/UTagChip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_8"
+                android:minHeight="0dp"
+                android:text="@string/libraries"
+                android:drawableTint="?android:textColorPrimary"
+                android:drawableStart="@drawable/ic_oui_reading_mode" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

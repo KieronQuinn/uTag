@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out">
+    <include
+        android:id="@+id/nearby_rssi"
+        layout="@layout/include_nearby_rssi" />
+    <include
+        android:id="@+id/nearby_uwb"
+        layout="@layout/include_nearby_uwb"/>
+    <include
+        android:id="@+id/nearby_searching"
+        layout="@layout/include_nearby_searching"/>
+    <include
+        android:id="@+id/nearby_loading"
+        layout="@layout/include_nearby_loading"/>
+</ViewFlipper>

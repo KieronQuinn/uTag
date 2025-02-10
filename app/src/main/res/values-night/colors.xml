@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_foreground">@color/sesl_background_color_light</color>
+    <color name="icon_background">@color/oui_background_color</color>
+    <color name="preferences_background">@color/sesl_round_and_bgcolor_dark</color>
+    <color name="icon_accent">@color/colorPrimary</color>
+    <color name="colorPrimary">@color/sesl_primary_color_dark</color>
+    <color name="colorPrimaryDark">@color/sesl_primary_dark_color_dark</color>
+    <color name="splash_background">@color/black</color>
+    <color name="licenses_background">@color/black</color>
+    <color name="licenses_toolbar">@color/sesl_action_bar_background_color_dark</color>
+    <color name="oui_background_color">@color/sesl_background_color_dark</color>
+    <color name="oui_surface_color">#323232</color>
+    <color name="oui_surface_color_variant">#4e4e4e</color>
+    <color name="oui_dialog_color">@color/sesl_black</color>
+    <color name="oui_accent_color">@color/sesl_primary_color_dark</color>
+    <color name="oui_accent_color_disabled">#3e3e3e</color>
+    <color name="on_surface">@color/white</color>
+    <color name="location_history_selected_text">#4e7fe1</color>
+    <color name="location_history_address_text">@color/white</color>
+    <color name="sesl_fragment_bgcolor">#17171a</color>
+    <color name="sesl_fragment_fgcolor">#010102</color>
+
+    <color name="lostModeContent">#8c8c8c</color>
+    <color name="lostModeGuideSummary">#eaeaeb</color>
+    <color name="lostModeGuideTitle">#fafaff</color>
+    <color name="lostModeMessageNoEditable">#66fafafa</color>
+    <color name="lostModeNotifyFoundWarning">#f6874f</color>
+</resources>

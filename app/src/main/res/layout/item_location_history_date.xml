@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_ripple_16"
+    android:clickable="true"
+    android:gravity="center"
+    android:minHeight="72dp"
+    android:orientation="vertical"
+    android:padding="@dimen/margin_4"
+    tools:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/item_location_history_date_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="?android:textColorSecondary"
+        tools:text="01/01" />
+
+    <TextView
+        android:id="@+id/item_location_history_date_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="?android:textColorPrimary"
+        tools:text="Mon" />
+
+</LinearLayout>

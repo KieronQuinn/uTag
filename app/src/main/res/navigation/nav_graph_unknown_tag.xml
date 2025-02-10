@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_unknown_tag"
+    app:startDestination="@id/decisionFragment2">
+    <fragment
+        android:id="@+id/decisionFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.decision.DecisionFragment"
+        android:label="DecisionFragment"/>
+    <action
+        android:id="@+id/action_global_decisionFragment22"
+        app:destination="@id/decisionFragment2"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popExitAnim="@anim/sesl_fragment_close_exit"
+        app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    <include app:graph="@navigation/nav_graph_include_unknown_tag" />
+    <action
+        android:id="@+id/action_nav_graph_include_unknown_tag_self"
+        app:destination="@id/nav_graph_include_unknown_tag"
+        app:enterAnim="@android:anim/fade_in"
+        app:exitAnim="@android:anim/fade_out"
+        app:popExitAnim="@anim/sesl_fragment_close_exit"
+        app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+</navigation>

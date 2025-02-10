@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_gravity="bottom">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintWidth_max="@dimen/max_card_width"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:backgroundTint="@color/oui_dialog_color"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_32">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_ring_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold" />
+
+            <ViewFlipper
+                android:id="@+id/tag_ring_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/margin_24"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_16"
+                        android:src="@drawable/ic_ring"/>
+
+                    <TextView
+                        android:id="@+id/tag_ring_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/margin_16"
+                        android:textColor="?android:textColorPrimary"
+                        android:gravity="center"
+                        tools:text="@string/tag_ring_content_start"/>
+
+                    <com.kieronquinn.app.utag.ui.views.ProgressButton
+                        android:id="@+id/tag_ring_start"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="@dimen/margin_24"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/tag_ring_lottie_network"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        app:lottie_rawRes="@raw/ring"
+                        app:lottie_loop="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingBottom="@dimen/margin_24"
+                        android:textColor="?android:textColorPrimary"
+                        android:gravity="center"
+                        android:text="@string/tag_ring_content_network"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/tag_ring_stop_network"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tag_ring_stop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="@dimen/margin_24"
+                    android:orientation="vertical">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/tag_ring_lottie_bluetooth"
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="center"
+                        app:lottie_rawRes="@raw/ring"
+                        app:lottie_loop="true"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_24"
+                        android:textColor="?android:textColorPrimary"
+                        android:gravity="center"
+                        android:text="@string/tag_ring_content_stop"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/margin_24"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.kieronquinn.app.utag.ui.views.IconProgressButton
+                            android:id="@+id/tag_ring_volume_down"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"/>
+
+                        <com.kieronquinn.app.utag.ui.views.IconProgressButton
+                            android:id="@+id/tag_ring_volume_up"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginStart="@dimen/margin_8"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/tag_ring_stop_bluetooth"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tag_ring_stop" />
+
+                </LinearLayout>
+
+            </ViewFlipper>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

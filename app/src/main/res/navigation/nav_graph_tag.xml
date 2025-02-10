@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_tag"
+    app:startDestination="@id/tagMapFragment">
+
+    <fragment
+        android:id="@+id/tagMapFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.map.TagMapFragment"
+        android:label="TagMapFragment"
+        tools:layout="@layout/fragment_tag_map" >
+        <action
+            android:id="@+id/action_tagMapFragment_to_tagRingDialogFragment"
+            app:destination="@id/tagRingDialogFragment" />
+        <action
+            android:id="@+id/action_tagMapFragment_to_tagLocationHistoryFragment"
+            app:destination="@id/tagLocationHistoryFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMapFragment_to_moreContainerFragment"
+            app:destination="@id/moreContainerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"  />
+        <action
+            android:id="@+id/action_tagMapFragment_to_tagPinEntryDialogFragment"
+            app:destination="@id/tagPinEntryDialogFragment" />
+        <action
+            android:id="@+id/action_tagMapFragment_to_pickerContainerFragment"
+            app:destination="@id/pickerContainerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagRingDialogFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.ring.TagRingDialogFragment"
+        android:label="TagRingDialogFragment">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+    </dialog>
+    <fragment
+        android:id="@+id/tagLocationHistoryFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.locationhistory.TagLocationHistoryFragment"
+        android:label="TagLocationHistoryFragment">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="is_owner"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_tagLocationHistoryFragment_to_tagLocationHistoryDatePickerDialogFragment"
+            app:destination="@id/tagLocationHistoryDatePickerDialogFragment" />
+        <action
+            android:id="@+id/action_tagLocationHistoryFragment_to_tagPinEntryDialogFragment"
+            app:destination="@id/tagPinEntryDialogFragment" />
+        <action
+            android:id="@+id/action_tagLocationHistoryFragment_to_tagLocationExportDialogFragment"
+            app:destination="@id/tagLocationExportDialogFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagLocationHistoryDatePickerDialogFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.locationhistory.datepicker.TagLocationHistoryDatePickerDialogFragment"
+        android:label="TagLocationHistoryDatePickerDialogFragment" >
+        <argument
+            android:name="date"
+            app:argType="java.time.LocalDateTime" />
+    </dialog>
+    <fragment
+        android:id="@+id/moreContainerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.container.MoreContainerFragment"
+        android:label="MoreContainerFragment" >
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_name"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagPinEntryDialogFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.pinentry.TagPinEntryDialogFragment"
+        android:label="TagPinEntryDialogFragment" >
+        <argument
+            android:name="device_name"
+            app:argType="string" />
+        <argument
+            android:name="is_error"
+            app:argType="boolean" />
+        <argument
+            android:name="is_history"
+            app:argType="boolean" />
+    </dialog>
+    <fragment
+        android:id="@+id/pickerContainerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.picker.container.PickerContainerFragment"
+        android:label="PickerContainerFragment">
+        <argument
+            android:name="known_device_ids"
+            app:argType="string[]" />
+        <argument
+            android:name="selected_device_id"
+            app:argType="string" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagLocationExportDialogFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.locationhistory.export.TagLocationExportDialogFragment"
+        android:label="TagLocationExportDialogFragment" >
+        <argument
+            android:name="uri"
+            app:argType="android.net.Uri" />
+        <argument
+            android:name="locations"
+            app:argType="com.kieronquinn.app.utag.repositories.LocationHistoryRepository$ExportLocation[]" />
+    </dialog>
+
+</navigation>

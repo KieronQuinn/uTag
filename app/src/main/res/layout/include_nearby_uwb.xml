@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FinderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:ignore="SpUsage"
+    android:padding="@dimen/margin_16"
+    tools:background="@color/oui_background_color">
+
+    <FrameLayout
+        style="@style/FinderFirstPane"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ViewFlipper
+            android:id="@+id/nearby_uwb_anim_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <!-- Will show the arrow instead -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/nearby_uwb_anim"
+                android:layout_width="500dp"
+                android:layout_height="500dp"
+                android:layout_gravity="center"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/uwb_close" />
+
+        </ViewFlipper>
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:background="@drawable/background_uwb_icon"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/nearby_uwb_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@drawable/utag" />
+
+            <TextView
+                android:id="@+id/nearby_uwb_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textSize="14dp"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"
+                tools:text="SmartTag" />
+
+        </LinearLayout>
+
+        <ViewFlipper
+            android:id="@+id/nearby_uwb_arrow_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/nearby_uwb_direction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/nearby_uwb_circle"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:background="@drawable/nearby_uwb_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/nearby_uwb_lottie_detect"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="246dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/nearby_uwb_circle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/nearby_uwb_circle"
+                    app:lottie_rawRes="@raw/arrow_detect"
+                    tools:visibility="visible" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/nearby_uwb_lottie_arrow"
+                    android:layout_width="250dp"
+                    android:layout_height="250dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="246dp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@id/nearby_uwb_circle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/nearby_uwb_circle"
+                    app:lottie_loop="false"
+                    app:lottie_rawRes="@raw/arrow" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Will show the anim instead -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </ViewFlipper>
+
+        <TextView
+            android:id="@+id/nearby_uwb_debug"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </FrameLayout>
+
+    <LinearLayout
+        style="@style/FinderSecondPane"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nearby_uwb_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            tools:text="Instruction"/>
+
+        <TextView
+            android:id="@+id/nearby_uwb_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24dp"
+            tools:text="Distance" />
+
+        <ViewFlipper
+            android:id="@+id/nearby_uwb_upright_anim_flipper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:inAnimation="@android:anim/fade_in"
+            android:outAnimation="@android:anim/fade_out">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/nearby_uwb_upright_anim"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:layout_marginTop="@dimen/margin_16"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/phone_to_upright"
+                tools:background="@color/black" />
+
+        </ViewFlipper>
+
+        <FrameLayout
+            android:id="@+id/nearby_uwb_controls"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1">
+
+            <include
+                android:id="@+id/nearby_uwb_ring"
+                layout="@layout/include_nearby_ring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" />
+
+            <ImageButton
+                android:id="@+id/nearby_uwb_close"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/background_button_round"
+                android:src="@drawable/ic_oui_close" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

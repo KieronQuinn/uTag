@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tag_more_find_device_footer_items">
+        <item>@string/tag_more_find_device_footer_bull1</item>
+        <item>@string/tag_more_find_device_footer_bull2</item>
+        <item>@string/tag_more_find_device_footer_bull3</item>
+        <item>@string/tag_more_find_device_footer_bull4</item>
+        <item>@string/tag_more_find_device_footer_bull5</item>
+    </string-array>
+    <string-array name="tag_more_automation_footer_items">
+        <item>@string/tag_more_automation_footer_bull1</item>
+        <item>@string/tag_more_automation_footer_bull2</item>
+        <item>@string/tag_more_automation_footer_bull3</item>
+        <item>@string/tag_more_automation_footer_bull4</item>
+        <item>@string/tag_more_automation_footer_bull5</item>
+    </string-array>
+    <string-array name="account_warning_content_items">
+        <item>@string/account_warning_content_b1</item>
+        <item>@string/account_warning_content_b2</item>
+        <item>@string/account_warning_content_b3</item>
+    </string-array>
+    <string-array name="backup_restore_included_items">
+        <item>@string/backup_restore_included_bull1</item>
+        <item>@string/backup_restore_included_bull2</item>
+        <item>@string/backup_restore_included_bull3</item>
+        <item>@string/backup_restore_included_bull4</item>
+        <item>@string/backup_restore_included_bull5</item>
+        <item>@string/backup_restore_included_bull6</item>
+    </string-array>
+    <string-array name="backup_restore_not_included_items">
+        <item>@string/backup_restore_not_included_bull1</item>
+        <item>@string/backup_restore_not_included_bull2</item>
+        <item>@string/backup_restore_not_included_bull3</item>
+        <item>@string/backup_restore_not_included_bull4</item>
+    </string-array>
+    <string-array name="passive_mode_lost_functionality_items">
+        <item>@string/passive_mode_lost_functionality_bull1</item>
+        <item>@string/passive_mode_lost_functionality_bull2</item>
+        <item>@string/passive_mode_lost_functionality_bull3</item>
+        <item>@string/passive_mode_lost_functionality_bull4</item>
+        <item>@string/passive_mode_lost_functionality_bull5</item>
+        <item>@string/passive_mode_lost_functionality_bull6</item>
+        <item>@string/passive_mode_lost_functionality_bull7</item>
+    </string-array>
+    <string-array name="settings_content_creator_does_items">
+        <item>@string/settings_content_creator_does_bull1</item>
+        <item>@string/settings_content_creator_does_bull2</item>
+        <item>@string/settings_content_creator_does_bull3</item>
+        <item>@string/settings_content_creator_does_bull4</item>
+        <item>@string/settings_content_creator_does_bull5</item>
+        <item>@string/settings_content_creator_does_bull6</item>
+        <item>@string/settings_content_creator_does_bull7</item>
+    </string-array>
+</resources>

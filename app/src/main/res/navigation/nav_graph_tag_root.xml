@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_tag_root"
+    app:startDestination="@id/decisionFragment">
+    <fragment
+        android:id="@+id/decisionFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.decision.DecisionFragment"
+        android:label="DecisionFragment" />
+    <action
+        android:id="@+id/action_global_decisionFragment2"
+        app:destination="@id/decisionFragment"
+        app:popUpTo="@id/nav_graph_tag_root" />
+    <fragment
+        android:id="@+id/tagContainerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.container.TagContainerFragment"
+        android:label="TagContainerFragment" />
+    <action
+        android:id="@+id/action_global_tagContainerFragment"
+        app:destination="@id/tagContainerFragment"
+        app:popUpTo="@id/nav_graph_tag_root" />
+    <fragment
+        android:id="@+id/tagLandingFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.landing.TagLandingFragment"
+        android:label="TagLandingFragment" />
+    <action
+        android:id="@+id/action_global_tagLandingFragment"
+        app:destination="@id/tagLandingFragment"
+        app:popUpTo="@id/nav_graph_tag_root" />
+</navigation>

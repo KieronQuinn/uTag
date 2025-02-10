@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.uTag.Splash" parent="Theme.uTag.Splash.Base">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/avd_utag</item>
+    </style>
+</resources>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="map_timestamp_minute">
+        <item quantity="one">@string/map_timestamp_minute_ago</item>
+        <item quantity="other">@string/map_timestamp_minutes_ago</item>
+    </plurals>
+    <plurals name="map_timestamp_hour">
+        <item quantity="one">@string/map_timestamp_hour_ago</item>
+        <item quantity="other">@string/map_timestamp_hours_ago</item>
+    </plurals>
+    <plurals name="notification_title_background_service">
+        <item quantity="one">@string/notification_title_background_service_one</item>
+        <item quantity="other">@string/notification_title_background_service_other</item>
+    </plurals>
+    <plurals name="tag_more_notify_when_disconnected_content_enabled">
+        <item quantity="one">@string/tag_more_notify_when_disconnected_content_enabled_one</item>
+        <item quantity="other">@string/tag_more_notify_when_disconnected_content_enabled_other</item>
+    </plurals>
+    <plurals name="settings_chaser_count_content">
+        <item quantity="one">@string/settings_chaser_count_content_one</item>
+        <item quantity="other">@string/settings_chaser_count_content_other</item>
+    </plurals>
+    <plurals name="notification_title_unknown_tag">
+        <item quantity="one">@string/notification_title_unknown_tag_one</item>
+        <item quantity="other">@string/notification_title_unknown_tag_other</item>
+    </plurals>
+    <plurals name="notification_content_unknown_tag">
+        <item quantity="one">@string/notification_content_unknown_tag_one</item>
+        <item quantity="other">@string/notification_content_unknown_tag_other</item>
+    </plurals>
+</resources>

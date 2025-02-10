@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:minHeight="64dp"
+    tools:layout_gravity="center">
+
+    <TextView
+        android:id="@+id/item_location_history_time"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_16"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="12:00\n-\n13:00" />
+
+    <View
+        android:id="@+id/item_location_history_line_upper"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/location_history_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_location_history_point"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="@id/item_location_history_point"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0"
+        tools:visibility="gone" />
+
+    <View
+        android:id="@+id/item_location_history_line_lower"
+        android:layout_width="1dp"
+        android:layout_height="0dp"
+        android:background="@color/location_history_line"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/item_location_history_point"
+        app:layout_constraintHeight_percent="0.5"
+        app:layout_constraintStart_toStartOf="@id/item_location_history_point"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1" />
+
+    <ImageView
+        android:id="@+id/item_location_history_point"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="@dimen/margin_16"
+        android:src="@drawable/ic_location_history_circle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/item_location_history_time"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/item_location_history_marker"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_marker_location_history"
+        app:layout_constraintBottom_toBottomOf="@id/item_location_history_point"
+        app:layout_constraintEnd_toEndOf="@id/item_location_history_point"
+        app:layout_constraintStart_toStartOf="@id/item_location_history_point"
+        app:layout_constraintTop_toTopOf="@id/item_location_history_point" />
+
+    <ImageView
+        android:id="@+id/item_location_history_focus_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_8"
+        android:src="@drawable/location_history_focus_bubble"
+        app:layout_constraintBottom_toBottomOf="@id/item_location_history_point"
+        app:layout_constraintStart_toEndOf="@id/item_location_history_point"
+        app:layout_constraintTop_toTopOf="@id/item_location_history_point" />
+
+    <TextView
+        android:id="@+id/item_location_history_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:layout_marginEnd="@dimen/margin_16"
+        android:layout_marginBottom="@dimen/margin_8"
+        android:textColor="@color/location_history_address_text"
+        android:background="@drawable/location_history_bubble"
+        android:padding="@dimen/margin_8"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0"
+        app:layout_constraintStart_toEndOf="@id/item_location_history_focus_bubble"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Address"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

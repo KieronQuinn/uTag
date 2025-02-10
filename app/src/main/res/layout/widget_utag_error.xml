@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_widget"
+    android:clipToOutline="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:outlineProvider="background"
+    android:paddingHorizontal="@dimen/margin_16"
+    tools:layout_gravity="center"
+    tools:layout_height="250dp"
+    tools:layout_width="350dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/widget_utag_map_error"
+            style="@style/WidgetText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeMinTextSize="1sp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:gravity="center|bottom"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/on_surface"
+            tools:fontFamily="sans-serif"
+            tools:text="@string/widget_error_encryption" />
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.1" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ImageButton
+            android:id="@+id/widget_utag_map_refresh"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|center"
+            android:background="@drawable/rounded_ripple_48"
+            android:padding="@dimen/margin_8"
+            android:src="@drawable/ic_oui_refresh"
+            android:tint="@color/on_surface" />
+
+        <ProgressBar
+            android:id="@+id/widget_utag_map_progress"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="top|center"
+            android:indeterminate="true"
+            android:padding="@dimen/margin_8"
+            android:indeterminateDrawable="@drawable/samsung_progress"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</LinearLayout>

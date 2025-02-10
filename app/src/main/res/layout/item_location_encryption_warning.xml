@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_oui_error"
+        android:layout_marginHorizontal="@dimen/margin_16"
+        android:layout_marginVertical="@dimen/margin_8"
+        android:drawablePadding="@dimen/margin_16"
+        android:padding="@dimen/margin_8"
+        android:background="@drawable/background_card"
+        android:backgroundTint="@color/oui_surface_color_variant"
+        android:textColor="?android:textColorPrimary"
+        android:text="@string/tag_location_history_decrypt_failed" />
+
+
+</FrameLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:layout_gravity="center">
+    <Button
+        android:id="@+id/action_layout_save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="@dimen/margin_8"
+        android:background="@drawable/rounded_ripple_32"
+        android:drawableStart="@drawable/ic_oui_checkbox_checked_outline"
+        android:drawablePadding="@dimen/margin_16"
+        android:paddingVertical="12dp"
+        android:paddingStart="@dimen/margin_8"
+        android:paddingEnd="@dimen/margin_16"
+        android:text="@string/safe_area_save"
+        android:textAllCaps="false"
+        android:textStyle="bold" />
+</FrameLayout>

@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_tag_more"
+    app:startDestination="@id/moreMainFragment">
+
+    <fragment
+        android:id="@+id/moreMainFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.main.MoreMainFragment"
+        android:label="@string/map_more" >
+        <action
+            android:id="@+id/action_moreMainFragment_to_lostModeGuideFragment"
+            app:destination="@id/lostModeGuideFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_lostModeSettingsFragment"
+            app:destination="@id/lostModeSettingsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagPinEntryDialogFragment2"
+            app:destination="@id/tagPinEntryDialogFragment2" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMoreBatteryDialogFragment"
+            app:destination="@id/tagMoreBatteryDialogFragment" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMoreNearbyFragment"
+            app:destination="@id/tagMoreNearbyFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"  />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMoreFindDeviceFragment"
+            app:destination="@id/tagMoreFindDeviceFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMoreAutomationFragment"
+            app:destination="@id/tagMoreAutomationFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMoreNotifyDisconnectFragment"
+            app:destination="@id/tagMoreNotifyDisconnectFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_moreMainFragment_to_tagMorePassiveModeFragment"
+            app:destination="@id/tagMorePassiveModeFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostModeGuideFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.lostmode.guide.LostModeGuideFragment"
+        android:label="@string/tag_more_lost_mode_title">
+        <action
+            android:id="@+id/action_lostModeGuideFragment_to_lostModeSettingsFragment"
+            app:popUpTo="@id/moreMainFragment"
+            app:destination="@id/lostModeSettingsFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <argument
+            android:name="is_connected"
+            app:argType="boolean" />
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostModeSettingsFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.lostmode.settings.LostModeSettingsFragment"
+        android:label="@string/tag_more_lost_mode_title">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_lostModeSettingsFragment_to_lostModeCustomURLFragment"
+            app:destination="@id/lostModeCustomURLFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <dialog
+        android:id="@+id/tagPinEntryDialogFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.pinentry.TagPinEntryDialogFragment"
+        android:label=" ">
+        <argument
+            android:name="device_name"
+            app:argType="string" />
+        <argument
+            android:name="is_error"
+            app:argType="boolean" />
+        <argument
+            android:name="is_history"
+            app:argType="boolean" />
+    </dialog>
+    <dialog
+        android:id="@+id/tagMoreBatteryDialogFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.battery.TagMoreBatteryDialogFragment"
+        android:label=" " >
+        <argument
+            android:name="level"
+            app:argType="com.kieronquinn.app.utag.model.BatteryLevel" />
+    </dialog>
+    <fragment
+        android:id="@+id/tagMoreNearbyFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.nearby.TagMoreNearbyFragment"
+        android:label="TagMoreNearbyFragment" >
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="supports_uwb"
+            app:argType="boolean" />
+        <argument
+            android:name="icon_url"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreFindDeviceFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.finddevice.TagMoreFindDeviceFragment"
+        android:label="@string/tag_more_find_device_title" >
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="is_shared_device"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreAutomationFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.TagMoreAutomationFragment"
+        android:label="@string/tag_more_automation_title" >
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="is_shared_tag"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_tagMoreAutomationFragment_to_tagMoreAutomationPermissionFragment"
+            app:destination="@id/tagMoreAutomationPermissionFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMoreAutomationFragment_to_tagMoreAutomationTypeFragment"
+            app:destination="@id/tagMoreAutomationTypeFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreAutomationPermissionFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.permission.TagMoreAutomationPermissionFragment"
+        android:label="@string/tag_more_automation_permission_title" />
+    <fragment
+        android:id="@+id/tagMoreAutomationTypeFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.type.TagMoreAutomationTypeFragment"
+        android:label="TagMoreAutomationTypeFragment" >
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="com.kieronquinn.app.utag.repositories.RulesRepository$TagButtonAction" />
+        <action
+            android:id="@+id/action_tagMoreAutomationTypeFragment_to_tagMoreAutomationAppPickerFragment"
+            app:destination="@id/tagMoreAutomationAppPickerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMoreAutomationTypeFragment_to_tagMoreAutomationShortcutPickerFragment"
+            app:destination="@id/tagMoreAutomationShortcutPickerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMoreAutomationTypeFragment_to_tagMoreAutomationTaskerFragment"
+            app:destination="@id/tagMoreAutomationTaskerFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreAutomationAppPickerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.apppicker.TagMoreAutomationAppPickerFragment"
+        android:label="@string/tag_more_automation_type_app_title">
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="com.kieronquinn.app.utag.repositories.RulesRepository$TagButtonAction" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreAutomationShortcutPickerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.shortcutpicker.TagMoreAutomationShortcutPickerFragment"
+        android:label="@string/tag_more_automation_type_shortcut_title">
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="com.kieronquinn.app.utag.repositories.RulesRepository$TagButtonAction" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreAutomationTaskerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.automation.tasker.TagMoreAutomationTaskerFragment"
+        android:label="@string/tag_more_automation_type_tasker_title">
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="action"
+            app:argType="com.kieronquinn.app.utag.repositories.RulesRepository$TagButtonAction" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMoreNotifyDisconnectFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.notifydisconnect.TagMoreNotifyDisconnectFragment"
+        android:label="@string/tag_more_notify_when_disconnected_title">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_tagMoreNotifyDisconnectFragment_to_safeAreaTypeFragment2"
+            app:destination="@id/safeAreaTypeFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMoreNotifyDisconnectFragment_to_safeAreaWiFiFragment2"
+            app:destination="@id/safeAreaWiFiFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMoreNotifyDisconnectFragment_to_safeAreaLocationFragment2"
+            app:destination="@id/safeAreaLocationFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaTypeFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.type.SafeAreaTypeFragment"
+        android:label="@string/safe_area_type_title" >
+        <action
+            android:id="@+id/action_safeAreaTypeFragment2_to_safeAreaWiFiFragment2"
+            app:destination="@id/safeAreaWiFiFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="false" />
+        <action
+            android:id="@+id/action_safeAreaTypeFragment2_to_safeAreaLocationFragment2"
+            app:destination="@id/safeAreaLocationFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaWiFiFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.wifi.SafeAreaWiFiFragment"
+        android:label="@string/safe_area_type_wifi_title">
+        <argument
+            android:name="current_id"
+            app:argType="string" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/safeAreaLocationFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.location.SafeAreaLocationFragment"
+        android:label="@string/safe_area_type_location_title">
+        <argument
+            android:name="current_id"
+            app:argType="string" />
+        <argument
+            android:name="adding_device_id"
+            app:argType="string" />
+        <argument
+            android:name="is_settings"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/lostModeCustomURLFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.lostmode.settings.customurl.LostModeCustomURLFragment"
+        android:label="@string/lost_mode_settings_custom_url_title">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagMorePassiveModeFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.passivemode.TagMorePassiveModeFragment"
+        android:label="@string/tag_more_passive_mode_title" >
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+    </fragment>
+</navigation>

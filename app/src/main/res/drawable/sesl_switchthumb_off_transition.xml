@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<animated-vector
+    android:drawable="@drawable/sesl_switchthumb_off_pressed"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <target
+        android:animation="@anim/sesl_switchthumb_strokeparentlink_scaley_0"
+        android:name="c1s3"/>
+    <target
+        android:animation="@anim/sesl_switchthumb_stroke_ellipsepath1custom1_fill1_s3pg1p2_pressed"
+        android:name="s3pg1p10"/>
+    <target
+        android:animation="@anim/sesl_switchthumb_fillparentlink_scaley_4"
+        android:name="c1s2"/>
+    <target
+        android:animation="@anim/sesl_switchthumb_parent_scaley_8"
+        android:name="c1"/>
+</animated-vector>

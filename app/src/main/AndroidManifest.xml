@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CONNECTED_DEVICE"/>
+
+    <!-- Used to install updates & SmartThings mod -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <uses-permission android:name="android.permission.REQUEST_DELETE_PACKAGES" />
+
+    <!-- Used by Find my Device -->
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"
+        tools:ignore="ProtectedPermissions" />
+
+    <!-- Used for Wi-Fi based Safe Area & required for connected device foreground service -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <!-- Used for Location based Safe Area & in-app location marker -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
+
+    <!-- Required on older Android versions to get Bluetooth state -->
+    <uses-permission android:name="android.permission.BLUETOOTH"
+        android:maxSdkVersion="30" />
+
+    <!-- Used for Custom Automations to launch any app -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES"
+        tools:ignore="QueryAllPackagesPermission" />
+
+    <!-- Required by AndroidX UWB -->
+    <uses-permission android:name="android.permission.UWB_RANGING"/>
+
+    <application
+        android:allowBackup="false"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="false"
+        android:icon="@mipmap/ic_launcher"
+        android:name=".Application"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.uTag.Splash"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="tiramisu">
+
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:launchMode="singleInstance"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/app_shortcuts" />
+        </activity>
+
+        <activity
+            android:name=".ui.activities.TagActivity"
+            android:launchMode="singleInstance"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${applicationId}.MAP" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.UnsupportedIntentActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.uTag.Transparent"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:exported="true"/>
+
+        <activity
+            android:name=".ui.activities.WidgetErrorMessageActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.uTag.Transparent"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:exported="true"/>
+
+        <activity
+            android:name=".ui.activities.BatteryOptimisationTrampolineActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.uTag.Transparent"/>
+
+        <activity android:name=".ui.activities.FindMyDeviceActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.uTag"
+            android:launchMode="singleInstance"
+            android:showWhenLocked="true"
+            android:showOnLockScreen="true"
+            android:noHistory="true"/>
+
+        <activity
+            android:name=".ui.activities.LocationWidgetConfigurationActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.uTag"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.HistoryWidgetConfigurationActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.uTag"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.AuthResponseActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleInstance"
+            android:enabled="false"
+            android:theme="@style/Theme.uTag.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/auth_redirect_uri_host"
+                    android:scheme="@string/auth_redirect_uri_scheme" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.activities.UnknownTagActivity"
+            android:theme="@style/Theme.uTag"
+            android:exported="false"/>
+
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesMenuActivity"
+            android:theme="@style/Theme.uTag.OSS" />
+
+        <activity
+            android:name="com.google.android.gms.oss.licenses.OssLicensesActivity"
+            android:theme="@style/Theme.uTag.OSS" />
+
+        <receiver android:name=".receivers.BootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.GeofenceReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.action.GEOFENCE"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receivers.ServiceRetryReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.action.RETRY"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".service.UTagForegroundService"
+            android:foregroundServiceType="connectedDevice"
+            android:process=":service"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="${applicationId}.action.SCAN"/>
+                <action android:name="${applicationId}.action.LOCATION"/>
+                <action android:name="${applicationId}.action.REFRESH_WIDGET"/>
+            </intent-filter>
+        </service>
+
+        <service
+            android:name=".service.UTagFindMyDeviceService"
+            android:process=":service"
+            android:foregroundServiceType="connectedDevice"/>
+
+        <service android:name=".service.UTagLaunchIntentService"/>
+        
+        <provider
+            android:authorities="${applicationId}.fakefmm"
+            android:name=".providers.FakeFmmSupportProvider"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <provider
+            android:authorities="${applicationId}.settings"
+            android:name=".providers.SettingsProvider"
+            android:exported="false" />
+
+        <provider
+            android:authorities="${applicationId}.encryptedsettings"
+            android:name=".providers.EncryptedSettingsProvider"
+            android:exported="false" />
+
+        <provider
+            android:authorities="${applicationId}.auth"
+            android:name=".providers.AuthProvider"
+            android:exported="false" />
+
+        <!-- The pin provider runs as the service process since it holds a reference to the PIN -->
+        <provider
+            android:authorities="${applicationId}.pin"
+            android:name=".providers.PinProvider"
+            android:process=":service"
+            android:exported="false" />
+
+        <!-- The passive provider runs as the service process since it is updated from there -->
+        <provider
+            android:authorities="${applicationId}.passive"
+            android:name=".providers.PassiveModeProvider"
+            android:process=":service"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <!-- Provider is exported as its use in widgets requires it. Package checks are in place -->
+        <provider
+            android:name=".providers.EncryptedFileProvider"
+            android:authorities="${applicationId}.encryptedprovider"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- Provider is exported, package checks are in place -->
+        <provider
+            android:name=".providers.UTagPassiveModeProvider"
+            android:authorities="${applicationId}.passivemode"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- Provider is exported, package checks are in place -->
+        <provider
+            android:name=".providers.UTagXposedCrashReportProvider"
+            android:authorities="${applicationId}.crashreport"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- Provider is exported, package checks are in place -->
+        <provider
+            android:name=".providers.UTagXposedProvider"
+            android:authorities="${applicationId}.xposed"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <!-- Widgets run as service to use the background tag states -->
+        <receiver
+            android:name=".providers.UTagWidgetProvider"
+            android:label="@string/widget_location"
+            android:process=":service"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_utag" />
+        </receiver>
+
+        <receiver
+            android:name=".providers.UTagHistoryWidgetProvider"
+            android:label="@string/widget_history"
+            android:process=":service"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_utag_history" />
+        </receiver>
+
+        <provider
+            android:name=".providers.LeftBehindSmartspacerTargetProvider"
+            android:authorities="${applicationId}.target.leftbehind"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_TARGETS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kieronquinn.app.smartspacer.TARGET" />
+            </intent-filter>
+        </provider>
+
+        <provider
+            android:name=".providers.LocationSmartspacerTargetProvider"
+            android:authorities="${applicationId}.target.location"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_TARGETS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kieronquinn.app.smartspacer.TARGET" />
+            </intent-filter>
+        </provider>
+
+        <provider
+            android:name=".providers.LocationSmartspacerWidgetProvider"
+            android:authorities="${applicationId}.widget.location"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_WIDGETS"
+            android:exported="true"/>
+
+        <provider
+            android:name=".providers.HistorySmartspacerTargetProvider"
+            android:authorities="${applicationId}.target.history"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_TARGETS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kieronquinn.app.smartspacer.TARGET" />
+            </intent-filter>
+        </provider>
+
+        <provider
+            android:name=".providers.HistorySmartspacerWidgetProvider"
+            android:authorities="${applicationId}.widget.history"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_WIDGETS"
+            android:exported="true"/>
+
+        <!-- Has to run as service since the count gets updated from the service -->
+        <provider
+            android:name=".providers.ConnectedSmartspacerComplication"
+            android:authorities="${applicationId}.complication.connected"
+            android:process=":service"
+            android:permission="com.kieronquinn.app.smartspacer.permission.ACCESS_SMARTSPACER_COMPLICATIONS"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.kieronquinn.app.smartspacer.COMPLICATION" />
+            </intent-filter>
+        </provider>
+
+        <!-- Firebase Analytics & Crashlytics are disabled unless the user opts in -->
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="firebase_crashlytics_collection_enabled"
+            android:value="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="${MAPS_API_KEY}" />
+    </application>
+
+</manifest>

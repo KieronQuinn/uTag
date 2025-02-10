@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_16"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out"
+    tools:layout_gravity="center">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_preview_height_with_padding"
+        android:gravity="center"
+        android:text="@string/widget_configuration_preview_empty"
+        android:textColor="@color/on_surface" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_preview_height_with_padding"
+        android:gravity="center"
+        android:text="@string/widget_configuration_preview_error"
+        android:textColor="@color/on_surface" />
+
+    <com.kieronquinn.app.utag.ui.views.TouchBlockingLinearLayout
+        android:id="@+id/widget_preview_container"
+        android:layout_width="@dimen/widget_preview_width_with_padding"
+        android:layout_height="@dimen/widget_preview_height_with_padding"
+        android:layout_gravity="center"
+        android:padding="@dimen/margin_16" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_preview_height_with_padding"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16">
+
+        <ProgressBar
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:indeterminate="true"
+            android:indeterminateDrawable="@drawable/samsung_progress" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/widget_configuration_preview_loading"
+            android:textColor="@color/on_surface" />
+
+    </LinearLayout>
+
+</ViewFlipper>

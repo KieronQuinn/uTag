@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="icon_foreground">@android:color/system_accent1_100</color>
+    <color name="icon_background">@android:color/system_neutral1_800</color>
+    <color name="icon_primary">@android:color/system_accent2_600</color>
+    <color name="oui_surface_color">@android:color/system_neutral1_800</color>
+    <color name="oui_surface_color_variant">@android:color/system_neutral1_700</color>
+    <color name="oui_tipscardpref_bg_color">@color/oui_surface_color_variant</color>
+    <color name="on_accent">@color/white</color>
+    <color name="on_accent_inverse">@color/black</color>
+    <color name="location_history_selected">@android:color/system_accent2_700</color>
+    <color name="location_history_selected_text">@android:color/system_accent1_300</color>
+    <color name="splash_background">@color/sesl_round_and_bgcolor_dark</color>
+    <color name="licenses_background">@color/sesl_round_and_bgcolor_dark</color>
+    <color name="fab_text_colour">@color/black</color>
+    <color name="sesl_loading_progress_color1">@color/sesl_primary_color_dark</color>
+    <color name="sesl_loading_progress_color2">@color/sesl_primary_color_light</color>
+    <color name="oui_accent_color_disabled">@android:color/system_neutral2_700</color>
+</resources>

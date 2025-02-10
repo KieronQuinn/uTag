@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Copyright (C) 2022 The Android Open Source Project
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~      http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+<!-- Original code by Samsung, all rights reserved to the original author. -->
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:width="96.0dip" android:height="96.0dip"
+            android:viewportWidth="96.0" android:viewportHeight="96.0">
+
+            <group
+                aapt:layer_name="container" android:name="s5"
+                android:rotation="0.0"
+                android:pivotX="0.0" android:pivotY="0.0"
+                android:scaleX="1.0" android:scaleY="1.0"
+                android:translateX="48.0" android:translateY="48.0">
+
+                <group
+                    aapt:layer_name="Rectangle" android:name="s5pg1"
+                    android:rotation="0.0"
+                    android:pivotX="0.0" android:pivotY="0.0"
+                    android:scaleX="4.0" android:scaleY="4.0"
+                    android:translateX="0.0" android:translateY="0.0">
+
+                    <path
+                        aapt:layer_name="Rectangle Path 1" android:name="s5pg1p10"
+                        android:fillAlpha="0.0"
+                        android:fillColor="#ffffffff"
+                        android:pathData="M 30 -30 C 30 -30 30 30 30 30 C 30 30 30 30 30 30 C 30 30 -30 30 -30 30 C -30 30 -30 30 -30 30 C -30 30 -30 -30 -30 -30 C -30 -30 -30 -30 -30 -30 C -30 -30 30 -30 30 -30 C 30 -30 30 -30 30 -30 Z" />
+
+                </group>
+
+            </group>
+
+            <group
+                aapt:layer_name="dot4 ParentLink" android:name="s5s4"
+                android:rotation="0.0"
+                android:pivotX="0.0" android:pivotY="0.0"
+                android:scaleX="1.0" android:scaleY="1.0"
+                android:translateX="48.0" android:translateY="48.0">
+
+                <group
+                    aapt:layer_name="dot4" android:name="s4"
+                    android:rotation="0.0"
+                    android:pivotX="0.0" android:pivotY="0.0"
+                    android:scaleX="1.0" android:scaleY="1.0"
+                    android:translateX="35.0" android:translateY="0.0">
+
+                    <group
+                        aapt:layer_name="Oval Copy 16" android:name="s4pg1"
+                        android:rotation="0.0"
+                        android:pivotX="0.0" android:pivotY="0.0"
+                        android:scaleX="4.0" android:scaleY="4.0"
+                        android:translateX="0.0" android:translateY="0.0">
+
+                        <path
+                            aapt:layer_name="Ellipse Path 1" android:name="s4pg1p10"
+                            android:fillAlpha="1.0"
+                            android:fillColor="#000000"
+                            android:pathData="M 0 -2.25 C 1.243 -2.25 2.25 -1.243 2.25 0 C 2.25 1.243 1.243 2.25 0 2.25 C -1.243 2.25 -2.25 1.243 -2.25 0 C -2.25 -1.243 -1.243 -2.25 0 -2.25 Z" />
+
+                    </group>
+
+                </group>
+
+            </group>
+
+            <group
+                aapt:layer_name="dot3 ParentLink" android:name="s5s3"
+                android:rotation="0.0"
+                android:pivotX="0.0" android:pivotY="0.0"
+                android:scaleX="1.0" android:scaleY="1.0"
+                android:translateX="48.0" android:translateY="48.0">
+
+                <group
+                    aapt:layer_name="dot3" android:name="s3"
+                    android:rotation="0.0"
+                    android:pivotX="0.0" android:pivotY="0.0"
+                    android:scaleX="1.0" android:scaleY="1.0"
+                    android:translateX="0.0" android:translateY="35.0">
+
+                    <group
+                        aapt:layer_name="Oval Copy 14" android:name="s3pg1"
+                        android:rotation="0.0"
+                        android:pivotX="0.0" android:pivotY="0.0"
+                        android:scaleX="4.0" android:scaleY="4.0"
+                        android:translateX="0.0" android:translateY="0.0">
+
+                        <path
+                            aapt:layer_name="Ellipse Path 1" android:name="s3pg1p10"
+                            android:fillAlpha="1.0"
+                            android:fillColor="#ff0000"
+                            android:pathData="M 0 -2.25 C 1.243 -2.25 2.25 -1.243 2.25 0 C 2.25 1.243 1.243 2.25 0 2.25 C -1.243 2.25 -2.25 1.243 -2.25 0 C -2.25 -1.243 -1.243 -2.25 0 -2.25 Z" />
+
+                    </group>
+
+                </group>
+
+            </group>
+
+            <group
+                aapt:layer_name="dot2 ParentLink" android:name="s5s2"
+                android:rotation="0.0"
+                android:pivotX="0.0" android:pivotY="0.0"
+                android:scaleX="1.0" android:scaleY="1.0"
+                android:translateX="48.0" android:translateY="48.0">
+
+                <group
+                    aapt:layer_name="dot2" android:name="s2"
+                    android:rotation="0.0"
+                    android:pivotX="0.0" android:pivotY="0.0"
+                    android:scaleX="1.0" android:scaleY="1.0"
+                    android:translateX="-35.0" android:translateY="0.0">
+
+                    <group
+                        aapt:layer_name="Oval Copy 16" android:name="s2pg1"
+                        android:rotation="0.0"
+                        android:pivotX="0.0" android:pivotY="0.0"
+                        android:scaleX="4.0" android:scaleY="4.0"
+                        android:translateX="0.0" android:translateY="0.0">
+
+                        <path
+                            aapt:layer_name="Ellipse Path 1" android:name="s2pg1p10"
+                            android:fillAlpha="1.0"
+                            android:fillColor="#ff0000"
+                            android:pathData="M 0 -2.25 C 1.243 -2.25 2.25 -1.243 2.25 0 C 2.25 1.243 1.243 2.25 0 2.25 C -1.243 2.25 -2.25 1.243 -2.25 0 C -2.25 -1.243 -1.243 -2.25 0 -2.25 Z" />
+
+                    </group>
+
+                </group>
+
+            </group>
+
+            <group
+                aapt:layer_name="dot1 ParentLink" android:name="s5s1"
+                android:rotation="0.0"
+                android:pivotX="0.0" android:pivotY="0.0"
+                android:scaleX="1.0" android:scaleY="1.0"
+                android:translateX="48.0" android:translateY="48.0">
+
+                <group
+                    aapt:layer_name="dot1" android:name="s1"
+                    android:rotation="0.0"
+                    android:pivotX="0.0" android:pivotY="0.0"
+                    android:scaleX="1.0" android:scaleY="1.0"
+                    android:translateX="0.0" android:translateY="-35.0">
+
+                    <group
+                        aapt:layer_name="Oval Copy 15" android:name="s1pg1"
+                        android:rotation="0.0"
+                        android:pivotX="0.0" android:pivotY="0.0"
+                        android:scaleX="4.0" android:scaleY="4.0"
+                        android:translateX="0.0" android:translateY="0.0">
+
+                        <path
+                            aapt:layer_name="Ellipse Path 1" android:name="s1pg1p10"
+                            android:fillAlpha="1.0"
+                            android:fillColor="#ff0000"
+                            android:pathData="M 0 -2.25 C 1.243 -2.25 2.25 -1.243 2.25 0 C 2.25 1.243 1.243 2.25 0 2.25 C -1.243 2.25 -2.25 1.243 -2.25 0 C -2.25 -1.243 -1.243 -2.25 0 -2.25 Z" />
+
+                    </group>
+
+                </group>
+
+            </group>
+
+        </vector>
+    </aapt:attr>
+
+    <target
+        android:name="s5">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="983"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="353.99997">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.0, 0.0,0.0"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s5s4">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="983"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="353.99997">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.0, 0.0,0.0"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s4">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateX"
+                        android:valueFrom="35"
+                        android:valueTo="15">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,1.0, 0.33,0.3" />
+                        </aapt:attr>
+                    </objectAnimator>
+                    <objectAnimator
+                        android:duration="483"
+                        android:propertyName="translateX"
+                        android:valueFrom="15"
+                        android:valueTo="34.989353">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.97, 0.34,0.31"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s5s3">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="983"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="353.99997">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.0, 0.0,0.0"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s3">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateY"
+                        android:valueFrom="35"
+                        android:valueTo="15">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,1.0, 0.33,0.3" />
+                        </aapt:attr>
+                    </objectAnimator>
+                    <objectAnimator
+                        android:duration="483"
+                        android:propertyName="translateY"
+                        android:valueFrom="15"
+                        android:valueTo="34.989353">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.97, 0.34,0.31"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s5s2">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="983"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="353.99997">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.0, 0.0,0.0"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s2">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateX"
+                        android:valueFrom="-35"
+                        android:valueTo="-15">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,1.0, 0.33,0.3" />
+                        </aapt:attr>
+                    </objectAnimator>
+                    <objectAnimator
+                        android:duration="483"
+                        android:propertyName="translateX"
+                        android:valueFrom="-15"
+                        android:valueTo="-34.989353">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.97, 0.34,0.31"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s5s1">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="983"
+                        android:propertyName="rotation"
+                        android:valueFrom="0"
+                        android:valueTo="353.99997">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.0, 0.0,0.0"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+    <target
+        android:name="s1">
+        <aapt:attr name="android:animation">
+            <set android:ordering="together">
+                <set android:ordering="sequentially">
+                    <objectAnimator
+                        android:duration="500"
+                        android:propertyName="translateY"
+                        android:valueFrom="-35"
+                        android:valueTo="-15">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,1.0, 0.33,0.3" />
+                        </aapt:attr>
+                    </objectAnimator>
+                    <objectAnimator
+                        android:duration="483"
+                        android:propertyName="translateY"
+                        android:valueFrom="-15"
+                        android:valueTo="-34.989353">
+                        <aapt:attr name="android:interpolator">
+                            <pathInterpolator
+                                android:pathData="M 0.0,0.97, 0.34,0.31"/>
+                        </aapt:attr>
+                    </objectAnimator>
+                </set>
+            </set>
+        </aapt:attr>
+    </target>
+
+</animated-vector>

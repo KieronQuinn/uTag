@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_tag_picker"
+    app:startDestination="@id/tagDevicePickerFragment">
+
+    <fragment
+        android:id="@+id/tagDevicePickerFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.picker.TagDevicePickerFragment"
+        android:label="@string/tag_picker_title">
+        <action
+            android:id="@+id/action_tagDevicePickerFragment_to_tagDevicePickerFavouritesFragment"
+            app:destination="@id/tagDevicePickerFavouritesFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+    </fragment>
+    <fragment
+        android:id="@+id/tagDevicePickerFavouritesFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.picker.favourites.TagDevicePickerFavouritesFragment"
+        android:label="@string/tag_picker_favourites_tip_action">
+        <argument
+            android:name="known_device_ids"
+            app:argType="string[]" />
+    </fragment>
+</navigation>

@@ -1,0 +1,157 @@
+[versions]
+agp = "8.7.3"
+kotlin = "2.0.21"
+navigation = "2.8.5"
+browser = "1.8.0"
+lifecycle = "2.8.7"
+crypto = "1.1.0-alpha06"
+splashScreen = "1.1.0-rc01" # 1.2.0 breaks dropdowns
+annotation = "1.9.1"
+biometric = "1.4.0-alpha02"
+work = "2.10.0"
+core = "1.15.0"
+uwb = "1.0.0-alpha10"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+bouncycastle = "1.78.1"
+apacheCommonsLang = "3.17.0"
+apacheCommonsCodec = "1.17.1"
+apacheCommonsCsv = "1.12.0"
+processPhoenix = "3.0.0"
+gson = "2.11.0"
+xposed = "82"
+oneuiCore = "1.3.0"
+oneuiCustomView = "1.1.0"
+oneuiAppcompat = "1.4.0"
+oneuiCoordinatorLayout = "1.0.0"
+oneuiFragment = "1.0.0"
+oneuiPreference = "1.1.0"
+oneuiRecyclerView = "1.4.1"
+oneuiViewPager = "1.1.0"
+oneuiMaterial = "1.5.0"
+oneuiDrawerLayout = "1.0.0"
+oneuiDesign = "1.2.6"
+oneuiIcons = "1.1.0"
+oneuiAppPicker = "1.0.0"
+koin = "4.0.0-RC2"
+retrofit = "2.11.0"
+playServicesMaps = "19.0.0"
+playServicesLocation = "21.3.0"
+playServices = "4.4.2"
+playServicesOssPlugin = "0.10.6"
+playServicesOssLibrary = "17.1.0"
+googleMapsSecrets = "2.0.1"
+dexplore = "1.4.5"
+glide = "4.16.0"
+lottie = "6.4.1"
+kotlinDateRange = "1.0.0"
+kotlinReflect = "2.0.21"
+firebase-crashlytics = "3.0.2"
+firebase-bom = "33.8.0"
+room = "2.6.1"
+ksp = "2.0.21-1.0.26"
+parcelize = "2.0.21"
+betterLinkMovementMethod = "2.2.0"
+otpView = "v1.1.2-ktx"
+flexbox = "3.0.0"
+markwon = "4.6.2"
+mapsUtils = "5.1.1"
+smartspacer = "1.0.4"
+okhttp = "4.12.0"
+
+[libraries]
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation" }
+navigation-ui = { group = "androidx.navigation", name = "navigation-ui", version.ref = "navigation" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-browser = { group = "androidx.browser", name = "browser", version.ref = "browser" }
+androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-process = { group = "androidx.lifecycle", name = "lifecycle-process", version.ref = "lifecycle" }
+androidx-lifecycle-service = { group = "androidx.lifecycle", name = "lifecycle-service", version.ref = "lifecycle" }
+androidx-security-crypto = { group = "androidx.security", name = "security-crypto-ktx", version.ref = "crypto" }
+androidx-splash-screen = { group = "androidx.core", name = "core-splashscreen", version.ref = "splashScreen" }
+androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
+androidx-biometric = { group = "androidx.biometric", name = "biometric", version.ref = "biometric" }
+androidx-work = { group = "androidx.work", name = "work-runtime-ktx", version.ref = "work" }
+androidx-core = { group = "androidx.core", name = "core-ktx", version.ref = "core" }
+androidx-uwb = { group = "androidx.core.uwb", name = "uwb", version.ref = "uwb" }
+bouncycastle-bcpkix = { group = "org.bouncycastle", name = "bcpkix-jdk15to18", version.ref = "bouncycastle" }
+bouncycastle-bcprov = { group = "org.bouncycastle", name = "bcprov-jdk15to18", version.ref = "bouncycastle" }
+apache-commons-codec = { group = "commons-codec", name = "commons-codec", version.ref = "apacheCommonsCodec" }
+apache-commons-lang = { group = "org.apache.commons", name = "commons-lang3", version.ref = "apacheCommonsLang" }
+apache-commons-csv = { group = "org.apache.commons", name = "commons-csv", version.ref = "apacheCommonsCsv" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+xposed = { module = "de.robv.android.xposed:api", version.ref = "xposed" }
+oneui-appcompat = { group = "io.github.oneuiproject.sesl", name = "appcompat", version.ref = "oneuiAppcompat" }
+oneui-core = { group = "io.github.oneuiproject.sesl", name = "core", version.ref = "oneuiCore" }
+oneui-coordinator-layout = { group = "io.github.oneuiproject.sesl", name = "coordinatorlayout", version.ref = "oneuiCoordinatorLayout" }
+oneui-customview = { group = "io.github.oneuiproject.sesl", name = "customview", version.ref = "oneuiCustomView" }
+oneui-design = { group = "io.github.oneuiproject", name = "design", version.ref = "oneuiDesign" }
+oneui-drawerlayout = { group = "io.github.oneuiproject.sesl", name = "drawerlayout", version.ref = "oneuiDrawerLayout" }
+oneui-fragment = { group = "io.github.oneuiproject.sesl", name = "fragment", version.ref = "oneuiFragment" }
+oneui-icons = { group = "io.github.oneuiproject", name = "icons", version.ref = "oneuiIcons" }
+oneui-material = { group = "io.github.oneuiproject.sesl", name = "material", version.ref = "oneuiMaterial" }
+oneui-preference = { group = "io.github.oneuiproject.sesl", name = "preference", version.ref = "oneuiPreference" }
+oneui-recycler-view = { group = "io.github.oneuiproject.sesl", name = "recyclerview", version.ref = "oneuiRecyclerView" }
+oneui-viewpager = { group = "io.github.oneuiproject.sesl", name = "viewpager", version.ref = "oneuiViewPager" }
+oneui-apppicker = { group = "io.github.oneuiproject.sesl", name = "apppickerview", version.ref = "oneuiAppPicker" }
+process-phoenix = { group = "com.jakewharton", name = "process-phoenix", version.ref = "processPhoenix" }
+koin = { group = "io.insert-koin", name = "koin-android", version.ref = "koin" }
+retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofit" }
+play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
+play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
+play-services-oss = { group = "com.google.android.gms", name = "play-services-oss-licenses", version.ref = "playServicesOssLibrary" }
+dexplore = { group = "io.github.neonorbit", name = "dexplore", version.ref = "dexplore" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
+kotlin-date-range = { group = "me.moallemi.tools", name = "kotlin-date-range", version.ref = "kotlinDateRange" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+room = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
+better-link-movement-method = { group = "me.saket", name = "better-link-movement-method", version.ref = "betterLinkMovementMethod" }
+otp-view = { group = "com.github.aabhasr1", name = "OtpView", version.ref = "otpView" }
+flexbox = { group = "com.google.android.flexbox", name = "flexbox", version.ref = "flexbox" }
+markwon = { group = "io.noties.markwon", name = "core", version.ref = "markwon"}
+markwon-tables = { group = "io.noties.markwon", name = "ext-tables", version.ref = "markwon"}
+maps-utils = { group = "com.google.maps.android", name = "maps-utils-ktx", version.ref = "mapsUtils" }
+smartspacer = { group = "com.kieronquinn.smartspacer", name = "sdk-plugin", version.ref = "smartspacer" }
+kotlin-reflect = { group = "org.jetbrains.kotlin", name = "kotlin-reflect", version.ref = "kotlinReflect" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+
+[bundles]
+oneui = [
+    "oneui-appcompat",
+    "oneui-core",
+    "oneui-coordinator-layout",
+    "oneui-customview",
+    "oneui-design",
+    "oneui-drawerlayout",
+    "oneui-fragment",
+    "oneui-icons",
+    "oneui-material",
+    "oneui-preference",
+    "oneui-recycler-view",
+    "oneui-viewpager",
+    "oneui-apppicker"
+]
+retrofit = [
+    "retrofit",
+    "retrofit-gson"
+]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+navigation-safe-args = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+google-maps-secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "googleMapsSecrets" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "parcelize" }
+play-services = { id = "com.google.gms.google-services", version.ref = "playServices" }
+play-services-oss = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "playServicesOssPlugin" }
+firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebase-crashlytics" }

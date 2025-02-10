@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/button_progress_vertical_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_ripple_32"
+    android:clickable="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingVertical="@dimen/margin_16"
+    tools:layout_gravity="center"
+    tools:layout_width="72dp">
+
+    <ViewFlipper
+        android:id="@+id/button_progress_flipper"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:background="@drawable/background_button_round"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <ImageView
+            android:id="@+id/button_progress_vertical_icon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="4dp"
+            android:scaleType="fitXY"
+            android:tint="?android:textColorPrimary"
+            tools:src="@drawable/ic_oui_add" />
+
+        <androidx.appcompat.widget.SeslProgressBar
+            android:id="@+id/button_progress_vertical_progress"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:padding="@dimen/margin_8" />
+
+    </ViewFlipper>
+
+    <TextView
+        android:id="@+id/button_progress_vertical_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_8"
+        android:gravity="center"
+        android:maxWidth="56dp"
+        android:textColor="?android:textColorPrimary"
+        android:textSize="12sp"
+        tools:text="Button\nMulti line" />
+
+</LinearLayout>

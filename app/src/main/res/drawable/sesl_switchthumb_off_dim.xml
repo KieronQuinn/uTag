@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector
+    aapt:fps="60"
+    android:height="20.0dp"
+    android:viewportHeight="20.0"
+    android:viewportWidth="20.0"
+    android:width="20.0dp"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        aapt:layer_name="SwitchThumb_stroke ParentLink"
+        android:name="c1s3"
+        android:scaleX="0.25"
+        android:scaleY="0.25"
+        android:translateX="10.0"
+        android:translateY="10.0">
+        <group
+            aapt:layer_name="SwitchThumb_stroke"
+            android:name="s3">
+            <group
+                aapt:layer_name="Ellipse 1"
+                android:name="s3pg1">
+                <path
+                    aapt:layer_name="Ellipse Path 1"
+                    aapt:style_name="Fill 1"
+                    android:fillAlpha="0.0"
+                    android:fillColor="@color/sesl_switch_thumb_off_disabled_stroke_color"
+                    android:name="s3pg1p10"
+                    android:pathData="M 0 -40 C 22.091 -40 40 -22.091 40 0 C 40 22.091 22.091 40 0 40 C -22.091 40 -40 22.091 -40 0 C -40 -22.091 -22.091 -40 0 -40 Z"/>
+            </group>
+        </group>
+    </group>
+    <group
+        aapt:layer_name="SwitchThumb_fill ParentLink"
+        android:name="c1s2"
+        android:scaleX="0.25"
+        android:scaleY="0.25"
+        android:translateX="10.0"
+        android:translateY="10.0">
+        <group
+            aapt:layer_name="SwitchThumb_fill"
+            android:name="s2">
+            <group
+                aapt:layer_name="Ellipse 1"
+                android:name="s2pg1">
+                <path
+                    aapt:layer_name="Ellipse Path 1"
+                    aapt:style_name="Fill 1"
+                    android:fillAlpha="0.4"
+                    android:fillColor="@color/sesl_switch_thumb_off_disabled_color"
+                    android:name="s2pg1p10"
+                    android:pathData="M 0 -32 C 17.673 -32 32 -17.673 32 0 C 32 17.673 17.673 32 0 32 C -17.673 32 -32 17.673 -32 0 C -32 -17.673 -17.673 -32 0 -32 Z"/>
+            </group>
+        </group>
+    </group>
+    <group
+        aapt:layer_name="SwitchThumb_parent"
+        android:name="c1"
+        android:scaleX="0.25"
+        android:scaleY="0.25"
+        android:translateX="10.0"
+        android:translateY="10.0">
+        <path
+            aapt:layer_name="SwitchThumb_parent"
+            android:fillAlpha="0.0"
+            android:fillColor="#ffffff"
+            android:name="c1sld"
+            android:pathData="M 0 0 H 100 V 100H 0 V 0 Z"/>
+    </group>
+</vector>

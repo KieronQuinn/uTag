@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="icon_foreground">@color/sesl_background_color_dark</color>
+    <color name="icon_background">@color/oui_background_color</color>
+    <color name="icon_primary">#757575</color>
+
+    <color name="splash_background">@color/white</color>
+    <color name="licenses_background">@color/white</color>
+    <color name="licenses_toolbar">@color/sesl_action_bar_background_color_light</color>
+    <color name="preferences_background">@color/sesl_round_and_bgcolor_light</color>
+    <color name="icon_accent">@color/colorPrimary</color>
+    <color name="colorPrimary">@color/sesl_primary_color_light</color>
+    <color name="colorPrimaryDark">@color/sesl_primary_dark_color_light</color>
+    <color name="oui_background_color">@color/sesl_background_color_light</color>
+    <color name="oui_surface_color">@color/white</color>
+    <color name="oui_surface_color_variant">#f2f2f2</color>
+    <color name="oui_surface_color_variant_dark">#4e4e4e</color>
+    <color name="oui_dialog_color">@color/sesl_background_color_light</color>
+    <color name="oui_accent_color">@color/sesl_primary_color_light</color>
+    <color name="oui_accent_color_disabled">#f2f2f2</color>
+    <color name="on_accent">@color/white</color>
+    <color name="on_accent_inverse">@color/black</color>
+    <color name="on_surface">@color/black</color>
+    <color name="location_history_line">#c9c9cc</color>
+    <color name="location_history_selected">#40387aff</color>
+    <color name="location_history_selected_text">#5383e3</color>
+    <color name="location_history_address_text">@color/black</color>
+    <color name="negative_red">#d93e36</color>
+    <color name="fab_text_colour">@color/white</color>
+    <color name="sesl_dialog_window_background_color_material_dark">@color/sesl_background_color_dark</color>
+    <color name="sesl_dialog_window_background_color_material_light">@color/sesl_background_color_light</color>
+    <color name="gradient_end">#BF000000</color>
+    <color name="map_line_fallback">#0381fe</color>
+    <color name="sesl_fragment_bgcolor">#fcfcff</color>
+    <color name="sesl_fragment_fgcolor">#f1f1f3</color>
+
+    <color name="lostModeContent">#252525</color>
+    <color name="lostModeEmergencyIconColor">#ff6868</color>
+    <color name="lostModeGuideSubSummary">#8c8c91</color>
+    <color name="lostModeGuideSummary">#252528</color>
+    <color name="lostModeGuideTitle">#010102</color>
+    <color name="lostModeLockIconColor">#68c756</color>
+    <color name="lostModeMessageNoEditable">#66010101</color>
+    <color name="lostModeNotifyFoundWarning">#ef5e16</color>
+    <color name="lostModeNotifyIconColor">#53aaf7</color>
+
+</resources>

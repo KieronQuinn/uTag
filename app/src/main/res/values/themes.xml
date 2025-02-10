@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.uTag" parent="@style/OneUITheme">
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">@bool/lightStatusNav</item>
+        <item name="android:windowLightNavigationBar">@bool/lightStatusNav</item>
+        <item name="android:overScrollMode">@integer/overscroll_enabled</item>
+        <item name="android:fontFamily">@font/oneui_sans</item>
+        <item name="switchDividerColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="Theme.uTag.Transparent" parent="@style/OneUITheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:fontFamily">@font/oneui_sans</item>
+    </style>
+
+    <style name="Theme.uTag.Splash.Base" parent="Theme.SplashScreen.IconBackground">
+        <item name="windowSplashScreenBackground">@color/sesl_fragment_fgcolor</item>
+        <item name="windowSplashScreenAnimationDuration">1000</item>
+        <item name="postSplashScreenTheme">@style/Theme.uTag</item>
+        <item name="android:fontFamily">@font/oneui_sans</item>
+    </style>
+
+    <style name="Theme.uTag.Splash" parent="Theme.uTag.Splash.Base">
+        <item name="windowSplashScreenAnimatedIcon">@drawable/ic_launcher_foreground</item>
+    </style>
+
+    <style name="Theme.uTag.OSS" parent="@style/Theme.AppCompat.DayNight">
+        <item name="android:fontFamily">@font/oneui_sans</item>
+        <item name="android:windowOptOutEdgeToEdgeEnforcement" tools:ignore="NewApi">true</item>
+        <item name="android:windowBackground">@color/licenses_background</item>
+        <item name="android:statusBarColor">@color/licenses_toolbar</item>
+        <item name="android:navigationBarColor">@color/licenses_background</item>
+        <item name="android:windowLightStatusBar">@bool/lightStatusNav</item>
+        <item name="android:windowLightNavigationBar" tools:ignore="NewApi">@bool/lightStatusNav</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="colorAccent">@color/oui_accent_color</item>
+        <item name="android:windowAnimationStyle">@style/ThirdPartyLicencesActivityAnimation</item>
+    </style>
+
+    <style name="ThirdPartyLicencesActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/sesl_fragment_open_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/sesl_fragment_open_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/sesl_fragment_close_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/sesl_fragment_close_exit</item>
+    </style>
+
+</resources>

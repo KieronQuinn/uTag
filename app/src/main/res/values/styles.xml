@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MapCard"/>
+
+    <style name="MapLocation">
+        <item name="layout_constraintBottom_toTopOf">@id/tag_map_card</item>
+        <item name="layout_constraintEnd_toEndOf">@id/tag_map_card</item>
+        <item name="android:layout_marginBottom">@dimen/margin_16</item>
+    </style>
+
+    <style name="MapPlaceholder">
+        <item name="layout_constraintVertical_bias">0.35</item>
+    </style>
+
+    <style name="LocationHistoryCard">
+        <item name="android:background">@drawable/background_bottom_sheet</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintHeight_percent">0.4</item>
+    </style>
+
+    <style name="LocationHistoryPlaceholder">
+        <item name="layout_constraintVertical_bias">0.275</item>
+    </style>
+
+    <style name="LocationSafeAreaCard">
+        <item name="android:background">@drawable/background_bottom_sheet</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintHeight_percent">0.5</item>
+    </style>
+
+    <style name="LocationSafeAreaPlaceholder">
+        <item name="layout_constraintVertical_bias">0.25</item>
+    </style>
+
+    <style name="LocationSafeAreaCenter">
+        <item name="layout_constraintBottom_toTopOf">@id/safe_area_location_card</item>
+        <item name="layout_constraintEnd_toEndOf">@id/safe_area_location_card</item>
+    </style>
+
+    <style name="UTagChip">
+        <item name="android:background">@drawable/background_button_chip</item>
+        <item name="android:paddingStart">@dimen/margin_4</item>
+        <item name="android:paddingTop">@dimen/margin_4</item>
+        <item name="android:paddingBottom">@dimen/margin_4</item>
+        <item name="android:paddingEnd">@dimen/margin_8</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:drawablePadding">@dimen/margin_4</item>
+    </style>
+
+    <style name="FinderContainer">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="FinderFirstPane">
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="FinderSecondPane">
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+
+    <style name="FinderUprightAnimation">
+        <item name="android:layout_gravity">bottom|center_horizontal</item>
+    </style>
+
+    <style name="FindMyDeviceFlipper">
+        <item name="layout_constraintBottom_toTopOf">@id/find_my_device_stop</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="FindMyDeviceStop">
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+
+    <style name="WidgetText">
+        <!-- Custom fonts can't be used in widgets, so use the better system font if available -->
+        <item name="android:fontFamily">google-sans-text</item>
+    </style>
+
+    <style name="BottomNavigation" parent="Widget.Design.Light.BottomNavigationView.Text"/>
+
+</resources>

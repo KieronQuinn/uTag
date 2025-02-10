@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_16">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/settings_encryption_enter_pin"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:text="@string/settings_encryption_enter_pin_content"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?android:textColorPrimary" />
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/settings_encryption_set_pin_pin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/margin_16"
+            android:textColor="?android:textColorPrimary"
+            app:height="40dp"
+            app:hide_otp="true"
+            app:hide_otp_drawable="@drawable/shape_pin_bullet"
+            app:length="6"
+            app:otp_box_background_active="@drawable/background_pin_active"
+            app:otp_box_background_inactive="@drawable/background_pin_inactive"
+            app:otp_text_size="24dp"
+            app:width="40dp"
+            tools:otp="1234" />
+
+    </LinearLayout>
+
+</ScrollView>

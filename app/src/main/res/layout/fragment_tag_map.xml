@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false">
+
+    <ViewFlipper
+        android:id="@+id/tag_map_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:clipChildren="false">
+
+            <ImageView
+                android:id="@+id/tag_map_placeholder"
+                style="@style/MapPlaceholder"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:alpha="0.5"
+                android:src="@drawable/utag"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ViewFlipper
+                android:id="@+id/tag_map_inner_flipper"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inAnimation="@android:anim/fade_in"
+                android:outAnimation="@android:anim/fade_out">
+
+                <fragment
+                    android:id="@+id/tag_map"
+                    class="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <!-- Hiding map displays the logo behind -->
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </ViewFlipper>
+
+            <LinearLayout
+                android:id="@+id/tag_map_controls"
+                style="@style/MapLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints">
+
+                <ImageButton
+                    android:id="@+id/tag_map_center"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/background_round_ripple"
+                    android:elevation="8dp"
+                    android:src="@drawable/ic_my_location"
+                    android:tint="?android:textColorPrimary" />
+
+                <ImageButton
+                    android:id="@+id/tag_map_devices"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/background_round_ripple"
+                    android:elevation="8dp"
+                    android:src="@drawable/ic_oui_list"
+                    android:tint="?android:textColorPrimary" />
+
+                <Button
+                    android:id="@+id/tag_map_offline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/background_round_ripple_rect"
+                    android:backgroundTint="@color/oui_accent_color"
+                    android:drawableStart="@drawable/ic_oui_error"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:drawableTint="@color/on_accent_inverse"
+                    android:paddingEnd="@dimen/margin_16"
+                    android:paddingStart="@dimen/margin_8"
+                    android:text="@string/map_offline"
+                    android:textAllCaps="false"
+                    android:textColor="@color/on_accent_inverse"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <Button
+                    android:id="@+id/tag_map_bt_disabled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_16"
+                    android:background="@drawable/background_round_ripple_rect"
+                    android:backgroundTint="@color/oui_accent_color"
+                    android:drawableStart="@drawable/ic_oui_bluetooth_off"
+                    android:drawablePadding="@dimen/margin_8"
+                    android:drawableTint="@color/on_accent_inverse"
+                    android:paddingEnd="@dimen/margin_16"
+                    android:paddingStart="@dimen/margin_8"
+                    android:text="@string/map_bluetooth_disabled"
+                    android:textAllCaps="false"
+                    android:textColor="@color/on_accent_inverse"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </LinearLayout>
+
+            <include
+                android:id="@+id/tag_map_card"
+                style="@style/MapCard"
+                layout="@layout/include_tag_map_card"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintWidth_max="@dimen/max_card_width" />
+
+            <LinearLayout
+                android:id="@+id/tag_map_floating_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/tag_map_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="@dimen/margin_16"
+                    android:background="@drawable/background_round_ripple"
+                    android:elevation="@dimen/margin_16"
+                    android:src="@drawable/ic_oui_back"
+                    android:tint="?android:textColorPrimary" />
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/tag_map_menu"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="@dimen/margin_16"
+                    android:background="@drawable/background_round_ripple"
+                    android:elevation="@dimen/margin_16"
+                    android:src="@drawable/ic_oui_more"
+                    android:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/oui_background_color"
+            android:clipChildren="false">
+
+            <LinearLayout
+                android:id="@+id/tag_map_loading_floating_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageButton
+                    android:id="@+id/tag_map_loading_back"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_margin="@dimen/margin_16"
+                    android:background="@drawable/rounded_ripple_48"
+                    android:src="@drawable/ic_oui_back"
+                    android:tint="?android:textColorPrimary" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SeslProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+        </FrameLayout>
+
+    </ViewFlipper>
+
+</FrameLayout>

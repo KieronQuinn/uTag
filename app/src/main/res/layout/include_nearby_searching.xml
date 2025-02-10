@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FinderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="@dimen/margin_16"
+    tools:ignore="SpUsage"
+    tools:background="@color/oui_background_color">
+
+    <FrameLayout
+        style="@style/FinderFirstPane"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <com.google.android.material.progressindicator.CircularProgressIndicator
+            android:id="@+id/nearby_searching_progress"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_gravity="center"
+            android:indeterminate="false"
+            app:indicatorColor="@color/oui_accent_color"
+            app:indicatorSize="230dp"
+            app:trackColor="@color/oui_surface_color_variant"
+            app:trackCornerRadius="@dimen/margin_16"
+            app:trackThickness="12dp"
+            tools:progress="50" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/nearby_searching_anim"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginBottom="@dimen/margin_16"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/search_nearby"/>
+
+            <TextView
+                android:id="@+id/nearby_searching_time"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="?android:textColorPrimary"
+                android:textSize="40dp"
+                android:textStyle="bold"
+                tools:text="1:50" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        style="@style/FinderSecondPane"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/search_nearby_searching_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/nearby_searching_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24dp"
+            tools:text="@string/search_nearby_searching_content" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:id="@+id/nearby_searching_close"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="center|bottom"
+                android:background="@drawable/background_button_round"
+                android:src="@drawable/ic_oui_close" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

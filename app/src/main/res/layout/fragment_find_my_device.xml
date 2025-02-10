@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_16">
+
+    <ViewFlipper
+        android:id="@+id/find_my_device_flipper"
+        style="@style/FindMyDeviceFlipper"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.SeslProgressBar
+                style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:indeterminate="true" />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/find_my_device_about_to_ring"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/margin_24"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/search_nearby"
+                    tools:lottie_colorFilter="@color/oui_accent_color" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/find_my_device_about_to_ring_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    app:indicatorColor="@color/oui_accent_color"
+                    app:indicatorSize="166dp"
+                    app:trackColor="@color/oui_surface_color_variant"
+                    app:trackCornerRadius="@dimen/margin_16"
+                    app:trackThickness="12dp"
+                    tools:progress="50" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/find_my_device_about_to_ring_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center"
+                android:text="@string/notification_content_find_my_device_delay_generic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/find_my_device_ring"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/ring"
+                    tools:lottie_colorFilter="@color/oui_accent_color" />
+
+                <com.google.android.material.progressindicator.CircularProgressIndicator
+                    android:id="@+id/find_my_device_progress"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:indeterminate="false"
+                    app:indicatorColor="@color/oui_accent_color"
+                    app:indicatorSize="166dp"
+                    app:trackColor="@color/oui_surface_color_variant"
+                    app:trackCornerRadius="@dimen/margin_16"
+                    app:trackThickness="12dp"
+                    tools:progress="50" />
+
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/find_my_device_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:gravity="center"
+                android:text="@string/notification_content_find_my_device_generic"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="32sp" />
+
+        </LinearLayout>
+
+    </ViewFlipper>
+
+    <ImageButton
+        android:id="@+id/find_my_device_stop"
+        style="@style/FindMyDeviceStop"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:background="@drawable/background_button_round"
+        android:src="@drawable/ic_oui_close"
+        android:tint="@color/on_accent"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_16"
+    android:backgroundTint="@color/oui_surface_color"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/margin_16"
+    tools:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:paddingTop="@dimen/margin_16">
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/tag_map_card_icon"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_gravity="center"
+                    tools:src="@mipmap/ic_launcher" />
+
+                <ImageView
+                    android:id="@+id/tag_map_card_shared"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/background_accent"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_oui_share"
+                    android:tint="@color/on_accent_inverse"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/tag_map_card_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tag_map_card_owner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/oui_accent_color"
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    tools:text="Name's Tag"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tag_map_card_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="SmartTag" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="2dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="13dp"
+                        android:layout_height="13dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_oui_location"
+                        android:tint="?android:textColorPrimary" />
+
+                    <TextView
+                        android:id="@+id/tag_map_card_address"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="?android:textColorPrimary"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        tools:text="Address" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tag_map_card_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="?android:textColorSecondary"
+                    android:textSize="12sp"
+                    tools:text="Last updated: Now" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_map_card_allow_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_16"
+            android:background="@drawable/background_round_ripple_rect"
+            android:backgroundTint="@color/oui_surface_color_variant"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_16"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableEnd="@drawable/ic_oui_keyboard_arrow_right_small"
+                android:drawablePadding="@dimen/margin_4"
+                android:text="@string/map_allow_location_access_title"
+                android:textColor="?android:textColorPrimary" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/map_allow_location_access_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/tag_map_card_controls"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/margin_16">
+
+            <com.kieronquinn.app.utag.ui.views.VerticalProgressButton
+                android:id="@+id/tag_map_card_ring"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_4"
+                android:layout_weight="1" />
+
+            <com.kieronquinn.app.utag.ui.views.VerticalProgressButton
+                android:id="@+id/tag_map_card_location_history"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_4"
+                android:layout_weight="1" />
+
+            <com.kieronquinn.app.utag.ui.views.VerticalProgressButton
+                android:id="@+id/tag_map_card_refresh"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_4"
+                android:layout_weight="1" />
+
+            <com.kieronquinn.app.utag.ui.views.VerticalProgressButton
+                android:id="@+id/tag_map_card_more"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_4"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/safe_area_location_map_placeholder"
+        style="@style/LocationSafeAreaPlaceholder"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:alpha="0.5"
+        android:src="@drawable/utag"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ViewFlipper
+        android:id="@+id/safe_area_location_map_flipper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inAnimation="@android:anim/fade_in"
+        android:outAnimation="@android:anim/fade_out">
+
+        <fragment
+            android:id="@+id/safe_area_location_map"
+            class="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Constrained placeholder will be shown underneath -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </ViewFlipper>
+
+    <include
+        android:id="@+id/safe_area_location_card"
+        style="@style/LocationSafeAreaCard"
+        layout="@layout/include_safe_area_location_bottom_sheet"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/safe_area_controls"
+        style="@style/LocationSafeAreaCenter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="@dimen/margin_16"
+        android:clipToPadding="false"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <ImageButton
+            android:id="@+id/safe_area_center"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/background_round_ripple"
+            android:elevation="8dp"
+            android:src="@drawable/ic_my_location"
+            android:tint="?android:textColorPrimary" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

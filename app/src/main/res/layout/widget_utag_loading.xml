@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_widget"
+    android:clipToOutline="true"
+    android:orientation="vertical"
+    android:outlineProvider="background"
+    tools:layout_gravity="center"
+    tools:layout_height="250dp"
+    tools:layout_width="350dp">
+
+    <ProgressBar
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:indeterminateDrawable="@drawable/samsung_progress"
+        android:padding="@dimen/margin_16" />
+
+</FrameLayout>

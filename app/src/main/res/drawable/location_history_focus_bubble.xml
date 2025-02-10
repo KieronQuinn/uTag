@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="12.0dp"
+    android:height="12.0dp"
+    android:viewportWidth="12.0"
+    android:viewportHeight="12.0">
+    <path
+        android:fillColor="@color/location_history_bubble_background"
+        android:fillType="evenOdd"
+        android:pathData="M3.578,4.211L12,0L12,0L12,12L3.578,7.789C2.59,7.295 2.189,6.094 2.683,5.106C2.877,4.719 3.191,4.405 3.578,4.211Z"
+        android:strokeWidth="1.0"
+        android:strokeAlpha="0.08169846"
+        android:strokeColor="#00000000" />
+</vector>

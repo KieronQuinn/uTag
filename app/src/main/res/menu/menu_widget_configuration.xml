@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/widget_configuration_save"
+        android:showAsAction="always"
+        android:title="@string/widget_configuration_save"
+        android:actionLayout="@layout/menu_action_layout_save"
+        tools:ignore="AlwaysShowAction" />
+    <item
+        android:id="@+id/widget_configuration_padding"
+        android:showAsAction="always"
+        android:actionLayout="@layout/menu_action_layout_padding"
+        tools:ignore="AlwaysShowAction,MenuTitle" />
+</menu>

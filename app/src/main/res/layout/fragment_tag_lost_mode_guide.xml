@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_card"
+                android:backgroundTint="@color/oui_background_color"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:paddingTop="16dp"
+                android:paddingBottom="2dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginEnd="24dp"
+                    android:paddingBottom="16dp"
+                    android:text="@string/lost_mode_guide_description"
+                    android:textColor="?android:textColorPrimary" />
+
+                <ImageView
+                    android:id="@+id/guide_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="174dp"
+                    android:src="@drawable/lostmode_tag2" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/description_how"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="@string/lost_mode_guide_description_how_tag"
+                android:textColor="?android:textColorPrimary" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:divider="?android:attr/listDivider"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/tag_emergency"
+                    layout="@layout/include_lost_mode_guide_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/tag_notify_found"
+                    layout="@layout/include_lost_mode_guide_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/tag_pairing_lock"
+                    layout="@layout/include_lost_mode_guide_item"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:layout_margin="@dimen/margin_16"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lost_mode_guide_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_ripple_32"
+            android:gravity="center"
+            android:text="@string/oui_common_cancel"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?android:textColorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/lost_mode_guide_next"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:background="@drawable/rounded_ripple_32"
+            android:gravity="center"
+            android:text="@string/lost_mode_next"
+            android:textStyle="bold"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="?android:textColorPrimary" />
+    </LinearLayout>
+</LinearLayout>

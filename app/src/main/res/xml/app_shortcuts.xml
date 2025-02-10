@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:shortcutId="utag"
+        android:enabled="true"
+        android:icon="@mipmap/ic_launcher_find"
+        android:shortcutShortLabel="@string/shortcut_name_find"
+        android:shortcutLongLabel="@string/shortcut_name_find"
+        android:shortcutDisabledMessage="@string/shortcut_name_find">
+        <intent
+            android:targetPackage="com.kieronquinn.app.utag"
+            android:action="com.kieronquinn.app.utag.FIND"
+            android:targetClass="com.kieronquinn.app.utag.ui.activities.TagActivity" />
+    </shortcut>
+</shortcuts>

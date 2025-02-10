@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.kieronquinn.app.utag.ui.views.HeaderView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:id="@+id/headerView"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:fitsSystemWindows="false"
+android:transitionGroup="true">
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_location="main_content">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/nav_host_fragment_more"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:navGraph="@navigation/nav_graph_tag_more" />
+
+</FrameLayout>
+
+</com.kieronquinn.app.utag.ui.views.HeaderView>

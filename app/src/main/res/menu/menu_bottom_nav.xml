@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="AlwaysShowAction,AppCompatResource">
+    <item
+        android:id="@+id/nav_graph_settings"
+        android:icon="@drawable/ic_oui_settings_outline"
+        android:title="@string/bottom_nav_settings"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/nav_graph_updates"
+        android:icon="@drawable/ic_oui_download"
+        android:title="@string/bottom_nav_updates"
+        app:showAsAction="always"/>
+</menu>

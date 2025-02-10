@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="MapCard">
+        <item name="layout_constraintHorizontal_bias">0</item>
+    </style>
+
+    <style name="MapPlaceholder">
+        <item name="layout_constraintHorizontal_bias">0.8</item>
+    </style>
+
+    <style name="MapLocation">
+        <item name="layout_constraintBottom_toBottomOf">@id/tag_map_card</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16</item>
+    </style>
+
+    <style name="LocationHistoryCard">
+        <item name="android:background">@drawable/background_side_sheet</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintWidth_percent">0.5</item>
+    </style>
+
+    <style name="LocationHistoryPlaceholder">
+        <item name="layout_constraintHorizontal_bias">0.75</item>
+    </style>
+
+    <style name="LocationSafeAreaCard">
+        <item name="android:background">@drawable/background_side_sheet</item>
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintWidth_percent">0.5</item>
+    </style>
+
+    <style name="LocationSafeAreaPlaceholder">
+        <item name="layout_constraintHorizontal_bias">0.75</item>
+    </style>
+
+    <style name="LocationSafeAreaCenter">
+        <item name="layout_constraintBottom_toBottomOf">@id/safe_area_location_card</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginEnd">@dimen/margin_16</item>
+    </style>
+
+    <style name="FinderContainer">
+        <item name="android:orientation">horizontal</item>
+    </style>
+
+    <style name="FinderFirstPane">
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="FinderSecondPane">
+        <item name="android:layout_weight">0.5</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="FinderUprightAnimation">
+        <item name="android:layout_gravity">top|end</item>
+    </style>
+
+    <style name="FindMyDeviceFlipper">
+        <item name="layout_constraintEnd_toStartOf">@id/find_my_device_stop</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="FindMyDeviceStop">
+        <item name="layout_constraintTop_toTopOf">parent</item>
+        <item name="layout_constraintBottom_toBottomOf">parent</item>
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+</resources>

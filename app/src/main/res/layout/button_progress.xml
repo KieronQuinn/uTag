@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:layout_gravity="center">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_progress_button"
+        style="@style/OneUI.ButtonStyleColored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/on_accent_inverse"
+        tools:enabled="false"
+        tools:text="Button" />
+
+    <androidx.appcompat.widget.SeslProgressBar
+        android:id="@+id/button_progress_progress"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

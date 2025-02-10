@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ViewFlipper xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/unknown_tag_scrollable"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <dev.oneuiproject.oneui.widget.RoundLinearLayout
+            android:id="@+id/unknown_tag_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/oui_background_color"
+            android:orientation="vertical"
+            android:paddingVertical="@dimen/margin_16">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:gravity="center"
+                android:text="@string/settings_uts_tag_content"
+                android:textColor="?android:textColorPrimary" />
+
+            <fragment
+                android:id="@+id/unknown_tag_map"
+                class="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_marginTop="@dimen/margin_16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin_16"
+                    android:paddingStart="@dimen/margin_8"
+                    android:paddingEnd="@dimen/margin_16">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_vertical"
+                        android:padding="@dimen/margin_8"
+                        android:src="@drawable/ic_marker_uts_start" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/unknown_tag_first_seen_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            tools:text="@string/settings_uts_tag_first" />
+
+                        <TextView
+                            android:id="@+id/unknown_tag_first_seen_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="?android:textColorPrimary"
+                            tools:text="Address" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:paddingVertical="@dimen/margin_16"
+                    android:paddingStart="@dimen/margin_8"
+                    android:paddingEnd="@dimen/margin_16">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/ic_marker_uts_end" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_8"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/unknown_tag_last_seen_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            tools:text="@string/settings_uts_tag_last" />
+
+                        <TextView
+                            android:id="@+id/unknown_tag_last_seen_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:textColor="?android:textColorPrimary"
+                            tools:text="Address" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <Button
+                android:id="@+id/unknown_tag_open"
+                style="@style/OneUI.ButtonStyleColored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_16"
+                android:text="@string/settings_uts_tag_open"
+                android:textColor="@color/on_accent_inverse" />
+
+            <Button
+                android:id="@+id/unknown_tag_safe"
+                style="@style/OneUI.ButtonStyleOutline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_16"
+                android:text="@string/settings_uts_tag_safe"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold" />
+
+        </dev.oneuiproject.oneui.widget.RoundLinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.SeslProgressBar
+        style="@style/Widget.AppCompat.ProgressBar.Xlarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true" />
+
+</ViewFlipper>

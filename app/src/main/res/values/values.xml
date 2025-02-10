@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- The redirect from the Windows version of Galaxy Account is used to provide a web-based login -->
+    <string name="auth_redirect_uri_scheme" translatable="false">ms-app</string>
+    <string name="auth_redirect_uri_host" translatable="false" tools:ignore="TypographyDashes">s-1-15-2-4027708247-2189610-1983755848-2937435718-1578786913-2158692839-1974417358</string>
+
+    <string name="tag_location_history_export_filename_template" translatable="false">%1s_%1s-%1s.csv</string>
+</resources>

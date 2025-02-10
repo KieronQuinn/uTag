@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_include_unknown_tag"
+    app:startDestination="@id/unknownTagListFragment">
+    <fragment
+        android:id="@+id/unknownTagListFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.unknowntag.list.UnknownTagListFragment"
+        android:label="@string/settings_uts_list_title" >
+        <action
+            android:id="@+id/action_unknownTagListFragment_to_unknownTagFragment"
+            app:destination="@id/unknownTagFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"
+            app:popExitAnim="@anim/sesl_fragment_close_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/unknownTagFragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.unknowntag.tag.UnknownTagFragment"
+        android:label="@string/settings_uts_tag_title" >
+        <argument
+            android:name="privacy_id"
+            app:argType="string" />
+    </fragment>
+</navigation>

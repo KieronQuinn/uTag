@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/FinderContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_16"
+    tools:ignore="SpUsage"
+    tools:background="@color/oui_background_color">
+
+    <FrameLayout style="@style/FinderFirstPane">
+
+        <com.kieronquinn.app.utag.ui.views.RssiProgressView
+            android:id="@+id/nearby_rssi_progress"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@id/nearby_rssi_progress"
+            app:layout_constraintEnd_toEndOf="@id/nearby_rssi_progress"
+            app:layout_constraintStart_toStartOf="@id/nearby_rssi_progress"
+            app:layout_constraintTop_toTopOf="@id/nearby_rssi_progress">
+
+            <ImageView
+                android:id="@+id/nearby_rssi_icon"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                tools:src="@drawable/utag" />
+
+            <TextView
+                android:id="@+id/nearby_rssi_name"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:ellipsize="end"
+                android:textSize="14dp"
+                android:gravity="center"
+                android:maxLines="3"
+                android:textColor="?android:textColorPrimary"
+                android:textStyle="bold"
+                tools:text="SmartTag" />
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        style="@style/FinderSecondPane"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nearby_rssi_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            tools:text="Instruction" />
+
+        <TextView
+            android:id="@+id/nearby_rssi_distance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_16"
+            android:gravity="center"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="24dp"
+            tools:text="Distance" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/margin_16"
+            android:layout_weight="1">
+
+            <include
+                android:id="@+id/nearby_rssi_ring"
+                layout="@layout/include_nearby_ring"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" />
+
+            <ImageButton
+                android:id="@+id/nearby_rssi_close"
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/background_button_round"
+                android:src="@drawable/ic_oui_close" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

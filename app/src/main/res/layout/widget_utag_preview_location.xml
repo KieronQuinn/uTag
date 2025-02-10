@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@android:id/background"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_widget"
+    android:clipToOutline="true"
+    android:outlineProvider="background"
+    tools:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/widget_utag_map_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/location_widget_preview_map" />
+
+    <ImageView
+        android:id="@+id/widget_utag_map_logo"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="@dimen/margin_16"
+        android:background="@drawable/ic_launcher_background_round"
+        android:padding="4dp"
+        android:tint="@color/oui_accent_color"
+        android:src="@drawable/ic_notification" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/widget_status_height"
+        android:layout_gravity="bottom"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:background="@drawable/background_utag_map_gradient"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/widget_utag_map_status"
+            style="@style/WidgetText"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:gravity="center_vertical"
+            android:maxLines="1"
+            android:paddingHorizontal="@dimen/margin_16"
+            android:textColor="@color/white"
+            tools:fontFamily="sans-serif"
+            android:text="@string/widget_preview_status" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginHorizontal="@dimen/margin_8">
+
+            <ImageButton
+                android:id="@+id/widget_utag_map_refresh"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/rounded_ripple_32"
+                android:padding="@dimen/margin_8"
+                android:src="@drawable/ic_oui_refresh"
+                android:tint="@color/white" />
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

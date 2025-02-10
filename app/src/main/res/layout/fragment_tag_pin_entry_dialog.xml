@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:layout_gravity="bottom">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_16"
+        android:backgroundTint="@color/oui_dialog_color"
+        android:orientation="vertical"
+        app:cardCornerRadius="@dimen/margin_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_max="@dimen/max_card_width">
+
+        <LinearLayout
+            android:id="@+id/tag_pin_entry_anchor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_24">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="@string/tag_pin_entry_title"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tag_pin_entry_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:textColor="?android:textColorPrimary"
+                tools:text="@string/tag_pin_entry_content" />
+
+            <TextView
+                android:id="@+id/tag_pin_entry_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8"
+                android:text="@string/tag_pin_entry_error"
+                android:textColor="@color/negative_red"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+            <in.aabhasjindal.otptextview.OtpTextView
+                android:id="@+id/tag_pin_entry_entry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="@dimen/margin_16"
+                android:textColor="?android:textColorPrimary"
+                app:height="40dp"
+                app:hide_otp="true"
+                app:hide_otp_drawable="@drawable/shape_pin_bullet"
+                app:length="6"
+                app:otp_box_background_active="@drawable/background_pin_active"
+                app:otp_box_background_inactive="@drawable/background_pin_inactive"
+                app:otp_text_size="24dp"
+                app:width="40dp"
+                tools:otp="1234" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/tag_pin_entry_save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_16"
+                android:checked="true"
+                android:paddingHorizontal="@dimen/margin_8"
+                android:text="@string/tag_pin_entry_save" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tag_pin_entry_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/margin_8"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rounded_ripple_32"
+                    android:text="@android:string/cancel" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/tag_pin_entry_ok"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_8"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/rounded_ripple_32"
+                    android:text="@android:string/ok" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

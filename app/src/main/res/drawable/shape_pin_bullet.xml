@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<inset xmlns:android="http://schemas.android.com/apk/res/android"
+    android:inset="@dimen/margin_16">
+    <shape android:shape="oval">
+        <solid android:color="?android:textColorPrimary"/>
+    </shape>
+</inset>

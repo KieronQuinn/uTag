@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dev.oneuiproject.oneui.widget.RoundFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="@dimen/margin_16"
+    app:roundedCorners="top_left|top_right">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:paddingBottom="@dimen/margin_16"
+        android:transitionGroup="true">
+
+        <dev.oneuiproject.oneui.widget.RoundFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/oui_background_color"
+            android:padding="@dimen/margin_24">
+
+            <TextView
+                android:id="@+id/markdown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/oneui_sans"
+                android:linksClickable="true"
+                tools:text="FAQ" />
+
+        </dev.oneuiproject.oneui.widget.RoundFrameLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</dev.oneuiproject.oneui.widget.RoundFrameLayout>

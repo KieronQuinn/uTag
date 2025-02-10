@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical"
+    tools:layout_gravity="center">
+
+    <ImageButton
+        android:id="@+id/button_progress_icon_button"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_button_round"
+        android:backgroundTint="@color/oui_accent_color"
+        android:scaleType="fitXY"
+        android:padding="12dp"
+        android:tint="?android:textColorPrimaryInverse"
+        tools:src="@drawable/ic_oui_volume_down"/>
+
+    <androidx.appcompat.widget.SeslProgressBar
+        android:id="@+id/button_progress_icon_progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/margin_8"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+</FrameLayout>

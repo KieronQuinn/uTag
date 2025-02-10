@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/LocationSafeAreaCard"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:outlineProvider="background">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/safe_area_location_bottom_sheet_fragment"
+        android:name="com.kieronquinn.app.utag.ui.screens.safearea.location.SafeAreaLocationBottomSheetFragment"/>
+
+</FrameLayout>

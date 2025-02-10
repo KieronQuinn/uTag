@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="HeaderView">
+        <attr name="back_enabled" format="boolean"/>
+        <attr name="hide_expanded_title" format="boolean"/>
+    </declare-styleable>
+</resources>
