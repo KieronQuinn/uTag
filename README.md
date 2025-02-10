@@ -2,6 +2,8 @@
 
 uTag is a Android app and mod for Samsung SmartThings which allows the use of Samsung SmartTags on non-Samsung Android devices running Android 11 or above. No root, no Shizuku needed.
 
+[![Crowdin](https://badges.crowdin.net/utag/localized.svg)](https://crowdin.com/project/utag)
+
 ## Features
 
 uTag allows the use of *almost* all SmartTag features. This includes setting up, connecting to and tracking Tags, ringing Tags, location history, precise finding with UWB (requires a UWB-capable device), left behind alerts and much more. In addition, uTag includes some features which Samsung's app does not have, such as widgets, safe areas for leaving Tags behind based on Wi-Fi networks and exporting location history. You can find a larger list of available features in the [Frequently Asked Questions](https://github.com/KieronQuinn/uTag/blob/main/app/src/main/res/raw/faq.md), as well as a longer introduction to uTag on [Medium](https://medium.com/@KieronQuinn/utag-use-samsung-smarttags-on-any-android-device-01bd71d2a12b).
