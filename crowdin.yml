@@ -1,0 +1,7 @@
+files:
+  - source: /app/src/main/res/values/strings.xml
+    translation: /app/src/main/res/values-%android_code%/strings.xml
+  - source: /xposed-core/src/main/res/values/strings.xml
+    translation: /xposed-core/src/main/res/values-%android_code%/strings.xml
+  - source: /xposed-standalone/src/main/res/values/strings.xml
+    translation: /xposed-standalone/src/main/res/values-%android_code%/strings.xml
