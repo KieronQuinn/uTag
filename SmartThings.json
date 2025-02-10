@@ -1,9 +1,9 @@
 {
    "version": "1.0",
    "version_code": 100,
-   "download": "https://kieronquinn.co.uk/SmartThings/SmartThings.apk",
-   "download_alt": "https://kieronquinn.co.uk",
+   "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
+   "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
    "release_notes": "Initial release",
-   "file_size": 127461199
+   "file_size": 128871137
 }
