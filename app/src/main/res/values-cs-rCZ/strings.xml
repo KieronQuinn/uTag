@@ -84,7 +84,7 @@
     <string name="settings_main_xposed_error_content">The uTag SmartThings modification is not installed. If you are using Xposed, make sure it\'s enabled for SmartThings and reboot your device. If you\'re not rooted, make sure the modified version is installed.</string>
     <string name="settings_main_smartthings_title">Looking for SmartTag options?</string>
     <string name="settings_main_smartthings_content">Settings &amp; tracking for SmartTags can be accessed from the SmartThings app</string>
-    <string name="settings_main_smartthings_open">Open SmartThings</string>
+    <string name="settings_main_smartthings_open">Otevřít SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
     <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
     <string name="settings_main_permissions_action">Grant in settings</string>
