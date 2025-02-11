@@ -2,25 +2,25 @@
 <resources>
     <string name="app_name">uTag</string>
     <string name="app_name_st">SmartThings</string>
-    <string name="shortcut_name_find">Find</string>
+    <string name="shortcut_name_find">Suchen</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
     <string name="hooking_progress_toast">Mods werden angewendet, bitte warten…</string>
     <!-- Landing -->
     <string name="landing_get_started">Erste Schritte</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
+    <string name="landing_not_signed_in">Sie müssen zuerst die Einrichtung abschließen und uTag erneut öffnen, um fortzufahren.</string>
     <string name="landing_open">Öffne uTag</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
-    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n\<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
+    <string name="setup_mod_info_content">Um mit uTag zu arbeiten und Samsungs Anforderungen zu umgehen, ist eine modifizierte Version von SmartThings erforderlich. uTag führt Sie durch den Download und die Installation. <b>Hinweis:</b> Wenn Ihr Gerät gerootet und Xposed installiert ist, stellen Sie sicher, dass SmartThings eingerichtet ist, aktivieren Sie das uTag Xposed-Modul, beenden Sie SmartThings und kehren Sie zu uTag zurück, um diesen Schritt zu überspringen.</string>
     <string name="setup_mod_info_action">Mod-Download starten</string>
-    <string name="setup_mod_oneui_title">OneUI erkannt</string>
-    <string name="setup_mod_oneui_content">This device appears to be running OneUI, which prevents the SmartThings Mod from working. uTag is not compatible with OneUI without root, please use the official SmartThings app instead.\n\n\<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to continue.</string>
-    <string name="setup_mod_downloading">SmartThings herunterladen…</string>
-    <string name="setup_mod_setting_up">Setting up mod…</string>
-    <string name="setup_mod_setting_up_subtitle">This may take a moment</string>
-    <string name="setup_mod_uninstall_title">Uninstall SmartThings</string>
+    <string name="setup_mod_oneui_title">OneUI wurde erkannt</string>
+    <string name="setup_mod_oneui_content">Auf diesem Gerät scheint OneUI zu laufen, was verhindert, dass der SmartThings Mod funktioniert. uTag ist nicht kompatibel mit OneUI ohne Root, bitte verwenden Sie stattdessen die offizielle SmartThings App.<b>Hinweis:</b> Wenn Ihr Gerät gerootet und Xposed installiert ist, stellen Sie sicher, dass SmartThings eingerichtet ist, aktivieren Sie das uTag Xposed Modul, beenden Sie SmartThings und kehren Sie zu uTag zurück, um fortzufahren.</string>
+    <string name="setup_mod_downloading">SmartThings wird heruntergeladen…</string>
+    <string name="setup_mod_setting_up">Mod… wird eingerichtet</string>
+    <string name="setup_mod_setting_up_subtitle">Dies kann einen Moment</string>
+    <string name="setup_mod_uninstall_title">SmartThings deinstallieren</string>
     <string name="setup_mod_uninstall_content">Da die modifizierte Version von SmartThings eine andere Signatur hat, müssen Sie die derzeit installierte Version deinstallieren, um fortzufahren.\n\n<b>Hinweis:</b> Dies löscht SmartThings Daten von Ihrem Gerät, was eine erneute Anmeldung erforderlich macht.</string>
     <string name="setup_mod_uninstall_action">Deinstallieren</string>
     <string name="setup_mod_install_title">Zur Installation bereit</string>
@@ -33,8 +33,8 @@
     <string name="setup_mod_error_failed_to_get">Fehler beim Laden der neuesten Version der SmartThings Mod vom Server. Überprüfen Sie Ihre Verbindung und versuchen Sie es später erneut.</string>
     <string name="setup_mod_error_failed_to_download">Download der SmartThings Mod fehlgeschlagen. Überprüfen Sie Ihre Verbindung und versuchen Sie es später erneut.</string>
     <string name="setup_mod_error_close">Schließen</string>
-    <string name="setup_mod_metered_dialog_title">Large Download Warning</string>
-    <string name="setup_mod_metered_dialog_content">Die SmartThings Mod APK Datei ist %1s. Möchten Sie die Datei weiterhin herunterladen?</string>
+    <string name="setup_mod_metered_dialog_title">Warnung vor großem Download</string>
+    <string name="setup_mod_metered_dialog_content">Die SmartThings Mod APK Datei ist %1s. Möchten Sie die Datei herunterladen?</string>
     <string name="setup_mod_metered_dialog_positive">Herunterladen</string>
     <!-- Permissions -->
     <string name="setup_permissions">Berechtigungen</string>
@@ -50,7 +50,7 @@
     <string name="permission_smartthings_battery_content">Dies ist erforderlich, um Tags über Bluetooth im Hintergrund verbunden zu halten</string>
     <string name="permission_battery_disable">Deaktivieren</string>
     <string name="permission_analytics_title">Analytics &amp; Absturzbericht</string>
-    <string name="permission_analytics_content">Aktiviere anonyme Analytics &amp; Absturzberichte um bei der Entwicklung von uTag zu helfen</string>
+    <string name="permission_analytics_content">Aktiviere anonyme Analysen &amp; Absturzberichte um bei der Entwicklung von uTag zu helfen</string>
     <string name="permission_analytics_allow">Zulassen</string>
     <string name="permission_analytics_deny">Verweigern</string>
     <!-- Sign in -->
@@ -59,25 +59,25 @@
     <string name="account_content">Damit uTag mit SmartThings kommunizieren kann, müssen Sie sich mit Ihrem Samsung Konto anmelden.</string>
     <string name="account_warning_title">Wie kann ich uTag vertrauen?</string>
     <string name="account_warning_content_header">Da uTag die Anmeldung in Ihrem Samsung-Konto erfordert, wie wissen Sie, dass Sie uTag vertrauen können?</string>
-    <string name="account_warning_content_b1">uTag verwendet den offiziellen Samsung Login, in Ihrem Browser (überprüfen Sie die URL)</string>
-    <string name="account_warning_content_b2">Ihr Passwort ist nicht sichtbar und kann auch nicht von uTag gespeichert werden und Zugriffstoken werden auf dem Gerät verschlüsselt</string>
-    <string name="account_warning_content_b3">uTag is open source and you can inspect the login code on GitHub</string>
+    <string name="account_warning_content_b1">uTag verwendet den offiziellen Samsung Login in Ihrem Browser (überprüfen Sie die URL)</string>
+    <string name="account_warning_content_b2">Ihr Passwort ist für uTag weder sichtbar noch kann es von uTag gespeichert werden, und die Zugriffstoken werden verschlüsselt auf dem Gerät gespeichert.</string>
+    <string name="account_warning_content_b3">uTag ist Open Source und Sie können den Login-Code auf GitHub einsehen</string>
     <string name="account_warning_content_footer"><b>Bitte beachten Sie, dass offizielle Builds von uTag nur auf GitHub und APKMirror verfügbar sind. Wenn Sie uTag aus einer anderen Quelle installiert haben, kann die Login-Sicherheit nicht garantiert werden und Sie sollten uTag aus einer legitimen Quelle neu installieren.</b></string>
     <string name="account_sign_in"></string>
-    <string name="account_error_title">Error</string>
-    <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
-    <string name="account_error_try_again">Try again</string>
-    <string name="login_response_error_title">Error</string>
-    <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
-    <string name="login_response_error_close">Close</string>
+    <string name="account_error_title">Fehler</string>
+    <string name="account_error_content">Beim Starten des Anmeldeprozesses ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
+    <string name="account_error_try_again">Erneut versuchen</string>
+    <string name="login_response_error_title">Fehler</string>
+    <string name="login_response_error_content">Beim Abschluss des Anmeldevorgangs ist ein Fehler aufgetreten, bitte versuchen Sie es erneut</string>
+    <string name="login_response_error_close">Schließen</string>
     <!-- Settings -->
-    <string name="settings_main_title">uTag Settings</string>
-    <string name="settings_main_mod_error_title">Error</string>
-    <string name="settings_main_mod_warning_title">Warning</string>
-    <string name="settings_main_mod_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later. If it\'s no longer installed, follow the instructions on the Updates tab to reinstall it.</string>
-    <string name="settings_main_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions  to install the modded SmartThings from the Updates tab.</string>
-    <string name="settings_main_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Please follow the instructions to install it from the Updates tab to fix this.</string>
-    <string name="settings_main_mod_outdated_xposed_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
+    <string name="settings_main_title">uTag Einstellungen</string>
+    <string name="settings_main_mod_error_title">Fehler</string>
+    <string name="settings_main_mod_warning_title">Warnung</string>
+    <string name="settings_main_mod_no_smartthings_content">uTag konnte keine Verbindung zu SmartThings herstellen. Überprüfen Sie die Installation und versuchen Sie es später erneut. Wenn es nicht mehr installiert ist, folgen Sie den Anweisungen auf der Registerkarte Updates, um es neu zu installieren.</string>
+    <string name="settings_main_mod_not_activated_xposed_content">Die uTag Mod für SmartThings ist nicht aktiviert. Wenn Sie Xposed verwenden, aktivieren Sie ihn und starten Sie Ihr Gerät neu. Wenn Sie Xposed nicht verwenden, folgen Sie den Anweisungen, um die modifizierten SmartThings aus der Registerkarte Updates zu installieren.</string>
+    <string name="settings_main_mod_not_activated_patch_content">Die uTag Mod für SmartThings ist nicht aktiviert. Bitte befolgen Sie die Anweisungen, um es über die Registerkarte Updates zu installieren.</string>
+    <string name="settings_main_mod_outdated_xposed_content">Die uTag-Mod für SmartThings ist veraltet. Möglicherweise ist die uTag-Funktionalität eingeschränkt oder funktioniert gar nicht. Beenden Sie SmartThings zwangsweise oder starten Sie Ihr Gerät neu, um dies zu beheben.</string>
     <string name="settings_main_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from the Updates tab to fix this.</string>
     <string name="settings_main_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="settings_main_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the Updates tab to fix this.</string>
@@ -139,7 +139,7 @@
     <string name="settings_location_widget_period_content">Wie oft uTag Widgets automatisch aktualisiert wird: %1s</string>
     <string name="settings_location_widget_period_content_disabled">Keine Widgets hinzugefügt</string>
     <string name="settings_location_widget_period_never_content">Wird nur aktualisiert, wenn Sie auf Aktualisierungen eines Widgets tippen oder der Standort eines Tags von uTag aktualisiert wird</string>
-    <string name="settings_location_widget_battery_saver_title">Widget Refresh on Battery Saver</string>
+    <string name="settings_location_widget_battery_saver_title">Widget beim Energiesparmodus aktualisieren</string>
     <string name="settings_location_widget_battery_saver_content">Widgets aktualisieren, wenn Energiesparmodus aktiviert ist</string>
     <string name="settings_location_category_search_nearby_title">Search Nearby</string>
     <string name="settings_location_uwb_title">Precise Finding</string>
