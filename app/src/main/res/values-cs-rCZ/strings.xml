@@ -54,7 +54,7 @@
     <string name="permission_analytics_allow">Allow</string>
     <string name="permission_analytics_deny">Deny</string>
     <!-- Sign in -->
-    <string name="setup_account">Account</string>
+    <string name="setup_account">Účet</string>
     <string name="account_title">Sign in to SmartThings</string>
     <string name="account_content">For uTag to be able to communicate with SmartThings, you must sign in with your Samsung account.</string>
     <string name="account_warning_title">How can I trust uTag?</string>
