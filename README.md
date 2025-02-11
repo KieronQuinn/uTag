@@ -1,6 +1,6 @@
 [![uTag Banner](https://i.imgur.com/g1jJpKOl.png)](https://i.imgur.com/g1jJpKO.png)
 
-uTag is a Android app and mod for Samsung SmartThings which allows the use of Samsung SmartTags on non-Samsung Android devices running Android 11 or above. No root, no Shizuku needed.
+uTag is an Android app and mod for Samsung SmartThings which allows the use of Samsung SmartTags on non-Samsung Android devices running Android 11 or above. No root, no Shizuku needed.
 
 [![Crowdin](https://badges.crowdin.net/utag/localized.svg)](https://crowdin.com/project/utag)
 
