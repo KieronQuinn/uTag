@@ -26,6 +26,12 @@ If you're a content creator, and you want to showcase uTag with images or video,
 
 ![Screenshots of uTag showing tracking a Tag, location history and finding a Tag](https://i.imgur.com/RnNH4pI.png)
 
+## Discord
+
+Join the uTag Discord server for any further queries
+
+[![uTag Discord](https://i.imgur.com/eeklYon.png)](https://discord.gg/acp5aM7FpA)
+
 ## Building
 
 > **Note:** This section is only for people who wish to compile uTag from source for themselves. Most people should follow the instructions above to download and install the APK.
