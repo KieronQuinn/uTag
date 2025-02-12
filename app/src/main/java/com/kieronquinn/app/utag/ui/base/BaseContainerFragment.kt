@@ -191,7 +191,11 @@ abstract class BaseContainerFragment<V: ViewBinding>(inflate: (LayoutInflater, V
             if(it.onBackPressed()) return
         }
         if(!navController.navigateUp()) {
-            requireActivity().finish()
+            try {
+                requireActivity().finish()
+            }catch (e: IllegalStateException) {
+                //Activity is gone, do nothing
+            }
         }
     }
 

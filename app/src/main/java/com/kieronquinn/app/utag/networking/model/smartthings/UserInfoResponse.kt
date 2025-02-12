@@ -12,9 +12,9 @@ data class UserInfoResponse(
     @SerializedName("fullName")
     val fullName: String,
     @SerializedName("givenName")
-    val givenName: String,
+    val givenName: String?,
     @SerializedName("familyName")
-    val familyName: String,
+    val familyName: String?,
     @SerializedName("countryCode")
     val countryCode: String
 )

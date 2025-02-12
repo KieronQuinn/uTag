@@ -61,11 +61,17 @@ interface InstalledAppsService {
             val userId = userRepository.getUserInfo()?.uuid ?: return null
             return getInstalledApps(URL_GET_INSTALLED_APPS)
                 .get(CacheType.INSTALLED_APP_ID, name = "installedAppId")
-                    ?.items?.firstOrNull {
-                        it.ui.pluginId == PLUGIN_ID_FME && it.owner.ownerId == userId
-                    }?.installedAppId?.also {
+                    ?.items?.getFmeAppId(userId)?.also {
                         installedAppId = it
                     }
+        }
+
+        private fun List<GetInstalledAppsResponse.Item>.getFmeAppId(ownerId: String): String? {
+            return firstOrNull {
+                it.ui.pluginId == PLUGIN_ID_FME && it.owner.ownerId == ownerId
+            }?.installedAppId ?: firstOrNull {
+                it.ui.pluginId == PLUGIN_ID_FME
+            }?.installedAppId
         }
 
         fun createService(context: Context, retrofit: Retrofit): InstalledAppsService {

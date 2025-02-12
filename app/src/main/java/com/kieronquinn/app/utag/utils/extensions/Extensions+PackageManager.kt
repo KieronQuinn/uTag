@@ -3,6 +3,7 @@ package com.kieronquinn.app.utag.utils.extensions
 import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.pm.PackageManager
+import android.content.pm.PackageManager.NameNotFoundException
 import android.os.Build
 import com.kieronquinn.app.utag.xposed.Xposed
 
@@ -28,9 +29,13 @@ fun PackageManager.wasSmartThingsInstalledByPlay(): Boolean {
 
 @Suppress("DEPRECATION")
 private fun PackageManager.getInstallSource(packageName: String): String? {
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        getInstallSourceInfo(packageName).installingPackageName
-    } else {
-        getInstallerPackageName(packageName)
+    return try {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            getInstallSourceInfo(packageName).installingPackageName
+        } else {
+            getInstallerPackageName(packageName)
+        }
+    }catch (e: NameNotFoundException) {
+        null
     }
 }
