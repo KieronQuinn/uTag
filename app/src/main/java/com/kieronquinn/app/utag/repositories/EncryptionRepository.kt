@@ -242,13 +242,24 @@ class EncryptionRepositoryImpl(
         // "v2" key spec appends _v2 to the end of the Base64 and adds the user ID to the PIN
         if(keyPair.privateKey.endsWith("_v2")) {
             pinUserId = "$pin${keyPair.userId}"
-            privateKey =
+            privateKey = try {
                 Base64.decode(keyPair.privateKey.removeSuffix("_v2"), Base64.NO_WRAP)
+            }catch (e: IllegalArgumentException) {
+                return null
+            }
         }else{
             pinUserId = pin
-            privateKey = Base64.decode(keyPair.privateKey, Base64.NO_WRAP)
+            privateKey = try {
+                Base64.decode(keyPair.privateKey, Base64.NO_WRAP)
+            }catch (e: IllegalArgumentException) {
+                return null
+            }
         }
-        val iv = Base64.decode(keyPair.iv, Base64.NO_WRAP)
+        val iv = try {
+            Base64.decode(keyPair.iv, Base64.NO_WRAP)
+        }catch (e: IllegalArgumentException) {
+            return null
+        }
         val decryptedKey = encryptDecryptKey(Cipher.DECRYPT_MODE, pinUserId, privateKey, iv)
             ?: run {
                 clearPin()

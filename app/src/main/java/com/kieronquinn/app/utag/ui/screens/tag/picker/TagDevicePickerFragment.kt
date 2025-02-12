@@ -85,11 +85,13 @@ class TagDevicePickerFragment: BaseSettingsFragment(), BackAvailable, ProvidesBa
     }
 
     private fun setContent(state: State.Loaded) = setPreferences {
-        actionCardPreference {
-            title = getString(R.string.tag_picker_favourites_tip_title)
-            summary = getString(R.string.tag_picker_favourites_tip_content)
-            addButton(getString(R.string.tag_picker_favourites_tip_action)) {
-                viewModel.onFavouritesClicked()
+        if(state.favouritesAvailable) {
+            actionCardPreference {
+                title = getString(R.string.tag_picker_favourites_tip_title)
+                summary = getString(R.string.tag_picker_favourites_tip_content)
+                addButton(getString(R.string.tag_picker_favourites_tip_action)) {
+                    viewModel.onFavouritesClicked()
+                }
             }
         }
         state.categories.forEach {

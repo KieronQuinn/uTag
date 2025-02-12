@@ -317,7 +317,7 @@ class AuthRepositoryImpl(
         val authResponse = authService.token(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_ONECONNECT,
-            code = authoriseResponse.code,
+            code = authoriseResponse.code ?: return false,
             codeVerifier = codeVerifier,
             physicalAddressText = physicalAddressText
         ).get(name = "iotAuth") ?: return false
@@ -349,7 +349,7 @@ class AuthRepositoryImpl(
         val authResponse = authService.token(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_FIND,
-            code = authoriseResponse.code,
+            code = authoriseResponse.code ?: return false,
             codeVerifier = codeVerifier,
             physicalAddressText = physicalAddressText
         ).get(name = "findAuth") ?: return false

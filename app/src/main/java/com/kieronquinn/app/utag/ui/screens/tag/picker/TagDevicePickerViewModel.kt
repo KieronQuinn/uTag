@@ -37,7 +37,11 @@ abstract class TagDevicePickerViewModel: ViewModel() {
 
     sealed class State {
         data object Loading: State()
-        data class Loaded(val categories: List<Category>, val selected: String): State()
+        data class Loaded(
+            val categories: List<Category>,
+            val selected: String,
+            val favouritesAvailable: Boolean
+        ): State()
         data object Error: State()
     }
 
@@ -166,12 +170,15 @@ class TagDevicePickerViewModelImpl(
         }.sortedBy { it.label.lowercase() }.groupBy { it.deviceOwnerId }.map {
             Category.Shared(it.value.first().deviceOwner, it.value)
         }.toList().toTypedArray()
-        listOf(favourites, mine, *shared)
+        val favouritesAvailable = devices.any { it.isOwner }
+        Pair(listOf(favourites, mine, *shared), favouritesAvailable)
     }
 
     override val state = categories.mapLatest {
-        if(!it.isNullOrEmpty()) {
-            State.Loaded(it, selectedDeviceId)
+        val items = it?.first
+        val favouritesAvailable = it?.second == true
+        if(!items.isNullOrEmpty()) {
+            State.Loaded(items, selectedDeviceId, favouritesAvailable)
         }else{
             State.Error
         }

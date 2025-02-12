@@ -227,10 +227,14 @@ fun Context.wasInstalledWithSession(): Boolean {
     val packageManager = packageManager
     //No default installer set = always show UI to be safe
     val defaultInstaller = packageManager.getPackageInstallerPackageName() ?: return false
-    return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-        packageManager.getInstallSourceInfo(packageName).installingPackageName != defaultInstaller
-    } else {
-        packageManager.getInstallerPackageName(packageName) != defaultInstaller
+    return try {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            packageManager.getInstallSourceInfo(packageName).installingPackageName != defaultInstaller
+        } else {
+            packageManager.getInstallerPackageName(packageName) != defaultInstaller
+        }
+    }catch (e: NameNotFoundException) {
+        false
     }
 }
 
