@@ -39,7 +39,7 @@
     <!-- Permissions -->
     <string name="setup_permissions">Permessi</string>
     <string name="permission_smartthings_title">Permessi SmartThings Richiesti</string>
-    <string name="permission_smartthings_content">SmartThings richiede le seguenti autorizzazioni per consentire a uTag di eseguire la scansione e connettersi alla tua SmartTag:\n- Posizione (<b>impostata su \"Consenti sempre\"</b>)\n- Bluetooth / Dispositivi nelle vicinanze</string>
+    <string name="permission_smartthings_content">SmartThings richiede le seguenti autorizzazioni per consentire a uTag di eseguire la scansione e connettersi al tuo SmartTag:\n- Posizione (<b>impostata su \"Consenti sempre\"</b>)\n- Bluetooth / Dispositivi nelle vicinanze</string>
     <string name="permission_smartthings_grant">Concedi in Impostazioni</string>
     <string name="permission_notification_title">Permessi Notifiche</string>
     <string name="permission_notification_content">uTag richiede l\'autorizzazione di mostrare le notifiche per visualizzare gli aggiornamenti</string>
