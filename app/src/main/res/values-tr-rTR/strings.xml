@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">uTag</string>
-    <string name="app_name_st">SmartThings</string>
+    <string name="app_name_st"></string>
     <string name="shortcut_name_find">Find</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
