@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">uTag</string>
-    <string name="app_name_st"></string>
-    <string name="shortcut_name_find">Find</string>
-    <string name="subtitle_split">%1s • %1s</string>
+    <string name="app_name"></string>
+    <string name="app_name_st">SmartThings</string>
+    <string name="shortcut_name_find">Türkçe</string>
+    <string name="subtitle_split"></string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Applying mods, please wait…</string>
+    <string name="hooking_progress_toast">…</string>
     <!-- Landing -->
-    <string name="landing_get_started">Get Started</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
-    <string name="landing_open">Open uTag</string>
+    <string name="landing_get_started"></string>
+    <string name="landing_not_signed_in"></string>
+    <string name="landing_open"></string>
     <!-- Mod download -->
-    <string name="setup_mod_title">SmartThings</string>
-    <string name="setup_mod_info_title">SmartThings Mod</string>
-    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n\<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
-    <string name="setup_mod_info_action">Start mod download</string>
-    <string name="setup_mod_oneui_title">OneUI Detected</string>
-    <string name="setup_mod_oneui_content">This device appears to be running OneUI, which prevents the SmartThings Mod from working. uTag is not compatible with OneUI without root, please use the official SmartThings app instead.\n\n\<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to continue.</string>
+    <string name="setup_mod_title"></string>
+    <string name="setup_mod_info_title"></string>
+    <string name="setup_mod_info_content"></string>
+    <string name="setup_mod_info_action"></string>
+    <string name="setup_mod_oneui_title"></string>
+    <string name="setup_mod_oneui_content"></string>
     <string name="setup_mod_downloading">Downloading SmartThings…</string>
     <string name="setup_mod_setting_up">Setting up mod…</string>
     <string name="setup_mod_setting_up_subtitle">This may take a moment</string>
