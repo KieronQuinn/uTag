@@ -93,7 +93,7 @@
     <string name="settings_main_location_content">Location update, search nearby options, widget refresh, unknown tags, network and safe areas</string>
     <string name="settings_main_map_title">Bản đồ</string>
     <string name="settings_main_map_content">Find and Location History map theming &amp; options</string>
-    <string name="settings_main_security_title">Security &amp; Encryption</string>
+    <string name="settings_main_security_title">Bảo mật &amp; Mã hóa</string>
     <string name="settings_main_security_content">Offline location encryption &amp; biometric entry</string>
     <string name="settings_main_updates_content_disabled">Update notifications are disabled in your system settings</string>
     <string name="settings_main_category_help">Help</string>
@@ -103,11 +103,11 @@
     <string name="settings_main_wiki_content">Info &amp; guides on how to use uTag</string>
     <string name="settings_main_backup_restore_title">Backup &amp; Restore</string>
     <string name="settings_main_backup_restore_content">Backup &amp; restore uTag data to a local file or the cloud</string>
-    <string name="settings_main_advanced_title">Advanced</string>
+    <string name="settings_main_advanced_title">Nâng cao</string>
     <string name="settings_main_advanced_content">Language, content creator mode and analytics options</string>
     <string name="settings_main_category_account">Tài khoản</string>
     <string name="settings_main_category_samsung_account_title">Tài khoản Samsung</string>
-    <string name="settings_main_category_samsung_account_content">Signed in as %1s (%1s)</string>
+    <string name="settings_main_category_samsung_account_content">Đã đăng nhập với %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
     <string name="settings_main_sign_out_title">Đăng xuất</string>
     <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
@@ -212,7 +212,7 @@
     <string name="settings_map_show_buildings_title">Hiển thị Tòa nhà</string>
     <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_title">Encryption</string>
+    <string name="settings_encryption_title">Mã hóa</string>
     <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
     <string name="settings_biometric_title">Biometric Entry</string>
     <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
@@ -227,18 +227,18 @@
     <string name="settings_advanced_auto_dismiss_notifications_content">Automatically dismiss Notify when Left Behind notifications &amp; Smartspacer Targets when the Tag comes back in range.\n\n<b>Note:</b> This may lead to \"ghost\" sounds &amp; vibrations if your Tag comes back in range before you see the notification.</string>
     <string name="settings_advanced_prevent_overmature_title">Prevent Overmature Offline</string>
     <string name="settings_advanced_prevent_overmature_content">Prevent an owned Tag from entering \"overmature\" offline, which is normally triggered when disconnected from a device for roughly 24 hours. Enabling this option prevents the Tag appearing in unknown Tag scans, when it is near your device.\n\n<b>Note:</b> This may cause fewer location updates from other Samsung devices when the Tag is near to this device.</string>
-    <string name="settings_advanced_debug_title">Debug Mode</string>
+    <string name="settings_advanced_debug_title">Chế độ Gỡ lỗi</string>
     <string name="settings_advanced_debug_content">Enables some more verbose logging &amp; debug UI components for testing</string>
-    <string name="settings_advanced_language">Language</string>
+    <string name="settings_advanced_language">Ngôn ngữ</string>
     <string name="settings_advanced_clear_addresses_title">Clear Cached Addresses</string>
     <string name="settings_advanced_clear_addresses_content">Clear the local encrypted cache of addresses from Tag locations and location history</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Clear Cached Addresses?</string>
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
-    <string name="settings_advanced_clear_addresses_dialog_positive">Clear</string>
+    <string name="settings_advanced_clear_addresses_dialog_positive">Xóa</string>
     <string name="settings_advanced_clear_addresses_toast">Cached addresses cleared</string>
     <string name="settings_language_info_title">Note</string>
-    <string name="settings_language_info_content">Not all languages are complete, you can contribute translations on the uTag Crowdin</string>
-    <string name="settings_language_default">System Default</string>
+    <string name="settings_language_info_content">Bản dịch chưa đầy đủ cho tất cả các ngôn ngữ. Bạn có thể đóng góp trên Crowdin của uTag</string>
+    <string name="settings_language_default">Mặc định Hệ thống</string>
     <!-- Settings > Content Creator -->
     <string name="settings_content_creator_title">Content Creator Mode</string>
     <string name="settings_content_creator_enabled">Enabled</string>
@@ -404,7 +404,7 @@
     <string name="tag_more_shareable">Share this Tag\'s location</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
     <string name="tag_more_share">Allow access to your location</string>
-    <string name="tag_more_advanced">Advanced</string>
+    <string name="tag_more_advanced">Nâng cao</string>
     <string name="tag_more_passive_mode_title">Passive Mode</string>
     <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
     <string name="tag_more_passive_mode_content_enabled">On</string>
@@ -542,7 +542,7 @@
     <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
-    <string name="lost_mode_settings_category_advanced">Advanced</string>
+    <string name="lost_mode_settings_category_advanced">Nâng cao</string>
     <string name="lost_mode_settings_custom_url_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
     <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
@@ -636,7 +636,7 @@
     <string name="tag_pin_entry_error">Incorrect PIN entered, try again</string>
     <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_set_pin_title">Set PIN</string>
+    <string name="settings_encryption_set_pin_title">Đặt mã PIN</string>
     <string name="settings_encryption_set_pin_content">Set a PIN for offline location encryption</string>
     <string name="settings_encryption_reset_pin_title">Reset PIN</string>
     <string name="settings_encryption_reset_pin_content">Set on %1s</string>
@@ -644,7 +644,7 @@
     <string name="settings_encryption_require_biometrics_content">Require the use of strong biometrics, such as fingerprint, to add or change your PIN. By default, the device\'s lock screen PIN can be used to authenticate, which may be susceptible to shoulder surfing.</string>
     <string name="settings_encryption_error_dialog_title">Error</string>
     <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
-    <string name="settings_encryption_error_dialog_close">Close</string>
+    <string name="settings_encryption_error_dialog_close">Đóng</string>
     <string name="settings_encryption_category_pin">Offline Location PIN</string>
     <string name="settings_encryption_footer_title">Trying to enable or disable location encryption?</string>
     <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
@@ -804,7 +804,7 @@
     <string name="notification_content_disconnect">Your %1s has been left behind!</string>
     <!-- Logged out notification -->
     <string name="notification_title_logged_out">Signed Out</string>
-    <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
+    <string name="notification_content_logged_out">Bạn đã đăng xuất khỏi SmartThings. Chạm để đăng nhập lại.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Find my Device</string>
     <string name="notification_content_find_my_device_delay">%1s is about to ring this device</string>
