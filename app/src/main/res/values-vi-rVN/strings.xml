@@ -8,7 +8,7 @@
     <string name="hooking_progress_toast">Đang thiết lập mod, xin vui lòng chờ…</string>
     <!-- Landing -->
     <string name="landing_get_started">Bắt Đầu</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
+    <string name="landing_not_signed_in">Bạn cần hoàn thành thiết lập trước, mở uTag để tiếp tục</string>
     <string name="landing_open">Mở uTag</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
@@ -40,7 +40,7 @@
     <string name="setup_permissions">Permissions</string>
     <string name="permission_smartthings_title">Required SmartThings Permissions</string>
     <string name="permission_smartthings_content">SmartThings requires the following permissions in order for uTag to be able to scan for and connect to your SmartTag:\n- Location (<b>set to \"Allow all the time\"</b>)\n- Bluetooth / Nearby Devices</string>
-    <string name="permission_smartthings_grant">Grant in Settings</string>
+    <string name="permission_smartthings_grant">Cho phép trong Cài đặt</string>
     <string name="permission_notification_title">Notification Permission</string>
     <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
     <string name="permission_notification_grant">Grant</string>
@@ -291,7 +291,7 @@
     <string name="map_more">Thêm</string>
     <string name="map_add_to_homescreen">Add to Home screen</string>
     <string name="map_settings">Cài đặt</string>
-    <string name="map_timestamp_last_updated">Last updated: %1s</string>
+    <string name="map_timestamp_last_updated">Lần cập nhật cuối: %1s</string>
     <string name="map_timestamp_unknown">Unknown</string>
     <string name="map_timestamp_now">Bây giờ</string>
     <string name="map_timestamp_minute_ago">%1d phút trước</string>
@@ -708,28 +708,28 @@
     <string name="snackbar_update">Update available</string>
     <string name="snackbar_update_multiple">Updates available</string>
     <string name="snackbar_update_button">View</string>
-    <string name="update_notification">uTag version %1s</string>
-    <string name="update_notification_mod">SmartThings version %1s</string>
+    <string name="update_notification">uTag phiên bản %1s</string>
+    <string name="update_notification_mod">SmartThings phiên bản %1s</string>
     <string name="update_title_utag">uTag update</string>
     <string name="update_title_smartthings">SmartThings update</string>
     <string name="update_heading">uTag update available</string>
     <string name="update_heading_smartthings">SmartThings update available</string>
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Changes</string>
-    <string name="update_done_title">Ready to install</string>
+    <string name="update_done_title">Sẵn sàng để cài đặt</string>
     <string name="update_done_content_utag"><b>Note:</b> Your Tags may disconnect during the update process.</string>
     <string name="update_done_content_smartthings"><b>Note:</b> Your Tags may disconnect during the update process.</string>
-    <string name="update_done_action">Start Install</string>
-    <string name="update_action">Download</string>
+    <string name="update_done_action">Bắt đầu Tải về</string>
+    <string name="update_action">Tải về</string>
     <string name="update_action_alt">Alternative download</string>
-    <string name="download_manager_description">Downloading update…</string>
+    <string name="download_manager_description">Đang tải bản cập nhật về…</string>
     <string name="download_manager_description_mod">Downloading SmartThings…</string>
     <string name="update_downloader_downloading_title">Downloading update…</string>
-    <string name="update_dialog_failed_title">Download failed</string>
-    <string name="update_dialog_failed_content">Check your connection and try again later</string>
-    <string name="update_dialog_failed_close">Close</string>
-    <string name="update_downloader_github">Download via browser</string>
-    <string name="update_notification_title">uTag update available</string>
+    <string name="update_dialog_failed_title">Tải về thất bại</string>
+    <string name="update_dialog_failed_content">Kiểm tra kết nối mạng của bạn và thử lại sau</string>
+    <string name="update_dialog_failed_close">Đóng</string>
+    <string name="update_downloader_github">Tải về qua trình duyệt</string>
+    <string name="update_notification_title">Có bản cập nhật uTag mới</string>
     <string name="update_notification_content">An update is available for uTag (%1s to %1s)</string>
     <string name="update_notification_smartthings_title">SmartThings update available</string>
     <string name="update_notification_smartthings_content">An update is available for SmartThings (%1s to %1s)</string>
@@ -784,7 +784,7 @@
     <string name="search_nearby_bluetooth_disabled_positive">Enable</string>
     <string name="search_nearby_bluetooth_disabled_negative">Cancel</string>
     <!-- Foreground service -->
-    <string name="notification_title_smartthings">SmartThings is running</string>
+    <string name="notification_title_smartthings">SmartThings đang chạy</string>
     <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
     <string name="notification_title_background_service_zero">No Tags connected</string>
     <string name="notification_title_background_service_one">%1d Tag connected</string>
@@ -1043,8 +1043,8 @@
     <string name="updates_utag_available_action">View update</string>
     <string name="updates_utag_updated_title">uTag is up to date</string>
     <string name="updates_utag_updated_content">Version %1s</string>
-    <string name="updates_smartthings_available_title">SmartThings Update Available</string>
-    <string name="updates_smartthings_available_content">Version %1s (current %1s)</string>
+    <string name="updates_smartthings_available_title">Có bản cập nhật SmartThings mới</string>
+    <string name="updates_smartthings_available_content">Phiên bản %1s (hiện tại %1s)</string>
     <string name="updates_smartthings_available_action">View update</string>
     <string name="updates_smartthings_updated_title">SmartThings is up to date</string>
     <string name="updates_smartthings_updated_content">Version %1s</string>
@@ -1053,13 +1053,13 @@
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
     <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
     <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
-    <string name="updates_smartthings_not_installed_action">Re-run setup</string>
-    <string name="updates_smartthings_not_modded_title">SmartThings Not Modified</string>
+    <string name="updates_smartthings_not_installed_action">Chạy lại thiết lập</string>
+    <string name="updates_smartthings_not_modded_title">SmartThings Chưa được Mod</string>
     <string name="updates_smartthings_not_modded_content">You must have the modified build of SmartThings installed for uTag to work, please re-run setup to install it and set it up.\n\n<b>Note:</b> If your device is rooted with Xposed installed, enable the uTag Xposed module, force stop SmartThings and return to uTag to fix this.</string>
-    <string name="updates_smartthings_not_modded_action">Re-run setup</string>
-    <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
+    <string name="updates_smartthings_not_modded_action">Chạy lại thiết lập</string>
+    <string name="updates_rerun_setup_dialog_title">Chạy lại Thiết lập?</string>
     <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
     <string name="updates_category_options">Options</string>
-    <string name="updates_check_for_updates_title">Automatically Check for Updates</string>
+    <string name="updates_check_for_updates_title">Tự động Kiểm tra Bản cập nhật Mới</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
 </resources>
