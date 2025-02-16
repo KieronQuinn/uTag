@@ -325,7 +325,7 @@
     <string name="tag_picker_selected">Selected</string>
     <string name="tag_picker_agreement_required">Agreement required</string>
     <string name="tag_picker_not_allowed">Nicht erlaubt</string>
-    <string name="tag_picker_shared_and_selected"></string>
+    <string name="tag_picker_shared_and_selected">%1s\'s Tag • Selected</string>
     <string name="tag_picker_error_dialog_title">Error</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
     <string name="tag_picker_error_dialog_close">Close</string>
