@@ -191,9 +191,9 @@
     <string name="settings_uts_tag_safe">Questo tag è sicuro</string>
     <string name="settings_uts_tag_safe_dialog_title">Contrassegnare come sicuro?</string>
     <string name="settings_uts_tag_safe_dialog_content">Questo nasconderà il Tag dall\'elenco dei Tag sconosciuti, finché non cambia ID. Ciò avviene ogni 24 ore, oppure se la batteria viene rimossa &amp; e reinserita, oppure se il Tag viene reimpostato.\n\n<b>Nota:</b> questo non impedisce che venga visualizzato nelle scansioni manuali dei Tag sconosciuti in SmarThings.</string>
-    <string name="settings_uts_tag_safe_dialog_positive">Mark as Safe</string>
-    <string name="settings_uts_tag_safe_dialog_negative">Cancel</string>
-    <string name="settings_uts_tag_error_dialog_title">Error</string>
+    <string name="settings_uts_tag_safe_dialog_positive">Contrassegnare come sicuro</string>
+    <string name="settings_uts_tag_safe_dialog_negative">Cancellare</string>
+    <string name="settings_uts_tag_error_dialog_title">Errore</string>
     <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
     <string name="settings_uts_tag_error_dialog_close">Close</string>
     <!-- Settings > Map -->
