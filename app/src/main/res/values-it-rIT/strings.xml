@@ -194,28 +194,28 @@
     <string name="settings_uts_tag_safe_dialog_positive">Contrassegnare come sicuro</string>
     <string name="settings_uts_tag_safe_dialog_negative">Cancellare</string>
     <string name="settings_uts_tag_error_dialog_title">Errore</string>
-    <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
-    <string name="settings_uts_tag_error_dialog_close">Close</string>
+    <string name="settings_uts_tag_error_dialog_content">Si è verificato un errore durante il caricamento di questo tag sconosciuto. Riprova più tardi.</string>
+    <string name="settings_uts_tag_error_dialog_close">Vicino</string>
     <!-- Settings > Map -->
-    <string name="settings_map_show_location_title">Show Location</string>
-    <string name="settings_map_show_location_content">Show your location on the map, where available</string>
-    <string name="settings_map_show_location_toast">Grant precise location permission</string>
-    <string name="settings_map_style_title">Map Type</string>
-    <string name="settings_map_style_normal">Default</string>
-    <string name="settings_map_style_terrain">Terrain</string>
-    <string name="settings_map_style_satellite">Satellite</string>
-    <string name="settings_map_theme_title">Map Theme</string>
-    <string name="settings_map_theme_light">Light</string>
-    <string name="settings_map_theme_dark">Dark</string>
-    <string name="settings_map_theme_system">Match system</string>
-    <string name="settings_map_theme_disabled">Not available for this map type</string>
+    <string name="settings_map_show_location_title">Mostra posizione</string>
+    <string name="settings_map_show_location_content">Mostra la tua posizione sulla mappa, ove disponibile</string>
+    <string name="settings_map_show_location_toast">Concedi l\'autorizzazione per la posizione precisa</string>
+    <string name="settings_map_style_title">Tipo di mappa</string>
+    <string name="settings_map_style_normal">Predefinito</string>
+    <string name="settings_map_style_terrain">Terreno</string>
+    <string name="settings_map_style_satellite">Satellitare</string>
+    <string name="settings_map_theme_title">Tema della mappa</string>
+    <string name="settings_map_theme_light">Leggero</string>
+    <string name="settings_map_theme_dark">Buio</string>
+    <string name="settings_map_theme_system">Sistema di corrispondenza</string>
+    <string name="settings_map_theme_disabled">Non disponibile per questo tipo di mappa</string>
     <string name="settings_map_show_buildings_title">Mostra Edifici</string>
-    <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
+    <string name="settings_map_show_buildings_content">Mostra i contorni dell\'edificio, ove disponibili</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_title">Encryption</string>
-    <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
-    <string name="settings_biometric_title">Biometric Entry</string>
-    <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
+    <string name="settings_encryption_title">Crittografia</string>
+    <string name="settings_encryption_content">Imposta o reimposta un PIN per la crittografia della posizione offline</string>
+    <string name="settings_biometric_title">Ingresso biometrico</string>
+    <string name="settings_biometric_content">Richiedi l\'autenticazione biometrica per accedere alle impostazioni di uTag o alla mappa di un Tag</string>
     <string name="settings_biometric_content_disabled">Not available on this device</string>
     <!-- Settings > Advanced -->
     <string name="settings_advanced_analytics_title">Analytics &amp; Crash Reporting</string>
