@@ -4,7 +4,9 @@ import com.google.gson.annotations.SerializedName
 
 data class GetInstalledAppsResponse(
     @SerializedName("items")
-    val items: List<Item>
+    val items: List<Item>,
+    @SerializedName("_links")
+    val links: Links
 ) {
 
     data class Item(
@@ -68,5 +70,17 @@ data class GetInstalledAppsResponse(
         @SerializedName("url")
         val url: String,
     )
+
+    data class Links(
+        @SerializedName("next")
+        val next: Link?,
+        @SerializedName("previous")
+        val previous: Link?
+    ) {
+        data class Link(
+            @SerializedName("href")
+            val href: String
+        )
+    }
 
 }

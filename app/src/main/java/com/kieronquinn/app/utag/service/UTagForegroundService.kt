@@ -126,7 +126,7 @@ class UTagForegroundService: LifecycleService() {
 
     companion object {
         private const val CONNECT_TIMEOUT = 10_000L
-        private const val DISCONNECT_NOTIFICATION_DELAY = 150_000L // 2.5 minutes
+        private const val DISCONNECT_NOTIFICATION_DELAY = 180_000L // 3 minutes
         private const val MIN_RSSI_FOR_OVERMATURE_UPDATE = -75
 
         private const val ACTION_START_SMARTTAG_SERVICE =
@@ -651,8 +651,8 @@ class UTagForegroundService: LifecycleService() {
             val bleMac = it.getStringExtra(EXTRA_BLE_MAC) ?: return@collect
             val rssi = it.getIntExtra(EXTRA_RSSI, 1).takeIf { rssi -> rssi <= 0 }
                 ?: return@collect
-            log("Received tag scan for $deviceId, mac is now $bleMac with RSSI $rssi")
             val tagData = smartTagRepository.decodeServiceData(serviceData)
+            log("Received tag scan for $deviceId, mac is now $bleMac with RSSI $rssi, privacy ID ${tagData.privacyId}")
             smartTagRepository.cacheServiceData(deviceId, serviceData, bleMac)
             if(!overmatureOfflinePreventionEnabled.firstNotNull()) return@collect
             if(tagData.tagState.shouldPreventOvermatureOffline() && rssi >= MIN_RSSI_FOR_OVERMATURE_UPDATE) {
@@ -1087,6 +1087,7 @@ class UTagForegroundService: LifecycleService() {
         darkMode.drop(1).collect {
             //Theme has changed, update widgets
             widgetRepository.onWidgetThemeChanged()
+            historyWidgetRepository.onWidgetThemeChanged()
         }
     }
 

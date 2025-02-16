@@ -20,8 +20,6 @@ import com.kieronquinn.app.utag.ui.base.BaseSettingsFragment
 import com.kieronquinn.app.utag.ui.base.ProvidesSubtitle
 import com.kieronquinn.app.utag.ui.screens.tag.more.automation.TagMoreAutomationViewModel.Event
 import com.kieronquinn.app.utag.ui.screens.tag.more.automation.TagMoreAutomationViewModel.State
-import com.kieronquinn.app.utag.xposed.extensions.getParcelableCompat
-import com.kieronquinn.app.utag.xposed.extensions.getSerializableCompat
 import com.kieronquinn.app.utag.utils.extensions.whenResumed
 import com.kieronquinn.app.utag.utils.preferences.dropDownPreference
 import com.kieronquinn.app.utag.utils.preferences.onChange
@@ -31,6 +29,8 @@ import com.kieronquinn.app.utag.utils.preferences.preferenceCategory
 import com.kieronquinn.app.utag.utils.preferences.setSummaryAccented
 import com.kieronquinn.app.utag.utils.preferences.switchPreferenceScreen
 import com.kieronquinn.app.utag.utils.preferences.tipsCardPreference
+import com.kieronquinn.app.utag.xposed.extensions.getParcelableCompat
+import com.kieronquinn.app.utag.xposed.extensions.getSerializableCompat
 import dev.oneuiproject.oneui.widget.Toast
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
@@ -184,19 +184,22 @@ class TagMoreAutomationFragment: BaseSettingsFragment(), BackAvailable, Provides
             }
         }
 
-        preferenceCategory("automation_options") {
-            title = getString(R.string.tag_more_automation_category_options)
-            dropDownPreference {
-                title = getString(R.string.tag_more_automation_volume)
-                summary = getString(state.buttonVolumeLevel.label)
-                entries = ButtonVolumeLevel.entries.toTypedArray().map { getString(it.label) }
-                    .toTypedArray()
-                entryValues = ButtonVolumeLevel.entries.toTypedArray().map { it.name }.toTypedArray()
-                value = state.buttonVolumeLevel.name
-                isEnabled = !state.isSending
-                onChange<String> {
-                    val option = ButtonVolumeLevel.valueOf(it)
-                    viewModel.onButtonVolumeChanged(option)
+        if(state.buttonVolumeLevel != null) {
+            preferenceCategory("automation_options") {
+                title = getString(R.string.tag_more_automation_category_options)
+                dropDownPreference {
+                    title = getString(R.string.tag_more_automation_volume)
+                    summary = getString(state.buttonVolumeLevel.label)
+                    entries = ButtonVolumeLevel.entries.toTypedArray().map { getString(it.label) }
+                        .toTypedArray()
+                    entryValues =
+                        ButtonVolumeLevel.entries.toTypedArray().map { it.name }.toTypedArray()
+                    value = state.buttonVolumeLevel.name
+                    isEnabled = !state.isSending
+                    onChange<String> {
+                        val option = ButtonVolumeLevel.valueOf(it)
+                        viewModel.onButtonVolumeChanged(option)
+                    }
                 }
             }
         }

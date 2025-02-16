@@ -29,6 +29,7 @@ abstract class SettingsMapViewModel: ViewModel() {
     abstract fun onMapsStyleChanged(style: MapStyle)
     abstract fun onMapsThemeChanged(theme: MapTheme)
     abstract fun onShowBuildingsChanged(enabled: Boolean)
+    abstract fun onSwapLocationHistoryChanged(enabled: Boolean)
     abstract fun onShowPermissions()
 
     sealed class State {
@@ -37,7 +38,8 @@ abstract class SettingsMapViewModel: ViewModel() {
             val mapsLocationEnabled: Boolean,
             val mapStyle: MapStyle,
             val mapTheme: MapTheme,
-            val showBuildings: Boolean
+            val showBuildings: Boolean,
+            val swapLocationHistory: Boolean
         ): State()
     }
 
@@ -55,6 +57,7 @@ class SettingsMapViewModelImpl(
     private val mapStyle = settingsRepository.mapStyle
     private val mapTheme = settingsRepository.mapTheme
     private val mapShowBuildings = settingsRepository.mapShowBuildings
+    private val mapSwapLocationHistory = settingsRepository.mapSwapLocationHistory
 
     private val hasLocationPermission = resumeBus.mapLatest {
         context.hasLocationPermissions()
@@ -71,9 +74,10 @@ class SettingsMapViewModelImpl(
         mapsLocationEnabled,
         mapStyle.asFlow(),
         mapTheme.asFlow(),
-        mapShowBuildings.asFlow()
-    ) { location, style, theme, buildings ->
-        State.Loaded(location, style, theme, buildings)
+        mapShowBuildings.asFlow(),
+        mapSwapLocationHistory.asFlow()
+    ) { location, style, theme, buildings, swapLocationHistory ->
+        State.Loaded(location, style, theme, buildings, swapLocationHistory)
     }.stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
 
     override fun onResume() {
@@ -103,6 +107,12 @@ class SettingsMapViewModelImpl(
     override fun onShowBuildingsChanged(enabled: Boolean) {
         viewModelScope.launch {
             mapShowBuildings.set(enabled)
+        }
+    }
+
+    override fun onSwapLocationHistoryChanged(enabled: Boolean) {
+        viewModelScope.launch {
+            mapSwapLocationHistory.set(enabled)
         }
     }
 

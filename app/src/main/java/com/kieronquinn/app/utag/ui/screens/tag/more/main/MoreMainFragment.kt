@@ -132,7 +132,7 @@ class MoreMainFragment : BaseSettingsFragment(), BackAvailable, ProvidesBack, Pr
 
     private fun PreferenceGroup.setContent(state: State.Loaded) {
         val isSharedDevice = !state.deviceInfo.isOwner
-        if(!state.requiresAgreement) {
+        if(!state.requiresAgreement && !state.swapLocationHistory) {
             preference {
                 title = getString(R.string.tag_more_search_nearby)
                 summary = if(state.passiveModeEnabled) {
@@ -142,6 +142,15 @@ class MoreMainFragment : BaseSettingsFragment(), BackAvailable, ProvidesBack, Pr
                 isEnabled = !state.passiveModeEnabled
                 onClick {
                     viewModel.onNearbyClicked()
+                }
+            }
+        }
+        if(state.swapLocationHistory) {
+            preference {
+                title = getString(R.string.map_location_history)
+                icon = ContextCompat.getDrawable(requireContext(), R.drawable.ic_location_history)
+                onClick {
+                    viewModel.onLocationHistoryClicked()
                 }
             }
         }

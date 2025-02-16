@@ -6,6 +6,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.LifecycleRegistry
 import androidx.lifecycle.OnLifecycleEvent
 import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.withCreated
 import androidx.lifecycle.withResumed
 import kotlinx.coroutines.CoroutineScope
@@ -37,6 +38,22 @@ fun LifecycleOwner.whenCreated(block: suspend CoroutineScope.() -> Unit): Job {
             launch {
                 block()
             }
+        }
+    }
+}
+
+fun LifecycleOwner.repeatWhenResumed(block: suspend CoroutineScope.() -> Unit): Job {
+    return lifecycleScope.launch {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+            block()
+        }
+    }
+}
+
+fun LifecycleOwner.repeatWhenCreated(block: suspend CoroutineScope.() -> Unit): Job {
+    return lifecycleScope.launch {
+        lifecycle.repeatOnLifecycle(Lifecycle.State.CREATED) {
+            block()
         }
     }
 }

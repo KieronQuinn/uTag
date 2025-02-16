@@ -35,6 +35,7 @@ import android.os.Process
 import android.os.Vibrator
 import android.os.VibratorManager
 import android.provider.MediaStore
+import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.model.LatLng
@@ -103,6 +104,15 @@ fun Context.getAttrColor(@AttrRes attr: Int): Int {
     val color = obtainStyledAttributes.getColor(0, 0)
     obtainStyledAttributes.recycle()
     return color
+}
+
+fun Context.getActionBarSize(): Int {
+    val typedValue = TypedValue().apply {
+        theme.resolveAttribute(
+            android.R.attr.actionBarSize, this, true
+        )
+    }
+    return TypedValue.complexToDimensionPixelSize(typedValue.data, resources.displayMetrics)
 }
 
 fun Context.navigateTo(location: LatLng) {
@@ -291,8 +301,6 @@ fun Context.copyToClipboard(text: String, label: String) {
     val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
     clipboard.setPrimaryClip(ClipData.newPlainText(label, text))
 }
-
-
 
 @SuppressLint("DiscouragedApi")
 fun Context.getSupportedLocales(): List<Locale> {

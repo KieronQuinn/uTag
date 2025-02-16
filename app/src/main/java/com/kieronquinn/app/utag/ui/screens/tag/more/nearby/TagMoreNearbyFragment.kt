@@ -3,15 +3,20 @@ package com.kieronquinn.app.utag.ui.screens.tag.more.nearby
 import android.animation.Animator
 import android.animation.Animator.AnimatorListener
 import android.animation.ValueAnimator
+import android.annotation.SuppressLint
 import android.content.pm.ActivityInfo
 import android.graphics.Color
 import android.icu.util.LocaleData
 import android.icu.util.LocaleData.MeasurementSystem
 import android.icu.util.ULocale
+import android.os.Build
 import android.os.Bundle
 import android.text.format.DateUtils
 import android.view.View
+import android.window.OnBackInvokedCallback
+import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AlertDialog
 import androidx.core.content.ContextCompat
 import androidx.core.view.isVisible
@@ -35,6 +40,7 @@ import com.kieronquinn.app.utag.ui.screens.tag.more.nearby.TagMoreNearbyViewMode
 import com.kieronquinn.app.utag.utils.extensions.SYSTEM_INSETS
 import com.kieronquinn.app.utag.utils.extensions.await
 import com.kieronquinn.app.utag.utils.extensions.fade
+import com.kieronquinn.app.utag.utils.extensions.getActionBarSize
 import com.kieronquinn.app.utag.utils.extensions.onApplyInsets
 import com.kieronquinn.app.utag.utils.extensions.onClicked
 import com.kieronquinn.app.utag.utils.extensions.removeSuffixRecursively
@@ -67,6 +73,7 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
     private var rotationLocked = false
     private var bluetoothDialog: AlertDialog? = null
     private var uwbDialog: AlertDialog? = null
+    private var backDispatcherCallbackNative: Any? = null
 
     private val uwbPermissionLauncher = registerForActivityResult(
         ActivityResultContracts.RequestPermission()
@@ -78,7 +85,13 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
     }
 
     private val viewModel by viewModel<TagMoreNearbyViewModel> {
-        parametersOf(args.deviceId, args.supportsUwb)
+        parametersOf(args.deviceId, args.supportsUwb, args.isRoot)
+    }
+
+    private val topPadding by lazy {
+        if(args.isRoot) {
+            requireContext().getActionBarSize()
+        }else 0
     }
 
     private val glide by lazy {
@@ -95,6 +108,7 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
         setupLoading()
         setupRssi()
         setupUwb()
+        setupBack()
         setupSearching()
         setupState()
         setupEvents()
@@ -113,6 +127,17 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
         super.onPause()
     }
 
+    override fun onDestroy() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            //Unregister the back callback if it exists
+            (backDispatcherCallbackNative as? OnBackInvokedCallback)?.let {
+                requireActivity().onBackInvokedDispatcher.unregisterOnBackInvokedCallback(it)
+                backDispatcherCallbackNative = null
+            }
+        }
+        super.onDestroy()
+    }
+
     override fun onDestroyView() {
         lottieArrowAnimation?.cancel()
         lottieArrowAnimation = null
@@ -125,10 +150,48 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
         return ""
     }
 
+    /**
+     *  The OneUI library seems to not support predictive back using the compat library. Use the
+     *  native dispatcher where possible, and where predictive back is not used, we can use compat.
+     */
+    @SuppressLint("RestrictedApi")
+    private fun setupBack() {
+        if(!args.isRoot) return //Handled by navigation system
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            setupBackNative()
+        }else{
+            setupBackCompat()
+        }
+    }
+
+    private fun setupBackCompat() = whenResumed {
+        requireActivity().onBackPressedDispatcher.addCallback(
+            object: OnBackPressedCallback(true) {
+                override fun handleOnBackPressed() {
+                    viewModel.onBackPressed()
+                }
+            }
+        )
+    }
+
+    @RequiresApi(Build.VERSION_CODES.TIRAMISU)
+    private fun setupBackNative() = whenResumed {
+        val callback = OnBackInvokedCallback {
+            viewModel.onBackPressed()
+        }
+        backDispatcherCallbackNative = callback
+        requireActivity().onBackInvokedDispatcher
+            .registerOnBackInvokedCallback(100, callback)
+    }
+
     private fun setupInsets() = with(binding.root) {
+        updatePadding(top = topPadding)
         onApplyInsets { view, insets ->
             val inset = insets.getInsets(SYSTEM_INSETS)
-            view.updatePadding(bottom = inset.bottom)
+            val topInset = if(topPadding > 0) {
+                topPadding + inset.top
+            }else 0
+            view.updatePadding(bottom = inset.bottom, top = topInset)
         }
     }
 

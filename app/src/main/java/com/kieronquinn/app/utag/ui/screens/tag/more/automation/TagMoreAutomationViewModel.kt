@@ -54,7 +54,7 @@ abstract class TagMoreAutomationViewModel: ViewModel() {
             val pressTitle: CharSequence?,
             val holdTitle: CharSequence?,
             val showSharedWarningDialog: Boolean,
-            val buttonVolumeLevel: ButtonVolumeLevel,
+            val buttonVolumeLevel: ButtonVolumeLevel?,
             val isSending: Boolean
         ): State()
         data object Error: State()
@@ -129,7 +129,7 @@ class TagMoreAutomationViewModelImpl(
         val hasOverlayPermission = options.first
         val prompt = options.second
         val hasSeenWarning = options.third
-        if(syncSuccess && buttonVolume != null) {
+        if(syncSuccess) {
             val pressTitle = automationRepository.resolveIntentTitle(config, TagButtonAction.PRESS)
             val holdTitle = automationRepository.resolveIntentTitle(config, TagButtonAction.HOLD)
             State.Loaded(

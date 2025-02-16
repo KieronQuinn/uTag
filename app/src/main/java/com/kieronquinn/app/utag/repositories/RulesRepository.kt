@@ -33,10 +33,11 @@ class RulesRepositoryImpl(
     override suspend fun getInUseActions(): Map<String, List<TagButtonAction>>? {
         //Because of the potential size of the actions response, we cache just what we need
         return try {
-            service.getRules().get(throwIO = true, name = "rules")?.getActions()?.also {
+            val rules = service.getRules().get(throwIO = true, name = "rules")?.getActions()?.also {
                 val rules = it.map { rule -> CachedRules.Rule(rule.key, rule.value) }
                 cacheRepository.setCache(CacheType.RULES, data = CachedRules(rules))
             }
+            rules
         }catch (e: IOException) {
             cacheRepository.getCache<CachedRules>(CacheType.RULES)?.let { rules ->
                 rules.rules.associate { Pair(it.deviceId, it.actions) }

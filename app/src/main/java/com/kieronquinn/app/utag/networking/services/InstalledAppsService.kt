@@ -1,8 +1,8 @@
 package com.kieronquinn.app.utag.networking.services
 
 import android.content.Context
-import android.util.Log
 import com.google.gson.Gson
+import com.google.gson.JsonSyntaxException
 import com.google.gson.reflect.TypeToken
 import com.kieronquinn.app.utag.model.database.cache.CacheItem.CacheType
 import com.kieronquinn.app.utag.networking.model.smartthings.GetInstalledAppsResponse
@@ -14,6 +14,7 @@ import com.kieronquinn.app.utag.repositories.CacheRepository.Companion.getCache
 import com.kieronquinn.app.utag.repositories.UserRepository
 import com.kieronquinn.app.utag.utils.extensions.executeOrNull
 import com.kieronquinn.app.utag.utils.extensions.get
+import com.kieronquinn.app.utag.utils.extensions.reportRetrofitError
 import com.kieronquinn.app.utag.utils.extensions.smartThingsClient
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
@@ -43,6 +44,7 @@ interface InstalledAppsService {
         private val installedAppIdLock = Mutex()
         private var installedAppId: String? = null
         private val userRepository by inject<UserRepository>()
+        private val cacheRepository by inject<CacheRepository>()
 
         suspend fun InstalledAppsService.getExecuteUrl(): String? {
             return getInstalledAppId()?.let {
@@ -59,11 +61,19 @@ interface InstalledAppsService {
         private suspend fun InstalledAppsService.getInstalledAppIdLocked(): String? {
             installedAppId?.let { return it }
             val userId = userRepository.getUserInfo()?.uuid ?: return null
-            return getInstalledApps(URL_GET_INSTALLED_APPS)
-                .get(CacheType.INSTALLED_APP_ID, name = "installedAppId")
-                    ?.items?.getFmeAppId(userId)?.also {
-                        installedAppId = it
-                    }
+            val allInstalledApps = ArrayList<GetInstalledAppsResponse.Item>()
+            var url: String? = URL_GET_INSTALLED_APPS
+            while(url != null) {
+                val installedApps = getInstalledApps(url).get(name = "installedAppId") ?: break
+                allInstalledApps.addAll(installedApps.items)
+                url = installedApps.links.next?.href
+            }
+            val appId = allInstalledApps.getFmeAppId(userId)
+                ?: cacheRepository.getCache<String>(CacheType.CURRENT_INSTALLED_APP_ID)
+                ?: return null
+            installedAppId = appId
+            cacheRepository.setCache(CacheType.CURRENT_INSTALLED_APP_ID, data = appId)
+            return appId
         }
 
         private fun List<GetInstalledAppsResponse.Item>.getFmeAppId(ownerId: String): String? {
@@ -105,8 +115,10 @@ interface InstalledAppsService {
                 //Cache is enabled, so try to use the cache
                 return cache.getCache<T>(type ?: return null, subType)?.convert()
             }
+            val gson by inject<Gson>()
+            val errorUrl = uri + (extraUri ?: "")
+            val name = type?.name ?: errorUrl
             return try {
-                val gson by inject<Gson>()
                 val typeToken = object: TypeToken<InstalledAppsResponse<T>>(){}.type
                 val installedAppsResponse = gson.fromJson<InstalledAppsResponse<T>>(response, typeToken)
                 if(installedAppsResponse.statusCode == 200) {
@@ -116,9 +128,28 @@ interface InstalledAppsService {
                             cache.setCache(type, subType, it)
                         }
                     }
-                }else null
-            }catch (e: Exception) {
-                Log.e("Retrofit", "Error ($type)", e)
+                }else{
+                    //Send just the basic data, we can't extract anything else here
+                    reportRetrofitError(name, url = errorUrl, code = installedAppsResponse.statusCode)
+                    null
+                }
+            }catch (e: JsonSyntaxException) {
+                try {
+                    //Try to parse the response as an error to get the reason
+                    val typeToken = object: TypeToken<InstalledAppsResponse<String>>(){}.type
+                    val errorResponse = gson
+                        .fromJson<InstalledAppsResponse<String>>(response, typeToken)
+                    val errorCode = errorResponse.statusCode
+                    val error = "${errorResponse.errorCode}: ${errorResponse.message}"
+                    reportRetrofitError(name, error = error, url = errorUrl, code = errorCode)
+                }catch (e: Exception) {
+                    //Otherwise just report the error
+                    reportRetrofitError(name, exception = e)
+                }
+                null
+            } catch (e: Exception) {
+                //Error which was not caused by JSON, report it
+                reportRetrofitError(name, exception = e)
                 null
             }
         }

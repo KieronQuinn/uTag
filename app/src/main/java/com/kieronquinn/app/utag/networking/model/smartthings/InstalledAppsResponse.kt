@@ -7,6 +7,8 @@ data class InstalledAppsResponse<T>(
     val statusCode: Int,
     @SerializedName("requestId")
     val requestId: String,
+    @SerializedName("errorCode")
+    val errorCode: String?,
     @SerializedName("message")
     val message: T?
 )

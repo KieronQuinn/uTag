@@ -127,7 +127,7 @@ interface WidgetRepository: RoomEncryptionFailedCallback {
     /**
      *  Decrypts a given stored encrypted widget image
      */
-    fun decryptImage(bytes: ByteArray): ByteArray
+    fun decryptImage(bytes: ByteArray): ByteArray?
 
     data class AppWidgetConfig(
         val appWidgetId: Int,
@@ -381,8 +381,12 @@ class WidgetRepositoryImpl(
     }
 
     @Synchronized
-    override fun decryptImage(bytes: ByteArray): ByteArray {
-        return decryptionCipher.doFinal(bytes)
+    override fun decryptImage(bytes: ByteArray): ByteArray? {
+        return try {
+            decryptionCipher.doFinal(bytes)
+        }catch (e: Exception) {
+            null
+        }
     }
 
     private fun clearImages(appWidgetId: Int, preview: Boolean) {

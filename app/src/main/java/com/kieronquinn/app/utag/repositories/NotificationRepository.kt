@@ -9,7 +9,9 @@ import androidx.core.app.NotificationCompat
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.repositories.NotificationRepository.NotificationChannel
 import com.kieronquinn.app.utag.repositories.NotificationRepository.NotificationId
+import com.kieronquinn.app.utag.ui.activities.ErrorDebugDialogActivity
 import com.kieronquinn.app.utag.ui.activities.MainActivity
+import com.kieronquinn.app.utag.utils.extensions.firstNotNull
 import com.kieronquinn.app.utag.utils.extensions.getContentText
 import com.kieronquinn.app.utag.utils.extensions.getStyle
 import com.kieronquinn.app.utag.utils.extensions.hasNotificationPermission
@@ -72,6 +74,12 @@ interface NotificationRepository {
      *  and to log in again.
      */
     fun showLoggedOutNotificationIfNeeded()
+
+    /**
+     *  If the user has enabled debug mode, this will show a notification for an error to be sent
+     *  on GitHub.
+     */
+    fun showErrorNotificationIfNeeded(message: String)
 
     enum class NotificationChannel(
         val id: String,
@@ -148,7 +156,8 @@ interface NotificationRepository {
         FIND_MY_DEVICE,
         LEFT_BEHIND_PREFIX,
         UNKNOWN_TAG,
-        LOGGED_OUT
+        LOGGED_OUT,
+        DEBUG
     }
 
     enum class PendingIntentId {
@@ -172,13 +181,15 @@ interface NotificationRepository {
 }
 
 class NotificationRepositoryImpl(
-    private val context: Context
+    private val context: Context,
+    settings: EncryptedSettingsRepository
 ): NotificationRepository {
 
     private val notificationManager =
         context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
 
     private val scope = MainScope()
+    private val debugEnabled = settings.isDebugModeEnabled(scope)
 
     override fun createNotification(
         channel: NotificationChannel,
@@ -233,7 +244,7 @@ class NotificationRepositoryImpl(
 
     override fun showLoggedOutNotificationIfNeeded() {
         //Don't show notification if app is already visible
-        if(context.isInForeground() == true) {
+        if(context.isInForeground()) {
             cancelNotification(NotificationId.LOGGED_OUT)
             return
         }
@@ -253,6 +264,31 @@ class NotificationRepositoryImpl(
                 ))
             it.setAutoCancel(true)
             it.priority = NotificationCompat.PRIORITY_HIGH
+        }
+    }
+
+    override fun showErrorNotificationIfNeeded(message: String) {
+        scope.launch {
+            //Do nothing if debug isn't enabled
+            if(!debugEnabled.firstNotNull()) return@launch
+            val intent = ErrorDebugDialogActivity.createIntent(context, message)
+            showNotification(
+                NotificationId.DEBUG,
+                NotificationChannel.ERROR
+            ) {
+                it.setSmallIcon(R.drawable.ic_notification_error)
+                it.setContentTitle(context.getString(R.string.debug_error_notification_title))
+                it.setContentText(context.getString(R.string.debug_error_notification_content))
+                it.setContentIntent(
+                    PendingIntent.getActivity(
+                        context,
+                        NotificationId.DEBUG.ordinal,
+                        intent,
+                        PendingIntent.FLAG_MUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
+                    ))
+                it.setAutoCancel(true)
+                it.priority = NotificationCompat.PRIORITY_HIGH
+            }
         }
     }
 

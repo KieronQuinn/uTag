@@ -39,10 +39,24 @@ fun Fragment.whenResumed(block: suspend CoroutineScope.() -> Unit) {
 }
 
 /**
+ *  Helper for [LifecycleOwner].[repeatWhenResumed]
+ */
+fun Fragment.repeatWhenResumed(block: suspend CoroutineScope.() -> Unit) {
+    viewLifecycleOwner.repeatWhenResumed(block)
+}
+
+/**
  *  Helper for [LifecycleOwner].[whenCreated]
  */
 fun Fragment.whenCreated(block: suspend CoroutineScope.() -> Unit) {
     viewLifecycleOwner.whenCreated(block)
+}
+
+/**
+ *  Helper for [LifecycleOwner].[repeatWhenCreated]
+ */
+fun Fragment.repeatWhenCreated(block: suspend CoroutineScope.() -> Unit) {
+    viewLifecycleOwner.repeatWhenCreated(block)
 }
 
 val Fragment.containerParent

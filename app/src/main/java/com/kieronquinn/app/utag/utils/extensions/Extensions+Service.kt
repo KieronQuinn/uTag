@@ -1,7 +1,6 @@
 package com.kieronquinn.app.utag.utils.extensions
 
-import android.os.IInterface
-import android.os.RemoteException
+import android.os.DeadObjectException
 import com.kieronquinn.app.utag.service.IUTagService
 import com.kieronquinn.app.utag.service.callback.ITagConnectResultCallback
 import com.samsung.android.oneconnect.base.device.tag.TagConnectionState
@@ -19,6 +18,10 @@ fun IUTagService.onConnectResult() = callbackFlow {
     }
     val id = addTagConnectResultCallback(callback)
     awaitClose {
-        removeTagConnectResultCallback(id ?: return@awaitClose)
+        try {
+            removeTagConnectResultCallback(id ?: return@awaitClose)
+        }catch (e: DeadObjectException) {
+            //Disconnected, service will handle it
+        }
     }
 }

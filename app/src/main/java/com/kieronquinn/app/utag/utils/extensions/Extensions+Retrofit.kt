@@ -6,6 +6,7 @@ import com.google.gson.reflect.TypeToken
 import com.kieronquinn.app.utag.model.database.cache.CacheItem.CacheType
 import com.kieronquinn.app.utag.repositories.AnalyticsRepository
 import com.kieronquinn.app.utag.repositories.CacheRepository
+import com.kieronquinn.app.utag.repositories.NotificationRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import okhttp3.Cache
@@ -51,21 +52,47 @@ suspend inline fun <reified T : Any> Call<T>.get(
 suspend fun <T> Call<T>.executeOrNull(throwIO: Boolean = false, name: String): Response<T>? {
     return withContext(Dispatchers.IO) {
         try {
-            execute()
+            execute().also {
+                if(!it.isSuccessful) {
+                    reportRetrofitError(
+                        name,
+                        error = it.errorBody()?.string(),
+                        code = it.code(),
+                        url = it.raw().request.url.toString()
+                    )
+                }
+            }
         }catch (e: Exception) {
             if(throwIO && e is IOException) {
                 throw e
             }
-            val exception = RetrofitException(name, e)
-            Log.e("Retrofit", "Error", exception)
             //Don't report network issues
             if(e !is IOException) {
-                val analytics by inject<AnalyticsRepository>(AnalyticsRepository::class.java)
-                analytics.recordNonFatal(exception)
+                reportRetrofitError(name, e)
             }
             null
         }
     }
+}
+
+fun reportRetrofitError(
+    name: String,
+    exception: Throwable? = null,
+    error: String? = null,
+    url: String? = null,
+    code: Int? = null
+) {
+    val inException = exception ?: Throwable("$url returned $code")
+    val userVisibleError = exception?.toString() ?: if(url != null && code != null) {
+        "$url returned $code:\n\n$error"
+    } else null
+    Log.e("Retrofit", "Error", exception ?: inException)
+    val retrofitException = RetrofitException(name, exception ?: inException)
+    val analytics by inject<AnalyticsRepository>(AnalyticsRepository::class.java)
+    //The error body is guaranteed to only be error info so should be safe to send to Crashlytics
+    analytics.recordNonFatal(retrofitException, error)
+    val notificationRepository by inject<NotificationRepository>(NotificationRepository::class.java)
+    notificationRepository.showErrorNotificationIfNeeded(userVisibleError ?: return)
 }
 
 private class RetrofitException(name: String, throwable: Throwable):

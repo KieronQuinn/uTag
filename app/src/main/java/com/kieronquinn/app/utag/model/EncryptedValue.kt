@@ -32,7 +32,13 @@ object EncryptedValueConverter: KoinComponent {
     @Synchronized
     @TypeConverter
     fun fromBytes(value: ByteArray?): EncryptedValue? {
-        return value?.let { EncryptedValue(decryptionCipher.doFinal(it)) }
+        return value?.let {
+            try {
+                EncryptedValue(decryptionCipher.doFinal(it))
+            }catch (e: Exception) {
+                null
+            }
+        }
     }
 
     @Synchronized

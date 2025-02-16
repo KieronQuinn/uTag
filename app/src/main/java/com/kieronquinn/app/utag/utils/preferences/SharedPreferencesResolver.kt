@@ -106,27 +106,27 @@ class SharedPreferencesResolver(
     }
 
     override fun putString(key: String, value: String?): SharedPreferences.Editor {
-        callProvider<String>(Method.PUT_STRING, keyValue(key, value ?: ""))
+        callProvider<Boolean>(Method.PUT_STRING, keyValue(key, value ?: ""))
         return this
     }
 
     override fun putStringSet(key: String, values: Set<String>?): SharedPreferences.Editor {
-        callProvider<Set<String>>(Method.PUT_STRING_SET, keyValue(key, values ?: emptySet()))
+        callProvider<Boolean>(Method.PUT_STRING_SET, keyValue(key, values ?: emptySet()))
         return this
     }
 
     override fun putInt(key: String, value: Int): SharedPreferences.Editor {
-        callProvider<Int>(Method.PUT_INT, keyValue(key, value))
+        callProvider<Boolean>(Method.PUT_INT, keyValue(key, value))
         return this
     }
 
     override fun putLong(key: String, value: Long): SharedPreferences.Editor {
-        callProvider<Int>(Method.PUT_LONG, keyValue(key, value))
+        callProvider<Boolean>(Method.PUT_LONG, keyValue(key, value))
         return this
     }
 
     override fun putFloat(key: String, value: Float): SharedPreferences.Editor {
-        callProvider<Float>(Method.PUT_FLOAT, keyValue(key, value))
+        callProvider<Boolean>(Method.PUT_FLOAT, keyValue(key, value))
         return this
     }
 

@@ -96,7 +96,8 @@ class AuthProvider: BaseProvider() {
                 bundleOf(KEY_RESULT to authRepository.refreshFindToken())
             }
             Method.CLEAR_CREDENTIALS -> {
-                bundleOf(KEY_RESULT to authRepository.clearCredentials())
+                authRepository.clearCredentials()
+                bundleOf(KEY_RESULT to true)
             }
             null -> null
         }
