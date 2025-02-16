@@ -82,8 +82,8 @@
     <string name="settings_main_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="settings_main_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the Updates tab to fix this.</string>
     <string name="settings_main_xposed_error_content">The uTag SmartThings modification is not installed. If you are using Xposed, make sure it\'s enabled for SmartThings and reboot your device. If you\'re not rooted, make sure the modified version is installed.</string>
-    <string name="settings_main_smartthings_title">Looking for SmartTag options?</string>
-    <string name="settings_main_smartthings_content">Settings &amp; tracking for SmartTags can be accessed from the SmartThings app</string>
+    <string name="settings_main_smartthings_title">Tìm kiếm các tùy chọn của SmartTag?</string>
+    <string name="settings_main_smartthings_content">Cài đặt &amp; theo dõi cho SmartTag có thể được truy cập trong ứng dụng SmartThings</string>
     <string name="settings_main_smartthings_open">Mở SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
     <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
@@ -99,10 +99,10 @@
     <string name="settings_main_category_help">Trợ giúp</string>
     <string name="settings_main_faq_title">Câu hỏi Thường Gặp</string>
     <string name="settings_main_faq_content">Hỏi đáp về uTag</string>
-    <string name="settings_main_wiki_title">View the Wiki</string>
-    <string name="settings_main_wiki_content">Info &amp; guides on how to use uTag</string>
+    <string name="settings_main_wiki_title">Xem trang Wiki</string>
+    <string name="settings_main_wiki_content">Thông tin &amp; hướng dẫn sử dụng uTag</string>
     <string name="settings_main_backup_restore_title">Sao lưu &amp; Khôi phục</string>
-    <string name="settings_main_backup_restore_content">Backup &amp; restore uTag data to a local file or the cloud</string>
+    <string name="settings_main_backup_restore_content">Sao lưu &amp; khôi phục dữ liệu của uTag vào một file trong máy hoặc đám mây</string>
     <string name="settings_main_advanced_title">Nâng cao</string>
     <string name="settings_main_advanced_content">Language, content creator mode and analytics options</string>
     <string name="settings_main_category_account">Tài khoản</string>
