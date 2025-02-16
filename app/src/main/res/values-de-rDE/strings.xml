@@ -44,7 +44,7 @@
     <string name="permission_notification_title">Benachrichtigungsberechtigung</string>
     <string name="permission_notification_content">uTag benötigt die Berechtigung, Benachrichtigungen anzuzeigen, um Updates anzuzeigen</string>
     <string name="permission_notification_grant">uTag benötigt die Berechtigung, Benachrichtigungen anzuzeigen, um Updates anzuzeigen</string>
-    <string name="permission_battery_title"></string>
+    <string name="permission_battery_title">Akkuoptimierungen für SmartThings deaktivieren</string>
     <string name="permission_battery_content">Dies ist erforderlich, um uTag im Hintergrund laufen zu lassen um Tags zu überwachen</string>
     <string name="permission_smartthings_battery_title">Akkuoptimierungen für SmartThings deaktivieren</string>
     <string name="permission_smartthings_battery_content">Dies ist erforderlich, um Tags über Bluetooth im Hintergrund verbunden zu halten</string>
@@ -63,7 +63,7 @@
     <string name="account_warning_content_b2">Ihr Passwort ist für uTag weder sichtbar noch kann es von uTag gespeichert werden, und die Zugriffstoken werden verschlüsselt auf dem Gerät gespeichert.</string>
     <string name="account_warning_content_b3">uTag ist Open Source und Sie können den Login-Code auf GitHub einsehen</string>
     <string name="account_warning_content_footer"><b>Bitte beachten Sie, dass offizielle Builds von uTag nur auf GitHub und APKMirror verfügbar sind. Wenn Sie uTag aus einer anderen Quelle installiert haben, kann die Login-Sicherheit nicht garantiert werden und Sie sollten uTag aus einer legitimen Quelle neu installieren.</b></string>
-    <string name="account_sign_in"></string>
+    <string name="account_sign_in">Sign in</string>
     <string name="account_error_title">Fehler</string>
     <string name="account_error_content">Beim Starten des Anmeldeprozesses ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
     <string name="account_error_try_again">Erneut versuchen</string>
@@ -96,7 +96,7 @@
     <string name="settings_main_security_title">Sicherheit &amp; Verschlüsselung</string>
     <string name="settings_main_security_content">Offline-Standortverschlüsselung &amp; biometrischen Eintrag</string>
     <string name="settings_main_updates_content_disabled">Update-Benachrichtigungen sind in Ihren Systemeinstellungen deaktiviert</string>
-    <string name="settings_main_category_help"></string>
+    <string name="settings_main_category_help">Help</string>
     <string name="settings_main_faq_title">Häufig gestellte Fragen (FAQ)</string>
     <string name="settings_main_faq_content">Fragen und Antworten zu uTag</string>
     <string name="settings_main_wiki_title">Wiki öffnen</string>
@@ -156,7 +156,7 @@
     <string name="settings_chaser_switch">Aktiviert</string>
     <string name="settings_chaser_info_title">Contributing to the Samsung Find my Everything network</string>
     <string name="settings_chaser_info_content">Wenn aktiviert, sendet uTag den Standort der in der Nähe erkannten Tags während der Aktualisierung des Standorts, um anderen SmartTag-Benutzern bei der Lokalisierung ihrer Objekte zu helfen.\n\nStandorte sind komplett anonym und können verschlüsselt werden, wenn der Tag Standortverschlüsselung aktiviert ist.</string>
-    <string name="settings_chaser_count_title"></string>
+    <string name="settings_chaser_count_title">Network Contributions</string>
     <string name="settings_chaser_count_content_one">Sie haben %1d Standort zum \"Find my Everything\" Netzwerk beigetragen</string>
     <string name="settings_chaser_count_content_other">Sie haben %1d Standorte zum \"Find my Everything\" Netzwerk beigetragen</string>
     <string name="settings_chaser_error_title">Fehler</string>
@@ -270,7 +270,7 @@
     <string name="map_error_permissions_content">SmartThings requires the \"Allow always\" location permission, please grant it in Settings to continue</string>
     <string name="map_error_permissions_button">Open Settings</string>
     <string name="map_network_error">A network error occurred, please try again later</string>
-    <string name="map_location_error">Failed to get your location, try moving around</string>
+    <string name="map_location_error">Lokalisierung fehlgeschlagen, bewege dich etwas in der Umgebung</string>
     <string name="map_connection_error_title">Connection Error</string>
     <string name="map_connection_error_content">uTag couldn\'t connect to %1s as the maximum number of connections have been reached. Disconnect another device which is connected to it, if you think this is incorrect, try rebooting your device.</string>
     <string name="map_connection_error_close">Close</string>
@@ -298,7 +298,7 @@
     <string name="map_timestamp_minutes_ago">%1d minutes ago</string>
     <string name="map_timestamp_hour_ago">%1d hour ago</string>
     <string name="map_timestamp_hours_ago">%1d hours ago</string>
-    <string name="map_searching_dialog_title">Failed to connect to Tag</string>
+    <string name="map_searching_dialog_title">Verbindung zum Tag fehlgeschlagen</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
     <string name="map_searching_dialog_cancel">Close</string>
@@ -324,7 +324,7 @@
     <string name="tag_picker_shared">%1s\'s Tag</string>
     <string name="tag_picker_selected">Selected</string>
     <string name="tag_picker_agreement_required">Agreement required</string>
-    <string name="tag_picker_not_allowed">Not allowed</string>
+    <string name="tag_picker_not_allowed">Nicht erlaubt</string>
     <string name="tag_picker_shared_and_selected">%1s\'s Tag • Selected</string>
     <string name="tag_picker_error_dialog_title">Error</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
