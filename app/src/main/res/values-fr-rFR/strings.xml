@@ -16,7 +16,6 @@
     <string name="setup_mod_info_content">Afin de travailler avec uTag et de contourner les exigences de Samsung, une version modifiée de SmartThings est requise. uTag vous guidera à travers le téléchargement et l\'installation.\n\n\<b>Note :</b> Si votre appareil est rooté avec Xposed installé, assurez-vous que SmartThings est configuré, activez le module uTag Xposed, forcez l\'arrêt SmartThings et revenez à uTag pour passer cette étape.</string>
     <string name="setup_mod_info_action">Démarrer le téléchargement du mod</string>
     <string name="setup_mod_oneui_title">OneUI Détecté</string>
-    <string name="setup_mod_oneui_content">Ce périphérique semble exécuter OneUI, ce qui empêche le mod SmartThings de fonctionner. uTag n\'est pas compatible avec OneUI sans root, veuillez utiliser l\'application officielle SmartThings.\n\n\<b>Note :</b> Si votre appareil est rooté avec Xposed installé, assurez-vous que SmartThings est configuré, activez le module uTag Xposed, forcez l\'arrêt SmartThings et revenez à uTag pour continuer.</string>
     <string name="setup_mod_downloading">Téléchargement de SmartThings…</string>
     <string name="setup_mod_setting_up">Configuration du mod…</string>
     <string name="setup_mod_setting_up_subtitle">Cette opération peut prendre quelques instants</string>
