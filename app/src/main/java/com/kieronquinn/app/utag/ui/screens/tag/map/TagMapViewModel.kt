@@ -79,12 +79,13 @@ abstract class TagMapViewModel: ViewModel() {
     abstract fun onRefreshClicked()
     abstract fun setSearchingMode()
     abstract fun onRingClicked()
-    abstract fun onLocationHistoryClicked()
+    abstract fun onLocationHistoryOrSearchNearbyClicked()
     abstract fun onMoreClicked()
     abstract fun showPinEntry()
     abstract fun onPinCancelled()
     abstract fun onPinEntered(pinEntryResult: PinEntryResult.Success)
     abstract fun onAllowAccessClicked()
+    abstract fun onSuppressErrorClicked()
 
     sealed class State {
         data object Loading: State()
@@ -104,7 +105,8 @@ abstract class TagMapViewModel: ViewModel() {
             val knownTagMembers: Map<String, String>?,
             val requiresMutualAgreement: Boolean,
             val region: String,
-            val enableBluetoothPendingIntent: PendingIntent?
+            val enableBluetoothPendingIntent: PendingIntent?,
+            val swapLocationHistory: Boolean
         ): State() {
             override fun isBusy() = isRefreshing
         }
@@ -185,6 +187,7 @@ class TagMapViewModelImpl(
     private val isRefreshing = MutableStateFlow(false)
     private val lastSelectedDeviceId = encryptedSettingsRepository.lastSelectedDeviceIdOnMap
     private val deviceId = MutableStateFlow(initialDeviceId.takeIf { it.isNotBlank() })
+    private val suppressErrors = MutableStateFlow(false)
 
     private val hasLocationPermissions = resumeBus.mapLatest {
         context.hasLocationPermissions()
@@ -311,9 +314,7 @@ class TagMapViewModelImpl(
                 //Call a second time to keep updated
                 apiRepository.getUserOptions()
             }else null
-        }else{
-            options
-        }
+        }else options
     }
 
     private val consentInfo = flow {
@@ -365,15 +366,34 @@ class TagMapViewModelImpl(
         refreshing || syncing
     }
 
+    private val uiOptions = combine(
+        showAddToHome,
+        suppressErrors,
+        settingsRepository.mapSwapLocationHistory.asFlow()
+    ) { showAddToHome, suppressErrors, swapLocationHistory ->
+        Triple(showAddToHome, suppressErrors, swapLocationHistory)
+    }
+
     private val options = combine(
         insets,
         requirements,
         isRefreshingOrSyncing,
-        showAddToHome,
+        uiOptions,
         consentInfo
-    ) { insets, requirements, isRefreshingOrSyncing, showAddToHome, consentInfo ->
+    ) { insets, requirements, isRefreshingOrSyncing, uiOptions, consentInfo ->
         val region = consentInfo?.region ?: return@combine null
-        Options(insets, requirements, isRefreshingOrSyncing, showAddToHome, region)
+        val showAddToHome = uiOptions.first
+        val suppressErrors = uiOptions.second
+        val swapLocationHistory = uiOptions.third
+        Options(
+            insets,
+            requirements,
+            isRefreshingOrSyncing,
+            showAddToHome,
+            region,
+            suppressErrors,
+            swapLocationHistory
+        )
     }
 
     private val device = combine(
@@ -436,10 +456,10 @@ class TagMapViewModelImpl(
             requirements.moduleState is ModuleState.NotModded -> {
                 State.Error(ErrorType.ModuleNotActivated(requirements.moduleState.isUTagBuild))
             }
-            requirements.moduleState is ModuleState.Outdated -> {
+            requirements.moduleState is ModuleState.Outdated && !options.suppressErrors -> {
                 State.Error(ErrorType.ModuleOutdated(requirements.moduleState.isUTagBuild))
             }
-            requirements.moduleState is ModuleState.Newer -> {
+            requirements.moduleState is ModuleState.Newer && !options.suppressErrors -> {
                 State.Error(ErrorType.ModuleNewer(requirements.moduleState.isUTagBuild))
             }
             !requirements.hasRequiredPermissions -> State.Error(ErrorType.Permissions)
@@ -464,7 +484,8 @@ class TagMapViewModelImpl(
                     users,
                     tagState.requiresAgreement(),
                     options.region,
-                    device.enableBlueooth
+                    device.enableBlueooth,
+                    options.swapLocationHistory
                 )
             }
             tagState is TagState.Error -> State.Error(ErrorType.Generic(tagState.code))
@@ -520,14 +541,23 @@ class TagMapViewModelImpl(
         }
     }
 
-    override fun onLocationHistoryClicked() {
+    override fun onLocationHistoryOrSearchNearbyClicked() {
         val device = (state.value as? State.Loaded)?.tagState?.device ?: return
+        val isSearchNearby = (state.value as? State.Loaded)?.swapLocationHistory ?: return
         viewModelScope.launch {
-            navigation.navigate(
-                TagMapFragmentDirections.actionTagMapFragmentToTagLocationHistoryFragment(
-                    device.deviceId, device.label, device.isOwner
+            if(isSearchNearby) {
+                navigation.navigate(
+                    TagMapFragmentDirections.actionTagMapFragmentToTagMoreNearbyFragment2(
+                        device.deviceId, device.label, device.supportsUwb, device.icon
+                    )
                 )
-            )
+            }else{
+                navigation.navigate(
+                    TagMapFragmentDirections.actionTagMapFragmentToTagLocationHistoryFragment(
+                        device.deviceId, device.label, device.isOwner
+                    )
+                )
+            }
         }
     }
 
@@ -585,6 +615,12 @@ class TagMapViewModelImpl(
             }else{
                 events.emit(Event.NetworkError)
             }
+        }
+    }
+
+    override fun onSuppressErrorClicked() {
+        viewModelScope.launch {
+            suppressErrors.emit(true)
         }
     }
 
@@ -752,7 +788,9 @@ class TagMapViewModelImpl(
         val requirements: Requirements,
         val isRefreshingOrSyncing: Boolean,
         val showAddToHome: Boolean,
-        val region: String
+        val region: String,
+        val suppressErrors: Boolean,
+        val swapLocationHistory: Boolean
     ) {
         data class Requirements(
             val moduleState: ModuleState?,

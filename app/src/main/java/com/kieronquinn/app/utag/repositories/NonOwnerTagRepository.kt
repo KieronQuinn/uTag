@@ -42,7 +42,6 @@ import com.kieronquinn.app.utag.xposed.extensions.verifySecurity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.filterNotNull
@@ -66,11 +65,6 @@ import com.kieronquinn.app.utag.model.database.UnknownTag as DatabaseUnknownTag
  *  set up.
  */
 interface NonOwnerTagRepository {
-
-    /**
-     *  Called when the user has granted permissions from the UI
-     */
-    fun onPermissionsChanged()
 
     /**
      *  Called when the service triggers a location update for Tags, at which time non-owner nearby
@@ -154,18 +148,13 @@ class NonOwnerTagRepositoryImpl(
     companion object {
         private val SERVICE_UUID = ParcelUuid.fromString(SERVICE_ID)
         //How long to keep Tags in cache as "seen" to be used for location updates
-        private const val TAG_CACHE_DURATION = 60_000L
+        private const val TAG_CACHE_DURATION = 120_000L
         //How long to keep unknown Tags in the database
         private val UNKNOWN_TAG_CACHE_DURATION = Duration.ofHours(24)
         //Delay to allow tag scan to happen first for known Tags
         private const val SCAN_DELAY = 2500L
-        //The minimum distance between two Tag detections in 24h for a notification to be shown
-        private const val MIN_DISTANCE_FOR_TAG_NOTIFICATION = 500.0 //metres
-        //The time period that must be between the first and last detections for a notification
-        private val MIN_DURATION_FOR_TAG_NOTIFICATION = Duration.ofMinutes(30)
     }
 
-    private val startScanBus = MutableStateFlow(System.currentTimeMillis())
     private val unknownTagTable = database.unknownTagTable()
     private val acknowledgedUnknownTagTable = database.acknowledgedUnknownTagTable()
     private val scope = MainScope()
@@ -174,6 +163,9 @@ class NonOwnerTagRepositoryImpl(
         .asFlow().stateIn(scope, SharingStarted.Eagerly, null)
 
     private val utsEnabled = encryptedSettingsRepository.utsScanEnabled
+        .asFlow().stateIn(scope, SharingStarted.Eagerly, null)
+
+    private val utsSensitivity = encryptedSettingsRepository.utsSensitivity
         .asFlow().stateIn(scope, SharingStarted.Eagerly, null)
 
     private val scanResult = context.broadcastReceiverAsFlow(
@@ -198,12 +190,6 @@ class NonOwnerTagRepositoryImpl(
      */
     private val tagCache = HashMap<String, NonOwnerTag>()
 
-    override fun onPermissionsChanged() {
-        scope.launch {
-            startScanBus.emit(System.currentTimeMillis())
-        }
-    }
-
     override fun onLocationUpdate() {
         scope.launch {
             val networkEnabled = networkContributions.firstNotNull()
@@ -211,7 +197,12 @@ class NonOwnerTagRepositoryImpl(
             //Skip if neither are enabled
             if(!networkEnabled && !utsEnabled) return@launch
             val location = smartThingsRepository.getLocation() ?: return@launch
-            handleTagLocationUpdate(networkEnabled, utsEnabled, tagCache.values.toList(), location)
+            val tagCacheEntries = synchronized(tagCache) {
+                //Prune old cache before we use the values so we don't get old tags
+                pruneTagCache()
+                tagCache.values.toList()
+            }
+            handleTagLocationUpdate(networkEnabled, utsEnabled, tagCacheEntries, location)
         }
     }
 
@@ -328,10 +319,17 @@ class NonOwnerTagRepositoryImpl(
             //Store the Tag in the cache, this will overwrite any with the same ID
             tagCache[tag.tagData.privacyId] = tag
             //Clear old Tags from cache that exceed the cache time
-            val now = System.currentTimeMillis()
-            tagCache.entries.removeIf {
-                now - it.value.lastReceivedTime > TAG_CACHE_DURATION
-            }
+            pruneTagCache()
+        }
+    }
+
+    /**
+     *  Removes Tags from the cache if they were last seen more than 120 seconds ago
+     */
+    private fun pruneTagCache() {
+        val now = System.currentTimeMillis()
+        tagCache.entries.removeIf {
+            now - it.value.lastReceivedTime > TAG_CACHE_DURATION
         }
     }
 
@@ -353,7 +351,7 @@ class NonOwnerTagRepositoryImpl(
         ).takeUnless { isKnown }
     }
 
-    private fun getUnknownTags(
+    private suspend fun getUnknownTags(
         tags: List<DatabaseUnknownTag>,
         acknowledged: List<AcknowledgedUnknownTag>
     ): List<UnknownTag> {
@@ -386,15 +384,16 @@ class NonOwnerTagRepositoryImpl(
         }
     }
 
-    private fun List<UnknownTag.Detection>.matchesRequirements(): Boolean {
+    private suspend fun List<UnknownTag.Detection>.matchesRequirements(): Boolean {
         if(size < 2) return false //Checks require at least 2 detections
+        val sensitivity = utsSensitivity.firstNotNull()
         val duration = maxOf { it.timestamp } - minOf { it.timestamp }
-        if(duration < MIN_DURATION_FOR_TAG_NOTIFICATION.toMillis()) return false
+        if(duration < Duration.ofMinutes(sensitivity.duration).toMillis()) return false
         val bounds = LatLngBounds.Builder().apply {
             forEach { include(it.location) }
         }.build()
         val distance = bounds.northeast.sphericalDistance(bounds.southwest)
-        return distance >= MIN_DISTANCE_FOR_TAG_NOTIFICATION
+        return distance >= sensitivity.distance
     }
 
     private suspend fun onUnknownTagsChanged(unknownTags: List<UnknownTag>) {

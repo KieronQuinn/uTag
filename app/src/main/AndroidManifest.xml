@@ -87,6 +87,14 @@
             android:exported="true"/>
 
         <activity
+            android:name=".ui.activities.ErrorDebugDialogActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.uTag.Transparent"
+            android:excludeFromRecents="true"
+            android:noHistory="true"
+            android:exported="true"/>
+
+        <activity
             android:name=".ui.activities.WidgetErrorMessageActivity"
             android:launchMode="singleInstance"
             android:theme="@style/Theme.uTag.Transparent"

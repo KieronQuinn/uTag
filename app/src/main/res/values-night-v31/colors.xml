@@ -16,4 +16,5 @@
     <color name="sesl_loading_progress_color1">@color/sesl_primary_color_dark</color>
     <color name="sesl_loading_progress_color2">@color/sesl_primary_color_light</color>
     <color name="oui_accent_color_disabled">@android:color/system_neutral2_700</color>
+    <color name="oui_seekbar_circle_marker_color">@android:color/system_accent2_600</color>
 </resources>

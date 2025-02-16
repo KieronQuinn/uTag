@@ -323,7 +323,7 @@ class Application: Application(), LifecycleEventObserver {
         single<UpdateRepository> { UpdateRepositoryImpl(get(), get()) }
         single<DownloadRepository> { DownloadRepositoryImpl(get()) }
         single<UwbRepository> { UwbRepository.getImplementation(get()) }
-        single<NotificationRepository> { NotificationRepositoryImpl(get()) }
+        single<NotificationRepository> { NotificationRepositoryImpl(get(), get()) }
         single<FindMyDeviceRepository> { FindMyDeviceRepositoryImpl(get(), get(), get(), get()) }
         single<RulesRepository> { RulesRepositoryImpl(get(), get(), get()) }
         single<AutomationRepository> { AutomationRepositoryImpl(get(), get(), get(), get()) }
@@ -363,7 +363,7 @@ class Application: Application(), LifecycleEventObserver {
             get(),
             get()
         ) }
-        viewModel<SetupLandingViewModel> { SetupLandingViewModelImpl(get(), get()) }
+        viewModel<SetupLandingViewModel> { SetupLandingViewModelImpl(get(), get(), get()) }
         viewModel<SetupModViewModel> { SetupModViewModelImpl(get(), get(), get(), get(), get()) }
         viewModel<SetupPermissionsViewModel> { SetupPermissionsViewModelImpl(get(), get(), get(), get(), get(), get()) }
         viewModel<SetupChaserViewModel> { SetupChaserViewModelImpl(get(), get()) }
@@ -403,7 +403,7 @@ class Application: Application(), LifecycleEventObserver {
             TagLocationHistoryViewModelImpl(get(), params.get(), params.get(), get(), get(), get(), get(), get(), get(), get(), get())
         }
         viewModel<MoreMainViewModel> { deviceId ->
-            MoreMainViewModelImpl(get(), get(), get(), get(), deviceId.get(), get(), get(), get(), get(), get(), get(), get())
+            MoreMainViewModelImpl(get(), get(), get(), get(), deviceId.get(), get(), get(), get(), get(), get(), get(), get(), get())
         }
         viewModel<LostModeGuideViewModel> { params -> LostModeGuideViewModelImpl(get(), params.get(), params.get()) }
         viewModel<LostModeSettingsViewModel> { params ->
@@ -448,7 +448,7 @@ class Application: Application(), LifecycleEventObserver {
         viewModel<UTagUpdateViewModel> { params -> UTagUpdateViewModelImpl(get(), get(), get(), params.get()) }
         viewModel<SmartThingsUpdateViewModel> { params -> SmartThingsUpdateViewModelImpl(get(), get(), get(), get(), params.get()) }
         viewModel<TagMoreNearbyViewModel> { params ->
-            TagMoreNearbyViewModelImpl(get(), get(), get(), get(), get(), get(), get(), params.get(), params.get())
+            TagMoreNearbyViewModelImpl(get(), get(), get(), get(), get(), get(), get(), get(), params.get(), params.get(), params.get())
         }
         viewModel<TagMoreFindDeviceViewModel> { params ->
             TagMoreFindDeviceViewModelImpl(get(), get(), get(), params.get(), get(), params.get())

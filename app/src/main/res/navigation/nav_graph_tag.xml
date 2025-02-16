@@ -37,6 +37,13 @@
             app:exitAnim="@anim/sesl_fragment_open_exit"
             app:popExitAnim="@anim/sesl_fragment_close_exit"
             app:popEnterAnim="@anim/sesl_fragment_close_enter" />
+        <action
+            android:id="@+id/action_tagMapFragment_to_tagMoreNearbyFragment2"
+            app:destination="@id/tagMoreNearbyFragment2"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter" />
     </fragment>
     <dialog
         android:id="@+id/tagRingDialogFragment"
@@ -90,6 +97,13 @@
         <argument
             android:name="device_name"
             app:argType="string" />
+        <action
+            android:id="@+id/action_moreContainerFragment_to_tagLocationHistoryFragment"
+            app:destination="@id/tagLocationHistoryFragment"
+            app:enterAnim="@anim/sesl_fragment_open_enter"
+            app:exitAnim="@anim/sesl_fragment_open_exit"
+            app:popExitAnim="@anim/sesl_fragment_close_exit"
+            app:popEnterAnim="@anim/sesl_fragment_close_enter"  />
     </fragment>
     <dialog
         android:id="@+id/tagPinEntryDialogFragment"
@@ -127,5 +141,26 @@
             android:name="locations"
             app:argType="com.kieronquinn.app.utag.repositories.LocationHistoryRepository$ExportLocation[]" />
     </dialog>
+    <fragment
+        android:id="@+id/tagMoreNearbyFragment2"
+        android:name="com.kieronquinn.app.utag.ui.screens.tag.more.nearby.TagMoreNearbyFragment"
+        android:label="TagMoreNearbyFragment">
+        <argument
+            android:name="device_id"
+            app:argType="string" />
+        <argument
+            android:name="device_label"
+            app:argType="string" />
+        <argument
+            android:name="supports_uwb"
+            app:argType="boolean" />
+        <argument
+            android:name="icon_url"
+            app:argType="string" />
+        <argument
+            android:name="is_root"
+            app:argType="boolean"
+            android:defaultValue="true" />
+    </fragment>
 
 </navigation>

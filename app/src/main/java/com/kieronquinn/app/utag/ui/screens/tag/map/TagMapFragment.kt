@@ -201,8 +201,6 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
     private fun setupCard() = with(binding.tagMapCard) {
         tagMapCardRing.text = getString(R.string.map_ring)
         tagMapCardRing.setIconResource(R.drawable.ic_ring)
-        tagMapCardLocationHistory.text = getString(R.string.map_location_history)
-        tagMapCardLocationHistory.setIconResource(R.drawable.ic_location_history)
         tagMapCardRefresh.text = getString(R.string.map_refresh)
         tagMapCardRefresh.setIconResource(dev.oneuiproject.oneui.R.drawable.ic_oui_refresh)
         tagMapCardMore.text = getString(R.string.map_more)
@@ -213,8 +211,8 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
             }
         }
         whenResumed {
-            tagMapCardLocationHistory.onClicked {
-                viewModel.onLocationHistoryClicked()
+            tagMapCardLocationHistoryOrSearchNearby.onClicked {
+                onLocationHistoryOrSearchNearbyClicked()
             }
         }
         whenResumed {
@@ -574,6 +572,13 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
         tagMapCardAllowLocation.isVisible = state.requiresMutualAgreement
         tagMapCardStatus.isVisible = !state.requiresMutualAgreement
         tagMapCardRefresh.showProgress = state.isRefreshing
+        if(state.swapLocationHistory) {
+            tagMapCardLocationHistoryOrSearchNearby.setIconResource(R.drawable.ic_search_nearby)
+            tagMapCardLocationHistoryOrSearchNearby.text = getString(R.string.tag_more_search_nearby)
+        }else{
+            tagMapCardLocationHistoryOrSearchNearby.setIconResource(R.drawable.ic_location_history)
+            tagMapCardLocationHistoryOrSearchNearby.text = getString(R.string.map_location_history)
+        }
         whenResumed {
             if(locationState is LocationState.PINRequired || locationState is LocationState.NoKeys) {
                 tagMapCardContent.isClickable = true
@@ -592,9 +597,19 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
     private fun onRingClicked() {
         val tagState = (viewModel.state.value as? State.Loaded)?.tagState ?: return
         if(tagState.isInPassiveMode) {
-             showPassiveModeDialog()
+             showPassiveModeDialog(true)
         }else {
             viewModel.onRingClicked()
+        }
+    }
+
+    private fun onLocationHistoryOrSearchNearbyClicked() {
+        val tagState = (viewModel.state.value as? State.Loaded)?.tagState ?: return
+        val isSearchNearby = (viewModel.state.value as? State.Loaded)?.swapLocationHistory ?: return
+        if(tagState.isInPassiveMode && isSearchNearby) {
+             showPassiveModeDialog(false)
+        }else {
+            viewModel.onLocationHistoryOrSearchNearbyClicked()
         }
     }
 
@@ -620,10 +635,14 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
         }.show()
     }
 
-    private fun showPassiveModeDialog() {
+    private fun showPassiveModeDialog(isRing: Boolean) {
         AlertDialog.Builder(requireContext()).apply {
             setTitle(R.string.map_passive_mode_dialog_title)
-            setMessage(R.string.map_passive_mode_dialog_content)
+            if(isRing) {
+                setMessage(R.string.map_passive_mode_dialog_content_ring)
+            }else{
+                setMessage(R.string.map_passive_mode_dialog_content_search_nearby)
+            }
             setPositiveButton(android.R.string.ok) { dialog, _ ->
                 dialog.dismiss()
             }
@@ -686,6 +705,7 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
             setCancelable(cancelable)
             setPositiveButton(R.string.map_error_close) { dialog, _ ->
                 if(cancelable) {
+                    viewModel.onSuppressErrorClicked()
                     dialog.dismiss()
                 }else {
                     requireActivity().finish()

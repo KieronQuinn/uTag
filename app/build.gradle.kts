@@ -32,8 +32,8 @@ fun getKeystoreProperties(): Properties? {
     return properties
 }
 
-val tagName = "1.0.1"
-val tagCode = 101
+val tagName = "1.0.2"
+val tagCode = 102
 
 android {
     namespace = "com.kieronquinn.app.utag"
@@ -183,10 +183,7 @@ dependencies {
     implementation(platform(libs.firebase.bom))
     implementation(libs.firebase.crashlytics)
     implementation(libs.firebase.analytics)
-    implementation(project(":xposed-core"))
     ksp(libs.room.compiler)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
+    implementation(project(":xposed-core"))
     implementation(project(":uwb"))
 }

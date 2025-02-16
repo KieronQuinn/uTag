@@ -9,6 +9,7 @@ import com.kieronquinn.app.utag.providers.EncryptedSettingsProvider
 import com.kieronquinn.app.utag.repositories.BaseSettingsRepository.UTagSetting
 import com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository.PinTimeout
 import com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository.RefreshPeriod
+import com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository.UtsSensitivity
 import com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository.WidgetRefreshPeriod
 import com.kieronquinn.app.utag.utils.preferences.SharedPreferencesResolver
 import kotlinx.coroutines.CoroutineScope
@@ -157,6 +158,11 @@ interface EncryptedSettingsRepository: BaseSettingsRepository {
     val utsScanEnabled: UTagSetting<Boolean>
 
     /**
+     *  How sensitive unknown tag scan warnings should be
+     */
+    val utsSensitivity: UTagSetting<UtsSensitivity>
+
+    /**
      *  Enables contributions to the FME network
      */
     val networkContributionsEnabled: UTagSetting<Boolean>
@@ -255,6 +261,14 @@ interface EncryptedSettingsRepository: BaseSettingsRepository {
         SIXTY_MINUTES(60, R.string.settings_encryption_pin_timeout_sixty_minutes),
     }
 
+    enum class UtsSensitivity(val duration: Long, val distance: Double, @StringRes val label: Int) {
+        VERY_HIGH(15, 250.0, R.string.settings_uts_sensitivity_very_high),
+        HIGH(30, 500.0, R.string.settings_uts_sensitivity_high),
+        NORMAL(60, 1000.0, R.string.settings_uts_sensitivity_normal),
+        LOW(120, 2500.0, R.string.settings_uts_sensitivity_low),
+        VERY_LOW(240, 5000.0, R.string.settings_uts_sensitivity_very_low),
+    }
+
 }
 
 class EncryptedSettingsRepositoryImpl(
@@ -307,6 +321,9 @@ class EncryptedSettingsRepositoryImpl(
 
         private const val KEY_UTS_SCAN_ENABLED = "uts_scan_enabled"
         private const val DEFAULT_UTS_SCAN_ENABLED = false
+
+        private const val KEY_UTS_SENSITIVITY = "uts_sensitivity"
+        private val DEFAULT_UTS_SENSITIVITY = UtsSensitivity.NORMAL
 
         private const val KEY_NETWORK_CONTRIBUTIONS_ENABLED = "network_contributions_enabled"
         private const val DEFAULT_NETWORK_CONTRIBUTIONS_ENABLED = false
@@ -372,6 +389,11 @@ class EncryptedSettingsRepositoryImpl(
     override val utsScanEnabled = boolean(
         KEY_UTS_SCAN_ENABLED,
         DEFAULT_UTS_SCAN_ENABLED
+    )
+
+    override val utsSensitivity = enum(
+        KEY_UTS_SENSITIVITY,
+        DEFAULT_UTS_SENSITIVITY
     )
 
     override val networkContributionsEnabled = boolean(

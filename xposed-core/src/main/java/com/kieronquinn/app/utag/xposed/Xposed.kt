@@ -22,6 +22,7 @@ import android.content.ServiceConnection
 import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
+import android.content.pm.PackageManager.NameNotFoundException
 import android.net.Uri
 import android.os.Bundle
 import android.os.IBinder
@@ -93,7 +94,9 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect.companionservice.spec.entity.",
             "com.samsung.android.oneconnect.domainlayer.domain.notification.",
             "com.samsung.android.oneconnect.notification.",
-            "com.samsung.android.oneconnect.diagnostics.model.device.ocf."
+            "com.samsung.android.oneconnect.diagnostics.model.device.ocf.",
+            "com.samsung.android.oneconnect.support.connection.",
+            "com.samsung.android.oneconnect.adddevice.ui.",
         )
 
         private val ACTIVITY_WARNING_ALLOWLIST = setOf(
@@ -107,6 +110,7 @@ class Xposed: IXposedHookLoadPackage {
 
         private const val SHARED_PREFS_NAME = "utag"
         private const val PACKAGE_FMM = "com.samsung.android.fmm"
+        private const val PACKAGE_SAMSUNG_ACCOUNT = "com.osp.app.signin"
         private const val URI_FMM_SUPPORT = "content://com.samsung.android.fmm/fmmsupport"
         private const val CLASS_CLOUD_NOTIFICATION_MANAGER =
             "com.samsung.android.oneconnect.notification.CloudNotificationManager"
@@ -263,7 +267,7 @@ class Xposed: IXposedHookLoadPackage {
         hookWebView()
         lpparam.hookRootChecks()
         lpparam.hookIsFmmSupported()
-        lpparam.hookStartScan(this)
+        lpparam.hookStartScan()
         lpparam.hookTagDozeModeService()
         lpparam.hookCapsuleProvider()
         lpparam.hookSystemInfo(this, packageInfo)
@@ -274,6 +278,7 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookScanCallback(this, packageInfo)
         lpparam.hookDebug(this, packageInfo)
         lpparam.hookCheckDisconnect(this, packageInfo)
+        lpparam.hookSamsungAccount()
         if(requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
                 applySecurity(this@handleLoadApplication)
@@ -300,6 +305,56 @@ class Xposed: IXposedHookLoadPackage {
                     if(isFromMainActivity) {
                         val info = param.result as ApplicationInfo
                         info.flags = info.flags or ApplicationInfo.FLAG_DEBUGGABLE
+                    }
+                }
+            }
+        )
+    }
+
+    /**
+     *  Makes checks for the Samsung Account app fail, which is part of the process of forcing
+     *  SmartThings on OneUI to use the web-based login.
+     */
+    private fun LoadPackageParam.hookSamsungAccount() {
+        XposedHelpers.findAndHookMethod(
+            Intent::class.java,
+            "setPackage",
+            String::class.java,
+            object: XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam) {
+                    super.beforeHookedMethod(param)
+                    if(param.args[0] == PACKAGE_SAMSUNG_ACCOUNT) {
+                        param.args[0] = "${PACKAGE_SAMSUNG_ACCOUNT}2"
+                    }
+                }
+            }
+        )
+        XposedHelpers.findAndHookMethod(
+            "android.app.ApplicationPackageManager",
+            classLoader,
+            "getPackageInfo",
+            String::class.java,
+            Integer.TYPE,
+            object: XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam) {
+                    super.beforeHookedMethod(param)
+                    if(param.args[0] == PACKAGE_SAMSUNG_ACCOUNT) {
+                        param.throwable = NameNotFoundException()
+                    }
+                }
+            }
+        )
+        XposedHelpers.findAndHookMethod(
+            "android.app.ApplicationPackageManager",
+            classLoader,
+            "getApplicationInfo",
+            String::class.java,
+            Integer.TYPE,
+            object: XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam) {
+                    super.beforeHookedMethod(param)
+                    if(param.args[0] == PACKAGE_SAMSUNG_ACCOUNT) {
+                        param.throwable = NameNotFoundException()
                     }
                 }
             }
@@ -450,7 +505,7 @@ class Xposed: IXposedHookLoadPackage {
      *  [SERVICE_ID]. This is set by passing a special scan type ([SCAN_TYPE_UTAG]) into the
      *  `startDiscovery` call, which only uTag will do, and is reset in all `stopDiscovery` calls.
      */
-    private fun LoadPackageParam.hookStartScan(context: Context) {
+    private fun LoadPackageParam.hookStartScan() {
         XposedHelpers.findAndHookMethod(
             BluetoothLeScanner::class.java,
             "startScan",
@@ -881,6 +936,9 @@ class Xposed: IXposedHookLoadPackage {
                     //Classes on the allowlist are forced to true to enable features without crashing
                     if (CALLING_PACKAGES_ALLOWLIST.any { callingClass.startsWith(it) }) {
                         param.result = true
+                    }else{
+                        //Allow use on OneUI by faking a non-Samsung device where not required
+                        param.result = false
                     }
                 }
             }

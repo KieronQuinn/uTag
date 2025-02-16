@@ -79,8 +79,7 @@
             android:layout_below="@android:id/summary"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="@dimen/margin_16"
-            android:layout_toEndOf="@android:id/widget_frame"
-            app:seslSeekBarMode="expand" />
+            android:layout_toEndOf="@android:id/widget_frame"/>
 
     </RelativeLayout>
 

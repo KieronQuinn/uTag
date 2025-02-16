@@ -97,7 +97,7 @@ class EncryptedFileProvider: ContentProvider() {
     ): Thread() {
         override fun run() {
             val bytes = input.readBytes()
-            val decrypted = widgetRepository.decryptImage(bytes)
+            val decrypted = widgetRepository.decryptImage(bytes) ?: byteArrayOf()
             output.write(decrypted)
             input.close()
             output.flush()

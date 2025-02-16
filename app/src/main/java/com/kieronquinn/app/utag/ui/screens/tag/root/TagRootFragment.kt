@@ -13,9 +13,9 @@ import com.kieronquinn.app.utag.databinding.FragmentTagRootBinding
 import com.kieronquinn.app.utag.ui.base.BoundFragment
 import com.kieronquinn.app.utag.ui.screens.tag.root.TagRootViewModel.State
 import com.kieronquinn.app.utag.utils.extensions.BiometricEvent
+import com.kieronquinn.app.utag.utils.extensions.repeatWhenResumed
 import com.kieronquinn.app.utag.utils.extensions.showBiometricPrompt
 import com.kieronquinn.app.utag.utils.extensions.whenCreated
-import com.kieronquinn.app.utag.utils.extensions.whenResumed
 import kotlinx.coroutines.launch
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -40,7 +40,7 @@ class TagRootFragment: BoundFragment<FragmentTagRootBinding>(FragmentTagRootBind
         navHostFragment.setupWithNavigation(navigation)
     }
 
-    private fun setupState() = whenResumed {
+    private fun setupState() = repeatWhenResumed {
         viewModel.state.collect {
             it.destination?.let { destination ->
                 navigation.navigate(destination)

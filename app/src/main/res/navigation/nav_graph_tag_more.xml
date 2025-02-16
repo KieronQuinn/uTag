@@ -143,6 +143,10 @@
         <argument
             android:name="icon_url"
             app:argType="string" />
+        <argument
+            android:name="is_root"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
     <fragment
         android:id="@+id/tagMoreFindDeviceFragment"

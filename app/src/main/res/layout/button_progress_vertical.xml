@@ -44,6 +44,7 @@
         android:layout_marginTop="@dimen/margin_8"
         android:gravity="center"
         android:maxWidth="56dp"
+        android:paddingHorizontal="@dimen/margin_4"
         android:textColor="?android:textColorPrimary"
         android:textSize="12sp"
         tools:text="Button\nMulti line" />

@@ -65,6 +65,11 @@ interface SettingsRepository: BaseSettingsRepository {
     val mapShowBuildings: UTagSetting<Boolean>
 
     /**
+     *  If enabled, swaps Location History for Search Nearby on map screen
+     */
+    val mapSwapLocationHistory: UTagSetting<Boolean>
+
+    /**
      *  Use UWB for precise finding if available
      */
     val useUwb: UTagSetting<Boolean>
@@ -173,6 +178,9 @@ class SettingsRepositoryImpl(context: Context): BaseSettingsRepositoryImpl(), Se
         private const val KEY_MAP_SHOW_BUILDINGS = "map_show_buildings"
         private const val DEFAULT_MAP_SHOW_BUILDINGS = true
 
+        private const val KEY_MAP_SWAP_LOCATION_HISTORY = "map_swap_location_history"
+        private const val DEFAULT_MAP_SWAP_LOCATION_HISTORY = false
+
         private const val KEY_USE_UWB = "use_uwb"
         private const val DEFAULT_USE_UWB = true
 
@@ -228,6 +236,9 @@ class SettingsRepositoryImpl(context: Context): BaseSettingsRepositoryImpl(), Se
     override val mapTheme = enum(KEY_MAP_THEME, DEFAULT_MAP_THEME)
 
     override val mapShowBuildings = boolean(KEY_MAP_SHOW_BUILDINGS, DEFAULT_MAP_SHOW_BUILDINGS)
+
+    override val mapSwapLocationHistory =
+        boolean(KEY_MAP_SWAP_LOCATION_HISTORY, DEFAULT_MAP_SWAP_LOCATION_HISTORY)
 
     override val useUwb = boolean(KEY_USE_UWB, DEFAULT_USE_UWB)
 

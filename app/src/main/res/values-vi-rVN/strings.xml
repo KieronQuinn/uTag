@@ -307,7 +307,7 @@
     <string name="map_allow_access_dialog_positive">Chia sẻ</string>
     <string name="map_allow_access_dialog_negative">Hủy</string>
     <string name="map_passive_mode_dialog_title">Chế độ Thụ động đã bật</string>
-    <string name="map_passive_mode_dialog_content">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
+    <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
     <string name="map_offline_dialog_title">Failed to Refresh</string>
     <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
     <!-- Tag Picker -->

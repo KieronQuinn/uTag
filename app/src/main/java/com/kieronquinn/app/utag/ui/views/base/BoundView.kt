@@ -28,9 +28,13 @@ abstract class BoundView<V: ViewBinding>: FrameLayout {
 
     override fun onAttachedToWindow() {
         super.onAttachedToWindow()
-        removeAllViews()
-        addView(binding.root)
-        binding.setup()
+        try {
+            removeAllViews()
+            addView(binding.root)
+            binding.setup()
+        }catch (e: IllegalArgumentException) {
+            //Detached, ignore
+        }
     }
 
 }

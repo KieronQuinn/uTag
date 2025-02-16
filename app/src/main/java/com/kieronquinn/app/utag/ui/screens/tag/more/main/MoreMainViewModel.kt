@@ -16,10 +16,12 @@ import com.kieronquinn.app.utag.repositories.EncryptionRepository
 import com.kieronquinn.app.utag.repositories.FindMyDeviceRepository
 import com.kieronquinn.app.utag.repositories.PassiveModeRepository
 import com.kieronquinn.app.utag.repositories.SafeAreaRepository
+import com.kieronquinn.app.utag.repositories.SettingsRepository
 import com.kieronquinn.app.utag.repositories.SmartTagRepository
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.TagState
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.TagState.Loaded.LocationState
 import com.kieronquinn.app.utag.repositories.SmartThingsRepository
+import com.kieronquinn.app.utag.ui.screens.tag.more.container.MoreContainerFragmentDirections
 import com.kieronquinn.app.utag.ui.screens.tag.pinentry.TagPinEntryDialogFragment.PinEntryResult
 import com.kieronquinn.app.utag.utils.extensions.isLoadingDelayed
 import com.kieronquinn.app.utag.utils.extensions.toLocation
@@ -45,6 +47,7 @@ abstract class MoreMainViewModel: ViewModel() {
     abstract fun onResume()
     abstract fun onBackPressed()
     abstract fun onNearbyClicked()
+    abstract fun onLocationHistoryClicked()
     abstract fun onShareableChanged(enabled: Boolean)
     abstract fun onNotifyChanged(enabled: Boolean)
     abstract fun onNotifyDisconnectChanged(enabled: Boolean)
@@ -82,7 +85,8 @@ abstract class MoreMainViewModel: ViewModel() {
             val passiveModeEnabled: Boolean,
             val requiresAgreement: Boolean,
             val offline: Boolean,
-            val region: String?
+            val region: String?,
+            val swapLocationHistory: Boolean
         ): State()
         data class PINRequired(val deviceInfo: DeviceInfo): State()
         data object Error: State()
@@ -104,6 +108,7 @@ class MoreMainViewModelImpl(
     private val findDeviceRepository: FindMyDeviceRepository,
     private val safeAreaRepository: SafeAreaRepository,
     private val encryptedSettingsRepository: EncryptedSettingsRepository,
+    settingsRepository: SettingsRepository,
     smartThingsRepository: SmartThingsRepository,
     passiveModeRepository: PassiveModeRepository,
     authRepository: AuthRepository
@@ -186,11 +191,12 @@ class MoreMainViewModelImpl(
         Triple(safeAreaCount, notifyDisconnectEnabled, hasWarning)
     }
 
-    private val findDevice = combine(
+    private val findOptions = combine(
         findDeviceHasError,
-        findDeviceEnabled
-    ) { error, enabled ->
-        Pair(error, enabled)
+        findDeviceEnabled,
+        settingsRepository.mapSwapLocationHistory.asFlow()
+    ) { error, enabled, swapLocationHistory ->
+        Triple(error, enabled, swapLocationHistory)
     }
 
     private val e2eAndRegion = combine(
@@ -205,7 +211,7 @@ class MoreMainViewModelImpl(
     private val options = combine(
         lostMode,
         e2eAndRegion,
-        findDevice,
+        findOptions,
         notifyDisconnectAndSafeArea,
         passiveModeRepository.isInPassiveModeAsFlow(deviceId),
     ) { lost, e2eAndRegion, findDevice, notifyDisconnectAndSafeArea, passiveMode ->
@@ -214,6 +220,7 @@ class MoreMainViewModelImpl(
         val region = e2eAndRegion.third
         val findAvailable = findDevice.first
         val findEnabled = findDevice.second
+        val swapLocationHistory = findDevice.third
         Options(
             lost,
             e2eEnabled,
@@ -224,7 +231,8 @@ class MoreMainViewModelImpl(
             notifyDisconnectAndSafeArea.first,
             notifyDisconnectAndSafeArea.third,
             passiveMode,
-            region
+            region,
+            swapLocationHistory
         )
     }
 
@@ -294,7 +302,8 @@ class MoreMainViewModelImpl(
             options.isInPassiveMode,
             state.requiresAgreement(),
             state.locationState?.cached == true,
-            options.region
+            options.region,
+            options.swapLocationHistory
         )
     }.stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
 
@@ -323,6 +332,17 @@ class MoreMainViewModelImpl(
                 .actionMoreMainFragmentToTagMoreNearbyFragment(
                     deviceId, deviceInfo.label, deviceInfo.supportsUwb, deviceInfo.icon
                 ))
+        }
+    }
+
+    override fun onLocationHistoryClicked() {
+        viewModelScope.launch {
+            val deviceInfo = (state.value as? State.Loaded)?.deviceInfo ?: return@launch
+            containerNavigation.navigate(
+                MoreContainerFragmentDirections.actionMoreContainerFragmentToTagLocationHistoryFragment(
+                    deviceInfo.deviceId, deviceInfo.label, deviceInfo.isOwner
+                )
+            )
         }
     }
 
@@ -538,7 +558,8 @@ class MoreMainViewModelImpl(
         val safeAreaCount: Int,
         val notifyDisconnectHasWarning: Boolean,
         val isInPassiveMode: Boolean,
-        val region: String?
+        val region: String?,
+        val swapLocationHistory: Boolean
     )
 
 }

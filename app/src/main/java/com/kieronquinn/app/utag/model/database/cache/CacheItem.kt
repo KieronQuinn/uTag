@@ -28,7 +28,7 @@ data class CacheItem(
 ) {
 
     enum class CacheType {
-        INSTALLED_APP_ID,
+        CURRENT_INSTALLED_APP_ID,
         USER_OPTIONS,
         USER_INFO,
         CONSENT_DETAILS,

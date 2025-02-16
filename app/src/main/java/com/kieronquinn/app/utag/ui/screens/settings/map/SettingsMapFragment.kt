@@ -121,6 +121,14 @@ class SettingsMapFragment: BaseSettingsFragment(), BackAvailable {
                 viewModel.onShowBuildingsChanged(it)
             }
         }
+        switchPreference {
+            title = getString(R.string.settings_map_swap_location_history_title)
+            summary = getString(R.string.settings_map_swap_location_history_content)
+            isChecked = state.swapLocationHistory
+            onChange<Boolean> {
+                viewModel.onSwapLocationHistoryChanged(it)
+            }
+        }
     }
     
 }

@@ -144,6 +144,7 @@ class ChaserRepositoryImpl(
     }
 
     override suspend fun getTagImages(vararg serviceData: String): Map<String, String> {
+        if(serviceData.isEmpty()) return emptyMap()
         return withContext(Dispatchers.IO) {
             val request = ChaserTagDataRequest(
                 serviceData.map { ChaserTagDataRequest.Item(it) }

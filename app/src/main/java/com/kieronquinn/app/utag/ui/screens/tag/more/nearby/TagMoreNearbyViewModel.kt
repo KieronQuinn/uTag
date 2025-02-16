@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.components.bluetooth.RemoteTagConnection
 import com.kieronquinn.app.utag.components.bluetooth.RemoteTagConnection.RingResult
+import com.kieronquinn.app.utag.components.navigation.TagContainerNavigation
 import com.kieronquinn.app.utag.components.navigation.TagMoreNavigation
 import com.kieronquinn.app.utag.model.VolumeLevel
 import com.kieronquinn.app.utag.repositories.SettingsRepository
@@ -71,6 +72,7 @@ abstract class TagMoreNearbyViewModel: ViewModel() {
 
     abstract fun onResume()
     abstract fun close()
+    abstract fun onBackPressed()
     abstract fun onRingClicked()
     abstract fun onRingVolumeUpClicked()
     abstract fun onRingVolumeDownClicked()
@@ -144,14 +146,16 @@ abstract class TagMoreNearbyViewModel: ViewModel() {
 
 class TagMoreNearbyViewModelImpl(
     private val uwbRepository: UwbRepository,
-    private val navigation: TagMoreNavigation,
+    moreNavigation: TagMoreNavigation,
+    containerNavigation: TagContainerNavigation,
     context: Context,
     smartTagRepository: SmartTagRepository,
     smartThingsRepository: SmartThingsRepository,
     serviceRepository: UTagServiceRepository,
     settingsRepository: SettingsRepository,
     deviceId: String,
-    uwbAvailable: Boolean
+    uwbAvailable: Boolean,
+    isRoot: Boolean
 ): TagMoreNearbyViewModel() {
 
     companion object {
@@ -159,6 +163,12 @@ class TagMoreNearbyViewModelImpl(
         private const val TIMEOUT_SECONDS = 120L
         private const val UWB_MIN_DISTANCE_FOR_UP_DOWN = 1 //1 metre
         private const val UWB_MIN_DISTANCE_FOR_ANIM = 0.25 //0.25 metres
+    }
+
+    private val navigation = if(isRoot) {
+        containerNavigation
+    }else{
+        moreNavigation
     }
 
     private val tagConnection = serviceRepository.service.flatMapLatest {
@@ -504,6 +514,12 @@ class TagMoreNearbyViewModelImpl(
     }
 
     override fun close() {
+        viewModelScope.launch {
+            navigation.navigateBack()
+        }
+    }
+
+    override fun onBackPressed() {
         viewModelScope.launch {
             navigation.navigateBack()
         }

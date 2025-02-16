@@ -41,6 +41,7 @@ abstract class SetupModViewModel: ViewModel() {
 
     abstract fun onResume()
     abstract fun onStartDownloadClicked()
+    abstract fun onAcceptOneUIClicked()
     abstract fun onUninstallClicked()
     abstract fun onInstallClicked()
     abstract fun onSetupClicked()
@@ -79,6 +80,7 @@ class SetupModViewModelImpl(
     private val backingState = MutableStateFlow<State>(State.Loading)
     private val downloadRequest = MutableStateFlow<DownloadRequest?>(null)
     private val resumeBus = MutableStateFlow(System.currentTimeMillis())
+    private val oneUIDismissed = MutableStateFlow(false)
 
     private val downloadState = downloadRequest.flatMapLatest {
         if(it != null) {
@@ -133,9 +135,10 @@ class SetupModViewModelImpl(
         isSmartThingsInstalled,
         isSmartThingsModded,
         hooksReady,
-        isOneUI
-    ) { installed, modded, hooksReady, isOneUI ->
-        SmartThingsState(installed, modded, hooksReady, isOneUI)
+        isOneUI,
+        oneUIDismissed
+    ) { installed, modded, hooksReady, isOneUI, oneUIDismissed ->
+        SmartThingsState(installed, modded, hooksReady, isOneUI && !oneUIDismissed)
     }
 
     override val state = combine(
@@ -151,13 +154,10 @@ class SetupModViewModelImpl(
         val isOneUI = smartThings.isOneUI
         when {
             backing is State.Loading && module.canContinue() -> State.Complete
+            isOneUI -> State.OneUI
             //If the user hasn't interacted yet, show info
             backing is State.Loading && release != null -> {
-                if (isOneUI) {
-                    State.OneUI
-                } else {
-                    State.Info(release.fileSize)
-                }
+                State.Info(release.fileSize)
             }
             //If the download has started, show progress or completed states
             backing is State.StartingDownload -> {
@@ -233,6 +233,12 @@ class SetupModViewModelImpl(
             if(state.value is State.Info) {
                 backingState.emit(State.StartingDownload)
             }
+        }
+    }
+
+    override fun onAcceptOneUIClicked() {
+        viewModelScope.launch {
+            oneUIDismissed.emit(true)
         }
     }
 

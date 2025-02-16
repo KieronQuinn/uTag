@@ -39,4 +39,5 @@
     <color name="sesl_thumb_control_color_activated">@color/oui_accent_color</color>
     <color name="sesl_switch_divider_color_dark">@color/oui_surface_color</color>
     <color name="sesl_switch_divider_color_light">@color/oui_surface_color</color>
+    <color name="oui_seekbar_circle_marker_color">@android:color/system_accent2_200</color>
 </resources>

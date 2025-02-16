@@ -60,6 +60,8 @@ keyPassword=<key password>
 MAPS_API_KEY=<Maps API key>
 ```
 
+> **Note:** Your API key should have certificate configurations for both uTag (`com.kieronquinn.app.utag`) **and** SmartThings (`com.samsung.android.oneconnect`), both using your signature fingerprint.
+
 7. Run the `app` configuration. **If your device is rooted and using LSPosed, this is all you need to do, install SmartThings from Google Play, enable uTag in LSPosed and finish setup as normal.**
 8. **If your device is not rooted**, create an APK of the `xposed-standalone` configuration, and push it to your device.
 9. Install the latest version of [LSPatch](https://github.com/JingMatrix/LSPatch).
@@ -67,17 +69,18 @@ MAPS_API_KEY=<Maps API key>
 
 > **Note:** It is vitally important that you download the APK and do not use the version installed from Google Play, since Google Play uses split APKs which are not supported by LSPatch.
 
-11. Open LSPatch, go to the settings and set up your custom keystore. If you need to convert it to BKS format, you can use [KeyStore Explorer](https://keystore-explorer.org/).
-12. On the "Manage" tab of LSPatch, select the + button and then pick the SmartThings APK from storage.
-13. Select the "Integrated" patch mode, and then "Embed modules". 
-14. Pick the `xposed-standalone` APK you pushed earlier, and then "Start Patch".
-15. Once patching is complete, find the patched SmartThings APK in `/sdcard/LSPatch` and install it.
+11. Use a hex editor to replace `AIzaSyBw69qJybnXaPq-md6-4gAmBfX5XdKuhd8` in the SmartThings APK with your Maps API key (this will allow Google Maps to work in SmartThings).
+12. Open LSPatch, go to the settings and set up your custom keystore. If you need to convert it to BKS format, you can use [KeyStore Explorer](https://keystore-explorer.org/).
+13. On the "Manage" tab of LSPatch, select the + button and then pick the SmartThings APK from storage.
+14. Select the "Integrated" patch mode, and then "Embed modules". 
+15. Pick the `xposed-standalone` APK you pushed earlier, and then "Start Patch".
+16. Once patching is complete, find the patched SmartThings APK in `/sdcard/LSPatch` and install it.
 
 > **Note:** If you were previously running an unpatched version of SmartThings, you will need to uninstall it first.
 
-16. Open the patched SmartThings. It may take a short while to setup, once completed you can sign in, then continue to use uTag as normal, it will detect the patched SmartThings automatically and skip trying to download the precompiled version.
+17. Open the patched SmartThings. It may take a short while to setup, once completed you can sign in, then continue to use uTag as normal, it will detect the patched SmartThings automatically and skip trying to download the precompiled version.
 
-> **Note:** When SmartThings or uTag is updated, you will need to repeat steps 8 to 16. 
+> **Note:** When SmartThings or uTag is updated, you will need to repeat steps 8 to 17. 
 
 ## Documentation
 

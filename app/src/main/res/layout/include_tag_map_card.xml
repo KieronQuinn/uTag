@@ -164,7 +164,7 @@
                 android:layout_weight="1" />
 
             <com.kieronquinn.app.utag.ui.views.VerticalProgressButton
-                android:id="@+id/tag_map_card_location_history"
+                android:id="@+id/tag_map_card_location_history_or_search_nearby"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_marginHorizontal="@dimen/margin_4"

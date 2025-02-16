@@ -16,7 +16,6 @@ import com.kieronquinn.app.utag.ui.screens.setup.mod.SetupModViewModel.State
 import com.kieronquinn.app.utag.ui.screens.setup.mod.SetupModViewModel.State.Error.ErrorReason
 import com.kieronquinn.app.utag.utils.extensions.whenResumed
 import com.kieronquinn.app.utag.utils.preferences.actionCardPreference
-import com.kieronquinn.app.utag.utils.preferences.tipsCardPreference
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class SetupModFragment: BaseSettingsFragment(), BackAvailable {
@@ -102,9 +101,12 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
     }
 
     private fun handleOneUI() = setPreferences {
-        tipsCardPreference {
+        actionCardPreference {
             title = getString(R.string.setup_mod_oneui_title)
-            summary = getText(R.string.setup_mod_oneui_content)
+            summary = getText(R.string.setup_mod_oneui_desc)
+            addButton(getString(R.string.setup_mod_oneui_continue)) {
+                viewModel.onAcceptOneUIClicked()
+            }
         }
     }
 

@@ -22,7 +22,7 @@ class FindMyDeviceActivity: BoundActivity<ActivityFindMyDeviceBinding>(ActivityF
         }
 
         fun getConfig(activity: Activity): FindMyDeviceActivityConfig {
-            return activity.intent.getParcelableExtraCompat(
+            return activity.intent?.getParcelableExtraCompat(
                 EXTRA_CONFIG, FindMyDeviceActivityConfig::class.java
             ) ?: throw RuntimeException("Config was not provided")
         }
