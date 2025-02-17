@@ -83,14 +83,14 @@
     <string name="settings_main_mod_newer_xposed_content">La mod uTag per SmartThings è più recente di uTag. Le funzionalità di uTag potrebbero non funzionare correttamente, o affatto. Forza l\'arresto di SmartThings o riavvia il tuo dispositivo per risolvere questo problema.</string>
     <string name="settings_main_mod_newer_patch_content">La mod uTag per SmartThings è più recente di uTag. Le funzionalità di uTag potrebbero non funzionare correttamente, o affatto. Aggiorna uTag dalla scheda Aggiornamenti per risolvere questo problema.</string>
     <string name="settings_main_xposed_error_content">La mod uTag per SmartThings non è installata. S stai utilizzando Xposed, assicurati che sia abilitato per SmartThings e riavvia il tuo dispositivo. Se non sei rootato, assicurati che la versione modificata sia installata.</string>
-    <string name="settings_main_smartthings_title">Stai cercando le opzioni per SmartTag?</string>
-    <string name="settings_main_smartthings_content">Impostazioni &amp; tracking per SmartTags sono disponibili dall\'app SmartThings</string>
+    <string name="settings_main_smartthings_title">Stai cercando le opzioni di SmartTag?</string>
+    <string name="settings_main_smartthings_content">Le impostazioni ed il monitoraggio degli SmartTag sono disponibili dall\'app SmartThings</string>
     <string name="settings_main_smartthings_open">Apri SmartThings</string>
     <string name="settings_main_permissions_title">Permessi Aggiuntivi Richiesti</string>
     <string name="settings_main_permissions_content">SmartThings richiede \"Consenti sempre\" per i permessi di posizione &amp; \"Dispositivi nelle vicinanze\"</string>
     <string name="settings_main_permissions_action">Concedi nelle impostazioni</string>
     <string name="settings_main_category_settings">Impostazioni</string>
-    <string name="settings_main_location_title">Posizione &amp; Ricerca</string>
+    <string name="settings_main_location_title">Posizione e Ricerca</string>
     <string name="settings_main_location_content">Aggiornamento posizione, opzioni ricerca nelle vicinanze, aggiornamento del widget, tag sconosciuti, rete e aree sicure</string>
     <string name="settings_main_map_title">Mappa</string>
     <string name="settings_main_map_content">Temi della mappa di Trova e Cronologia delle Posizioni &amp; opzioni</string>
@@ -103,7 +103,7 @@
     <string name="settings_main_wiki_title">Guarda il Wiki</string>
     <string name="settings_main_wiki_content">Informazioni &amp; guide su come usare uTag</string>
     <string name="settings_main_backup_restore_title">Backup &amp; Ripristino</string>
-    <string name="settings_main_backup_restore_content">Backup &amp; ripristina i dati di uTag da un file locale o dal cloud</string>
+    <string name="settings_main_backup_restore_content">Effettua il backup ed il ripristino dei dati di uTag da un file locale o dal cloud</string>
     <string name="settings_main_advanced_title">Avanzate</string>
     <string name="settings_main_advanced_content">Opzioni di lingua, modalità creatore di contenuti e analisi</string>
     <string name="settings_main_category_account">Account</string>
