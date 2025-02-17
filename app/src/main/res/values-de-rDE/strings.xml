@@ -13,11 +13,11 @@
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
-    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
+    <string name="setup_mod_info_content">Um mit uTag zu arbeiten und Samsungs Anforderungen zu umgehen, ist eine modifizierte Version von SmartThings erforderlich. uTag führt Sie durch den Download und die Installation.\n\n <b>Hinweis:</b> Wenn Ihr Gerät gerootet und Xposed installiert ist, stellen Sie sicher, dass SmartThings eingerichtet ist, aktivieren Sie das uTag Xposed-Modul, beenden Sie SmartThings und kehren Sie zu uTag zurück, um diesen Schritt zu überspringen.</string>
     <string name="setup_mod_info_action">Mod-Download starten</string>
     <string name="setup_mod_oneui_title">OneUI wurde erkannt</string>
-    <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
-    <string name="setup_mod_oneui_continue">Continue</string>
+    <string name="setup_mod_oneui_desc">Dieses Gerät scheint OneUI auszuführen. Die Verwendung von uTag auf einem Gerät, das SmartThings Find offiziell unterstützt, kann die Funktionalität einschränken, einige SmartThings Funktionen verhindern oder unerwartete Fehler verursachen. <b>Die Unterstützung für OneUI ist experimentell und funktioniert möglicherweise nicht auf Ihrem Gerät. Bitte melden Sie keine Fehler, die auf diesem Gerät auftreten.</b> Sie müssen sich im Browser bei SmartThings anmelden, anstatt das Samsung Konto auf Ihrem Gerät zu verwenden.</string>
+    <string name="setup_mod_oneui_continue">Fortsetzen</string>
     <string name="setup_mod_downloading">SmartThings wird heruntergeladen…</string>
     <string name="setup_mod_setting_up">Mod… wird eingerichtet</string>
     <string name="setup_mod_setting_up_subtitle">Dies kann einen Moment</string>
@@ -64,7 +64,7 @@
     <string name="account_warning_content_b2">Ihr Passwort ist für uTag weder sichtbar noch kann es von uTag gespeichert werden, und die Zugriffstoken werden verschlüsselt auf dem Gerät gespeichert.</string>
     <string name="account_warning_content_b3">uTag ist Open Source und Sie können den Login-Code auf GitHub einsehen</string>
     <string name="account_warning_content_footer"><b>Bitte beachten Sie, dass offizielle Builds von uTag nur auf GitHub und APKMirror verfügbar sind. Wenn Sie uTag aus einer anderen Quelle installiert haben, kann die Login-Sicherheit nicht garantiert werden und Sie sollten uTag aus einer legitimen Quelle neu installieren.</b></string>
-    <string name="account_sign_in">Sign in</string>
+    <string name="account_sign_in">Anmelden</string>
     <string name="account_error_title">Fehler</string>
     <string name="account_error_content">Beim Starten des Anmeldeprozesses ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
     <string name="account_error_try_again">Erneut versuchen</string>
@@ -79,8 +79,8 @@
     <string name="settings_main_mod_not_activated_xposed_content">Die uTag Mod für SmartThings ist nicht aktiviert. Wenn Sie Xposed verwenden, aktivieren Sie ihn und starten Sie Ihr Gerät neu. Wenn Sie Xposed nicht verwenden, folgen Sie den Anweisungen, um die modifizierten SmartThings aus der Registerkarte Updates zu installieren.</string>
     <string name="settings_main_mod_not_activated_patch_content">Die uTag Mod für SmartThings ist nicht aktiviert. Bitte befolgen Sie die Anweisungen, um es über die Registerkarte Updates zu installieren.</string>
     <string name="settings_main_mod_outdated_xposed_content">Die uTag-Mod für SmartThings ist veraltet. Möglicherweise ist die uTag-Funktionalität eingeschränkt oder funktioniert gar nicht. Beenden Sie SmartThings zwangsweise oder starten Sie Ihr Gerät neu, um dies zu beheben.</string>
-    <string name="settings_main_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from the Updates tab to fix this.</string>
-    <string name="settings_main_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
+    <string name="settings_main_mod_outdated_patch_content">Die uTag-Mod für SmartThings ist veraltet. Möglicherweise ist die uTag-Funktionalität eingeschränkt oder funktioniert gar nicht. Beenden Sie SmartThings zwangsweise oder starten Sie Ihr Gerät neu, um dies zu beheben.</string>
+    <string name="settings_main_mod_newer_xposed_content">Die uTag-Mod für SmartThings ist neuer als uTag. Die uTag-Funktionalität könnte daher nicht korrekt oder gar nicht funktionieren. Beenden Sie SmartThings zwangsweise oder starten Sie Ihr Gerät neu, um das Problem zu beheben.</string>
     <string name="settings_main_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the Updates tab to fix this.</string>
     <string name="settings_main_xposed_error_content">The uTag SmartThings modification is not installed. If you are using Xposed, make sure it\'s enabled for SmartThings and reboot your device. If you\'re not rooted, make sure the modified version is installed.</string>
     <string name="settings_main_smartthings_title">Sie suchen SmartTag-Optionen?</string>
@@ -172,9 +172,9 @@
     <string name="settings_uts_list_title">Unbekannte Tags anzeigen</string>
     <string name="settings_uts_list_info_title">Unbekannte Tags</string>
     <string name="settings_uts_list_info_content">Unbekannte Tags werden 24 Stunden gespeichert. Wenn Sie mit ihnen interagieren, wird kein Hinweis an ihren Besitzer gesendet.</string>
-    <string name="settings_uts_category_settings">Settings</string>
-    <string name="settings_uts_sensitivity_title">Sensitivity</string>
-    <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
+    <string name="settings_uts_category_settings">Einstellungen</string>
+    <string name="settings_uts_sensitivity_title">Empfindlichkeit</string>
+    <string name="settings_uts_sensitivity_content">Eine höhere Empfindlichkeit kann zu Fehlalarmen führen, während eine niedrigere Empfindlichkeit mehr Zeit in Anspruch nimmt, um ein unbekanntes Tag zu entdecken, das Ihnen folgt.</string>
     <string name="settings_uts_list_unknown_tag_title">Unbekannter Tag %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Zuletzt gesehen %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Zuletzt gesehen bei %1s</string>
@@ -198,17 +198,17 @@
     <string name="settings_uts_tag_safe_dialog_positive">Als sicher markieren</string>
     <string name="settings_uts_tag_safe_dialog_negative">Abbrechen</string>
     <string name="settings_uts_tag_error_dialog_title">Fehler</string>
-    <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
+    <string name="settings_uts_tag_error_dialog_content">Beim Laden dieses unbekannten Tags ist ein Fehler aufgetreten. Versuchen Sie es später erneut.</string>
     <string name="settings_uts_tag_error_dialog_close">Schließen</string>
-    <string name="settings_uts_sensitivity_very_high">Very High</string>
-    <string name="settings_uts_sensitivity_high">High</string>
+    <string name="settings_uts_sensitivity_very_high">Sehr hoch</string>
+    <string name="settings_uts_sensitivity_high">Hoch</string>
     <string name="settings_uts_sensitivity_normal">Normal</string>
-    <string name="settings_uts_sensitivity_low">Low</string>
-    <string name="settings_uts_sensitivity_very_low">Very Low</string>
+    <string name="settings_uts_sensitivity_low">Niedrig</string>
+    <string name="settings_uts_sensitivity_very_low">Sehr niedrig</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Standort anzeigen</string>
-    <string name="settings_map_show_location_content">Show your location on the map, where available</string>
-    <string name="settings_map_show_location_toast">Grant precise location permission</string>
+    <string name="settings_map_show_location_content">Standort auf der Karte anzeigen, wo verfügbar</string>
+    <string name="settings_map_show_location_toast">Erteilen Sie präzise Standortberechtigungen</string>
     <string name="settings_map_style_title">Kartentyp</string>
     <string name="settings_map_style_normal">Standard</string>
     <string name="settings_map_style_terrain">Gelände</string>
@@ -245,16 +245,16 @@
     <string name="settings_advanced_clear_addresses_content">Clear the local encrypted cache of addresses from Tag locations and location history</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Clear Cached Addresses?</string>
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
-    <string name="settings_advanced_clear_addresses_dialog_positive">Clear</string>
-    <string name="settings_advanced_clear_addresses_toast">Cached addresses cleared</string>
-    <string name="settings_language_info_title">Note</string>
-    <string name="settings_language_info_content">Not all languages are complete, you can contribute translations on the uTag Crowdin</string>
+    <string name="settings_advanced_clear_addresses_dialog_positive">Leeren</string>
+    <string name="settings_advanced_clear_addresses_toast">Gespeicherte Adressen wurden gelöscht</string>
+    <string name="settings_language_info_title">Anmerkung</string>
+    <string name="settings_language_info_content">Nicht alle Sprachen sind vollständig, Sie können Übersetzungen für das uTag Crowdin beitragen</string>
     <string name="settings_language_default">System Default</string>
     <!-- Settings > Content Creator -->
     <string name="settings_content_creator_title">Content Creator Mode</string>
     <string name="settings_content_creator_enabled">Enabled</string>
-    <string name="settings_content_creator_info_title">What is Content Creator Mode?</string>
-    <string name="settings_content_creator_info_content">Content Creator Mode is an option that allows you to hide your location in uTag\'s UI. It\'s intended for content creators making screenshots or videos of uTag, so their real location is not displayed.</string>
+    <string name="settings_content_creator_info_title">Was ist der Content Creator Modus?</string>
+    <string name="settings_content_creator_info_content">Der Content-Erstellungsmodus ist eine Option, mit der Sie Ihren Standort in der UTag-Benutzeroberfläche verstecken können. Es ist für Content Creator gedacht, die Screenshots oder Videos von uTag erstellen, so dass ihr realer Standort nicht angezeigt wird.</string>
     <string name="settings_content_creator_does_title">Was macht der Content Creator Modus?</string>
     <string name="settings_content_creator_does_bull1">Die Historie des Tag-Standorts wird auf einen voreingestellten Verlauf basierend auf echten, anonymisierten Standortdaten des Entwicklers gesetzt.</string>
     <string name="settings_content_creator_does_bull2">Die Standorte der Tags basieren auf derselben voreingestellten Historie, die jede Stunde durch die Liste für \"heute\" durchläuft, wobei eine kleine Randomisierung bei jedem Aktualisieren angewendet wird, um eine Überlappung der Tags zu verhindern.</string>
@@ -270,8 +270,8 @@
     <string name="map_error_content">Ein Fehler ist aufgetreten, bitte erneut versuchen (%1d)</string>
     <string name="map_error_no_tags_content">Sie haben keine Tags auf diesem Konto verfügbar</string>
     <string name="map_error_close">Schließen</string>
-    <string name="map_error_open_settings">Open Settings</string>
-    <string name="map_error_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later.</string>
+    <string name="map_error_open_settings">Einstellungen öffnen</string>
+    <string name="map_error_no_smartthings_content">uTag konnte keine Verbindung zu SmartThings herstellen. Überprüfen Sie die Installation und versuchen Sie es später erneut.</string>
     <string name="map_error_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions to install the modded SmartThings from uTag\'s settings.</string>
     <string name="map_error_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Follow the instructions to install the modded SmartThings from uTag\'s settings to fix this.</string>
     <string name="map_warning_mod_outdated_xposed_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
