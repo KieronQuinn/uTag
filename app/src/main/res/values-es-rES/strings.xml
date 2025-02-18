@@ -129,7 +129,7 @@
     <string name="settings_location_location_safe_area_title">Áreas seguras</string>
     <string name="settings_location_location_safe_area_content">Agrega y configura áreas seguras para tus Tags.</string>
     <string name="settings_location_category_chaser_title">Find my Everything Network</string>
-    <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
+    <string name="settings_location_chaser_title">Contribuir a Find my Everything Network</string>
     <string name="settings_location_chaser_content">Send location updates for detected nearby Tags to Find my Everything network</string>
     <string name="settings_location_chaser_disabled">Not available on this device</string>
     <string name="settings_location_category_uts_title">Unknown Tags</string>
