@@ -17,7 +17,7 @@
     <string name="setup_mod_info_action">Démarrer le téléchargement du mod</string>
     <string name="setup_mod_oneui_title">OneUI Détecté</string>
     <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
-    <string name="setup_mod_oneui_continue">Continue</string>
+    <string name="setup_mod_oneui_continue">Continuer</string>
     <string name="setup_mod_downloading">Téléchargement de SmartThings…</string>
     <string name="setup_mod_setting_up">Configuration du mod…</string>
     <string name="setup_mod_setting_up_subtitle">Cette opération peut prendre quelques instants</string>
@@ -56,21 +56,21 @@
     <string name="permission_analytics_deny">Refuser</string>
     <!-- Sign in -->
     <string name="setup_account">Compte</string>
-    <string name="account_title">Sign in to SmartThings</string>
+    <string name="account_title">Connectez-vous à SmartThings</string>
     <string name="account_content">For uTag to be able to communicate with SmartThings, you must sign in with your Samsung account.</string>
-    <string name="account_warning_title">How can I trust uTag?</string>
+    <string name="account_warning_title">Comment faire confiance à uTag ?</string>
     <string name="account_warning_content_header">Since uTag requires signing into your Samsung account, how do you know you can trust uTag?</string>
     <string name="account_warning_content_b1">uTag uses the official Samsung Login, in your browser (check the URL)</string>
     <string name="account_warning_content_b2">Your password is not visible to nor can it be saved by uTag and access tokens are kept encrypted on device</string>
-    <string name="account_warning_content_b3">uTag is open source and you can inspect the login code on GitHub</string>
+    <string name="account_warning_content_b3">uTag est open source et vous pouvez inspecter le code de connexion sur GitHub</string>
     <string name="account_warning_content_footer"><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
-    <string name="account_sign_in">Sign in</string>
-    <string name="account_error_title">Error</string>
+    <string name="account_sign_in">Se connecter</string>
+    <string name="account_error_title">Erreur</string>
     <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
-    <string name="account_error_try_again">Try again</string>
-    <string name="login_response_error_title">Error</string>
+    <string name="account_error_try_again">Réessayer</string>
+    <string name="login_response_error_title">Erreur</string>
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
-    <string name="login_response_error_close">Close</string>
+    <string name="login_response_error_close">Fermer</string>
     <!-- Settings -->
     <string name="settings_main_title">uTag Settings</string>
     <string name="settings_main_mod_error_title">Error</string>
