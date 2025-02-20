@@ -2,14 +2,14 @@
 <resources>
     <string name="app_name">uTag</string>
     <string name="app_name_st">SmartThings</string>
-    <string name="shortcut_name_find">Find</string>
+    <string name="shortcut_name_find">Procurar</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Applying mods, please wait…</string>
+    <string name="hooking_progress_toast">Aplicando modificações, aguarde…</string>
     <!-- Landing -->
-    <string name="landing_get_started">Get Started</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
-    <string name="landing_open">Open uTag</string>
+    <string name="landing_get_started">Iniciar</string>
+    <string name="landing_not_signed_in">É necessário completar a configuração primeiro, abra o uTag para continuar</string>
+    <string name="landing_open">Abrir uTag</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
