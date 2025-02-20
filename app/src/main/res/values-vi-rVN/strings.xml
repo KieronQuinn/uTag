@@ -17,7 +17,7 @@
     <string name="setup_mod_info_action">Bắt đầu tải mod</string>
     <string name="setup_mod_oneui_title">Đã phát hiện OneUI</string>
     <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
-    <string name="setup_mod_oneui_continue">Continue</string>
+    <string name="setup_mod_oneui_continue">Tiếp tục</string>
     <string name="setup_mod_downloading">Đang tải SmartThings về…</string>
     <string name="setup_mod_setting_up">Đang cài đặt mod…</string>
     <string name="setup_mod_setting_up_subtitle">Quá trình này có thể tốn chút thời gian</string>
@@ -247,7 +247,7 @@
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Xóa</string>
     <string name="settings_advanced_clear_addresses_toast">Cached addresses cleared</string>
-    <string name="settings_language_info_title">Note</string>
+    <string name="settings_language_info_title">Chú ý</string>
     <string name="settings_language_info_content">Bản dịch chưa đầy đủ cho tất cả các ngôn ngữ. Bạn có thể đóng góp trên Crowdin của uTag</string>
     <string name="settings_language_default">Mặc định Hệ thống</string>
     <!-- Settings > Content Creator -->
@@ -982,9 +982,9 @@
     <string name="smartspacer_plugin_history_description_set">Display %1s\'s location history and an approximate address, if available</string>
     <!-- Backup & Restore -->
     <string name="backup_restore_backup_title">Backup</string>
-    <string name="backup_restore_backup_content">Backup your uTag data to a local file or the cloud</string>
+    <string name="backup_restore_backup_content">Sao lưu dữ liệu uTag của bạn vào một file trong máy hoặc đám mây</string>
     <string name="backup_restore_restore_title">Restore</string>
-    <string name="backup_restore_restore_content">Restore your uTag data from a local file or the cloud</string>
+    <string name="backup_restore_restore_content">Khôi phục dữ liệu uTag của bạn vào một file trong máy hoặc đám mây</string>
     <string name="backup_restore_included_title">Included in Backup</string>
     <string name="backup_restore_included_bull1">Scan, Location, Map &amp; Refresh settings</string>
     <string name="backup_restore_included_bull2">Safe Areas</string>
