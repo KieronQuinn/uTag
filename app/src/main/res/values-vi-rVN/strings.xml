@@ -5,7 +5,7 @@
     <string name="shortcut_name_find">Find</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Đang thiết lập mod, xin vui lòng chờ…</string>
+    <string name="hooking_progress_toast">Đang thiết lập các mod, xin vui lòng chờ…</string>
     <!-- Landing -->
     <string name="landing_get_started">Bắt Đầu</string>
     <string name="landing_not_signed_in">Bạn cần hoàn thành thiết lập trước, mở uTag để tiếp tục</string>
@@ -31,7 +31,7 @@
     <string name="setup_mod_setup_content">Open SmartThings, grant its permissions, sign in and return to uTag to continue the uTag setup process.</string>
     <string name="setup_mod_setup_action">Mở SmartThings</string>
     <string name="setup_mod_error_title">Sự cố</string>
-    <string name="setup_mod_error_failed_to_get">Failed to load the latest version of the SmartThings mod from the server. Check your connection and try again later.</string>
+    <string name="setup_mod_error_failed_to_get">Không thể tải phiên bản mới nhất của mod SmartThings từ máy chủ. Kiểm tra kết nối của bạn và thử lại sau.</string>
     <string name="setup_mod_error_failed_to_download">Failed to download the SmartThings mod. Check your connection and try again later.</string>
     <string name="setup_mod_error_close">Đóng</string>
     <string name="setup_mod_metered_dialog_title">Cảnh báo Dung lượng Tải xuống Lớn</string>
@@ -224,7 +224,7 @@
     <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Mã hóa</string>
-    <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
+    <string name="settings_encryption_content">Đặt hoặc đặt lại một mã PIN để mã hóa vị trí ngoại tuyến</string>
     <string name="settings_biometric_title">Biometric Entry</string>
     <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
     <string name="settings_biometric_content_disabled">Not available on this device</string>
@@ -248,7 +248,7 @@
     <string name="settings_advanced_clear_addresses_dialog_positive">Xóa</string>
     <string name="settings_advanced_clear_addresses_toast">Cached addresses cleared</string>
     <string name="settings_language_info_title">Chú ý</string>
-    <string name="settings_language_info_content">Bản dịch chưa đầy đủ cho tất cả các ngôn ngữ. Bạn có thể đóng góp trên Crowdin của uTag</string>
+    <string name="settings_language_info_content">Bản dịch chưa đầy đủ cho nhiều ngôn ngữ. Bạn có thể đóng góp trên Crowdin của uTag</string>
     <string name="settings_language_default">Mặc định Hệ thống</string>
     <!-- Settings > Content Creator -->
     <string name="settings_content_creator_title">Content Creator Mode</string>
@@ -426,9 +426,9 @@
     <string name="tag_more_error_close">Close</string>
     <string name="tag_more_error_toast">An error occurred, please try again</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
-    <string name="tag_more_end_to_end_title">Encrypt offline location</string>
+    <string name="tag_more_end_to_end_title">Mã hóa vị trí ngoại tuyến</string>
     <string name="tag_more_end_to_end_content">Encrypt future location updates from other people\'s Galaxy devices for this Tag. You will be required to enter your encryption PIN to access these locations.</string>
-    <string name="tag_more_end_to_end_content_pin">Set a PIN in the encryption settings to use this option</string>
+    <string name="tag_more_end_to_end_content_pin">Đặt mã PIN trong cài đặt mã hóa để sử dụng tùy chọn này</string>
     <string name="tag_more_end_to_end_content_disabled">Connect to your Tag to use this option</string>
     <string name="tag_more_end_to_end_content_network">Could not get encryption key state, check your network connection</string>
     <string name="tag_more_end_to_end_content_passive">Disable Passive Mode to use this option</string>
@@ -642,51 +642,51 @@
     <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
     <string name="location_history_guide_button">Got it</string>
     <!-- PIN Entry dialog -->
-    <string name="tag_pin_entry_title">Enter PIN</string>
+    <string name="tag_pin_entry_title">Nhập mã PIN</string>
     <string name="tag_pin_entry_content">Enter your PIN for %1s to decrypt its location.</string>
     <string name="tag_pin_entry_content_alt">Enter your PIN for %1s to decrypt its location history.</string>
-    <string name="tag_pin_entry_error">Incorrect PIN entered, try again</string>
-    <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
+    <string name="tag_pin_entry_error">Mã PIN không đúng, vui lòng thử lại</string>
+    <string name="tag_pin_entry_save">Lưu trữ mã PIN một cách an toàn trên thiết bị để tránh phải nhập lại</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_set_pin_title">Đặt mã PIN</string>
-    <string name="settings_encryption_set_pin_content">Set a PIN for offline location encryption</string>
-    <string name="settings_encryption_reset_pin_title">Reset PIN</string>
+    <string name="settings_encryption_set_pin_content">Đặt một mã PIN để mã hóa vị trí ngoại tuyến</string>
+    <string name="settings_encryption_reset_pin_title">Đặt lại mã PIN</string>
     <string name="settings_encryption_reset_pin_content">Set on %1s</string>
-    <string name="settings_encryption_require_biometrics_title">Require Biometrics to Modify PIN</string>
+    <string name="settings_encryption_require_biometrics_title">Yêu cầu Xác thực Sinh trắc học để Thay đổi Mã PIN</string>
     <string name="settings_encryption_require_biometrics_content">Require the use of strong biometrics, such as fingerprint, to add or change your PIN. By default, the device\'s lock screen PIN can be used to authenticate, which may be susceptible to shoulder surfing.</string>
     <string name="settings_encryption_error_dialog_title">Lỗi</string>
     <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
     <string name="settings_encryption_error_dialog_close">Đóng</string>
-    <string name="settings_encryption_category_pin">Offline Location PIN</string>
+    <string name="settings_encryption_category_pin">Mã PIN Vị trí Ngoại tuyến</string>
     <string name="settings_encryption_footer_title">Trying to enable or disable location encryption?</string>
     <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
-    <string name="settings_encryption_reset_warning_dialog_title">Reset PIN</string>
+    <string name="settings_encryption_reset_warning_dialog_title">Đặt lại mã PIN</string>
     <string name="settings_encryption_reset_warning_dialog_content">If you reset your PIN, all location history which was reported by other Galaxy devices with encryption enabled will be deleted. Once a location has been reported from another Galaxy device after you change your PIN, you will be asked to enter your new PIN to decrypt it.</string>
-    <string name="settings_encryption_reset_warning_dialog_positive">Reset</string>
-    <string name="settings_encryption_biometrics_failed_title">Biometric Error</string>
-    <string name="settings_encryption_biometrics_failed_content">Could not authenticate.\n\nIf you need to add or change your PIN and cannot use biometrics, clear uTag\'s data and sign in again.</string>
-    <string name="settings_encryption_pin_timeout_never">Never</string>
-    <string name="settings_encryption_pin_timeout_subtitle">You will only be asked for your PIN after uTag is restarted or your device is rebooted</string>
-    <string name="settings_encryption_pin_timeout_one_minute">1 minute</string>
-    <string name="settings_encryption_pin_timeout_two_minutes">2 minutes</string>
-    <string name="settings_encryption_pin_timeout_five_minutes">5 minutes</string>
-    <string name="settings_encryption_pin_timeout_ten_minutes">10 minutes</string>
-    <string name="settings_encryption_pin_timeout_fifteen_minutes">15 minutes</string>
-    <string name="settings_encryption_pin_timeout_thirty_minutes">30 minutes</string>
-    <string name="settings_encryption_pin_timeout_sixty_minutes">1 hour</string>
-    <string name="settings_encryption_enter_pin">Enter PIN</string>
-    <string name="settings_encryption_enter_pin_content">You will need this PIN to access locations reported by other Galaxy devices, so make sure it\'s memorable!</string>
-    <string name="settings_encryption_confirm_pin">Confirm PIN</string>
-    <string name="settings_encryption_mismatch">PINs do not match</string>
-    <string name="settings_encryption_success">PIN changed</string>
-    <string name="settings_encryption_error">Error changing PIN, please try again</string>
-    <string name="settings_encryption_clear_saved_pins_title">Clear Stored PIN</string>
+    <string name="settings_encryption_reset_warning_dialog_positive">Đặt lại</string>
+    <string name="settings_encryption_biometrics_failed_title">Lỗi Xác thực Sinh trắc học</string>
+    <string name="settings_encryption_biometrics_failed_content">Không thể xác thực.\n\nNếu bạn cần thêm hoặc thay đổi mã PIN cảu bạn và không thể sử dụng xác thực sinh trắc học, hãy xóa dữ liệu của uTag và đăng nhập lại.</string>
+    <string name="settings_encryption_pin_timeout_never">Không bao giờ</string>
+    <string name="settings_encryption_pin_timeout_subtitle">Bạn sẽ chỉ bị yêu cầu nhập mã PIN của bạn sau khi uTag hoặc thiết bị của bạn bị khởi động lại</string>
+    <string name="settings_encryption_pin_timeout_one_minute">1 phút</string>
+    <string name="settings_encryption_pin_timeout_two_minutes">2 phút</string>
+    <string name="settings_encryption_pin_timeout_five_minutes">5 phút</string>
+    <string name="settings_encryption_pin_timeout_ten_minutes">10 phút</string>
+    <string name="settings_encryption_pin_timeout_fifteen_minutes">15 phút</string>
+    <string name="settings_encryption_pin_timeout_thirty_minutes">30 phút</string>
+    <string name="settings_encryption_pin_timeout_sixty_minutes">1 tiếng</string>
+    <string name="settings_encryption_enter_pin">Nhập mã PIN</string>
+    <string name="settings_encryption_enter_pin_content">Bạn sẽ cần mã PIN này để truy cập vị trí được báo cáo bởi các thiết bị Galaxy khác, vì vậy hãy đảm bảo rằng nó rất dễ nhớ!</string>
+    <string name="settings_encryption_confirm_pin">Xác nhận mã PIN</string>
+    <string name="settings_encryption_mismatch">Mã PIN không khớp</string>
+    <string name="settings_encryption_success">Mã PIN đã được thay đổi</string>
+    <string name="settings_encryption_error">Lỗi thay đổi mã PIN, vui lòng thử lại</string>
+    <string name="settings_encryption_clear_saved_pins_title">Xóa mã PIN đã lưu</string>
     <string name="settings_encryption_clear_saved_pins_content">Delete the stored PIN from encrypted storage, you will be prompted to enter your PIN when it is next required</string>
-    <string name="settings_encryption_clear_saved_pins_content_disabled">No PIN is currently saved in encrypted storage</string>
-    <string name="settings_encryption_clear_saved_pins_dialog_content">Are you sure you wish to clear your stored PIN? You will need to re-enter it when it is next required</string>
-    <string name="settings_encryption_clear_saved_pins_dialog_positive">Clear</string>
-    <string name="settings_encryption_pin_timeout_title">PIN Timeout</string>
-    <string name="settings_encryption_pin_timeout_content">How long before an entered PIN is cleared from memory, requiring you to enter it again: %1s</string>
+    <string name="settings_encryption_clear_saved_pins_content_disabled">Không có mã PIN nào đang được lưu trữ trong bộ nhớ được mã hóa</string>
+    <string name="settings_encryption_clear_saved_pins_dialog_content">Bạn có thực sự muốn xóa mã PIN đã lưu của bạn? Bạn sẽ phải nhập nó lại khi được yêu cầu lần tới</string>
+    <string name="settings_encryption_clear_saved_pins_dialog_positive">Xóa</string>
+    <string name="settings_encryption_pin_timeout_title">Hạn mã PIN</string>
+    <string name="settings_encryption_pin_timeout_content">Khoảng thời gian trước khi mã PIN đã nhập bị xóa khỏi bộ nhớ, bắt buộc bạn phải nhập lại: %1s</string>
     <!-- Biometric prompt -->
     <string name="biometric_prompt_title">Authenticate</string>
     <string name="biometric_prompt_content_settings">Biometric authentication is required to access uTag\'s settings</string>
@@ -695,7 +695,7 @@
     <string name="biometric_prompt_content_uts">Biometric authentication is required to view Unknown Tags</string>
     <string name="biometric_prompt_content_enable">Verify biometrics to enable</string>
     <string name="biometric_prompt_content_disable">Verify biometrics to disable</string>
-    <string name="biometric_prompt_content_change_pin">Authenticate to modify your PIN</string>
+    <string name="biometric_prompt_content_change_pin">Xác thực để sửa đổi mã PIN của bạn</string>
     <string name="biometric_prompt_content_negative">Hủy</string>
     <string name="biometric_prompt_error_title">Biometric Error</string>
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
@@ -797,7 +797,7 @@
     <string name="search_nearby_bluetooth_disabled_negative">Hủy</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings đang chạy</string>
-    <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
+    <string name="notification_content_smartthings">uTag đang giữ SmartThings chạy trong nền. Nhấn giữ lâu để ẩn thông báo này.</string>
     <string name="notification_title_background_service_zero">No Tags connected</string>
     <string name="notification_title_background_service_one">%1d Tag connected</string>
     <string name="notification_title_background_service_other">%1d Tags connected</string>
@@ -852,7 +852,7 @@
     <string name="notification_content_safe_area_error_permissions">Unable to set up uTag Safe Areas. Check Location permissions are set to \"Allow all the time\" for uTag.</string>
     <string name="notification_content_safe_area_error_location">Unable to get location to update your Safe Areas. Disconnect notifications may be incorrect.</string>
     <string name="notification_action_safe_area_retry">Retry</string>
-    <string name="safe_area_save">Save</string>
+    <string name="safe_area_save">Lưu</string>
     <string name="safe_area_delete">Delete</string>
     <string name="safe_area_active">Active</string>
     <string name="safe_area_add">Add Safe Area</string>
@@ -861,10 +861,10 @@
     <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
     <string name="safe_area_dialog_delete_delete">Delete</string>
     <string name="safe_area_dialog_delete_cancel">Hủy</string>
-    <string name="safe_area_dialog_save_title">Save Changes?</string>
-    <string name="safe_area_dialog_save_content">Would you like to save your changes?</string>
-    <string name="safe_area_dialog_save_save">Save</string>
-    <string name="safe_area_dialog_save_dont_save">Don\'t Save</string>
+    <string name="safe_area_dialog_save_title">Lưu các Thay đổi?</string>
+    <string name="safe_area_dialog_save_content">Bạn có muốn lưu các thay đổi của bạn không?</string>
+    <string name="safe_area_dialog_save_save">Lưu</string>
+    <string name="safe_area_dialog_save_dont_save">Không lưu</string>
     <string name="safe_area_type_title">Add Safe Area</string>
     <string name="safe_area_type_location_permission_title">Location Permissions Required</string>
     <string name="safe_area_type_location_permission_content">uTag requires location permissions to use Safe Areas. Android restrictions mean Wi-Fi network name &amp; MAC Addresses are treated as location data.</string>
@@ -936,7 +936,7 @@
     <string name="widget_error_no_locations">No locations available</string>
     <string name="widget_error_encryption">Cần mã PIN để thu thập vị trí, chạm để mở uTag và nhập mã PIN của bạn</string>
     <string name="widget_error_toast_location">Failed to get one or more Tag locations, they will not be displayed</string>
-    <string name="widget_error_toast_encryption">Failed to decrypt one or more Tag locations, open uTag and enter your PIN to display them</string>
+    <string name="widget_error_toast_encryption">Giải mã một hoặc nhiều vị trí Tag thất bại, hãy mở uTag và nhập mã PIN của bạn để hiển thị chúng</string>
     <string name="widget_timestamp">Đã cập nhật: %1s</string>
     <string name="widget_description">Display Tag locations on a map</string>
     <string name="widget_history_description">Display a Tag\'s location history on a map</string>
@@ -944,11 +944,11 @@
     <string name="widget_dialog_not_setup_content">Set up uTag first before adding a widget</string>
     <string name="widget_dialog_not_setup_open">Mở uTag</string>
     <string name="widget_configuration_set_device">Set a Tag to display first</string>
-    <string name="widget_configuration_dialog_save_title">Save Changes?</string>
-    <string name="widget_configuration_dialog_save_content">Would you like to save your changes?</string>
-    <string name="widget_configuration_dialog_save_save">Save</string>
-    <string name="widget_configuration_dialog_save_dont_save">Don\'t Save</string>
-    <string name="widget_configuration_save">Save</string>
+    <string name="widget_configuration_dialog_save_title">Lưu các Thay đổi?</string>
+    <string name="widget_configuration_dialog_save_content">Bạn có muốn lưu các thay đổi của bạn không?</string>
+    <string name="widget_configuration_dialog_save_save">Lưu</string>
+    <string name="widget_configuration_dialog_save_dont_save">Không lưu</string>
+    <string name="widget_configuration_save">Lưu</string>
     <string name="widget_configuration_error_dialog_title">Error</string>
     <string name="widget_configuration_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
     <string name="widget_configuration_error_dialog_close">Close</string>
@@ -957,7 +957,7 @@
     <string name="widget_configuration_preview_error">Lỗi tải bản xem trước, thử lại sau</string>
     <string name="widget_configuration_preview_loading">Đang tải bản xem trước…</string>
     <string name="widget_configuration_options_label">Options</string>
-    <string name="widget_configuration_location_devices_title">Các Tag đã chọn</string>
+    <string name="widget_configuration_location_devices_title">Các Tag đã Chọn</string>
     <string name="widget_configuration_location_devices_content">Chọn các Tag để hiển thị trong tiện ích này</string>
     <string name="widget_configuration_location_click_device_title">Launch Tag</string>
     <string name="widget_configuration_location_click_device_content">The Tag to display in uTag when this widget is clicked: %1s</string>
@@ -996,7 +996,7 @@
     <string name="backup_restore_not_included_title">Not Included in Backup</string>
     <string name="backup_restore_not_included_bull1">Tag Locations &amp; Location History*</string>
     <string name="backup_restore_not_included_bull2">Tag Lost Mode &amp; offline location encryption options*</string>
-    <string name="backup_restore_not_included_bull3">Your PIN &amp; Biometric Entry options</string>
+    <string name="backup_restore_not_included_bull3">Các tùy chọn mã PIN &amp; xác thực sinh trắc học của bạn</string>
     <string name="backup_restore_not_included_bull4">Widget configurations</string>
     <string name="backup_restore_not_included_footer">* These are stored on your Tag and Samsung servers, so will not be wiped if you reset uTag</string>
     <string name="backup_restore_close">Close</string>
@@ -1076,7 +1076,7 @@
     <string name="updates_check_for_updates_content">Tự động kiểm tra cập nhật hàng ngày và hiện thông báo nếu có bản cập nhật mới</string>
     <!-- Debug notification -->
     <string name="debug_error_notification_title">uTag Error Caught</string>
-    <string name="debug_error_notification_content">Tap to view &amp; save</string>
+    <string name="debug_error_notification_content">Chạm để xem &amp; lưu</string>
     <!-- Debug error viewer -->
     <string name="debug_error_dialog_title">Error Details</string>
     <string name="debug_error_dialog_close">Close</string>
