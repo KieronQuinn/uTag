@@ -66,7 +66,7 @@
     <string name="account_warning_content_footer"><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
     <string name="account_sign_in">Se connecter</string>
     <string name="account_error_title">Erreur</string>
-    <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
+    <string name="account_error_content">Une erreur s\'est produite lors du processus de connexion, veuillez vérifier votre connexion et réessayer</string>
     <string name="account_error_try_again">Réessayer</string>
     <string name="login_response_error_title">Erreur</string>
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
@@ -76,9 +76,9 @@
     <string name="settings_main_mod_error_title">Erreur</string>
     <string name="settings_main_mod_warning_title">Avertissement</string>
     <string name="settings_main_mod_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later. If it\'s no longer installed, follow the instructions on the Updates tab to reinstall it.</string>
-    <string name="settings_main_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions  to install the modded SmartThings from the Updates tab.</string>
-    <string name="settings_main_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Please follow the instructions to install it from the Updates tab to fix this.</string>
-    <string name="settings_main_mod_outdated_xposed_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
+    <string name="settings_main_mod_not_activated_xposed_content">Le mode uTag pour SmartThings n\'est pas activé. Si vous utilisez Xposed, vérifiez qu\'il est activé et redémarrez votre appareil. Si vous n\'utilisez pas Xposed, suivez les instructions pour installer la version modifiée de SmartThings à partir de l\'onglet Mises à jour.</string>
+    <string name="settings_main_mod_not_activated_patch_content">Le mod uTag pour SmartThings n\'est pas activé. Veuillez suivre les instructions pour l\'installer à partir de l\'onglet Mises à jour, pour corriger cela.</string>
+    <string name="settings_main_mod_outdated_xposed_content">Le mod uTag pour SmartThings est obsolète. La fonctionnalité uTag peut ne pas fonctionner correctement, ou pas du tout. Forcer l\'arrêt de SmartThings ou redémarrer votre appareil pour corriger cela.</string>
     <string name="settings_main_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from the Updates tab to fix this.</string>
     <string name="settings_main_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="settings_main_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the Updates tab to fix this.</string>
