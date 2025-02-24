@@ -57,11 +57,11 @@
     <!-- Sign in -->
     <string name="setup_account">Compte</string>
     <string name="account_title">Connectez-vous à SmartThings</string>
-    <string name="account_content">For uTag to be able to communicate with SmartThings, you must sign in with your Samsung account.</string>
+    <string name="account_content">Pour que uTag puisse communiquer avec SmartThings, vous devez vous connecter avec votre compte Samsung.</string>
     <string name="account_warning_title">Comment faire confiance à uTag ?</string>
     <string name="account_warning_content_header">Since uTag requires signing into your Samsung account, how do you know you can trust uTag?</string>
     <string name="account_warning_content_b1">uTag uses the official Samsung Login, in your browser (check the URL)</string>
-    <string name="account_warning_content_b2">Your password is not visible to nor can it be saved by uTag and access tokens are kept encrypted on device</string>
+    <string name="account_warning_content_b2">Votre mot de passe n\'est pas visible par et ne peut pas être sauvegardé par uTag et les jetons d\'accès sont conservés chiffrés sur l\'appareil</string>
     <string name="account_warning_content_b3">uTag est open source et vous pouvez inspecter le code de connexion sur GitHub</string>
     <string name="account_warning_content_footer"><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
     <string name="account_sign_in">Se connecter</string>
