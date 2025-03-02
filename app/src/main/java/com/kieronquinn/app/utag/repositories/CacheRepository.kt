@@ -105,11 +105,19 @@ class CacheRepositoryImpl(
     }
 
     private suspend fun CacheItemTable.getItem(type: CacheType, subType: String?): CacheItem? {
-        return withContext(Dispatchers.IO) {
-            get().firstOrNull {
-                it.type.toEnumOrNull<CacheType>() == type &&
-                        (subType == null || it.subType?.let { type -> String(type.bytes) } == subType)
+        return try {
+            withContext(Dispatchers.IO) {
+                get().firstOrNull {
+                    it.type.toEnumOrNull<CacheType>() == type &&
+                            (subType == null || it.subType?.let { type -> String(type.bytes) } == subType)
+                }
             }
+        }catch (e: IllegalStateException) {
+            //Cache has become corrupt, clear and start again
+            withContext(Dispatchers.IO) {
+                table.clear()
+            }
+            null
         }
     }
 

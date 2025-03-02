@@ -155,7 +155,12 @@ class UTagForegroundService: LifecycleService() {
 
         fun startIfNeeded(context: Context): Boolean {
             if(context.isServiceRunning(UTagForegroundService::class.java)) return false
-            context.startService(Intent(context, UTagForegroundService::class.java))
+            try {
+                context.startService(Intent(context, UTagForegroundService::class.java))
+            }catch (e: SecurityException) {
+                //Process is bad
+                return false
+            }
             return true
         }
 
@@ -1549,7 +1554,10 @@ class UTagForegroundService: LifecycleService() {
     private fun locateAndScheduleNext() = whenCreated {
         scheduleLocationAlarm()
         val results = ArrayList<SyncResult>()
-        tagConnections.values.iterator().forEach {
+        val tagConnectionIterator = synchronized(tagConnections) {
+            tagConnections.values.iterator()
+        }
+        tagConnectionIterator.forEach {
             it.syncLocationAndWait(false).also { result ->
                 results.add(result)
                 log("Sync result for ${it.deviceId}: $result")

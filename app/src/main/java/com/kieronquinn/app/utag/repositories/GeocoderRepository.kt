@@ -64,8 +64,13 @@ class GeocoderRepositoryImpl(
     private suspend fun getCachedAddressOrNull(location: LatLng): String? = databaseLock.withLock {
         withContext(Dispatchers.IO) {
             val hash = location.hashCode()
-            geocodedAddressTable.getAddress(hash)?.address?.bytes?.let {
-                String(it, Charsets.UTF_8)
+            try {
+                geocodedAddressTable.getAddress(hash)?.address?.bytes?.let {
+                    String(it, Charsets.UTF_8)
+                }
+            }catch (e: IllegalStateException) {
+                //Address is somehow null in database, just return null
+                null
             }
         }
     }

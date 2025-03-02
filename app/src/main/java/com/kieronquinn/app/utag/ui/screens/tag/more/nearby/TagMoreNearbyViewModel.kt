@@ -87,13 +87,14 @@ abstract class TagMoreNearbyViewModel: ViewModel() {
         data class Searching(val remainingSeconds: Long, val progress: Float): State()
         data class RSSI(
             val distance: Distance,
+            val progress: Float,
             val moveAroundText: MoveAroundText,
             val ringState: RingState = RingState.NotRinging
         ): State() {
-            enum class Distance(@StringRes val label: Int, val progress: Float) {
-                FAR(R.string.nearby_its_far_away, 0.333f),
-                NOT_FAR(R.string.nearby_its_not_far_from_here, 0.666f),
-                NEAR(R.string.nearby_its_near_you, 1f)
+            enum class Distance(@StringRes val label: Int) {
+                FAR(R.string.nearby_its_far_away),
+                NOT_FAR(R.string.nearby_its_not_far_from_here),
+                NEAR(R.string.nearby_its_near_you)
             }
             enum class MoveAroundText(@StringRes val label: Int) {
                 MOVE_AROUND(R.string.nearby_move_around),
@@ -487,6 +488,7 @@ class TagMoreNearbyViewModelImpl(
             this > -80 -> Distance.NOT_FAR
             else -> Distance.FAR
         }
+        val progress = toProgress()
         val moveAroundText = if(rssiPingCount > 10) {
             if(lastPingRssi > -50 && this > -50) {
                 MoveAroundText.MOVE_AROUND
@@ -504,7 +506,11 @@ class TagMoreNearbyViewModelImpl(
         }else lastMoveAroundText
         rssiPingCount++
         lastMoveAroundText = moveAroundText
-        return RSSI(distance, moveAroundText)
+        return RSSI(distance, progress, moveAroundText)
+    }
+
+    private fun Int.toProgress(): Float {
+        return ((100 + this) / 70f).coerceAtLeast(0f).coerceAtMost(1f)
     }
 
     override fun onResume() {

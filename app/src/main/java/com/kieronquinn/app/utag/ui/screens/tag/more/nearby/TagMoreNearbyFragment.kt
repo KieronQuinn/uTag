@@ -332,7 +332,7 @@ class TagMoreNearbyFragment: BoundFragment<FragmentTagMoreNearbyBinding>(Fragmen
     }
 
     private fun handleRssi(state: State.RSSI) = with(binding.nearbyRssi) {
-        nearbyRssiProgress.setProgress(state.distance.progress)
+        nearbyRssiProgress.setProgress(state.progress)
         nearbyRssiInstruction.setText(state.moveAroundText.label)
         nearbyRssiDistance.setText(state.distance.label)
         nearbyRssiRing.handleRing(state.ringState)
