@@ -13,9 +13,11 @@
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
-    <string name="setup_mod_info_content">Per lavorare con uTag e bypassare i requisiti di Samsung, è necessaria una versione modificata di SmartThings. uTag ti guiderà attraverso il download e l\'installazione.\n\n\<b>Nota:</b> Se il dispositivo è rootato con Xposed installato, assicurati che SmartThings sia configurato, abilita il modulo uTag Xposed, forza l\'arresto di SmartThings e torna a uTag per saltare questo passaggio.</string>
+    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
     <string name="setup_mod_info_action">Avvia il download della mod</string>
     <string name="setup_mod_oneui_title">OneUI Rilevato</string>
+    <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
+    <string name="setup_mod_oneui_continue">Continue</string>
     <string name="setup_mod_downloading">Download di SmartThings…</string>
     <string name="setup_mod_setting_up">Configurazione mod…</string>
     <string name="setup_mod_setting_up_subtitle">L\'operazione potrebbe richiedere alcuni istanti</string>
@@ -81,14 +83,14 @@
     <string name="settings_main_mod_newer_xposed_content">La mod uTag per SmartThings è più recente di uTag. Le funzionalità di uTag potrebbero non funzionare correttamente, o affatto. Forza l\'arresto di SmartThings o riavvia il tuo dispositivo per risolvere questo problema.</string>
     <string name="settings_main_mod_newer_patch_content">La mod uTag per SmartThings è più recente di uTag. Le funzionalità di uTag potrebbero non funzionare correttamente, o affatto. Aggiorna uTag dalla scheda Aggiornamenti per risolvere questo problema.</string>
     <string name="settings_main_xposed_error_content">La mod uTag per SmartThings non è installata. S stai utilizzando Xposed, assicurati che sia abilitato per SmartThings e riavvia il tuo dispositivo. Se non sei rootato, assicurati che la versione modificata sia installata.</string>
-    <string name="settings_main_smartthings_title">Stai cercando le opzioni per SmartTag?</string>
-    <string name="settings_main_smartthings_content">Impostazioni &amp; tracking per SmartTags sono disponibili dall\'app SmartThings</string>
+    <string name="settings_main_smartthings_title">Stai cercando le opzioni di SmartTag?</string>
+    <string name="settings_main_smartthings_content">Le impostazioni ed il monitoraggio degli SmartTag sono disponibili dall\'app SmartThings</string>
     <string name="settings_main_smartthings_open">Apri SmartThings</string>
     <string name="settings_main_permissions_title">Permessi Aggiuntivi Richiesti</string>
     <string name="settings_main_permissions_content">SmartThings richiede \"Consenti sempre\" per i permessi di posizione &amp; \"Dispositivi nelle vicinanze\"</string>
     <string name="settings_main_permissions_action">Concedi nelle impostazioni</string>
     <string name="settings_main_category_settings">Impostazioni</string>
-    <string name="settings_main_location_title">Posizione &amp; Ricerca</string>
+    <string name="settings_main_location_title">Posizione e Ricerca</string>
     <string name="settings_main_location_content">Aggiornamento posizione, opzioni ricerca nelle vicinanze, aggiornamento del widget, tag sconosciuti, rete e aree sicure</string>
     <string name="settings_main_map_title">Mappa</string>
     <string name="settings_main_map_content">Temi della mappa di Trova e Cronologia delle Posizioni &amp; opzioni</string>
@@ -101,7 +103,7 @@
     <string name="settings_main_wiki_title">Guarda il Wiki</string>
     <string name="settings_main_wiki_content">Informazioni &amp; guide su come usare uTag</string>
     <string name="settings_main_backup_restore_title">Backup &amp; Ripristino</string>
-    <string name="settings_main_backup_restore_content">Backup &amp; ripristina i dati di uTag da un file locale o dal cloud</string>
+    <string name="settings_main_backup_restore_content">Effettua il backup ed il ripristino dei dati di uTag da un file locale o dal cloud</string>
     <string name="settings_main_advanced_title">Avanzate</string>
     <string name="settings_main_advanced_content">Opzioni di lingua, modalità creatore di contenuti e analisi</string>
     <string name="settings_main_category_account">Account</string>
@@ -170,6 +172,9 @@
     <string name="settings_uts_list_title">Visualizza tag sconosciuti</string>
     <string name="settings_uts_list_info_title">Tag sconosciuti</string>
     <string name="settings_uts_list_info_content">I tag sconosciuti vengono archiviati per 24 ore. Se interagisci con essi, non viene inviata alcuna indicazione al loro proprietario.</string>
+    <string name="settings_uts_category_settings">Settings</string>
+    <string name="settings_uts_sensitivity_title">Sensitivity</string>
+    <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
     <string name="settings_uts_list_unknown_tag_title">Tag sconosciuto %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Ultimo accesso %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Ultimo accesso alle %1s</string>
@@ -195,6 +200,11 @@
     <string name="settings_uts_tag_error_dialog_title">Errore</string>
     <string name="settings_uts_tag_error_dialog_content">Si è verificato un errore durante il caricamento di questo tag sconosciuto. Riprova più tardi.</string>
     <string name="settings_uts_tag_error_dialog_close">Vicino</string>
+    <string name="settings_uts_sensitivity_very_high">Very High</string>
+    <string name="settings_uts_sensitivity_high">High</string>
+    <string name="settings_uts_sensitivity_normal">Normal</string>
+    <string name="settings_uts_sensitivity_low">Low</string>
+    <string name="settings_uts_sensitivity_very_low">Very Low</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Mostra posizione</string>
     <string name="settings_map_show_location_content">Mostra la tua posizione sulla mappa, ove disponibile</string>
@@ -210,6 +220,8 @@
     <string name="settings_map_theme_disabled">Non disponibile per questo tipo di mappa</string>
     <string name="settings_map_show_buildings_title">Mostra Edifici</string>
     <string name="settings_map_show_buildings_content">Mostra i contorni dell\'edificio, ove disponibili</string>
+    <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
+    <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Crittografia</string>
     <string name="settings_encryption_content">Imposta o reimposta un PIN per la crittografia della posizione Offline</string>
@@ -307,6 +319,7 @@
     <string name="map_allow_access_dialog_negative">Cancel</string>
     <string name="map_passive_mode_dialog_title">Passive Mode Enabled</string>
     <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
+    <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
     <string name="map_offline_dialog_title">Failed to Refresh</string>
     <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
     <!-- Tag Picker -->
@@ -1061,4 +1074,11 @@
     <string name="updates_category_options">Options</string>
     <string name="updates_check_for_updates_title">Automatically Check for Updates</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
+    <!-- Debug notification -->
+    <string name="debug_error_notification_title">uTag Error Caught</string>
+    <string name="debug_error_notification_content">Tap to view &amp; save</string>
+    <!-- Debug error viewer -->
+    <string name="debug_error_dialog_title">Error Details</string>
+    <string name="debug_error_dialog_close">Close</string>
+    <string name="debug_error_dialog_copy">Copy</string>
 </resources>

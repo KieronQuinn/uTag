@@ -13,9 +13,11 @@
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
-    <string name="setup_mod_info_content">Para funcionar con uTag y omitir los requisitos de Samsung, se requiere una versión modificada de SmartThings. uTag te guiará en la descarga e instalación.\n\n\<b>Nota:</b> Si tu dispositivo está rooteado con Xposed instalado, asegúrate de que SmartThings esté configurado, habilita el módulo Xposed de uTag, fuerza la detención de SmartThings y regresa a uTag para omitir este paso.</string>
+    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
     <string name="setup_mod_info_action">Iniciar descarga del mod</string>
     <string name="setup_mod_oneui_title">OneUI detectado</string>
+    <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
+    <string name="setup_mod_oneui_continue">Continue</string>
     <string name="setup_mod_downloading">Descargando SmartThings…</string>
     <string name="setup_mod_setting_up">Configurando mod…</string>
     <string name="setup_mod_setting_up_subtitle">Esto puede tardar unos segundos</string>
@@ -127,7 +129,7 @@
     <string name="settings_location_location_safe_area_title">Áreas seguras</string>
     <string name="settings_location_location_safe_area_content">Agrega y configura áreas seguras para tus Tags.</string>
     <string name="settings_location_category_chaser_title">Find my Everything Network</string>
-    <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
+    <string name="settings_location_chaser_title">Contribuir a Find my Everything Network</string>
     <string name="settings_location_chaser_content">Send location updates for detected nearby Tags to Find my Everything network</string>
     <string name="settings_location_chaser_disabled">Not available on this device</string>
     <string name="settings_location_category_uts_title">Unknown Tags</string>
@@ -170,6 +172,9 @@
     <string name="settings_uts_list_title">View Unknown Tags</string>
     <string name="settings_uts_list_info_title">Unknown Tags</string>
     <string name="settings_uts_list_info_content">Unknown Tags are stored for 24 hours. If you interact with them, no indication is sent to their owner.</string>
+    <string name="settings_uts_category_settings">Settings</string>
+    <string name="settings_uts_sensitivity_title">Sensitivity</string>
+    <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
     <string name="settings_uts_list_unknown_tag_title">Unknown Tag %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Last seen %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Last seen at %1s</string>
@@ -195,6 +200,11 @@
     <string name="settings_uts_tag_error_dialog_title">Error</string>
     <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
     <string name="settings_uts_tag_error_dialog_close">Close</string>
+    <string name="settings_uts_sensitivity_very_high">Very High</string>
+    <string name="settings_uts_sensitivity_high">High</string>
+    <string name="settings_uts_sensitivity_normal">Normal</string>
+    <string name="settings_uts_sensitivity_low">Low</string>
+    <string name="settings_uts_sensitivity_very_low">Very Low</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Show Location</string>
     <string name="settings_map_show_location_content">Show your location on the map, where available</string>
@@ -210,6 +220,8 @@
     <string name="settings_map_theme_disabled">Not available for this map type</string>
     <string name="settings_map_show_buildings_title">Show Buildings</string>
     <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
+    <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
+    <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Encryption</string>
     <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
@@ -307,6 +319,7 @@
     <string name="map_allow_access_dialog_negative">Cancel</string>
     <string name="map_passive_mode_dialog_title">Passive Mode Enabled</string>
     <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
+    <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
     <string name="map_offline_dialog_title">Failed to Refresh</string>
     <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
     <!-- Tag Picker -->
@@ -1061,4 +1074,11 @@
     <string name="updates_category_options">Options</string>
     <string name="updates_check_for_updates_title">Automatically Check for Updates</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
+    <!-- Debug notification -->
+    <string name="debug_error_notification_title">uTag Error Caught</string>
+    <string name="debug_error_notification_content">Tap to view &amp; save</string>
+    <!-- Debug error viewer -->
+    <string name="debug_error_dialog_title">Error Details</string>
+    <string name="debug_error_dialog_close">Close</string>
+    <string name="debug_error_dialog_copy">Copy</string>
 </resources>
