@@ -132,9 +132,13 @@ abstract class BaseTagConnection(
     }
 
     suspend fun syncLocationAndWait(onDemand: Boolean): SyncResult {
+        var hasResumed = false
         return suspendCoroutine { resume ->
             syncLocation(onDemand) {
-                resume.resume(it)
+                if(!hasResumed) {
+                    hasResumed = true
+                    resume.resume(it)
+                }
             }
         }
     }

@@ -82,6 +82,10 @@ fun reportRetrofitError(
     url: String? = null,
     code: Int? = null
 ) {
+    //Ignore auth errors
+    if(code in 400..403) return
+    //Ignore errors from cancelled coroutines
+    if(exception?.javaClass?.simpleName == "ChildCancelledException") return
     val inException = exception ?: Throwable("$url returned $code")
     val userVisibleError = exception?.toString() ?: if(url != null && code != null) {
         "$url returned $code:\n\n$error"
