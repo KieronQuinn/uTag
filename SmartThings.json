@@ -1,9 +1,9 @@
 {
-   "version": "1.0.1",
-   "version_code": 101,
+   "version": "1.0.2",
+   "version_code": 102,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Disabled some more checks to hopefully improve the adding SmartTags experience\n- Experimental OneUI support\n- Fixed login issues on Samsung devices not running OneUI\n- Fixed Google Maps not working in SmartThings",
-   "file_size": 128871137
+   "release_notes": "- Updated SmartThings base to 1.8.28.21",
+   "file_size": 128871133
 }
