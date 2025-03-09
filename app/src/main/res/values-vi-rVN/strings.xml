@@ -220,8 +220,8 @@
     <string name="settings_map_theme_disabled">Not available for this map type</string>
     <string name="settings_map_show_buildings_title">Hiển thị Tòa nhà</string>
     <string name="settings_map_show_buildings_content">Hiển thị đường viền tòa nhà, nếu có</string>
-    <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
-    <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
+    <string name="settings_map_swap_location_history_title">Hiển thị Tìm kiếm Gần đây</string>
+    <string name="settings_map_swap_location_history_content">Hiển thị nút Tìm kiếm Gần đây trên bản đồ thay vì Lịch sử Vị trí. Khi được bật, Lịch sử Vị trí có thể được truy cập từ màn hình \"Thêm\".</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Mã hóa</string>
     <string name="settings_encryption_content">Đặt hoặc đặt lại một mã PIN để mã hóa vị trí ngoại tuyến</string>
@@ -338,9 +338,9 @@
     <string name="tag_picker_agreement_required">Agreement required</string>
     <string name="tag_picker_not_allowed">Not allowed</string>
     <string name="tag_picker_shared_and_selected">Tag của %1s • Đã chọn</string>
-    <string name="tag_picker_error_dialog_title">Error</string>
+    <string name="tag_picker_error_dialog_title">Lỗi</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
-    <string name="tag_picker_error_dialog_close">Close</string>
+    <string name="tag_picker_error_dialog_close">Đóng</string>
     <string name="tag_picker_error_toast">An error occurred, please try again</string>
     <string name="tag_picker_menu_select_all">Favourite all</string>
     <string name="tag_picker_menu_select_none">Unfavourite all</string>
@@ -421,9 +421,9 @@
     <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
     <string name="tag_more_passive_mode_content_enabled">Bật</string>
     <string name="tag_more_battery">Battery</string>
-    <string name="tag_more_error_title">Error</string>
+    <string name="tag_more_error_title">Lỗi</string>
     <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
-    <string name="tag_more_error_close">Close</string>
+    <string name="tag_more_error_close">Đóng</string>
     <string name="tag_more_error_toast">An error occurred, please try again</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
     <string name="tag_more_end_to_end_title">Mã hóa vị trí ngoại tuyến</string>
@@ -459,7 +459,7 @@
     <string name="tag_more_find_device_vibrate_content">Vibrate device when ringing to make more noise</string>
     <string name="tag_more_find_device_delay_title">Delay Before Ringing</string>
     <string name="tag_more_find_device_delay_content">Wait 5 seconds before starting to ring, if you accidentally trigger Find my Device this option allows you to cancel before noise is made.</string>
-    <string name="tag_more_find_device_volume_title">Volume</string>
+    <string name="tag_more_find_device_volume_title">Âm lượng</string>
     <string name="tag_more_find_device_volume_content">The volume your device will ring at.\n\n<b>Warning:</b> Setting a low volume &amp; disabling vibration may make your device ringing hard to hear!</string>
     <string name="tag_more_find_device_footer_title">Tìm Thiết bị của Tôi</string>
     <string name="tag_more_find_device_footer_content">When you double press the button on %1s, your phone will start ringing for 60 seconds, or until stopped.</string>
@@ -498,9 +498,9 @@
     <string name="tag_more_automation_footer_bull5"><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
     <string name="tag_more_automation_category_options">Options</string>
     <string name="tag_more_automation_volume">Button Volume</string>
-    <string name="tag_more_automation_error_dialog_title">Error</string>
+    <string name="tag_more_automation_error_dialog_title">Lỗi</string>
     <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
-    <string name="tag_more_automation_error_dialog_close">Close</string>
+    <string name="tag_more_automation_error_dialog_close">Đóng</string>
     <string name="tag_more_automation_error_toast">An error occurred, please try again</string>
     <string name="tag_more_automation_permission_title">Additional Setup</string>
     <string name="tag_more_automation_permission_allow_title">Allow Permission</string>
@@ -517,18 +517,18 @@
     <string name="tag_more_automation_type_shortcut_content">Start an app\'s shortcut when this automation is invoked.</string>
     <string name="tag_more_automation_type_tasker_title">Tasker Task</string>
     <string name="tag_more_automation_type_tasker_content">Start a Tasker task when this automation is invoked.</string>
-    <string name="tag_more_automation_type_tasker_dialog_title">Error</string>
+    <string name="tag_more_automation_type_tasker_dialog_title">Lỗi</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
-    <string name="tag_more_automation_type_tasker_dialog_close">Close</string>
+    <string name="tag_more_automation_type_tasker_dialog_close">Đóng</string>
     <string name="button_volume_level_off">Muted</string>
     <string name="button_volume_level_low">Low</string>
     <string name="button_volume_level_high">High</string>
     <!-- More Battery Dialog -->
-    <string name="tag_more_battery_dialog_title">Battery information</string>
+    <string name="tag_more_battery_dialog_title">Thông tin pin</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
-    <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
-    <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
-    <string name="tag_more_battery_dialog_very_low">• Very Low: 0–5%</string>
+    <string name="tag_more_battery_dialog_sufficient">• Đủ dùng: 16–100%</string>
+    <string name="tag_more_battery_dialog_low">• Thấp: 6–15%</string>
+    <string name="tag_more_battery_dialog_very_low">• Rất thấp: 0–5%</string>
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
@@ -569,7 +569,7 @@
     <string name="lost_mode_settings_custom_url_set_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_set_summary">Set a custom URL to open when this Tag is tapped on another device. <b>Make sure you have an external backup of your original URL before using this.</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Lỗi</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Warning</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
@@ -620,9 +620,9 @@
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
     <string name="privacy_notice_agree">Agree</string>
     <string name="privacy_notice_disagree">Disagree</string>
-    <string name="privacy_notice_error_dialog_title">Error</string>
+    <string name="privacy_notice_error_dialog_title">Lỗi</string>
     <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
-    <string name="privacy_notice_error_dialog_close">Close</string>
+    <string name="privacy_notice_error_dialog_close">Đóng</string>
     <!-- FME opt-in -->
     <string name="fme_opt_in_title">Find my Everything Network</string>
     <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
