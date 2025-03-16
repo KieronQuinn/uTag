@@ -134,6 +134,7 @@ class Xposed: IXposedHookLoadPackage {
         const val ACTION_SMARTTHINGS_PAUSED = "$APPLICATION_ID.action.SMARTTHINGS_PAUSED"
         const val ACTION_SMARTTHINGS_RESUMED = "$APPLICATION_ID.action.SMARTTHINGS_RESUMED"
         const val ACTION_HOOKING_FINISHED = "$APPLICATION_ID.action.HOOKING_FINISHED"
+        const val ACTION_ONECONNECT_MESSAGE = "$APPLICATION_ID.action.ONECONNECT_MESSAGE"
 
         const val CAPSULE_PROVIDER_RESULT = "result"
         const val CAPSULE_PROVIDER_EXTRA_INTENT = "intent"
@@ -153,6 +154,7 @@ class Xposed: IXposedHookLoadPackage {
         const val EXTRA_RSSI = "rssi"
         const val EXTRA_CHARACTERISTICS = "characteristics"
         const val EXTRA_VALUE = "value"
+        const val EXTRA_INTENT = "intent"
         const val EXTRA_RESULT = "result"
 
         const val AUTHORITY_FMM = "$APPLICATION_ID.fakefmm"
@@ -179,7 +181,8 @@ class Xposed: IXposedHookLoadPackage {
             SHARED_PREF_KEY_PUBLISH_DEVICE_STATUS_METHOD("publish_device_status_method"),
             SHARED_PREF_KEY_SCAN_CALLBACK_CLASS("scan_callback_class"),
             SHARED_PREF_KEY_DISCONNECT_METHOD("disconnect_method"),
-            SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD("force_disconnect_method");
+            SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD("force_disconnect_method"),
+            SHARED_PREF_KEY_FIREBASE_PUSH_INTENT("firebase_push_intent"),;
 
             fun getKey(version: Long): String {
                 return "${key}_$version"
@@ -278,6 +281,7 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookScanCallback(this, packageInfo)
         lpparam.hookDebug(this, packageInfo)
         lpparam.hookCheckDisconnect(this, packageInfo)
+        lpparam.hookOneConnectPushNotifications(this, packageInfo)
         lpparam.hookSamsungAccount()
         if(requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
@@ -306,6 +310,47 @@ class Xposed: IXposedHookLoadPackage {
                         val info = param.result as ApplicationInfo
                         info.flags = info.flags or ApplicationInfo.FLAG_DEBUGGABLE
                     }
+                }
+            }
+        )
+    }
+
+    private fun LoadPackageParam.hookOneConnectPushNotifications(context: Context, packageInfo: PackageInfo) {
+        val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_FIREBASE_PUSH_INTENT)
+        val method = if(savedMethod == null) {
+            val classFilter = ClassFilter.Builder()
+                .setClasses("com.google.firebase.messaging.FirebaseMessagingService")
+                .build()
+            val methodFilter = MethodFilter.Builder()
+                .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
+                .setReferenceFilter { pool: ReferencePool ->
+                    pool.contains("FirebaseApp has not being initialized. Device might be in direct boot mode. Skip exporting delivery metrics to Big Query")
+                }
+                .setModifiers(Modifier.PUBLIC)
+                .build()
+            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
+            dexplore.findMethod(classFilter, methodFilter)?.also {
+                saveMethod(SharedPrefsKey.SHARED_PREF_KEY_FIREBASE_PUSH_INTENT, it)
+            }
+        }else{
+            savedMethod
+        }?.loadMethod(classLoader) ?: run {
+            context.logException("uTag: Failed to hook oneconnect push method (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
+            return
+        }
+        XposedBridge.hookMethod(
+            method,
+            object : XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam?) {
+                    super.beforeHookedMethod(param)
+                    val intent = param?.args?.get(0) as? Intent ?: return
+                    val context = param.thisObject as Service
+                    val broadcastIntent = Intent(ACTION_ONECONNECT_MESSAGE).apply {
+                        `package` = APPLICATION_ID
+                        applySecurity(context)
+                        putExtra(EXTRA_INTENT, intent)
+                    }
+                    context.sendBroadcast(broadcastIntent)
                 }
             }
         )

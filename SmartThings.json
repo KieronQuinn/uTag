@@ -1,9 +1,9 @@
 {
-   "version": "1.0.2",
-   "version_code": 102,
+   "version": "1.0.3",
+   "version_code": 103,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated SmartThings base to 1.8.28.21",
-   "file_size": 128871133
+   "release_notes": "- Android 16 Beta 3 support\n- Preparations for Samsung Find support",
+   "file_size": 129620701
 }
