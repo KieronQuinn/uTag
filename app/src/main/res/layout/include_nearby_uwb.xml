@@ -202,7 +202,7 @@
                 layout="@layout/include_nearby_ring"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="bottom" />
+                android:layout_gravity="bottom|start" />
 
             <ImageButton
                 android:id="@+id/nearby_uwb_close"

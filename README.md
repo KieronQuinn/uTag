@@ -18,6 +18,9 @@ Installing uTag is very simple. Just download the latest release APK from the
 [releases](https://github.com/KieronQuinn/uTag/releases) page, install it and follow the instructions for setup. uTag will download the latest SmartThings mod, install it and guide you through setup. You will be required to sign into your Samsung Account, which is required to access
 Samsung APIs.
 
+## Frequently Asked Questions
+FAQs can be found [here](https://github.com/KieronQuinn/uTag/blob/main/app/src/main/res/raw/faq.md). They are also available in the app, from the uTag settings.
+
 ## Content Creator Mode
 
 If you're a content creator, and you want to showcase uTag with images or video, you should enable Content Creator Mode in the Advanced settings after setup. This option uses a pre-defined set of fake locations (shown in the screenshots below), while allowing otherwise normal use of the Tags. Locations sent to the network are not impacted.
