@@ -69,6 +69,16 @@ Very little. uTag keeps Bluetooth Low Energy scans at low power, and generally u
 (< 1%) amount of battery. Please note that if you have location refreshes set to a high frequency,
 this may use more battery.
 
+# Adding a Tag in SmartThings is not working
+This is a known issue in SmartThings that uTag **cannot fix**. There are several fixes that may work:
+- If you have an old Samsung device, sign in using the same Samsung account and add it to that. 
+The Tag will then be synced on the account.
+- If you are scanning the QR code from the box, make sure you're using the right one. There's no 
+feedback for trying to add the wrong Tag's QR code.
+- Clear SmartThings cache & force stop it (**do not** clear data), then try adding again.
+- Keep trying until it works, repeating the force stop & cache clear step as required - this can
+sometimes take a few attempts. It will work eventually.
+
 # A Tag won't connect even though it's nearby
 There's a few things that could cause this:
 - Make sure Bluetooth is enabled
