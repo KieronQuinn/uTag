@@ -106,11 +106,11 @@
     <string name="settings_main_backup_restore_content">Guardar &amp; restaurar os dados da uTag num ficheiro local ou na internet</string>
     <string name="settings_main_advanced_title">Avançado</string>
     <string name="settings_main_advanced_content">Idioma, modo de criador de conteúdos e opções de estatísticas</string>
-    <string name="settings_main_category_account">Account</string>
-    <string name="settings_main_category_samsung_account_title">Samsung Account</string>
-    <string name="settings_main_category_samsung_account_content">Signed in as %1s (%1s)</string>
-    <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
-    <string name="settings_main_sign_out_title">Sign out</string>
+    <string name="settings_main_category_account">Conta</string>
+    <string name="settings_main_category_samsung_account_title">Conta Samsung</string>
+    <string name="settings_main_category_samsung_account_content">Conectado como %1s (%1s)</string>
+    <string name="settings_main_category_samsung_account_content_error">Erro ao obter detalhes da conta</string>
+    <string name="settings_main_sign_out_title">Terminar sessão</string>
     <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
     <string name="settings_main_logout_error">An error occurred, check your connection and try again</string>
     <!-- Settings > Location -->
