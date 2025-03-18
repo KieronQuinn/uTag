@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="xposed_description">uTag core module: disables device checks and enables features in SmartThings</string>
+    <string name="xposed_description">Módulo principal da uTag: desativa as verificações do dispositivo e ativa as funcionalidades na SmartThings</string>
 </resources>
