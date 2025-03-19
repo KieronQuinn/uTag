@@ -110,7 +110,7 @@
     <string name="settings_main_category_samsung_account_title">Samsung Account</string>
     <string name="settings_main_category_samsung_account_content">Signed in as %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
-    <string name="settings_main_sign_out_title">Sign out</string>
+    <string name="settings_main_sign_out_title">登出</string>
     <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
     <string name="settings_main_logout_error">An error occurred, check your connection and try again</string>
     <!-- Settings > Location -->
@@ -265,12 +265,12 @@
     <string name="settings_content_creator_does_bull7"><b>Important:</b> For safety reasons, Unknown Tag Scan results always display real locations, even with Content Creator Mode enabled.</string>
     <string name="settings_content_creator_does_footer">You can disable Content Creator Mode at any time, with no data loss and no missed location updates.</string>
     <!-- Map -->
-    <string name="map_error_title">Error</string>
-    <string name="map_warning_title">Warning</string>
+    <string name="map_error_title">錯誤</string>
+    <string name="map_warning_title">警告</string>
     <string name="map_error_content">An error occurred, please try again later (%1d)</string>
     <string name="map_error_no_tags_content">You don\'t have any Tags available on this account</string>
-    <string name="map_error_close">Close</string>
-    <string name="map_error_open_settings">Open Settings</string>
+    <string name="map_error_close">關閉</string>
+    <string name="map_error_open_settings">打開設置</string>
     <string name="map_error_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later.</string>
     <string name="map_error_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions to install the modded SmartThings from uTag\'s settings.</string>
     <string name="map_error_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Follow the instructions to install the modded SmartThings from uTag\'s settings to fix this.</string>
@@ -312,11 +312,11 @@
     <string name="map_searching_dialog_title">Failed to connect to Tag</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
-    <string name="map_searching_dialog_cancel">Close</string>
+    <string name="map_searching_dialog_cancel">關閉</string>
     <string name="map_allow_access_dialog_title">Share location?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
     <string name="map_allow_access_dialog_positive">Share</string>
-    <string name="map_allow_access_dialog_negative">Cancel</string>
+    <string name="map_allow_access_dialog_negative">取消</string>
     <string name="map_passive_mode_dialog_title">Passive Mode Enabled</string>
     <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
     <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
@@ -519,10 +519,10 @@
     <string name="tag_more_automation_type_tasker_content">Start a Tasker task when this automation is invoked.</string>
     <string name="tag_more_automation_type_tasker_dialog_title">Error</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
-    <string name="tag_more_automation_type_tasker_dialog_close">Close</string>
+    <string name="tag_more_automation_type_tasker_dialog_close">關閉</string>
     <string name="button_volume_level_off">Muted</string>
-    <string name="button_volume_level_low">Low</string>
-    <string name="button_volume_level_high">High</string>
+    <string name="button_volume_level_low">低</string>
+    <string name="button_volume_level_high">高</string>
     <!-- More Battery Dialog -->
     <string name="tag_more_battery_dialog_title">Battery information</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
@@ -548,7 +548,7 @@
     <string name="lost_mode_settings_phone_number">Contact (optional)</string>
     <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
     <string name="lost_mode_settings_message">Message</string>
-    <string name="lost_mode_settings_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_error_dialog_title">錯誤</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
     <string name="lost_mode_settings_error_dialog_close">Close</string>
     <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
@@ -563,19 +563,19 @@
     <string name="lost_mode_settings_custom_url_warning_content">Setting a custom URL overwrites the original URL which is stored on the Tag. uTag will try to keep the original URL backed up, however <b>if you edit or turn off Lost Mode using the SmartThings app, it will be lost permanently</b>. You are advised to keep a second, external copy of this original URL stored safely elsewhere.</string>
     <string name="lost_mode_settings_custom_url_warning_action">Copy original URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_label">%1s\'s original URL</string>
-    <string name="lost_mode_settings_custom_url_warning_action_toast">Copied to clipboard</string>
+    <string name="lost_mode_settings_custom_url_warning_action_toast">已複製到剪貼簿</string>
     <string name="lost_mode_settings_custom_url_lost_title">Important Warning</string>
     <string name="lost_mode_settings_custom_url_lost_content">Lost Mode has been modified using SmartThings while a custom URL was set. Your original Lost Mode URL has been lost. To fix this and allow usage of normal Lost Mode again, set the custom URL back to your original URL from your external backup. If you don\'t have it backed up, you will need to factory reset your Tag.</string>
-    <string name="lost_mode_settings_custom_url_set_title">Custom URL</string>
+    <string name="lost_mode_settings_custom_url_set_title">自訂 URL</string>
     <string name="lost_mode_settings_custom_url_set_summary">Set a custom URL to open when this Tag is tapped on another device. <b>Make sure you have an external backup of your original URL before using this.</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_title">錯誤</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Warning</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">警告</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirm</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">確認</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
-    <string name="lost_mode_settings_custom_url_invalid_url_toast">Invalid URL</string>
+    <string name="lost_mode_settings_custom_url_invalid_url_toast">無效的 URL</string>
     <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
     <string name="lost_mode_settings_custom_url_footer_content">Setting a custom URL allows you to fully customise what happens when a device with NFC enabled is tapped on your Tag. It can be set to any URL, much like a writable NFC tag.\n\n<b>Important:</b> You can only write a custom URL when the Tag is connected, so ideally this should be a page you can edit to add contact details to later if required.</string>
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
