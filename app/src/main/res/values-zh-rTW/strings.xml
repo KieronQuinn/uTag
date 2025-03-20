@@ -186,7 +186,7 @@
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">清除</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">取消</string>
     <string name="settings_uts_tag_title">檢測到附近的未知標籤</string>
-    <string name="settings_uts_tag_content">發現有一個智能標籤與您一起移動。該標籤的擁有者可能正在使用它來跟踪您的位置。在 SmartThings 中運行未知標籤掃描（<b>選單 &amp;gt; 設置 &amp;gt; 搜尋附近的未知標籤</b>）以驗證它是否仍在附近並定位它。如果您不信任該標籤，可以移除其電池以停止其共享位置。</string>
+    <string name="settings_uts_tag_content">發現有一個智能標籤與您一起移動。該標籤的擁有者可能正在使用它來跟踪您的位置。在 SmartThings 中運行未知標籤掃描（<b>選單 &gt; 設置 &gt; 搜尋附近的未知標籤</b>）以驗證它是否仍在附近並定位它。如果您不信任該標籤，可以移除其電池以停止其共享位置。</string>
     <string name="settings_uts_tag_first">首次見於 %1s</string>
     <string name="settings_uts_tag_last">最後見於 %1s</string>
     <string name="settings_uts_tag_last_at">最後見於 %1s</string>
@@ -278,7 +278,7 @@
     <string name="map_warning_mod_outdated_patch_content">uTag 的 SmartThings 模組已過時。uTag 功能可能無法正常運作，甚至完全無法運作。請從 uTag 的設置中更新 SmartThings 以解決此問題。</string>
     <string name="map_warning_mod_newer_xposed_content">uTag 的 SmartThings 模組比 uTag 新。uTag 功能可能無法正常運作，甚至完全無法運作。請強制停止 SmartThings 或重新啟動設備以解決此問題。</string>
     <string name="map_warning_mod_newer_patch_content">uTag 的 SmartThings 模組比 uTag 新。uTag 功能可能無法正常工作，或根本無法工作。請從設置中更新 uTag 以解決此問題。</string>
-    <string name="map_error_permissions_content">SmartThings 需要「始終允許」位置權限，請在設置中授予以繼續。</string>
+    <string name="map_error_permissions_content">SmartThings 需要「始終允許」位置權限，請在設置中授予以繼續</string>
     <string name="map_error_permissions_button">打開設置</string>
     <string name="map_network_error">發生網絡錯誤，請稍後再試</string>
     <string name="map_location_error">無法獲取您的位置，請嘗試四處移動</string>
