@@ -63,7 +63,7 @@
     <string name="account_warning_content_b1">uTag 使用官方的 Samsung 登入，在您的瀏覽器中（檢查網址）</string>
     <string name="account_warning_content_b2">您的密碼不會被 uTag 可見，且無法被保存，訪問令牌會加密保存在設備上</string>
     <string name="account_warning_content_b3">uTag 是開源的，您可以檢查 GitHub 上的登入代碼</string>
-    <string name="account_warning_content_footer"><b>請注意，uTag 的官方版本僅在 GitHub 和 APKMirror 可用。如果您從其他來源安裝了 uTag，則無法保證登入安全性，您應該從合法來源重新安裝 uTag。</b><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
+    <string name="account_warning_content_footer"><b>請注意，uTag 的官方版本僅在 GitHub 和 APKMirror 可用。如果您從其他來源安裝了 uTag，則無法保證登入安全性，您應該從合法來源重新安裝 uTag。</b></string>
     <string name="account_sign_in">登入</string>
     <string name="account_error_title">錯誤</string>
     <string name="account_error_content">啟動登入過程時發生錯誤，請檢查您的連接並重試</string>
@@ -194,7 +194,7 @@
     <string name="settings_uts_tag_open">打開 SmartThings</string>
     <string name="settings_uts_tag_safe">此標籤是安全的</string>
     <string name="settings_uts_tag_safe_dialog_title">標記為安全？</string>
-    <string name="settings_uts_tag_safe_dialog_content">這將將該標籤隱藏於未知標籤列表中，直到其 ID 改變。這會在每 24 小時後發生，或者如果電池被移除並重新插入，或如果標籤被重置。\n\n<b>注意：</b> 這不會防止其在 SmartThings 的手動未知標籤掃描中出現。<b>Note:</b> This does not prevent it from appearing in manual unknown Tag scans in SmartThings.</string>
+    <string name="settings_uts_tag_safe_dialog_content">這將將該標籤隱藏於未知標籤列表中，直到其 ID 改變。這會在每 24 小時後發生，或者如果電池被移除並重新插入，或如果標籤被重置。\n\n<b>注意：</b> 這不會防止其在 SmartThings 的手動未知標籤掃描中出現。</string>
     <string name="settings_uts_tag_safe_dialog_positive">標記為安全</string>
     <string name="settings_uts_tag_safe_dialog_negative">取消</string>
     <string name="settings_uts_tag_error_dialog_title">錯誤</string>
@@ -467,7 +467,7 @@
     <string name="tag_more_find_device_footer_bull2">無論\"勿打擾\"是否啟用，您的設備都將發出聲音。</string>
     <string name="tag_more_find_device_footer_bull3">您的設備將從其揚聲器中發出聲音，即使耳機或其他揚聲器設備已連接。</string>
     <string name="tag_more_find_device_footer_bull4">如果您的設備的螢幕在響鈴時關閉，螢幕將亮起並顯示全螢幕訊息，直至消除。</string>
-    <string name="tag_more_find_device_footer_bull5"><b>如果多個設備連接到此標籤，只有第一台將接收按鈕按下 - 此選項在標籤僅連接到此設備且不被共享時效果最佳。</b><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
+    <string name="tag_more_find_device_footer_bull5"><b>如果多個設備連接到此標籤，只有第一台將接收按鈕按下 - 此選項在標籤僅連接到此設備且不被共享時效果最佳。</b></string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_title">共享標籤警告</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_content">此標籤與其他用戶共享。尋找我的設備選項僅將按鈕按下事件發送到連接至標籤的第一個設備，如果同時連接多個設備。如果您與其他家庭成員共享此標籤，按下按鈕可能會響鈴錯誤的設備，或者根本沒有響鈴。因此，這個選項最適合未共享的標籤，如果您擁有一個。</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">明白</string>
@@ -490,7 +490,7 @@
     <string name="tag_more_automation_held_content_error">需要額外許可</string>
     <string name="tag_more_automation_held_content_disabled">禁用 SmartThings 中的「長按」自動化動作以使用此選項</string>
     <string name="tag_more_automation_footer_title">自訂自動化</string>
-    <string name="tag_more_automation_footer_content">此選項允許您設置按下和長按 %1s 按鈕的自定義動作。<b>這是 SmartThings 內建選項的替代方案</b>，並有一些限制：<b>This is alternative to the built-in options in SmartThings</b>, and has some limitations:</string>
+    <string name="tag_more_automation_footer_content">此選項允許您設置按下和長按 %1s 按鈕的自定義動作。<b>這是 SmartThings 內建選項的替代方案</b>，並有一些限制：</string>
     <string name="tag_more_automation_footer_bull1">此選項僅在您的設備連接到您的標籤時工作。</string>
     <string name="tag_more_automation_footer_bull2">您必須在 SmartThings 中禁用衝突的自動化以使用自訂自動化。</string>
     <string name="tag_more_automation_footer_bull3"><b>在 SmartThings 中打開標籤的“自動化”頁面可能會導致這些自訂自動化停止工作。如果發生這種情況，請返回此頁面以重新同步它們。</b></string>
@@ -560,14 +560,14 @@
     <string name="lost_mode_settings_custom_url_content_disconnected">連接到您的標籤以使用此選項</string>
     <string name="lost_mode_settings_custom_url_content_passive">禁用被動模式以使用此選項</string>
     <string name="lost_mode_settings_custom_url_warning_title">重要警告</string>
-    <string name="lost_mode_settings_custom_url_warning_content">設定自訂 URL 會覆蓋標籤上存儲的原始 URL。uTag 會嘗試保留原始 URL 的備份，然而<b>如果您使用 SmartThings 應用程序編輯或關閉失蹤模式，它將永久丟失</b>。建議您在安全的地方保留這個原始 URL 的第二份外部備份。<b>if you edit or turn off Lost Mode using the SmartThings app, it will be lost permanently</b>. You are advised to keep a second, external copy of this original URL stored safely elsewhere.</string>
+    <string name="lost_mode_settings_custom_url_warning_content">設定自訂 URL 會覆蓋標籤上存儲的原始 URL。uTag 會嘗試保留原始 URL 的備份，然而<b>如果您使用 SmartThings 應用程序編輯或關閉失蹤模式，它將永久丟失</b>。建議您在安全的地方保留這個原始 URL 的第二份外部備份。</string>
     <string name="lost_mode_settings_custom_url_warning_action">複製原始 URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_label">%1s 的原始 URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_toast">已複製到剪貼板</string>
     <string name="lost_mode_settings_custom_url_lost_title">重要警告</string>
     <string name="lost_mode_settings_custom_url_lost_content">當自訂 URL 設置時，失蹤模式已透過 SmartThings 進行修改。您的原始失蹤模式 URL 已丟失。要修復此問題並重新使用正常的失蹤模式，請從您的外部備份中將自訂 URL 設置回原始 URL。如果您沒有備份，您將需要恢復出廠設定標籤。</string>
     <string name="lost_mode_settings_custom_url_set_title">自訂 URL</string>
-    <string name="lost_mode_settings_custom_url_set_summary">設定一個自訂 URL，當該標籤在另一個裝置上被點擊時打開。<b>在使用之前，請確保您有原始 URL 的外部備份。</b><b>Make sure you have an external backup of your original URL before using this.</b></string>
+    <string name="lost_mode_settings_custom_url_set_summary">設定一個自訂 URL，當該標籤在另一個裝置上被點擊時打開。<b>在使用之前，請確保您有原始 URL 的外部備份。</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">輸入自訂 URL，或者輸入原始 URL 以重設</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_title">錯誤</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">此失落訊息網址屬於另一個標籤。如果您嘗試重設您的標籤的網址，請粘貼該標籤的正確原始網址。</string>
