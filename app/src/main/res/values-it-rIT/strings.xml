@@ -283,7 +283,7 @@
     <string name="map_network_error">A network error occurred, please try again later</string>
     <string name="map_location_error">Failed to get your location, try moving around</string>
     <string name="map_connection_error_title">Connection Error</string>
-    <string name="map_connection_error_content">uTag couldn\'t connect to %1s as the maximum number of connections have been reached. Disconnect another device which is connected to it, if you think this is incorrect, try rebooting your device.</string>
+    <string name="map_connection_error_content">uTag non è riuscito a connettersi a %1s poiché è stato raggiunto il numero massimo di connessioni. Disconnetti un altro dispositivo collegato ad esso, se pensi che non sia corretto, prova a riavviare il tuo dispositivo.</string>
     <string name="map_connection_error_close">Close</string>
     <string name="map_address_encrypted">Encrypted Location</string>
     <string name="map_address_unknown">Unknown Address</string>
@@ -343,7 +343,7 @@
     <string name="tag_picker_error_dialog_close">Close</string>
     <string name="tag_picker_error_toast">An error occurred, please try again</string>
     <string name="tag_picker_menu_select_all">Favourite all</string>
-    <string name="tag_picker_menu_select_none">Unfavourite all</string>
+    <string name="tag_picker_menu_select_none">Rimuovi tutti i preferiti</string>
     <string name="tag_picker_add_to_home">Add to home screen</string>
     <!-- Ring dialog -->
     <string name="tag_ring_title">Ring your tag</string>
