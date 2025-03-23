@@ -111,7 +111,7 @@
     <string name="settings_main_category_samsung_account_content">Connesso come %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Errore nel recupero dei dettagli dell\'account</string>
     <string name="settings_main_sign_out_title">Disconnetti</string>
-    <string name="settings_main_sign_out_content">Esci dal tuo account Samsung? Questo richiederà di accedere di nuovo per tenere traccia di SmartTags\n\n<b>Nota:</b> Nonostante ciò che la prossima pagina di uscita dirà, questo non ti scollegherà da altre applicazioni Samsung sul tuo dispositivo.</string>
+    <string name="settings_main_sign_out_content">Uscire dal tuo account Samsung? Questo richiederà di accedere di nuovo per monitorare gli SmartTag\n\n<b>Nota:</b> Nonostante il prossimo avviso, non sarai scollegato da altre applicazioni Samsung sul tuo dispositivo.</string>
     <string name="settings_main_logout_error">Si è verificato un errore, controlla la connessione e riprova</string>
     <!-- Settings > Location -->
     <string name="settings_location_location">Posizione</string>
@@ -547,7 +547,7 @@
     <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
     <string name="lost_mode_settings_phone_number">Contact (optional)</string>
     <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
-    <string name="lost_mode_settings_message">Message</string>
+    <string name="lost_mode_settings_message">Messaggio</string>
     <string name="lost_mode_settings_error_dialog_title">Error</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
     <string name="lost_mode_settings_error_dialog_close">Close</string>
@@ -603,7 +603,7 @@
     <string name="battery_unknown">Unknown</string>
     <string name="battery_very_low">Battery replacement required</string>
     <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_sufficient">Sufficiente</string>
     <!-- Only used in export -->
     <string name="battery_full">Full</string>
     <string name="battery_update">Updated %1s</string>
@@ -678,7 +678,7 @@
     <string name="settings_encryption_enter_pin_content">You will need this PIN to access locations reported by other Galaxy devices, so make sure it\'s memorable!</string>
     <string name="settings_encryption_confirm_pin">Confirm PIN</string>
     <string name="settings_encryption_mismatch">PINs do not match</string>
-    <string name="settings_encryption_success">PIN changed</string>
+    <string name="settings_encryption_success">PIN modificato</string>
     <string name="settings_encryption_error">Error changing PIN, please try again</string>
     <string name="settings_encryption_clear_saved_pins_title">Clear Stored PIN</string>
     <string name="settings_encryption_clear_saved_pins_content">Delete the stored PIN from encrypted storage, you will be prompted to enter your PIN when it is next required</string>
@@ -701,18 +701,18 @@
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
     <string name="biometric_prompt_error_close">Close</string>
     <!-- About Footer -->
-    <string name="xda_thread">XDA Thread</string>
+    <string name="xda_thread">Discussione su XDA</string>
     <string name="github">GitHub</string>
-    <string name="libraries">Third party libraries</string>
+    <string name="libraries">Librerie di terze parti</string>
     <string name="donate">Donate</string>
-    <string name="bluesky">Follow me on Bluesky</string>
+    <string name="bluesky">Seguimi su Bluesky</string>
     <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
     <string name="about_contributors">Contributors</string>
     <string name="about_crowdin">Crowdin</string>
     <string name="about_debug_enabled">Developer options enabled</string>
     <string name="about_debug_disabled">Developer options disabled</string>
     <!-- Contributors -->
-    <string name="contributors_oneui_title">OneUI Project</string>
+    <string name="contributors_oneui_title">Progetto OneUI</string>
     <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
     <string name="contributors_icons_title">Additional Icons</string>
     <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
@@ -1014,7 +1014,7 @@
     <string name="backup_creating_wifi_safe_areas_backup">Backing up Wi-Fi Safe Areas…</string>
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
     <string name="backup_creating_settings_backup">Backing up settings…</string>
-    <string name="backup_created">Backup created</string>
+    <string name="backup_created">Backup creato</string>
     <string name="backup_error">Error</string>
     <!-- Restore -->
     <string name="restore_error_dialog_title">Error Loading Backup</string>
@@ -1061,7 +1061,7 @@
     <string name="updates_smartthings_updated_title">SmartThings is up to date</string>
     <string name="updates_smartthings_updated_content">Version %1s</string>
     <string name="updates_smartthings_external_title">SmartThings</string>
-    <string name="updates_smartthings_external_content">SmartThings updates on your device are handled externally</string>
+    <string name="updates_smartthings_external_content">Gli aggiornamenti di SmartThings sul tuo dispositivo sono gestiti esternamente</string>
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
     <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
     <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
