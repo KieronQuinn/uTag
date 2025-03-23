@@ -233,7 +233,7 @@
     <string name="settings_advanced_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
     <string name="settings_advanced_content_creator_title">Modo de Criador de Conteúdo</string>
     <string name="settings_advanced_content_creator_content">Esconda a sua localização na interface do uTag, para capturar a tela e gravar vídeos do uTag</string>
-    <string name="settings_advanced_content_creator_enabled">Enabled</string>
+    <string name="settings_advanced_content_creator_enabled">Ativado</string>
     <string name="settings_advanced_auto_dismiss_notifications_title">Auto Dismiss Left Behind Notifications</string>
     <string name="settings_advanced_auto_dismiss_notifications_content">Automatically dismiss Notify when Left Behind notifications &amp; Smartspacer Targets when the Tag comes back in range.\n\n<b>Note:</b> This may lead to \"ghost\" sounds &amp; vibrations if your Tag comes back in range before you see the notification.</string>
     <string name="settings_advanced_prevent_overmature_title">Prevent Overmature Offline</string>
@@ -311,7 +311,7 @@
     <string name="map_timestamp_hours_ago">%1d horas atrás</string>
     <string name="map_searching_dialog_title">Failed to connect to Tag</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
-    <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
+    <string name="map_searching_dialog_enable_searching">Ativar Modo de Busca</string>
     <string name="map_searching_dialog_cancel">Fechar</string>
     <string name="map_allow_access_dialog_title">Share location?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
@@ -393,7 +393,7 @@
     <string name="tag_more_notify_when_disconnected_content_disabled">Notify when %1s is disconnected from this device and not in a Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
-    <string name="tag_more_notify_when_disconnected_content_enabled_none">Enabled</string>
+    <string name="tag_more_notify_when_disconnected_content_enabled_none">Ativado</string>
     <string name="tag_more_notify_when_disconnected_switch">Enabled</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_title">Áreas Seguras</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
@@ -436,7 +436,7 @@
     <string name="tag_more_find_device_title">Find my Device</string>
     <string name="tag_more_find_device_content">Double press the Tag\'s button to make this device ring</string>
     <string name="tag_more_find_device_content_disabled">Disable Passive Mode to use this option</string>
-    <string name="tag_more_find_device_content_enabled">Enabled</string>
+    <string name="tag_more_find_device_content_enabled">Ativado</string>
     <string name="tag_more_find_device_content_error">Not working. Tap for more info.</string>
     <string name="tag_more_find_device_switch">Enable Find my Device</string>
     <string name="tag_more_find_device_category_settings">Settings</string>
@@ -455,7 +455,7 @@
     <string name="tag_more_find_device_remote_ring_enabled_title">Enabled on a Samsung device</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
     <string name="tag_more_find_device_remote_ring_disable_action">Disable find phone or tablet</string>
-    <string name="tag_more_find_device_vibrate_title">Vibrate</string>
+    <string name="tag_more_find_device_vibrate_title">Vibrar</string>
     <string name="tag_more_find_device_vibrate_content">Vibrate device when ringing to make more noise</string>
     <string name="tag_more_find_device_delay_title">Delay Before Ringing</string>
     <string name="tag_more_find_device_delay_content">Wait 5 seconds before starting to ring, if you accidentally trigger Find my Device this option allows you to cancel before noise is made.</string>
@@ -496,8 +496,8 @@
     <string name="tag_more_automation_footer_bull3"><b>Opening the \"Automations\" page for your Tag in SmartThings may make these Custom Automations stop working. If this happens, simply return to this page and they will be re-synced.</b></string>
     <string name="tag_more_automation_footer_bull4">You must grant the \"Display over other apps\" permission to allow uTag to launch actions from the background.</string>
     <string name="tag_more_automation_footer_bull5"><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
-    <string name="tag_more_automation_category_options">Options</string>
-    <string name="tag_more_automation_volume">Button Volume</string>
+    <string name="tag_more_automation_category_options">Opções</string>
+    <string name="tag_more_automation_volume">Volume do Botão</string>
     <string name="tag_more_automation_error_dialog_title">Erro</string>
     <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
     <string name="tag_more_automation_error_dialog_close">Fechar</string>
@@ -508,9 +508,9 @@
     <string name="tag_more_automation_permission_restricted_title">Restricted settings</string>
     <string name="tag_more_automation_permission_restricted_content">If you get a message stating that \"Display over other apps\" is a <b>Restricted Setting</b>, you will need to allow restricted settings in the app info for uTag.\n\nTo do this:\n• Open the App Info page for uTag\n• In the overflow menu, select \"Allow restricted settings\"\n• Return to uTag and try to enable the \"Display over other apps\" permission again.</string>
     <string name="tag_more_automation_permission_restricted_action">Open App Info</string>
-    <string name="tag_more_automation_type_app_title">Launch App</string>
+    <string name="tag_more_automation_type_app_title">Abrir Aplicativo</string>
     <string name="tag_more_automation_type_app_content">Start an app when this automation is invoked.</string>
-    <string name="tag_more_automation_type_camera_title">Launch Camera</string>
+    <string name="tag_more_automation_type_camera_title">Abrir Câmera</string>
     <string name="tag_more_automation_type_camera_title_short">Camera</string>
     <string name="tag_more_automation_type_camera_content">Start the default camera app, or the locked camera if the device is locked (where available).</string>
     <string name="tag_more_automation_type_shortcut_title">Launch Shortcut</string>
@@ -520,15 +520,15 @@
     <string name="tag_more_automation_type_tasker_dialog_title">Erro</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
     <string name="tag_more_automation_type_tasker_dialog_close">Fechar</string>
-    <string name="button_volume_level_off">Muted</string>
-    <string name="button_volume_level_low">Low</string>
-    <string name="button_volume_level_high">High</string>
+    <string name="button_volume_level_off">Mudo</string>
+    <string name="button_volume_level_low">Baixo</string>
+    <string name="button_volume_level_high">Alto</string>
     <!-- More Battery Dialog -->
     <string name="tag_more_battery_dialog_title">Battery information</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
-    <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
-    <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
-    <string name="tag_more_battery_dialog_very_low">• Very Low: 0–5%</string>
+    <string name="tag_more_battery_dialog_sufficient">Suficiente: 16–100%</string>
+    <string name="tag_more_battery_dialog_low">Baixo: 6–15%</string>
+    <string name="tag_more_battery_dialog_very_low">Muito Baixo: 0–5%</string>
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
@@ -539,8 +539,8 @@
     <string name="device_is_already_connected_to_your_device">This tag is already in range of your device, so can’t turn on Notify me when it’s found.</string>
     <string name="pairing_lock">Pairing lock</string>
     <string name="pairing_lock_description">This tag is linked to your account. It won\'t be linked to other users.</string>
-    <string name="lost_mode_next">Next</string>
-    <string name="lost_mode_settings_switch">Enabled</string>
+    <string name="lost_mode_next">Próximo</string>
+    <string name="lost_mode_settings_switch">Ativado</string>
     <string name="lost_mode_settings_category">Personalisation</string>
     <string name="lost_mode_settings_email">Email (required)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
@@ -586,7 +586,7 @@
     <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
     <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
     <!-- Passive Mode -->
-    <string name="passive_mode_enabled_switch">Enabled</string>
+    <string name="passive_mode_enabled_switch">Ativado</string>
     <string name="passive_mode_info_title">What is Passive Mode?</string>
     <string name="passive_mode_info_content">Passive Mode disconnects your Tag from your device, keeping it in a \"scanned\" state when SmartThings isn\'t open. This disables some uTag functionality, but still allows location updates from your device.\n\n<b>When Passive Mode is enabled and SmartThings is not open, your Tag may also get location updates from other Samsung devices in addition to this device, so long as it\'s not connected to another device using uTag or SmartThings.</b></string>
     <string name="passive_mode_lost_functionality_title">Functionality Impacted by Passive Mode</string>
@@ -626,12 +626,12 @@
     <!-- FME opt-in -->
     <string name="fme_opt_in_title">Find my Everything Network</string>
     <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
-    <string name="fme_opt_in_positive">Enable</string>
+    <string name="fme_opt_in_positive">Ativar</string>
     <string name="fme_opt_in_negative">Not now</string>
     <!-- UTS opt-in -->
     <string name="uts_opt_in_title">Unknown Tag Scanning</string>
     <string name="uts_opt_in_content">uTag can automatically scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
-    <string name="uts_opt_in_positive">Enable</string>
+    <string name="uts_opt_in_positive">Ativar</string>
     <string name="uts_opt_in_negative">Not now</string>
     <!-- Location History intro -->
     <string name="location_history_date_picker">Date picker</string>
@@ -709,7 +709,7 @@
     <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
     <string name="about_contributors">Contributors</string>
     <string name="about_crowdin">Crowdin</string>
-    <string name="about_debug_enabled">Developer options enabled</string>
+    <string name="about_debug_enabled">Opções de desenvolvedor ativadas</string>
     <string name="about_debug_disabled">Developer options disabled</string>
     <!-- Contributors -->
     <string name="contributors_oneui_title">OneUI Project</string>
@@ -789,11 +789,11 @@
     <string name="search_nearby_timeout_close">Fechar</string>
     <string name="search_nearby_uwb_disabled_title">UWB Disabled</string>
     <string name="search_nearby_uwb_disabled_content">Ultra-wideband, precise searching is available on your device but UWB is disabled. Enable UWB to allow precise searching?</string>
-    <string name="search_nearby_uwb_disabled_positive">Enable</string>
+    <string name="search_nearby_uwb_disabled_positive">Ativar</string>
     <string name="search_nearby_uwb_disabled_negative">Not now</string>
     <string name="search_nearby_bluetooth_disabled_title">Bluetooth Disabled</string>
     <string name="search_nearby_bluetooth_disabled_content">Search nearby requires Bluetooth, enable Bluetooth to start searching?</string>
-    <string name="search_nearby_bluetooth_disabled_positive">Enable</string>
+    <string name="search_nearby_bluetooth_disabled_positive">Ativar</string>
     <string name="search_nearby_bluetooth_disabled_negative">Cancel</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings is running</string>
