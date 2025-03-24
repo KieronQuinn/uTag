@@ -2,12 +2,12 @@
 <resources>
     <string name="app_name">uTag</string>
     <string name="app_name_st">SmartThings</string>
-    <string name="shortcut_name_find">Find</string>
+    <string name="shortcut_name_find">Keresés</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Applying mods, please wait…</string>
+    <string name="hooking_progress_toast">Módosítások applikálása, kérem várjon…</string>
     <!-- Landing -->
-    <string name="landing_get_started">Get Started</string>
+    <string name="landing_get_started">Kezdjük el</string>
     <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
     <string name="landing_open">uTag megnyitása</string>
     <!-- Mod download -->
