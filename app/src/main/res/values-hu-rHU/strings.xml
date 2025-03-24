@@ -94,7 +94,7 @@
     <string name="settings_main_location_content">Helyzet frissítés, közeli keresés beállításai, widget frissítés, ismeretlen Tag-ek, hálózat, és biztonságos helyek</string>
     <string name="settings_main_map_title">Térkép</string>
     <string name="settings_main_map_content">Helymeghatározás és helyelőzménytérkép témák &amp; opciók</string>
-    <string name="settings_main_security_title">Security &amp; Encryption</string>
+    <string name="settings_main_security_title">Biztonság &amp; titkosítás</string>
     <string name="settings_main_security_content">Offline location encryption &amp; biometric entry</string>
     <string name="settings_main_updates_content_disabled">Update notifications are disabled in your system settings</string>
     <string name="settings_main_category_help">Segítség</string>
