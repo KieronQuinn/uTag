@@ -8,18 +8,18 @@
     <string name="hooking_progress_toast">Módosítások applikálása, kérem várjon…</string>
     <!-- Landing -->
     <string name="landing_get_started">Kezdjük el</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
+    <string name="landing_not_signed_in">Először be kell fejezni a kezdeti beállításokat, nyisd meg az uTag-et a folytatáshoz</string>
     <string name="landing_open">uTag megnyitása</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings mod</string>
-    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
-    <string name="setup_mod_info_action">Start mod download</string>
-    <string name="setup_mod_oneui_title">OneUI Detected</string>
-    <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
+    <string name="setup_mod_info_content">Ahhoz, hogy kikerüljük a Samsung feltételeit, egy módosított verziójú SmartThings alkalmazás szükséges. A uTag átsegít ennek letöltésében és telepítésében. \n\n<b>Jegyzet:</b> Amennyiben a jelenlegi eszköze root-olt, és az Xposed telepítve van, állítsa be a SmartThings-et, engedélyezze a uTag Xposed modult, utána kényszerített leállítással állítsa le a SmartThings-et, és nyissa meg újra a uTag alkalmazást, hogy átugorja ezt a lépést.</string>
+    <string name="setup_mod_info_action">Mod-ok letöltésének megkezdése</string>
+    <string name="setup_mod_oneui_title">OneUI érzékelve</string>
+    <string name="setup_mod_oneui_desc">A jelenlegi eszköz úgy tűnik OneUI-t futtat. A uTag használata olyan eszközön, ami hivatalosan támogatja a SmartThings Keresés funkcióját, lehetséges hogy több funkcióban is hibát okoz, vagy nem várt problémákat okozhat. <b>A OneUI támogatása kísérleti alapú, és lehet hogy ezen az eszközön nem fog működni. Kérem ne jelentsen hibákat, amik ezen az eszközön felmerülnek. </b> Be kell jelentkeznie a SmartThings-be a böngészőben, ahelyett, hogy a már az eszközön lévő Samsung fiókot használná.</string>
     <string name="setup_mod_oneui_continue">Tovább</string>
-    <string name="setup_mod_downloading">Downloading SmartThings…</string>
-    <string name="setup_mod_setting_up">Setting up mod…</string>
+    <string name="setup_mod_downloading">A SmartThings letöltése…</string>
+    <string name="setup_mod_setting_up">A mod beállítása…</string>
     <string name="setup_mod_setting_up_subtitle">Ez eltarthat egy ideig</string>
     <string name="setup_mod_uninstall_title">SmartThings eltávolítása</string>
     <string name="setup_mod_uninstall_content">Since the modified version of SmartThings has a different signature, you must uninstall the currently installed version to continue.\n\n<b>Note:</b> This will clear SmartThings data from your device, requiring you to sign in again.</string>
