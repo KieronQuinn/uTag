@@ -579,7 +579,7 @@
     <string name="lost_mode_settings_custom_url_footer_title">Az egyéni URL-ről</string>
     <string name="lost_mode_settings_custom_url_footer_content">Az egyéni URL beállítása lehetővé teszi, hogy teljes mértékben testre szabja, mi történjen, amikor egy NFC-képes eszközzel megérinti a Tag-et. Bármilyen URL-re beállítható, hasonlóan egy írható NFC-Tag-hez.\n\n<b>Fontos:</b> Egyéni URL-t csak akkor írhat, ha a Tag csatlakoztatva van, ezért ideális esetben ez egy olyan oldal legyen, amelyet szerkeszthet, hogy később szükség esetén hozzáadhassa a kapcsolattartási adatokat.</string>
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
-    <string name="lost_mode_custom_url_warning" maxLength="40">Do not edit or turn off. See uTag Wiki.</string>
+    <string name="lost_mode_custom_url_warning" maxLength="40">Ne módosítsd, kapcsold ki. Infó a Wiki-n</string>
     <!-- Predefined lost messages (displayed locally only) -->
     <string name="this_smarttag_has_been_lost">Ez a SmartTag elveszett.</string>
     <string name="this_is_a_lost_item">Ez egy elveszett tárgy, amely fontos számomra, ezért kérem, segítsen visszaszerezni.</string>
