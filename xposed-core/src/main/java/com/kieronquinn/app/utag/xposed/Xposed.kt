@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.app.Activity
 import android.app.AlertDialog
 import android.app.Application
+import android.app.Instrumentation
 import android.app.Notification
 import android.app.PendingIntent
 import android.app.Service
@@ -35,6 +36,8 @@ import com.kieronquinn.app.utag.model.LocationStaleness
 import com.kieronquinn.app.utag.service.ILocationCallback
 import com.kieronquinn.app.utag.service.IServiceConnection
 import com.kieronquinn.app.utag.service.IUTagSmartThingsForegroundService
+import com.kieronquinn.app.utag.xposed.Xposed.Companion.SCAN_TYPE_UTAG
+import com.kieronquinn.app.utag.xposed.Xposed.Companion.SERVICE_ID
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SharedPrefsKey.Companion.areAllKeysPresent
 import com.kieronquinn.app.utag.xposed.core.BuildConfig
 import com.kieronquinn.app.utag.xposed.extensions.TagActivity_createIntent
@@ -65,6 +68,7 @@ import io.github.neonorbit.dexplore.DexFactory
 import io.github.neonorbit.dexplore.Dexplore
 import io.github.neonorbit.dexplore.ReferencePool
 import io.github.neonorbit.dexplore.filter.ClassFilter
+import io.github.neonorbit.dexplore.filter.DexFilter
 import io.github.neonorbit.dexplore.filter.MethodFilter
 import io.github.neonorbit.dexplore.filter.ReferenceTypes
 import io.github.neonorbit.dexplore.result.ClassData
@@ -126,6 +130,10 @@ class Xposed: IXposedHookLoadPackage {
         const val METHOD_IS_SMARTTHINGS_MODDED = "is_smartthings_modded"
         const val METHOD_SHOW_SETUP_TOAST = "show_setup_toast"
 
+        private val COMPONENT_FME = ComponentName(
+            "com.samsung.android.oneconnect", "com.samsung.android.plugin.fme.MainActivity"
+        )
+
         const val ACTION_TAG_DEVICE_STATUS_CHANGED =
             "$APPLICATION_ID.action.TAG_DEVICE_STATUS_CHANGED"
 
@@ -173,6 +181,7 @@ class Xposed: IXposedHookLoadPackage {
 
         private enum class SharedPrefsKey(private val key: String) {
             SHARED_PREF_KEY_SYSTEM_INFO_METHOD("system_info_method"),
+            SHARED_PREF_KEY_SYSTEM_INFO_METHOD_ALT("system_info_method_alt"),
             SHARED_PREF_KEY_DEBUG_CLASS("debug_class"),
             SHARED_PREF_KEY_QCSERVICE_RUNNABLE_METHOD("qcservice_runnable_method"),
             SHARED_PREF_KEY_SMART_TAG_CONNECT_METHOD("smart_tag_connect_method"),
@@ -887,13 +896,28 @@ class Xposed: IXposedHookLoadPackage {
 
     private fun hookViewMap() {
         XposedHelpers.findAndHookMethod(
+            Instrumentation::class.java,
+            "execStartActivity",
+            Context::class.java,
+            IBinder::class.java,
+            IBinder::class.java,
             Activity::class.java,
-            "startActivity",
             Intent::class.java,
+            Integer.TYPE,
+            Bundle::class.java,
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
-                    val intent = param.args[0] as? Intent ?: return
+                    val intent = param.args[4] as? Intent ?: return
+                    //New intent format
+                    if(intent.component == COMPONENT_FME) {
+                        val targetId = intent.getStringExtra("EXTRA_KEY_EXTRA_DATA")?.let {
+                            JSONObject(it).getString("targetDeviceId")
+                        } ?: return
+                        param.args[4] = TagActivity_createIntent(targetId)
+                        return
+                    }
+                    //Old intent format
                     if(!intent.isFmeIntent()) return
                     val targetId = intent.data?.getQueryParameter("target_id") ?: return
                     val source = intent.data?.getQueryParameter("arguments")?.let {
@@ -904,7 +928,7 @@ class Xposed: IXposedHookLoadPackage {
                             else -> null
                         }
                     } ?: return
-                    param.args[0] = when(source) {
+                    param.args[4] = when(source) {
                         "tagplugin", "agreement" -> TagActivity_createIntent(targetId)
                         else -> UnsupportedIntentActivity_createIntent(source)
                     }
@@ -951,10 +975,12 @@ class Xposed: IXposedHookLoadPackage {
      */
     private fun LoadPackageParam.hookSystemInfo(context: Context, packageInfo: PackageInfo) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD)
-        val method = if(savedMethod == null) {
+        val savedMethodAlt = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD_ALT)
+        val methods = if(savedMethod == null) {
+            val dexFilter = DexFilter.Builder().build()
             val classFilter = ClassFilter.Builder()
                 .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
-                .setReferenceFilter { pool: ReferencePool -> pool.contains("hasSepLiteFeature") }
+                .setReferenceFilter { pool: ReferencePool -> pool.contains("Nexus") }
                 .build()
             val methodFilter = MethodFilter.Builder()
                 .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
@@ -963,31 +989,39 @@ class Xposed: IXposedHookLoadPackage {
                 .setModifiers(Modifier.PUBLIC)
                 .build()
             val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
-            dexplore.findMethod(classFilter, methodFilter)?.also {
+            val methods = dexplore.findMethods(dexFilter, classFilter, methodFilter, 2)
+            methods.getOrNull(0)?.let {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD, it)
             }
+            methods.getOrNull(1)?.let {
+                saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD_ALT, it)
+            }
+            methods
         }else{
-            savedMethod
-        }?.loadMethod(classLoader) ?: run {
+            listOfNotNull(savedMethod, savedMethodAlt)
+        }.mapNotNull { it.loadMethod(classLoader) }
+        if(methods.isEmpty()) {
             context.logException("uTag: Failed to hook SystemInfo (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
             return
         }
-        XposedBridge.hookMethod(
-            method,
-            object: XC_MethodHook() {
-                override fun afterHookedMethod(param: MethodHookParam) {
-                    super.afterHookedMethod(param)
-                    val callingClass = getCallingInformation()?.first ?: return
-                    //Classes on the allowlist are forced to true to enable features without crashing
-                    if (CALLING_PACKAGES_ALLOWLIST.any { callingClass.startsWith(it) }) {
-                        param.result = true
-                    }else{
-                        //Allow use on OneUI by faking a non-Samsung device where not required
-                        param.result = false
+        methods.forEach {
+            XposedBridge.hookMethod(
+                it,
+                object: XC_MethodHook() {
+                    override fun afterHookedMethod(param: MethodHookParam) {
+                        super.afterHookedMethod(param)
+                        val callingClass = getCallingInformation()?.first ?: return
+                        //Classes on the allowlist are forced to true to enable features without crashing
+                        if (CALLING_PACKAGES_ALLOWLIST.any { callingClass.startsWith(it) }) {
+                            param.result = true
+                        }else{
+                            //Allow use on OneUI by faking a non-Samsung device where not required
+                            param.result = false
+                        }
                     }
                 }
-            }
-        )
+            )
+        }
     }
 
     /**
