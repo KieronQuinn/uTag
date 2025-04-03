@@ -225,9 +225,9 @@
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Mã hóa</string>
     <string name="settings_encryption_content">Đặt hoặc đặt lại một mã PIN để mã hóa vị trí ngoại tuyến</string>
-    <string name="settings_biometric_title">Biometric Entry</string>
-    <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
-    <string name="settings_biometric_content_disabled">Not available on this device</string>
+    <string name="settings_biometric_title">Xác thực Sinh trắc học</string>
+    <string name="settings_biometric_content">Yêu cầu xác thực sinh trắc học để truy cập cài đặt của uTag hoặc bản đồ của Tag</string>
+    <string name="settings_biometric_content_disabled">Không khả dụng trên thiết bị này</string>
     <!-- Settings > Advanced -->
     <string name="settings_advanced_analytics_title">Phân tích &amp; Báo cáo sự cố</string>
     <string name="settings_advanced_analytics_content">Bật phân tích ẩn danh &amp; báo cáo sự cố để giúp quá trình phát triển của uTag</string>
@@ -688,7 +688,7 @@
     <string name="settings_encryption_pin_timeout_title">Hạn mã PIN</string>
     <string name="settings_encryption_pin_timeout_content">Khoảng thời gian trước khi mã PIN đã nhập bị xóa khỏi bộ nhớ, bắt buộc bạn phải nhập lại: %1s</string>
     <!-- Biometric prompt -->
-    <string name="biometric_prompt_title">Authenticate</string>
+    <string name="biometric_prompt_title">Xác thực</string>
     <string name="biometric_prompt_content_settings">Biometric authentication is required to access uTag\'s settings</string>
     <string name="biometric_prompt_content_map">Biometric authentication is required to access this Tag\'s location</string>
     <string name="biometric_prompt_content_widget">Biometric authentication is required to modify uTag widgets</string>
@@ -703,7 +703,7 @@
     <!-- About Footer -->
     <string name="xda_thread">Chủ đề XDA</string>
     <string name="github">GitHub</string>
-    <string name="libraries">Thư viện bên thư ba</string>
+    <string name="libraries">Thư viện bên thứ ba</string>
     <string name="donate">Quyên góp</string>
     <string name="bluesky">Theo dõi tôi trên Bluesky</string>
     <string name="about_version">Phiên bản %1s\nĐược tạo bởi Kieron Quinn</string>
@@ -713,9 +713,9 @@
     <string name="about_debug_disabled">Developer options disabled</string>
     <!-- Contributors -->
     <string name="contributors_oneui_title">OneUI Project</string>
-    <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
-    <string name="contributors_icons_title">Additional Icons</string>
-    <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
+    <string name="contributors_oneui_content">Các thành phần giao diện, kiểu dáng và biểu tượng của OneUI</string>
+    <string name="contributors_icons_title">Biểu tượng Bổ sung</string>
+    <string name="contributors_icons_content">Các biểu tượng bổ sung từ Material Design Icons (Pictogrammers Free Licence)</string>
     <!-- Update downloader -->
     <string name="snackbar_update">Có bản cập nhật mới</string>
     <string name="snackbar_update_multiple">Có nhiều bản cập nhật mới</string>
@@ -725,7 +725,7 @@
     <string name="update_title_utag">Bản cập nhật uTag</string>
     <string name="update_title_smartthings">Bản cập nhật SmartThings</string>
     <string name="update_heading">Có bản cập nhật uTag mới</string>
-    <string name="update_heading_smartthings">Có bản cập nhật SmartThings mới</string>
+    <string name="update_heading_smartthings">Có Bản cập nhật SmartThings mới</string>
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Các thay đổi</string>
     <string name="update_done_title">Sẵn sàng để cài đặt</string>
