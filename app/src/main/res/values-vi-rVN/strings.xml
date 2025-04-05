@@ -384,7 +384,7 @@
     <!-- More page -->
     <string name="tag_more_search_nearby">Tìm kiếm gần đây</string>
     <string name="tag_more_search_nearby_disabled">Tắt Chế độ Thụ động để sử dụng chức năng này</string>
-    <string name="tag_more_navigate">Navigate</string>
+    <string name="tag_more_navigate">Điều hướng</string>
     <string name="tag_more_category_notifications">Notifications</string>
     <string name="tag_more_notify_when_found">Notify me when it\'s found</string>
     <string name="tag_more_notify_when_found_dialog">You\'ll only be notified once when your device is found. If you lose the device again, you\'ll need to turn this on again</string>
