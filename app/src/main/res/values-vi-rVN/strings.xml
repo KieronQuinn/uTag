@@ -453,7 +453,7 @@
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Enabled on a Samsung device</string>
-    <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
+    <string name="tag_more_find_device_remote_ring_enabled_content">Một điện thoại hoặc máy tính bảng Samsung đã được bật tùy chọn \"Tìm điện thoại hoặc máy tính bảng\" cho Tag này trong SmartThings. Sử dụng tùy chọn này cũng có thể làm đổ chuông một thiết bị khác. Tắt tìm điện thoại hoặc máy tính bảng để ngăn chặn điều này.</string>
     <string name="tag_more_find_device_remote_ring_disable_action">Tắt tìm điện thoại hoặc máy tính bảng</string>
     <string name="tag_more_find_device_vibrate_title">Rung</string>
     <string name="tag_more_find_device_vibrate_content">Rung thiết bị khi reo chuông để tạo thêm tiếng ồn</string>
@@ -532,7 +532,7 @@
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
-    <string name="emergency_contact_and_message">Emergency contact info and message</string>
+    <string name="emergency_contact_and_message">Thông tin liên hệ khẩn cấp và lời nhắn</string>
     <string name="emergency_contact_and_message_description">Show your emergency contact information and a message for the person who finds this Tag.</string>
     <string name="notify_me_when_its_found">Notify me when it\'s found</string>
     <string name="notify_found_description">You\'ll receive a notification when this Tag is found.</string>
@@ -545,8 +545,8 @@
     <string name="lost_mode_settings_email">Email (bắt buộc)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
     <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
-    <string name="lost_mode_settings_phone_number">Contact (optional)</string>
-    <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
+    <string name="lost_mode_settings_phone_number">Liên hệ (tùy chọn)</string>
+    <string name="lost_mode_settings_phone_number_default">Nhập thông tin liên hệ khẩn cấp của bạn trong trường hợp ai đó tìm thấy Tag của bạn và muốn liên hệ bạn</string>
     <string name="lost_mode_settings_message">Message</string>
     <string name="lost_mode_settings_error_dialog_title">Lỗi</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
@@ -608,9 +608,9 @@
     <string name="battery_full">Đầy</string>
     <string name="battery_update">Đã cập nhật %1s</string>
     <!-- Device Types -->
-    <string name="device_type_galaxy_phone">Galaxy Phone</string>
+    <string name="device_type_galaxy_phone">Điện thoại Galaxy</string>
     <string name="device_type_galaxy_tablet">Máy tính bảng Galaxy</string>
-    <string name="device_type_none_galaxy_phone">Non-Galaxy Phone</string>
+    <string name="device_type_none_galaxy_phone">Điện thoại không phải Galaxy</string>
     <string name="device_type_none_galaxy_tablet">Máy tính bảng không phải Galaxy</string>
     <!-- D2D Status -->
     <string name="d2d_status_connected">Connected</string>
