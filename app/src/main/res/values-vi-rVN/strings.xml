@@ -45,9 +45,9 @@
     <string name="permission_notification_title">Notification Permission</string>
     <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
     <string name="permission_notification_grant">Grant</string>
-    <string name="permission_battery_title">Disable Battery Optimisations for uTag</string>
+    <string name="permission_battery_title">Tắt Tối ưu hóa Pin cho uTag</string>
     <string name="permission_battery_content">This is required to keep uTag running in the background to monitor Tags</string>
-    <string name="permission_smartthings_battery_title">Disable Battery Optimisations for SmartThings</string>
+    <string name="permission_smartthings_battery_title">Tắt Tối ưu hóa Pin cho SmartThings</string>
     <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
     <string name="permission_battery_disable">Tắt</string>
     <string name="permission_analytics_title">Phân tích &amp; Báo cáo sự cố</string>
@@ -147,7 +147,7 @@
     <string name="settings_location_uwb_content">Dùng tìm kiếm chính xác (UWB) ở những nơi Tag của bạn hỗ trợ.</string>
     <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
     <string name="settings_location_uwb_long_distance_content">Allow directional precise finding over a longer distance, which may show incorrect directions when the Tag is not in line of sight.</string>
-    <string name="settings_location_uwb_disabled">Not available on your device</string>
+    <string name="settings_location_uwb_disabled">Không khả dụng trên thiết bị của bạn</string>
     <string name="settings_location_units_title">Đơn vị Khoảng cách</string>
     <string name="settings_location_units_system">Cập nhật theo hệ thống (%1s)</string>
     <string name="settings_location_units_metric">Hệ mét</string>
@@ -200,11 +200,11 @@
     <string name="settings_uts_tag_error_dialog_title">Lỗi</string>
     <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
     <string name="settings_uts_tag_error_dialog_close">Đóng</string>
-    <string name="settings_uts_sensitivity_very_high">Very High</string>
-    <string name="settings_uts_sensitivity_high">High</string>
+    <string name="settings_uts_sensitivity_very_high">Rất cao</string>
+    <string name="settings_uts_sensitivity_high">Cao</string>
     <string name="settings_uts_sensitivity_normal">Normal</string>
-    <string name="settings_uts_sensitivity_low">Low</string>
-    <string name="settings_uts_sensitivity_very_low">Very Low</string>
+    <string name="settings_uts_sensitivity_low">Thấp</string>
+    <string name="settings_uts_sensitivity_very_low">Rất thấp</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Hiển thị Vị trí</string>
     <string name="settings_map_show_location_content">Hiển thị vị trí của bạn trên bản đồ, nếu có</string>
@@ -287,10 +287,10 @@
     <string name="map_connection_error_close">Đóng</string>
     <string name="map_address_encrypted">Vị trí được Mã hóa</string>
     <string name="map_address_unknown">Unknown Address</string>
-    <string name="map_address_denied">Couldn\'t get location</string>
+    <string name="map_address_denied">Không thể lấy vị trí</string>
     <string name="map_owner">Tag của %1s</string>
     <string name="map_owner_generic">Tag đã chia sẻ</string>
-    <string name="map_allow_location_access_title">Allow access to your location</string>
+    <string name="map_allow_location_access_title">Cho phép truy cập vị trí của bạn</string>
     <string name="map_allow_location_access_content">To locate and control this Tag, you need to allow uTag and SmartThings to access your location.</string>
     <string name="map_passive">Chế độ Thụ động</string>
     <string name="map_time_unknown">Unknown Time</string>
@@ -329,7 +329,7 @@
     <string name="tag_picker_category_favourites">Yêu thích</string>
     <string name="tag_picker_category_mine">Tag của Bạn</string>
     <string name="tag_picker_category_shared">Tag của %1s</string>
-    <string name="tag_picker_category_shared_unknown">Shared Tags</string>
+    <string name="tag_picker_category_shared_unknown">Các Tag đã chia sẻ</string>
     <string name="tag_picker_favourites_tip_title">Show multiple Tags on the map</string>
     <string name="tag_picker_favourites_tip_content">Set your Tags as a favourites and they will show on the map as well as your selected Tag</string>
     <string name="tag_picker_favourites_tip_action">Edit Favourites</string>
@@ -378,7 +378,7 @@
     <string name="tag_location_history_export_message">Đang xuất lịch sử ra, vui lòng chờ…</string>
     <string name="tag_location_history_export_success_toast">Hoàn tất xuất ra</string>
     <string name="tag_location_history_export_failed_toast">Xuất ra thất bại</string>
-    <string name="tag_location_history_info_title">Location Info</string>
+    <string name="tag_location_history_info_title">Thông tin Vị trí</string>
     <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
@@ -412,15 +412,15 @@
     <string name="tag_more_category_protect">Protect</string>
     <string name="tag_more_lost_mode_on">On</string>
     <string name="tag_more_lost_mode_off">Off</string>
-    <string name="tag_more_category_share">Share</string>
-    <string name="tag_more_shareable">Share this Tag\'s location</string>
+    <string name="tag_more_category_share">Chia sẻ</string>
+    <string name="tag_more_shareable">Chia sẻ vị trí của Tag này</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
-    <string name="tag_more_share">Allow access to your location</string>
+    <string name="tag_more_share">Cho phép truy cập vị trí của bạn</string>
     <string name="tag_more_advanced">Nâng cao</string>
     <string name="tag_more_passive_mode_title">Chế độ Thụ động</string>
     <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
     <string name="tag_more_passive_mode_content_enabled">Bật</string>
-    <string name="tag_more_battery">Battery</string>
+    <string name="tag_more_battery">Pin</string>
     <string name="tag_more_error_title">Lỗi</string>
     <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
     <string name="tag_more_error_close">Đóng</string>
@@ -454,7 +454,7 @@
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Enabled on a Samsung device</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
-    <string name="tag_more_find_device_remote_ring_disable_action">Disable find phone or tablet</string>
+    <string name="tag_more_find_device_remote_ring_disable_action">Tắt tìm điện thoại hoặc máy tính bảng</string>
     <string name="tag_more_find_device_vibrate_title">Rung</string>
     <string name="tag_more_find_device_vibrate_content">Rung thiết bị khi reo chuông để tạo thêm tiếng ồn</string>
     <string name="tag_more_find_device_delay_title">Độ trễ Trước khi Đổ chuông</string>
@@ -600,18 +600,18 @@
     <string name="passive_mode_lost_functionality_footer"><b>Bạn có thể tắt Chế độ Thụ động bất cứ lúc nào mà không cần phải ở trong phạm vi của Tag, thậm chí chỉ tạm thời để lấy lại các chức năng này khi cần thiết.</b></string>
     <string name="passive_mode_disabled_dialog_content">Chế độ thụ động đã bị tắt, SmartThings có thể mất vài phút để kết nối lại với Tag của bạn nếu nó ở gần đây. Nếu không kết nối được, hãy mở SmartThings để thực hiện quá trình kết nối thủ công.</string>
     <!-- Battery levels -->
-    <string name="battery_unknown">Unknown</string>
+    <string name="battery_unknown">Không rõ</string>
     <string name="battery_very_low">Cần thay pin</string>
-    <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_low">Thấp</string>
+    <string name="battery_sufficient">Đủ dùng</string>
     <!-- Only used in export -->
-    <string name="battery_full">Full</string>
+    <string name="battery_full">Đầy</string>
     <string name="battery_update">Đã cập nhật %1s</string>
     <!-- Device Types -->
     <string name="device_type_galaxy_phone">Galaxy Phone</string>
-    <string name="device_type_galaxy_tablet">Galaxy Tablet</string>
+    <string name="device_type_galaxy_tablet">Máy tính bảng Galaxy</string>
     <string name="device_type_none_galaxy_phone">Non-Galaxy Phone</string>
-    <string name="device_type_none_galaxy_tablet">Non-Galaxy Tablet</string>
+    <string name="device_type_none_galaxy_tablet">Máy tính bảng không phải Galaxy</string>
     <!-- D2D Status -->
     <string name="d2d_status_connected">Connected</string>
     <string name="d2d_status_scanned">Scanned</string>
@@ -636,7 +636,7 @@
     <!-- Location History intro -->
     <string name="location_history_date_picker">Date picker</string>
     <string name="location_history_guide_img_desc">Want to know where your pets have been throughout the day? Check the location history.</string>
-    <string name="location_history_guide_subheader">About location history</string>
+    <string name="location_history_guide_subheader">Về lịch sử vị trí</string>
     <string name="location_history_guide_text_1">Location history is only available for the past 7 days.</string>
     <string name="location_history_guide_text_2">Locations are approximate and may vary even if the device hasn\'t moved.</string>
     <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
@@ -805,7 +805,7 @@
     <string name="notification_title_background_service_error_short">uTag</string>
     <string name="notification_title_background_service_error">Lỗi uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
-    <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
+    <string name="notification_title_background_service_battery">Tắt Tối ưu hóa Pin</string>
     <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
     <string name="notification_title_background_service_permissions">Lỗi uTag</string>
     <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
@@ -819,10 +819,10 @@
     <string name="notification_content_logged_out">Bạn đã đăng xuất khỏi SmartThings. Chạm để đăng nhập lại.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Tìm Thiết bị của Tôi</string>
-    <string name="notification_content_find_my_device_delay">%1s sắp reo trên thiết bị này</string>
-    <string name="notification_content_find_my_device_delay_generic">Một tag sắp reo trên thiết bị này</string>
-    <string name="notification_content_find_my_device">%1s is ringing this device</string>
-    <string name="notification_content_find_my_device_generic">A Tag is ringing this device</string>
+    <string name="notification_content_find_my_device_delay">%1s sẽ sắp reo thiết bị này</string>
+    <string name="notification_content_find_my_device_delay_generic">Một Tag sẽ sắp reo thiết bị này</string>
+    <string name="notification_content_find_my_device">%1s đang reo thiết bị này</string>
+    <string name="notification_content_find_my_device_generic">Một Tag đang reo thiết bị này</string>
     <string name="notification_action_find_my_device">Dừng</string>
     <string name="notification_content_find_my_device_error">Unable to start ringing as Find my Device is not set up correctly, check the Tag\'s settings for more info</string>
     <!-- Unknown Tag -->
@@ -977,7 +977,7 @@
     <string name="smartspacer_plugin_location_title">Tag Locations</string>
     <string name="smartspacer_plugin_location_description">Display Tag locations and an approximate address, if available</string>
     <string name="smartspacer_plugin_location_description_set">Display %1s locations and an approximate address, if available</string>
-    <string name="smartspacer_plugin_history_title">Tag Location History</string>
+    <string name="smartspacer_plugin_history_title">Lịch sử Vị trí của Tag</string>
     <string name="smartspacer_plugin_history_description">Display a Tag\'s location history and an approximate address, if available</string>
     <string name="smartspacer_plugin_history_description_set">Display %1s\'s location history and an approximate address, if available</string>
     <!-- Backup & Restore -->
@@ -994,7 +994,7 @@
     <string name="backup_restore_included_bull6">Cấu hình Tìm Thiết bị của Tôi</string>
     <string name="backup_restore_included_footer">* Configuration is backed up, but you may need to re-enable options to synchronise with your Tags</string>
     <string name="backup_restore_not_included_title">Không bao gồm trong Bản sao lưu</string>
-    <string name="backup_restore_not_included_bull1">Tag Locations &amp; Location History*</string>
+    <string name="backup_restore_not_included_bull1">Các Vị trí của Tag &amp; Lịch sử Vị trí*</string>
     <string name="backup_restore_not_included_bull2">Tag Lost Mode &amp; offline location encryption options*</string>
     <string name="backup_restore_not_included_bull3">Các tùy chọn mã PIN &amp; xác thực sinh trắc học của bạn</string>
     <string name="backup_restore_not_included_bull4">Các cấu hình tiện ích</string>
