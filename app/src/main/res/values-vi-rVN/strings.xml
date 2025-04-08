@@ -731,7 +731,7 @@
     <string name="update_done_title">Sẵn sàng để cài đặt</string>
     <string name="update_done_content_utag"><b>Lưu ý:</b> Các Tag của bạn có thể mất kết nối trong quá trình cập nhật.</string>
     <string name="update_done_content_smartthings"><b>Lưu ý:</b> Các Tag của bạn có thể mất kết nối trong quá trình cập nhật.</string>
-    <string name="update_done_action">Bắt đầu Tải về</string>
+    <string name="update_done_action">Bắt đầu Cài đặt</string>
     <string name="update_action">Tải về</string>
     <string name="update_action_alt">Alternative download</string>
     <string name="download_manager_description">Đang tải bản cập nhật về…</string>
@@ -1063,7 +1063,7 @@
     <string name="updates_smartthings_external_title">SmartThings</string>
     <string name="updates_smartthings_external_content">SmartThings updates on your device are handled externally</string>
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
-    <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
+    <string name="updates_smartthings_not_installed_title">SmartThings Chưa được Cài đặt</string>
     <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
     <string name="updates_smartthings_not_installed_action">Chạy lại thiết lập</string>
     <string name="updates_smartthings_not_modded_title">SmartThings Chưa được Mod</string>
