@@ -1,9 +1,9 @@
 {
-   "version": "1.0.4",
-   "version_code": 104,
+   "version": "1.0.5",
+   "version_code": 105,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated to SmartThings 1.8.29.24",
+   "release_notes": "- Fixed Custom Automation & Find my Device Smart Button actions not working\n- Fixed 'Notify when left behind' false positives\n- Fixed 'Notify when found' not opening the map when clicked",
    "file_size": 134246742
 }
