@@ -151,7 +151,7 @@ class SettingsLocationViewModelImpl(
         widgetPeriod.asFlow(),
         widgetBatterySaver.asFlow()
     ) { hasWidgets, hasHistoryWidgets, period, batterySaver ->
-        WidgetSettings(hasWidgets && hasHistoryWidgets, period, batterySaver)
+        WidgetSettings(hasWidgets || hasHistoryWidgets, period, batterySaver)
     }
 
     override val state = combine(

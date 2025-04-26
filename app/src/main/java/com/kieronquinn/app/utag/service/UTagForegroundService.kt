@@ -119,6 +119,7 @@ import java.io.FileDescriptor
 import java.io.PrintWriter
 import java.time.LocalDateTime
 import java.util.UUID
+import java.util.concurrent.ConcurrentHashMap
 import kotlin.coroutines.resume
 import kotlin.system.exitProcess
 
@@ -239,13 +240,13 @@ class UTagForegroundService: LifecycleService() {
 
     private val tagStateChangeBus = MutableStateFlow(System.currentTimeMillis())
     private val safeAreaSetupBus = MutableStateFlow(System.currentTimeMillis())
-    private val tagStates = HashMap<String, TagConnectionState>()
-    private val tagConnections = HashMap<String, BaseTagConnection>()
-    private val tagStateCallbacks = HashMap<String, ITagStateCallback>()
-    private val tagStatusCallbacks = HashMap<String, ITagStatusCallback>()
-    private val tagConnectCallbacks = HashMap<String, ITagConnectResultCallback>()
-    private val tagAutoSyncLocationCallbacks = HashMap<String, ITagAutoSyncLocationCallback>()
-    private val tagDisconnectNotificationJobs = HashMap<String, Job>()
+    private val tagStates = ConcurrentHashMap<String, TagConnectionState>()
+    private val tagConnections = ConcurrentHashMap<String, BaseTagConnection>()
+    private val tagStateCallbacks = ConcurrentHashMap<String, ITagStateCallback>()
+    private val tagStatusCallbacks = ConcurrentHashMap<String, ITagStatusCallback>()
+    private val tagConnectCallbacks = ConcurrentHashMap<String, ITagConnectResultCallback>()
+    private val tagAutoSyncLocationCallbacks = ConcurrentHashMap<String, ITagAutoSyncLocationCallback>()
+    private val tagDisconnectNotificationJobs = ConcurrentHashMap<String, Job>()
 
     private val locationRefreshPeriodSetting = encryptedSettings.locationRefreshPeriod
     private val locationOnBatterySaver = encryptedSettings.locationOnBatterySaver
@@ -377,18 +378,16 @@ class UTagForegroundService: LifecycleService() {
             val isPassive = passiveModeRepository.isInPassiveMode(deviceId, true)
             when(tagState) {
                 TagConnectionState.D2D_CONNECTED -> {
-                    synchronized(tagConnections) {
-                        if (tagConnections[deviceId] !is ConnectedTagConnection) {
-                            tagConnections[deviceId]?.close()
-                            tagConnections[deviceId] = ConnectedTagConnection(
-                                deviceId,
-                                !tagConnections.containsKey(deviceId),
-                                ::onTagAutoSyncStarted,
-                                ::onTagAutoSyncFinished,
-                                ::onTagStatusChanged,
-                                remoteService ?: return
-                            )
-                        }
+                    if (tagConnections[deviceId] !is ConnectedTagConnection) {
+                        tagConnections[deviceId]?.close()
+                        tagConnections[deviceId] = ConnectedTagConnection(
+                            deviceId,
+                            !tagConnections.containsKey(deviceId),
+                            ::onTagAutoSyncStarted,
+                            ::onTagAutoSyncFinished,
+                            ::onTagStatusChanged,
+                            remoteService ?: return
+                        )
                     }
                     //Regardless of connect method, we're now connected so disable temp override
                     passiveModeRepository.setTemporaryOverride(deviceId, false)
@@ -396,67 +395,57 @@ class UTagForegroundService: LifecycleService() {
                     if(passiveModeRepository.isInPassiveMode(deviceId)) {
                         disconnect(deviceId)
                     }
-                    synchronized(tagDisconnectNotificationJobs) {
-                        //Cancel any existing notification delay job
-                        tagDisconnectNotificationJobs[deviceId]?.cancel()
-                        tagDisconnectNotificationJobs.remove(deviceId)
-                    }
+                    //Cancel any existing notification delay job
+                    tagDisconnectNotificationJobs[deviceId]?.cancel()
+                    tagDisconnectNotificationJobs.remove(deviceId)
                     dismissDisconnectNotificationIfNeeded(deviceId)
                 }
                 TagConnectionState.D2D_SCANNED -> {
                     runWithRemoteService {
                         connectAndNotifyResult(deviceId)
                     }
-                    synchronized(tagConnections) {
-                        if(tagConnections[deviceId] !is ScannedTagConnection) {
-                            tagConnections[deviceId]?.close()
-                            if(tagConnections[deviceId] is ConnectedTagConnection && !isPassive) {
-                                //Non-passive Tag disconnect, show notification
-                                shouldShowDisconnectNotification = true
-                            }
-                            tagConnections[deviceId] = ScannedTagConnection(
-                                deviceId,
-                                !tagConnections.containsKey(deviceId),
-                                ::onTagAutoSyncStarted,
-                                ::onTagAutoSyncFinished
-                            )
+                    if(tagConnections[deviceId] !is ScannedTagConnection) {
+                        tagConnections[deviceId]?.close()
+                        if(tagConnections[deviceId] is ConnectedTagConnection && !isPassive) {
+                            //Non-passive Tag disconnect, show notification
+                            shouldShowDisconnectNotification = true
                         }
+                        tagConnections[deviceId] = ScannedTagConnection(
+                            deviceId,
+                            !tagConnections.containsKey(deviceId),
+                            ::onTagAutoSyncStarted,
+                            ::onTagAutoSyncFinished
+                        )
                     }
                     //Only passive tags should be dismissed in this state
                     if(isPassive) {
-                        synchronized(tagDisconnectNotificationJobs) {
-                            //Cancel any existing notification delay job
-                            tagDisconnectNotificationJobs[deviceId]?.cancel()
-                            tagDisconnectNotificationJobs.remove(deviceId)
-                        }
+                        //Cancel any existing notification delay job
+                        tagDisconnectNotificationJobs[deviceId]?.cancel()
+                        tagDisconnectNotificationJobs.remove(deviceId)
                         dismissDisconnectNotificationIfNeeded(deviceId)
                     }
                 }
                 TagConnectionState.DEFAULT -> {
-                    synchronized(tagConnections) {
-                        if(tagConnections[deviceId] is ConnectedTagConnection && !isPassive) {
-                            //Non-passive Tag disconnect (straight to DEFAULT), show notification
-                            shouldShowDisconnectNotification = true
-                        }
-                        if(tagConnections[deviceId] is ScannedTagConnection && isPassive) {
-                            //Passive Tag disconnect, show notification
-                            shouldShowDisconnectNotification = true
-                        }
-                        tagConnections.remove(deviceId).also {
-                            it?.close()
-                        }
+                    if(tagConnections[deviceId] is ConnectedTagConnection && !isPassive) {
+                        //Non-passive Tag disconnect (straight to DEFAULT), show notification
+                        shouldShowDisconnectNotification = true
+                    }
+                    if(tagConnections[deviceId] is ScannedTagConnection && isPassive) {
+                        //Passive Tag disconnect, show notification
+                        shouldShowDisconnectNotification = true
+                    }
+                    tagConnections.remove(deviceId).also {
+                        it?.close()
                     }
                 }
             }
             if(shouldShowDisconnectNotification) {
                 //If Tag has disconnected, restart scan in case it's due to a crash
                 startScan()
-                synchronized(tagDisconnectNotificationJobs) {
-                    //Cancel any existing notification delay job
-                    tagDisconnectNotificationJobs[deviceId]?.cancel()
-                    tagDisconnectNotificationJobs[deviceId] =
-                        sendDisconnectNotificationIfNeeded(deviceId, isPassive)
-                }
+                //Cancel any existing notification delay job
+                tagDisconnectNotificationJobs[deviceId]?.cancel()
+                tagDisconnectNotificationJobs[deviceId] =
+                    sendDisconnectNotificationIfNeeded(deviceId, isPassive)
             }
             tagStates[deviceId] = tagState
             onTagStatesChanged()
@@ -601,24 +590,20 @@ class UTagForegroundService: LifecycleService() {
             val deviceIdHash = pair.first
             val enabled = pair.second
             if (!enabled) {
-                val deviceId = synchronized(tagConnections) {
-                    val connection = tagConnections.entries.firstOrNull {
-                        it.key.hashCode() == deviceIdHash
-                    }?.value as? ScannedTagConnection
-                    connection?.deviceId
-                }
+                val connection = tagConnections.entries.firstOrNull {
+                    it.key.hashCode() == deviceIdHash
+                }?.value as? ScannedTagConnection
+                val deviceId = connection?.deviceId
                 if (deviceId != null) {
                     runWithRemoteService {
                         connectAndNotifyResult(deviceId)
                     }
                 }
             } else {
-                val deviceId = synchronized(tagConnections) {
-                    val connection = tagConnections.entries.firstOrNull {
-                        it.key.hashCode() == deviceIdHash
-                    }?.value as? ConnectedTagConnection
-                    connection?.deviceId
-                }
+                val connection = tagConnections.entries.firstOrNull {
+                    it.key.hashCode() == deviceIdHash
+                }?.value as? ConnectedTagConnection
+                val deviceId = connection?.deviceId
                 if (deviceId != null) {
                     runWithRemoteService {
                         disconnect(deviceId)
@@ -690,15 +675,13 @@ class UTagForegroundService: LifecycleService() {
         passiveModeRepository.passiveModeTemporaryDisable.collect { enabled ->
             if(enabled == false) {
                 log("Passive mode temporary bypass disabled, disconnecting tags")
-                synchronized(tagConnections) {
-                    val connections = tagConnections.filterKeys {
-                        passiveModeRepository.isInPassiveMode(it)
-                    }.filterValues {
-                        it is ConnectedTagConnection
-                    }
-                    connections.iterator().forEach {
-                        disconnect(it.key)
-                    }
+                val connections = tagConnections.filterKeys {
+                    passiveModeRepository.isInPassiveMode(it)
+                }.filterValues {
+                    it is ConnectedTagConnection
+                }
+                connections.iterator().forEach {
+                    disconnect(it.key)
                 }
             }else{
                 log("Passive mode temporary bypass enabled")
@@ -911,10 +894,8 @@ class UTagForegroundService: LifecycleService() {
      *  Handle all tags being disconnected, due to a service death or Bluetooth being disabled
      */
     private fun onAllTagsDisconnected() {
-        synchronized(tagConnections) {
-            tagConnections.forEach { it.value.close() }
-            tagConnections.clear()
-        }
+        tagConnections.forEach { it.value.close() }
+        tagConnections.clear()
         whenCreated {
             tagStateChangeBus.emit(System.currentTimeMillis())
         }
@@ -1190,21 +1171,15 @@ class UTagForegroundService: LifecycleService() {
             )
         )
         //Remove this Job from the job map
-        synchronized(tagDisconnectNotificationJobs) {
-            tagDisconnectNotificationJobs.remove(id)
-        }
+        tagDisconnectNotificationJobs.remove(id)
     }
 
     private fun NotificationCompat.Builder.ongoing(
         isError: Boolean = false
     ) = apply {
-        val connectedTags = synchronized(tagConnections) {
-            tagConnections.filterValues { it is ConnectedTagConnection }
-        }
-        val passiveTags = synchronized(tagConnections) {
-            tagConnections.filterValues { it is ScannedTagConnection }.filterKeys {
-                passiveModeRepository.isInPassiveMode(it, ignoreBypass = true)
-            }
+        val connectedTags = tagConnections.filterValues { it is ConnectedTagConnection }
+        val passiveTags = tagConnections.filterValues { it is ScannedTagConnection }.filterKeys {
+            passiveModeRepository.isInPassiveMode(it, ignoreBypass = true)
         }
         val allTags = connectedTags + passiveTags
         val tagCount = allTags.size
@@ -1469,20 +1444,14 @@ class UTagForegroundService: LifecycleService() {
     }
 
     private fun onTagStatesChanged() = whenCreated {
-        val connectedDeviceIds = synchronized(tagConnections) {
-            tagConnections.filterValues {
-                it is ConnectedTagConnection
-            }.keys.toTypedArray()
-        }
-        val scannedDeviceIds = synchronized(tagConnections) {
-            tagConnections.filterValues {
-                it is ScannedTagConnection
-            }.keys.toTypedArray()
-        }
-        val passiveTags = synchronized(tagConnections) {
-            tagConnections.filterValues { it is ScannedTagConnection }.filterKeys {
-                passiveModeRepository.isInPassiveMode(it)
-            }
+        val connectedDeviceIds = tagConnections.filterValues {
+            it is ConnectedTagConnection
+        }.keys.toTypedArray()
+        val scannedDeviceIds = tagConnections.filterValues {
+            it is ScannedTagConnection
+        }.keys.toTypedArray()
+        val passiveTags = tagConnections.filterValues { it is ScannedTagConnection }.filterKeys {
+            passiveModeRepository.isInPassiveMode(it)
         }
         updateNotification()
         smartTagRepository.setConnectedTagCount(connectedDeviceIds.size + passiveTags.size)
@@ -1554,9 +1523,7 @@ class UTagForegroundService: LifecycleService() {
     private fun locateAndScheduleNext() = whenCreated {
         scheduleLocationAlarm()
         val results = ArrayList<SyncResult>()
-        val tagConnectionIterator = synchronized(tagConnections) {
-            tagConnections.values.iterator()
-        }
+        val tagConnectionIterator = tagConnections.values.iterator()
         tagConnectionIterator.forEach {
             it.syncLocationAndWait(false).also { result ->
                 results.add(result)
@@ -1620,9 +1587,7 @@ class UTagForegroundService: LifecycleService() {
 
     private fun ISmartTagSupportService.connectAndNotifyResult(deviceId: String) {
         val result = connect(deviceId)
-        synchronized(tagConnectCallbacks) {
-            tagConnectCallbacks.forEach { it.value.onTagConnectResult(deviceId, result) }
-        }
+        tagConnectCallbacks.forEach { it.value.onTagConnectResult(deviceId, result) }
     }
     
     private fun log(message: String) {
@@ -1639,76 +1604,54 @@ class UTagForegroundService: LifecycleService() {
     private inner class IUTagServiceImpl: IUTagService.Stub() {
         override fun addTagStateCallback(callback: ITagStateCallback): String {
             val callbackId = UUID.randomUUID().toString()
-            val connectedDeviceIds = synchronized(tagConnections) {
-                tagConnections.filterValues {
-                    it is ConnectedTagConnection
-                }.keys.toTypedArray()
-            }
-            val scannedDeviceIds = synchronized(tagConnections) {
-                tagConnections.filterValues {
-                    it is ScannedTagConnection
-                }.keys.toTypedArray()
-            }
+            val connectedDeviceIds = tagConnections.filterValues {
+                it is ConnectedTagConnection
+            }.keys.toTypedArray()
+            val scannedDeviceIds = tagConnections.filterValues {
+                it is ScannedTagConnection
+            }.keys.toTypedArray()
             callback.onConnectedTagsChanged(connectedDeviceIds, scannedDeviceIds)
-            synchronized(tagStateCallbacks) {
-                tagStateCallbacks[callbackId] = callback
-            }
+            tagStateCallbacks[callbackId] = callback
             return callbackId
         }
 
         override fun removeTagStateCallback(callbackId: String) {
-            synchronized(tagStateCallbacks) {
-                tagStateCallbacks.remove(callbackId)
-            }
+            tagStateCallbacks.remove(callbackId)
         }
 
         override fun addTagStatusCallback(callback: ITagStatusCallback): String {
             val callbackId = UUID.randomUUID().toString()
-            synchronized(tagStatusCallbacks) {
-                tagStatusCallbacks[callbackId] = callback
-            }
+            tagStatusCallbacks[callbackId] = callback
             return callbackId
         }
 
         override fun removeTagStatusCallback(callbackId: String) {
-            synchronized(tagStatusCallbacks) {
-                tagStatusCallbacks.remove(callbackId)
-            }
+            tagStatusCallbacks.remove(callbackId)
         }
 
         override fun addTagConnectResultCallback(callback: ITagConnectResultCallback): String {
             val callbackId = UUID.randomUUID().toString()
-            synchronized(tagConnectCallbacks) {
-                tagConnectCallbacks[callbackId] = callback
-            }
+            tagConnectCallbacks[callbackId] = callback
             return callbackId
         }
 
         override fun removeTagConnectResultCallback(callbackId: String?) {
-            synchronized(tagStatusCallbacks) {
-                tagConnectCallbacks.remove(callbackId)
-            }
+            tagConnectCallbacks.remove(callbackId)
         }
 
         override fun addAutoSyncLocationCallback(callback: ITagAutoSyncLocationCallback): String {
             val callbackId = UUID.randomUUID().toString()
-            synchronized(tagAutoSyncLocationCallbacks) {
-                tagAutoSyncLocationCallbacks[callbackId] = callback
-                //Send any currently syncing IDs
-                val autoSyncingIds = synchronized(tagConnections) {
-                    tagConnections.filter { it.value.isAutoSyncing }.map { it.key }
-                }
-                autoSyncingIds.forEach {
-                    callback.onStartSync(it)
-                }
+            tagAutoSyncLocationCallbacks[callbackId] = callback
+            //Send any currently syncing IDs
+            val autoSyncingIds = tagConnections.filter { it.value.isAutoSyncing }.map { it.key }
+            autoSyncingIds.forEach {
+                callback.onStartSync(it)
             }
             return callbackId
         }
 
         override fun removeAutoSyncLocationCallback(callbackId: String) {
-            synchronized(tagAutoSyncLocationCallbacks) {
-                tagAutoSyncLocationCallbacks.remove(callbackId)
-            }
+            tagAutoSyncLocationCallbacks.remove(callbackId)
         }
 
         override fun onGeofenceIntentReceived(intent: Intent) {

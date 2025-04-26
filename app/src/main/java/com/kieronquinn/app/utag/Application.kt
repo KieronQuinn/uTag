@@ -294,13 +294,13 @@ class Application: Application(), LifecycleEventObserver {
     private fun repositories() = module {
         single<SmartThingsRepository> { SmartThingsRepositoryImpl(get(), get()) }
         single<AuthRepository> { AuthRepositoryImpl(get(), get(), get(), get(), get(), get(), get()) }
-        single<ApiRepository> { ApiRepositoryImpl(get(), get(), get(), get(), get()) }
+        single<ApiRepository> { ApiRepositoryImpl(get(), get(), get(), get(), get(), get()) }
         single<DeviceRepository> { DeviceRepositoryImpl(get(), get(), get(), get()) }
         single<LocationRepository> { LocationRepositoryImpl(get(), get()) }
         single<GeocoderRepository> {
             GeocoderRepositoryImpl(get(), get())
         } bind RoomEncryptionFailedCallback::class
-        single<UserRepository> { UserRepositoryImpl(get(), get()) }
+        single<UserRepository> { UserRepositoryImpl(get(), get(), get()) }
         single<EncryptedSettingsRepository> { EncryptedSettingsRepositoryImpl(get()) }
         single<SmartTagServiceRepository> { SmartTagServiceRepositoryImpl(get()) }
         single<QcServiceRepository> { QcServiceRepositoryImpl(get()) }
