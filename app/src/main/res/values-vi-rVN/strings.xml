@@ -45,9 +45,9 @@
     <string name="permission_notification_title">Notification Permission</string>
     <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
     <string name="permission_notification_grant">Grant</string>
-    <string name="permission_battery_title">Disable Battery Optimisations for uTag</string>
+    <string name="permission_battery_title">Tắt Tối ưu hóa Pin cho uTag</string>
     <string name="permission_battery_content">This is required to keep uTag running in the background to monitor Tags</string>
-    <string name="permission_smartthings_battery_title">Disable Battery Optimisations for SmartThings</string>
+    <string name="permission_smartthings_battery_title">Tắt Tối ưu hóa Pin cho SmartThings</string>
     <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
     <string name="permission_battery_disable">Tắt</string>
     <string name="permission_analytics_title">Phân tích &amp; Báo cáo sự cố</string>
@@ -115,39 +115,39 @@
     <string name="settings_main_logout_error">An error occurred, check your connection and try again</string>
     <!-- Settings > Location -->
     <string name="settings_location_location">Vị trí</string>
-    <string name="settings_location_location_period_title">Location Refresh Frequency</string>
-    <string name="settings_location_location_period_content">How often to update the location for connected Tags: %1s</string>
+    <string name="settings_location_location_period_title">Tần suất Làm mới Vị trí</string>
+    <string name="settings_location_location_period_content">Bao lâu thì cập nhật vị trí cho các Tag đã kết nối: %1s</string>
     <string name="settings_location_location_period_summary_high">Tiêu thụ nhiều pin hơn</string>
-    <string name="settings_location_location_period_summary_low">May not update to your Tag\'s location often enough if you leave it behind</string>
-    <string name="settings_location_location_period_summary_never"><b>Warning:</b> Unless Passive Mode is enabled, your Tag does <b>not</b> update its location from other Samsung devices when in range of your device, so your Tag\'s location will not be automatically updated with this option!</string>
-    <string name="settings_location_location_battery_saver_title">Location Refresh on Battery Saver</string>
+    <string name="settings_location_location_period_summary_low">Có thể không cập nhật vị trí Tag của bạn đủ thường xuyên nếu bạn để quên nó</string>
+    <string name="settings_location_location_period_summary_never"><b>Cảnh báo:</b> Trừ khi Chế độ Thụ động đã được bật, Tag của bạn sẽ <b>không</b> cập nhật vị trí từ các thiết bị Samsung khác khi nằm trong phạm vi thiết bị của bạn, vì vậy vị trí của Tag của bạn sẽ không được tự động cập nhật với tùy chọn này!</string>
+    <string name="settings_location_location_battery_saver_title">Làm mới Vị trí ở Chế độ Tiết kiệm Pin</string>
     <string name="settings_location_location_battery_saver_content">Update Tag locations when Battery Saver is enabled</string>
     <string name="settings_location_location_staleness_title">Acceptable Staleness</string>
     <string name="settings_location_location_staleness_content">How old a location can be for it still to be used in location updates: %1s</string>
-    <string name="settings_location_location_staleness_none">Uses more battery</string>
-    <string name="settings_location_location_staleness_max">Location updates may be outdated</string>
+    <string name="settings_location_location_staleness_none">Tiêu thụ nhiều pin hơn</string>
+    <string name="settings_location_location_staleness_max">Thông tin cập nhật vị trí có thể bị lỗi thời</string>
     <string name="settings_location_location_safe_area_title">Khu vực An toàn</string>
-    <string name="settings_location_location_safe_area_content">Add &amp; configure Safe Areas for your Tags</string>
+    <string name="settings_location_location_safe_area_content">Thêm &amp; thiết lập Khu vực An toàn cho các Tag của bạn</string>
     <string name="settings_location_category_chaser_title">Find my Everything Network</string>
     <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
     <string name="settings_location_chaser_content">Send location updates for detected nearby Tags to Find my Everything network</string>
     <string name="settings_location_chaser_disabled">Not available on this device</string>
     <string name="settings_location_category_uts_title">Tag lạ</string>
-    <string name="settings_location_uts_title">Dò tag lạ</string>
+    <string name="settings_location_uts_title">Dò Tag lạ</string>
     <string name="settings_location_uts_content">Scan for unknown Tags and notify you when you may be being tracked</string>
     <string name="settings_location_category_widget_title">Tiện ích</string>
-    <string name="settings_location_widget_period_title">Widget Refresh Frequency</string>
-    <string name="settings_location_widget_period_content">How often to automatically update uTag widgets: %1s</string>
-    <string name="settings_location_widget_period_content_disabled">No widgets have been added</string>
-    <string name="settings_location_widget_period_never_content">Will only refresh when you tap refresh on a widget or a Tag\'s location is updated by uTag</string>
-    <string name="settings_location_widget_battery_saver_title">Widget Refresh on Battery Saver</string>
-    <string name="settings_location_widget_battery_saver_content">Refresh widgets when Battery Saver is enabled</string>
+    <string name="settings_location_widget_period_title">Tần suất Làm mới Tiện ích</string>
+    <string name="settings_location_widget_period_content">Bao lâu thì tự động cập nhật các tiện ích uTag: %1s</string>
+    <string name="settings_location_widget_period_content_disabled">Chưa có tiện ích nào được thêm</string>
+    <string name="settings_location_widget_period_never_content">Chỉ làm mới khi bạn chạm làm mới trên tiện ích hoặc vị trí Tag được cập nhật bởi uTag</string>
+    <string name="settings_location_widget_battery_saver_title">Làm mới Tiện ích ở Chế độ Tiết kiệm Pin</string>
+    <string name="settings_location_widget_battery_saver_content">Làm mới tiện ích khi Chế độ Tiết kiệm Pin được bật</string>
     <string name="settings_location_category_search_nearby_title">Tìm kiếm Gần đây</string>
     <string name="settings_location_uwb_title">Tìm kiếm Chính xác</string>
     <string name="settings_location_uwb_content">Dùng tìm kiếm chính xác (UWB) ở những nơi Tag của bạn hỗ trợ.</string>
     <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
     <string name="settings_location_uwb_long_distance_content">Allow directional precise finding over a longer distance, which may show incorrect directions when the Tag is not in line of sight.</string>
-    <string name="settings_location_uwb_disabled">Not available on your device</string>
+    <string name="settings_location_uwb_disabled">Không khả dụng trên thiết bị của bạn</string>
     <string name="settings_location_units_title">Đơn vị Khoảng cách</string>
     <string name="settings_location_units_system">Cập nhật theo hệ thống (%1s)</string>
     <string name="settings_location_units_metric">Hệ mét</string>
@@ -164,7 +164,7 @@
     <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
     <string name="settings_chaser_toast">Grant in settings</string>
     <!-- Settings > Location > Unknown Tag Scan -->
-    <string name="settings_uts_title">Scan for unknown Tags</string>
+    <string name="settings_uts_title">Dò Tag lạ</string>
     <string name="settings_uts_switch">Enable Scanning</string>
     <string name="settings_uts_info_title">Unknown Tag Scanning</string>
     <string name="settings_uts_info_content">When enabled, uTag will scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
@@ -175,11 +175,11 @@
     <string name="settings_uts_category_settings">Cài đặt</string>
     <string name="settings_uts_sensitivity_title">Sensitivity</string>
     <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
-    <string name="settings_uts_list_unknown_tag_title">Unknown Tag %1s</string>
+    <string name="settings_uts_list_unknown_tag_title">Tag Lạ %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Last seen %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Last seen at %1s</string>
     <string name="settings_uts_list_unknown_tag_safe">Reset Safe Tags</string>
-    <string name="settings_uts_list_empty_title">No Unknown Tags</string>
+    <string name="settings_uts_list_empty_title">Không có Tag Lạ</string>
     <string name="settings_uts_list_empty_content">No Tags have been detected nearby, or they have not met the criteria to be possibly tracking you.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_title">Clear Safe Tags?</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_content">This will reset Safe Tags, showing all Unknown Tags in the list and show future notifications if they are detected again.</string>
@@ -200,11 +200,11 @@
     <string name="settings_uts_tag_error_dialog_title">Lỗi</string>
     <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
     <string name="settings_uts_tag_error_dialog_close">Đóng</string>
-    <string name="settings_uts_sensitivity_very_high">Very High</string>
-    <string name="settings_uts_sensitivity_high">High</string>
+    <string name="settings_uts_sensitivity_very_high">Rất cao</string>
+    <string name="settings_uts_sensitivity_high">Cao</string>
     <string name="settings_uts_sensitivity_normal">Normal</string>
-    <string name="settings_uts_sensitivity_low">Low</string>
-    <string name="settings_uts_sensitivity_very_low">Very Low</string>
+    <string name="settings_uts_sensitivity_low">Thấp</string>
+    <string name="settings_uts_sensitivity_very_low">Rất thấp</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Hiển thị Vị trí</string>
     <string name="settings_map_show_location_content">Hiển thị vị trí của bạn trên bản đồ, nếu có</string>
@@ -225,9 +225,9 @@
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Mã hóa</string>
     <string name="settings_encryption_content">Đặt hoặc đặt lại một mã PIN để mã hóa vị trí ngoại tuyến</string>
-    <string name="settings_biometric_title">Biometric Entry</string>
-    <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
-    <string name="settings_biometric_content_disabled">Not available on this device</string>
+    <string name="settings_biometric_title">Xác thực Sinh trắc học</string>
+    <string name="settings_biometric_content">Yêu cầu xác thực sinh trắc học để truy cập cài đặt của uTag hoặc bản đồ của Tag</string>
+    <string name="settings_biometric_content_disabled">Không khả dụng trên thiết bị này</string>
     <!-- Settings > Advanced -->
     <string name="settings_advanced_analytics_title">Phân tích &amp; Báo cáo sự cố</string>
     <string name="settings_advanced_analytics_content">Bật phân tích ẩn danh &amp; báo cáo sự cố để giúp quá trình phát triển của uTag</string>
@@ -287,10 +287,10 @@
     <string name="map_connection_error_close">Đóng</string>
     <string name="map_address_encrypted">Vị trí được Mã hóa</string>
     <string name="map_address_unknown">Unknown Address</string>
-    <string name="map_address_denied">Couldn\'t get location</string>
+    <string name="map_address_denied">Không thể lấy vị trí</string>
     <string name="map_owner">Tag của %1s</string>
     <string name="map_owner_generic">Tag đã chia sẻ</string>
-    <string name="map_allow_location_access_title">Allow access to your location</string>
+    <string name="map_allow_location_access_title">Cho phép truy cập vị trí của bạn</string>
     <string name="map_allow_location_access_content">To locate and control this Tag, you need to allow uTag and SmartThings to access your location.</string>
     <string name="map_passive">Chế độ Thụ động</string>
     <string name="map_time_unknown">Unknown Time</string>
@@ -329,7 +329,7 @@
     <string name="tag_picker_category_favourites">Yêu thích</string>
     <string name="tag_picker_category_mine">Tag của Bạn</string>
     <string name="tag_picker_category_shared">Tag của %1s</string>
-    <string name="tag_picker_category_shared_unknown">Shared Tags</string>
+    <string name="tag_picker_category_shared_unknown">Các Tag đã chia sẻ</string>
     <string name="tag_picker_favourites_tip_title">Show multiple Tags on the map</string>
     <string name="tag_picker_favourites_tip_content">Set your Tags as a favourites and they will show on the map as well as your selected Tag</string>
     <string name="tag_picker_favourites_tip_action">Edit Favourites</string>
@@ -378,13 +378,13 @@
     <string name="tag_location_history_export_message">Đang xuất lịch sử ra, vui lòng chờ…</string>
     <string name="tag_location_history_export_success_toast">Hoàn tất xuất ra</string>
     <string name="tag_location_history_export_failed_toast">Xuất ra thất bại</string>
-    <string name="tag_location_history_info_title">Location Info</string>
+    <string name="tag_location_history_info_title">Thông tin Vị trí</string>
     <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
     <string name="tag_more_search_nearby">Tìm kiếm gần đây</string>
     <string name="tag_more_search_nearby_disabled">Tắt Chế độ Thụ động để sử dụng chức năng này</string>
-    <string name="tag_more_navigate">Navigate</string>
+    <string name="tag_more_navigate">Điều hướng</string>
     <string name="tag_more_category_notifications">Notifications</string>
     <string name="tag_more_notify_when_found">Notify me when it\'s found</string>
     <string name="tag_more_notify_when_found_dialog">You\'ll only be notified once when your device is found. If you lose the device again, you\'ll need to turn this on again</string>
@@ -395,7 +395,7 @@
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Bật</string>
     <string name="tag_more_notify_when_disconnected_switch">Bật</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_title">Safe Areas</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_title">Các Khu vực An toàn</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Notifications disabled</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
@@ -412,15 +412,15 @@
     <string name="tag_more_category_protect">Protect</string>
     <string name="tag_more_lost_mode_on">On</string>
     <string name="tag_more_lost_mode_off">Off</string>
-    <string name="tag_more_category_share">Share</string>
-    <string name="tag_more_shareable">Share this Tag\'s location</string>
+    <string name="tag_more_category_share">Chia sẻ</string>
+    <string name="tag_more_shareable">Chia sẻ vị trí của Tag này</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
-    <string name="tag_more_share">Allow access to your location</string>
+    <string name="tag_more_share">Cho phép truy cập vị trí của bạn</string>
     <string name="tag_more_advanced">Nâng cao</string>
     <string name="tag_more_passive_mode_title">Chế độ Thụ động</string>
     <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
     <string name="tag_more_passive_mode_content_enabled">Bật</string>
-    <string name="tag_more_battery">Battery</string>
+    <string name="tag_more_battery">Pin</string>
     <string name="tag_more_error_title">Lỗi</string>
     <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
     <string name="tag_more_error_close">Đóng</string>
@@ -453,8 +453,8 @@
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Enabled on a Samsung device</string>
-    <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
-    <string name="tag_more_find_device_remote_ring_disable_action">Disable find phone or tablet</string>
+    <string name="tag_more_find_device_remote_ring_enabled_content">Một điện thoại hoặc máy tính bảng Samsung đã được bật tùy chọn \"Tìm điện thoại hoặc máy tính bảng\" cho Tag này trong SmartThings. Sử dụng tùy chọn này cũng có thể làm đổ chuông một thiết bị khác. Tắt tìm điện thoại hoặc máy tính bảng để ngăn chặn điều này.</string>
+    <string name="tag_more_find_device_remote_ring_disable_action">Tắt tìm điện thoại hoặc máy tính bảng</string>
     <string name="tag_more_find_device_vibrate_title">Rung</string>
     <string name="tag_more_find_device_vibrate_content">Rung thiết bị khi reo chuông để tạo thêm tiếng ồn</string>
     <string name="tag_more_find_device_delay_title">Độ trễ Trước khi Đổ chuông</string>
@@ -532,7 +532,7 @@
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
-    <string name="emergency_contact_and_message">Emergency contact info and message</string>
+    <string name="emergency_contact_and_message">Thông tin liên hệ khẩn cấp và lời nhắn</string>
     <string name="emergency_contact_and_message_description">Show your emergency contact information and a message for the person who finds this Tag.</string>
     <string name="notify_me_when_its_found">Notify me when it\'s found</string>
     <string name="notify_found_description">You\'ll receive a notification when this Tag is found.</string>
@@ -545,8 +545,8 @@
     <string name="lost_mode_settings_email">Email (bắt buộc)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
     <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
-    <string name="lost_mode_settings_phone_number">Contact (optional)</string>
-    <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
+    <string name="lost_mode_settings_phone_number">Liên hệ (tùy chọn)</string>
+    <string name="lost_mode_settings_phone_number_default">Nhập thông tin liên hệ khẩn cấp của bạn trong trường hợp ai đó tìm thấy Tag của bạn và muốn liên hệ bạn</string>
     <string name="lost_mode_settings_message">Message</string>
     <string name="lost_mode_settings_error_dialog_title">Lỗi</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
@@ -600,18 +600,18 @@
     <string name="passive_mode_lost_functionality_footer"><b>Bạn có thể tắt Chế độ Thụ động bất cứ lúc nào mà không cần phải ở trong phạm vi của Tag, thậm chí chỉ tạm thời để lấy lại các chức năng này khi cần thiết.</b></string>
     <string name="passive_mode_disabled_dialog_content">Chế độ thụ động đã bị tắt, SmartThings có thể mất vài phút để kết nối lại với Tag của bạn nếu nó ở gần đây. Nếu không kết nối được, hãy mở SmartThings để thực hiện quá trình kết nối thủ công.</string>
     <!-- Battery levels -->
-    <string name="battery_unknown">Unknown</string>
+    <string name="battery_unknown">Không rõ</string>
     <string name="battery_very_low">Cần thay pin</string>
-    <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_low">Thấp</string>
+    <string name="battery_sufficient">Đủ dùng</string>
     <!-- Only used in export -->
-    <string name="battery_full">Full</string>
+    <string name="battery_full">Đầy</string>
     <string name="battery_update">Đã cập nhật %1s</string>
     <!-- Device Types -->
-    <string name="device_type_galaxy_phone">Galaxy Phone</string>
-    <string name="device_type_galaxy_tablet">Galaxy Tablet</string>
-    <string name="device_type_none_galaxy_phone">Non-Galaxy Phone</string>
-    <string name="device_type_none_galaxy_tablet">Non-Galaxy Tablet</string>
+    <string name="device_type_galaxy_phone">Điện thoại Galaxy</string>
+    <string name="device_type_galaxy_tablet">Máy tính bảng Galaxy</string>
+    <string name="device_type_none_galaxy_phone">Điện thoại không phải Galaxy</string>
+    <string name="device_type_none_galaxy_tablet">Máy tính bảng không phải Galaxy</string>
     <!-- D2D Status -->
     <string name="d2d_status_connected">Connected</string>
     <string name="d2d_status_scanned">Scanned</string>
@@ -636,7 +636,7 @@
     <!-- Location History intro -->
     <string name="location_history_date_picker">Date picker</string>
     <string name="location_history_guide_img_desc">Want to know where your pets have been throughout the day? Check the location history.</string>
-    <string name="location_history_guide_subheader">About location history</string>
+    <string name="location_history_guide_subheader">Về lịch sử vị trí</string>
     <string name="location_history_guide_text_1">Location history is only available for the past 7 days.</string>
     <string name="location_history_guide_text_2">Locations are approximate and may vary even if the device hasn\'t moved.</string>
     <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
@@ -688,7 +688,7 @@
     <string name="settings_encryption_pin_timeout_title">Hạn mã PIN</string>
     <string name="settings_encryption_pin_timeout_content">Khoảng thời gian trước khi mã PIN đã nhập bị xóa khỏi bộ nhớ, bắt buộc bạn phải nhập lại: %1s</string>
     <!-- Biometric prompt -->
-    <string name="biometric_prompt_title">Authenticate</string>
+    <string name="biometric_prompt_title">Xác thực</string>
     <string name="biometric_prompt_content_settings">Biometric authentication is required to access uTag\'s settings</string>
     <string name="biometric_prompt_content_map">Biometric authentication is required to access this Tag\'s location</string>
     <string name="biometric_prompt_content_widget">Biometric authentication is required to modify uTag widgets</string>
@@ -703,7 +703,7 @@
     <!-- About Footer -->
     <string name="xda_thread">Chủ đề XDA</string>
     <string name="github">GitHub</string>
-    <string name="libraries">Thư viện bên thư ba</string>
+    <string name="libraries">Thư viện bên thứ ba</string>
     <string name="donate">Quyên góp</string>
     <string name="bluesky">Theo dõi tôi trên Bluesky</string>
     <string name="about_version">Phiên bản %1s\nĐược tạo bởi Kieron Quinn</string>
@@ -713,9 +713,9 @@
     <string name="about_debug_disabled">Developer options disabled</string>
     <!-- Contributors -->
     <string name="contributors_oneui_title">OneUI Project</string>
-    <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
-    <string name="contributors_icons_title">Additional Icons</string>
-    <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
+    <string name="contributors_oneui_content">Các thành phần giao diện, kiểu dáng và biểu tượng của OneUI</string>
+    <string name="contributors_icons_title">Biểu tượng Bổ sung</string>
+    <string name="contributors_icons_content">Các biểu tượng bổ sung từ Material Design Icons (Pictogrammers Free Licence)</string>
     <!-- Update downloader -->
     <string name="snackbar_update">Có bản cập nhật mới</string>
     <string name="snackbar_update_multiple">Có nhiều bản cập nhật mới</string>
@@ -725,13 +725,13 @@
     <string name="update_title_utag">Bản cập nhật uTag</string>
     <string name="update_title_smartthings">Bản cập nhật SmartThings</string>
     <string name="update_heading">Có bản cập nhật uTag mới</string>
-    <string name="update_heading_smartthings">Có bản cập nhật SmartThings mới</string>
+    <string name="update_heading_smartthings">Có Bản cập nhật SmartThings mới</string>
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Các thay đổi</string>
     <string name="update_done_title">Sẵn sàng để cài đặt</string>
     <string name="update_done_content_utag"><b>Lưu ý:</b> Các Tag của bạn có thể mất kết nối trong quá trình cập nhật.</string>
     <string name="update_done_content_smartthings"><b>Lưu ý:</b> Các Tag của bạn có thể mất kết nối trong quá trình cập nhật.</string>
-    <string name="update_done_action">Bắt đầu Tải về</string>
+    <string name="update_done_action">Bắt đầu Cài đặt</string>
     <string name="update_action">Tải về</string>
     <string name="update_action_alt">Alternative download</string>
     <string name="download_manager_description">Đang tải bản cập nhật về…</string>
@@ -758,7 +758,7 @@
     <string name="notification_channel_find_content">Notifications shown when you use uTag to find your device by double pressing a Tag\'s button</string>
     <string name="notification_channel_left_behind_title">Left Behind Alerts</string>
     <string name="notification_channel_left_behind_content">Notifications shown when you leave a Tag behind and have \"Notify when left behind\" enabled</string>
-    <string name="notification_channel_unknown_tag_title">Unknown Tag Alerts</string>
+    <string name="notification_channel_unknown_tag_title">Cảnh báo Tag Lạ</string>
     <string name="notification_channel_unknown_tag_content">Notifications shown when an unknown Tag may be tracking you</string>
     <!-- Search nearby -->
     <string name="nearby_loading">Đang kết nối với %1s…</string>
@@ -805,7 +805,7 @@
     <string name="notification_title_background_service_error_short">uTag</string>
     <string name="notification_title_background_service_error">Lỗi uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
-    <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
+    <string name="notification_title_background_service_battery">Tắt Tối ưu hóa Pin</string>
     <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
     <string name="notification_title_background_service_permissions">Lỗi uTag</string>
     <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
@@ -819,10 +819,10 @@
     <string name="notification_content_logged_out">Bạn đã đăng xuất khỏi SmartThings. Chạm để đăng nhập lại.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Tìm Thiết bị của Tôi</string>
-    <string name="notification_content_find_my_device_delay">%1s sắp reo trên thiết bị này</string>
-    <string name="notification_content_find_my_device_delay_generic">Một tag sắp reo trên thiết bị này</string>
-    <string name="notification_content_find_my_device">%1s is ringing this device</string>
-    <string name="notification_content_find_my_device_generic">A Tag is ringing this device</string>
+    <string name="notification_content_find_my_device_delay">%1s sẽ sắp reo thiết bị này</string>
+    <string name="notification_content_find_my_device_delay_generic">Một Tag sẽ sắp reo thiết bị này</string>
+    <string name="notification_content_find_my_device">%1s đang reo thiết bị này</string>
+    <string name="notification_content_find_my_device_generic">Một Tag đang reo thiết bị này</string>
     <string name="notification_action_find_my_device">Dừng</string>
     <string name="notification_content_find_my_device_error">Unable to start ringing as Find my Device is not set up correctly, check the Tag\'s settings for more info</string>
     <!-- Unknown Tag -->
@@ -834,38 +834,38 @@
     <string name="notification_title_automation">Automation</string>
     <string name="notification_content_automation_error">Unable to start this automation as uTag is not set up correctly. Check the Tag\'s settings for more info</string>
     <!-- Refresh Periods -->
-    <string name="refresh_period_five_minutes">5 minutes</string>
-    <string name="refresh_period_ten_minutes">10 minutes</string>
-    <string name="refresh_period_fifteen_minutes">15 minutes</string>
-    <string name="refresh_period_twenty_minutes">20 minutes</string>
-    <string name="refresh_period_thirty_minutes">30 minutes</string>
-    <string name="refresh_period_sixty_minutes">1 hour</string>
+    <string name="refresh_period_five_minutes">5 phút</string>
+    <string name="refresh_period_ten_minutes">10 phút</string>
+    <string name="refresh_period_fifteen_minutes">15 phút</string>
+    <string name="refresh_period_twenty_minutes">20 phút</string>
+    <string name="refresh_period_thirty_minutes">30 phút</string>
+    <string name="refresh_period_sixty_minutes">1 tiếng</string>
     <string name="refresh_period_two_hours">2 hours</string>
     <string name="refresh_period_three_hours">3 hours</string>
     <string name="refresh_period_four_hours">4 hours</string>
     <string name="refresh_period_six_hours">6 hours</string>
     <string name="refresh_period_twelve_hours">12 hours</string>
     <string name="refresh_period_twenty_four_hours">24 hours</string>
-    <string name="refresh_period_never">Never</string>
+    <string name="refresh_period_never">Không bao giờ</string>
     <!-- Safe Area -->
-    <string name="notification_title_safe_area">Safe Area</string>
+    <string name="notification_title_safe_area">Khu vực An toàn</string>
     <string name="notification_content_safe_area_error_permissions">Unable to set up uTag Safe Areas. Check Location permissions are set to \"Allow all the time\" for uTag.</string>
     <string name="notification_content_safe_area_error_location">Unable to get location to update your Safe Areas. Disconnect notifications may be incorrect.</string>
-    <string name="notification_action_safe_area_retry">Retry</string>
+    <string name="notification_action_safe_area_retry">Thử lại</string>
     <string name="safe_area_save">Lưu</string>
-    <string name="safe_area_delete">Delete</string>
-    <string name="safe_area_active">Active</string>
-    <string name="safe_area_add">Add Safe Area</string>
+    <string name="safe_area_delete">Xóa</string>
+    <string name="safe_area_active">Hoạt động</string>
+    <string name="safe_area_add">Thêm Khu vực An toàn</string>
     <string name="safe_area_inactive">Inactive</string>
-    <string name="safe_area_dialog_delete_title">Delete Safe Area?</string>
+    <string name="safe_area_dialog_delete_title">Xóa Khu vực An toàn?</string>
     <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
-    <string name="safe_area_dialog_delete_delete">Delete</string>
+    <string name="safe_area_dialog_delete_delete">Xóa</string>
     <string name="safe_area_dialog_delete_cancel">Hủy</string>
     <string name="safe_area_dialog_save_title">Lưu các Thay đổi?</string>
     <string name="safe_area_dialog_save_content">Bạn có muốn lưu các thay đổi của bạn không?</string>
     <string name="safe_area_dialog_save_save">Lưu</string>
     <string name="safe_area_dialog_save_dont_save">Không lưu</string>
-    <string name="safe_area_type_title">Add Safe Area</string>
+    <string name="safe_area_type_title">Thêm Khu vực An toàn</string>
     <string name="safe_area_type_location_permission_title">Location Permissions Required</string>
     <string name="safe_area_type_location_permission_content">uTag requires location permissions to use Safe Areas. Android restrictions mean Wi-Fi network name &amp; MAC Addresses are treated as location data.</string>
     <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
@@ -875,35 +875,35 @@
     <string name="safe_area_category_settings">Cài đặt</string>
     <string name="safe_area_show_image_title">Show Map Image</string>
     <string name="safe_area_show_image_content">Show a static map showing where the Tag was last seen in the notification, where available.</string>
-    <string name="safe_area_show_image_content_biometrics"><b>Warning:</b> You have Biometric Entry enabled for uTag. This option will show the Tag\'s last location without needing to pass Biometrics, use this option with care.</string>
-    <string name="safe_area_type_location_title">Location</string>
+    <string name="safe_area_show_image_content_biometrics"><b>Cảnh báo:</b> Bạn đã bật tính năng Truy cập Sinh trắc học cho uTag. Tùy chọn này sẽ hiển thị vị trí cuối cùng của Tag mà không cần xác thực sinh trắc học, hãy thận trọng sử dụng tính năng này.</string>
+    <string name="safe_area_type_location_title">Vị trí</string>
     <string name="safe_area_type_location_content">Activate this Safe Area within a radius of a specified location</string>
     <string name="safe_area_type_wifi_title">Wi-Fi</string>
     <string name="safe_area_type_wifi_content">Activate this Safe Area when connected to a specified Wi-Fi network</string>
-    <string name="safe_area_wifi_name_title">Name</string>
+    <string name="safe_area_wifi_name_title">Tên</string>
     <string name="safe_area_wifi_name_content_empty">Automatically generate</string>
     <string name="safe_area_wifi_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, the network name will be used instead.</string>
-    <string name="safe_area_wifi_ssid_title">Network Name</string>
-    <string name="safe_area_wifi_ssid_content_empty">The name (SSID) of the Wi-Fi network</string>
+    <string name="safe_area_wifi_ssid_title">Tên Mạng</string>
+    <string name="safe_area_wifi_ssid_content_empty">Tên (SSID) của mạng Wi-Fi</string>
     <string name="safe_area_wifi_ssid_dialog_message">Enter the network name (SSID) of the Wi-Fi network this Safe Area will be active when connected to. Case sensitive, blank spaces around the name will be removed.</string>
     <string name="safe_area_wifi_mac_toggle_title_title">Yêu cầu địa chỉ MAC</string>
     <string name="safe_area_wifi_mac_toggle_title_content"><b>Optional:</b> Limit this Safe Area to a specific Wi-Fi MAC address, which may be useful if you have multiple Wi-Fi networks with the same name.</string>
-    <string name="safe_area_wifi_mac_title">MAC Address</string>
+    <string name="safe_area_wifi_mac_title">Địa chỉ MAC</string>
     <string name="safe_area_wifi_mac_content_empty">The MAC address of the Wi-Fi network</string>
     <string name="safe_area_wifi_mac_dialog_message">Enter the MAC address of the Wi-Fi network this Safe Area will be active when connected to. Optional, useful if you have multiple Wi-Fi networks using the same name.</string>
     <string name="safe_area_wifi_exit_buffer_title">Exit Buffer</string>
     <string name="safe_area_wifi_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that your Wi-Fi disconnects before the Tag does, but that it was left within the Safe Area.</string>
     <string name="safe_area_wifi_invalid_ssid">Enter a network name</string>
-    <string name="safe_area_wifi_invalid_mac">Enter a valid MAC address</string>
+    <string name="safe_area_wifi_invalid_mac">Nhập một địa chỉ MAC hợp lệ</string>
     <string name="safe_area_location_name_toast">Tap the map or drag the marker to move the Safe Area</string>
-    <string name="safe_area_location_name_title">Name</string>
-    <string name="safe_area_location_name_content_empty">Automatically generate</string>
+    <string name="safe_area_location_name_title">Tên</string>
+    <string name="safe_area_location_name_content_empty">Tự động tạo</string>
     <string name="safe_area_location_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, uTag will try to generate one from the approximate address of the location.</string>
     <string name="safe_area_location_radius_title">Bán kính</string>
     <string name="safe_area_location_radius_content">Kích thước của khu vực an toàn này</string>
     <string name="safe_area_location_exit_buffer_title">Exit Buffer</string>
     <string name="safe_area_location_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that you leave the location before the Tag disconnects, but that it was left within the Safe Area.</string>
-    <string name="safe_area_location_error_dialog_title">Couldn\'t get location</string>
+    <string name="safe_area_location_error_dialog_title">Không thể lấy vị trí</string>
     <string name="safe_area_location_error_dialog_content">Could not get your location, try again later</string>
     <string name="safe_area_location_error_dialog_close">Đóng</string>
     <string name="safe_area_buffer_none">Không</string>
@@ -922,10 +922,10 @@
     <string name="unsupported_intent_dialog_github">GitHub</string>
     <!-- Location Staleness -->
     <string name="location_staleness_none">Tắt</string>
-    <string name="location_staleness_thirty_seconds">30 seconds</string>
-    <string name="location_staleness_one_minute">1 minute</string>
-    <string name="location_staleness_two_minutes">2 minutes</string>
-    <string name="location_staleness_three_minutes">3 minutes</string>
+    <string name="location_staleness_thirty_seconds">30 giây</string>
+    <string name="location_staleness_one_minute">1 phút</string>
+    <string name="location_staleness_two_minutes">2 phút</string>
+    <string name="location_staleness_three_minutes">3 phút</string>
     <!-- Widget -->
     <string name="widget_location">Tag Locations</string>
     <string name="widget_history">Tag Location History</string>
@@ -956,19 +956,19 @@
     <string name="widget_configuration_preview_empty">Chọn một Tag để xem bản xem trước</string>
     <string name="widget_configuration_preview_error">Lỗi tải bản xem trước, thử lại sau</string>
     <string name="widget_configuration_preview_loading">Đang tải bản xem trước…</string>
-    <string name="widget_configuration_options_label">Options</string>
+    <string name="widget_configuration_options_label">Tuỳ chọn</string>
     <string name="widget_configuration_location_devices_title">Các Tag đã Chọn</string>
     <string name="widget_configuration_location_devices_content">Chọn các Tag để hiển thị trong tiện ích này</string>
     <string name="widget_configuration_location_click_device_title">Launch Tag</string>
     <string name="widget_configuration_location_click_device_content">The Tag to display in uTag when this widget is clicked: %1s</string>
     <string name="widget_configuration_location_status_device_title">Priority Tag</string>
     <string name="widget_configuration_location_status_device_content">The Tag to display on top and show the last updated time for: %1s</string>
-    <string name="widget_configuration_location_footer_title">Location Updates</string>
+    <string name="widget_configuration_location_footer_title">Cập nhật Vị trí</string>
     <string name="widget_configuration_location_footer_content">The Tag Locations widget displays the latest location of Tags from the server. Pressing refresh simply updates the widget with the latest server location - it does not update the Tag\'s location if it is connected.\n\nYou can set the frequency of automatic widget refreshes in the uTag settings.</string>
     <string name="widget_configuration_history_device_title">Tag đã chọn</string>
     <string name="widget_configuration_history_device_content">Chọn Tag để hiển thị trong tiện ích này</string>
-    <string name="widget_configuration_biometric_warning_title">Biometric Warning</string>
-    <string name="widget_configuration_biometric_warning_content">You have Biometric Entry enabled for uTag. Widgets will show Tag locations without needing to pass Biometrics, use this option with care.</string>
+    <string name="widget_configuration_biometric_warning_title">Cảnh báo Sinh trắc học</string>
+    <string name="widget_configuration_biometric_warning_content">Bạn đã bật tính năng Truy cập Sinh trắc học cho uTag. Tiện ích sẽ hiển thị vị trí của Tag mà không cần xác thực sinh trắc học, hãy thận trọng sử dụng tính năng này.</string>
     <!-- Smartspacer Plugin -->
     <string name="smartspacer_plugin_left_behind_title">Left Behind Alerts</string>
     <string name="smartspacer_plugin_left_behind_description">Display Left Behind Alerts for Tags with the option enabled</string>
@@ -977,7 +977,7 @@
     <string name="smartspacer_plugin_location_title">Tag Locations</string>
     <string name="smartspacer_plugin_location_description">Display Tag locations and an approximate address, if available</string>
     <string name="smartspacer_plugin_location_description_set">Display %1s locations and an approximate address, if available</string>
-    <string name="smartspacer_plugin_history_title">Tag Location History</string>
+    <string name="smartspacer_plugin_history_title">Lịch sử Vị trí của Tag</string>
     <string name="smartspacer_plugin_history_description">Display a Tag\'s location history and an approximate address, if available</string>
     <string name="smartspacer_plugin_history_description_set">Display %1s\'s location history and an approximate address, if available</string>
     <!-- Backup & Restore -->
@@ -994,7 +994,7 @@
     <string name="backup_restore_included_bull6">Cấu hình Tìm Thiết bị của Tôi</string>
     <string name="backup_restore_included_footer">* Configuration is backed up, but you may need to re-enable options to synchronise with your Tags</string>
     <string name="backup_restore_not_included_title">Không bao gồm trong Bản sao lưu</string>
-    <string name="backup_restore_not_included_bull1">Tag Locations &amp; Location History*</string>
+    <string name="backup_restore_not_included_bull1">Các Vị trí của Tag &amp; Lịch sử Vị trí*</string>
     <string name="backup_restore_not_included_bull2">Tag Lost Mode &amp; offline location encryption options*</string>
     <string name="backup_restore_not_included_bull3">Các tùy chọn mã PIN &amp; xác thực sinh trắc học của bạn</string>
     <string name="backup_restore_not_included_bull4">Các cấu hình tiện ích</string>
@@ -1013,7 +1013,7 @@
     <string name="backup_creating_passive_mode_configs_backup">Backing up passive mode configuration…</string>
     <string name="backup_creating_wifi_safe_areas_backup">Backing up Wi-Fi Safe Areas…</string>
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
-    <string name="backup_creating_settings_backup">Backing up settings…</string>
+    <string name="backup_creating_settings_backup">Đang sao lưu các cài đặt…</string>
     <string name="backup_created">Đã tạo bản sao lưu</string>
     <string name="backup_error">Lỗi</string>
     <!-- Restore -->
@@ -1063,7 +1063,7 @@
     <string name="updates_smartthings_external_title">SmartThings</string>
     <string name="updates_smartthings_external_content">SmartThings updates on your device are handled externally</string>
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
-    <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
+    <string name="updates_smartthings_not_installed_title">SmartThings Chưa được Cài đặt</string>
     <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
     <string name="updates_smartthings_not_installed_action">Chạy lại thiết lập</string>
     <string name="updates_smartthings_not_modded_title">SmartThings Chưa được Mod</string>
