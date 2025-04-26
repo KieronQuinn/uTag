@@ -96,12 +96,16 @@ class EncryptedFileProvider: ContentProvider() {
         private val output: OutputStream
     ): Thread() {
         override fun run() {
-            val bytes = input.readBytes()
-            val decrypted = widgetRepository.decryptImage(bytes) ?: byteArrayOf()
-            output.write(decrypted)
-            input.close()
-            output.flush()
-            output.close()
+            try {
+                val bytes = input.readBytes()
+                val decrypted = widgetRepository.decryptImage(bytes) ?: byteArrayOf()
+                output.write(decrypted)
+                output.flush()
+                output.close()
+                input.close()
+            }catch (e: Exception) {
+                //Nothing we can do
+            }
         }
     }
 

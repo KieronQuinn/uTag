@@ -10,10 +10,10 @@ import com.kieronquinn.app.utag.model.GeoLocation
 import com.kieronquinn.app.utag.networking.model.smartthings.GeoLocationResponse.KeyPair
 import com.kieronquinn.app.utag.providers.PinProvider
 import com.kieronquinn.app.utag.repositories.EncryptionRepository.Companion.ACTION_PIN_STAGE_CHANGED
-import com.kieronquinn.app.utag.repositories.EncryptionRepository.Companion.ENCRYPTION_REG_DATE_FORMAT
 import com.kieronquinn.app.utag.repositories.EncryptionRepository.DecryptionResult
-import com.kieronquinn.app.utag.utils.extensions.broadcastReceiverAsFlow
+import com.kieronquinn.app.utag.utils.extensions.SAMSUNG_DATE_FORMAT
 import com.kieronquinn.app.utag.utils.extensions.firstNotNull
+import com.kieronquinn.app.utag.utils.extensions.shared.broadcastReceiverAsFlow
 import com.kieronquinn.app.utag.xposed.extensions.applySecurity
 import com.kieronquinn.app.utag.xposed.extensions.verifySecurity
 import kotlinx.coroutines.Dispatchers
@@ -34,7 +34,6 @@ import java.security.SecureRandom
 import java.security.spec.PKCS8EncodedKeySpec
 import java.time.ZoneId
 import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
 import javax.crypto.Cipher
 import javax.crypto.spec.IvParameterSpec
 import javax.crypto.spec.SecretKeySpec
@@ -45,8 +44,6 @@ interface EncryptionRepository {
     companion object {
         internal const val ACTION_PIN_STAGE_CHANGED =
             "${BuildConfig.APPLICATION_ID}.action.PIN_STATE_CHANGED"
-        val ENCRYPTION_REG_DATE_FORMAT: DateTimeFormatter =
-            DateTimeFormatter.ofPattern("yyyyMMddHHmmss")
 
         fun notifyPinStateChanged(context: Context) {
             context.sendBroadcast(Intent(ACTION_PIN_STAGE_CHANGED).apply {
@@ -118,8 +115,10 @@ class EncryptionRepositoryImpl(
     private val random = SecureRandom()
     private val scope = MainScope()
 
-    private val pinTimeout = encryptedSettingsRepository.pinTimeout.asFlow()
-        .stateIn(scope, SharingStarted.Eagerly, null)
+    private val pinTimeout by lazy {
+        encryptedSettingsRepository.pinTimeout.asFlow()
+            .stateIn(scope, SharingStarted.Eagerly, null)
+    }
 
     private var pin: String? = null
     private var pinTime: Long? = null
@@ -297,7 +296,7 @@ class EncryptionRepositoryImpl(
                     iv = Base64.encodeToString(iv, Base64.NO_WRAP),
                     regDate = ZonedDateTime.now()
                         .withZoneSameInstant(ZoneId.of("UTC"))
-                        .format(ENCRYPTION_REG_DATE_FORMAT)
+                        .format(SAMSUNG_DATE_FORMAT)
                 )
             }catch (e: Exception) {
                 null

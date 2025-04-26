@@ -19,3 +19,14 @@ fun Locale_getDefaultWithCountry(): Locale {
     if(default.country.isNotEmpty()) return system
     return Locale.US
 }
+
+private val localeMap by lazy {
+    Locale.getISOCountries().associate { country ->
+        val locale = Locale("", country)
+        Pair(locale.isO3Country, locale.country)
+    }
+}
+
+fun String.iso3Toiso2Country(): String? {
+    return localeMap[this]
+}

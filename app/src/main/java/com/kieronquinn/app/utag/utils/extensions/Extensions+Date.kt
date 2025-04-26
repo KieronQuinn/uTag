@@ -8,7 +8,9 @@ import java.time.LocalDateTime
 import java.time.ZoneId
 import java.time.ZoneOffset
 import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 import java.util.Date
+import java.util.Locale
 
 fun LocalDateTime.toEpochMilli(offset: ZoneOffset = ZonedDateTime.now().offset): Long {
     return toInstant(offset).toEpochMilli()
@@ -32,6 +34,12 @@ fun Long.formatTimeSince(): CharSequence {
         System.currentTimeMillis(),
         DateUtils.SECOND_IN_MILLIS
     )
+}
+
+val SAMSUNG_DATE_FORMAT = DateTimeFormatter.ofPattern("yyyyMMddHHmmss", Locale.ENGLISH)
+
+fun Long.formatSamsungTimestamp(): String {
+    return SAMSUNG_DATE_FORMAT.format(Instant.ofEpochMilli(this).atZone(ZoneId.systemDefault()))
 }
 
 fun ZonedDateTime.getUtcOffset(): String {

@@ -79,6 +79,7 @@ import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.withTimeoutOrNull
+import org.json.JSONException
 import org.json.JSONObject
 import java.lang.ref.WeakReference
 import java.lang.reflect.Modifier
@@ -133,6 +134,9 @@ class Xposed: IXposedHookLoadPackage {
         private val COMPONENT_FME = ComponentName(
             "com.samsung.android.oneconnect", "com.samsung.android.plugin.fme.MainActivity"
         )
+
+        private const val ACTIVITY_SHORTCUT =
+            "com.samsung.android.oneconnect.ui.DummyActivityForShortcut"
 
         const val ACTION_TAG_DEVICE_STATUS_CHANGED =
             "$APPLICATION_ID.action.TAG_DEVICE_STATUS_CHANGED"
@@ -292,6 +296,7 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookCheckDisconnect(this, packageInfo)
         lpparam.hookOneConnectPushNotifications(this, packageInfo)
         lpparam.hookSamsungAccount()
+        lpparam.hookShortcutActivity()
         if(requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
                 applySecurity(this@handleLoadApplication)
@@ -698,6 +703,36 @@ class Xposed: IXposedHookLoadPackage {
                         .contains(param.thisObject::class.java.name)
                     if(showWarning && !isUtagInstalled) {
                         activity.showUTagUninstalledDialog()
+                    }
+                }
+            }
+        )
+    }
+
+    private fun LoadPackageParam.hookShortcutActivity() {
+        XposedHelpers.findAndHookMethod(
+            ACTIVITY_SHORTCUT,
+            classLoader,
+            "onCreate",
+            Bundle::class.java,
+            object: XC_MethodHook() {
+                override fun afterHookedMethod(param: MethodHookParam) {
+                    super.afterHookedMethod(param)
+                    val activity = param.thisObject as Activity
+                    val intent = activity.intent ?: return
+                    val code = intent.getStringExtra("code") ?: return
+                    if(code.startsWith("MO_FME_V_")) {
+                        val data = intent.getStringExtra("data")?.let {
+                            try {
+                                JSONObject(it)
+                            }catch (e: JSONException) {
+                                null
+                            }
+                        } ?: return
+                        val deviceId = data.getString("stDevId") ?: return
+                        val intent = TagActivity_createIntent(deviceId)
+                        activity.startActivity(intent)
+                        activity.finish()
                     }
                 }
             }
@@ -1199,8 +1234,8 @@ class Xposed: IXposedHookLoadPackage {
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
-                    val deviceId = param.args[0] as String
-                    val characteristics = param.args[1] as UUID
+                    val deviceId = param.args.firstNotNullOfOrNull { it as? String } ?: return
+                    val characteristics = param.args.firstNotNullOfOrNull { it as? UUID } ?: return
                     val value = param.args[2] as ByteArray
                     val intent = Intent(ACTION_TAG_DEVICE_STATUS_CHANGED).apply {
                         applySecurity(context)
@@ -1310,10 +1345,10 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect.feature.blething.tag.repository.SmartTagCachedResource",
             classLoader
         )
-        val lookupMethod = smartTagCachedResource.getAllInterfaces().firstNotNullOfOrNull { int ->
-            int.declaredMethods.firstOrNull {
+        val lookupMethods = smartTagCachedResource.getAllInterfaces().firstNotNullOfOrNull { int ->
+            int.declaredMethods.filter {
                 it.returnType.methods.any { m -> m.name == "getServiceData" }
-            }
+            }.takeIf { it.isNotEmpty() }
         }
         XposedBridge.hookMethod(
             notifyMethod,
@@ -1323,7 +1358,9 @@ class Xposed: IXposedHookLoadPackage {
                     val tagInfo = param.args[0]
                     val deviceId = tagInfo.javaClass.fields.first().get(tagInfo) as String
                     val repository = repositoryMethod.invoke(param.thisObject)
-                    val deviceInfo = lookupMethod?.invoke(repository, deviceId) ?: return
+                    val deviceInfo = lookupMethods?.firstNotNullOfOrNull {
+                        it.invoke(repository, deviceId)
+                    } ?: return
                     val serviceData = XposedHelpers.callMethod(
                         deviceInfo,
                         "getServiceData"
