@@ -543,6 +543,8 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
                 getString(R.string.map_address_encrypted)
             }
             state.requiresMutualAgreement -> getString(R.string.map_address_denied)
+            //Not allowed after mutual agreement check is when the device isn't owned by the user
+            locationState is LocationState.NotAllowed -> getString(R.string.tag_picker_not_allowed)
             else -> getString(R.string.map_address_unknown)
         }
         val statuses = ArrayList<String>()

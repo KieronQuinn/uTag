@@ -36,6 +36,7 @@ import com.kieronquinn.app.utag.repositories.ApiRepository.GetLocationResult
 import com.kieronquinn.app.utag.repositories.EncryptionRepository.DecryptionResult
 import com.kieronquinn.app.utag.utils.extensions.Locale_getDefaultWithCountry
 import com.kieronquinn.app.utag.utils.extensions.get
+import com.kieronquinn.app.utag.utils.extensions.iso3Toiso2Country
 import retrofit2.Retrofit
 import java.io.IOException
 
@@ -201,6 +202,7 @@ interface ApiRepository {
 class ApiRepositoryImpl(
     private val encryptedSettingsRepository: EncryptedSettingsRepository,
     private val encryptionRepository: EncryptionRepository,
+    private val userRepository: UserRepository,
     private val gson: Gson,
     context: Context,
     retrofit: Retrofit
@@ -212,6 +214,11 @@ class ApiRepositoryImpl(
 
     private val installedAppsService = InstalledAppsService.createService(context, retrofit)
     private val findService = FindService.createService(context, retrofit)
+
+    private suspend fun getSTCountryCode(): String? {
+        return userRepository.getUserInfo()?.countryCode?.iso3Toiso2Country()
+            ?: Locale_getDefaultWithCountry().country
+    }
 
     override suspend fun getInstalledAppId(): String? {
         return installedAppsService.getInstalledAppId()
@@ -227,7 +234,7 @@ class ApiRepositoryImpl(
     }
 
     override suspend fun getUserOptions(): UserOptionsResponse? {
-        val countryCode = Locale_getDefaultWithCountry().country
+        val countryCode = getSTCountryCode() ?: return null
         return installedAppsService.get<UserOptionsResponse>(
             Method.GET,
             uri = "/user/options",
@@ -240,7 +247,7 @@ class ApiRepositoryImpl(
     }
 
     override suspend fun setTermsAgreed(): Boolean {
-        val countryCode = Locale_getDefaultWithCountry().country
+        val countryCode = getSTCountryCode() ?: return false
         return try {
             installedAppsService.request(
                 Method.POST,

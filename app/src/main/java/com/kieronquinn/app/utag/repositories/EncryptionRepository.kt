@@ -12,8 +12,8 @@ import com.kieronquinn.app.utag.providers.PinProvider
 import com.kieronquinn.app.utag.repositories.EncryptionRepository.Companion.ACTION_PIN_STAGE_CHANGED
 import com.kieronquinn.app.utag.repositories.EncryptionRepository.DecryptionResult
 import com.kieronquinn.app.utag.utils.extensions.SAMSUNG_DATE_FORMAT
+import com.kieronquinn.app.utag.utils.extensions.broadcastReceiverAsFlow
 import com.kieronquinn.app.utag.utils.extensions.firstNotNull
-import com.kieronquinn.app.utag.utils.extensions.shared.broadcastReceiverAsFlow
 import com.kieronquinn.app.utag.xposed.extensions.applySecurity
 import com.kieronquinn.app.utag.xposed.extensions.verifySecurity
 import kotlinx.coroutines.Dispatchers

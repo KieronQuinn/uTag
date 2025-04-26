@@ -85,6 +85,14 @@ interface EncryptedSettingsRepository: BaseSettingsRepository {
     val userId: UTagSetting<String>
 
     /**
+     *  The user's country, which comes from [UserRepository.getUserInfo], but is cached to be used
+     *  in request headers. If this is not provided, we will use either `USA` or `GBR`, based on
+     *  [authServerUrl]
+     */
+    @IgnoreInBackup
+    val authCountryCode: UTagSetting<String>
+
+    /**
      *  The user's saved PIN, if they chose to save it
      */
     @IgnoreInBackup
@@ -284,6 +292,7 @@ class EncryptedSettingsRepositoryImpl(
         private const val KEY_OFFLINE_ACCESS_TOKEN = "offline_access_token"
         private const val KEY_OFFLINE_ACCESS_REFRESH_TOKEN = "offline_access_refresh_token"
         private const val KEY_USER_ID = "user_id"
+        private const val KEY_AUTH_COUNTRY_CODE = "auth_country_code"
         private const val KEY_SAVED_PIN = "saved_pin"
         private const val KEY_BIOMETRIC_PROMPT_ENABLED = "biometric_prompt_enabled"
         private const val DEFAULT_BIOMETRIC_PROMPT_ENABLED = false
@@ -343,6 +352,7 @@ class EncryptedSettingsRepositoryImpl(
     override val offlineAccessToken = string(KEY_OFFLINE_ACCESS_TOKEN, "")
     override val offlineAccessRefreshToken = string(KEY_OFFLINE_ACCESS_REFRESH_TOKEN, "")
     override val userId = string(KEY_USER_ID, "")
+    override val authCountryCode = string(KEY_AUTH_COUNTRY_CODE, "")
     override val savedPin = string(KEY_SAVED_PIN, "")
     override val pinTimeout = enum(KEY_PIN_TIMEOUT, DEFAULT_PIN_TIMEOUT)
 
