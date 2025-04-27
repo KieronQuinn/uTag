@@ -187,7 +187,7 @@
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">Hủy</string>
     <string name="settings_uts_tag_title">Unknown Tag detected near you</string>
     <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
-    <string name="settings_uts_tag_first">First seen at %1s</string>
+    <string name="settings_uts_tag_first">Thấy lần đầu ở %1s</string>
     <string name="settings_uts_tag_last">Last seen %1s</string>
     <string name="settings_uts_tag_last_at">Thấy lần cuối ở %1s</string>
     <string name="settings_uts_tag_unknown_address">Unknown Address</string>
