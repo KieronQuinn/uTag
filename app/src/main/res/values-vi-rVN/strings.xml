@@ -44,7 +44,7 @@
     <string name="permission_smartthings_grant">Cho phép trong Cài đặt</string>
     <string name="permission_notification_title">Notification Permission</string>
     <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
-    <string name="permission_notification_grant">Grant</string>
+    <string name="permission_notification_grant">Cho phép</string>
     <string name="permission_battery_title">Tắt Tối ưu hóa Pin cho uTag</string>
     <string name="permission_battery_content">This is required to keep uTag running in the background to monitor Tags</string>
     <string name="permission_smartthings_battery_title">Tắt Tối ưu hóa Pin cho SmartThings</string>
@@ -88,7 +88,7 @@
     <string name="settings_main_smartthings_open">Mở SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
     <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
-    <string name="settings_main_permissions_action">Grant in settings</string>
+    <string name="settings_main_permissions_action">Cho phép trong cài đặt</string>
     <string name="settings_main_category_settings">Cài đặt</string>
     <string name="settings_main_location_title">Vị trí &amp; Tìm kiếm</string>
     <string name="settings_main_location_content">Cập nhật vị trí, tùy chọn tìm kiếm gần đây, làm mới tiện ích, tag lạ, mạng lưới và khu vực an toàn</string>
@@ -162,7 +162,7 @@
     <string name="settings_chaser_count_content_other">You have contributed %1d locations to the Find my Everything network</string>
     <string name="settings_chaser_error_title">Lỗi</string>
     <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
-    <string name="settings_chaser_toast">Grant in settings</string>
+    <string name="settings_chaser_toast">Cho phép trong cài đặt</string>
     <!-- Settings > Location > Unknown Tag Scan -->
     <string name="settings_uts_title">Dò Tag lạ</string>
     <string name="settings_uts_switch">Enable Scanning</string>
@@ -177,7 +177,7 @@
     <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
     <string name="settings_uts_list_unknown_tag_title">Tag Lạ %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Last seen %1s</string>
-    <string name="settings_uts_list_unknown_tag_content_at">Last seen at %1s</string>
+    <string name="settings_uts_list_unknown_tag_content_at">Thấy lần cuối ở %1s</string>
     <string name="settings_uts_list_unknown_tag_safe">Reset Safe Tags</string>
     <string name="settings_uts_list_empty_title">Không có Tag Lạ</string>
     <string name="settings_uts_list_empty_content">No Tags have been detected nearby, or they have not met the criteria to be possibly tracking you.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
@@ -189,7 +189,7 @@
     <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
     <string name="settings_uts_tag_first">First seen at %1s</string>
     <string name="settings_uts_tag_last">Last seen %1s</string>
-    <string name="settings_uts_tag_last_at">Last seen at %1s</string>
+    <string name="settings_uts_tag_last_at">Thấy lần cuối ở %1s</string>
     <string name="settings_uts_tag_unknown_address">Unknown Address</string>
     <string name="settings_uts_tag_open">Open SmartThings</string>
     <string name="settings_uts_tag_safe">This Tag is Safe</string>
@@ -871,7 +871,7 @@
     <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
     <string name="safe_area_type_background_location_permission_content">uTag requires background location permissions update Safe Areas while not in the foreground.</string>
     <string name="safe_area_type_grant">Grant Permission</string>
-    <string name="safe_area_type_toast">Grant in settings</string>
+    <string name="safe_area_type_toast">Cho phép trong cài đặt</string>
     <string name="safe_area_category_settings">Cài đặt</string>
     <string name="safe_area_show_image_title">Show Map Image</string>
     <string name="safe_area_show_image_content">Show a static map showing where the Tag was last seen in the notification, where available.</string>
