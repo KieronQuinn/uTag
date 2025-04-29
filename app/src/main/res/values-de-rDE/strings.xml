@@ -480,7 +480,7 @@
     <string name="tag_more_automation_shared_tag_warning_dialog_content">This Tag is shared with other users. The Automations option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may send the event the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_dismiss">Understood</string>
     <string name="tag_more_automation_press_title">Pressed</string>
-    <string name="tag_more_automation_press_content">Launch %1s</string>
+    <string name="tag_more_automation_press_content">Starte %1s</string>
     <string name="tag_more_automation_press_content_unset">No action set</string>
     <string name="tag_more_automation_press_content_error">Additional permission required</string>
     <string name="tag_more_automation_press_content_disabled">Disable the \"Pressed\" Automation action in SmartThings to use this option</string>
@@ -524,7 +524,7 @@
     <string name="button_volume_level_low">Low</string>
     <string name="button_volume_level_high">High</string>
     <!-- More Battery Dialog -->
-    <string name="tag_more_battery_dialog_title">Battery information</string>
+    <string name="tag_more_battery_dialog_title">Batterie Information</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
     <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
     <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
