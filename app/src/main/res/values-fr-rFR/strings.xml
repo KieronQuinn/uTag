@@ -553,83 +553,83 @@
     <string name="lost_mode_settings_error_dialog_close">Fermer</string>
     <string name="lost_mode_settings_error_toast">Une erreur est survenue, réessayez ultérieurement</string>
     <string name="lost_mode_custom_url_set_title">URL personnalisé défini</string>
-    <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
-    <string name="lost_mode_settings_category_advanced">Advanced</string>
-    <string name="lost_mode_settings_custom_url_title">Custom URL</string>
-    <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
-    <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
-    <string name="lost_mode_settings_custom_url_content_passive">Disable Passive Mode to use this option</string>
-    <string name="lost_mode_settings_custom_url_warning_title">Important Warning</string>
-    <string name="lost_mode_settings_custom_url_warning_content">Setting a custom URL overwrites the original URL which is stored on the Tag. uTag will try to keep the original URL backed up, however <b>if you edit or turn off Lost Mode using the SmartThings app, it will be lost permanently</b>. You are advised to keep a second, external copy of this original URL stored safely elsewhere.</string>
-    <string name="lost_mode_settings_custom_url_warning_action">Copy original URL</string>
-    <string name="lost_mode_settings_custom_url_warning_action_label">%1s\'s original URL</string>
-    <string name="lost_mode_settings_custom_url_warning_action_toast">Copied to clipboard</string>
-    <string name="lost_mode_settings_custom_url_lost_title">Important Warning</string>
-    <string name="lost_mode_settings_custom_url_lost_content">Lost Mode has been modified using SmartThings while a custom URL was set. Your original Lost Mode URL has been lost. To fix this and allow usage of normal Lost Mode again, set the custom URL back to your original URL from your external backup. If you don\'t have it backed up, you will need to factory reset your Tag.</string>
-    <string name="lost_mode_settings_custom_url_set_title">Custom URL</string>
-    <string name="lost_mode_settings_custom_url_set_summary">Set a custom URL to open when this Tag is tapped on another device. <b>Make sure you have an external backup of your original URL before using this.</b></string>
-    <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Error</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Warning</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirm</string>
+    <string name="lost_mode_custom_url_set_content">Votre Tag a un URL personnalisé défini, ne pouvant être modifié que si il est connecté.\n\n<b>Important :</b> N\'essayez pas de contourner ceci en modifiant les paramètres de mode Perdu depuis un autre appareil en utilisant SmartThings, cela ne fonctionnera pas et pourrait vous faire perdre l\'URL de mode Perdu originel de votre Tag.</string>
+    <string name="lost_mode_settings_category_advanced">Avancé</string>
+    <string name="lost_mode_settings_custom_url_title">URL personnalisé</string>
+    <string name="lost_mode_settings_custom_url_content_unset">Définir un URL personnalisé à ouvrir lorsque ce Tag est posé contre un autre appareil</string>
+    <string name="lost_mode_settings_custom_url_content_disconnected">Connectez-vous à votre Tag pour utiliser cette fonction</string>
+    <string name="lost_mode_settings_custom_url_content_passive">Désactivez le mode Passif pour utiliser cette option</string>
+    <string name="lost_mode_settings_custom_url_warning_title">Avertissement important</string>
+    <string name="lost_mode_settings_custom_url_warning_content">Définir un URL personnalisé écrase l\'URL stocké dans le Tag. uTag essayera de conserver l\'URL original en sauvegarde, cependant <b>si vous modifiez ou éteigniez le mode Perdu depuis l\'application SmartThings, il sera définitivement perdu</b>. Nous vous recommandons de conserver précieusement une copie de cet URL original ailleurs.</string>
+    <string name="lost_mode_settings_custom_url_warning_action">Copier l\'URL d\'origine</string>
+    <string name="lost_mode_settings_custom_url_warning_action_label">URL originel de %1s</string>
+    <string name="lost_mode_settings_custom_url_warning_action_toast">Copié dans le presse-papier</string>
+    <string name="lost_mode_settings_custom_url_lost_title">Avertissement important</string>
+    <string name="lost_mode_settings_custom_url_lost_content">Le mode Perdu a été modifié en utilisant SmartThings alors qu\'un URL personnalisé était défini. Votre URL de mode Perdu originel a été perdu. Pour y remédier et permettre à nouveau l\'usage du mode Perdu normal, définissez l\'URL personnalisé provenant de votre sauvegarde. Si vous ne l\'avez pas sauvegardé, vous devrez réinitialiser votre Tag aux paramètres d\'usine.</string>
+    <string name="lost_mode_settings_custom_url_set_title">URL personnalisé</string>
+    <string name="lost_mode_settings_custom_url_set_summary">Définir un URL personnalisé à ouvrir lorsque ce Tag est posé contre un autre appareil. <b>Assurez-vous d\'avoir une copie de votre URL original avant d\'utiiser cette fonction.</b></string>
+    <string name="lost_mode_settings_custom_url_set_dialog_message">Entrez un URL personnalisé, ou l\'URL originel pour réinitialiser</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Erreur</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_content">Cet URL de message de perte est destiné à un autre Tag. Si vous essayez de réinitialiser l\'URL pour votre Tag, veuillez coller le bon URL originel pour ce Tag.</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Avertissement</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag ne peut pas vérifier si l\'URL de message de perte est celui destiné à ce Tag. Définir l\'URL incorrect empêchera le mode Perdu de fonctionner, veuillez confirmer qu\'il s\'agit du bon URL pour poursuivre.</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirmer</string>
     <string name="lost_mode_settings_custom_url_error_toast">Une erreur est survenue, réessayez ultérieurement</string>
-    <string name="lost_mode_settings_custom_url_invalid_url_toast">Invalid URL</string>
-    <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
-    <string name="lost_mode_settings_custom_url_footer_content">Setting a custom URL allows you to fully customise what happens when a device with NFC enabled is tapped on your Tag. It can be set to any URL, much like a writable NFC tag.\n\n<b>Important:</b> You can only write a custom URL when the Tag is connected, so ideally this should be a page you can edit to add contact details to later if required.</string>
+    <string name="lost_mode_settings_custom_url_invalid_url_toast">URL invalide</string>
+    <string name="lost_mode_settings_custom_url_footer_title">À propos de l\'URL personnalisé</string>
+    <string name="lost_mode_settings_custom_url_footer_content">Définir un URL personnalisé vous permet de personnaliser pleinement ce qui se passe lorsque le Tag est posé contre un appareil dont le NFC est activé. Il peut être défini comme n\'importe quel URL, tout comme un tag NFC inscriptible.\n\n<b>Important :</b> Vous pouvez uniquement écrire un URL personnalisé lorsque le Tag est connecté, prévoyez donc idéalement une page modifiable pour ajouter des coordonnées ultérieurement si besoin.</string>
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
-    <string name="lost_mode_custom_url_warning" maxLength="40">Do not edit or turn off. See uTag Wiki.</string>
+    <string name="lost_mode_custom_url_warning" maxLength="40">Ne pas modifier ou éteindre.</string>
     <!-- Predefined lost messages (displayed locally only) -->
-    <string name="this_smarttag_has_been_lost">This SmartTag has been lost.</string>
-    <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
-    <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
-    <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
+    <string name="this_smarttag_has_been_lost">Ce SmartTag à été perdu.</string>
+    <string name="this_is_a_lost_item">Ceci est un objet perdu auquel j\'accorde beaucoup d\'importance, s\'il vous plaît, aidez-moi à le récupérer.</string>
+    <string name="im_tracking_this_item">Je localise cet objet et essaye de le retrouver, alors contactez-moi s\'il vous plaît.</string>
+    <string name="help_my_lost_pet_come_back_home">S\'il vous plaît, contactez-moi et aidez-moi à ramener mon animal perdu à la maison.</string>
     <!-- Passive Mode -->
-    <string name="passive_mode_enabled_switch">Enabled</string>
-    <string name="passive_mode_info_title">What is Passive Mode?</string>
-    <string name="passive_mode_info_content">Passive Mode disconnects your Tag from your device, keeping it in a \"scanned\" state when SmartThings isn\'t open. This disables some uTag functionality, but still allows location updates from your device.\n\n<b>When Passive Mode is enabled and SmartThings is not open, your Tag may also get location updates from other Samsung devices in addition to this device, so long as it\'s not connected to another device using uTag or SmartThings.</b></string>
-    <string name="passive_mode_lost_functionality_title">Functionality Impacted by Passive Mode</string>
-    <string name="passive_mode_lost_functionality_bull1">Search Nearby is unavailable</string>
-    <string name="passive_mode_lost_functionality_bull2">Ringing the Tag is unavailable</string>
-    <string name="passive_mode_lost_functionality_bull3">Find my Device is unavailable</string>
-    <string name="passive_mode_lost_functionality_bull4">Custom Automations are unavailable</string>
-    <string name="passive_mode_lost_functionality_bull5">Setting a custom lost mode URL is unavailable</string>
-    <string name="passive_mode_lost_functionality_bull6">Your Tag may take a minute or two to connect when SmartThings is opened</string>
-    <string name="passive_mode_lost_functionality_bull7">Notifications when your Tag has been left behind may be delayed</string>
-    <string name="passive_mode_lost_functionality_footer"><b>You can disable Passive Mode at any time, without needing to be in range of the Tag, even temporarily to regain these functions as required.</b></string>
-    <string name="passive_mode_disabled_dialog_content">Passive mode has been disabled, SmartThings may take a couple of minutes to reconnect to your Tag if it\'s nearby. If it does not, open SmartThings to connect to it manually.</string>
+    <string name="passive_mode_enabled_switch">Activé</string>
+    <string name="passive_mode_info_title">Qu\'est-ce que le mode Passif ?</string>
+    <string name="passive_mode_info_content">Le mode Passif déconnecte votre Tag de cet appareil, le conservant dans un état de \"scan\" lorsque SmartThings n\'est pas ouvert. Cela désactive certaines fonctionnalités de uTag, mais permet encore les mises à jour de position depuis votre appareil.\n\n<b>Lorsque le mode Passif est activé et qu SmartThings n\'est pas ouvert, votre Tag pourrait aussi mettre à jour sa position via d\'autres appareils Samsung en plus de cet appareil, tant qu\'il n\'est pas connecté à un autre appareil utilisant uTag ou SmartThings.</b></string>
+    <string name="passive_mode_lost_functionality_title">Fonctionnalités impactées par le mode Passif</string>
+    <string name="passive_mode_lost_functionality_bull1">La recherche à proximité est indisponible</string>
+    <string name="passive_mode_lost_functionality_bull2">Il n\'est pas possible de faire sonner le Tag</string>
+    <string name="passive_mode_lost_functionality_bull3">Trouver mon Appareil est indisponible</string>
+    <string name="passive_mode_lost_functionality_bull4">Les automations personnalisées sont indisponibles</string>
+    <string name="passive_mode_lost_functionality_bull5">Il n\'est pas possible de définir un URL de mode Perdu personnalisé</string>
+    <string name="passive_mode_lost_functionality_bull6">Votre Tag pourrait prendre une ou deux minutes pour se connecter lorsque SmartThings est ouvert</string>
+    <string name="passive_mode_lost_functionality_bull7">Les notifications en cas d\'oubli pourraient être retardées</string>
+    <string name="passive_mode_lost_functionality_footer"><b>Vous pouvez désactiver le mode Passif à tout moment, sans avoir besoin d\'être à portée du Tag, même temporairement pour regagner ces fonctions si nécessaire.</b></string>
+    <string name="passive_mode_disabled_dialog_content">Le mode Passif a été désactivé, SmartThings pourrait prendre quelques minutes pour se reconnecter à votre Tag s\'il est à proximité. S\'il ne l\'est pas, ouvrez SmartThings pour vous y connecter manuellement.</string>
     <!-- Battery levels -->
-    <string name="battery_unknown">Unknown</string>
-    <string name="battery_very_low">Battery replacement required</string>
-    <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_unknown">Inconnu</string>
+    <string name="battery_very_low">Remplacement de la batterie nécessaire</string>
+    <string name="battery_low">Faible</string>
+    <string name="battery_sufficient">Suffisante</string>
     <!-- Only used in export -->
-    <string name="battery_full">Full</string>
-    <string name="battery_update">Updated %1s</string>
+    <string name="battery_full">Pleine</string>
+    <string name="battery_update">Mise à jour il y a %1s</string>
     <!-- Device Types -->
-    <string name="device_type_galaxy_phone">Galaxy Phone</string>
-    <string name="device_type_galaxy_tablet">Galaxy Tablet</string>
-    <string name="device_type_none_galaxy_phone">Non-Galaxy Phone</string>
-    <string name="device_type_none_galaxy_tablet">Non-Galaxy Tablet</string>
+    <string name="device_type_galaxy_phone">Téléphone Galaxy</string>
+    <string name="device_type_galaxy_tablet">Tablette Galaxy</string>
+    <string name="device_type_none_galaxy_phone">Téléphone non-Galaxy</string>
+    <string name="device_type_none_galaxy_tablet">Tablette non-Galaxy</string>
     <!-- D2D Status -->
-    <string name="d2d_status_connected">Connected</string>
-    <string name="d2d_status_scanned">Scanned</string>
+    <string name="d2d_status_connected">Connecté</string>
+    <string name="d2d_status_scanned">Scanné</string>
     <!-- Privacy notice -->
-    <string name="privacy_notice_title">Locate your Tags anytime, anywhere</string>
-    <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
-    <string name="privacy_notice_agree">Agree</string>
-    <string name="privacy_notice_disagree">Disagree</string>
-    <string name="privacy_notice_error_dialog_title">Error</string>
-    <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
-    <string name="privacy_notice_error_dialog_close">Close</string>
+    <string name="privacy_notice_title">Localisez vos Tags n\'importe quand, n\'importe où</string>
+    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
+    <string name="privacy_notice_agree">J\'accepte</string>
+    <string name="privacy_notice_disagree">Je refuse</string>
+    <string name="privacy_notice_error_dialog_title">Erreur</string>
+    <string name="privacy_notice_error_dialog_content">Une erreur est survenue lors du chargement de la politique de confidentialité de Samsung. Vérifiez votre connexion et réessayez ultérieurement.</string>
+    <string name="privacy_notice_error_dialog_close">Fermer</string>
     <!-- FME opt-in -->
-    <string name="fme_opt_in_title">Find my Everything Network</string>
-    <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
-    <string name="fme_opt_in_positive">Enable</string>
-    <string name="fme_opt_in_negative">Not now</string>
+    <string name="fme_opt_in_title">Réseau Find my Everything</string>
+    <string name="fme_opt_in_content">uTag peut contribuer à la position des Tags des autres utilisateurs sur le réseau Find my Everything. Cela aide les autres à localiser leurs objets perdus, en envoyant des mises à jour de position anonymes pour les Tags localisés à proximité. Les mises à jour de position sont envoyées au même moment que celles de vos Tags, pour limiter l\'impact sur la batterie.\n\n<b>Note :</b> Activer cette option est optionnel, uTag fonctionnera même sans que cette fonction soit activée.</string>
+    <string name="fme_opt_in_positive">Activer</string>
+    <string name="fme_opt_in_negative">Pas maintenant</string>
     <!-- UTS opt-in -->
-    <string name="uts_opt_in_title">Unknown Tag Scanning</string>
+    <string name="uts_opt_in_title">Recherche de Tag inconnu</string>
     <string name="uts_opt_in_content">uTag can automatically scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
     <string name="uts_opt_in_positive">Enable</string>
     <string name="uts_opt_in_negative">Not now</string>
