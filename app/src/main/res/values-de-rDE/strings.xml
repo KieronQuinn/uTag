@@ -439,7 +439,7 @@
     <string name="tag_more_find_device_content_enabled">Enabled</string>
     <string name="tag_more_find_device_content_error">Not working. Tap for more info.</string>
     <string name="tag_more_find_device_switch">Enable Find my Device</string>
-    <string name="tag_more_find_device_category_settings">Settings</string>
+    <string name="tag_more_find_device_category_settings">Einstellungen</string>
     <string name="tag_more_find_device_notifications_disabled_title">Notifications disabled</string>
     <string name="tag_more_find_device_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
     <string name="tag_more_find_device_notifications_disabled_content_channel">The <b>Find my Device</b> notification channel is disabled, it must be enabled for this option to work</string>
@@ -963,7 +963,7 @@
     <string name="widget_configuration_location_click_device_content">The Tag to display in uTag when this widget is clicked: %1s</string>
     <string name="widget_configuration_location_status_device_title">Priority Tag</string>
     <string name="widget_configuration_location_status_device_content">The Tag to display on top and show the last updated time for: %1s</string>
-    <string name="widget_configuration_location_footer_title">Location Updates</string>
+    <string name="widget_configuration_location_footer_title">Standortaktualisierungen</string>
     <string name="widget_configuration_location_footer_content">The Tag Locations widget displays the latest location of Tags from the server. Pressing refresh simply updates the widget with the latest server location - it does not update the Tag\'s location if it is connected.\n\nYou can set the frequency of automatic widget refreshes in the uTag settings.</string>
     <string name="widget_configuration_history_device_title">Selected Tag</string>
     <string name="widget_configuration_history_device_content">Select Tag to show in this widget</string>
@@ -1050,14 +1050,14 @@
     <string name="bottom_nav_updates">Updates</string>
     <!-- Updates -->
     <string name="updates_title">Updates</string>
-    <string name="updates_utag_available_title">uTag Update Available</string>
-    <string name="updates_utag_available_content">Version %1s (current %1s)</string>
-    <string name="updates_utag_available_action">View update</string>
-    <string name="updates_utag_updated_title">uTag is up to date</string>
+    <string name="updates_utag_available_title">uTag Update verfügbar</string>
+    <string name="updates_utag_available_content">Version %1s (aktuell %1s)</string>
+    <string name="updates_utag_available_action">Update ansehen</string>
+    <string name="updates_utag_updated_title">uTag ist aktuell</string>
     <string name="updates_utag_updated_content">Version %1s</string>
-    <string name="updates_smartthings_available_title">SmartThings Update Available</string>
-    <string name="updates_smartthings_available_content">Version %1s (current %1s)</string>
-    <string name="updates_smartthings_available_action">View update</string>
+    <string name="updates_smartthings_available_title">SmartThings Update verfügbar</string>
+    <string name="updates_smartthings_available_content">Version %1s (aktuell %1s)</string>
+    <string name="updates_smartthings_available_action">Update ansehen</string>
     <string name="updates_smartthings_updated_title">SmartThings is up to date</string>
     <string name="updates_smartthings_updated_content">Version %1s</string>
     <string name="updates_smartthings_external_title">SmartThings</string>
@@ -1071,7 +1071,7 @@
     <string name="updates_smartthings_not_modded_action">Re-run setup</string>
     <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
     <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
-    <string name="updates_category_options">Options</string>
+    <string name="updates_category_options">Optionen</string>
     <string name="updates_check_for_updates_title">Automatically Check for Updates</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
     <!-- Debug notification -->
