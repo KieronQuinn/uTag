@@ -147,10 +147,10 @@
     <string name="settings_location_uwb_content">Use precise finding (UWB) where supported by your Tag.</string>
     <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
     <string name="settings_location_uwb_long_distance_content">Allow directional precise finding over a longer distance, which may show incorrect directions when the Tag is not in line of sight.</string>
-    <string name="settings_location_uwb_disabled">Not available on your device</string>
-    <string name="settings_location_units_title">Distance Units</string>
+    <string name="settings_location_uwb_disabled">No disponible en tu dispositivo</string>
+    <string name="settings_location_units_title">Unidad de distancia</string>
     <string name="settings_location_units_system">Match system (%1s)</string>
-    <string name="settings_location_units_metric">Metric</string>
+    <string name="settings_location_units_metric">Métrico</string>
     <string name="settings_location_units_imperial">Imperial</string>
     <!-- Settings > Location > Chaser -->
     <string name="settings_chaser_title">Find my Everything Network</string>
