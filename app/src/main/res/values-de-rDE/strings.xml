@@ -194,7 +194,7 @@
     <string name="settings_uts_tag_open">SmartThings öffnen</string>
     <string name="settings_uts_tag_safe">Dieser Tag ist sicher</string>
     <string name="settings_uts_tag_safe_dialog_title">Als sicher markieren?</string>
-    <string name="settings_uts_tag_safe_dialog_content">This will hide the Tag from the Unknown Tag list, until it changes ID. This happens every 24 hours, or if the battery is removed &amp; re-inserted, or if the Tag is reset.\n\n<b>Note:</b> This does not prevent it from appearing in manual unknown Tag scans in SmartThings.</string>
+    <string name="settings_uts_tag_safe_dialog_content">Bis die Tag-ID wechselt, wird dieser Tag von der Liste unbekannter Tags ausgeblendet. Die Tag-ID wechselt alle 24 Stunden, oder wenn die Batterie entfernt &amp; wieder eingelegt oder der Tag zurückgesetzt wird. \n\n<b>Wichtig:</b>Dies verhindert jedoch nicht, dass der Tag bei manuellen Scans in SmartThings ausgeblendet ist.</string>
     <string name="settings_uts_tag_safe_dialog_positive">Als sicher markieren</string>
     <string name="settings_uts_tag_safe_dialog_negative">Abbrechen</string>
     <string name="settings_uts_tag_error_dialog_title">Fehler</string>
@@ -221,7 +221,7 @@
     <string name="settings_map_show_buildings_title">Gebäude anzeigen</string>
     <string name="settings_map_show_buildings_content">Gebäudeumrisse anzeigen, soweit diese verfügbar sind</string>
     <string name="settings_map_swap_location_history_title">Suche in der Nähe anzeigen</string>
-    <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
+    <string name="settings_map_swap_location_history_content">Zeige den Button \"In der Nähe suchen\" auf der Karte anstelle im Standortverlauf. Wenn aktiviert, kann auf den Standortverlauf via \"Mehr\" zugegriffen werden.</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">Verschlüsselung</string>
     <string name="settings_encryption_content">PIN für die Offline-Standortverschlüsselung setzen oder zurücksetzen</string>
@@ -235,16 +235,16 @@
     <string name="settings_advanced_content_creator_content">Versteckt Ihren Standort in der UTag UI, wenn Sie Screenshots oder Videos von uTag machen.</string>
     <string name="settings_advanced_content_creator_enabled">Aktiviert </string>
     <string name="settings_advanced_auto_dismiss_notifications_title">Zurückgelassen Benachrichtigungen automatisch schließen</string>
-    <string name="settings_advanced_auto_dismiss_notifications_content">Automatically dismiss Notify when Left Behind notifications &amp; Smartspacer Targets when the Tag comes back in range.\n\n<b>Note:</b> This may lead to \"ghost\" sounds &amp; vibrations if your Tag comes back in range before you see the notification.</string>
-    <string name="settings_advanced_prevent_overmature_title">Prevent Overmature Offline</string>
+    <string name="settings_advanced_auto_dismiss_notifications_content">Benachrichtigung automatisch ausblenden, wenn Links hinter den Benachrichtigungen &amp; Smartspacer Ziele angezeigt werden, wenn der Tag wieder in Reichweite ist.\n\n<b>Wichtig:</b> Dies kann zu \"Geister\"-Sounds &amp; -Vibrationen führen, wenn der Tag in Reichweite kommt bevor Du die Benachrichtigung siehst.</string>
+    <string name="settings_advanced_prevent_overmature_title">Dauerhaften Offlinezustand verhindern.</string>
     <string name="settings_advanced_prevent_overmature_content">Prevent an owned Tag from entering \"overmature\" offline, which is normally triggered when disconnected from a device for roughly 24 hours. Enabling this option prevents the Tag appearing in unknown Tag scans, when it is near your device.\n\n<b>Note:</b> This may cause fewer location updates from other Samsung devices when the Tag is near to this device.</string>
     <string name="settings_advanced_debug_title">Debug-Modus</string>
-    <string name="settings_advanced_debug_content">Enables some more verbose logging &amp; debug UI components for testing</string>
+    <string name="settings_advanced_debug_content">Aktiviert einige ausführlichere Protokollierung von &amp; Debug-UI-Komponenten zum Testen</string>
     <string name="settings_advanced_language">Sprache</string>
     <string name="settings_advanced_clear_addresses_title">Zwischengespeicherte Adressen löschen</string>
-    <string name="settings_advanced_clear_addresses_content">Clear the local encrypted cache of addresses from Tag locations and location history</string>
+    <string name="settings_advanced_clear_addresses_content">Lösche den lokalen verschlüsselten Cache von Adressen aus Tag-Standorten und Standortverlauf</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Zwischengespeicherte Adressen löschen? </string>
-    <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
+    <string name="settings_advanced_clear_addresses_dialog_content">Adressen für Tag-Standorte und Standortverlauf müssen beim nächsten Aufruf neu erstellt werden, was einige Zeit in Anspruch nehmen und Datenvolumen verwenden kann.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Leeren</string>
     <string name="settings_advanced_clear_addresses_toast">Gespeicherte Adressen wurden gelöscht</string>
     <string name="settings_language_info_title">Anmerkung</string>
@@ -272,8 +272,8 @@
     <string name="map_error_close">Schließen</string>
     <string name="map_error_open_settings">Einstellungen öffnen</string>
     <string name="map_error_no_smartthings_content">uTag konnte keine Verbindung zu SmartThings herstellen. Überprüfen Sie die Installation und versuchen Sie es später erneut.</string>
-    <string name="map_error_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions to install the modded SmartThings from uTag\'s settings.</string>
-    <string name="map_error_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Follow the instructions to install the modded SmartThings from uTag\'s settings to fix this.</string>
+    <string name="map_error_mod_not_activated_xposed_content">Die uTag Mod für SmartThings ist nicht aktiviert. Wenn Du Xposed verwendest, aktiviere ihn und starte das Gerät neu. Wenn Du Xposed nicht verwendest, folgen den Anweisungen, um die modifizierten SmartThings zu installieren.</string>
+    <string name="map_error_mod_not_activated_patch_content">Der uTag Mod für SmartThings ist nicht aktiviert. Folge den Anweisungen, um die modifizierten SmartThings aus den uTag Einstellungen zu installieren.</string>
     <string name="map_warning_mod_outdated_xposed_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="map_warning_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from uTag\'s settings to fix this.</string>
     <string name="map_warning_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
