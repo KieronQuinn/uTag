@@ -156,7 +156,7 @@
     <string name="settings_chaser_title">Red \"Find my Everything\"</string>
     <string name="settings_chaser_switch">Activado</string>
     <string name="settings_chaser_info_title">Contribuir a la red \"Find my Everything\"</string>
-    <string name="settings_chaser_info_content">When enabled, uTag will send the location of nearby detected Tags during location refreshes, to assist other SmartTag users in locating their items.\n\nLocations are completely anonymous, and may be encrypted if the Tag has location encryption enabled.</string>
+    <string name="settings_chaser_info_content">Cuando está habilitado, uTag enviará la ubicación de los Tags detectados alrededor durante la actualización de ubicaciones, para ayudar a otros usuarios de SmartTag a ubicar sus cosas.\n\nLas ubicaciones son completamente anónimas, y pueden estar encriptadas si el Tag tiene Ubicación Cifrada habilitado.</string>
     <string name="settings_chaser_count_title">Contribuciones de red</string>
     <string name="settings_chaser_count_content_one">Has contribuido con %1d ubicación a la red \"Find my Everything\"</string>
     <string name="settings_chaser_count_content_other">Has contribuido con %1d ubicaciones a la red \"Find my Everything\"</string>
