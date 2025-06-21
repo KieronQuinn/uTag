@@ -256,6 +256,7 @@ class Application: Application(), LifecycleEventObserver {
         const val CLIENT_ID_FIND = "27zmg0v1oo" //From Samsung Find on Android
         const val CLIENT_ID_ONECONNECT = "6iado3s6jc" //From SmartThings on Android
         const val LOSTMESSAGE_URL = "https://lostmessage.smartthings.com"
+        const val PP_VERSION = "1.0.0"
 
         fun isMainProcess() = getProcessName() == BuildConfig.APPLICATION_ID
     }

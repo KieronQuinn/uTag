@@ -3,6 +3,7 @@ package com.kieronquinn.app.utag.repositories
 import android.content.Context
 import android.util.Base64
 import com.google.gson.Gson
+import com.kieronquinn.app.utag.Application.Companion.PP_VERSION
 import com.kieronquinn.app.utag.model.EncryptionKey
 import com.kieronquinn.app.utag.model.GeoLocation
 import com.kieronquinn.app.utag.model.database.cache.CacheItem.CacheType
@@ -253,7 +254,7 @@ class ApiRepositoryImpl(
                 Method.POST,
                 uri = "/user/options",
                 extraParameters = mapOf(
-                    "ppVersion" to "1.0.0",
+                    "ppVersion" to PP_VERSION,
                     "saCountryCode" to countryCode,
                     "fmmAgreement" to "true",
                     "encodedAgreement" to Agreement.getAgreement()
