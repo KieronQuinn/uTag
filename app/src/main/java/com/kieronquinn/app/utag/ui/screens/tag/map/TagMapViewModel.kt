@@ -9,6 +9,7 @@ import android.provider.Settings
 import androidx.core.graphics.Insets
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.kieronquinn.app.utag.Application.Companion.PP_VERSION
 import com.kieronquinn.app.utag.components.bluetooth.BaseTagConnection.SyncResult
 import com.kieronquinn.app.utag.components.bluetooth.RemoteTagConnection
 import com.kieronquinn.app.utag.components.navigation.TagContainerNavigation
@@ -307,6 +308,7 @@ class TagMapViewModelImpl(
         val options = apiRepository.getUserOptions() ?: return@mapLatest null
         val agreedTypes = options.fmmAgreementUrls.filter { it.agreed }.map { it.type }
         val hasAgreed = options.fmmAgreement &&
+                options.ppVersion == PP_VERSION &&
                 agreedTypes.contains("service.pp") &&
                 agreedTypes.contains("service.location")
         if(!hasAgreed) {
