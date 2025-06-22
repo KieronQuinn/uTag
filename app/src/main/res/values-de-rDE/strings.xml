@@ -547,14 +547,14 @@
     <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
     <string name="lost_mode_settings_phone_number">Contact (optional)</string>
     <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
-    <string name="lost_mode_settings_message">Message</string>
-    <string name="lost_mode_settings_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_message">Nachricht</string>
+    <string name="lost_mode_settings_error_dialog_title">Fehler</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
     <string name="lost_mode_settings_error_dialog_close">Close</string>
     <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
-    <string name="lost_mode_settings_category_advanced">Advanced</string>
+    <string name="lost_mode_settings_category_advanced">Erweitert</string>
     <string name="lost_mode_settings_custom_url_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
     <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
@@ -620,9 +620,9 @@
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
     <string name="privacy_notice_agree">Agree</string>
     <string name="privacy_notice_disagree">Disagree</string>
-    <string name="privacy_notice_error_dialog_title">Error</string>
+    <string name="privacy_notice_error_dialog_title">Fehler</string>
     <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
-    <string name="privacy_notice_error_dialog_close">Close</string>
+    <string name="privacy_notice_error_dialog_close">Schließen</string>
     <!-- FME opt-in -->
     <string name="fme_opt_in_title">Find my Everything Network</string>
     <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
