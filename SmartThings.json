@@ -1,9 +1,9 @@
 {
-   "version": "1.0.6",
-   "version_code": 106,
+   "version": "1.0.7",
+   "version_code": 107,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated SmartThings to version 1.8.33.25",
-   "file_size": 142450215
+   "release_notes": "- Updated SmartThings to version 1.8.34.21",
+   "file_size": 142442025
 }
