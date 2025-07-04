@@ -17,9 +17,9 @@ import com.kieronquinn.app.utag.repositories.SmartThingsRepository
 import com.kieronquinn.app.utag.repositories.SmartThingsRepository.ModuleState
 import com.kieronquinn.app.utag.repositories.UpdateRepository
 import com.kieronquinn.app.utag.ui.screens.setup.mod.SetupModViewModel.State.Error.ErrorReason
-import com.kieronquinn.app.utag.ui.screens.update.utag.UTagUpdateViewModel.State
 import com.kieronquinn.app.utag.utils.extensions.broadcastReceiverAsFlow
 import com.kieronquinn.app.utag.utils.extensions.isOneUI
+import com.kieronquinn.app.utag.utils.extensions.isOneUICompatible
 import com.kieronquinn.app.utag.xposed.Xposed
 import com.kieronquinn.app.utag.xposed.extensions.isPackageInstalled
 import com.kieronquinn.app.utag.xposed.extensions.isSmartThingsModded
@@ -51,7 +51,7 @@ abstract class SetupModViewModel: ViewModel() {
     sealed class State {
         data object Loading: State()
         data class Info(val fileSize: Long): State()
-        data object OneUI: State()
+        data class OneUI(val compatible: Boolean): State()
         data object StartingDownload: State()
         data class Downloading(val id: Long, val progress: Int, val progressText: String): State()
         data class Uninstall(val installUri: Uri): State()
@@ -100,6 +100,10 @@ class SetupModViewModelImpl(
         context.isOneUI()
     }
 
+    private val isOneUiCompatible = resumeBus.mapLatest {
+        context.isOneUICompatible()
+    }
+
     private val description = context.getString(R.string.download_manager_description_mod)
 
     private val downloadTitle = { version: String ->
@@ -131,14 +135,33 @@ class SetupModViewModelImpl(
         finished || setup
     }
 
+    private val oneUI = combine(
+        isOneUI,
+        isOneUiCompatible,
+        oneUIDismissed
+    ) { isOneUI, oneUiCompatible: Boolean, oneUIDismissed ->
+        when {
+            //User has accepted OneUI warning
+            oneUIDismissed -> null
+            //Not OneUI
+            !isOneUI -> null
+            //Compatibility check
+            else -> oneUiCompatible
+        }
+    }
+
     private val smartThings = combine(
         isSmartThingsInstalled,
         isSmartThingsModded,
         hooksReady,
-        isOneUI,
-        oneUIDismissed
-    ) { installed, modded, hooksReady, isOneUI, oneUIDismissed ->
-        SmartThingsState(installed, modded, hooksReady, isOneUI && !oneUIDismissed)
+        oneUI
+    ) { installed, modded, hooksReady, isOneUICompatible ->
+        SmartThingsState(
+            installed,
+            modded,
+            hooksReady,
+            isOneUICompatible
+        )
     }
 
     override val state = combine(
@@ -151,10 +174,10 @@ class SetupModViewModelImpl(
         val smartThingsInstalled = smartThings.isSmartThingsInstalled
         val modInstalled = smartThings.isSmartThingsModded
         val hooksReady = smartThings.hooksReady
-        val isOneUI = smartThings.isOneUI
+        val isOneUICompatible = smartThings.isOneUICompatible
         when {
             backing is State.Loading && module.canContinue() -> State.Complete
-            isOneUI -> State.OneUI
+            isOneUICompatible != null -> State.OneUI(isOneUICompatible)
             //If the user hasn't interacted yet, show info
             backing is State.Loading && release != null -> {
                 State.Info(release.fileSize)
@@ -304,7 +327,7 @@ class SetupModViewModelImpl(
         val isSmartThingsInstalled: Boolean,
         val isSmartThingsModded: Boolean,
         val hooksReady: Boolean,
-        val isOneUI: Boolean
+        val isOneUICompatible: Boolean? //null = not OneUI
     )
 
 }
