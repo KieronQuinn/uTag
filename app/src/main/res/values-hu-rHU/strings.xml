@@ -18,6 +18,8 @@
     <string name="setup_mod_oneui_title">OneUI érzékelve</string>
     <string name="setup_mod_oneui_desc">A jelenlegi eszköz úgy tűnik OneUI-t futtat. A uTag használata olyan eszközön, ami hivatalosan támogatja a SmartThings Keresés funkcióját, lehetséges hogy több funkcióban is hibát okoz, vagy nem várt problémákat okozhat. <b>A OneUI támogatása kísérleti alapú, és lehet hogy ezen az eszközön nem fog működni. Kérem ne jelentsen hibákat, amik ezen az eszközön felmerülnek. </b> Be kell jelentkeznie a SmartThings-be a böngészőben, ahelyett, hogy a már az eszközön lévő Samsung fiókot használná.</string>
     <string name="setup_mod_oneui_continue">Tovább</string>
+    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
+    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
     <string name="setup_mod_downloading">A SmartThings letöltése…</string>
     <string name="setup_mod_setting_up">A mod beállítása…</string>
     <string name="setup_mod_setting_up_subtitle">Ez eltarthat egy ideig</string>
