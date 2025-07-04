@@ -18,6 +18,8 @@
     <string name="setup_mod_oneui_title">檢測到OneUI</string>
     <string name="setup_mod_oneui_desc">此設備似乎正在運行OneUI。在官方支持SmartThings Find的設備上使用uTag可能會限制功能，破壞某些SmartThings特性或導致意外錯誤。<b>OneUI支持是實驗性的，可能在您的設備上無法使用。請勿報告發生在此設備上的錯誤。</b>您需要從瀏覽器登錄SmartThings，而不是使用已在設備上的三星帳戶。</string>
     <string name="setup_mod_oneui_continue">繼續</string>
+    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
+    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
     <string name="setup_mod_downloading">正在下載SmartThings…</string>
     <string name="setup_mod_setting_up">正在設置修改…</string>
     <string name="setup_mod_setting_up_subtitle">這可能需要一些時間</string>
