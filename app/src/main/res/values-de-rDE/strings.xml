@@ -153,7 +153,7 @@
     <string name="settings_location_units_metric">Metrisch</string>
     <string name="settings_location_units_imperial">Imperial</string>
     <!-- Settings > Location > Chaser -->
-    <string name="settings_chaser_title"></string>
+    <string name="settings_chaser_title">Find my Everything Network</string>
     <string name="settings_chaser_switch">Aktiviert</string>
     <string name="settings_chaser_info_title">Beitragen zum Samsung Find my Everything-Netzwerk</string>
     <string name="settings_chaser_info_content">Wenn aktiviert, sendet uTag den Standort der in der Nähe erkannten Tags während der Aktualisierung des Standorts, um anderen SmartTag-Benutzern bei der Lokalisierung ihrer Objekte zu helfen.\n\nStandorte sind komplett anonym und können verschlüsselt werden, wenn der Tag Standortverschlüsselung aktiviert ist.</string>
