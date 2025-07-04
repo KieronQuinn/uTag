@@ -39,6 +39,7 @@ import android.util.TypedValue
 import androidx.annotation.AttrRes
 import androidx.core.content.ContextCompat
 import com.google.android.gms.maps.model.LatLng
+import com.kieronquinn.app.utag.Application.Companion.PACKAGE_NAME_ONECONNECT
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.repositories.SettingsRepository
 import com.kieronquinn.app.utag.repositories.UpdateRepository.Companion.CONTENT_TYPE_APK
@@ -373,6 +374,20 @@ fun Context.isOneUI(): Boolean {
         PackageManager.MATCH_SYSTEM_ONLY or PackageManager.MATCH_DISABLED_COMPONENTS or
                 PackageManager.MATCH_UNINSTALLED_PACKAGES
     )
+}
+
+fun Context.isOneUICompatible(): Boolean {
+    return try {
+        val info = packageManager.getPermissionInfo(
+            "com.sec.android.permission.PERSONAL_MEDIA",
+            0
+        )
+        //If the permission is not originally declared by SmartThings, then the mod won't work
+        info.packageName == PACKAGE_NAME_ONECONNECT
+    }catch (e: NameNotFoundException) {
+        //If the permission is not found at all, then the mod will work fine
+        true
+    }
 }
 
 fun Context.wrapAsApplicationContext(): Context {

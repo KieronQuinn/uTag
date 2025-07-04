@@ -50,7 +50,7 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
         when(state) {
             is State.Loading -> setLoading(true)
             is State.Info -> handleInfo(state)
-            is State.OneUI -> handleOneUI()
+            is State.OneUI -> handleOneUI(state)
             is State.StartingDownload -> setLoading(true)
             is State.Downloading -> {
                 setLoading(true, getLoadingText(state.progressText), state.progress)
@@ -100,12 +100,22 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
         }
     }
 
-    private fun handleOneUI() = setPreferences {
+    private fun handleOneUI(state: State.OneUI) = setPreferences {
         actionCardPreference {
-            title = getString(R.string.setup_mod_oneui_title)
-            summary = getText(R.string.setup_mod_oneui_desc)
-            addButton(getString(R.string.setup_mod_oneui_continue)) {
-                viewModel.onAcceptOneUIClicked()
+            title = if(state.compatible) {
+                getString(R.string.setup_mod_oneui_title)
+            }else{
+                getString(R.string.setup_mod_oneui_incompatible_title)
+            }
+            summary = if(state.compatible) {
+                getText(R.string.setup_mod_oneui_desc)
+            }else{
+                getText(R.string.setup_mod_oneui_incompatible_desc)
+            }
+            if(state.compatible) {
+                addButton(getString(R.string.setup_mod_oneui_continue)) {
+                    viewModel.onAcceptOneUIClicked()
+                }
             }
         }
     }
