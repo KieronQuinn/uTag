@@ -166,7 +166,7 @@
     <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
     <string name="settings_chaser_toast">Grant in settings</string>
     <!-- Settings > Location > Unknown Tag Scan -->
-    <string name="settings_uts_title">Scan for unknown Tags</string>
+    <string name="settings_uts_title">알 수 없는 태그 스캔</string>
     <string name="settings_uts_switch">Enable Scanning</string>
     <string name="settings_uts_info_title">Unknown Tag Scanning</string>
     <string name="settings_uts_info_content">When enabled, uTag will scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
@@ -188,9 +188,9 @@
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">Clear</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">취소</string>
     <string name="settings_uts_tag_title">Unknown Tag detected near you</string>
-    <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
-    <string name="settings_uts_tag_first">First seen at %1s</string>
-    <string name="settings_uts_tag_last">Last seen %1s</string>
+    <string name="settings_uts_tag_content">함께 이동하는 스마트태그가 감지되었습니다. 스마트태그가 귀하의 위치를 추적하기 위해 사용되고 있을 수 있습니다. 스마트싱즈 앱에서 이 태그가 실제로 나를 추적하고 있는지 확인할 수 있습니다(<b>메뉴 &gt; 설정 &gt; 주변의 알 수 없는 태그 찾기</b>) 태그를 신뢰할 수 없는 경우, 태그에서 배터리를 분리하여 추적을 중단할 수 있습니다.</string>
+    <string name="settings_uts_tag_first">%1s에서 처음 발견됨</string>
+    <string name="settings_uts_tag_last">%1s에서 마지막으로 발견됨</string>
     <string name="settings_uts_tag_last_at">Last seen at %1s</string>
     <string name="settings_uts_tag_unknown_address">Unknown Address</string>
     <string name="settings_uts_tag_open">Open SmartThings</string>
@@ -212,20 +212,20 @@
     <string name="settings_map_show_location_content">지도에서 사용 가능한 위치를 표시합니다</string>
     <string name="settings_map_show_location_toast">정확한 위치 권한 부여</string>
     <string name="settings_map_style_title">Map Type</string>
-    <string name="settings_map_style_normal">Default</string>
-    <string name="settings_map_style_terrain">Terrain</string>
+    <string name="settings_map_style_normal">기본 지도</string>
+    <string name="settings_map_style_terrain">지형 지도</string>
     <string name="settings_map_style_satellite">위성 지도</string>
     <string name="settings_map_theme_title">지도 테마</string>
     <string name="settings_map_theme_light">라이트 모드</string>
     <string name="settings_map_theme_dark">다크 모드</string>
     <string name="settings_map_theme_system">시스템 설정</string>
-    <string name="settings_map_theme_disabled">Not available for this map type</string>
+    <string name="settings_map_theme_disabled">이 장치에서는 사용할 수 없습니다</string>
     <string name="settings_map_show_buildings_title">Show Buildings</string>
     <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
     <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
     <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_title">Encryption</string>
+    <string name="settings_encryption_title">암호화</string>
     <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
     <string name="settings_biometric_title">Biometric Entry</string>
     <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
