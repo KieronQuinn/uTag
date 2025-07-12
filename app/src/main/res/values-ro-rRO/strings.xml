@@ -9,7 +9,7 @@
     <!-- Landing -->
     <string name="landing_get_started">Get Started</string>
     <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
-    <string name="landing_open">Open uTag</string>
+    <string name="landing_open"></string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">SmartThings Mod</string>
