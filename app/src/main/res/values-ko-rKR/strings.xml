@@ -575,7 +575,7 @@
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_title">경고</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirm</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">확인</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_settings_custom_url_invalid_url_toast">잘못된 URL</string>
     <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
@@ -1007,13 +1007,13 @@
     <!-- Backup -->
     <string name="backup_error_failed_to_create">Failed to create file</string>
     <string name="backup_error_failed_to_write">Failed to write file</string>
-    <string name="backup_creating_backup">Creating backup…</string>
-    <string name="backup_creating_automation_configs_backup">Backing up Custom Automations…</string>
+    <string name="backup_creating_backup">백업 생성 중…</string>
+    <string name="backup_creating_automation_configs_backup">맞춤형 자동화 백업…</string>
     <string name="backup_creating_find_my_device_configs_backup">Backing up Find my Device configuration…</string>
-    <string name="backup_creating_location_safe_areas_backup">Backing up Location Safe Areas…</string>
-    <string name="backup_creating_notify_disconnect_configs_backup">Backing up notify when left behind configuration…</string>
+    <string name="backup_creating_location_safe_areas_backup">안전한 위치 장소 백업…</string>
+    <string name="backup_creating_notify_disconnect_configs_backup">구성이 남았을 때 백업 알림…</string>
     <string name="backup_creating_passive_mode_configs_backup">Backing up passive mode configuration…</string>
-    <string name="backup_creating_wifi_safe_areas_backup">Backing up Wi-Fi Safe Areas…</string>
+    <string name="backup_creating_wifi_safe_areas_backup">Wi-Fi 안전한 장소 백업…</string>
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
     <string name="backup_creating_settings_backup">설정 백업 중…</string>
     <string name="backup_created">백업 생성</string>
