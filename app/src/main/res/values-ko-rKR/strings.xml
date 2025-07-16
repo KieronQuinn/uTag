@@ -113,7 +113,7 @@
     <string name="settings_main_category_samsung_account_content">%1s (%1s) 계정으로 로그인 되어 있어요.</string>
     <string name="settings_main_category_samsung_account_content_error">계정 세부 정보를 가져오는 동안 오류 발생</string>
     <string name="settings_main_sign_out_title">로그아웃</string>
-    <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
+    <string name="settings_main_sign_out_content">삼성 계정에서 로그아웃하시겠습니까? SmartTag를 추적하려면 다시 로그인해야 합니다.\n\n<b>참고:</b> 다음 로그아웃 페이지에 표시되는 내용과 관계없이 기기의 다른 삼성앱에서는 로그아웃되지 않습니다.</string>
     <string name="settings_main_logout_error">오류가 발생했습니다. 연결을 확인한 후 다시 시도하세요</string>
     <!-- Settings > Location -->
     <string name="settings_location_location">위치</string>
@@ -128,13 +128,13 @@
     <string name="settings_location_location_staleness_content">How old a location can be for it still to be used in location updates: %1s</string>
     <string name="settings_location_location_staleness_none">Uses more battery</string>
     <string name="settings_location_location_staleness_max">Location updates may be outdated</string>
-    <string name="settings_location_location_safe_area_title">Safe Areas</string>
+    <string name="settings_location_location_safe_area_title">안전한 장소</string>
     <string name="settings_location_location_safe_area_content">Add &amp; configure Safe Areas for your Tags</string>
     <string name="settings_location_category_chaser_title">Find my Everything Network</string>
     <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
     <string name="settings_location_chaser_content">Send location updates for detected nearby Tags to Find my Everything network</string>
     <string name="settings_location_chaser_disabled">Not available on this device</string>
-    <string name="settings_location_category_uts_title">Unknown Tags</string>
+    <string name="settings_location_category_uts_title">알 수 없는 태그</string>
     <string name="settings_location_uts_title">알 수 없는 태그 스캔</string>
     <string name="settings_location_uts_content">Scan for unknown Tags and notify you when you may be being tracked</string>
     <string name="settings_location_category_widget_title">위젯</string>
@@ -144,7 +144,7 @@
     <string name="settings_location_widget_period_never_content">위젯에서 새로 고침을 탭하거나 태그의 위치가 uTag로 업데이트될 때만 새로 고침됩니다</string>
     <string name="settings_location_widget_battery_saver_title">배터리 절약 시 위젯 새로 고침</string>
     <string name="settings_location_widget_battery_saver_content">배터리 절약 기능이 활성화되면 위젯 새로 고침</string>
-    <string name="settings_location_category_search_nearby_title">Search Nearby</string>
+    <string name="settings_location_category_search_nearby_title">내 근처 탐색</string>
     <string name="settings_location_uwb_title">Precise Finding</string>
     <string name="settings_location_uwb_content">Use precise finding (UWB) where supported by your Tag.</string>
     <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
@@ -167,8 +167,8 @@
     <string name="settings_chaser_toast">Grant in settings</string>
     <!-- Settings > Location > Unknown Tag Scan -->
     <string name="settings_uts_title">알 수 없는 태그 스캔</string>
-    <string name="settings_uts_switch">Enable Scanning</string>
-    <string name="settings_uts_info_title">Unknown Tag Scanning</string>
+    <string name="settings_uts_switch">스캔 활성화</string>
+    <string name="settings_uts_info_title">알 수 없는 태그 스캔</string>
     <string name="settings_uts_info_content">When enabled, uTag will scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
     <string name="settings_uts_view_unknown_title">알 수 없는 태그 보기</string>
     <string name="settings_uts_list_title">알 수 없는 태그 보기</string>
@@ -192,8 +192,8 @@
     <string name="settings_uts_tag_first">%1s에서 처음 발견됨</string>
     <string name="settings_uts_tag_last">%1s에서 마지막으로 발견됨</string>
     <string name="settings_uts_tag_last_at">Last seen at %1s</string>
-    <string name="settings_uts_tag_unknown_address">Unknown Address</string>
-    <string name="settings_uts_tag_open">Open SmartThings</string>
+    <string name="settings_uts_tag_unknown_address">알 수 없는 주소</string>
+    <string name="settings_uts_tag_open">SmartThings 열기</string>
     <string name="settings_uts_tag_safe">This Tag is Safe</string>
     <string name="settings_uts_tag_safe_dialog_title">Mark as Safe?</string>
     <string name="settings_uts_tag_safe_dialog_content">This will hide the Tag from the Unknown Tag list, until it changes ID. This happens every 24 hours, or if the battery is removed &amp; re-inserted, or if the Tag is reset.\n\n<b>Note:</b> This does not prevent it from appearing in manual unknown Tag scans in SmartThings.</string>
@@ -222,7 +222,7 @@
     <string name="settings_map_theme_disabled">이 장치에서는 사용할 수 없습니다</string>
     <string name="settings_map_show_buildings_title">Show Buildings</string>
     <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
-    <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
+    <string name="settings_map_swap_location_history_title">내 근처 탐색 표시</string>
     <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_title">암호화</string>
@@ -263,7 +263,7 @@
     <string name="settings_content_creator_does_bull3">Your location &amp; new Location Safe Areas are displayed as a randomised location from a set of pre-determined locations.</string>
     <string name="settings_content_creator_does_bull4">Deleting &amp; exporting location history is disabled.</string>
     <string name="settings_content_creator_does_bull5">Tag location updates to the cloud are not impacted and will still be correct, but will not be displayed in the app until Content Creator Mode is disabled.</string>
-    <string name="settings_content_creator_does_bull6">Emails are hidden from the uTag settings &amp; Lost Mode UIs. Editing emails and contact information are not impacted, so be sure to change those before recording if required.</string>
+    <string name="settings_content_creator_does_bull6">이메일은 uTag 설정 및 분실 모드 UI에서 숨겨집니다. 이메일 편집 및 연락처 정보는 영향을 받지 않으므로 필요한 경우 기록하기 전에 반드시 변경해야 합니다.</string>
     <string name="settings_content_creator_does_bull7"><b>Important:</b> For safety reasons, Unknown Tag Scan results always display real locations, even with Content Creator Mode enabled.</string>
     <string name="settings_content_creator_does_footer">You can disable Content Creator Mode at any time, with no data loss and no missed location updates.</string>
     <!-- Map -->
@@ -298,19 +298,19 @@
     <string name="map_time_unknown">Unknown Time</string>
     <string name="map_bluetooth_disabled">블루투스 비활성화</string>
     <string name="map_offline">새로고침 실패</string>
-    <string name="map_ring">Ring</string>
+    <string name="map_ring">소리 울리기</string>
     <string name="map_location_history">위치 기록</string>
     <string name="map_refresh">새로고침</string>
     <string name="map_more">더보기</string>
     <string name="map_add_to_homescreen">홈 화면에 추가</string>
     <string name="map_settings">설정</string>
-    <string name="map_timestamp_last_updated">마지막 업데이트: %1s</string>
+    <string name="map_timestamp_last_updated">최근 위치 확인: %1s</string>
     <string name="map_timestamp_unknown">알 수 없음</string>
     <string name="map_timestamp_now">지금</string>
     <string name="map_timestamp_minute_ago">%1d 분 전</string>
-    <string name="map_timestamp_minutes_ago">%1d minutes ago</string>
-    <string name="map_timestamp_hour_ago">%1d hour ago</string>
-    <string name="map_timestamp_hours_ago">%1d hours ago</string>
+    <string name="map_timestamp_minutes_ago">%1d분 전</string>
+    <string name="map_timestamp_hour_ago">%1d시간 전</string>
+    <string name="map_timestamp_hours_ago">%1d 시간 전</string>
     <string name="map_searching_dialog_title">Failed to connect to Tag</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
@@ -346,7 +346,7 @@
     <string name="tag_picker_error_toast">오류가 발생했습니다, 다시 시도해 주세요</string>
     <string name="tag_picker_menu_select_all">Favourite all</string>
     <string name="tag_picker_menu_select_none">Unfavourite all</string>
-    <string name="tag_picker_add_to_home">Add to home screen</string>
+    <string name="tag_picker_add_to_home">홈 화면에 추가</string>
     <!-- Ring dialog -->
     <string name="tag_ring_title">Ring your tag</string>
     <string name="tag_ring_content_start">%1s will start ringing when you tap Start.</string>
@@ -363,14 +363,14 @@
     <string name="tag_location_history_error_content">An error occurred when loading your location history, check your connection and try again later.</string>
     <string name="tag_location_history_error_close">닫기</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
-    <string name="tag_location_history_delete">Delete history</string>
+    <string name="tag_location_history_delete">기록 삭제</string>
     <string name="tag_location_history_delete_dialog_content">Delete all location history for %1s?</string>
     <string name="tag_location_history_delete_dialog_cancel">취소</string>
     <string name="tag_location_history_delete_dialog_delete">삭제</string>
     <string name="tag_location_history_delete_error">An error occurred, please try again.</string>
     <string name="tag_location_history_delete_disabled">Delete disabled as Content Creator mode is enabled</string>
     <string name="tag_location_history_decrypt_failed">Some locations may not be shown as they could not be decrypted</string>
-    <string name="tag_location_history_export">Export history</string>
+    <string name="tag_location_history_export">기록 내보내기</string>
     <string name="tag_location_history_export_disabled">Exporting is disabled as Content Creator mode is enabled</string>
     <string name="tag_location_history_export_dialog_content">This option exports your last 7 days of location history for %1s to a CSV file. It includes some extra information that isn\'t displayed in the app, such as battery levels, signal strength and update source (where available).\n\nPlease note that it is not possible to re-import this data, this option is purely for external analysis of histories.</string>
     <string name="tag_location_history_export_dialog_warning"><b>Note:</b> Locations which failed to decrypt will be omitted from the export.</string>
@@ -384,21 +384,21 @@
     <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
-    <string name="tag_more_search_nearby">Search nearby</string>
+    <string name="tag_more_search_nearby">내 근처 탐색</string>
     <string name="tag_more_search_nearby_disabled">Disable Passive Mode to use this option</string>
     <string name="tag_more_navigate">Navigate</string>
     <string name="tag_more_category_notifications">Notifications</string>
     <string name="tag_more_notify_when_found">Notify me when it\'s found</string>
     <string name="tag_more_notify_when_found_dialog">You\'ll only be notified once when your device is found. If you lose the device again, you\'ll need to turn this on again</string>
-    <string name="tag_more_notify_when_disconnected_title">Notify when left behind</string>
+    <string name="tag_more_notify_when_disconnected_title">멀어지면 알림 받기</string>
     <string name="tag_more_notify_when_disconnected_content_warning">Not working. Tap for more info.</string>
     <string name="tag_more_notify_when_disconnected_content_disabled">Notify when %1s is disconnected from this device and not in a Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Enabled</string>
     <string name="tag_more_notify_when_disconnected_switch">Enabled</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_title">Safe Areas</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_title">안전한 장소</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_content">안전한 장소는 알림을 받지 않고 태그를 두고 갈 수 있는 영역입니다. 안전한 장소에는 두 가지 유형이 있습니다:\n\n•위치: 지정된 반경 내에 있을 때 활성화됩니다.\n• Wi-Fi: 지정된 Wi-Fi 네트워크에 연결되면 활성화됩니다.</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Notifications disabled</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content_channel">The <b>Left Behind Alerts</b> notification channel is disabled, it must be enabled for this option to work</string>
@@ -410,7 +410,7 @@
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Permission required</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
-    <string name="tag_more_lost_mode_title">Lost mode</string>
+    <string name="tag_more_lost_mode_title">분실 모드</string>
     <string name="tag_more_category_protect">Protect</string>
     <string name="tag_more_lost_mode_on">켜기</string>
     <string name="tag_more_lost_mode_off">끄기</string>
@@ -429,7 +429,7 @@
     <string name="tag_more_error_toast">오류가 발생했습니다, 다시 시도해 주세요</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
     <string name="tag_more_end_to_end_title">Encrypt offline location</string>
-    <string name="tag_more_end_to_end_content">Encrypt future location updates from other people\'s Galaxy devices for this Tag. You will be required to enter your encryption PIN to access these locations.</string>
+    <string name="tag_more_end_to_end_content">이 태그에 대한 다른 사용자의 Galaxy 기기에서 향후 위치 업데이트를 암호화합니다. 이러한 위치에 액세스하려면 암호화 PIN을 입력해야 합니다.</string>
     <string name="tag_more_end_to_end_content_pin">Set a PIN in the encryption settings to use this option</string>
     <string name="tag_more_end_to_end_content_disabled">Connect to your Tag to use this option</string>
     <string name="tag_more_end_to_end_content_network">Could not get encryption key state, check your network connection</string>
@@ -527,10 +527,10 @@
     <string name="button_volume_level_high">High</string>
     <!-- More Battery Dialog -->
     <string name="tag_more_battery_dialog_title">Battery information</string>
-    <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
-    <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
-    <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
-    <string name="tag_more_battery_dialog_very_low">• Very Low: 0–5%</string>
+    <string name="tag_more_battery_dialog_content">배터리 잔량은 태그가 이 휴대전화나 다른 Galaxy 기기의 주변에 있을 때에만 업데이트됩니다. 태그의 배터리가 부족하면 업데이트를 설치하지 못하거나 UWB를 사용하여 태그를 찾을 수 없게 됩니다.</string>
+    <string name="tag_more_battery_dialog_sufficient">• 적정: 16–100%</string>
+    <string name="tag_more_battery_dialog_low">• 부족: 6–15%</string>
+    <string name="tag_more_battery_dialog_very_low">• 매우 부족: 0–5%</string>
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
@@ -544,12 +544,12 @@
     <string name="lost_mode_next">다음</string>
     <string name="lost_mode_settings_switch">활성화</string>
     <string name="lost_mode_settings_category">Personalisation</string>
-    <string name="lost_mode_settings_email">Email (required)</string>
+    <string name="lost_mode_settings_email">이메일 (필수)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
-    <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
-    <string name="lost_mode_settings_phone_number">Contact (optional)</string>
+    <string name="lost_mode_settings_email_cannot_be_empty">이메일은 비워둘 수 없습니다</string>
+    <string name="lost_mode_settings_phone_number">연락처 (선택사항)</string>
     <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
-    <string name="lost_mode_settings_message">Message</string>
+    <string name="lost_mode_settings_message">메시지</string>
     <string name="lost_mode_settings_error_dialog_title">오류</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
     <string name="lost_mode_settings_error_dialog_close">닫기</string>
@@ -605,7 +605,7 @@
     <string name="battery_unknown">알 수 없음</string>
     <string name="battery_very_low">Battery replacement required</string>
     <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_sufficient">적정</string>
     <!-- Only used in export -->
     <string name="battery_full">Full</string>
     <string name="battery_update">Updated %1s</string>
@@ -637,18 +637,18 @@
     <string name="uts_opt_in_negative">Not now</string>
     <!-- Location History intro -->
     <string name="location_history_date_picker">Date picker</string>
-    <string name="location_history_guide_img_desc">Want to know where your pets have been throughout the day? Check the location history.</string>
+    <string name="location_history_guide_img_desc">반려동물이 하루 종일 어디에 있었는지 알고 싶으신가요? 위치 기록을 확인하세요.</string>
     <string name="location_history_guide_subheader">About location history</string>
-    <string name="location_history_guide_text_1">Location history is only available for the past 7 days.</string>
-    <string name="location_history_guide_text_2">Locations are approximate and may vary even if the device hasn\'t moved.</string>
-    <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
-    <string name="location_history_guide_button">Got it</string>
+    <string name="location_history_guide_text_1">위치 기록은 지난 7일 동안만 사용할 수 있습니다.</string>
+    <string name="location_history_guide_text_2">위치는 대략적인 것이며 기기를 움직이지 않았더라도 달라질 수 있습니다.</string>
+    <string name="location_history_guide_text_3">지난 7일 동안 기기 근처에 다른 Galaxy 기기가 없으면 위치 기록을 사용할 수 없습니다.</string>
+    <string name="location_history_guide_button">알겠습니다</string>
     <!-- PIN Entry dialog -->
-    <string name="tag_pin_entry_title">Enter PIN</string>
-    <string name="tag_pin_entry_content">Enter your PIN for %1s to decrypt its location.</string>
-    <string name="tag_pin_entry_content_alt">Enter your PIN for %1s to decrypt its location history.</string>
+    <string name="tag_pin_entry_title">PIN 입력</string>
+    <string name="tag_pin_entry_content">%1s의 위치를 보려면 PIN을 입력하세요.</string>
+    <string name="tag_pin_entry_content_alt">%1s의 위치 기록을 보려면 PIN을 입력하세요.</string>
     <string name="tag_pin_entry_error">Incorrect PIN entered, try again</string>
-    <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
+    <string name="tag_pin_entry_save">기기에 PIN을 안전하게 저장하여 다시 입력할 필요가 없도록 합니다</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_set_pin_title">Set PIN</string>
     <string name="settings_encryption_set_pin_content">Set a PIN for offline location encryption</string>
@@ -818,7 +818,7 @@
     <string name="notification_content_disconnect">Your %1s has been left behind!</string>
     <!-- Logged out notification -->
     <string name="notification_title_logged_out">Signed Out</string>
-    <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
+    <string name="notification_content_logged_out">SmartThings에서 로그아웃되었습니다. 다시 로그인하려면 탭하세요.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Find my Device</string>
     <string name="notification_content_find_my_device_delay">%1s is about to ring this device</string>
@@ -988,17 +988,17 @@
     <string name="backup_restore_restore_title">복원</string>
     <string name="backup_restore_restore_content">파일 또는 클라우드에 uTag데이터 백업</string>
     <string name="backup_restore_included_title">Included in Backup</string>
-    <string name="backup_restore_included_bull1">Scan, Location, Map &amp; Refresh settings</string>
-    <string name="backup_restore_included_bull2">Safe Areas</string>
+    <string name="backup_restore_included_bull1">스캔, 위치, 지도 및 새로 고침 설정</string>
+    <string name="backup_restore_included_bull2">안전한 장소</string>
     <string name="backup_restore_included_bull3">Passive Mode configuration</string>
     <string name="backup_restore_included_bull4">Notify when left behind settings</string>
     <string name="backup_restore_included_bull5">Custom Automation configuration*</string>
     <string name="backup_restore_included_bull6">Find my Device configuration</string>
     <string name="backup_restore_included_footer">* Configuration is backed up, but you may need to re-enable options to synchronise with your Tags</string>
     <string name="backup_restore_not_included_title">Not Included in Backup</string>
-    <string name="backup_restore_not_included_bull1">Tag Locations &amp; Location History*</string>
-    <string name="backup_restore_not_included_bull2">Tag Lost Mode &amp; offline location encryption options*</string>
-    <string name="backup_restore_not_included_bull3">Your PIN &amp; Biometric Entry options</string>
+    <string name="backup_restore_not_included_bull1">태그 위치 및 위치 기록*</string>
+    <string name="backup_restore_not_included_bull2">태그 분실 모드 및 오프라인 위치 암호화 옵션*</string>
+    <string name="backup_restore_not_included_bull3">PIN 및 생체 인식 입력 옵션</string>
     <string name="backup_restore_not_included_bull4">Widget configurations</string>
     <string name="backup_restore_not_included_footer">* 해당 항목은 Tag 및 삼성 서버에 저장되므로 uTag를 리셋하더라도 삭제되지 않습니다.</string>
     <string name="backup_restore_close">닫기</string>
@@ -1015,11 +1015,11 @@
     <string name="backup_creating_passive_mode_configs_backup">Backing up passive mode configuration…</string>
     <string name="backup_creating_wifi_safe_areas_backup">Backing up Wi-Fi Safe Areas…</string>
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
-    <string name="backup_creating_settings_backup">Backing up settings…</string>
-    <string name="backup_created">Backup created</string>
-    <string name="backup_error">Error</string>
+    <string name="backup_creating_settings_backup">설정 백업 중…</string>
+    <string name="backup_created">백업 생성</string>
+    <string name="backup_error">오류</string>
     <!-- Restore -->
-    <string name="restore_error_dialog_title">Error Loading Backup</string>
+    <string name="restore_error_dialog_title">백업 로드 중 오류 발생</string>
     <string name="restore_error_dialog_close">닫기</string>
     <string name="restore_category_options">Restore Options</string>
     <string name="restore_automation_configs_title">Restore Custom Automations</string>
@@ -1034,10 +1034,10 @@
     <string name="restore_settings_title">Restore uTag Settings</string>
     <string name="restore_settings_content">Includes scan, location, map &amp; refresh settings</string>
     <string name="restore_additional_permissions_required">Additional permissions required</string>
-    <string name="restore_footer_title">Restore Backup</string>
+    <string name="restore_footer_title">백업 복원</string>
     <string name="restore_footer_content"><b>경고:</b> 이 백업을 복원하면 현재 uTag 구성이 덮어쓰게 됩니다</string>
     <string name="restore_footer_restore">Begin Restore</string>
-    <string name="restore_progress_restoring_backup">Restoring backup…</string>
+    <string name="restore_progress_restoring_backup">백업 복원 중…</string>
     <string name="restore_progress_restoring_automation_configs">Restoring Custom Automations…</string>
     <string name="restore_progress_restoring_find_my_device_configs">Restoring Find my Device configuration…</string>
     <string name="restore_progress_restoring_location_safe_areas">Restoring Location Safe Areas…</string>
@@ -1047,7 +1047,7 @@
     <string name="restore_progress_restoring_unknown_tags">Restoring Safe Tags…</string>
     <string name="restore_progress_restoring_settings">설정 복원 중…</string>
     <string name="restore_progress_restoring_complete">복원 완료</string>
-    <string name="restore_progress_restoring_complete_content">Your backup has been restored. You may need to re-configure some options, such as Custom Automations, to synchronise them with the Tag.</string>
+    <string name="restore_progress_restoring_complete_content">백업이 복원되었습니다. 태그와 동기화하려면 사용자 지정 자동화와 같은 일부 옵션을 다시 구성해야 할 수도 있습니다.</string>
     <string name="bottom_nav_settings">설정</string>
     <string name="bottom_nav_updates">업데이트</string>
     <!-- Updates -->
@@ -1072,7 +1072,7 @@
     <string name="updates_smartthings_not_modded_content">You must have the modified build of SmartThings installed for uTag to work, please re-run setup to install it and set it up.\n\n<b>Note:</b> If your device is rooted with Xposed installed, enable the uTag Xposed module, force stop SmartThings and return to uTag to fix this.</string>
     <string name="updates_smartthings_not_modded_action">Re-run setup</string>
     <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
-    <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
+    <string name="updates_rerun_setup_dialog_content">계정이 동기화되었는지 확인하기 위해 uTag에서 로그아웃합니다</string>
     <string name="updates_category_options">Options</string>
     <string name="updates_check_for_updates_title">자동으로 업데이트 확인</string>
     <string name="updates_check_for_updates_content">하루에 한 번 자동으로 업데이트를 확인하고 사용 가능한 알림 표시</string>
