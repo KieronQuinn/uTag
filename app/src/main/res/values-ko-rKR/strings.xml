@@ -205,8 +205,8 @@
     <string name="settings_uts_sensitivity_very_high">Very High</string>
     <string name="settings_uts_sensitivity_high">High</string>
     <string name="settings_uts_sensitivity_normal">Normal</string>
-    <string name="settings_uts_sensitivity_low">Low</string>
-    <string name="settings_uts_sensitivity_very_low">Very Low</string>
+    <string name="settings_uts_sensitivity_low">부족</string>
+    <string name="settings_uts_sensitivity_very_low">매우 부족</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">위치 표시</string>
     <string name="settings_map_show_location_content">지도에서 사용 가능한 위치를 표시합니다</string>
@@ -415,7 +415,7 @@
     <string name="tag_more_lost_mode_on">켜기</string>
     <string name="tag_more_lost_mode_off">끄기</string>
     <string name="tag_more_category_share">공유</string>
-    <string name="tag_more_shareable">Share this Tag\'s location</string>
+    <string name="tag_more_shareable">이 기기의 위치 공유</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
     <string name="tag_more_share">Allow access to your location</string>
     <string name="tag_more_advanced">고급</string>
