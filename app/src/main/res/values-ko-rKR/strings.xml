@@ -620,8 +620,8 @@
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Locate your Tags anytime, anywhere</string>
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
-    <string name="privacy_notice_agree">Agree</string>
-    <string name="privacy_notice_disagree">Disagree</string>
+    <string name="privacy_notice_agree">동의</string>
+    <string name="privacy_notice_disagree">거부</string>
     <string name="privacy_notice_error_dialog_title">오류</string>
     <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
     <string name="privacy_notice_error_dialog_close">닫기</string>
