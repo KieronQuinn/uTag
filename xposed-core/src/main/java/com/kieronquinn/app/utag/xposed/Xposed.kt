@@ -58,6 +58,7 @@ import com.kieronquinn.app.utag.xposed.extensions.provideContext
 import com.kieronquinn.app.utag.xposed.extensions.runSafely
 import com.kieronquinn.app.utag.xposed.extensions.runWithClearedIdentity
 import com.kieronquinn.app.utag.xposed.utils.PauseResumeLifecycleCallbacks
+import com.kieronquinn.app.utag.xposed.utils.SigBypass
 import de.robv.android.xposed.IXposedHookLoadPackage
 import de.robv.android.xposed.XC_MethodHook
 import de.robv.android.xposed.XC_MethodReplacement
@@ -270,6 +271,8 @@ class Xposed: IXposedHookLoadPackage {
                 XposedBridge.log("uTag is modded and hooked, aborting hooking! Disable the Xposed module or reinstall from Google Play to fix this.")
                 return
             }
+        }else{
+            SigBypass.doSigBypass(this, lpparam.classLoader)
         }
         sharedPreferences = getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
         packageInfo = packageManager.getPackageInfo(packageName, 0)

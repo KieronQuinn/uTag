@@ -316,7 +316,7 @@
     <string name="map_searching_dialog_enable_searching">Activer le mode de recherche</string>
     <string name="map_searching_dialog_cancel">Fermer</string>
     <string name="map_allow_access_dialog_title">Partager votre position ?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n\'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
     <string name="map_allow_access_dialog_positive">Partager</string>
     <string name="map_allow_access_dialog_negative">Annuler</string>
     <string name="map_passive_mode_dialog_title">Mode Passif activé</string>
@@ -619,7 +619,7 @@
     <string name="d2d_status_scanned">Scanné</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Localisez vos Tags n\'importe quand, n\'importe où</string>
-    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
+    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l\'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d\'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
     <string name="privacy_notice_agree">J\'accepte</string>
     <string name="privacy_notice_disagree">Je refuse</string>
     <string name="privacy_notice_error_dialog_title">Erreur</string>
