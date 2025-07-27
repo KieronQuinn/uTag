@@ -1,9 +1,9 @@
 {
-   "version": "1.0.7",
-   "version_code": 107,
+   "version": "1.0.8",
+   "version_code": 108,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated SmartThings to version 1.8.34.21",
-   "file_size": 142442025
+   "release_notes": "- Fixed incompatibility with some other non-OneUI Samsung apps, such as the Watch 7 Plugin",
+   "file_size": 143475312
 }
