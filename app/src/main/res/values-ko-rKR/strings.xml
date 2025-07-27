@@ -735,7 +735,7 @@
     <string name="update_done_content_smartthings"><b>Note:</b> Your Tags may disconnect during the update process.</string>
     <string name="update_done_action">설치 시작</string>
     <string name="update_action">다운로드</string>
-    <string name="update_action_alt">Alternative download</string>
+    <string name="update_action_alt">대체 다운로드</string>
     <string name="download_manager_description">업데이트 다운로드 중…</string>
     <string name="download_manager_description_mod">SmartThings 다운로드 중…</string>
     <string name="update_downloader_downloading_title">업데이트 다운로드 중…</string>
