@@ -416,7 +416,7 @@
     <string name="tag_more_lost_mode_off">끄기</string>
     <string name="tag_more_category_share">공유</string>
     <string name="tag_more_shareable">이 기기의 위치 공유</string>
-    <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
+    <string name="tag_more_shareable_content">SmartThings 장소를 공유하는 멤버에게 이 태그의 위치를 공유하세요</string>
     <string name="tag_more_share">Allow access to your location</string>
     <string name="tag_more_advanced">고급</string>
     <string name="tag_more_passive_mode_title">Passive Mode</string>
@@ -428,7 +428,7 @@
     <string name="tag_more_error_close">닫기</string>
     <string name="tag_more_error_toast">오류가 발생했습니다, 다시 시도해 주세요</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
-    <string name="tag_more_end_to_end_title">Encrypt offline location</string>
+    <string name="tag_more_end_to_end_title">오프라인 위치 암호화</string>
     <string name="tag_more_end_to_end_content">이 태그에 대한 다른 사용자의 Galaxy 기기에서 향후 위치 업데이트를 암호화합니다. 이러한 위치에 액세스하려면 암호화 PIN을 입력해야 합니다.</string>
     <string name="tag_more_end_to_end_content_pin">Set a PIN in the encryption settings to use this option</string>
     <string name="tag_more_end_to_end_content_disabled">Connect to your Tag to use this option</string>
@@ -543,7 +543,7 @@
     <string name="pairing_lock_description">This tag is linked to your account. It won\'t be linked to other users.</string>
     <string name="lost_mode_next">다음</string>
     <string name="lost_mode_settings_switch">활성화</string>
-    <string name="lost_mode_settings_category">Personalisation</string>
+    <string name="lost_mode_settings_category">개인 설정</string>
     <string name="lost_mode_settings_email">이메일 (필수)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
     <string name="lost_mode_settings_email_cannot_be_empty">이메일은 비워둘 수 없습니다</string>
@@ -557,19 +557,19 @@
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
     <string name="lost_mode_settings_category_advanced">고급</string>
-    <string name="lost_mode_settings_custom_url_title">Custom URL</string>
-    <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
+    <string name="lost_mode_settings_custom_url_title">사용자 지정 URL</string>
+    <string name="lost_mode_settings_custom_url_content_unset">이 태그가 다른 장치에 의해 탭될 때 열리도록 사용자 지정 URL 설정</string>
     <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
     <string name="lost_mode_settings_custom_url_content_passive">Disable Passive Mode to use this option</string>
-    <string name="lost_mode_settings_custom_url_warning_title">Important Warning</string>
-    <string name="lost_mode_settings_custom_url_warning_content">Setting a custom URL overwrites the original URL which is stored on the Tag. uTag will try to keep the original URL backed up, however <b>if you edit or turn off Lost Mode using the SmartThings app, it will be lost permanently</b>. You are advised to keep a second, external copy of this original URL stored safely elsewhere.</string>
-    <string name="lost_mode_settings_custom_url_warning_action">Copy original URL</string>
+    <string name="lost_mode_settings_custom_url_warning_title">중요 경고</string>
+    <string name="lost_mode_settings_custom_url_warning_content">사용자 지정 URL을 설정하면 태그에 저장된 원래 URL이 덮어씁니다. uTag는 원래 URL을 백업하려고 하지만 <b>SmartThings 앱을 사용하여 분실 모드를 편집하거나 끄는 경우, 영구적으로 분실될 것입니다.</b> 이 원본 URL의 두 번째 외부 사본을 다른 곳에 안전하게 보관하는 것이 좋습니다.</string>
+    <string name="lost_mode_settings_custom_url_warning_action">원본 URL 복사</string>
     <string name="lost_mode_settings_custom_url_warning_action_label">%1s\'s original URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_toast">Copied to clipboard</string>
-    <string name="lost_mode_settings_custom_url_lost_title">Important Warning</string>
+    <string name="lost_mode_settings_custom_url_lost_title">중요 경고</string>
     <string name="lost_mode_settings_custom_url_lost_content">Lost Mode has been modified using SmartThings while a custom URL was set. Your original Lost Mode URL has been lost. To fix this and allow usage of normal Lost Mode again, set the custom URL back to your original URL from your external backup. If you don\'t have it backed up, you will need to factory reset your Tag.</string>
     <string name="lost_mode_settings_custom_url_set_title">Custom URL</string>
-    <string name="lost_mode_settings_custom_url_set_summary">Set a custom URL to open when this Tag is tapped on another device. <b>Make sure you have an external backup of your original URL before using this.</b></string>
+    <string name="lost_mode_settings_custom_url_set_summary">이 태그가 다른 장치에서 탭될 때 열리도록 사용자 지정 URL을 설정합니다. <b>이것을 사용하기 전에 원래 URL의 외부 백업이 있는지 확인하세요.</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_title">오류</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
@@ -578,15 +578,15 @@
     <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">확인</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_settings_custom_url_invalid_url_toast">잘못된 URL</string>
-    <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
-    <string name="lost_mode_settings_custom_url_footer_content">Setting a custom URL allows you to fully customise what happens when a device with NFC enabled is tapped on your Tag. It can be set to any URL, much like a writable NFC tag.\n\n<b>Important:</b> You can only write a custom URL when the Tag is connected, so ideally this should be a page you can edit to add contact details to later if required.</string>
+    <string name="lost_mode_settings_custom_url_footer_title">사용자 지정 URL 정보</string>
+    <string name="lost_mode_settings_custom_url_footer_content">사용자 지정 URL을 설정하면 NFC가 활성화된 장치를 태그에서 탭할 때 어떤 일이 일어나는지 완전히 사용자 지정할 수 있습니다. 쓰기 가능한 NFC 태그처럼 어떤 URL로도 설정할 수 있습니다.\n\n<b>중요:</b> 태그가 연결된 경우에만 사용자 지정 URL을 작성할 수 있으므로, 필요한 경우 나중에 연락처 정보를 추가할 수 있도록 편집할 수 있는 페이지가 이상적입니다.</string>
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
     <string name="lost_mode_custom_url_warning" maxLength="40">Do not edit or turn off. See uTag Wiki.</string>
     <!-- Predefined lost messages (displayed locally only) -->
-    <string name="this_smarttag_has_been_lost">This SmartTag has been lost.</string>
-    <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
-    <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
-    <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
+    <string name="this_smarttag_has_been_lost">잃어버린 스마트태그입니다.</string>
+    <string name="this_is_a_lost_item">저에게 중요한 물건입니다. 다시 찾을 수 있도록 도와주세요.</string>
+    <string name="im_tracking_this_item">이 물건을 찾기 위해 위치를 추적하고 있습니다. 저에게 연락해 주세요.</string>
+    <string name="help_my_lost_pet_come_back_home">잃어버린 반려동물을 찾을 수 있도록 저에게 연락해 주세요.</string>
     <!-- Passive Mode -->
     <string name="passive_mode_enabled_switch">Enabled</string>
     <string name="passive_mode_info_title">What is Passive Mode?</string>
@@ -994,7 +994,7 @@
     <string name="backup_restore_included_bull4">Notify when left behind settings</string>
     <string name="backup_restore_included_bull5">사용자 지정 자동화 구성*</string>
     <string name="backup_restore_included_bull6">Find my Device configuration</string>
-    <string name="backup_restore_included_footer">* Configuration is backed up, but you may need to re-enable options to synchronise with your Tags</string>
+    <string name="backup_restore_included_footer">구성이 백업되었지만 태그와 동기화하려면 옵션을 다시 활성화해야 할 수도 있습니다</string>
     <string name="backup_restore_not_included_title">백업에 포함되지 않음</string>
     <string name="backup_restore_not_included_bull1">태그 위치 및 위치 기록*</string>
     <string name="backup_restore_not_included_bull2">태그 분실 모드 및 오프라인 위치 암호화 옵션*</string>
