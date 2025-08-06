@@ -24,7 +24,6 @@ import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
 import android.content.pm.PackageInfo
 import android.content.pm.PackageManager.NameNotFoundException
-import android.net.Uri
 import android.os.Bundle
 import android.os.IBinder
 import android.os.IBinder.DeathRecipient
@@ -82,6 +81,7 @@ import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.withTimeoutOrNull
 import org.json.JSONException
 import org.json.JSONObject
+import java.io.File
 import java.lang.ref.WeakReference
 import java.lang.reflect.Modifier
 import java.util.UUID
@@ -110,18 +110,22 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect.webplugin.WebPluginActivity",
         )
 
+        private val VMF_DENYLIST = setOf(
+            "com.samsung.one.plugin.trkplugin_125300005"
+        )
+
         private const val CSS_OVERRIDES =
             "#SmartButtonActionCard,#button_service_list{height:auto!important}" +
                     "#findYourPhoneCard,#findYourPhone,#buttonService{display:none}"
 
         private const val SHARED_PREFS_NAME = "utag"
-        private const val PACKAGE_FMM = "com.samsung.android.fmm"
         private const val PACKAGE_SAMSUNG_ACCOUNT = "com.osp.app.signin"
-        private const val URI_FMM_SUPPORT = "content://com.samsung.android.fmm/fmmsupport"
         private const val CLASS_CLOUD_NOTIFICATION_MANAGER =
             "com.samsung.android.oneconnect.notification.CloudNotificationManager"
 
         private const val LOCATION_TIMEOUT = 30_000L //30 seconds
+        //Last version before lockups started
+        private const val PLATFORM_VERSION_OVERRIDE = 101600001
 
         //Copied from main module
         const val APPLICATION_ID = "com.kieronquinn.app.utag"
@@ -170,8 +174,6 @@ class Xposed: IXposedHookLoadPackage {
         const val EXTRA_INTENT = "intent"
         const val EXTRA_RESULT = "result"
 
-        const val AUTHORITY_FMM = "$APPLICATION_ID.fakefmm"
-
         enum class CapsuleProviderMethod {
             GET_VERSION_CODE,
             GET_VERSION_NAME,
@@ -196,7 +198,9 @@ class Xposed: IXposedHookLoadPackage {
             SHARED_PREF_KEY_SCAN_CALLBACK_CLASS("scan_callback_class"),
             SHARED_PREF_KEY_DISCONNECT_METHOD("disconnect_method"),
             SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD("force_disconnect_method"),
-            SHARED_PREF_KEY_FIREBASE_PUSH_INTENT("firebase_push_intent"),;
+            SHARED_PREF_KEY_FIREBASE_PUSH_INTENT("firebase_push_intent"),
+            SHARED_PREF_KEY_IS_FMM_SUPPORTED("is_fmm_supported"),
+            ;
 
             fun getKey(version: Long): String {
                 return "${key}_$version"
@@ -217,6 +221,7 @@ class Xposed: IXposedHookLoadPackage {
     private val scanLock = Mutex()
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var packageInfo: PackageInfo
+    private lateinit var dexplore: Dexplore
 
     private val lifecycleCallbacks = object: PauseResumeLifecycleCallbacks() {
         override fun onActivityResumed(activity: Activity) {
@@ -275,6 +280,7 @@ class Xposed: IXposedHookLoadPackage {
             SigBypass.doSigBypass(this, lpparam.classLoader)
         }
         sharedPreferences = getSharedPreferences(SHARED_PREFS_NAME, Context.MODE_PRIVATE)
+        dexplore = DexFactory.load(lpparam.appInfo.sourceDir)
         packageInfo = packageManager.getPackageInfo(packageName, 0)
         val requiresSetup = !sharedPreferences.areAllKeysPresent(packageInfo.longVersionCode)
         if(requiresSetup && isMainProcess) {
@@ -284,27 +290,39 @@ class Xposed: IXposedHookLoadPackage {
         hookViewMap()
         hookActivity()
         hookWebView()
+        deleteVmfDenylist()
         lpparam.hookRootChecks()
-        lpparam.hookIsFmmSupported()
+        lpparam.hookIsFmmSupported(this)
         lpparam.hookStartScan()
         lpparam.hookTagDozeModeService()
         lpparam.hookCapsuleProvider()
-        lpparam.hookSystemInfo(this, packageInfo)
-        lpparam.hookQcServiceRunnable(this, packageInfo)
-        lpparam.hookPublishDeviceStatus(this, packageInfo)
-        lpparam.hookSmartTagGattConnecter(this, packageInfo)
-        lpparam.hookDeviceBleThingsManager(this, packageInfo)
-        lpparam.hookScanCallback(this, packageInfo)
-        lpparam.hookDebug(this, packageInfo)
-        lpparam.hookCheckDisconnect(this, packageInfo)
-        lpparam.hookOneConnectPushNotifications(this, packageInfo)
+        lpparam.hookSystemInfo(this)
+        lpparam.hookQcServiceRunnable(this)
+        lpparam.hookPublishDeviceStatus(this)
+        lpparam.hookSmartTagGattConnecter(this)
+        lpparam.hookDeviceBleThingsManager(this)
+        lpparam.hookScanCallback(this)
+        lpparam.hookDebug(this)
+        lpparam.hookCheckDisconnect(this)
+        lpparam.hookOneConnectPushNotifications(this)
         lpparam.hookSamsungAccount()
         lpparam.hookShortcutActivity()
+        lpparam.hookPlatformVersion()
         if(requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
                 applySecurity(this@handleLoadApplication)
                 `package` = PACKAGE_NAME_UTAG
             })
+        }
+    }
+
+    private fun Context.deleteVmfDenylist() {
+        val filesDir = filesDir?.takeIf { it.exists() } ?: return
+        val rootDir = filesDir.parentFile?.takeIf { it.exists() } ?: return
+        val vmfDir = File(rootDir, "vmf").takeIf { it.exists() } ?: return
+        val apkDir = File(vmfDir, "apk").takeIf { it.exists() } ?: return
+        VMF_DENYLIST.forEach { name ->
+            File(apkDir, name).takeIf { file -> file.exists() }?.deleteRecursively()
         }
     }
 
@@ -332,7 +350,7 @@ class Xposed: IXposedHookLoadPackage {
         )
     }
 
-    private fun LoadPackageParam.hookOneConnectPushNotifications(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookOneConnectPushNotifications(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_FIREBASE_PUSH_INTENT)
         val method = if(savedMethod == null) {
             val classFilter = ClassFilter.Builder()
@@ -345,7 +363,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_FIREBASE_PUSH_INTENT, it)
             }
@@ -658,34 +675,39 @@ class Xposed: IXposedHookLoadPackage {
      *  received with a fake call to our own provider which always returns true. This is the final
      *  step in allowing push notifications to work.
      */
-    private fun LoadPackageParam.hookIsFmmSupported() {
-        XposedHelpers.findAndHookMethod(
-            "android.app.ApplicationPackageManager",
-            classLoader,
-            "getPackageInfo",
-            String::class.java,
-            Integer.TYPE,
-            object: XC_MethodHook() {
-                override fun beforeHookedMethod(param: MethodHookParam) {
-                    super.beforeHookedMethod(param)
-                    val calling = getCallingInformation()?.first ?: return
-                    if(param.args[0] == PACKAGE_FMM && calling == CLASS_CLOUD_NOTIFICATION_MANAGER) {
-                        //Result is not used, it just needs to not throw
-                        param.result = null
-                    }
+    private fun LoadPackageParam.hookIsFmmSupported(context: Context) {
+        val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_IS_FMM_SUPPORTED)
+        val method = if(savedMethod == null) {
+            val classFilter = ClassFilter.Builder()
+                .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
+                .setReferenceFilter { pool: ReferencePool ->
+                    pool.contains("isSupportFindMyMobileFeature")
                 }
+                .build()
+            val methodFilter = MethodFilter.Builder()
+                .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
+                .setReferenceFilter { pool: ReferencePool ->
+                    pool.contains("isSupportFindMyMobileFeature")
+                }
+                .setModifiers(Modifier.PUBLIC)
+                .build()
+            dexplore.findMethod(classFilter, methodFilter)?.also {
+                saveMethod(SharedPrefsKey.SHARED_PREF_KEY_IS_FMM_SUPPORTED, it)
             }
-        )
-        XposedHelpers.findAndHookMethod(
-            Uri::class.java,
-            "parse",
-            String::class.java,
+        }else{
+            savedMethod
+        }?.loadMethod(classLoader) ?: run {
+            context.logException("uTag: Failed to hook isFmmPackageInstalled (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
+            return
+        }
+        XposedBridge.hookMethod(
+            method,
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
                     val calling = getCallingInformation()?.first ?: return
-                    if(param.args[0] == URI_FMM_SUPPORT && calling == CLASS_CLOUD_NOTIFICATION_MANAGER) {
-                        param.args[0] = "content://$AUTHORITY_FMM/fmmsupport"
+                    if(calling == CLASS_CLOUD_NOTIFICATION_MANAGER) {
+                        param.result = true
                     }
                 }
             }
@@ -736,6 +758,26 @@ class Xposed: IXposedHookLoadPackage {
                         val intent = TagActivity_createIntent(deviceId)
                         activity.startActivity(intent)
                         activity.finish()
+                    }
+                }
+            }
+        )
+    }
+
+    private fun LoadPackageParam.hookPlatformVersion() {
+        val pluginInfoRequest = XposedHelpers.findClass(
+            "com.samsung.android.pluginplatform.service.store.StorePluginInfoRequest",
+            classLoader
+        )
+        XposedBridge.hookAllMethods(
+            pluginInfoRequest,
+            "getPlatformVersion",
+            object: XC_MethodHook() {
+                override fun afterHookedMethod(param: MethodHookParam) {
+                    super.afterHookedMethod(param)
+                    val currentVersion = (param.result as String).toLongOrNull() ?: return
+                    if(currentVersion > PLATFORM_VERSION_OVERRIDE) {
+                        param.result = PLATFORM_VERSION_OVERRIDE.toString()
                     }
                 }
             }
@@ -1011,7 +1053,7 @@ class Xposed: IXposedHookLoadPackage {
      *  manufacturer check. To save on searching, the method signature is committed to SmartThings'
      *  shared prefs for each version, and loaded if it exists already.
      */
-    private fun LoadPackageParam.hookSystemInfo(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookSystemInfo(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD)
         val savedMethodAlt = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD_ALT)
         val methods = if(savedMethod == null) {
@@ -1026,7 +1068,6 @@ class Xposed: IXposedHookLoadPackage {
                 .setParamSize(0)
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             val methods = dexplore.findMethods(dexFilter, classFilter, methodFilter, 2)
             methods.getOrNull(0)?.let {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SYSTEM_INFO_METHOD, it)
@@ -1066,14 +1107,13 @@ class Xposed: IXposedHookLoadPackage {
      *  Uses Dexplore to find the Logger class, then sets the two debug boolean global fields to
      *  true when [BuildConfig.DEBUG] is set
      */
-    private fun LoadPackageParam.hookDebug(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookDebug(context: Context) {
         val savedClass = getSavedClass(SharedPrefsKey.SHARED_PREF_KEY_DEBUG_CLASS)
         val debugClass = if(savedClass == null) {
             val classFilter = ClassFilter.Builder()
                 .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
                 .setReferenceFilter { pool: ReferencePool -> pool.contains("PRINT_SECURE_LOG : ") }
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findClass(classFilter)?.also {
                 saveClass(SharedPrefsKey.SHARED_PREF_KEY_DEBUG_CLASS, it)
             }
@@ -1097,7 +1137,7 @@ class Xposed: IXposedHookLoadPackage {
      *  whether the service should be stopped, and neutralise it. We want to prevent ST from being
      *  killed as much as possible.
      */
-    private fun LoadPackageParam.hookQcServiceRunnable(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookQcServiceRunnable(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_QCSERVICE_RUNNABLE_METHOD)
         val method = if(savedMethod == null) {
             val classFilter = ClassFilter.Builder()
@@ -1114,7 +1154,6 @@ class Xposed: IXposedHookLoadPackage {
                 .setParamSize(0)
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_QCSERVICE_RUNNABLE_METHOD, it)
             }
@@ -1141,7 +1180,7 @@ class Xposed: IXposedHookLoadPackage {
      *  don't use, so we'd rather they actually disconnect and redirecting them is the easiest
      *  way to do this.
      */
-    private fun LoadPackageParam.hookCheckDisconnect(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookCheckDisconnect(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_DISCONNECT_METHOD)
         val method = if(savedMethod == null) {
             val classFilter = ClassFilter.Builder()
@@ -1157,7 +1196,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_DISCONNECT_METHOD, it)
             }
@@ -1182,7 +1220,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD, it)
             }
@@ -1206,7 +1243,7 @@ class Xposed: IXposedHookLoadPackage {
      *  Uses Dexplore to find the GattActionManagerImpl.publishDeviceStatus method, which we
      *  use to intercept button presses as the service method does not work.
      */
-    private fun LoadPackageParam.hookPublishDeviceStatus(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookPublishDeviceStatus(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_PUBLISH_DEVICE_STATUS_METHOD)
         val method = if(savedMethod == null) {
             val classFilter = ClassFilter.Builder()
@@ -1222,7 +1259,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_PUBLISH_DEVICE_STATUS_METHOD, it)
             }
@@ -1257,7 +1293,7 @@ class Xposed: IXposedHookLoadPackage {
      *  Uses Dexplore to find the SmartTagGattConnecter.connect method, which we use to to
      *  intercept calls to connect to Tags and disable when Passive Mode is enabled
      */
-    private fun LoadPackageParam.hookSmartTagGattConnecter(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookSmartTagGattConnecter(context: Context) {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SMART_TAG_CONNECT_METHOD)
         val method = if(savedMethod == null) {
             val classFilter = ClassFilter.Builder()
@@ -1273,7 +1309,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SMART_TAG_CONNECT_METHOD, it)
             }
@@ -1298,7 +1333,7 @@ class Xposed: IXposedHookLoadPackage {
         )
     }
 
-    private fun LoadPackageParam.hookDeviceBleThingsManager(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookDeviceBleThingsManager(context: Context) {
         val savedNotifyMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_SCAN_NOTIFY_METHOD)
         val classFilter = ClassFilter.Builder()
             .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
@@ -1314,7 +1349,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SCAN_NOTIFY_METHOD, it)
             }
@@ -1334,7 +1368,6 @@ class Xposed: IXposedHookLoadPackage {
                 }
                 .setModifiers(Modifier.PUBLIC)
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findMethod(classFilter, methodFilter)?.also {
                 saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SCAN_REPOSITORY_METHOD, it)
             }
@@ -1393,14 +1426,13 @@ class Xposed: IXposedHookLoadPackage {
     /**
      *  Uses Dexplore to find the ScanCallback class, to send all scan results to uTag
      */
-    private fun LoadPackageParam.hookScanCallback(context: Context, packageInfo: PackageInfo) {
+    private fun LoadPackageParam.hookScanCallback(context: Context) {
         val savedClass = getSavedClass(SharedPrefsKey.SHARED_PREF_KEY_SCAN_CALLBACK_CLASS)
         val scanCallbackClass = if(savedClass == null) {
             val classFilter = ClassFilter.Builder()
                 .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
                 .setReferenceFilter { pool: ReferencePool -> pool.contains("Ignore  device is null") }
                 .build()
-            val dexplore: Dexplore = DexFactory.load(appInfo.sourceDir)
             dexplore.findClass(classFilter)?.also {
                 saveClass(SharedPrefsKey.SHARED_PREF_KEY_SCAN_CALLBACK_CLASS, it)
             }
