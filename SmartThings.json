@@ -1,9 +1,9 @@
 {
-   "version": "1.0.8",
-   "version_code": 108,
+   "version": "1.0.9",
+   "version_code": 109,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Fixed incompatibility with some other non-OneUI Samsung apps, such as the Watch 7 Plugin",
+   "release_notes": "- Added workaround for SmartThings freezing (downgrading the plugin)\n- Fixed Notify when Found not working on some devices\n- Improved loading time for applying the mod",
    "file_size": 143475312
 }
