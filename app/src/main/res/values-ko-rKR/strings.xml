@@ -153,9 +153,9 @@
     <string name="settings_location_units_title">Distance Units</string>
     <string name="settings_location_units_system">Match system (%1s)</string>
     <string name="settings_location_units_metric">Metric</string>
-    <string name="settings_location_units_imperial"></string>
+    <string name="settings_location_units_imperial">Imperial</string>
     <!-- Settings > Location > Chaser -->
-    <string name="settings_chaser_title"></string>
+    <string name="settings_chaser_title">Find my Everything Network</string>
     <string name="settings_chaser_switch">활성화</string>
     <string name="settings_chaser_info_title">Contributing to the Samsung Find my Everything network</string>
     <string name="settings_chaser_info_content">활성화되면 uTag는 위치 새로 고침 중에 근처에서 감지된 태그의 위치를 전송하여 다른 SmartTag 사용자가 항목을 찾을 수 있도록 지원합니다.\n\n위치는 완전히 익명이며, 태그에 위치 암호화가 활성화된 경우 암호화될 수 있습니다.</string>
