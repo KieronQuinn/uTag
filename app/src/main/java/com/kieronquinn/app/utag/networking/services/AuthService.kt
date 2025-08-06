@@ -55,7 +55,7 @@ interface AuthService {
             codeChallenge: String,
             physicalAddressText: String,
             scope: String,
-            loginId: String
+            loginId: String?
         ) = authoriseInternal(
             url = baseUrl.applyPrefixIfNeeded() + PATH_AUTHORISE,
             clientId = clientId,
@@ -117,7 +117,7 @@ interface AuthService {
         @Query("code_challenge") codeChallenge: String,
         @Query("physical_address_text") physicalAddressText: String,
         @Query("scope") scope: String,
-        @Query("login_id") loginId: String
+        @Query("login_id") loginId: String?
     ): Call<AuthoriseResponse>
 
     @POST

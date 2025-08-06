@@ -305,7 +305,7 @@ class AuthRepositoryImpl(
         val loginId = encryptedStorage.loginId.get().takeIf { it.isNotBlank() }
             ?: return false
         val physicalAddressText = getDeviceId()
-        val authoriseResponse = authService.authorise(
+        var authoriseResponse = authService.authorise(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_ONECONNECT,
             userauthToken = userAuthToken,
@@ -314,6 +314,18 @@ class AuthRepositoryImpl(
             scope = "iot.client",
             loginId = loginId
         ).get(name = "iotAuthorise") ?: return false
+        if(authoriseResponse.code == null && authoriseResponse.privacyAccepted == "N") {
+            //This account requires the loginId to be null, for some reason
+            authoriseResponse = authService.authorise(
+                baseUrl = authServerUrl,
+                clientId = CLIENT_ID_ONECONNECT,
+                userauthToken = userAuthToken,
+                codeChallenge = SignInUtils.generateCodeChallenge(codeVerifier) ?: return false,
+                physicalAddressText = physicalAddressText,
+                scope = "iot.client",
+                loginId = null
+            ).get(name = "iotAuthoriseWithoutLoginId") ?: return false
+        }
         val authResponse = authService.token(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_ONECONNECT,
@@ -337,7 +349,7 @@ class AuthRepositoryImpl(
         val loginId = encryptedStorage.loginId.get().takeIf { it.isNotBlank() }
             ?: return false
         val physicalAddressText = getDeviceId()
-        val authoriseResponse = authService.authorise(
+        var authoriseResponse = authService.authorise(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_FIND,
             userauthToken = userAuthToken,
@@ -346,6 +358,18 @@ class AuthRepositoryImpl(
             scope = "offline.access",
             loginId = loginId
         ).get(name = "findAuthorise") ?: return false
+        if(authoriseResponse.code == null && authoriseResponse.privacyAccepted == "N") {
+            //This account requires the loginId to be null, for some reason
+            authoriseResponse = authService.authorise(
+                baseUrl = authServerUrl,
+                clientId = CLIENT_ID_FIND,
+                userauthToken = userAuthToken,
+                codeChallenge = SignInUtils.generateCodeChallenge(codeVerifier) ?: return false,
+                physicalAddressText = physicalAddressText,
+                scope = "offline.access",
+                loginId = null
+            ).get(name = "findAuthoriseWithoutLoginId") ?: return false
+        }
         val authResponse = authService.token(
             baseUrl = authServerUrl,
             clientId = CLIENT_ID_FIND,
