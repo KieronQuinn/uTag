@@ -18,8 +18,8 @@
     <string name="setup_mod_oneui_title">OneUI Détecté</string>
     <string name="setup_mod_oneui_desc">Cet appareil semble fonctionner sous OneUI. Utiliser uTag sur un appareil supportant officiellement SmartThings Find peut restreindre les fonctionnalités, interrompre certaines fonctions de SmartThings et causer des erreurs inexpliquées. <b>La compatibilité avec OneUI est expérimentale et peut ne pas fonctionner sur votre appareil. Merci de ne pas signaler les bugs survenant sur cet appareil.</b> Vous devrez vous connecter à SmartThings depuis le navigateur au lieu d\'utiliser le compte Samsung déjà actif sur votre appareil.</string>
     <string name="setup_mod_oneui_continue">Continuer</string>
-    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
-    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
+    <string name="setup_mod_oneui_incompatible_title">Version OneUI incompatible détectée</string>
+    <string name="setup_mod_oneui_incompatible_desc">Cet appareil exécute une version de OneUI qui n\'est pas compatible avec le mod SmartThings requis pour le fonctionnement de uTag. Veuillez utiliser l\'application officielle Samsung Find à la place.</string>
     <string name="setup_mod_downloading">Téléchargement de SmartThings…</string>
     <string name="setup_mod_setting_up">Configuration du mod…</string>
     <string name="setup_mod_setting_up_subtitle">Cette opération peut prendre quelques instants</string>
@@ -316,7 +316,7 @@
     <string name="map_searching_dialog_enable_searching">Activer le mode de recherche</string>
     <string name="map_searching_dialog_cancel">Fermer</string>
     <string name="map_allow_access_dialog_title">Partager votre position ?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n\'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
     <string name="map_allow_access_dialog_positive">Partager</string>
     <string name="map_allow_access_dialog_negative">Annuler</string>
     <string name="map_passive_mode_dialog_title">Mode Passif activé</string>
@@ -619,7 +619,7 @@
     <string name="d2d_status_scanned">Scanné</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Localisez vos Tags n\'importe quand, n\'importe où</string>
-    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l\'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d\'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
+    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
     <string name="privacy_notice_agree">J\'accepte</string>
     <string name="privacy_notice_disagree">Je refuse</string>
     <string name="privacy_notice_error_dialog_title">Erreur</string>
@@ -685,43 +685,43 @@
     <string name="settings_encryption_clear_saved_pins_title">Effacer le code PIN stocké</string>
     <string name="settings_encryption_clear_saved_pins_content">Effacez le code PIN stocké dans la mémoire chiffrée, vous devrez saisir votre PIN la prochaine fois qu\'il sera requis</string>
     <string name="settings_encryption_clear_saved_pins_content_disabled">Aucun code PIN n\'est actuellement stocké dans la mémoire chiffrée</string>
-    <string name="settings_encryption_clear_saved_pins_dialog_content">Are you sure you wish to clear your stored PIN? You will need to re-enter it when it is next required</string>
+    <string name="settings_encryption_clear_saved_pins_dialog_content">Êtes-vous sûr de vouloir effacer votre code PIN stocké ? Vous devrez le saisir à nouveau lorsqu\'il sera requis</string>
     <string name="settings_encryption_clear_saved_pins_dialog_positive">Clear</string>
-    <string name="settings_encryption_pin_timeout_title">PIN Timeout</string>
-    <string name="settings_encryption_pin_timeout_content">How long before an entered PIN is cleared from memory, requiring you to enter it again: %1s</string>
+    <string name="settings_encryption_pin_timeout_title">Délai d\'expiration du code PIN</string>
+    <string name="settings_encryption_pin_timeout_content">Combien de temps avant qu\'un code PIN saisi ne soit effacé de la mémoire avant que vous deviez le saisir à nouveau : %1s</string>
     <!-- Biometric prompt -->
-    <string name="biometric_prompt_title">Authenticate</string>
-    <string name="biometric_prompt_content_settings">Biometric authentication is required to access uTag\'s settings</string>
-    <string name="biometric_prompt_content_map">Biometric authentication is required to access this Tag\'s location</string>
-    <string name="biometric_prompt_content_widget">Biometric authentication is required to modify uTag widgets</string>
-    <string name="biometric_prompt_content_uts">Biometric authentication is required to view Unknown Tags</string>
-    <string name="biometric_prompt_content_enable">Verify biometrics to enable</string>
-    <string name="biometric_prompt_content_disable">Verify biometrics to disable</string>
-    <string name="biometric_prompt_content_change_pin">Authenticate to modify your PIN</string>
-    <string name="biometric_prompt_content_negative">Cancel</string>
-    <string name="biometric_prompt_error_title">Biometric Error</string>
-    <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
-    <string name="biometric_prompt_error_close">Close</string>
+    <string name="biometric_prompt_title">Authentification</string>
+    <string name="biometric_prompt_content_settings">L\'authentification biométrique est nécessaire pour accéder aux paramètres de uTag</string>
+    <string name="biometric_prompt_content_map">L\'authentification biométrique est nécessaire pour accéder à la localisation de ce Tag</string>
+    <string name="biometric_prompt_content_widget">L\'authentification biométrique est nécessaire pour modifier les widgets de uTag</string>
+    <string name="biometric_prompt_content_uts">L\'authentification biométrique est nécessaire pour voir les tags inconnus</string>
+    <string name="biometric_prompt_content_enable">Vérifier la biométrie pour activer</string>
+    <string name="biometric_prompt_content_disable">Vérifier la biométrie pour désactiver</string>
+    <string name="biometric_prompt_content_change_pin">Authentifiez-vous pour modifier votre code PIN</string>
+    <string name="biometric_prompt_content_negative">Annuler</string>
+    <string name="biometric_prompt_error_title">Erreur de biométrie</string>
+    <string name="biometric_prompt_error_content">Authentification impossible.\n\nSi vous avez besoin d\'accéder à uTag et ne pouvez pas utiliser la biométrie, effacez les données de uTag et reconnectez-vous.</string>
+    <string name="biometric_prompt_error_close">Fermer</string>
     <!-- About Footer -->
-    <string name="xda_thread">XDA Thread</string>
+    <string name="xda_thread">Discussion sur XDA</string>
     <string name="github">GitHub</string>
-    <string name="libraries">Third party libraries</string>
-    <string name="donate">Donate</string>
-    <string name="bluesky">Follow me on Bluesky</string>
-    <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
-    <string name="about_contributors">Contributors</string>
+    <string name="libraries">Bibliothèques tierces</string>
+    <string name="donate">Faire un don</string>
+    <string name="bluesky">Suivez-moi sur Bluesky</string>
+    <string name="about_version">Version %1s\nCréé par Kieron Quinn</string>
+    <string name="about_contributors">Contributeurs</string>
     <string name="about_crowdin">Crowdin</string>
-    <string name="about_debug_enabled">Developer options enabled</string>
-    <string name="about_debug_disabled">Developer options disabled</string>
+    <string name="about_debug_enabled">Options de développement activées</string>
+    <string name="about_debug_disabled">Options de développement désactivées</string>
     <!-- Contributors -->
-    <string name="contributors_oneui_title">OneUI Project</string>
-    <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
-    <string name="contributors_icons_title">Additional Icons</string>
-    <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
+    <string name="contributors_oneui_title">Projet OneUI</string>
+    <string name="contributors_oneui_content">Composants, style et port des icônes OneUI</string>
+    <string name="contributors_icons_title">Icônes supplémentaires</string>
+    <string name="contributors_icons_content">Icônes supplémentaires des icônes Material Design (Pictogrammers Licence gratuite)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Update available</string>
-    <string name="snackbar_update_multiple">Updates available</string>
-    <string name="snackbar_update_button">View</string>
+    <string name="snackbar_update">Mise à jour disponible</string>
+    <string name="snackbar_update_multiple">Mises à jour disponibles</string>
+    <string name="snackbar_update_button">Vue</string>
     <string name="update_notification">uTag version %1s</string>
     <string name="update_notification_mod">SmartThings version %1s</string>
     <string name="update_title_utag">uTag update</string>
