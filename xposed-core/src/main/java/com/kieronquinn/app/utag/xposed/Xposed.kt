@@ -105,6 +105,10 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect.adddevice.ui.",
         )
 
+        private val CALLING_PACKAGES_DENYLIST = setOf(
+            "com.samsung.android.oneconnect.adddevice.ui.catalog.adapter."
+        )
+
         private val ACTIVITY_WARNING_ALLOWLIST = setOf(
             "com.samsung.android.oneconnect.ui.scmain.SCMainActivity",
             "com.samsung.android.oneconnect.webplugin.WebPluginActivity",
@@ -200,6 +204,7 @@ class Xposed: IXposedHookLoadPackage {
             SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD("force_disconnect_method"),
             SHARED_PREF_KEY_FIREBASE_PUSH_INTENT("firebase_push_intent"),
             SHARED_PREF_KEY_IS_FMM_SUPPORTED("is_fmm_supported"),
+            SHARED_PREF_KEY_ALLOW_SCANNING("allow_scanning"),
             ;
 
             fun getKey(version: Long): String {
@@ -302,6 +307,7 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookSmartTagGattConnecter(this)
         lpparam.hookDeviceBleThingsManager(this)
         lpparam.hookScanCallback(this)
+        lpparam.hookAllowScanning(this)
         lpparam.hookDebug(this)
         lpparam.hookCheckDisconnect(this)
         lpparam.hookOneConnectPushNotifications(this)
@@ -1090,6 +1096,11 @@ class Xposed: IXposedHookLoadPackage {
                     override fun afterHookedMethod(param: MethodHookParam) {
                         super.afterHookedMethod(param)
                         val callingClass = getCallingInformation()?.first ?: return
+                        //Classes on the denylist are forced to false to prevent crashes
+                        if (CALLING_PACKAGES_DENYLIST.any { callingClass.startsWith(it) }) {
+                            param.result = false
+                            return
+                        }
                         //Classes on the allowlist are forced to true to enable features without crashing
                         if (CALLING_PACKAGES_ALLOWLIST.any { callingClass.startsWith(it) }) {
                             param.result = true
@@ -1458,6 +1469,46 @@ class Xposed: IXposedHookLoadPackage {
                         `package` = PACKAGE_NAME_UTAG
                     }
                     context.sendBroadcast(intent)
+                }
+            }
+        )
+    }
+
+    /**
+     *  Uses Dexplore to find the AllowScanning method, to always allow scanning
+     */
+    private fun LoadPackageParam.hookAllowScanning(context: Context) {
+        val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_ALLOW_SCANNING)
+        val method = if(savedMethod == null) {
+            val classFilter = ClassFilter.Builder()
+                .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
+                .setReferenceFilter { pool: ReferencePool ->
+                    pool.contains("one_connect_force_stop_discovery_app_background_test")
+                }
+                .build()
+            val methodFilter = MethodFilter.Builder()
+                .setReferenceTypes(ReferenceTypes.STRINGS_ONLY)
+                .setReferenceFilter { pool: ReferencePool ->
+                    pool.contains("one_connect_force_stop_discovery_app_background_test") &&
+                            pool.contains("quick_connect_force_stop_discovery")
+                }
+                .setModifiers(Modifier.PUBLIC or Modifier.STATIC or Modifier.FINAL)
+                .build()
+            dexplore.findMethod(classFilter, methodFilter)?.also {
+                saveMethod(SharedPrefsKey.SHARED_PREF_KEY_ALLOW_SCANNING, it)
+            }
+        }else{
+            savedMethod
+        }?.loadMethod(classLoader) ?: run {
+            context.logException("uTag: Failed to hook Allow Scanning (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
+            return
+        }
+        XposedBridge.hookMethod(
+            method,
+            object: XC_MethodHook() {
+                override fun beforeHookedMethod(param: MethodHookParam) {
+                    super.beforeHookedMethod(param)
+                    param.result = false
                 }
             }
         )

@@ -316,7 +316,7 @@
     <string name="map_searching_dialog_enable_searching">Arama Modunu Etkinleştir</string>
     <string name="map_searching_dialog_cancel">Kapat</string>
     <string name="map_allow_access_dialog_title">Konum paylaşılsın mı?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[Etiket cihazı mobil cihazınıza bağlandığında, Etiket'in ve mobil cihazınızın konumu konum üyenizle paylaşılacaktır. uTag ayarlarına giderek konum paylaşımını istediğiniz zaman durdurabilirsiniz. Samsung, konumu toplayacak ve konum üyeleriyle paylaşacak, ayrıca bu tür verileri <a href="%1s">Gizlilik Bildirimi</a>'ne uygun olarak işleyecektir.]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[Etiket cihazı mobil cihazınıza bağlandığında, Etiket\'in ve mobil cihazınızın konumu konum üyenizle paylaşılacaktır. uTag ayarlarına giderek konum paylaşımını istediğiniz zaman durdurabilirsiniz. Samsung, konumu toplayacak ve konum üyeleriyle paylaşacak, ayrıca bu tür verileri <a href="%1s">Gizlilik Bildirimi</a>\'ne uygun olarak işleyecektir.]]></string>
     <string name="map_allow_access_dialog_positive">Paylaş</string>
     <string name="map_allow_access_dialog_negative">İptal</string>
     <string name="map_passive_mode_dialog_title">Pasif Mod Etkin</string>
@@ -619,7 +619,7 @@
     <string name="d2d_status_scanned">Tarandı</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Etiketlerinizi her zaman, her yerde bulun</string>
-    <string name="privacy_notice_content"><![CDATA[Devam etmek için <a href="%1s">Konum Bilgilerinin Kullanımı</a>'nı kabul edin.<br><br>Daha fazla bilgi için Samsung hesabı <a href="%1s">Gizlilik Bildirimi</a>'ne bakın.]]></string>
+    <string name="privacy_notice_content"><![CDATA[Devam etmek için <a href="%1s">Konum Bilgilerinin Kullanımı</a>\'nı kabul edin.<br><br>Daha fazla bilgi için Samsung hesabı <a href="%1s">Gizlilik Bildirimi</a>\'ne bakın.]]></string>
     <string name="privacy_notice_agree">Kabul Et</string>
     <string name="privacy_notice_disagree">Kabul Etme</string>
     <string name="privacy_notice_error_dialog_title">Hata</string>
