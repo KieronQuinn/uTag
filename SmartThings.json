@@ -1,9 +1,9 @@
 {
-   "version": "1.0.9",
-   "version_code": 109,
+   "version": "1.0.10",
+   "version_code": 1010,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Added workaround for SmartThings freezing (downgrading the plugin)\n- Fixed Notify when Found not working on some devices\n- Improved loading time for applying the mod",
-   "file_size": 143475312
+   "release_notes": "- Updated SmartThings base to 1.8.37.23\n- Added potential workaround for Tags not auto-connecting on boot on some devices\n- Fixed crash during setup on some devices",
+   "file_size": 182003886
 }
