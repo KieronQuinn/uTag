@@ -40,19 +40,19 @@
     <string name="setup_mod_metered_dialog_content">The SmartThings mod APK file is %1s. Continue to download the file?</string>
     <string name="setup_mod_metered_dialog_positive">Pobierz</string>
     <!-- Permissions -->
-    <string name="setup_permissions">Pozwolenia</string>
-    <string name="permission_smartthings_title">Required SmartThings Permissions</string>
+    <string name="setup_permissions">Uprawnienia</string>
+    <string name="permission_smartthings_title">Wymagane uprawnienia SmartThings</string>
     <string name="permission_smartthings_content">SmartThings requires the following permissions in order for uTag to be able to scan for and connect to your SmartTag:\n- Location (<b>set to \"Allow all the time\"</b>)\n- Bluetooth / Nearby Devices</string>
     <string name="permission_smartthings_grant">Zezwól w ustawieniach</string>
-    <string name="permission_notification_title">Notification Permission</string>
-    <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
+    <string name="permission_notification_title">Powiadomienia</string>
+    <string name="permission_notification_content">uTag wymaga uprawnień do pokazywania powiadomień aby wyświetlać aktualizacje</string>
     <string name="permission_notification_grant">Zezwól</string>
     <string name="permission_battery_title">Wyłącz optymalizację baterii dla uTag</string>
     <string name="permission_battery_content">This is required to keep uTag running in the background to monitor Tags</string>
     <string name="permission_smartthings_battery_title">Disable Battery Optimisations for SmartThings</string>
     <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
     <string name="permission_battery_disable">Wyłącz</string>
-    <string name="permission_analytics_title">Analytics &amp; Crash Reporting</string>
+    <string name="permission_analytics_title">Analityka i zgłaszanie błędów</string>
     <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
     <string name="permission_analytics_allow">Zezwól</string>
     <string name="permission_analytics_deny">Odmów</string>
@@ -97,30 +97,30 @@
     <string name="settings_main_map_title">Mapa</string>
     <string name="settings_main_map_content">Find and Location History map theming &amp; options</string>
     <string name="settings_main_security_title">Ochrona i szyfrowanie</string>
-    <string name="settings_main_security_content">Offline location encryption &amp; biometric entry</string>
+    <string name="settings_main_security_content">Szyfrowanie lokalizacji w trybie offline i logowanie biometryczne</string>
     <string name="settings_main_updates_content_disabled">Update notifications are disabled in your system settings</string>
     <string name="settings_main_category_help">Pomoc</string>
     <string name="settings_main_faq_title">Często zadawane pytania</string>
-    <string name="settings_main_faq_content">Questions and answers about uTag</string>
+    <string name="settings_main_faq_content">Pytania i odpowiedzi dotyczące uTag</string>
     <string name="settings_main_wiki_title">Podręcznik użytkownika</string>
-    <string name="settings_main_wiki_content">Info &amp; guides on how to use uTag</string>
+    <string name="settings_main_wiki_content">Informacje i poradniki, o korzystaniu z uTag</string>
     <string name="settings_main_backup_restore_title">Kopia zapasowa i przywracanie</string>
     <string name="settings_main_backup_restore_content">Backup &amp; restore uTag data to a local file or the cloud</string>
     <string name="settings_main_advanced_title">Zaawansowane</string>
-    <string name="settings_main_advanced_content">Language, content creator mode and analytics options</string>
+    <string name="settings_main_advanced_content">Opcje języka, trybu influencera i analityki</string>
     <string name="settings_main_category_account">Konto</string>
     <string name="settings_main_category_samsung_account_title">Samsung Account</string>
     <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
     <string name="settings_main_sign_out_title">Wyloguj</string>
-    <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
+    <string name="settings_main_sign_out_content">Czy chcesz się wylogować ze swojego konta Samsung? Aby dalej śledzić SmartTagi, konieczne będzie ponowne zalogowanie się\n\n<b>Uwaga</b> Mimo komunikatu wyświetlanego na kolejnej stronie nie zostaniesz wylogowany z innych aplikacji Samsunga na tym urządzeniu.</string>
     <string name="settings_main_logout_error">An error occurred, check your connection and try again</string>
     <!-- Settings > Location -->
     <string name="settings_location_location">Lokalizacja</string>
-    <string name="settings_location_location_period_title">Location Refresh Frequency</string>
+    <string name="settings_location_location_period_title">Częstotliwość odświeżania lokalizacji</string>
     <string name="settings_location_location_period_content">How often to update the location for connected Tags: %1s</string>
-    <string name="settings_location_location_period_summary_high">Uses more battery</string>
-    <string name="settings_location_location_period_summary_low">May not update to your Tag\'s location often enough if you leave it behind</string>
+    <string name="settings_location_location_period_summary_high">Zużywa więcej baterii</string>
+    <string name="settings_location_location_period_summary_low">Może nie aktualizować lokalizacji Twojego Tagu wystarczająco często, jeśli go zostawisz w tyle</string>
     <string name="settings_location_location_period_summary_never"><b>Warning:</b> Unless Passive Mode is enabled, your Tag does <b>not</b> update its location from other Samsung devices when in range of your device, so your Tag\'s location will not be automatically updated with this option!</string>
     <string name="settings_location_location_battery_saver_title">Location Refresh on Battery Saver</string>
     <string name="settings_location_location_battery_saver_content">Update Tag locations when Battery Saver is enabled</string>
@@ -137,23 +137,23 @@
     <string name="settings_location_category_uts_title">Unknown Tags</string>
     <string name="settings_location_uts_title">Scan for unknown Tags</string>
     <string name="settings_location_uts_content">Scan for unknown Tags and notify you when you may be being tracked</string>
-    <string name="settings_location_category_widget_title">Widgets</string>
-    <string name="settings_location_widget_period_title">Widget Refresh Frequency</string>
+    <string name="settings_location_category_widget_title">Widżety</string>
+    <string name="settings_location_widget_period_title">Częstotliwość odświeżania widżetów</string>
     <string name="settings_location_widget_period_content">How often to automatically update uTag widgets: %1s</string>
     <string name="settings_location_widget_period_content_disabled">No widgets have been added</string>
     <string name="settings_location_widget_period_never_content">Will only refresh when you tap refresh on a widget or a Tag\'s location is updated by uTag</string>
     <string name="settings_location_widget_battery_saver_title">Widget Refresh on Battery Saver</string>
     <string name="settings_location_widget_battery_saver_content">Refresh widgets when Battery Saver is enabled</string>
     <string name="settings_location_category_search_nearby_title">Search Nearby</string>
-    <string name="settings_location_uwb_title">Precise Finding</string>
+    <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
     <string name="settings_location_uwb_content">Use precise finding (UWB) where supported by your Tag.</string>
     <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
     <string name="settings_location_uwb_long_distance_content">Allow directional precise finding over a longer distance, which may show incorrect directions when the Tag is not in line of sight.</string>
     <string name="settings_location_uwb_disabled">Not available on your device</string>
     <string name="settings_location_units_title">Jednostki odległości</string>
     <string name="settings_location_units_system">Takie jak urządzenie (%1s)</string>
-    <string name="settings_location_units_metric">Metryczne</string>
-    <string name="settings_location_units_imperial">Imperialne</string>
+    <string name="settings_location_units_metric">metryczne</string>
+    <string name="settings_location_units_imperial">imperialne</string>
     <!-- Settings > Location > Chaser -->
     <string name="settings_chaser_title">Find my Everything Network</string>
     <string name="settings_chaser_switch">Enabled</string>
@@ -208,8 +208,8 @@
     <string name="settings_uts_sensitivity_low">Low</string>
     <string name="settings_uts_sensitivity_very_low">Very Low</string>
     <!-- Settings > Map -->
-    <string name="settings_map_show_location_title">Show Location</string>
-    <string name="settings_map_show_location_content">Show your location on the map, where available</string>
+    <string name="settings_map_show_location_title">Pokaż lokalizację</string>
+    <string name="settings_map_show_location_content">Pokaż swoją lokalizację na mapie, kiedy ta jest dostępna</string>
     <string name="settings_map_show_location_toast">Grant precise location permission</string>
     <string name="settings_map_style_title">Typ mapy</string>
     <string name="settings_map_style_normal">Domyślny</string>
@@ -221,20 +221,20 @@
     <string name="settings_map_theme_system">Taki sam jak urządzenia</string>
     <string name="settings_map_theme_disabled">Not available for this map type</string>
     <string name="settings_map_show_buildings_title">Pokazuj budynki</string>
-    <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
+    <string name="settings_map_show_buildings_content">Pokazuje obrysy budynków, kiedy te są dostępne</string>
     <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
     <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_title">Encryption</string>
+    <string name="settings_encryption_title">Szyfrowanie</string>
     <string name="settings_encryption_content">Set or reset a PIN for offline location encryption</string>
-    <string name="settings_biometric_title">Biometric Entry</string>
-    <string name="settings_biometric_content">Require biometric authentication to access uTag\'s settings or a Tag\'s map</string>
+    <string name="settings_biometric_title">Logowanie biometryczne</string>
+    <string name="settings_biometric_content">Wymaga uwierzytelnienia biometrycznego, aby uzyskać dostęp do ustawień lub mapy danego Taga</string>
     <string name="settings_biometric_content_disabled">Not available on this device</string>
     <!-- Settings > Advanced -->
     <string name="settings_advanced_analytics_title">Analityka &amp; zgłaszanie błędów</string>
     <string name="settings_advanced_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
     <string name="settings_advanced_content_creator_title">Tryb influencera</string>
-    <string name="settings_advanced_content_creator_content">Hide your location in the uTag UI, for when taking screenshots or recording video of uTag.</string>
+    <string name="settings_advanced_content_creator_content">Ukryj swoją lokalizację w interfejsie uTag, gdy potrzebujesz zrobić zrzuty ekranu lub nagrania związane z aplikacją.</string>
     <string name="settings_advanced_content_creator_enabled">Włącz</string>
     <string name="settings_advanced_auto_dismiss_notifications_title">Auto Dismiss Left Behind Notifications</string>
     <string name="settings_advanced_auto_dismiss_notifications_content">Automatically dismiss Notify when Left Behind notifications &amp; Smartspacer Targets when the Tag comes back in range.\n\n<b>Note:</b> This may lead to \"ghost\" sounds &amp; vibrations if your Tag comes back in range before you see the notification.</string>
@@ -253,11 +253,11 @@
     <string name="settings_language_info_content">Nie wszystkie języki są kompletne, możesz pomóc w tłumaczeniu uTag na Crowdin</string>
     <string name="settings_language_default">Domyślny systemu</string>
     <!-- Settings > Content Creator -->
-    <string name="settings_content_creator_title">Content Creator Mode</string>
-    <string name="settings_content_creator_enabled">Enabled</string>
-    <string name="settings_content_creator_info_title">What is Content Creator Mode?</string>
-    <string name="settings_content_creator_info_content">Content Creator Mode is an option that allows you to hide your location in uTag\'s UI. It\'s intended for content creators making screenshots or videos of uTag, so their real location is not displayed.</string>
-    <string name="settings_content_creator_does_title">What does Content Creator Mode do?</string>
+    <string name="settings_content_creator_title">Tryb influencera</string>
+    <string name="settings_content_creator_enabled">Włącz</string>
+    <string name="settings_content_creator_info_title">Czym jest tryb influencera?</string>
+    <string name="settings_content_creator_info_content">Tryb influencera jest opcją, która pozwala schować lokalizację w interfejsie uTag. Jest przeznaczony dla twórców internetowych udostępniających zrzuty ekranu lub nagrania z uTag, tak aby ich prawdziwa lokalizacja nie była widoczna.</string>
+    <string name="settings_content_creator_does_title">Co robi tryb influencera?</string>
     <string name="settings_content_creator_does_bull1">Tag location history is set to a preset history based on real, anonymised location data of the developer.</string>
     <string name="settings_content_creator_does_bull2">Tag location(s) are based on the same preset history, cycling through the list for \"today\" every hour with a small randomisation applied on every refresh to prevent Tag overlap.</string>
     <string name="settings_content_creator_does_bull3">Your location &amp; new Location Safe Areas are displayed as a randomised location from a set of pre-determined locations.</string>
@@ -265,7 +265,7 @@
     <string name="settings_content_creator_does_bull5">Tag location updates to the cloud are not impacted and will still be correct, but will not be displayed in the app until Content Creator Mode is disabled.</string>
     <string name="settings_content_creator_does_bull6">Emails are hidden from the uTag settings &amp; Lost Mode UIs. Editing emails and contact information are not impacted, so be sure to change those before recording if required.</string>
     <string name="settings_content_creator_does_bull7"><b>Important:</b> For safety reasons, Unknown Tag Scan results always display real locations, even with Content Creator Mode enabled.</string>
-    <string name="settings_content_creator_does_footer">You can disable Content Creator Mode at any time, with no data loss and no missed location updates.</string>
+    <string name="settings_content_creator_does_footer">Możesz wyłączyć tryb influencera w dowolnym momencie bez utraty danych i pomijania aktualizacji lokalizacji.</string>
     <!-- Map -->
     <string name="map_error_title">Error</string>
     <string name="map_warning_title">Warning</string>
@@ -329,7 +329,7 @@
     <string name="tag_picker_show_all_markers_title">Show all Tags on map</string>
     <string name="tag_picker_show_all_markers_content">Show a marker for each Tag on the map, which can be clicked to select it</string>
     <string name="tag_picker_category_favourites">Favourites</string>
-    <string name="tag_picker_category_mine">Your Tags</string>
+    <string name="tag_picker_category_mine">Twoje Tagi</string>
     <string name="tag_picker_category_shared">%1s\'s Tags</string>
     <string name="tag_picker_category_shared_unknown">Shared Tags</string>
     <string name="tag_picker_favourites_tip_title">Show multiple Tags on the map</string>
@@ -411,7 +411,7 @@
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
     <string name="tag_more_lost_mode_title">Lost mode</string>
-    <string name="tag_more_category_protect">Protect</string>
+    <string name="tag_more_category_protect">Ochrona</string>
     <string name="tag_more_lost_mode_on">On</string>
     <string name="tag_more_lost_mode_off">Off</string>
     <string name="tag_more_category_share">Share</string>
@@ -441,7 +441,7 @@
     <string name="tag_more_find_device_content_enabled">Enabled</string>
     <string name="tag_more_find_device_content_error">Not working. Tap for more info.</string>
     <string name="tag_more_find_device_switch">Enable Find my Device</string>
-    <string name="tag_more_find_device_category_settings">Settings</string>
+    <string name="tag_more_find_device_category_settings">Ustawienia</string>
     <string name="tag_more_find_device_notifications_disabled_title">Notifications disabled</string>
     <string name="tag_more_find_device_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
     <string name="tag_more_find_device_notifications_disabled_content_channel">The <b>Find my Device</b> notification channel is disabled, it must be enabled for this option to work</string>
@@ -498,7 +498,7 @@
     <string name="tag_more_automation_footer_bull3"><b>Opening the \"Automations\" page for your Tag in SmartThings may make these Custom Automations stop working. If this happens, simply return to this page and they will be re-synced.</b></string>
     <string name="tag_more_automation_footer_bull4">You must grant the \"Display over other apps\" permission to allow uTag to launch actions from the background.</string>
     <string name="tag_more_automation_footer_bull5"><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
-    <string name="tag_more_automation_category_options">Options</string>
+    <string name="tag_more_automation_category_options">Opcje</string>
     <string name="tag_more_automation_volume">Button Volume</string>
     <string name="tag_more_automation_error_dialog_title">Error</string>
     <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
@@ -543,7 +543,7 @@
     <string name="pairing_lock_description">This tag is linked to your account. It won\'t be linked to other users.</string>
     <string name="lost_mode_next">Next</string>
     <string name="lost_mode_settings_switch">Enabled</string>
-    <string name="lost_mode_settings_category">Personalisation</string>
+    <string name="lost_mode_settings_category">Personalizacja</string>
     <string name="lost_mode_settings_email">Email (required)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
     <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
@@ -556,7 +556,7 @@
     <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
-    <string name="lost_mode_settings_category_advanced">Advanced</string>
+    <string name="lost_mode_settings_category_advanced">Zaawansowane</string>
     <string name="lost_mode_settings_custom_url_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
     <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
@@ -629,7 +629,7 @@
     <string name="fme_opt_in_title">Find my Everything Network</string>
     <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
     <string name="fme_opt_in_positive">Enable</string>
-    <string name="fme_opt_in_negative">Not now</string>
+    <string name="fme_opt_in_negative">Nie teraz</string>
     <!-- UTS opt-in -->
     <string name="uts_opt_in_title">Unknown Tag Scanning</string>
     <string name="uts_opt_in_content">uTag can automatically scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
@@ -644,10 +644,10 @@
     <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
     <string name="location_history_guide_button">Got it</string>
     <!-- PIN Entry dialog -->
-    <string name="tag_pin_entry_title">Enter PIN</string>
-    <string name="tag_pin_entry_content">Enter your PIN for %1s to decrypt its location.</string>
+    <string name="tag_pin_entry_title">Wprowadź PIN</string>
+    <string name="tag_pin_entry_content">Wprowadź swój PIN dla %1s, aby odszyfrować jego lokalizację.</string>
     <string name="tag_pin_entry_content_alt">Enter your PIN for %1s to decrypt its location history.</string>
-    <string name="tag_pin_entry_error">Incorrect PIN entered, try again</string>
+    <string name="tag_pin_entry_error">Wprowadzono nieprawidłowy PIN, spróbuj ponownie</string>
     <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_set_pin_title">Set PIN</string>
@@ -667,15 +667,15 @@
     <string name="settings_encryption_reset_warning_dialog_positive">Reset</string>
     <string name="settings_encryption_biometrics_failed_title">Biometric Error</string>
     <string name="settings_encryption_biometrics_failed_content">Could not authenticate.\n\nIf you need to add or change your PIN and cannot use biometrics, clear uTag\'s data and sign in again.</string>
-    <string name="settings_encryption_pin_timeout_never">Never</string>
+    <string name="settings_encryption_pin_timeout_never">Nigdy</string>
     <string name="settings_encryption_pin_timeout_subtitle">You will only be asked for your PIN after uTag is restarted or your device is rebooted</string>
-    <string name="settings_encryption_pin_timeout_one_minute">1 minute</string>
-    <string name="settings_encryption_pin_timeout_two_minutes">2 minutes</string>
-    <string name="settings_encryption_pin_timeout_five_minutes">5 minutes</string>
-    <string name="settings_encryption_pin_timeout_ten_minutes">10 minutes</string>
-    <string name="settings_encryption_pin_timeout_fifteen_minutes">15 minutes</string>
-    <string name="settings_encryption_pin_timeout_thirty_minutes">30 minutes</string>
-    <string name="settings_encryption_pin_timeout_sixty_minutes">1 hour</string>
+    <string name="settings_encryption_pin_timeout_one_minute">1 minuta</string>
+    <string name="settings_encryption_pin_timeout_two_minutes">2 minuty</string>
+    <string name="settings_encryption_pin_timeout_five_minutes">5 minut</string>
+    <string name="settings_encryption_pin_timeout_ten_minutes">10 minut</string>
+    <string name="settings_encryption_pin_timeout_fifteen_minutes">15 minut</string>
+    <string name="settings_encryption_pin_timeout_thirty_minutes">30 minut</string>
+    <string name="settings_encryption_pin_timeout_sixty_minutes">1 godzina</string>
     <string name="settings_encryption_enter_pin">Enter PIN</string>
     <string name="settings_encryption_enter_pin_content">You will need this PIN to access locations reported by other Galaxy devices, so make sure it\'s memorable!</string>
     <string name="settings_encryption_confirm_pin">Confirm PIN</string>
@@ -805,19 +805,19 @@
     <string name="notification_title_background_service_other">%1d Tags connected</string>
     <string name="notification_title_background_service_passive">%1s (Passive)</string>
     <string name="notification_title_background_service_error_short">uTag</string>
-    <string name="notification_title_background_service_error">uTag Error</string>
+    <string name="notification_title_background_service_error">Błąd uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
     <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
     <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
     <string name="notification_title_background_service_permissions">uTag Error</string>
     <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
-    <string name="notification_action_background_service_error_action">Retry</string>
+    <string name="notification_action_background_service_error_action">Spróbuj ponownie</string>
     <string name="notification_title_bluetooth_error">Bluetooth Disabled</string>
     <string name="notification_content_bluetooth_error">uTag requires Bluetooth to connect to your Tags, tap to enable</string>
     <string name="notification_title_disconnect">Left Behind Alert</string>
     <string name="notification_content_disconnect">Your %1s has been left behind!</string>
     <!-- Logged out notification -->
-    <string name="notification_title_logged_out">Signed Out</string>
+    <string name="notification_title_logged_out">Wylogowano</string>
     <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Find my Device</string>
@@ -836,24 +836,24 @@
     <string name="notification_title_automation">Automation</string>
     <string name="notification_content_automation_error">Unable to start this automation as uTag is not set up correctly. Check the Tag\'s settings for more info</string>
     <!-- Refresh Periods -->
-    <string name="refresh_period_five_minutes">5 minutes</string>
-    <string name="refresh_period_ten_minutes">10 minutes</string>
-    <string name="refresh_period_fifteen_minutes">15 minutes</string>
-    <string name="refresh_period_twenty_minutes">20 minutes</string>
-    <string name="refresh_period_thirty_minutes">30 minutes</string>
-    <string name="refresh_period_sixty_minutes">1 hour</string>
-    <string name="refresh_period_two_hours">2 hours</string>
-    <string name="refresh_period_three_hours">3 hours</string>
-    <string name="refresh_period_four_hours">4 hours</string>
-    <string name="refresh_period_six_hours">6 hours</string>
-    <string name="refresh_period_twelve_hours">12 hours</string>
-    <string name="refresh_period_twenty_four_hours">24 hours</string>
-    <string name="refresh_period_never">Never</string>
+    <string name="refresh_period_five_minutes">Co 5 minut</string>
+    <string name="refresh_period_ten_minutes">Co 10 minut</string>
+    <string name="refresh_period_fifteen_minutes">Co 15 minut</string>
+    <string name="refresh_period_twenty_minutes">Co 20 minut</string>
+    <string name="refresh_period_thirty_minutes">Co 30 minut</string>
+    <string name="refresh_period_sixty_minutes">Co 1 godzinę</string>
+    <string name="refresh_period_two_hours">Co 2 godziny</string>
+    <string name="refresh_period_three_hours">Co 3 godziny</string>
+    <string name="refresh_period_four_hours">Co 4 godziny</string>
+    <string name="refresh_period_six_hours">Co 6 godzin</string>
+    <string name="refresh_period_twelve_hours">Co 12 godzin</string>
+    <string name="refresh_period_twenty_four_hours">Co 24 godziny</string>
+    <string name="refresh_period_never">Nigdy</string>
     <!-- Safe Area -->
     <string name="notification_title_safe_area">Safe Area</string>
     <string name="notification_content_safe_area_error_permissions">Unable to set up uTag Safe Areas. Check Location permissions are set to \"Allow all the time\" for uTag.</string>
     <string name="notification_content_safe_area_error_location">Unable to get location to update your Safe Areas. Disconnect notifications may be incorrect.</string>
-    <string name="notification_action_safe_area_retry">Retry</string>
+    <string name="notification_action_safe_area_retry">Spróbuj ponownie</string>
     <string name="safe_area_save">Zapisz</string>
     <string name="safe_area_delete">Delete</string>
     <string name="safe_area_active">Active</string>
@@ -998,7 +998,7 @@
     <string name="backup_restore_not_included_title">Kopia zapasowa nie zawiera</string>
     <string name="backup_restore_not_included_bull1">Tag Locations &amp; Location History*</string>
     <string name="backup_restore_not_included_bull2">Tag Lost Mode &amp; offline location encryption options*</string>
-    <string name="backup_restore_not_included_bull3">Your PIN &amp; Biometric Entry options</string>
+    <string name="backup_restore_not_included_bull3">Opcji związanych z PINem i logowaniem biometrycznym</string>
     <string name="backup_restore_not_included_bull4">Widget configurations</string>
     <string name="backup_restore_not_included_footer">* These are stored on your Tag and Samsung servers, so will not be wiped if you reset uTag</string>
     <string name="backup_restore_close">Zamknij</string>
@@ -1073,7 +1073,7 @@
     <string name="updates_smartthings_not_modded_action">Re-run setup</string>
     <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
     <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
-    <string name="updates_category_options">Options</string>
+    <string name="updates_category_options">Opcje</string>
     <string name="updates_check_for_updates_title">Automatycznie sprawdzaj aktualizacje</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
     <!-- Debug notification -->
