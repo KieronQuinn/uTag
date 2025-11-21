@@ -5,9 +5,9 @@
     <string name="shortcut_name_find">Znajdź</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Wprowadzenie modyfikacji, proszę czekać…</string>
+    <string name="hooking_progress_toast">Stosowanie modyfikacji, proszę czekać…</string>
     <!-- Landing -->
-    <string name="landing_get_started">Rozpocznij</string>
+    <string name="landing_get_started">Kontynuuj</string>
     <string name="landing_not_signed_in">Musisz najpierw zakończyć instalację, otwórz uTag, aby kontynuować</string>
     <string name="landing_open">Otwórz uTag</string>
     <!-- Mod download -->
@@ -18,16 +18,16 @@
     <string name="setup_mod_oneui_title">Wykryto OneUI</string>
     <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
     <string name="setup_mod_oneui_continue">Dalej</string>
-    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
-    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
+    <string name="setup_mod_oneui_incompatible_title">Wykryto niekompatybilną wersję OneUI</string>
+    <string name="setup_mod_oneui_incompatible_desc">To urządzenie posada wersję OneUI, która jest niekompatybilna z modyfikacją SmartThings wymaganą do działania uTag. Zamiast tego użyj oficjalnej aplikacji Samsung Find.</string>
     <string name="setup_mod_downloading">Pobieranie SmartThings…</string>
     <string name="setup_mod_setting_up">Wprowadzenie modyfikacji…</string>
     <string name="setup_mod_setting_up_subtitle">To może chwilę potrwać</string>
     <string name="setup_mod_uninstall_title">Odinstaluj SmartThings</string>
-    <string name="setup_mod_uninstall_content">Since the modified version of SmartThings has a different signature, you must uninstall the currently installed version to continue.\n\n<b>Note:</b> This will clear SmartThings data from your device, requiring you to sign in again.</string>
+    <string name="setup_mod_uninstall_content">Ponieważ zmodyfikowana wersja SmartThings ma inny podpis, musisz odinstalować zainstalowaną wersję, aby kontynuować.\n\n<b>Uwaga:</b> Wyczyści to dane SmartThings, wymagając ponownego zalogowania się do aplikacji.</string>
     <string name="setup_mod_uninstall_action">Odinstaluj</string>
     <string name="setup_mod_install_title">Gotowe do instalacji</string>
-    <string name="setup_mod_install_content">The modified version of SmartThings is ready to install. You may need to grant uTag permission to install packages to install the mod.</string>
+    <string name="setup_mod_install_content">Zmodyfikowana wersja SmartThings jest gotowa do instalacji. Aby ją zainstalować, może być konieczne przyznanie aplikacji uTag uprawnień do instalowania nieznanych aplikacji.</string>
     <string name="setup_mod_install_action">Instaluj</string>
     <string name="setup_mod_setup_title">Skonfiguruj SmartThings</string>
     <string name="setup_mod_setup_content">Otwórz SmartThings, udziel pozwolenia, zaloguj się i powróć do uTag, aby zakończyć proces instalacji.</string>
@@ -36,32 +36,32 @@
     <string name="setup_mod_error_failed_to_get">Failed to load the latest version of the SmartThings mod from the server. Check your connection and try again later.</string>
     <string name="setup_mod_error_failed_to_download">Failed to download the SmartThings mod. Check your connection and try again later.</string>
     <string name="setup_mod_error_close">Zamknij</string>
-    <string name="setup_mod_metered_dialog_title">Large Download Warning</string>
-    <string name="setup_mod_metered_dialog_content">The SmartThings mod APK file is %1s. Continue to download the file?</string>
+    <string name="setup_mod_metered_dialog_title">Ostrzeżenie o pobieraniu dużego pliku</string>
+    <string name="setup_mod_metered_dialog_content">Plik APK modyfikacji SmartThings waży %1s. Kontynuować pobieranie tego pliku?</string>
     <string name="setup_mod_metered_dialog_positive">Pobierz</string>
     <!-- Permissions -->
     <string name="setup_permissions">Uprawnienia</string>
     <string name="permission_smartthings_title">Wymagane uprawnienia SmartThings</string>
-    <string name="permission_smartthings_content">SmartThings requires the following permissions in order for uTag to be able to scan for and connect to your SmartTag:\n- Location (<b>set to \"Allow all the time\"</b>)\n- Bluetooth / Nearby Devices</string>
+    <string name="permission_smartthings_content">SmartThings wymaga następujących uprawnień, aby uTag był w stanie znaleźć i połączyć się z twoim SmartTagiem:\n- Lokalizacja (<b>wybierz \"zawsze zezwalaj\"</b>)\n- Urządzenia w pobliżu / Bluetooth</string>
     <string name="permission_smartthings_grant">Zezwól w ustawieniach</string>
     <string name="permission_notification_title">Powiadomienia</string>
     <string name="permission_notification_content">uTag wymaga uprawnień do pokazywania powiadomień aby wyświetlać aktualizacje</string>
     <string name="permission_notification_grant">Zezwól</string>
     <string name="permission_battery_title">Wyłącz optymalizację baterii dla uTag</string>
-    <string name="permission_battery_content">This is required to keep uTag running in the background to monitor Tags</string>
-    <string name="permission_smartthings_battery_title">Disable Battery Optimisations for SmartThings</string>
-    <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
+    <string name="permission_battery_content">Wymagane, aby uTag mogło działać w tle i monitorować twoje Tagi</string>
+    <string name="permission_smartthings_battery_title">Wyłącz optymalizację bakterii SmartThings</string>
+    <string name="permission_smartthings_battery_content">Wymagane, aby utrzymać połączenie Bluetooth z Tagami w tle</string>
     <string name="permission_battery_disable">Wyłącz</string>
     <string name="permission_analytics_title">Analityka i zgłaszanie błędów</string>
-    <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
+    <string name="permission_analytics_content">Włącz anonimowe zgłaszanie błędów, aby pomóc w rozwoju aplikacji uTag</string>
     <string name="permission_analytics_allow">Zezwól</string>
     <string name="permission_analytics_deny">Odmów</string>
     <!-- Sign in -->
     <string name="setup_account">Konto</string>
     <string name="account_title">Zaloguj się do SmartThings</string>
-    <string name="account_content">For uTag to be able to communicate with SmartThings, you must sign in with your Samsung account.</string>
-    <string name="account_warning_title">How can I trust uTag?</string>
-    <string name="account_warning_content_header">Since uTag requires signing into your Samsung account, how do you know you can trust uTag?</string>
+    <string name="account_content">Aby uTag mógł komunikować się ze SmartThings, musisz zalogować się na swoje konto Samsung.</string>
+    <string name="account_warning_title">Czemu mogę zaufać uTag?</string>
+    <string name="account_warning_content_header">Ponieważ uTag wymaga zalogowania się do konta Samsung, jak wiesz, że możesz zaufać uTag?</string>
     <string name="account_warning_content_b1">uTag uses the official Samsung Login, in your browser (check the URL)</string>
     <string name="account_warning_content_b2">Your password is not visible to nor can it be saved by uTag and access tokens are kept encrypted on device</string>
     <string name="account_warning_content_b3">uTag is open source and you can inspect the login code on GitHub</string>
@@ -89,7 +89,7 @@
     <string name="settings_main_smartthings_content">Ustawienia i śledzenie SmartTagów są dostępne w aplikacji SmartThings</string>
     <string name="settings_main_smartthings_open">Otwórz SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
-    <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
+    <string name="settings_main_permissions_content">SmartThings wymaga uprawnienia do Lokalizacji ustawionego na \"Zawsze zezwalaj\" oraz uprawnienia \"Urządzenia w pobliżu\"</string>
     <string name="settings_main_permissions_action">Przyznaj w ustawieniach</string>
     <string name="settings_main_category_settings">Ustawienia</string>
     <string name="settings_main_location_title">Lokalizacja i wyszukiwanie w pobliżu</string>
@@ -126,7 +126,7 @@
     <string name="settings_location_location_battery_saver_content">Update Tag locations when Battery Saver is enabled</string>
     <string name="settings_location_location_staleness_title">Acceptable Staleness</string>
     <string name="settings_location_location_staleness_content">How old a location can be for it still to be used in location updates: %1s</string>
-    <string name="settings_location_location_staleness_none">Uses more battery</string>
+    <string name="settings_location_location_staleness_none">Zużywa więcej baterii</string>
     <string name="settings_location_location_staleness_max">Location updates may be outdated</string>
     <string name="settings_location_location_safe_area_title">Safe Areas</string>
     <string name="settings_location_location_safe_area_content">Add &amp; configure Safe Areas for your Tags</string>
@@ -134,7 +134,7 @@
     <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
     <string name="settings_location_chaser_content">Send location updates for detected nearby Tags to Find my Everything network</string>
     <string name="settings_location_chaser_disabled">Not available on this device</string>
-    <string name="settings_location_category_uts_title">Unknown Tags</string>
+    <string name="settings_location_category_uts_title">Nieznane Tagi</string>
     <string name="settings_location_uts_title">Scan for unknown Tags</string>
     <string name="settings_location_uts_content">Scan for unknown Tags and notify you when you may be being tracked</string>
     <string name="settings_location_category_widget_title">Widżety</string>
@@ -164,7 +164,7 @@
     <string name="settings_chaser_count_content_other">You have contributed %1d locations to the Find my Everything network</string>
     <string name="settings_chaser_error_title">Error</string>
     <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
-    <string name="settings_chaser_toast">Grant in settings</string>
+    <string name="settings_chaser_toast">Przyznaj w ustawieniach</string>
     <!-- Settings > Location > Unknown Tag Scan -->
     <string name="settings_uts_title">Scan for unknown Tags</string>
     <string name="settings_uts_switch">Enable Scanning</string>
@@ -296,7 +296,7 @@
     <string name="map_allow_location_access_content">To locate and control this Tag, you need to allow uTag and SmartThings to access your location.</string>
     <string name="map_passive">Tryb pasywny</string>
     <string name="map_time_unknown">Unknown Time</string>
-    <string name="map_bluetooth_disabled">Bluetooth Disabled</string>
+    <string name="map_bluetooth_disabled">Bluetooth wyłączony</string>
     <string name="map_offline">Failed to Refresh</string>
     <string name="map_ring">Ring</string>
     <string name="map_location_history">Location history</string>
@@ -399,13 +399,13 @@
     <string name="tag_more_notify_when_disconnected_switch">Enabled</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_title">Safe Areas</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
-    <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Notifications disabled</string>
+    <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Powiadomienia wyłączone</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content_channel">The <b>Left Behind Alerts</b> notification channel is disabled, it must be enabled for this option to work</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_action">Notification settings</string>
     <string name="tag_more_notify_when_disconnected_notifications_silenced_title">Notifications silenced</string>
     <string name="tag_more_notify_when_disconnected_notifications_silenced_content">The <b>Left Behind Alerts</b> notification channel has been silenced, so you may not notice left behind alerts</string>
-    <string name="tag_more_notify_when_disconnected_notifications_dnd_title">Do not Disturb enabled</string>
+    <string name="tag_more_notify_when_disconnected_notifications_dnd_title">Włączono nie przeszkadzać</string>
     <string name="tag_more_notify_when_disconnected_notifications_dnd_content">Do not Disturb is enabled and the <b>Left Behind Alerts</b> notification channel is not excluded, so you may not notice left behind alerts</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Permission required</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
@@ -618,7 +618,7 @@
     <string name="d2d_status_connected">Connected</string>
     <string name="d2d_status_scanned">Scanned</string>
     <!-- Privacy notice -->
-    <string name="privacy_notice_title">Locate your Tags anytime, anywhere</string>
+    <string name="privacy_notice_title">Lokalizuj swoje Tagi w każdym miejscu i o każdej porze</string>
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
     <string name="privacy_notice_agree">Agree</string>
     <string name="privacy_notice_disagree">Disagree</string>
@@ -707,7 +707,7 @@
     <string name="github">GitHub</string>
     <string name="libraries">Biblioteki firm trzecich</string>
     <string name="donate">Darowizny</string>
-    <string name="bluesky">Zaobserwuj na Bluesky</string>
+    <string name="bluesky">Obserwuj na Bluesky</string>
     <string name="about_version">Wersja %1s\nAutorstwa Kieron Quinn</string>
     <string name="about_contributors">Współtwórcy</string>
     <string name="about_crowdin">Crowdin</string>
@@ -719,9 +719,9 @@
     <string name="contributors_icons_title">Dodatkowe ikony</string>
     <string name="contributors_icons_content">Dodatkowe ikony z Material Design Icons (licencja Pictogrammers Free License)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Update available</string>
-    <string name="snackbar_update_multiple">Updates available</string>
-    <string name="snackbar_update_button">View</string>
+    <string name="snackbar_update">Dostępna aktualizacja</string>
+    <string name="snackbar_update_multiple">Aktualizacje dostępne</string>
+    <string name="snackbar_update_button">Wyświetl</string>
     <string name="update_notification">uTag version %1s</string>
     <string name="update_notification_mod">SmartThings version %1s</string>
     <string name="update_title_utag">uTag update</string>
@@ -743,22 +743,22 @@
     <string name="update_dialog_failed_content">Check your connection and try again later</string>
     <string name="update_dialog_failed_close">Close</string>
     <string name="update_downloader_github">Download via browser</string>
-    <string name="update_notification_title">uTag update available</string>
+    <string name="update_notification_title">Dostępna aktualizacja uTag</string>
     <string name="update_notification_content">An update is available for uTag (%1s to %1s)</string>
-    <string name="update_notification_smartthings_title">SmartThings update available</string>
+    <string name="update_notification_smartthings_title">Dostępna aktualizacja SmartThings</string>
     <string name="update_notification_smartthings_content">An update is available for SmartThings (%1s to %1s)</string>
-    <string name="update_notification_multiple_title">Updates available</string>
+    <string name="update_notification_multiple_title">Dostępne aktualizacje</string>
     <string name="update_notification_multiple_content">Updates are available for uTag and SmartThings</string>
     <!-- Notification channels -->
     <string name="notification_channel_updates_title">uTag Updates</string>
     <string name="notification_channel_updates_content">Notifications shown when there is an update for uTag</string>
-    <string name="notification_channel_foreground_service_title">Background Service</string>
+    <string name="notification_channel_foreground_service_title">Usługa w tle</string>
     <string name="notification_channel_foreground_service_content">Notifications shown when uTag is running in the background</string>
-    <string name="notification_channel_error_title">Errors</string>
+    <string name="notification_channel_error_title">Błędy</string>
     <string name="notification_channel_error_content">Notifications shown if uTag encounters an issue</string>
-    <string name="notification_channel_find_title">Find my Device</string>
+    <string name="notification_channel_find_title">Znajdź moje urządzenie</string>
     <string name="notification_channel_find_content">Notifications shown when you use uTag to find your device by double pressing a Tag\'s button</string>
-    <string name="notification_channel_left_behind_title">Left Behind Alerts</string>
+    <string name="notification_channel_left_behind_title">Ostrzeżenia o pozostawieniu</string>
     <string name="notification_channel_left_behind_content">Notifications shown when you leave a Tag behind and have \"Notify when left behind\" enabled</string>
     <string name="notification_channel_unknown_tag_title">Unknown Tag Alerts</string>
     <string name="notification_channel_unknown_tag_content">Notifications shown when an unknown Tag may be tracking you</string>
@@ -793,34 +793,34 @@
     <string name="search_nearby_uwb_disabled_content">Ultra-wideband, precise searching is available on your device but UWB is disabled. Enable UWB to allow precise searching?</string>
     <string name="search_nearby_uwb_disabled_positive">Enable</string>
     <string name="search_nearby_uwb_disabled_negative">Not now</string>
-    <string name="search_nearby_bluetooth_disabled_title">Bluetooth Disabled</string>
+    <string name="search_nearby_bluetooth_disabled_title">Bluetooth wyłączony</string>
     <string name="search_nearby_bluetooth_disabled_content">Search nearby requires Bluetooth, enable Bluetooth to start searching?</string>
     <string name="search_nearby_bluetooth_disabled_positive">Enable</string>
     <string name="search_nearby_bluetooth_disabled_negative">Cancel</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings is running</string>
     <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
-    <string name="notification_title_background_service_zero">No Tags connected</string>
+    <string name="notification_title_background_service_zero">Nie połączono Tagów</string>
     <string name="notification_title_background_service_one">%1d Tag connected</string>
     <string name="notification_title_background_service_other">%1d Tags connected</string>
     <string name="notification_title_background_service_passive">%1s (Passive)</string>
     <string name="notification_title_background_service_error_short">uTag</string>
     <string name="notification_title_background_service_error">Błąd uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
-    <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
-    <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
-    <string name="notification_title_background_service_permissions">uTag Error</string>
+    <string name="notification_title_background_service_battery">Wyłącz optymalizację baterii</string>
+    <string name="notification_content_background_service_battery">uTag wymaga wyłączenia optymalizacji baterii dla %1s, naciśnij aby wyłączyć</string>
+    <string name="notification_title_background_service_permissions">Błąd uTag</string>
     <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
     <string name="notification_action_background_service_error_action">Spróbuj ponownie</string>
-    <string name="notification_title_bluetooth_error">Bluetooth Disabled</string>
+    <string name="notification_title_bluetooth_error">Bluetooth jest wyłączony</string>
     <string name="notification_content_bluetooth_error">uTag requires Bluetooth to connect to your Tags, tap to enable</string>
-    <string name="notification_title_disconnect">Left Behind Alert</string>
+    <string name="notification_title_disconnect">Alert o pozostawieniu</string>
     <string name="notification_content_disconnect">Your %1s has been left behind!</string>
     <!-- Logged out notification -->
     <string name="notification_title_logged_out">Wylogowano</string>
     <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
     <!-- Find my Device -->
-    <string name="notification_title_find_my_device">Find my Device</string>
+    <string name="notification_title_find_my_device">Znajdź moje urządzenie</string>
     <string name="notification_content_find_my_device_delay">%1s is about to ring this device</string>
     <string name="notification_content_find_my_device_delay_generic">A Tag is about to ring this device</string>
     <string name="notification_content_find_my_device">%1s is ringing this device</string>
@@ -828,8 +828,8 @@
     <string name="notification_action_find_my_device">Stop</string>
     <string name="notification_content_find_my_device_error">Unable to start ringing as Find my Device is not set up correctly, check the Tag\'s settings for more info</string>
     <!-- Unknown Tag -->
-    <string name="notification_title_unknown_tag_one">Unknown Tag Detected</string>
-    <string name="notification_title_unknown_tag_other">Unknown Tags Detected</string>
+    <string name="notification_title_unknown_tag_one">Wykryto nieznego Taga</string>
+    <string name="notification_title_unknown_tag_other">Wykryto nieznane Tagi</string>
     <string name="notification_content_unknown_tag_one">An unknown Tag has been detected which may be tracking you. Tap for more info.</string>
     <string name="notification_content_unknown_tag_other">Unknown Tags have been detected which may be tracking you. Tap for more info.</string>
     <!-- Automation -->
@@ -931,7 +931,7 @@
     <!-- Widget -->
     <string name="widget_location">Lokalizacje Tagów</string>
     <string name="widget_history">Historia lokalizacji Taga</string>
-    <string name="widget_preview_status">Updated: 18:06</string>
+    <string name="widget_preview_status">Zaktualizowano: 18:06</string>
     <string name="widget_error_location">Error getting location</string>
     <string name="widget_error_locations">Error getting locations</string>
     <string name="widget_error_no_location">No location available</string>
@@ -954,9 +954,9 @@
     <string name="widget_configuration_error_dialog_title">Error</string>
     <string name="widget_configuration_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
     <string name="widget_configuration_error_dialog_close">Close</string>
-    <string name="widget_configuration_preview_label">Preview</string>
-    <string name="widget_configuration_preview_empty">Select a Tag to view a preview</string>
-    <string name="widget_configuration_preview_error">Error loading preview, try again later</string>
+    <string name="widget_configuration_preview_label">Pogląd</string>
+    <string name="widget_configuration_preview_empty">Wybierz Tag, aby wyświetlić podgląd</string>
+    <string name="widget_configuration_preview_error">Nie udało się wczytać podglądu, spróbuj ponownie później</string>
     <string name="widget_configuration_preview_loading">Wczytywanie podglądu…</string>
     <string name="widget_configuration_options_label">Opcje</string>
     <string name="widget_configuration_location_devices_title">Wybrane Tagi</string>
@@ -1065,19 +1065,19 @@
     <string name="updates_smartthings_external_title">SmartThings</string>
     <string name="updates_smartthings_external_content">SmartThings updates on your device are handled externally</string>
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
-    <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
-    <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
-    <string name="updates_smartthings_not_installed_action">Re-run setup</string>
+    <string name="updates_smartthings_not_installed_title">SmartThings nie jest zainstalowane</string>
+    <string name="updates_smartthings_not_installed_content">uTag wymaga SmartThings. Powtórz konfigurację, aby je zainstalować i skonfigurować.</string>
+    <string name="updates_smartthings_not_installed_action">Powtórz konfigurację</string>
     <string name="updates_smartthings_not_modded_title">SmartThings Not Modified</string>
     <string name="updates_smartthings_not_modded_content">You must have the modified build of SmartThings installed for uTag to work, please re-run setup to install it and set it up.\n\n<b>Note:</b> If your device is rooted with Xposed installed, enable the uTag Xposed module, force stop SmartThings and return to uTag to fix this.</string>
-    <string name="updates_smartthings_not_modded_action">Re-run setup</string>
-    <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
+    <string name="updates_smartthings_not_modded_action">Powtórz konfigurację</string>
+    <string name="updates_rerun_setup_dialog_title">Powtórzyć konfigurację?</string>
     <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
     <string name="updates_category_options">Opcje</string>
     <string name="updates_check_for_updates_title">Automatycznie sprawdzaj aktualizacje</string>
     <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
     <!-- Debug notification -->
-    <string name="debug_error_notification_title">uTag Error Caught</string>
+    <string name="debug_error_notification_title">Wyłapano błąd uTag</string>
     <string name="debug_error_notification_content">Tap to view &amp; save</string>
     <!-- Debug error viewer -->
     <string name="debug_error_dialog_title">Error Details</string>
