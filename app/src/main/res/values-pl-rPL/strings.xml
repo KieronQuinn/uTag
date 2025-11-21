@@ -17,7 +17,7 @@
     <string name="setup_mod_info_action">Rozpocznij pobieranie modyfikacji</string>
     <string name="setup_mod_oneui_title">Wykryto OneUI</string>
     <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
-    <string name="setup_mod_oneui_continue">Continue</string>
+    <string name="setup_mod_oneui_continue">Dalej</string>
     <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
     <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
     <string name="setup_mod_downloading">Pobieranie SmartThings…</string>
@@ -54,8 +54,8 @@
     <string name="permission_battery_disable">Wyłącz</string>
     <string name="permission_analytics_title">Analytics &amp; Crash Reporting</string>
     <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
-    <string name="permission_analytics_allow">Allow</string>
-    <string name="permission_analytics_deny">Deny</string>
+    <string name="permission_analytics_allow">Zezwól</string>
+    <string name="permission_analytics_deny">Odmów</string>
     <!-- Sign in -->
     <string name="setup_account">Konto</string>
     <string name="account_title">Zaloguj się do SmartThings</string>
@@ -66,15 +66,15 @@
     <string name="account_warning_content_b2">Your password is not visible to nor can it be saved by uTag and access tokens are kept encrypted on device</string>
     <string name="account_warning_content_b3">uTag is open source and you can inspect the login code on GitHub</string>
     <string name="account_warning_content_footer"><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
-    <string name="account_sign_in">Sign in</string>
-    <string name="account_error_title">Error</string>
+    <string name="account_sign_in">Zaloguj się</string>
+    <string name="account_error_title">Błąd</string>
     <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
-    <string name="account_error_try_again">Try again</string>
+    <string name="account_error_try_again">Spróbuj ponownie</string>
     <string name="login_response_error_title">Error</string>
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
-    <string name="login_response_error_close">Close</string>
+    <string name="login_response_error_close">Zamknij</string>
     <!-- Settings -->
-    <string name="settings_main_title">uTag Settings</string>
+    <string name="settings_main_title">Ustawienia uTag</string>
     <string name="settings_main_mod_error_title">Error</string>
     <string name="settings_main_mod_warning_title">Warning</string>
     <string name="settings_main_mod_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later. If it\'s no longer installed, follow the instructions on the Updates tab to reinstall it.</string>
@@ -87,11 +87,11 @@
     <string name="settings_main_xposed_error_content">The uTag SmartThings modification is not installed. If you are using Xposed, make sure it\'s enabled for SmartThings and reboot your device. If you\'re not rooted, make sure the modified version is installed.</string>
     <string name="settings_main_smartthings_title">Looking for SmartTag options?</string>
     <string name="settings_main_smartthings_content">Settings &amp; tracking for SmartTags can be accessed from the SmartThings app</string>
-    <string name="settings_main_smartthings_open">Open SmartThings</string>
+    <string name="settings_main_smartthings_open">Otwórz SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
     <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
-    <string name="settings_main_permissions_action">Grant in settings</string>
-    <string name="settings_main_category_settings">Settings</string>
+    <string name="settings_main_permissions_action">Przyznaj w ustawieniach</string>
+    <string name="settings_main_category_settings">Ustawienia</string>
     <string name="settings_main_location_title">Location &amp; Searching</string>
     <string name="settings_main_location_content">Location update, search nearby options, widget refresh, unknown tags, network and safe areas</string>
     <string name="settings_main_map_title">Mapa</string>
@@ -108,9 +108,9 @@
     <string name="settings_main_backup_restore_content">Backup &amp; restore uTag data to a local file or the cloud</string>
     <string name="settings_main_advanced_title">Advanced</string>
     <string name="settings_main_advanced_content">Language, content creator mode and analytics options</string>
-    <string name="settings_main_category_account">Account</string>
+    <string name="settings_main_category_account">Konto</string>
     <string name="settings_main_category_samsung_account_title">Samsung Account</string>
-    <string name="settings_main_category_samsung_account_content">Signed in as %1s (%1s)</string>
+    <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
     <string name="settings_main_sign_out_title">Sign out</string>
     <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
@@ -703,11 +703,11 @@
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
     <string name="biometric_prompt_error_close">Close</string>
     <!-- About Footer -->
-    <string name="xda_thread">XDA Thread</string>
+    <string name="xda_thread">Wątek XDA</string>
     <string name="github">GitHub</string>
     <string name="libraries">Third party libraries</string>
     <string name="donate">Donate</string>
-    <string name="bluesky">Follow me on Bluesky</string>
+    <string name="bluesky">Zaobserwuj mnie na Bluesky</string>
     <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
     <string name="about_contributors">Contributors</string>
     <string name="about_crowdin">Crowdin</string>
