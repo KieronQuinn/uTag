@@ -144,11 +144,11 @@
     <string name="settings_location_widget_period_never_content">Will only refresh when you tap refresh on a widget or a Tag\'s location is updated by uTag</string>
     <string name="settings_location_widget_battery_saver_title">Widget Refresh on Battery Saver</string>
     <string name="settings_location_widget_battery_saver_content">Refresh widgets when Battery Saver is enabled</string>
-    <string name="settings_location_category_search_nearby_title">Search Nearby</string>
+    <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
     <string name="settings_location_uwb_content">Używaj precyzyjnego znajdowania (UWB), jeśli jest wspierane przez Twój Tag.</string>
-    <string name="settings_location_uwb_long_distance_title">Longer Distance Directional Finding</string>
-    <string name="settings_location_uwb_long_distance_content">Allow directional precise finding over a longer distance, which may show incorrect directions when the Tag is not in line of sight.</string>
+    <string name="settings_location_uwb_long_distance_title">Kierunkowe znajdowanie na większą odległość</string>
+    <string name="settings_location_uwb_long_distance_content">Pozwala na kierunkowe precyzyjne znajdowanie z większej odległości, co może powodować błędne wskazania kierunku, gdy Tag nie jest w zasięgu wzroku.</string>
     <string name="settings_location_uwb_disabled">Not available on your device</string>
     <string name="settings_location_units_title">Jednostki odległości</string>
     <string name="settings_location_units_system">Takie jak urządzenie (%1s)</string>
@@ -175,7 +175,7 @@
     <string name="settings_uts_list_info_title">Unknown Tags</string>
     <string name="settings_uts_list_info_content">Unknown Tags are stored for 24 hours. If you interact with them, no indication is sent to their owner.</string>
     <string name="settings_uts_category_settings">Settings</string>
-    <string name="settings_uts_sensitivity_title">Sensitivity</string>
+    <string name="settings_uts_sensitivity_title">Czułość</string>
     <string name="settings_uts_sensitivity_content">Higher sensitivities may cause false positives, lower sensitivities may take longer to detect an Unknown Tag which is following you.</string>
     <string name="settings_uts_list_unknown_tag_title">Unknown Tag %1s</string>
     <string name="settings_uts_list_unknown_tag_content">Last seen %1s</string>
@@ -243,8 +243,8 @@
     <string name="settings_advanced_debug_title">Debug Mode</string>
     <string name="settings_advanced_debug_content">Enables some more verbose logging &amp; debug UI components for testing</string>
     <string name="settings_advanced_language">Język</string>
-    <string name="settings_advanced_clear_addresses_title">Clear Cached Addresses</string>
-    <string name="settings_advanced_clear_addresses_content">Clear the local encrypted cache of addresses from Tag locations and location history</string>
+    <string name="settings_advanced_clear_addresses_title">Wyczyść zapisane adresy</string>
+    <string name="settings_advanced_clear_addresses_content">Wyczyść lokalną, zaszyfrowaną pamięć adresów z lokalizacji Tagów oraz historii lokalizacji</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Clear Cached Addresses?</string>
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Clear</string>
