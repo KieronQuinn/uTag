@@ -703,7 +703,7 @@
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
     <string name="biometric_prompt_error_close">Close</string>
     <!-- About Footer -->
-    <string name="xda_thread">Wątek XDA</string>
+    <string name="xda_thread">XDA</string>
     <string name="github">GitHub</string>
     <string name="libraries">Biblioteki firm trzecich</string>
     <string name="donate">Darowizny</string>
