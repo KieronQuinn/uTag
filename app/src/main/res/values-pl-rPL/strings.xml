@@ -95,7 +95,7 @@
     <string name="settings_main_location_title">Lokalizacja i wyszukiwanie w pobliżu</string>
     <string name="settings_main_location_content">Location update, search nearby options, widget refresh, unknown tags, network and safe areas</string>
     <string name="settings_main_map_title">Mapa</string>
-    <string name="settings_main_map_content">Find and Location History map theming &amp; options</string>
+    <string name="settings_main_map_content">Motywy i ustawienia mapy dla funkcji znajdź i historii lokalizacji</string>
     <string name="settings_main_security_title">Ochrona i szyfrowanie</string>
     <string name="settings_main_security_content">Szyfrowanie lokalizacji w trybie offline i logowanie biometryczne</string>
     <string name="settings_main_updates_content_disabled">Update notifications are disabled in your system settings</string>
@@ -105,7 +105,7 @@
     <string name="settings_main_wiki_title">Podręcznik użytkownika</string>
     <string name="settings_main_wiki_content">Informacje i poradniki, o korzystaniu z uTag</string>
     <string name="settings_main_backup_restore_title">Kopia zapasowa i przywracanie</string>
-    <string name="settings_main_backup_restore_content">Backup &amp; restore uTag data to a local file or the cloud</string>
+    <string name="settings_main_backup_restore_content">Zapisuj i przywracaj dane uTag z pliku lub chmury</string>
     <string name="settings_main_advanced_title">Zaawansowane</string>
     <string name="settings_main_advanced_content">Opcje języka, trybu influencera i analityki</string>
     <string name="settings_main_category_account">Konto</string>
@@ -118,7 +118,7 @@
     <!-- Settings > Location -->
     <string name="settings_location_location">Lokalizacja</string>
     <string name="settings_location_location_period_title">Częstotliwość odświeżania lokalizacji</string>
-    <string name="settings_location_location_period_content">How often to update the location for connected Tags: %1s</string>
+    <string name="settings_location_location_period_content">Jak często aktualizować lokalizację połączonych tagów: %1s</string>
     <string name="settings_location_location_period_summary_high">Zużywa więcej baterii</string>
     <string name="settings_location_location_period_summary_low">Może nie aktualizować lokalizacji Twojego Tagu wystarczająco często, jeśli go zostawisz w tyle</string>
     <string name="settings_location_location_period_summary_never"><b>Warning:</b> Unless Passive Mode is enabled, your Tag does <b>not</b> update its location from other Samsung devices when in range of your device, so your Tag\'s location will not be automatically updated with this option!</string>
@@ -172,7 +172,7 @@
     <string name="settings_uts_info_content">When enabled, uTag will scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
     <string name="settings_uts_view_unknown_title">View Unknown Tags</string>
     <string name="settings_uts_list_title">View Unknown Tags</string>
-    <string name="settings_uts_list_info_title">Unknown Tags</string>
+    <string name="settings_uts_list_info_title">Nieznane Tagi</string>
     <string name="settings_uts_list_info_content">Unknown Tags are stored for 24 hours. If you interact with them, no indication is sent to their owner.</string>
     <string name="settings_uts_category_settings">Settings</string>
     <string name="settings_uts_sensitivity_title">Czułość</string>
@@ -384,7 +384,7 @@
     <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
-    <string name="tag_more_search_nearby">Search nearby</string>
+    <string name="tag_more_search_nearby">Znajdowanie w pobliżu</string>
     <string name="tag_more_search_nearby_disabled">Disable Passive Mode to use this option</string>
     <string name="tag_more_navigate">Navigate</string>
     <string name="tag_more_category_notifications">Notifications</string>
@@ -690,13 +690,13 @@
     <string name="settings_encryption_pin_timeout_title">PIN Timeout</string>
     <string name="settings_encryption_pin_timeout_content">How long before an entered PIN is cleared from memory, requiring you to enter it again: %1s</string>
     <!-- Biometric prompt -->
-    <string name="biometric_prompt_title">Authenticate</string>
+    <string name="biometric_prompt_title">Uwierzytelnij</string>
     <string name="biometric_prompt_content_settings">Biometric authentication is required to access uTag\'s settings</string>
     <string name="biometric_prompt_content_map">Biometric authentication is required to access this Tag\'s location</string>
     <string name="biometric_prompt_content_widget">Biometric authentication is required to modify uTag widgets</string>
     <string name="biometric_prompt_content_uts">Biometric authentication is required to view Unknown Tags</string>
-    <string name="biometric_prompt_content_enable">Verify biometrics to enable</string>
-    <string name="biometric_prompt_content_disable">Verify biometrics to disable</string>
+    <string name="biometric_prompt_content_enable">Potwierdź biometrię, aby włączyć</string>
+    <string name="biometric_prompt_content_disable">Potwierdź biometrię, aby wyłączyć</string>
     <string name="biometric_prompt_content_change_pin">Authenticate to modify your PIN</string>
     <string name="biometric_prompt_content_negative">Cancel</string>
     <string name="biometric_prompt_error_title">Biometric Error</string>
@@ -800,7 +800,7 @@
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings is running</string>
     <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
-    <string name="notification_title_background_service_zero">Nie połączono Tagów</string>
+    <string name="notification_title_background_service_zero">Nie połączono z żadnym Tagiem</string>
     <string name="notification_title_background_service_one">%1d Tag connected</string>
     <string name="notification_title_background_service_other">%1d Tags connected</string>
     <string name="notification_title_background_service_passive">%1s (Passive)</string>
@@ -984,9 +984,9 @@
     <string name="smartspacer_plugin_history_description_set">Display %1s\'s location history and an approximate address, if available</string>
     <!-- Backup & Restore -->
     <string name="backup_restore_backup_title">Stwórz kopię zapasową</string>
-    <string name="backup_restore_backup_content">Backup your uTag data to a local file or the cloud</string>
+    <string name="backup_restore_backup_content">Wykonaj kopię zapasową uTag do pliku lub chmury</string>
     <string name="backup_restore_restore_title">Przywróć kopię zapasową</string>
-    <string name="backup_restore_restore_content">Restore your uTag data from a local file or the cloud</string>
+    <string name="backup_restore_restore_content">Przywróć kopię zapasową uTag z pliku lub chmury</string>
     <string name="backup_restore_included_title">Zawarte w kopii zapasowej</string>
     <string name="backup_restore_included_bull1">Scan, Location, Map &amp; Refresh settings</string>
     <string name="backup_restore_included_bull2">Bezpieczne miejsca</string>
