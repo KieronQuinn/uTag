@@ -70,13 +70,13 @@
     <string name="account_error_title">Błąd</string>
     <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
     <string name="account_error_try_again">Spróbuj ponownie</string>
-    <string name="login_response_error_title">Error</string>
+    <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
     <string name="login_response_error_close">Zamknij</string>
     <!-- Settings -->
     <string name="settings_main_title">Ustawienia uTag</string>
     <string name="settings_main_mod_error_title">Wystąpił błąd</string>
-    <string name="settings_main_mod_warning_title">Warning</string>
+    <string name="settings_main_mod_warning_title">Uwaga</string>
     <string name="settings_main_mod_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later. If it\'s no longer installed, follow the instructions on the Updates tab to reinstall it.</string>
     <string name="settings_main_mod_not_activated_xposed_content">The uTag mod for SmartThings is not enabled. If you\'re using Xposed, check it\'s enabled and reboot your device. If you\'re not using Xposed, follow the instructions  to install the modded SmartThings from the Updates tab.</string>
     <string name="settings_main_mod_not_activated_patch_content">The uTag mod for SmartThings is not enabled. Please follow the instructions to install it from the Updates tab to fix this.</string>
@@ -93,7 +93,7 @@
     <string name="settings_main_permissions_action">Przyznaj w ustawieniach</string>
     <string name="settings_main_category_settings">Ustawienia</string>
     <string name="settings_main_location_title">Lokalizacja i wyszukiwanie w pobliżu</string>
-    <string name="settings_main_location_content">Location update, search nearby options, widget refresh, unknown tags, network and safe areas</string>
+    <string name="settings_main_location_content">Opcje aktualizacji lokalizacji, wyszukiwania w pobliżu, widżetów, nieznanych tagów, sieci i bezpiecznych miejsc</string>
     <string name="settings_main_map_title">Mapa</string>
     <string name="settings_main_map_content">Motywy i ustawienia mapy dla funkcji znajdź i historii lokalizacji</string>
     <string name="settings_main_security_title">Ochrona i szyfrowanie</string>
@@ -109,7 +109,7 @@
     <string name="settings_main_advanced_title">Zaawansowane</string>
     <string name="settings_main_advanced_content">Opcje języka, trybu influencera i analityki</string>
     <string name="settings_main_category_account">Konto</string>
-    <string name="settings_main_category_samsung_account_title">Samsung Account</string>
+    <string name="settings_main_category_samsung_account_title">Konto Samsung</string>
     <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s (%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
     <string name="settings_main_sign_out_title">Wyloguj</string>
@@ -122,13 +122,13 @@
     <string name="settings_location_location_period_summary_high">Zużywa więcej baterii</string>
     <string name="settings_location_location_period_summary_low">Może nie aktualizować lokalizacji Twojego Tagu wystarczająco często, jeśli go zostawisz w tyle</string>
     <string name="settings_location_location_period_summary_never"><b>Warning:</b> Unless Passive Mode is enabled, your Tag does <b>not</b> update its location from other Samsung devices when in range of your device, so your Tag\'s location will not be automatically updated with this option!</string>
-    <string name="settings_location_location_battery_saver_title">Location Refresh on Battery Saver</string>
-    <string name="settings_location_location_battery_saver_content">Update Tag locations when Battery Saver is enabled</string>
+    <string name="settings_location_location_battery_saver_title">Odświeżanie lokalizacji w trybie oszczędzania energii</string>
+    <string name="settings_location_location_battery_saver_content">Aktualizuj lokalizacje tagów, nawet gdy oszczędzanie baterii jest włączone</string>
     <string name="settings_location_location_staleness_title">Acceptable Staleness</string>
     <string name="settings_location_location_staleness_content">How old a location can be for it still to be used in location updates: %1s</string>
     <string name="settings_location_location_staleness_none">Zużywa więcej baterii</string>
     <string name="settings_location_location_staleness_max">Location updates may be outdated</string>
-    <string name="settings_location_location_safe_area_title">Safe Areas</string>
+    <string name="settings_location_location_safe_area_title">Bezpieczne miejsca</string>
     <string name="settings_location_location_safe_area_content">Add &amp; configure Safe Areas for your Tags</string>
     <string name="settings_location_category_chaser_title">Find my Everything Network</string>
     <string name="settings_location_chaser_title">Contribute to Find my Everything Network</string>
@@ -162,7 +162,7 @@
     <string name="settings_chaser_count_title">Network Contributions</string>
     <string name="settings_chaser_count_content_one">You have contributed %1d location to the Find my Everything network</string>
     <string name="settings_chaser_count_content_other">You have contributed %1d locations to the Find my Everything network</string>
-    <string name="settings_chaser_error_title">Error</string>
+    <string name="settings_chaser_error_title">Błąd</string>
     <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
     <string name="settings_chaser_toast">Przyznaj w ustawieniach</string>
     <!-- Settings > Location > Unknown Tag Scan -->
@@ -186,7 +186,7 @@
     <string name="settings_uts_list_tag_clear_safe_dialog_title">Clear Safe Tags?</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_content">This will reset Safe Tags, showing all Unknown Tags in the list and show future notifications if they are detected again.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">Clear</string>
-    <string name="settings_uts_list_tag_clear_safe_dialog_negative">Cancel</string>
+    <string name="settings_uts_list_tag_clear_safe_dialog_negative">Anuluj</string>
     <string name="settings_uts_tag_title">Unknown Tag detected near you</string>
     <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
     <string name="settings_uts_tag_first">First seen at %1s</string>
@@ -198,10 +198,10 @@
     <string name="settings_uts_tag_safe_dialog_title">Mark as Safe?</string>
     <string name="settings_uts_tag_safe_dialog_content">This will hide the Tag from the Unknown Tag list, until it changes ID. This happens every 24 hours, or if the battery is removed &amp; re-inserted, or if the Tag is reset.\n\n<b>Note:</b> This does not prevent it from appearing in manual unknown Tag scans in SmartThings.</string>
     <string name="settings_uts_tag_safe_dialog_positive">Mark as Safe</string>
-    <string name="settings_uts_tag_safe_dialog_negative">Cancel</string>
-    <string name="settings_uts_tag_error_dialog_title">Error</string>
+    <string name="settings_uts_tag_safe_dialog_negative">Anuluj</string>
+    <string name="settings_uts_tag_error_dialog_title">Błąd</string>
     <string name="settings_uts_tag_error_dialog_content">An error occurred loading this Unknown Tag. Try again later.</string>
-    <string name="settings_uts_tag_error_dialog_close">Close</string>
+    <string name="settings_uts_tag_error_dialog_close">Zamknij</string>
     <string name="settings_uts_sensitivity_very_high">Very High</string>
     <string name="settings_uts_sensitivity_high">High</string>
     <string name="settings_uts_sensitivity_normal">Normal</string>
@@ -267,8 +267,8 @@
     <string name="settings_content_creator_does_bull7"><b>Important:</b> For safety reasons, Unknown Tag Scan results always display real locations, even with Content Creator Mode enabled.</string>
     <string name="settings_content_creator_does_footer">Możesz wyłączyć tryb influencera w dowolnym momencie bez utraty danych i pomijania aktualizacji lokalizacji.</string>
     <!-- Map -->
-    <string name="map_error_title">Error</string>
-    <string name="map_warning_title">Warning</string>
+    <string name="map_error_title">Wystąpił błąd</string>
+    <string name="map_warning_title">Uwaga</string>
     <string name="map_error_content">An error occurred, please try again later (%1d)</string>
     <string name="map_error_no_tags_content">You don\'t have any Tags available on this account</string>
     <string name="map_error_close">Zamknij</string>
@@ -286,7 +286,7 @@
     <string name="map_location_error">Failed to get your location, try moving around</string>
     <string name="map_connection_error_title">Connection Error</string>
     <string name="map_connection_error_content">uTag couldn\'t connect to %1s as the maximum number of connections have been reached. Disconnect another device which is connected to it, if you think this is incorrect, try rebooting your device.</string>
-    <string name="map_connection_error_close">Close</string>
+    <string name="map_connection_error_close">Zamknij</string>
     <string name="map_address_encrypted">Encrypted Location</string>
     <string name="map_address_unknown">Unknown Address</string>
     <string name="map_address_denied">Couldn\'t get location</string>
@@ -298,10 +298,10 @@
     <string name="map_time_unknown">Unknown Time</string>
     <string name="map_bluetooth_disabled">Bluetooth wyłączony</string>
     <string name="map_offline">Failed to Refresh</string>
-    <string name="map_ring">Ring</string>
+    <string name="map_ring">Odtwórz dźwięk</string>
     <string name="map_location_history">Location history</string>
-    <string name="map_refresh">Refresh</string>
-    <string name="map_more">More</string>
+    <string name="map_refresh">Odśwież</string>
+    <string name="map_more">Więcej</string>
     <string name="map_add_to_homescreen">Dodaj do ekranu głównego</string>
     <string name="map_settings">Ustawienia</string>
     <string name="map_timestamp_last_updated">Last updated: %1s</string>
@@ -314,11 +314,11 @@
     <string name="map_searching_dialog_title">Failed to connect to Tag</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
-    <string name="map_searching_dialog_cancel">Close</string>
+    <string name="map_searching_dialog_cancel">Zamknij</string>
     <string name="map_allow_access_dialog_title">Share location?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
-    <string name="map_allow_access_dialog_positive">Share</string>
-    <string name="map_allow_access_dialog_negative">Cancel</string>
+    <string name="map_allow_access_dialog_positive">Udostępnij</string>
+    <string name="map_allow_access_dialog_negative">Anuluj</string>
     <string name="map_passive_mode_dialog_title">Passive Mode Enabled</string>
     <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
     <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
@@ -335,14 +335,14 @@
     <string name="tag_picker_favourites_tip_title">Show multiple Tags on the map</string>
     <string name="tag_picker_favourites_tip_content">Set your Tags as a favourites and they will show on the map as well as your selected Tag</string>
     <string name="tag_picker_favourites_tip_action">Edit Favourites</string>
-    <string name="tag_picker_shared">%1s\'s Tag</string>
+    <string name="tag_picker_shared">Tag użytkownika %1s</string>
     <string name="tag_picker_selected">Selected</string>
     <string name="tag_picker_agreement_required">Agreement required</string>
     <string name="tag_picker_not_allowed">Not allowed</string>
-    <string name="tag_picker_shared_and_selected">%1s\'s Tag • Selected</string>
-    <string name="tag_picker_error_dialog_title">Error</string>
+    <string name="tag_picker_shared_and_selected">Tag użytkownika %1s • wybrany</string>
+    <string name="tag_picker_error_dialog_title">Błąd</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
-    <string name="tag_picker_error_dialog_close">Close</string>
+    <string name="tag_picker_error_dialog_close">Zamknij</string>
     <string name="tag_picker_error_toast">An error occurred, please try again</string>
     <string name="tag_picker_menu_select_all">Favourite all</string>
     <string name="tag_picker_menu_select_none">Unfavourite all</string>
@@ -359,13 +359,13 @@
     <string name="tag_location_history_loading">Loading may take a while for new areas while the encrypted address database is built, or when there are many encrypted locations to decrypt.</string>
     <string name="tag_location_history_progress">%1d%%</string>
     <string name="tag_location_history_empty">No locations for this day</string>
-    <string name="tag_location_history_error_title">Error</string>
+    <string name="tag_location_history_error_title">Błąd</string>
     <string name="tag_location_history_error_content">An error occurred when loading your location history, check your connection and try again later.</string>
-    <string name="tag_location_history_error_close">Close</string>
+    <string name="tag_location_history_error_close">Zamknij</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
     <string name="tag_location_history_delete">Delete history</string>
     <string name="tag_location_history_delete_dialog_content">Delete all location history for %1s?</string>
-    <string name="tag_location_history_delete_dialog_cancel">Cancel</string>
+    <string name="tag_location_history_delete_dialog_cancel">Anuluj</string>
     <string name="tag_location_history_delete_dialog_delete">Delete</string>
     <string name="tag_location_history_delete_error">An error occurred, please try again.</string>
     <string name="tag_location_history_delete_disabled">Delete disabled as Content Creator mode is enabled</string>
@@ -375,7 +375,7 @@
     <string name="tag_location_history_export_dialog_content">This option exports your last 7 days of location history for %1s to a CSV file. It includes some extra information that isn\'t displayed in the app, such as battery levels, signal strength and update source (where available).\n\nPlease note that it is not possible to re-import this data, this option is purely for external analysis of histories.</string>
     <string name="tag_location_history_export_dialog_warning"><b>Note:</b> Locations which failed to decrypt will be omitted from the export.</string>
     <string name="tag_location_history_export_dialog_export">Export</string>
-    <string name="tag_location_history_export_dialog_cancel">Cancel</string>
+    <string name="tag_location_history_export_dialog_cancel">Anuluj</string>
     <string name="tag_location_history_export_error_toast">No history to export</string>
     <string name="tag_location_history_export_message">Exporting history, please wait…</string>
     <string name="tag_location_history_export_success_toast">Export finished</string>
@@ -386,18 +386,18 @@
     <!-- More page -->
     <string name="tag_more_search_nearby">Znajdowanie w pobliżu</string>
     <string name="tag_more_search_nearby_disabled">Disable Passive Mode to use this option</string>
-    <string name="tag_more_navigate">Navigate</string>
-    <string name="tag_more_category_notifications">Notifications</string>
-    <string name="tag_more_notify_when_found">Notify me when it\'s found</string>
-    <string name="tag_more_notify_when_found_dialog">You\'ll only be notified once when your device is found. If you lose the device again, you\'ll need to turn this on again</string>
-    <string name="tag_more_notify_when_disconnected_title">Notify when left behind</string>
+    <string name="tag_more_navigate">Nawiguj</string>
+    <string name="tag_more_category_notifications">Powiadomienia</string>
+    <string name="tag_more_notify_when_found">Powiadamiaj o znalezieniu</string>
+    <string name="tag_more_notify_when_found_dialog">Otrzymasz powiadomienie tylko raz, gdy urządzenie zostanie znalezione. Jeśli zgubisz je ponownie, trzeba będzie włączyć tę opcję ponownie</string>
+    <string name="tag_more_notify_when_disconnected_title">Powiadom o zostawieniu</string>
     <string name="tag_more_notify_when_disconnected_content_warning">Not working. Tap for more info.</string>
     <string name="tag_more_notify_when_disconnected_content_disabled">Notify when %1s is disconnected from this device and not in a Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Enabled</string>
     <string name="tag_more_notify_when_disconnected_switch">Enabled</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_title">Safe Areas</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_title">Bezpieczne miejsca</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Powiadomienia wyłączone</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
@@ -410,25 +410,25 @@
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Permission required</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
-    <string name="tag_more_lost_mode_title">Lost mode</string>
+    <string name="tag_more_lost_mode_title">Tryb Zgubione urządzenie</string>
     <string name="tag_more_category_protect">Ochrona</string>
-    <string name="tag_more_lost_mode_on">On</string>
-    <string name="tag_more_lost_mode_off">Off</string>
-    <string name="tag_more_category_share">Share</string>
+    <string name="tag_more_lost_mode_on">Wł.</string>
+    <string name="tag_more_lost_mode_off">Wył.</string>
+    <string name="tag_more_category_share">Udostępn.</string>
     <string name="tag_more_shareable">Share this Tag\'s location</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
     <string name="tag_more_share">Allow access to your location</string>
-    <string name="tag_more_advanced">Advanced</string>
+    <string name="tag_more_advanced">Zaawansowane</string>
     <string name="tag_more_passive_mode_title">Passive Mode</string>
     <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
     <string name="tag_more_passive_mode_content_enabled">On</string>
-    <string name="tag_more_battery">Battery</string>
-    <string name="tag_more_error_title">Error</string>
+    <string name="tag_more_battery">Bateria</string>
+    <string name="tag_more_error_title">Wystąpił błąd</string>
     <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
-    <string name="tag_more_error_close">Close</string>
+    <string name="tag_more_error_close">Zamknij</string>
     <string name="tag_more_error_toast">An error occurred, please try again</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
-    <string name="tag_more_end_to_end_title">Encrypt offline location</string>
+    <string name="tag_more_end_to_end_title">Szyfruj lokalizację offline</string>
     <string name="tag_more_end_to_end_content">Encrypt future location updates from other people\'s Galaxy devices for this Tag. You will be required to enter your encryption PIN to access these locations.</string>
     <string name="tag_more_end_to_end_content_pin">Set a PIN in the encryption settings to use this option</string>
     <string name="tag_more_end_to_end_content_disabled">Connect to your Tag to use this option</string>
@@ -500,9 +500,9 @@
     <string name="tag_more_automation_footer_bull5"><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
     <string name="tag_more_automation_category_options">Opcje</string>
     <string name="tag_more_automation_volume">Button Volume</string>
-    <string name="tag_more_automation_error_dialog_title">Error</string>
+    <string name="tag_more_automation_error_dialog_title">Wystąpił błąd</string>
     <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
-    <string name="tag_more_automation_error_dialog_close">Close</string>
+    <string name="tag_more_automation_error_dialog_close">Zamknij</string>
     <string name="tag_more_automation_error_toast">An error occurred, please try again</string>
     <string name="tag_more_automation_permission_title">Additional Setup</string>
     <string name="tag_more_automation_permission_allow_title">Allow Permission</string>
@@ -519,9 +519,9 @@
     <string name="tag_more_automation_type_shortcut_content">Start an app\'s shortcut when this automation is invoked.</string>
     <string name="tag_more_automation_type_tasker_title">Tasker Task</string>
     <string name="tag_more_automation_type_tasker_content">Start a Tasker task when this automation is invoked.</string>
-    <string name="tag_more_automation_type_tasker_dialog_title">Error</string>
+    <string name="tag_more_automation_type_tasker_dialog_title">Wystąpił błąd</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
-    <string name="tag_more_automation_type_tasker_dialog_close">Close</string>
+    <string name="tag_more_automation_type_tasker_dialog_close">Zamknij</string>
     <string name="button_volume_level_off">Muted</string>
     <string name="button_volume_level_low">Low</string>
     <string name="button_volume_level_high">High</string>
@@ -529,30 +529,30 @@
     <string name="tag_more_battery_dialog_title">Battery information</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
     <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
-    <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
-    <string name="tag_more_battery_dialog_very_low">• Very Low: 0–5%</string>
+    <string name="tag_more_battery_dialog_low">• Niski: 6-15%</string>
+    <string name="tag_more_battery_dialog_very_low">• Bardzo niski: 0-5%</string>
     <!-- Lost Mode -->
-    <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
-    <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
+    <string name="lost_mode_guide_description">Chroń swojego taga, włączając tryb Zgubione urządzenie, gdy nie możesz go znaleźć.</string>
+    <string name="lost_mode_guide_description_how_tag">Jak Samsung Find chroni Twojego SmartTaga z trybem Zgubione urządzenie?</string>
     <string name="emergency_contact_and_message">Emergency contact info and message</string>
     <string name="emergency_contact_and_message_description">Show your emergency contact information and a message for the person who finds this Tag.</string>
-    <string name="notify_me_when_its_found">Notify me when it\'s found</string>
+    <string name="notify_me_when_its_found">Powiadom o znalezieniu</string>
     <string name="notify_found_description">You\'ll receive a notification when this Tag is found.</string>
     <string name="device_is_already_connected_to_your_device">This tag is already in range of your device, so can’t turn on Notify me when it’s found.</string>
     <string name="pairing_lock">Pairing lock</string>
     <string name="pairing_lock_description">This tag is linked to your account. It won\'t be linked to other users.</string>
-    <string name="lost_mode_next">Next</string>
-    <string name="lost_mode_settings_switch">Enabled</string>
+    <string name="lost_mode_next">Dalej</string>
+    <string name="lost_mode_settings_switch">Włączony</string>
     <string name="lost_mode_settings_category">Personalizacja</string>
-    <string name="lost_mode_settings_email">Email (required)</string>
+    <string name="lost_mode_settings_email">Adres e-mail (wymagany)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
-    <string name="lost_mode_settings_email_cannot_be_empty">Email cannot be empty</string>
+    <string name="lost_mode_settings_email_cannot_be_empty">Nieprawidłowy adres e-mail</string>
     <string name="lost_mode_settings_phone_number">Contact (optional)</string>
     <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
     <string name="lost_mode_settings_message">Message</string>
-    <string name="lost_mode_settings_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_error_dialog_title">Wystąpił błąd</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
-    <string name="lost_mode_settings_error_dialog_close">Close</string>
+    <string name="lost_mode_settings_error_dialog_close">Zamknij</string>
     <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
@@ -571,9 +571,9 @@
     <string name="lost_mode_settings_custom_url_set_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_set_summary">Set a custom URL to open when this Tag is tapped on another device. <b>Make sure you have an external backup of your original URL before using this.</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Error</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_title">Wystąpił błąd</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Warning</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Uwaga</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirm</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
@@ -583,7 +583,7 @@
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
     <string name="lost_mode_custom_url_warning" maxLength="40">Do not edit or turn off. See uTag Wiki.</string>
     <!-- Predefined lost messages (displayed locally only) -->
-    <string name="this_smarttag_has_been_lost">This SmartTag has been lost.</string>
+    <string name="this_smarttag_has_been_lost">Ten SmartTag został zgubiony.</string>
     <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
     <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
     <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
@@ -602,12 +602,12 @@
     <string name="passive_mode_lost_functionality_footer"><b>You can disable Passive Mode at any time, without needing to be in range of the Tag, even temporarily to regain these functions as required.</b></string>
     <string name="passive_mode_disabled_dialog_content">Passive mode has been disabled, SmartThings may take a couple of minutes to reconnect to your Tag if it\'s nearby. If it does not, open SmartThings to connect to it manually.</string>
     <!-- Battery levels -->
-    <string name="battery_unknown">Unknown</string>
-    <string name="battery_very_low">Battery replacement required</string>
-    <string name="battery_low">Low</string>
-    <string name="battery_sufficient">Sufficient</string>
+    <string name="battery_unknown">Nieznany</string>
+    <string name="battery_very_low">Wymagana wymiana baterii</string>
+    <string name="battery_low">Niski</string>
+    <string name="battery_sufficient">Wystarczający</string>
     <!-- Only used in export -->
-    <string name="battery_full">Full</string>
+    <string name="battery_full">Pełny</string>
     <string name="battery_update">Updated %1s</string>
     <!-- Device Types -->
     <string name="device_type_galaxy_phone">Galaxy Phone</string>
@@ -615,50 +615,50 @@
     <string name="device_type_none_galaxy_phone">Non-Galaxy Phone</string>
     <string name="device_type_none_galaxy_tablet">Non-Galaxy Tablet</string>
     <!-- D2D Status -->
-    <string name="d2d_status_connected">Connected</string>
+    <string name="d2d_status_connected">Połączono</string>
     <string name="d2d_status_scanned">Scanned</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Lokalizuj swoje Tagi w każdym miejscu i o każdej porze</string>
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
-    <string name="privacy_notice_agree">Agree</string>
+    <string name="privacy_notice_agree">Zgadzam się</string>
     <string name="privacy_notice_disagree">Disagree</string>
-    <string name="privacy_notice_error_dialog_title">Error</string>
+    <string name="privacy_notice_error_dialog_title">Wystąpił błąd</string>
     <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
-    <string name="privacy_notice_error_dialog_close">Close</string>
+    <string name="privacy_notice_error_dialog_close">Zamknij</string>
     <!-- FME opt-in -->
     <string name="fme_opt_in_title">Find my Everything Network</string>
     <string name="fme_opt_in_content">uTag can contribute locations for other user\'s Tags to the Find my Everything network. This helps others locate their lost items, by sending anonymous location updates for nearby located Tags. Location updates are sent at the same time as those for your Tags, to minimise battery usage.\n\n<b>Note:</b> Enabling this is optional, uTag will work without this feature enabled.</string>
-    <string name="fme_opt_in_positive">Enable</string>
+    <string name="fme_opt_in_positive">Włącz</string>
     <string name="fme_opt_in_negative">Nie teraz</string>
     <!-- UTS opt-in -->
-    <string name="uts_opt_in_title">Unknown Tag Scanning</string>
+    <string name="uts_opt_in_title">Szukaj niezn. Tagów w pobliżu</string>
     <string name="uts_opt_in_content">uTag can automatically scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
-    <string name="uts_opt_in_positive">Enable</string>
+    <string name="uts_opt_in_positive">Włącz</string>
     <string name="uts_opt_in_negative">Not now</string>
     <!-- Location History intro -->
-    <string name="location_history_date_picker">Date picker</string>
-    <string name="location_history_guide_img_desc">Want to know where your pets have been throughout the day? Check the location history.</string>
-    <string name="location_history_guide_subheader">About location history</string>
-    <string name="location_history_guide_text_1">Location history is only available for the past 7 days.</string>
-    <string name="location_history_guide_text_2">Locations are approximate and may vary even if the device hasn\'t moved.</string>
-    <string name="location_history_guide_text_3">Location history will be unavailable if there were no other Galaxy devices near the device during the past 7 days.</string>
-    <string name="location_history_guide_button">Got it</string>
+    <string name="location_history_date_picker">Wybór daty</string>
+    <string name="location_history_guide_img_desc">Chcesz wiedzieć, gdzie był Twój zwierzak w ciągu dnia? Sprawdź historię lokalizacji.</string>
+    <string name="location_history_guide_subheader">Historia lokalizacji — informacje</string>
+    <string name="location_history_guide_text_1">Historia lokalizacji jest dostępna tylko z ostatnich 7 dni.</string>
+    <string name="location_history_guide_text_2">Lokalizacje są podane w przybliżeniu i mogą nie odpowiadać rzeczywistemu położeniu urządzenia, nawet jeśli nie zostanie ono przesunięte.</string>
+    <string name="location_history_guide_text_3">Historia lokalizacji będzie niedostępna, jeśli w ciągu ostatnich 7 dni w pobliżu urządzenia nie było innych urządzeń Galaxy.</string>
+    <string name="location_history_guide_button">Rozumiem</string>
     <!-- PIN Entry dialog -->
     <string name="tag_pin_entry_title">Wprowadź PIN</string>
     <string name="tag_pin_entry_content">Wprowadź swój PIN dla %1s, aby odszyfrować jego lokalizację.</string>
-    <string name="tag_pin_entry_content_alt">Enter your PIN for %1s to decrypt its location history.</string>
-    <string name="tag_pin_entry_error">Wprowadzono nieprawidłowy PIN, spróbuj ponownie</string>
+    <string name="tag_pin_entry_content_alt">Wprowadź kod PIN %1s, aby uzyskać jego lokalizację.</string>
+    <string name="tag_pin_entry_error">Wprowadzono nieprawidłowy kod PIN, spróbuj ponownie</string>
     <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
     <!-- Settings > Encryption -->
-    <string name="settings_encryption_set_pin_title">Set PIN</string>
+    <string name="settings_encryption_set_pin_title">Ustawianie kodu PIN</string>
     <string name="settings_encryption_set_pin_content">Set a PIN for offline location encryption</string>
     <string name="settings_encryption_reset_pin_title">Reset PIN</string>
     <string name="settings_encryption_reset_pin_content">Set on %1s</string>
     <string name="settings_encryption_require_biometrics_title">Require Biometrics to Modify PIN</string>
     <string name="settings_encryption_require_biometrics_content">Require the use of strong biometrics, such as fingerprint, to add or change your PIN. By default, the device\'s lock screen PIN can be used to authenticate, which may be susceptible to shoulder surfing.</string>
-    <string name="settings_encryption_error_dialog_title">Error</string>
+    <string name="settings_encryption_error_dialog_title">Wystąpił błąd</string>
     <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
-    <string name="settings_encryption_error_dialog_close">Close</string>
+    <string name="settings_encryption_error_dialog_close">Zamknij</string>
     <string name="settings_encryption_category_pin">PIN lokalizacji w trybie offline</string>
     <string name="settings_encryption_footer_title">Trying to enable or disable location encryption?</string>
     <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
@@ -676,10 +676,10 @@
     <string name="settings_encryption_pin_timeout_fifteen_minutes">15 minut</string>
     <string name="settings_encryption_pin_timeout_thirty_minutes">30 minut</string>
     <string name="settings_encryption_pin_timeout_sixty_minutes">1 godzina</string>
-    <string name="settings_encryption_enter_pin">Enter PIN</string>
+    <string name="settings_encryption_enter_pin">Wprowadź kod PIN</string>
     <string name="settings_encryption_enter_pin_content">You will need this PIN to access locations reported by other Galaxy devices, so make sure it\'s memorable!</string>
-    <string name="settings_encryption_confirm_pin">Confirm PIN</string>
-    <string name="settings_encryption_mismatch">PINs do not match</string>
+    <string name="settings_encryption_confirm_pin">Potwierdź</string>
+    <string name="settings_encryption_mismatch">Niezgodne kody PIN</string>
     <string name="settings_encryption_success">PIN changed</string>
     <string name="settings_encryption_error">Error changing PIN, please try again</string>
     <string name="settings_encryption_clear_saved_pins_title">Clear Stored PIN</string>
@@ -698,10 +698,10 @@
     <string name="biometric_prompt_content_enable">Potwierdź biometrię, aby włączyć</string>
     <string name="biometric_prompt_content_disable">Potwierdź biometrię, aby wyłączyć</string>
     <string name="biometric_prompt_content_change_pin">Authenticate to modify your PIN</string>
-    <string name="biometric_prompt_content_negative">Cancel</string>
+    <string name="biometric_prompt_content_negative">Anuluj</string>
     <string name="biometric_prompt_error_title">Biometric Error</string>
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
-    <string name="biometric_prompt_error_close">Close</string>
+    <string name="biometric_prompt_error_close">Zamknij</string>
     <!-- About Footer -->
     <string name="xda_thread">XDA</string>
     <string name="github">GitHub</string>
@@ -719,7 +719,7 @@
     <string name="contributors_icons_title">Dodatkowe ikony</string>
     <string name="contributors_icons_content">Dodatkowe ikony z Material Design Icons (licencja Pictogrammers Free License)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Dostępna aktualizacja</string>
+    <string name="snackbar_update">Dostępna jest nowa wersja</string>
     <string name="snackbar_update_multiple">Aktualizacje dostępne</string>
     <string name="snackbar_update_button">Wyświetl</string>
     <string name="update_notification">uTag version %1s</string>
@@ -740,12 +740,12 @@
     <string name="download_manager_description_mod">Downloading SmartThings…</string>
     <string name="update_downloader_downloading_title">Downloading update…</string>
     <string name="update_dialog_failed_title">Download failed</string>
-    <string name="update_dialog_failed_content">Check your connection and try again later</string>
-    <string name="update_dialog_failed_close">Close</string>
+    <string name="update_dialog_failed_content">Sprawdź połączenie sieciowe i spróbuj ponownie</string>
+    <string name="update_dialog_failed_close">Zamknij</string>
     <string name="update_downloader_github">Download via browser</string>
-    <string name="update_notification_title">Dostępna aktualizacja uTag</string>
+    <string name="update_notification_title">Dostępna jest nowa wersja uTag</string>
     <string name="update_notification_content">An update is available for uTag (%1s to %1s)</string>
-    <string name="update_notification_smartthings_title">Dostępna aktualizacja SmartThings</string>
+    <string name="update_notification_smartthings_title">Dostępna jest nowa wersja SmartThings</string>
     <string name="update_notification_smartthings_content">An update is available for SmartThings (%1s to %1s)</string>
     <string name="update_notification_multiple_title">Dostępne aktualizacje</string>
     <string name="update_notification_multiple_content">Updates are available for uTag and SmartThings</string>
@@ -763,40 +763,40 @@
     <string name="notification_channel_unknown_tag_title">Unknown Tag Alerts</string>
     <string name="notification_channel_unknown_tag_content">Notifications shown when an unknown Tag may be tracking you</string>
     <!-- Search nearby -->
-    <string name="nearby_loading">Connecting to %1s…</string>
+    <string name="nearby_loading">Łączenie z %1s…</string>
     <string name="nearby_loading_sub"><b>Note:</b> If your Tag is nearby but failing to connect, try turning Bluetooth off and on again or rebooting.</string>
-    <string name="nearby_its_far_away">It\'s far away</string>
-    <string name="nearby_its_here">It\'s here</string>
-    <string name="nearby_its_near_you">It\'s near you</string>
-    <string name="nearby_its_not_far_from_here">It\'s not far from here</string>
-    <string name="nearby_look_around_this_area">Look around this area</string>
-    <string name="nearby_distance_metres">%1sm away</string>
-    <string name="nearby_distance_feet">%1sft away</string>
-    <string name="nearby_turn_left">Turn left</string>
-    <string name="nearby_turn_right">Turn right</string>
-    <string name="nearby_look_up">Look up</string>
-    <string name="nearby_look_down">Look down</string>
-    <string name="nearby_go_forward">Go forward</string>
-    <string name="nearby_its_behind_you">It\'s behind you</string>
-    <string name="nearby_move_around">Move around to find the Tag</string>
-    <string name="nearby_signal_weaker">Signal getting weaker</string>
-    <string name="nearby_signal_stronger">Signal getting stronger</string>
-    <string name="nearby_hold_upright">Hold your device upright</string>
-    <string name="nearby_suggest_ring">Can\'t see it? Try ringing the Tag</string>
-    <string name="search_nearby_searching_title">Searching…</string>
+    <string name="nearby_its_far_away">Jest daleko</string>
+    <string name="nearby_its_here">Jest tutaj</string>
+    <string name="nearby_its_near_you">Jest blisko Ciebie</string>
+    <string name="nearby_its_not_far_from_here">Jest niedaleko stąd</string>
+    <string name="nearby_look_around_this_area">Rozejrzyj się po tej okolicy</string>
+    <string name="nearby_distance_metres">%1sm stąd</string>
+    <string name="nearby_distance_feet">%1sft stąd</string>
+    <string name="nearby_turn_left">Skręć w lewo</string>
+    <string name="nearby_turn_right">Skręć w prawo</string>
+    <string name="nearby_look_up">Spójrz w górę</string>
+    <string name="nearby_look_down">Spójrz na dół</string>
+    <string name="nearby_go_forward">Idź do przodu</string>
+    <string name="nearby_its_behind_you">Jest za Tobą</string>
+    <string name="nearby_move_around">Poruszaj się w celu znalezienia taga</string>
+    <string name="nearby_signal_weaker">Sygnał staje się coraz słabszy</string>
+    <string name="nearby_signal_stronger">Sygnał staje się coraz silniejszy</string>
+    <string name="nearby_hold_upright">Trzymaj urządzenie pionowo</string>
+    <string name="nearby_suggest_ring">Jeśli nie widzisz urządzenia, spróbuj do niego zadzwonić</string>
+    <string name="search_nearby_searching_title">Wyszukiwanie…</string>
     <string name="search_nearby_searching_content">Make sure %1s is in Bluetooth range</string>
     <string name="search_nearby_timeout_title">Connection Error</string>
     <string name="search_nearby_timeout_content">Failed to connect to your Tag. Make sure it\'s in Bluetooth range and try again.</string>
     <string name="search_nearby_timeout_content_alt">Disconnected from your Tag. Make sure it\'s in Bluetooth range and try again.</string>
-    <string name="search_nearby_timeout_close">Close</string>
+    <string name="search_nearby_timeout_close">Zamknij</string>
     <string name="search_nearby_uwb_disabled_title">UWB Disabled</string>
-    <string name="search_nearby_uwb_disabled_content">Ultra-wideband, precise searching is available on your device but UWB is disabled. Enable UWB to allow precise searching?</string>
-    <string name="search_nearby_uwb_disabled_positive">Enable</string>
-    <string name="search_nearby_uwb_disabled_negative">Not now</string>
+    <string name="search_nearby_uwb_disabled_content">Precyzyjne znajdowanie Ultra-wideband jest dostępne na twoim urządzeniu. Włączyć funkcję UWB, aby używać tej funkcji?</string>
+    <string name="search_nearby_uwb_disabled_positive">Włącz</string>
+    <string name="search_nearby_uwb_disabled_negative">Nie teraz</string>
     <string name="search_nearby_bluetooth_disabled_title">Bluetooth wyłączony</string>
     <string name="search_nearby_bluetooth_disabled_content">Search nearby requires Bluetooth, enable Bluetooth to start searching?</string>
-    <string name="search_nearby_bluetooth_disabled_positive">Enable</string>
-    <string name="search_nearby_bluetooth_disabled_negative">Cancel</string>
+    <string name="search_nearby_bluetooth_disabled_positive">Włącz</string>
+    <string name="search_nearby_bluetooth_disabled_negative">Anuluj</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings is running</string>
     <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
@@ -828,8 +828,8 @@
     <string name="notification_action_find_my_device">Stop</string>
     <string name="notification_content_find_my_device_error">Unable to start ringing as Find my Device is not set up correctly, check the Tag\'s settings for more info</string>
     <!-- Unknown Tag -->
-    <string name="notification_title_unknown_tag_one">Wykryto nieznego Taga</string>
-    <string name="notification_title_unknown_tag_other">Wykryto nieznane Tagi</string>
+    <string name="notification_title_unknown_tag_one">Wykryto nieznego taga</string>
+    <string name="notification_title_unknown_tag_other">Wykryto nieznane tagi</string>
     <string name="notification_content_unknown_tag_one">An unknown Tag has been detected which may be tracking you. Tap for more info.</string>
     <string name="notification_content_unknown_tag_other">Unknown Tags have been detected which may be tracking you. Tap for more info.</string>
     <!-- Automation -->
@@ -855,19 +855,19 @@
     <string name="notification_content_safe_area_error_location">Unable to get location to update your Safe Areas. Disconnect notifications may be incorrect.</string>
     <string name="notification_action_safe_area_retry">Spróbuj ponownie</string>
     <string name="safe_area_save">Zapisz</string>
-    <string name="safe_area_delete">Delete</string>
+    <string name="safe_area_delete">Usuń</string>
     <string name="safe_area_active">Active</string>
-    <string name="safe_area_add">Add Safe Area</string>
+    <string name="safe_area_add">Dodawanie bezpiecznego miejsca</string>
     <string name="safe_area_inactive">Inactive</string>
     <string name="safe_area_dialog_delete_title">Delete Safe Area?</string>
     <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
     <string name="safe_area_dialog_delete_delete">Delete</string>
-    <string name="safe_area_dialog_delete_cancel">Cancel</string>
+    <string name="safe_area_dialog_delete_cancel">Anuluj</string>
     <string name="safe_area_dialog_save_title">Save Changes?</string>
     <string name="safe_area_dialog_save_content">Would you like to save your changes?</string>
-    <string name="safe_area_dialog_save_save">Save</string>
-    <string name="safe_area_dialog_save_dont_save">Don\'t Save</string>
-    <string name="safe_area_type_title">Add Safe Area</string>
+    <string name="safe_area_dialog_save_save">Zapisz</string>
+    <string name="safe_area_dialog_save_dont_save">Nie zapisuj</string>
+    <string name="safe_area_type_title">Wybór bezpiecznych miejsc</string>
     <string name="safe_area_type_location_permission_title">Location Permissions Required</string>
     <string name="safe_area_type_location_permission_content">uTag requires location permissions to use Safe Areas. Android restrictions mean Wi-Fi network name &amp; MAC Addresses are treated as location data.</string>
     <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
@@ -878,28 +878,28 @@
     <string name="safe_area_show_image_title">Show Map Image</string>
     <string name="safe_area_show_image_content">Show a static map showing where the Tag was last seen in the notification, where available.</string>
     <string name="safe_area_show_image_content_biometrics"><b>Warning:</b> You have Biometric Entry enabled for uTag. This option will show the Tag\'s last location without needing to pass Biometrics, use this option with care.</string>
-    <string name="safe_area_type_location_title">Location</string>
-    <string name="safe_area_type_location_content">Activate this Safe Area within a radius of a specified location</string>
+    <string name="safe_area_type_location_title">Miejsce</string>
+    <string name="safe_area_type_location_content">Aktywuj to bezpieczne miejsce w promieniu wybranego obszaru</string>
     <string name="safe_area_type_wifi_title">Wi-Fi</string>
-    <string name="safe_area_type_wifi_content">Activate this Safe Area when connected to a specified Wi-Fi network</string>
-    <string name="safe_area_wifi_name_title">Name</string>
-    <string name="safe_area_wifi_name_content_empty">Automatically generate</string>
+    <string name="safe_area_type_wifi_content">Aktywuj to bezpieczne miejsce po połączeniu z wybraną siecią Wi-Fi</string>
+    <string name="safe_area_wifi_name_title">Nazwa</string>
+    <string name="safe_area_wifi_name_content_empty">Wygenerowana automatycznie</string>
     <string name="safe_area_wifi_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, the network name will be used instead.</string>
     <string name="safe_area_wifi_ssid_title">Network Name</string>
     <string name="safe_area_wifi_ssid_content_empty">The name (SSID) of the Wi-Fi network</string>
     <string name="safe_area_wifi_ssid_dialog_message">Enter the network name (SSID) of the Wi-Fi network this Safe Area will be active when connected to. Case sensitive, blank spaces around the name will be removed.</string>
     <string name="safe_area_wifi_mac_toggle_title_title">Require MAC Address</string>
     <string name="safe_area_wifi_mac_toggle_title_content"><b>Optional:</b> Limit this Safe Area to a specific Wi-Fi MAC address, which may be useful if you have multiple Wi-Fi networks with the same name.</string>
-    <string name="safe_area_wifi_mac_title">MAC Address</string>
-    <string name="safe_area_wifi_mac_content_empty">The MAC address of the Wi-Fi network</string>
+    <string name="safe_area_wifi_mac_title">Adres MAC</string>
+    <string name="safe_area_wifi_mac_content_empty">Adres MAC sieci Wi-Fi</string>
     <string name="safe_area_wifi_mac_dialog_message">Enter the MAC address of the Wi-Fi network this Safe Area will be active when connected to. Optional, useful if you have multiple Wi-Fi networks using the same name.</string>
     <string name="safe_area_wifi_exit_buffer_title">Exit Buffer</string>
     <string name="safe_area_wifi_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that your Wi-Fi disconnects before the Tag does, but that it was left within the Safe Area.</string>
     <string name="safe_area_wifi_invalid_ssid">Enter a network name</string>
-    <string name="safe_area_wifi_invalid_mac">Enter a valid MAC address</string>
+    <string name="safe_area_wifi_invalid_mac">Wprowadź prawidłowy adres MAC</string>
     <string name="safe_area_location_name_toast">Tap the map or drag the marker to move the Safe Area</string>
-    <string name="safe_area_location_name_title">Name</string>
-    <string name="safe_area_location_name_content_empty">Automatically generate</string>
+    <string name="safe_area_location_name_title">Nazwa</string>
+    <string name="safe_area_location_name_content_empty">Wygenerowana automatycznie</string>
     <string name="safe_area_location_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, uTag will try to generate one from the approximate address of the location.</string>
     <string name="safe_area_location_radius_title">Radius</string>
     <string name="safe_area_location_radius_content">The size of this safe area</string>
@@ -907,7 +907,7 @@
     <string name="safe_area_location_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that you leave the location before the Tag disconnects, but that it was left within the Safe Area.</string>
     <string name="safe_area_location_error_dialog_title">Couldn\'t get location</string>
     <string name="safe_area_location_error_dialog_content">Could not get your location, try again later</string>
-    <string name="safe_area_location_error_dialog_close">Close</string>
+    <string name="safe_area_location_error_dialog_close">Zamknij</string>
     <string name="safe_area_buffer_none">None</string>
     <string name="safe_area_buffer_one">1 Minute</string>
     <string name="safe_area_buffer_two">2 Minutes</string>
@@ -920,7 +920,7 @@
     <string name="unsupported_intent_dialog_title">Unsupported</string>
     <string name="unsupported_intent_dialog_content_generic">This action is currently not supported by uTag. If you think this is an error, please open a GitHub issue with a screenshot of this dialog - but make sure there\'s not an already open issue for this action type first.\n\nAction type: %1s</string>
     <string name="unsupported_intent_dialog_content_pet">Pet Walking is currently not supported by uTag. If you\'d use this feature, please thumb up the issue on the GitHub.</string>
-    <string name="unsupported_intent_dialog_close">Close</string>
+    <string name="unsupported_intent_dialog_close">Zamknij</string>
     <string name="unsupported_intent_dialog_github">GitHub</string>
     <!-- Location Staleness -->
     <string name="location_staleness_none">Disabled</string>
@@ -949,11 +949,11 @@
     <string name="widget_configuration_dialog_save_title">Save Changes?</string>
     <string name="widget_configuration_dialog_save_content">Would you like to save your changes?</string>
     <string name="widget_configuration_dialog_save_save">Zapisz</string>
-    <string name="widget_configuration_dialog_save_dont_save">Don\'t Save</string>
-    <string name="widget_configuration_save">Save</string>
-    <string name="widget_configuration_error_dialog_title">Error</string>
+    <string name="widget_configuration_dialog_save_dont_save">Nie zapisuj</string>
+    <string name="widget_configuration_save">Zapisz</string>
+    <string name="widget_configuration_error_dialog_title">Wystąpił błąd</string>
     <string name="widget_configuration_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
-    <string name="widget_configuration_error_dialog_close">Close</string>
+    <string name="widget_configuration_error_dialog_close">Zamknij</string>
     <string name="widget_configuration_preview_label">Pogląd</string>
     <string name="widget_configuration_preview_empty">Wybierz Tag, aby wyświetlić podgląd</string>
     <string name="widget_configuration_preview_error">Nie udało się wczytać podglądu, spróbuj ponownie później</string>
@@ -1017,10 +1017,10 @@
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
     <string name="backup_creating_settings_backup">Backing up settings…</string>
     <string name="backup_created">Utworzono kopię zapasową</string>
-    <string name="backup_error">Error</string>
+    <string name="backup_error">Wystąpił błąd</string>
     <!-- Restore -->
     <string name="restore_error_dialog_title">Error Loading Backup</string>
-    <string name="restore_error_dialog_close">Close</string>
+    <string name="restore_error_dialog_close">Zamknij</string>
     <string name="restore_category_options">Restore Options</string>
     <string name="restore_automation_configs_title">Restore Custom Automations</string>
     <string name="restore_automation_configs_content">You may need to re-enable custom automations for each Tag to synchronise them</string>
@@ -1075,12 +1075,12 @@
     <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
     <string name="updates_category_options">Opcje</string>
     <string name="updates_check_for_updates_title">Automatycznie sprawdzaj aktualizacje</string>
-    <string name="updates_check_for_updates_content">Automatically check for updates once a day and show a notification if any are available</string>
+    <string name="updates_check_for_updates_content">Automatycznie sprawdzaj dostępność aktualizacji raz dziennie i wyświetlaj powiadomienie, jeśli są dostępne</string>
     <!-- Debug notification -->
     <string name="debug_error_notification_title">Wyłapano błąd uTag</string>
     <string name="debug_error_notification_content">Tap to view &amp; save</string>
     <!-- Debug error viewer -->
     <string name="debug_error_dialog_title">Error Details</string>
-    <string name="debug_error_dialog_close">Close</string>
+    <string name="debug_error_dialog_close">Zamknij</string>
     <string name="debug_error_dialog_copy">Copy</string>
 </resources>
