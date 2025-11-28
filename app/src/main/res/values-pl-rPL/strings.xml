@@ -13,15 +13,15 @@
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
     <string name="setup_mod_info_title">Modyfikacja SmartThings</string>
-    <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
+    <string name="setup_mod_info_content">Aby uTag działał i mógł obejść wymagania Samsunga, potrzebna jest zmodyfikowana wersja aplikacji SmartThings. uTag poprowadzi Cię przez proces jej pobrania i instalacji.\n\n&lt;/b&gt;Uwaga:&lt;/b&gt;Jeśli Twoje urządzenie jest zrootowane i masz zainstalowane Xposed, upewnij się, że SmartThings jest już skonfigurowane, następnie włącz moduł uTag w Xposed, wymuś zatrzymanie SmartThings i wróć do uTag, aby pominąć ten krok.</string>
     <string name="setup_mod_info_action">Rozpocznij pobieranie modyfikacji</string>
     <string name="setup_mod_oneui_title">Wykryto OneUI</string>
-    <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
+    <string name="setup_mod_oneui_desc">Wygląda na to, że korzystasz z urządzenia z OneUI. Korzystanie z uTag na urządzeniu, które oficjalnie wspiera SmartThings Find może ograniczać jego działanie lub powodować błędy w SmartThings.<b>Wsparcie OneUI jest eksperymentalne, może nie działać poprawnie na Twoim urządzeniu. Nie zgłaszaj błędów występujących na tym urządzeniu.</b>Logowanie do SmartThings będzie wymagało użycia przeglądarki, zamiast automatycznego logowania przez Konto Samsung na urządzeniu.</string>
     <string name="setup_mod_oneui_continue">Dalej</string>
     <string name="setup_mod_oneui_incompatible_title">Wykryto niekompatybilną wersję OneUI</string>
     <string name="setup_mod_oneui_incompatible_desc">To urządzenie posada wersję OneUI, która jest niekompatybilna z modyfikacją SmartThings wymaganą do działania uTag. Zamiast tego użyj oficjalnej aplikacji Samsung Find.</string>
     <string name="setup_mod_downloading">Pobieranie SmartThings…</string>
-    <string name="setup_mod_setting_up">Wprowadzenie modyfikacji…</string>
+    <string name="setup_mod_setting_up">Modyfikacja…</string>
     <string name="setup_mod_setting_up_subtitle">To może chwilę potrwać</string>
     <string name="setup_mod_uninstall_title">Odinstaluj SmartThings</string>
     <string name="setup_mod_uninstall_content">Ponieważ zmodyfikowana wersja SmartThings ma inny podpis, musisz odinstalować zainstalowaną wersję, aby kontynuować.\n\n<b>Uwaga:</b> Wyczyści to dane SmartThings, wymagając ponownego zalogowania się do aplikacji.</string>
@@ -49,7 +49,7 @@
     <string name="permission_notification_grant">Zezwól</string>
     <string name="permission_battery_title">Wyłącz optymalizację baterii dla uTag</string>
     <string name="permission_battery_content">Wymagane, aby uTag mogło działać w tle i monitorować twoje Tagi</string>
-    <string name="permission_smartthings_battery_title">Wyłącz optymalizację bakterii SmartThings</string>
+    <string name="permission_smartthings_battery_title">Wyłącz optymalizację baterii SmartThings</string>
     <string name="permission_smartthings_battery_content">Wymagane, aby utrzymać połączenie Bluetooth z Tagami w tle</string>
     <string name="permission_battery_disable">Wyłącz</string>
     <string name="permission_analytics_title">Analityka i zgłaszanie błędów</string>
@@ -118,14 +118,14 @@
     <!-- Settings > Location -->
     <string name="settings_location_location">Lokalizacja</string>
     <string name="settings_location_location_period_title">Częstotliwość odświeżania lokalizacji</string>
-    <string name="settings_location_location_period_content">Jak często aktualizować lokalizację połączonych tagów: %1s</string>
+    <string name="settings_location_location_period_content">Aktualizacja lokalizacji połączonych Tagów: %1s</string>
     <string name="settings_location_location_period_summary_high">Zużywa więcej baterii</string>
     <string name="settings_location_location_period_summary_low">Może nie aktualizować lokalizacji Twojego Tagu wystarczająco często, jeśli go zostawisz w tyle</string>
     <string name="settings_location_location_period_summary_never"><b>Warning:</b> Unless Passive Mode is enabled, your Tag does <b>not</b> update its location from other Samsung devices when in range of your device, so your Tag\'s location will not be automatically updated with this option!</string>
-    <string name="settings_location_location_battery_saver_title">Odświeżanie lokalizacji w trybie oszczędzania energii</string>
+    <string name="settings_location_location_battery_saver_title">Odświeżanie w trybie oszczędzania energii</string>
     <string name="settings_location_location_battery_saver_content">Aktualizuj lokalizacje tagów, nawet gdy oszczędzanie baterii jest włączone</string>
     <string name="settings_location_location_staleness_title">Dopuszczalny czas nieaktualności</string>
-    <string name="settings_location_location_staleness_content">Jak dawna może być lokalizacja, aby nadal była brana pod uwagę w aktualizacjach: %1s</string>
+    <string name="settings_location_location_staleness_content">Maksymalny wiek lokalizacji używanej w aktualizacjach: %1s</string>
     <string name="settings_location_location_staleness_none">Zużywa więcej baterii</string>
     <string name="settings_location_location_staleness_max">Aktualizacje lokalizacji mogą być nieaktualne</string>
     <string name="settings_location_location_safe_area_title">Bezpieczne miejsca</string>
@@ -190,10 +190,10 @@
     <string name="settings_uts_tag_title">Nieznany tag wykryty w pobliżu</string>
     <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
     <string name="settings_uts_tag_first">First seen at %1s</string>
-    <string name="settings_uts_tag_last">Last seen %1s</string>
+    <string name="settings_uts_tag_last">Pierwszy raz widziany %1s</string>
     <string name="settings_uts_tag_last_at">Last seen at %1s</string>
     <string name="settings_uts_tag_unknown_address">Nieznany adres</string>
-    <string name="settings_uts_tag_open">Open SmartThings</string>
+    <string name="settings_uts_tag_open">Otwórz SmartThings</string>
     <string name="settings_uts_tag_safe">Ten Tag jest przyjazny</string>
     <string name="settings_uts_tag_safe_dialog_title">Oznaczyć jako przyjazny?</string>
     <string name="settings_uts_tag_safe_dialog_content">This will hide the Tag from the Unknown Tag list, until it changes ID. This happens every 24 hours, or if the battery is removed &amp; re-inserted, or if the Tag is reset.\n\n<b>Note:</b> This does not prevent it from appearing in manual unknown Tag scans in SmartThings.</string>
@@ -210,7 +210,7 @@
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">Pokaż lokalizację</string>
     <string name="settings_map_show_location_content">Pokaż swoją lokalizację na mapie, kiedy ta jest dostępna</string>
-    <string name="settings_map_show_location_toast">Grant precise location permission</string>
+    <string name="settings_map_show_location_toast">Udziel dostępu do dokładnej lokalizacji</string>
     <string name="settings_map_style_title">Typ mapy</string>
     <string name="settings_map_style_normal">Domyślny</string>
     <string name="settings_map_style_terrain">Teren</string>
@@ -243,8 +243,8 @@
     <string name="settings_advanced_debug_title">Tryb debugowania</string>
     <string name="settings_advanced_debug_content">Enables some more verbose logging &amp; debug UI components for testing</string>
     <string name="settings_advanced_language">Język</string>
-    <string name="settings_advanced_clear_addresses_title">Wyczyść zapisane adresy</string>
-    <string name="settings_advanced_clear_addresses_content">Wyczyść lokalną, zaszyfrowaną pamięć adresów z lokalizacji Tagów oraz historii lokalizacji</string>
+    <string name="settings_advanced_clear_addresses_title">Usuń zapisane adresy</string>
+    <string name="settings_advanced_clear_addresses_content">Czyści lokalną, zaszyfrowaną pamięć adresów z lokalizacji Tagów oraz historii lokalizacji</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Wyczyścić zapisane adresy?</string>
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Wyczyść</string>
@@ -258,13 +258,13 @@
     <string name="settings_content_creator_info_title">Czym jest tryb influencera?</string>
     <string name="settings_content_creator_info_content">Tryb influencera jest opcją, która pozwala schować lokalizację w interfejsie uTag. Jest przeznaczony dla twórców internetowych udostępniających zrzuty ekranu lub nagrania z uTag, tak aby ich prawdziwa lokalizacja nie była widoczna.</string>
     <string name="settings_content_creator_does_title">Co robi tryb influencera?</string>
-    <string name="settings_content_creator_does_bull1">Tag location history is set to a preset history based on real, anonymised location data of the developer.</string>
-    <string name="settings_content_creator_does_bull2">Tag location(s) are based on the same preset history, cycling through the list for \"today\" every hour with a small randomisation applied on every refresh to prevent Tag overlap.</string>
-    <string name="settings_content_creator_does_bull3">Your location &amp; new Location Safe Areas are displayed as a randomised location from a set of pre-determined locations.</string>
-    <string name="settings_content_creator_does_bull4">Deleting &amp; exporting location history is disabled.</string>
-    <string name="settings_content_creator_does_bull5">Tag location updates to the cloud are not impacted and will still be correct, but will not be displayed in the app until Content Creator Mode is disabled.</string>
-    <string name="settings_content_creator_does_bull6">Emails are hidden from the uTag settings &amp; Lost Mode UIs. Editing emails and contact information are not impacted, so be sure to change those before recording if required.</string>
-    <string name="settings_content_creator_does_bull7"><b>Important:</b> For safety reasons, Unknown Tag Scan results always display real locations, even with Content Creator Mode enabled.</string>
+    <string name="settings_content_creator_does_bull1">Historia lokalizacji Taga jest ustawiona na zestaw oparty na rzeczywistych, zanonimizowanych lokalizacjach używanych przez dewelopera.</string>
+    <string name="settings_content_creator_does_bull2">Lokalizacje Tagów również korzystają z tego samego zestawu, aplikacja co godzinę przechodzi do kolejnej pozycji z listy na \"dzisiaj\", z niewielką losową zmianą przy każdym odświeżeniu, aby uniknąć nakładania się Tagów.</string>
+    <string name="settings_content_creator_does_bull3">Twoja lokalizacja i nowe bezpieczne miejsca Lokalizacji będą wyświetlane jako losowe punkty wybrane z puli wcześniej zdefiniowanych miejsc.</string>
+    <string name="settings_content_creator_does_bull4">Usuwanie i eksportowanie historii lokalizacji jest wyłączone.</string>
+    <string name="settings_content_creator_does_bull5">Aktualizacje lokalizacji Tagów wysyłane do chmury nie są dotknięte i wciąż będą poprawne, jednak nie pojawią się w aplikacji, dopóki nie wyłączysz trybu influencera.</string>
+    <string name="settings_content_creator_does_bull6">Adresy e-mail są ukryte w ustawieniach uTag i w interfejsie trybu Zgubione urządzenie. Edycja adresów i danych kontaktowych nadal działa, ale pamiętaj, aby uzupełnić je przed nagrywaniem.</string>
+    <string name="settings_content_creator_does_bull7"><b>Uwaga:</b>Ze względów bezpieczeństwa, wyniki ze skanowania nieznanych Tagów zawsze będą pokazywać rzeczywiste miejsca, nawet z tym trybem włączonym.</string>
     <string name="settings_content_creator_does_footer">Możesz wyłączyć tryb influencera w dowolnym momencie bez utraty danych i pomijania aktualizacji lokalizacji.</string>
     <!-- Map -->
     <string name="map_error_title">Wystąpił błąd</string>
@@ -281,10 +281,10 @@
     <string name="map_warning_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="map_warning_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the settings to fix this.</string>
     <string name="map_error_permissions_content">SmartThings requires the \"Allow always\" location permission, please grant it in Settings to continue</string>
-    <string name="map_error_permissions_button">Open Settings</string>
+    <string name="map_error_permissions_button">Otwórz ustawienia</string>
     <string name="map_network_error">A network error occurred, please try again later</string>
     <string name="map_location_error">Failed to get your location, try moving around</string>
-    <string name="map_connection_error_title">Connection Error</string>
+    <string name="map_connection_error_title">Błąd połączenia</string>
     <string name="map_connection_error_content">uTag couldn\'t connect to %1s as the maximum number of connections have been reached. Disconnect another device which is connected to it, if you think this is incorrect, try rebooting your device.</string>
     <string name="map_connection_error_close">Zamknij</string>
     <string name="map_address_encrypted">Encrypted Location</string>
@@ -504,7 +504,7 @@
     <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
     <string name="tag_more_automation_error_dialog_close">Zamknij</string>
     <string name="tag_more_automation_error_toast">An error occurred, please try again</string>
-    <string name="tag_more_automation_permission_title">Additional Setup</string>
+    <string name="tag_more_automation_permission_title">Dodatkowe kroki konfiguracji</string>
     <string name="tag_more_automation_permission_allow_title">Allow Permission</string>
     <string name="tag_more_automation_permission_allow_content">Grant the \"Display over other apps\" permission</string>
     <string name="tag_more_automation_permission_restricted_title">Restricted settings</string>
@@ -685,7 +685,7 @@
     <string name="settings_encryption_clear_saved_pins_title">Wyczyść zapisany PIN</string>
     <string name="settings_encryption_clear_saved_pins_content">Delete the stored PIN from encrypted storage, you will be prompted to enter your PIN when it is next required</string>
     <string name="settings_encryption_clear_saved_pins_content_disabled">Żaden PIN nie został zapisany w zaszyfrowanej pamięci</string>
-    <string name="settings_encryption_clear_saved_pins_dialog_content">Are you sure you wish to clear your stored PIN? You will need to re-enter it when it is next required</string>
+    <string name="settings_encryption_clear_saved_pins_dialog_content">Na pewno chcesz usunąć zapisany PIN? Będziesz musiał wpisać go ponownie, gdy będzie potrzebny</string>
     <string name="settings_encryption_clear_saved_pins_dialog_positive">Wyczyść</string>
     <string name="settings_encryption_pin_timeout_title">Okres ważności PINu</string>
     <string name="settings_encryption_pin_timeout_content">Czas, po którym PIN zostaje usunięty z pamięci i wymaga ponownego wpisania: %1s</string>
@@ -860,7 +860,7 @@
     <string name="safe_area_add">Dodawanie bezpiecznego miejsca</string>
     <string name="safe_area_inactive">Nieaktywne</string>
     <string name="safe_area_dialog_delete_title">Usunąć bezpieczne miejsce?</string>
-    <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
+    <string name="safe_area_dialog_delete_content">Czy na pewno chcesz usunąć %1s? Tego nie da się cofnąć. Usunięte bezpieczne miejsce zniknie także ze wszystkich Tagów, które z niego korzystały.</string>
     <string name="safe_area_dialog_delete_delete">Delete</string>
     <string name="safe_area_dialog_delete_cancel">Anuluj</string>
     <string name="safe_area_dialog_save_title">Zapisać zmiany?</string>
@@ -893,8 +893,8 @@
     <string name="safe_area_wifi_mac_title">Adres MAC</string>
     <string name="safe_area_wifi_mac_content_empty">Adres MAC sieci Wi-Fi</string>
     <string name="safe_area_wifi_mac_dialog_message">Enter the MAC address of the Wi-Fi network this Safe Area will be active when connected to. Optional, useful if you have multiple Wi-Fi networks using the same name.</string>
-    <string name="safe_area_wifi_exit_buffer_title">Okres przejściowy</string>
-    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy okres przejściowy między opuszczeniem tego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest to przydatne, jeśli zauważysz, że Twoje Wi-Fi rozłącza się wcześniej niż Tag, mimo że Tag pozostał w bezpiecznym miejscu.</string>
+    <string name="safe_area_wifi_exit_buffer_title">Okres buforowy</string>
+    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy czas między opuszczeniem bezpiecznego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest przydatny, gdy Wi-Fi lub Bluetooth rozłącza się szybciej niż Tag faktycznie opuścił bezpieczne miejsce, dzięki.</string>
     <string name="safe_area_wifi_invalid_ssid">Wprowadź nazwę sieci Wi-Fi</string>
     <string name="safe_area_wifi_invalid_mac">Wprowadź prawidłowy adres MAC</string>
     <string name="safe_area_location_name_toast">Dotknij mapy lub przeciągnij znacznik, aby przenieść bezpieczne miejsce</string>
@@ -942,9 +942,9 @@
     <string name="widget_timestamp">Updated: %1s</string>
     <string name="widget_description">Display Tag locations on a map</string>
     <string name="widget_history_description">Display a Tag\'s location history on a map</string>
-    <string name="widget_dialog_not_setup_title">uTag not set up</string>
-    <string name="widget_dialog_not_setup_content">Set up uTag first before adding a widget</string>
-    <string name="widget_dialog_not_setup_open">Open uTag</string>
+    <string name="widget_dialog_not_setup_title">uTag nie jest skonfigurowane</string>
+    <string name="widget_dialog_not_setup_content">Zanim dodasz widżet, musisz najpierw skonfigurować uTag</string>
+    <string name="widget_dialog_not_setup_open">Otwórz uTag</string>
     <string name="widget_configuration_set_device">Set a Tag to display first</string>
     <string name="widget_configuration_dialog_save_title">Zapisać zmiany?</string>
     <string name="widget_configuration_dialog_save_content">Czy chcesz zapisać zmiany?</string>
@@ -983,7 +983,7 @@
     <string name="smartspacer_plugin_history_description">Display a Tag\'s location history and an approximate address, if available</string>
     <string name="smartspacer_plugin_history_description_set">Display %1s\'s location history and an approximate address, if available</string>
     <!-- Backup & Restore -->
-    <string name="backup_restore_backup_title">Stwórz kopię zapasową</string>
+    <string name="backup_restore_backup_title">Tworzenie kopii zapasowej</string>
     <string name="backup_restore_backup_content">Wykonaj kopię zapasową uTag do pliku lub chmury</string>
     <string name="backup_restore_restore_title">Przywracanie kopii zapasowej</string>
     <string name="backup_restore_restore_content">Przywróć kopię zapasową uTag z pliku lub chmury</string>
@@ -1069,10 +1069,10 @@
     <string name="updates_smartthings_not_installed_content">uTag wymaga SmartThings. Powtórz konfigurację, aby je zainstalować i skonfigurować.</string>
     <string name="updates_smartthings_not_installed_action">Powtórz konfigurację</string>
     <string name="updates_smartthings_not_modded_title">SmartThings Not Modified</string>
-    <string name="updates_smartthings_not_modded_content">You must have the modified build of SmartThings installed for uTag to work, please re-run setup to install it and set it up.\n\n<b>Note:</b> If your device is rooted with Xposed installed, enable the uTag Xposed module, force stop SmartThings and return to uTag to fix this.</string>
+    <string name="updates_smartthings_not_modded_content">Aby uTag działal poprawnie, musisz mieć zainstalowaną zmodyfikowaną wersję SmartThings. Powtórz konfigurację uTag, aby ją pobrać i zainstalować.\n\n<b>Uwaga:</b> Jeśli urządzenie jest zrootowane i masz Xposed, włącz moduł uTag, wymuś zatrzymanie SmartThings i wróć do uTag, aby rozwiązać ten problem.</string>
     <string name="updates_smartthings_not_modded_action">Powtórz konfigurację</string>
     <string name="updates_rerun_setup_dialog_title">Powtórzyć konfigurację?</string>
-    <string name="updates_rerun_setup_dialog_content">This will sign you out of uTag to make sure accounts are in sync</string>
+    <string name="updates_rerun_setup_dialog_content">Wyloguje cię to z uTag, aby upewnić się, że konta są zsynchronizowane</string>
     <string name="updates_category_options">Opcje</string>
     <string name="updates_check_for_updates_title">Automatycznie sprawdzaj aktualizacje</string>
     <string name="updates_check_for_updates_content">Automatycznie sprawdzaj dostępność aktualizacji raz dziennie i wyświetlaj powiadomienie, jeśli są dostępne</string>
