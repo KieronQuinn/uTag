@@ -33,8 +33,8 @@
     <string name="setup_mod_setup_content">Otwórz SmartThings, udziel pozwolenia, zaloguj się i powróć do uTag, aby zakończyć proces instalacji.</string>
     <string name="setup_mod_setup_action">Otwórz SmartThings</string>
     <string name="setup_mod_error_title">Błąd</string>
-    <string name="setup_mod_error_failed_to_get">Failed to load the latest version of the SmartThings mod from the server. Check your connection and try again later.</string>
-    <string name="setup_mod_error_failed_to_download">Failed to download the SmartThings mod. Check your connection and try again later.</string>
+    <string name="setup_mod_error_failed_to_get">Nie udało się załadować najnowszej wersji modyfikacji SmartThings z serwera. Sprawdź połączenie i spróbuj ponownie później.</string>
+    <string name="setup_mod_error_failed_to_download">Nie udało się pobrać modyfikacji SmartThings. Sprawdź połączenie i spróbuj ponownie później.</string>
     <string name="setup_mod_error_close">Zamknij</string>
     <string name="setup_mod_metered_dialog_title">Ostrzeżenie o pobieraniu dużego pliku</string>
     <string name="setup_mod_metered_dialog_content">Plik APK modyfikacji SmartThings waży %1s. Kontynuować pobieranie tego pliku?</string>
@@ -62,13 +62,13 @@
     <string name="account_content">Aby uTag mógł komunikować się ze SmartThings, musisz zalogować się na swoje konto Samsung.</string>
     <string name="account_warning_title">Czemu mogę zaufać uTag?</string>
     <string name="account_warning_content_header">Ponieważ uTag wymaga zalogowania się do konta Samsung, jak wiesz, że możesz zaufać uTag?</string>
-    <string name="account_warning_content_b1">uTag uses the official Samsung Login, in your browser (check the URL)</string>
-    <string name="account_warning_content_b2">Your password is not visible to nor can it be saved by uTag and access tokens are kept encrypted on device</string>
-    <string name="account_warning_content_b3">uTag is open source and you can inspect the login code on GitHub</string>
-    <string name="account_warning_content_footer"><b>Please note that official builds of uTag are only available on GitHub and APKMirror. If you installed uTag from another source, login safety cannot be guaranteed and you should reinstall uTag from a legitimate source.</b></string>
+    <string name="account_warning_content_b1">uTag używa oficjalnej strony Samsung do zalogowania się w przeglądarce (Sprawdź adres URL)</string>
+    <string name="account_warning_content_b2">Twoje hasło nie jest widoczne ani nie może być zapisane przez uTag i tokeny dostępu są zaszyfrowane na urządzeniu</string>
+    <string name="account_warning_content_b3">uTag jest otwarto-źródłowy i możesz sprawdzić kod odpowiedzialny za logowanie się na GitHub</string>
+    <string name="account_warning_content_footer"><b>Pamiętaj, że oficjalne wersje uTag są dostępne tylko na GitHub i APKMirror. Jeśli zainstalowałeś uTag z innego źródła, bezpieczeństwo logowania nie może być zagwarantowane i powinieneś ponownie zainstalować uTag ze zweryfikowanego źródła.</b></string>
     <string name="account_sign_in">Zaloguj się</string>
     <string name="account_error_title">Błąd</string>
-    <string name="account_error_content">An error occurred starting the sign in process, please check your connection and try again</string>
+    <string name="account_error_content">Wystąpił błąd podczas uruchamiania procesu logowania, sprawdź połączenie i spróbuj ponownie</string>
     <string name="account_error_try_again">Spróbuj ponownie</string>
     <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
@@ -111,10 +111,10 @@
     <string name="settings_main_category_account">Konto</string>
     <string name="settings_main_category_samsung_account_title">Konto Samsung</string>
     <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s (%1s)</string>
-    <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
+    <string name="settings_main_category_samsung_account_content_error">Wystąpił błąd podczas uzyskiwania danych konta</string>
     <string name="settings_main_sign_out_title">Wyloguj</string>
     <string name="settings_main_sign_out_content">Czy chcesz się wylogować ze swojego konta Samsung? Aby dalej śledzić SmartTagi, konieczne będzie ponowne zalogowanie się\n\n<b>Uwaga</b> Mimo komunikatu wyświetlanego na kolejnej stronie nie zostaniesz wylogowany z innych aplikacji Samsunga na tym urządzeniu.</string>
-    <string name="settings_main_logout_error">An error occurred, check your connection and try again</string>
+    <string name="settings_main_logout_error">Wystąpił błąd, sprawdź swoje połączenie sieciowe i spróbuj ponownie</string>
     <!-- Settings > Location -->
     <string name="settings_location_location">Lokalizacja</string>
     <string name="settings_location_location_period_title">Częstotliwość odświeżania lokalizacji</string>
@@ -133,7 +133,7 @@
     <string name="settings_location_category_chaser_title">Sieć Samsung Find</string>
     <string name="settings_location_chaser_title">Wspieraj sieć Samsung Find</string>
     <string name="settings_location_chaser_content">Przesyłaj aktualizacje lokalizacji wykrytych pobliskich Tagów do sieci Znajdź</string>
-    <string name="settings_location_chaser_disabled">Not available on this device</string>
+    <string name="settings_location_chaser_disabled">Niedostępne na tym urządzeniu</string>
     <string name="settings_location_category_uts_title">Nieznane Tagi</string>
     <string name="settings_location_uts_title">Szukaj nieznanych Tagów</string>
     <string name="settings_location_uts_content">Scan for unknown Tags and notify you when you may be being tracked</string>
@@ -149,7 +149,7 @@
     <string name="settings_location_uwb_content">Używaj precyzyjnego znajdowania (UWB), jeśli jest wspierane przez Twój Tag.</string>
     <string name="settings_location_uwb_long_distance_title">Kierunkowe znajdowanie na większą odległość</string>
     <string name="settings_location_uwb_long_distance_content">Pozwala na kierunkowe precyzyjne znajdowanie z większej odległości, co może powodować błędne wskazania kierunku, gdy Tag nie jest w zasięgu wzroku.</string>
-    <string name="settings_location_uwb_disabled">Not available on your device</string>
+    <string name="settings_location_uwb_disabled">Niedostępne na Twoim urządzeniu</string>
     <string name="settings_location_units_title">Jednostki odległości</string>
     <string name="settings_location_units_system">Takie jak urządzenie (%1s)</string>
     <string name="settings_location_units_metric">metryczne</string>
@@ -163,7 +163,7 @@
     <string name="settings_chaser_count_content_one">Pomogłeś %1d raz w lokalizacji przedmiotu w sieci Znajdź moje urządzenie</string>
     <string name="settings_chaser_count_content_other">Pomogłeś %1d razy w lokalizacji przedmiotu w sieci Znajdź moje urządzenie</string>
     <string name="settings_chaser_error_title">Błąd</string>
-    <string name="settings_chaser_error_content">An error occurred loading the certificate required for this feature, so it is not available on your device.</string>
+    <string name="settings_chaser_error_content">Wystąpił błąd podczas ładowania certyfikatu wymaganego dla tej funkcji, więc nie jest ona dostępna na Twoim urządzeniu.</string>
     <string name="settings_chaser_toast">Przyznaj w ustawieniach</string>
     <!-- Settings > Location > Unknown Tag Scan -->
     <string name="settings_uts_title">Szukaj nieznanych Tagów</string>
@@ -177,8 +177,8 @@
     <string name="settings_uts_category_settings">Ustawienia</string>
     <string name="settings_uts_sensitivity_title">Czułość</string>
     <string name="settings_uts_sensitivity_content">Wyższa czułość może powodować fałszywe alarmy, za to niższa czułość może wydłużyć czas wykrywania nieznanego Tagu, który Cię śledzi.</string>
-    <string name="settings_uts_list_unknown_tag_title">Unknown Tag %1s</string>
-    <string name="settings_uts_list_unknown_tag_content">Last seen %1s</string>
+    <string name="settings_uts_list_unknown_tag_title">Nieznany tag %1s</string>
+    <string name="settings_uts_list_unknown_tag_content">Ostatnio widziany: %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Last seen at %1s</string>
     <string name="settings_uts_list_unknown_tag_safe">Resetuj przyjazne Tagi</string>
     <string name="settings_uts_list_empty_title">Nie napotkano nieznanych Tagów</string>
@@ -187,12 +187,12 @@
     <string name="settings_uts_list_tag_clear_safe_dialog_content">This will reset Safe Tags, showing all Unknown Tags in the list and show future notifications if they are detected again.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">Wyczyść</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">Anuluj</string>
-    <string name="settings_uts_tag_title">Unknown Tag detected near you</string>
+    <string name="settings_uts_tag_title">Nieznany tag wykryty w pobliżu</string>
     <string name="settings_uts_tag_content">A SmartTag was found moving with you. The owner of the Tag may be using it to track your location. Run an Unknown Tag Scan in SmartThings (<b>Menu &gt; Settings &gt; Search for unknown tags near you</b>) to verify it\'s still nearby and locate it. If you don\'t trust the Tag, you can remove its battery to stop it from sharing its location.</string>
     <string name="settings_uts_tag_first">First seen at %1s</string>
     <string name="settings_uts_tag_last">Last seen %1s</string>
     <string name="settings_uts_tag_last_at">Last seen at %1s</string>
-    <string name="settings_uts_tag_unknown_address">Unknown Address</string>
+    <string name="settings_uts_tag_unknown_address">Nieznany adres</string>
     <string name="settings_uts_tag_open">Open SmartThings</string>
     <string name="settings_uts_tag_safe">Ten Tag jest przyjazny</string>
     <string name="settings_uts_tag_safe_dialog_title">Oznaczyć jako przyjazny?</string>
@@ -219,7 +219,7 @@
     <string name="settings_map_theme_light">Jasny</string>
     <string name="settings_map_theme_dark">Ciemny</string>
     <string name="settings_map_theme_system">Taki sam jak urządzenia</string>
-    <string name="settings_map_theme_disabled">Not available for this map type</string>
+    <string name="settings_map_theme_disabled">Niedostępne dla tego typu mapy</string>
     <string name="settings_map_show_buildings_title">Pokazuj budynki</string>
     <string name="settings_map_show_buildings_content">Pokazuje obrysy budynków, kiedy te są dostępne</string>
     <string name="settings_map_swap_location_history_title">Przycisk Szukaj w pobliżu</string>
@@ -229,7 +229,7 @@
     <string name="settings_encryption_content">Ustaw lub zresetuj PIN do szyfrowania lokalizacji offline</string>
     <string name="settings_biometric_title">Logowanie biometryczne</string>
     <string name="settings_biometric_content">Wymaga uwierzytelnienia biometrycznego, aby uzyskać dostęp do ustawień lub mapy danego Taga</string>
-    <string name="settings_biometric_content_disabled">Not available on this device</string>
+    <string name="settings_biometric_content_disabled">Niedostępne na tym urządzeniu</string>
     <!-- Settings > Advanced -->
     <string name="settings_advanced_analytics_title">Analityka i zgłaszanie błędów</string>
     <string name="settings_advanced_analytics_content">Włącz anonimowe analizy i zgłaszanie błędów, aby wspierać rozwój uTag</string>
@@ -240,7 +240,7 @@
     <string name="settings_advanced_auto_dismiss_notifications_content">Automatycznie usuwaj powiadomienia o pozostawieniu i cele Smartspacer kiedy Tag znów znajdzie się w zasięgu.\n\n<b>Uwaga:</b>Może to powodować powiadomienia widmo, jeśli Tag wróci w zasięg zanim zobaczysz powiadomienie.</string>
     <string name="settings_advanced_prevent_overmature_title">Zapobiegaj trybowi \"overmature\" offline</string>
     <string name="settings_advanced_prevent_overmature_content">Zapobiega przejściu posiadanego Tagu w tryb „overmature\" offline, który normalnie jest aktywowany po około 24 godzinach od rozłączenia z urządzeniem. Włączenie tej opcji uniemożliwia pojawianie się Tagu w skanach nieznanych Tagów, gdy znajduje się w pobliżu Twojego urządzenia\n\n<b>Uwaga:</b> Może to spowodować rzadsze aktualizacje lokalizacji z innych urządzeń Samsung, gdy Tag jest blisko tego urządzenia.</string>
-    <string name="settings_advanced_debug_title">Debug Mode</string>
+    <string name="settings_advanced_debug_title">Tryb debugowania</string>
     <string name="settings_advanced_debug_content">Enables some more verbose logging &amp; debug UI components for testing</string>
     <string name="settings_advanced_language">Język</string>
     <string name="settings_advanced_clear_addresses_title">Wyczyść zapisane adresy</string>
