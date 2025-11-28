@@ -889,12 +889,12 @@
     <string name="safe_area_wifi_ssid_content_empty">The name (SSID) of the Wi-Fi network</string>
     <string name="safe_area_wifi_ssid_dialog_message">Enter the network name (SSID) of the Wi-Fi network this Safe Area will be active when connected to. Case sensitive, blank spaces around the name will be removed.</string>
     <string name="safe_area_wifi_mac_toggle_title_title">Wymagaj wybranego adresu MAC</string>
-    <string name="safe_area_wifi_mac_toggle_title_content"><b>Opcjonalne</b>: Ogranicz to bezpieczne miejsce do określonego adresu MAC sieci Wi-Fi, co może być przydatne, jeśli masz wiele sieci Wi-Fi o tej samej nazwie.</string>
+    <string name="safe_area_wifi_mac_toggle_title_content"><b>Opcjonalne</b>: Ogranicz to bezpieczne miejsce do określonego adresu MAC sieci Wi-Fi, co może być przydatne, jeśli jest wiele sieci o tej samej nazwie.</string>
     <string name="safe_area_wifi_mac_title">Adres MAC</string>
     <string name="safe_area_wifi_mac_content_empty">Adres MAC sieci Wi-Fi</string>
-    <string name="safe_area_wifi_mac_dialog_message">Enter the MAC address of the Wi-Fi network this Safe Area will be active when connected to. Optional, useful if you have multiple Wi-Fi networks using the same name.</string>
+    <string name="safe_area_wifi_mac_dialog_message">Wprowadź adres MAC sieci Wi-Fi, przy połączeniu z którą to bezpieczne miejsce będzie aktywne. Opcjonalne, ale przydatne, jeśli masz kilka sieci Wi-Fi o tej samej nazwie.</string>
     <string name="safe_area_wifi_exit_buffer_title">Okres buforowy</string>
-    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy czas między opuszczeniem bezpiecznego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest przydatny, gdy Wi-Fi lub Bluetooth rozłącza się szybciej niż Tag faktycznie opuścił bezpieczne miejsce, dzięki.</string>
+    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy czas między opuszczeniem bezpiecznego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest przydatny, gdy Wi‑Fi lub Bluetooth rozłącza się, mimo że Tag nie opuścił bezpiecznego miejsca.</string>
     <string name="safe_area_wifi_invalid_ssid">Wprowadź nazwę sieci Wi-Fi</string>
     <string name="safe_area_wifi_invalid_mac">Wprowadź prawidłowy adres MAC</string>
     <string name="safe_area_location_name_toast">Dotknij mapy lub przeciągnij znacznik, aby przenieść bezpieczne miejsce</string>
@@ -904,7 +904,7 @@
     <string name="safe_area_location_radius_title">Promień</string>
     <string name="safe_area_location_radius_content">Rozmiar tego bezpiecznego miejsca</string>
     <string name="safe_area_location_exit_buffer_title">Okres przejściowy</string>
-    <string name="safe_area_location_exit_buffer_content">Dodatkowy okres przejściowy między opuszczeniem tego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest to przydatne, jeśli opuścisz lokalizację przed rozłączeniem się tagu, ale pozostała ona w obszarze bezpiecznym.</string>
+    <string name="safe_area_location_exit_buffer_content">Dodatkowy okres przejściowy między opuszczeniem tego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nPrzydatne, gdy opuścisz miejsce wcześniej niż Tag, mimo że Tag nadal znajduje się w bezpiecznym miejscu.</string>
     <string name="safe_area_location_error_dialog_title">Couldn\'t get location</string>
     <string name="safe_area_location_error_dialog_content">Could not get your location, try again later</string>
     <string name="safe_area_location_error_dialog_close">Zamknij</string>
