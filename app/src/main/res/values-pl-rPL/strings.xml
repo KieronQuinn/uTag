@@ -151,7 +151,7 @@
     <string name="settings_location_uwb_long_distance_content">Pozwala na kierunkowe precyzyjne znajdowanie z większej odległości, co może powodować błędne wskazania kierunku, gdy Tag nie jest w zasięgu wzroku.</string>
     <string name="settings_location_uwb_disabled">Niedostępne na Twoim urządzeniu</string>
     <string name="settings_location_units_title">Jednostki odległości</string>
-    <string name="settings_location_units_system">Takie jak urządzenie (%1s)</string>
+    <string name="settings_location_units_system">Takie jak urządzenia (%1s)</string>
     <string name="settings_location_units_metric">metryczne</string>
     <string name="settings_location_units_imperial">imperialne</string>
     <!-- Settings > Location > Chaser -->
@@ -245,7 +245,7 @@
     <string name="settings_advanced_language">Język</string>
     <string name="settings_advanced_clear_addresses_title">Wyczyść zapisane adresy</string>
     <string name="settings_advanced_clear_addresses_content">Wyczyść lokalną, zaszyfrowaną pamięć adresów z lokalizacji Tagów oraz historii lokalizacji</string>
-    <string name="settings_advanced_clear_addresses_dialog_title">Clear Cached Addresses?</string>
+    <string name="settings_advanced_clear_addresses_dialog_title">Wyczyścić zapisane adresy?</string>
     <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Wyczyść</string>
     <string name="settings_advanced_clear_addresses_toast">Cached addresses cleared</string>
@@ -315,7 +315,7 @@
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
     <string name="map_searching_dialog_cancel">Zamknij</string>
-    <string name="map_allow_access_dialog_title">Share location?</string>
+    <string name="map_allow_access_dialog_title">Udostępnić lokalizację?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
     <string name="map_allow_access_dialog_positive">Udostępnij</string>
     <string name="map_allow_access_dialog_negative">Anuluj</string>
@@ -589,7 +589,7 @@
     <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
     <!-- Passive Mode -->
     <string name="passive_mode_enabled_switch">Włączony</string>
-    <string name="passive_mode_info_title">What is Passive Mode?</string>
+    <string name="passive_mode_info_title">Czym jest tryb pasywny?</string>
     <string name="passive_mode_info_content">Passive Mode disconnects your Tag from your device, keeping it in a \"scanned\" state when SmartThings isn\'t open. This disables some uTag functionality, but still allows location updates from your device.\n\n<b>When Passive Mode is enabled and SmartThings is not open, your Tag may also get location updates from other Samsung devices in addition to this device, so long as it\'s not connected to another device using uTag or SmartThings.</b></string>
     <string name="passive_mode_lost_functionality_title">Functionality Impacted by Passive Mode</string>
     <string name="passive_mode_lost_functionality_bull1">Search Nearby is unavailable</string>
@@ -660,7 +660,7 @@
     <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
     <string name="settings_encryption_error_dialog_close">Zamknij</string>
     <string name="settings_encryption_category_pin">PIN lokalizacji w trybie offline</string>
-    <string name="settings_encryption_footer_title">Trying to enable or disable location encryption?</string>
+    <string name="settings_encryption_footer_title">Próbujesz włączyć lub wyłączyć szyfrowanie lokalizacji?</string>
     <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
     <string name="settings_encryption_reset_warning_dialog_title">Reset PIN</string>
     <string name="settings_encryption_reset_warning_dialog_content">If you reset your PIN, all location history which was reported by other Galaxy devices with encryption enabled will be deleted. Once a location has been reported from another Galaxy device after you change your PIN, you will be asked to enter your new PIN to decrypt it.</string>
@@ -794,7 +794,7 @@
     <string name="search_nearby_uwb_disabled_positive">Włącz</string>
     <string name="search_nearby_uwb_disabled_negative">Nie teraz</string>
     <string name="search_nearby_bluetooth_disabled_title">Bluetooth wyłączony</string>
-    <string name="search_nearby_bluetooth_disabled_content">Search nearby requires Bluetooth, enable Bluetooth to start searching?</string>
+    <string name="search_nearby_bluetooth_disabled_content">Wyszukiwanie w pobliżu wymaga Bluetooth, czy chcesz go włączyć, aby rozpocząć?</string>
     <string name="search_nearby_bluetooth_disabled_positive">Włącz</string>
     <string name="search_nearby_bluetooth_disabled_negative">Anuluj</string>
     <!-- Foreground service -->
@@ -859,12 +859,12 @@
     <string name="safe_area_active">Aktywne</string>
     <string name="safe_area_add">Dodawanie bezpiecznego miejsca</string>
     <string name="safe_area_inactive">Nieaktywne</string>
-    <string name="safe_area_dialog_delete_title">Delete Safe Area?</string>
+    <string name="safe_area_dialog_delete_title">Usunąć bezpieczne miejsce?</string>
     <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
     <string name="safe_area_dialog_delete_delete">Delete</string>
     <string name="safe_area_dialog_delete_cancel">Anuluj</string>
-    <string name="safe_area_dialog_save_title">Save Changes?</string>
-    <string name="safe_area_dialog_save_content">Would you like to save your changes?</string>
+    <string name="safe_area_dialog_save_title">Zapisać zmiany?</string>
+    <string name="safe_area_dialog_save_content">Czy chcesz zapisać zmiany?</string>
     <string name="safe_area_dialog_save_save">Zapisz</string>
     <string name="safe_area_dialog_save_dont_save">Nie zapisuj</string>
     <string name="safe_area_type_title">Wybór bezpiecznych miejsc</string>
@@ -946,8 +946,8 @@
     <string name="widget_dialog_not_setup_content">Set up uTag first before adding a widget</string>
     <string name="widget_dialog_not_setup_open">Open uTag</string>
     <string name="widget_configuration_set_device">Set a Tag to display first</string>
-    <string name="widget_configuration_dialog_save_title">Save Changes?</string>
-    <string name="widget_configuration_dialog_save_content">Would you like to save your changes?</string>
+    <string name="widget_configuration_dialog_save_title">Zapisać zmiany?</string>
+    <string name="widget_configuration_dialog_save_content">Czy chcesz zapisać zmiany?</string>
     <string name="widget_configuration_dialog_save_save">Zapisz</string>
     <string name="widget_configuration_dialog_save_dont_save">Nie zapisuj</string>
     <string name="widget_configuration_save">Zapisz</string>
@@ -985,7 +985,7 @@
     <!-- Backup & Restore -->
     <string name="backup_restore_backup_title">Stwórz kopię zapasową</string>
     <string name="backup_restore_backup_content">Wykonaj kopię zapasową uTag do pliku lub chmury</string>
-    <string name="backup_restore_restore_title">Przywróć kopię zapasową</string>
+    <string name="backup_restore_restore_title">Przywracanie kopii zapasowej</string>
     <string name="backup_restore_restore_content">Przywróć kopię zapasową uTag z pliku lub chmury</string>
     <string name="backup_restore_included_title">Zawarte w kopii zapasowej</string>
     <string name="backup_restore_included_bull1">Ustawienia skanowania, mapy i odświeżania lokalizacji</string>
