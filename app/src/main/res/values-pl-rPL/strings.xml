@@ -269,8 +269,8 @@
     <!-- Map -->
     <string name="map_error_title">Wystąpił błąd</string>
     <string name="map_warning_title">Uwaga</string>
-    <string name="map_error_content">An error occurred, please try again later (%1d)</string>
-    <string name="map_error_no_tags_content">You don\'t have any Tags available on this account</string>
+    <string name="map_error_content">Wystąpił błąd, spróbuj ponownie później (%1d)</string>
+    <string name="map_error_no_tags_content">Nie ma żadnych tagów powiązanych z tym kontem</string>
     <string name="map_error_close">Zamknij</string>
     <string name="map_error_open_settings">Otwórz ustawienia</string>
     <string name="map_error_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later.</string>
@@ -280,7 +280,7 @@
     <string name="map_warning_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from uTag\'s settings to fix this.</string>
     <string name="map_warning_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
     <string name="map_warning_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the settings to fix this.</string>
-    <string name="map_error_permissions_content">SmartThings requires the \"Allow always\" location permission, please grant it in Settings to continue</string>
+    <string name="map_error_permissions_content">SmartThings wymaga uprawnienia do Lokalizacji ustawionego na \"Zawsze zezwalaj\", proszę przyznać je w ustawieniach</string>
     <string name="map_error_permissions_button">Otwórz ustawienia</string>
     <string name="map_network_error">A network error occurred, please try again later</string>
     <string name="map_location_error">Failed to get your location, try moving around</string>
@@ -349,8 +349,8 @@
     <string name="tag_picker_add_to_home">Add to home screen</string>
     <!-- Ring dialog -->
     <string name="tag_ring_title">Ring your tag</string>
-    <string name="tag_ring_content_start">%1s will start ringing when you tap Start.</string>
-    <string name="tag_ring_content_stop">Tap Stop when you find your tag.</string>
+    <string name="tag_ring_content_start">%1s zacznie dzwonić, kiedy naciśniesz przycisk Rozpocznij.</string>
+    <string name="tag_ring_content_stop">Dotknij opcji Zatrzymaj, gdy znajdziesz Taga.</string>
     <string name="tag_ring_content_network">Your SmartTag will start ringing when it is located by another device, or this device connects to it.</string>
     <string name="tag_ring_start">Start</string>
     <string name="tag_ring_stop">Stop</string>
@@ -360,11 +360,11 @@
     <string name="tag_location_history_progress">%1d%%</string>
     <string name="tag_location_history_empty">No locations for this day</string>
     <string name="tag_location_history_error_title">Błąd</string>
-    <string name="tag_location_history_error_content">An error occurred when loading your location history, check your connection and try again later.</string>
+    <string name="tag_location_history_error_content">Wystąpił błąd podczas wczytywania twojej historii lokalizacji, sprawdź swoje połączenie i spróbuj ponownie później.</string>
     <string name="tag_location_history_error_close">Zamknij</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
     <string name="tag_location_history_delete">Delete history</string>
-    <string name="tag_location_history_delete_dialog_content">Delete all location history for %1s?</string>
+    <string name="tag_location_history_delete_dialog_content">Usunąć historię lokalizacja dla %1s?</string>
     <string name="tag_location_history_delete_dialog_cancel">Anuluj</string>
     <string name="tag_location_history_delete_dialog_delete">Delete</string>
     <string name="tag_location_history_delete_error">An error occurred, please try again.</string>
