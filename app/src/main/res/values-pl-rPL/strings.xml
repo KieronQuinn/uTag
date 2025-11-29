@@ -156,7 +156,7 @@
     <string name="settings_location_units_imperial">imperialne</string>
     <!-- Settings > Location > Chaser -->
     <string name="settings_chaser_title">Sieć Samsung Find</string>
-    <string name="settings_chaser_switch">Włączono</string>
+    <string name="settings_chaser_switch">Włączony</string>
     <string name="settings_chaser_info_title">Wspieranie sieci Samsung Find</string>
     <string name="settings_chaser_info_content">Po włączeniu tej funkcji, uTag będzie wysyłać lokalizacje pobliskich wykrytych Tagów podczas odświeżania lokalizacji, aby pomóc innym użytkownikom SmartTag w odnalezieniu ich przedmiotów.\n\nLokalizacje są całkowicie anonimowe i mogą być szyfrowane, jeśli Tag ma włączone szyfrowanie lokalizacji.</string>
     <string name="settings_chaser_count_title">Twój wkład</string>
