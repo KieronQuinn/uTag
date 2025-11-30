@@ -56,6 +56,7 @@ markwon = "4.6.2"
 mapsUtils = "5.1.1"
 smartspacer = "1.0.4"
 okhttp = "4.12.0"
+dexkit = "2.0.7"
 
 [libraries]
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment", version.ref = "navigation" }
@@ -116,6 +117,7 @@ firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.r
 firebase-crashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
 firebase-analytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+dexkit = { group = "org.luckypray", name = "dexkit", version.ref = "dexkit"}
 
 [bundles]
 oneui = [
