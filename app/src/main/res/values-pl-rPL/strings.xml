@@ -830,7 +830,7 @@
     <!-- Unknown Tag -->
     <string name="notification_title_unknown_tag_one">Wykryto nieznego taga</string>
     <string name="notification_title_unknown_tag_other">Wykryto nieznane tagi</string>
-    <string name="notification_content_unknown_tag_one">Wykryto nienależącą do Ciebie etykietę poruszającą się przez jakiś czas razem z Tobą.</string>
+    <string name="notification_content_unknown_tag_one">An unknown Tag has been detected which may be tracking you. Tap for more info.</string>
     <string name="notification_content_unknown_tag_other">Unknown Tags have been detected which may be tracking you. Tap for more info.</string>
     <!-- Automation -->
     <string name="notification_title_automation">Automation</string>
