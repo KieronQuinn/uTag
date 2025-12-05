@@ -298,13 +298,13 @@
     <string name="map_time_unknown">Nieznany czas</string>
     <string name="map_bluetooth_disabled">Bluetooth wyłączony</string>
     <string name="map_offline">Nie udało się odświeżyć</string>
-    <string name="map_ring">Odtwórz dźwięk</string>
+    <string name="map_ring">Zadzwoń</string>
     <string name="map_location_history">Historia lokalizacji</string>
     <string name="map_refresh">Odśwież</string>
     <string name="map_more">Więcej</string>
     <string name="map_add_to_homescreen">Dodaj do ekranu głównego</string>
     <string name="map_settings">Ustawienia</string>
-    <string name="map_timestamp_last_updated">Last updated: %1s</string>
+    <string name="map_timestamp_last_updated">Ostatnia aktualizacja: %1s</string>
     <string name="map_timestamp_unknown">Unknown</string>
     <string name="map_timestamp_now">Teraz</string>
     <string name="map_timestamp_minute_ago">%1d minutę temu</string>
@@ -478,7 +478,7 @@
     <string name="tag_more_automation_content">Set custom actions for pressing &amp; holding Tag button</string>
     <string name="tag_more_automation_content_disabled">Connect to your Tag to use this option</string>
     <string name="tag_more_automation_content_disabled_passive">Disable Passive Mode to use this option</string>
-    <string name="tag_more_automation_shared_tag_warning_dialog_title">Shared Tag Warning</string>
+    <string name="tag_more_automation_shared_tag_warning_dialog_title">Udostępniona etykieta</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_content">This Tag is shared with other users. The Automations option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may send the event the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_dismiss">Rozumiem</string>
     <string name="tag_more_automation_press_title">Naciśnięto</string>
@@ -487,7 +487,7 @@
     <string name="tag_more_automation_press_content_error">Additional permission required</string>
     <string name="tag_more_automation_press_content_disabled">Disable the \"Pressed\" Automation action in SmartThings to use this option</string>
     <string name="tag_more_automation_held_title">Przytrzymano</string>
-    <string name="tag_more_automation_held_content">Launch %1s</string>
+    <string name="tag_more_automation_held_content">Otwórz %1s</string>
     <string name="tag_more_automation_held_content_unset">Nie przypisano akcji</string>
     <string name="tag_more_automation_held_content_error">Additional permission required</string>
     <string name="tag_more_automation_held_content_disabled">Disable the \"Held\" Automation action in SmartThings to use this option</string>
@@ -512,12 +512,12 @@
     <string name="tag_more_automation_permission_restricted_action">Otwórz informacje o aplikacji</string>
     <string name="tag_more_automation_type_app_title">Otwórz aplikację</string>
     <string name="tag_more_automation_type_app_content">Start an app when this automation is invoked.</string>
-    <string name="tag_more_automation_type_camera_title">Launch Camera</string>
+    <string name="tag_more_automation_type_camera_title">Uruchom aparat</string>
     <string name="tag_more_automation_type_camera_title_short">Aparat</string>
     <string name="tag_more_automation_type_camera_content">Start the default camera app, or the locked camera if the device is locked (where available).</string>
-    <string name="tag_more_automation_type_shortcut_title">Launch Shortcut</string>
+    <string name="tag_more_automation_type_shortcut_title">Uruchom skrót</string>
     <string name="tag_more_automation_type_shortcut_content">Start an app\'s shortcut when this automation is invoked.</string>
-    <string name="tag_more_automation_type_tasker_title">Tasker Task</string>
+    <string name="tag_more_automation_type_tasker_title">Zadanie Tasker\'a</string>
     <string name="tag_more_automation_type_tasker_content">Start a Tasker task when this automation is invoked.</string>
     <string name="tag_more_automation_type_tasker_dialog_title">Wystąpił błąd</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
@@ -544,11 +544,11 @@
     <string name="lost_mode_next">Dalej</string>
     <string name="lost_mode_settings_switch">Włączony</string>
     <string name="lost_mode_settings_category">Personalizacja</string>
-    <string name="lost_mode_settings_email">Adres e-mail (wymagany)</string>
+    <string name="lost_mode_settings_email">Adres e-mail (wymagane)</string>
     <string name="lost_mode_settings_disabled">Custom URL is set</string>
     <string name="lost_mode_settings_email_cannot_be_empty">Nieprawidłowy adres e-mail</string>
     <string name="lost_mode_settings_phone_number">Kontakt (opcjonalne)</string>
-    <string name="lost_mode_settings_phone_number_default">Enter your emergency contact information in case someone finds your Tag and wants to contact you</string>
+    <string name="lost_mode_settings_phone_number_default">Wprowadź informacje o kontaktach alarmowych na wypadek, gdyby ktoś znalazł Twoje urządzenie i chciał się z Tobą skontaktować</string>
     <string name="lost_mode_settings_message">Wiadomość</string>
     <string name="lost_mode_settings_error_dialog_title">Wystąpił błąd</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
@@ -833,7 +833,7 @@
     <string name="notification_content_unknown_tag_one">Wykryto nieznaną etykietę, która może Cię śledzić. Dotknij, aby uzyskać więcej informacji.</string>
     <string name="notification_content_unknown_tag_other">Wykryto nieznane etykiety, które mogą Cię śledzić. Dotknij, aby uzyskać więcej informacji.</string>
     <!-- Automation -->
-    <string name="notification_title_automation">Automation</string>
+    <string name="notification_title_automation">Automatyzacja</string>
     <string name="notification_content_automation_error">Unable to start this automation as uTag is not set up correctly. Check the Tag\'s settings for more info</string>
     <!-- Refresh Periods -->
     <string name="refresh_period_five_minutes">Co 5 minut</string>
@@ -1008,7 +1008,7 @@
     <string name="backup_error_failed_to_create">Failed to create file</string>
     <string name="backup_error_failed_to_write">Failed to write file</string>
     <string name="backup_creating_backup">Creating backup…</string>
-    <string name="backup_creating_automation_configs_backup">Backing up Custom Automations…</string>
+    <string name="backup_creating_automation_configs_backup">Tworzenie kopii zapasowej niestandardowych automatyzacji…</string>
     <string name="backup_creating_find_my_device_configs_backup">Backing up Find my Device configuration…</string>
     <string name="backup_creating_location_safe_areas_backup">Backing up Location Safe Areas…</string>
     <string name="backup_creating_notify_disconnect_configs_backup">Backing up notify when left behind configuration…</string>
@@ -1022,7 +1022,7 @@
     <string name="restore_error_dialog_title">Error Loading Backup</string>
     <string name="restore_error_dialog_close">Zamknij</string>
     <string name="restore_category_options">Restore Options</string>
-    <string name="restore_automation_configs_title">Restore Custom Automations</string>
+    <string name="restore_automation_configs_title">Przywróć niestandardowe automatyzacje</string>
     <string name="restore_automation_configs_content">You may need to re-enable custom automations for each Tag to synchronise them</string>
     <string name="restore_find_my_device_configs_title">Restore Find my Device configuration</string>
     <string name="restore_location_safe_areas_title">Restore Location Safe Areas</string>
@@ -1038,7 +1038,7 @@
     <string name="restore_footer_content"><b>Warning:</b> Your current uTag configuration will be overwritten by restoring this backup</string>
     <string name="restore_footer_restore">Begin Restore</string>
     <string name="restore_progress_restoring_backup">Restoring backup…</string>
-    <string name="restore_progress_restoring_automation_configs">Restoring Custom Automations…</string>
+    <string name="restore_progress_restoring_automation_configs">Przywracanie niestandardowych automatyzacji…</string>
     <string name="restore_progress_restoring_find_my_device_configs">Restoring Find my Device configuration…</string>
     <string name="restore_progress_restoring_location_safe_areas">Restoring Location Safe Areas…</string>
     <string name="restore_progress_restoring_notify_disconnect_configs">Restoring notify when left behind configuration…</string>
