@@ -356,7 +356,7 @@
     <string name="tag_ring_stop">Zatrzymaj</string>
     <string name="tag_ring_error">Wystąpił błąd, spróbuj ponownie</string>
     <!-- Location history -->
-    <string name="tag_location_history_loading">Loading may take a while for new areas while the encrypted address database is built, or when there are many encrypted locations to decrypt.</string>
+    <string name="tag_location_history_loading">Wczytywanie nowych obszarów może chwilę potrwać, gdy tworzona jest baza zaszyfrowanych adresów lub gdy trzeba odszyfrować wiele lokalizacji.</string>
     <string name="tag_location_history_progress">%1d%%</string>
     <string name="tag_location_history_empty">Brak lokalizacji dla tego dnia</string>
     <string name="tag_location_history_error_title">Błąd</string>
@@ -420,7 +420,7 @@
     <string name="tag_more_share">Zezwól na dostęp do Twojej lokalizacji</string>
     <string name="tag_more_advanced">Zaawansowane</string>
     <string name="tag_more_passive_mode_title">Tryb pasywny</string>
-    <string name="tag_more_passive_mode_content_disabled">Disconnects your Tag from this device, keeping it in the \"scanned\" state, at the expense of some functionality</string>
+    <string name="tag_more_passive_mode_content_disabled">Rozłącza etykietę z tym urządzeniem, utrzymując go w stanie „skanowania” kosztem niektórych funkcji</string>
     <string name="tag_more_passive_mode_content_enabled">Wł.</string>
     <string name="tag_more_battery">Bateria</string>
     <string name="tag_more_error_title">Wystąpił błąd</string>
