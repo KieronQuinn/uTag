@@ -323,7 +323,7 @@
     <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
     <string name="map_passive_mode_dialog_content_search_nearby">Tryb pasywny jest obecnie włączony dla tej etykiety, wyłącz go w zakładce \"więcej\" ustawień, aby użyć opcji Szukaj w pobliżu.\n\n<b>Uwaga:</b>Możesz ponownie włączyć tryb pasywny później.</string>
     <string name="map_offline_dialog_title">Nie udało się odświeżyć</string>
-    <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
+    <string name="map_offline_dialog_content">Aplikacja uTag nie mogła odświeżyć lokalizacji Twojego SmartTaga. Sprawdź połączenie sieciowe i spróbuj ponownie. Nadal możesz sprawdzić ostatni znany stan SmartTaga oraz funkcje Bluetooth, gdy znajdujesz się w jego pobliżu.</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Wybierz etykietę</string>
     <string name="tag_picker_show_all_markers_title">Pokaż wszystkie etykiety na mapie</string>
@@ -341,7 +341,7 @@
     <string name="tag_picker_not_allowed">Niedozwolone</string>
     <string name="tag_picker_shared_and_selected">Etykieta użytkownika %1s • wybrana</string>
     <string name="tag_picker_error_dialog_title">Błąd</string>
-    <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
+    <string name="tag_picker_error_dialog_content">Wystąpił błąd podczas wczytywania Twoich etykiet. Sprawdź połączenie sieciowe i spróbuj ponownie.</string>
     <string name="tag_picker_error_dialog_close">Zamknij</string>
     <string name="tag_picker_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="tag_picker_menu_select_all">Dodaj wszystkie do ulubionych</string>
@@ -368,7 +368,7 @@
     <string name="tag_location_history_delete_dialog_cancel">Anuluj</string>
     <string name="tag_location_history_delete_dialog_delete">Usuń</string>
     <string name="tag_location_history_delete_error">Wystąpił błąd, spróbuj ponownie.</string>
-    <string name="tag_location_history_delete_disabled">Delete disabled as Content Creator mode is enabled</string>
+    <string name="tag_location_history_delete_disabled">Usuwanie jest niedostępne, ponieważ włączony jest Tryb influencera</string>
     <string name="tag_location_history_decrypt_failed">Some locations may not be shown as they could not be decrypted</string>
     <string name="tag_location_history_export">Eksportuj historię</string>
     <string name="tag_location_history_export_disabled">Eksportowanie zostało wyłączone przez tryb influencera</string>
@@ -454,7 +454,7 @@
     <string name="tag_more_find_device_pet_walking_enabled_title">Pet Walking is Enabled</string>
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
-    <string name="tag_more_find_device_remote_ring_enabled_title">Enabled on a Samsung device</string>
+    <string name="tag_more_find_device_remote_ring_enabled_title">Włączone na urządzeniu Samsung</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
     <string name="tag_more_find_device_remote_ring_disable_action">Disable find phone or tablet</string>
     <string name="tag_more_find_device_vibrate_title">Wibracje</string>
