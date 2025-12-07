@@ -42,13 +42,13 @@
     <!-- Permissions -->
     <string name="setup_permissions">Uprawnienia</string>
     <string name="permission_smartthings_title">Wymagane uprawnienia SmartThings</string>
-    <string name="permission_smartthings_content">SmartThings wymaga następujących uprawnień, aby uTag był w stanie znaleźć i połączyć się z twoim SmartTagiem:\n- Lokalizacja (<b>wybierz \"zawsze zezwalaj\"</b>)\n- Urządzenia w pobliżu / Bluetooth</string>
+    <string name="permission_smartthings_content">SmartThings wymaga następujących uprawnień, aby uTag był w stanie znaleźć i połączyć się z Twoim SmartTagiem:\n- Lokalizacja (<b>wybierz \"zawsze zezwalaj\"</b>)\n- Urządzenia w pobliżu / Bluetooth</string>
     <string name="permission_smartthings_grant">Zezwól w ustawieniach</string>
     <string name="permission_notification_title">Powiadomienia</string>
     <string name="permission_notification_content">uTag wymaga uprawnień do pokazywania powiadomień aby wyświetlać aktualizacje</string>
     <string name="permission_notification_grant">Zezwól</string>
     <string name="permission_battery_title">Wyłącz optymalizację baterii dla uTag</string>
-    <string name="permission_battery_content">Wymagane, aby uTag mogło działać w tle i monitorować twoje Tagi</string>
+    <string name="permission_battery_content">Wymagane, aby uTag mogło działać w tle i monitorować Twoje etykiety</string>
     <string name="permission_smartthings_battery_title">Wyłącz optymalizację baterii SmartThings</string>
     <string name="permission_smartthings_battery_content">Wymagane, aby utrzymać połączenie Bluetooth z Tagami w tle</string>
     <string name="permission_battery_disable">Wyłącz</string>
@@ -273,7 +273,7 @@
     <string name="map_error_no_tags_content">Nie ma żadnych tagów powiązanych z tym kontem</string>
     <string name="map_error_close">Zamknij</string>
     <string name="map_error_open_settings">Otwórz ustawienia</string>
-    <string name="map_error_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later.</string>
+    <string name="map_error_no_smartthings_content">Aplikacja uTag nie mogła połączyć się ze SmartThings. Sprawdź, czy jest zainstalowane, i spróbuj ponownie później.</string>
     <string name="map_error_mod_not_activated_xposed_content">Moduł uTag dla aplikacji SmartThings nie jest włączony. Jeśli korzystasz z Xposed, sprawdź, czy moduł jest włączony, i uruchom ponownie urządzenie. Jeśli nie korzystasz z Xposed, postępuj zgodnie z instrukcjami w ustawieniach aplikacji uTag, aby zainstalować zmodyfikowaną wersję aplikacji SmartThings.</string>
     <string name="map_error_mod_not_activated_patch_content">Moduł uTag dla aplikacji SmartThings nie jest włączony. Aby rozwiązać ten problem, postępuj zgodnie z instrukcjami instalacji zmodyfikowanej wersji aplikacji SmartThings w ustawieniach aplikacji uTag.</string>
     <string name="map_warning_mod_outdated_xposed_content">Moduł uTag dla aplikacji SmartThings jest nieaktualny. Funkcje aplikacji uTag mogą nie działać poprawnie lub wcale. Aby rozwiązać ten problem, wymuś zatrzymanie aplikacji SmartThings lub uruchom ponownie urządzenie.</string>
@@ -327,7 +327,7 @@
     <!-- Tag Picker -->
     <string name="tag_picker_title">Wybierz etykietę</string>
     <string name="tag_picker_show_all_markers_title">Pokaż wszystkie etykiety na mapie</string>
-    <string name="tag_picker_show_all_markers_content">Show a marker for each Tag on the map, which can be clicked to select it</string>
+    <string name="tag_picker_show_all_markers_content">Pokaż znacznik dla każdej etykiety na mapie, który można nacisnąć, aby wybrać</string>
     <string name="tag_picker_category_favourites">Ulubione</string>
     <string name="tag_picker_category_mine">Twoje etykiety</string>
     <string name="tag_picker_category_shared">Etykiety użytkownika %1s</string>
@@ -337,7 +337,7 @@
     <string name="tag_picker_favourites_tip_action">Edytuj ulubione</string>
     <string name="tag_picker_shared">Etykieta użytkownika %1s</string>
     <string name="tag_picker_selected">Wybrane</string>
-    <string name="tag_picker_agreement_required">Agreement required</string>
+    <string name="tag_picker_agreement_required">Wymagana zgoda</string>
     <string name="tag_picker_not_allowed">Niedozwolone</string>
     <string name="tag_picker_shared_and_selected">Etykieta użytkownika %1s • wybrana</string>
     <string name="tag_picker_error_dialog_title">Błąd</string>
@@ -360,7 +360,7 @@
     <string name="tag_location_history_progress">%1d%%</string>
     <string name="tag_location_history_empty">Brak lokalizacji dla tego dnia</string>
     <string name="tag_location_history_error_title">Błąd</string>
-    <string name="tag_location_history_error_content">Wystąpił błąd podczas wczytywania twojej historii lokalizacji, sprawdź swoje połączenie i spróbuj ponownie później.</string>
+    <string name="tag_location_history_error_content">Wystąpił błąd podczas wczytywania Twojej historii lokalizacji, sprawdź swoje połączenie i spróbuj ponownie później.</string>
     <string name="tag_location_history_error_close">Zamknij</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
     <string name="tag_location_history_delete">Usuń historię</string>
@@ -424,10 +424,10 @@
     <string name="tag_more_passive_mode_content_enabled">Wł.</string>
     <string name="tag_more_battery">Bateria</string>
     <string name="tag_more_error_title">Wystąpił błąd</string>
-    <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
+    <string name="tag_more_error_content">Wystąpił błąd podczas wczytywania ustawień Twojej etykiety, sprawdź swoje połączenie i spróbuj ponownie później.</string>
     <string name="tag_more_error_close">Zamknij</string>
     <string name="tag_more_error_toast">Wystąpił błąd, spróbuj ponownie</string>
-    <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
+    <string name="tag_more_shareable_dialog">Możesz ustalić, którym członkom domu SmartThings udostępniana jest ta etykieta, wybierając ikonę domu na stronie głównej aplikacji SmartThings.</string>
     <string name="tag_more_end_to_end_title">Szyfruj lokalizację offline</string>
     <string name="tag_more_end_to_end_content">Szyfruj przyszłe aktualizacje lokalizacji tej etykiety pochodzące z urządzeń Galaxy innych osób. Aby uzyskać dostęp do tych lokalizacji, konieczne będzie wprowadzenie kodu PIN szyfrowania.</string>
     <string name="tag_more_end_to_end_content_pin">Aby korzystać z tej opcji, ustaw kod PIN w ustawieniach szyfrowania</string>
@@ -448,11 +448,11 @@
     <string name="tag_more_find_device_notifications_disabled_action">Ustawienia powiadomień</string>
     <string name="tag_more_find_device_notifications_silenced_title">Powiadomienia wyciszone</string>
     <string name="tag_more_find_device_notifications_silenced_content">Kategoria powiadomień <b>Znajdź moje urządzenie</b> została wyciszona, przez co uTag nie będzie mogło włączyć dzwonka. Ustaw ją na <b>Domyślne</b> i włącz <b>Pokazuj na ekranie</b>, aby umożliwić dzwonienie</string>
-    <string name="tag_more_find_device_full_screen_permission_required_title">Permission required</string>
+    <string name="tag_more_find_device_full_screen_permission_required_title">Wymagane uprawnienie</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">Aplikacja uTag wymaga uprawnienia „Powiadomienia pełnoekranowe”, aby móc włączyć dzwonienie w tle</string>
     <string name="tag_more_find_device_full_screen_permission_required_action">Zezwól w ustawieniach</string>
     <string name="tag_more_find_device_pet_walking_enabled_title">Włączono Tryb Spacer z pupilem</string>
-    <string name="tag_more_find_device_pet_walking_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Rozpocznij spacer z pupilem” dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również rozpocząć spacer z pupilem na innym urządzeniu. Aby temu zapobiec, wyłącz opcję „Rozpocznij spacer z pupilem”.\n\n<b>Uwaga:</b> Tryb Spacer z pupilem nie jest obecnie obsługiwany przez aplikację uTag.</string>
+    <string name="tag_more_find_device_pet_walking_enabled_content">Na telefonie lub tablecie Samsung włączono opcję „Rozpocznij spacer z pupilem” dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również rozpocząć spacer z pupilem na innym urządzeniu. Aby temu zapobiec, wyłącz opcję „Rozpocznij spacer z pupilem”.\n\n<b>Uwaga:</b> Tryb Spacer z pupilem nie jest obecnie obsługiwany przez aplikację uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Wyłącz Rozpocznij spacer z pupilem</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Włączone na urządzeniu Samsung</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Znajdź mój telefon lub tablet\" dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również spowodować dzwonienie innego urządzenia. Aby temu zapobiec, wyłącz tę opcję.</string>
@@ -462,24 +462,24 @@
     <string name="tag_more_find_device_delay_title">Opóźnienie przed dzwonieniem</string>
     <string name="tag_more_find_device_delay_content">Odczekaj 5 sekund przed uruchomieniem dzwonka. Jeśli przypadkowo aktywujesz funkcję Znajdź moje urządzenie, opcja ta umożliwi anulowanie dźwięku, zanim ten się odtworzy.</string>
     <string name="tag_more_find_device_volume_title">Głośność</string>
-    <string name="tag_more_find_device_volume_content">The volume your device will ring at.\n\n<b>Warning:</b> Setting a low volume &amp; disabling vibration may make your device ringing hard to hear!</string>
+    <string name="tag_more_find_device_volume_content">Głośność, z jaką będzie dzwonić Twoje urządzenie\n\n<b>Uwaga:</b> Ustawienie niskiej głośności i wyłączenie wibracji może sprawić, że dzwonienie urządzenia będzie trudne do usłyszenia!</string>
     <string name="tag_more_find_device_footer_title">Znajdź moje urządzenie</string>
     <string name="tag_more_find_device_footer_content">Gdy naciśniesz dwukrotnie przycisk na %1s, telefon będzie dzwonić przez 60 sekund lub do momentu zatrzymania.</string>
     <string name="tag_more_find_device_footer_bull1">Ta opcja działa tylko wtedy, gdy urządzenie jest połączone ze SmartTagiem.</string>
     <string name="tag_more_find_device_footer_bull2">Urządzenie będzie dzwonić, nawet jeśli włączony jest tryb Nie przeszkadzać.</string>
     <string name="tag_more_find_device_footer_bull3">Dźwięk będzie odtwarzany przez głośniki urządzenia, nawet jeśli podłączono do niego słuchawki lub inne urządzenia audio.</string>
-    <string name="tag_more_find_device_footer_bull4">Jeśli ekran twojego urządzenia jest wyłączony podczas odtwarzania dźwięku, ekran włączy się i wyświetli komunikat na pełnym ekranie aż do jego wyłączenia.</string>
+    <string name="tag_more_find_device_footer_bull4">Jeśli ekran Twojego urządzenia jest wyłączony podczas odtwarzania dźwięku, ekran włączy się i wyświetli komunikat na pełnym ekranie aż do jego wyłączenia.</string>
     <string name="tag_more_find_device_footer_bull5"><b>Jeśli z tym SmartTagiem połączonych jest wiele urządzeń, sygnał odbierze tylko pierwsze z nich. Ta opcja działa najlepiej, gdy SmartTag jest połączony tylko z tym urządzeniem i nie jest udostępniany.</b></string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_title">Udostępniona etykieta</string>
-    <string name="tag_more_find_device_shared_tag_warning_dialog_content">Ta etykieta jest udostępniana innym użytkownikom. Gdy z etykietą połączonych jest jednocześnie kilka urządzeń, opcja \"Znajdź moje urządzenie” wysyła sygnał naciśnięcia przycisku tylko do tego, które połączyło się jako pierwsze. Jeśli udostępniasz etykietę innemu domownikowi, naciśnięcie przycisku może spowodować dzwonienie na niewłaściwym urządzeniu lub na żadnym. Dlatego ta opcja działa najlepiej z etykietami, które nie są udostępniane.</string>
+    <string name="tag_more_find_device_shared_tag_warning_dialog_content">Ta etykieta jest udostępniana innym użytkownikom. Gdy z etykietą połączonych jest jednocześnie kilka urządzeń, opcja „Znajdź moje urządzenie” wysyła sygnał naciśnięcia przycisku tylko do tego, które połączyło się jako pierwsze. Jeśli udostępniasz etykietę innemu domownikowi, naciśnięcie przycisku może spowodować dzwonienie na niewłaściwym urządzeniu lub na żadnym. Dlatego ta opcja działa najlepiej z etykietami, które nie są udostępniane.</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">Rozumiem</string>
     <string name="tag_more_find_device_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="tag_more_automation_title">Niestandardowe automatyzacje</string>
-    <string name="tag_more_automation_content">Set custom actions for pressing &amp; holding Tag button</string>
-    <string name="tag_more_automation_content_disabled">Connect to your Tag to use this option</string>
+    <string name="tag_more_automation_content">Ustaw niestandardowe akcje dla naciśnięcia i przytrzymania przycisku etykiety</string>
+    <string name="tag_more_automation_content_disabled">Aby korzystać z tej opcji, połącz się z etykietą</string>
     <string name="tag_more_automation_content_disabled_passive">Aby korzystać z tej funkcji, wyłącz tryb pasywny</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_title">Udostępniona etykieta</string>
-    <string name="tag_more_automation_shared_tag_warning_dialog_content">This Tag is shared with other users. The Automations option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may send the event the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
+    <string name="tag_more_automation_shared_tag_warning_dialog_content">Ta etykieta jest udostępniana innym użytkownikom. Gdy z etykietą połączonych jest jednocześnie kilka urządzeń, opcja Automatyzacje wysyła sygnał naciśnięcia przycisku tylko do tego, które połączyło się jako pierwsze. Jeśli udostępniasz etykietę innemu członkowi domu, naciśnięcie przycisku może wysłać sygnał na niewłaściwe urządzenie lub na żadne. Dlatego ta opcja działa najlepiej z etykietami, które nie są udostępniane.</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_dismiss">Rozumiem</string>
     <string name="tag_more_automation_press_title">Naciśnięto</string>
     <string name="tag_more_automation_press_content">Uruchom %1s</string>
@@ -505,10 +505,11 @@
     <string name="tag_more_automation_error_dialog_close">Zamknij</string>
     <string name="tag_more_automation_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="tag_more_automation_permission_title">Dodatkowe kroki konfiguracji</string>
-    <string name="tag_more_automation_permission_allow_title">Allow Permission</string>
+    <string name="tag_more_automation_permission_allow_title">Przyznaj uprawnienie</string>
     <string name="tag_more_automation_permission_allow_content">Przyznaj uprawienie do wyświetlania nad innymi aplikacjami</string>
     <string name="tag_more_automation_permission_restricted_title">Ustawienia z ograniczonym dostępem</string>
-    <string name="tag_more_automation_permission_restricted_content">If you get a message stating that \"Display over other apps\" is a <b>Restricted Setting</b>, you will need to allow restricted settings in the app info for uTag.\n\nTo do this:\n• Open the App Info page for uTag\n• In the overflow menu, select \"Allow restricted settings\"\n• Return to uTag and try to enable the \"Display over other apps\" permission again.</string>
+    <string name="tag_more_automation_permission_restricted_content">Jeśli otrzymasz komunikat, że „Wyświetlanie nad innymi aplikacjami” to <b>Ustawienie z ograniczonym dostępem</b>, musisz zezwolić na te ustawienia w informacjach o aplikacji.\n\nAby to zrobić:\n
+• Otwórz stronę Informacje o aplikacji dla uTag\n• W menu 3-kropek wybierz „Zezwól na ustawienia z ograniczonyn dostępem”\n• Wróć do uTag i spróbuj ponownie włączyć „Wyświetlanie nad innymi aplikacjami”.</string>
     <string name="tag_more_automation_permission_restricted_action">Otwórz informacje o aplikacji</string>
     <string name="tag_more_automation_type_app_title">Uruchom aplikację</string>
     <string name="tag_more_automation_type_app_content">Uruchom aplikację po wywołaniu tej automatyzacji.</string>
@@ -518,9 +519,9 @@
     <string name="tag_more_automation_type_shortcut_title">Uruchom skrót</string>
     <string name="tag_more_automation_type_shortcut_content">Uruchom skrót aplikacji po wywołaniu tej automatyzacji.</string>
     <string name="tag_more_automation_type_tasker_title">Zadanie Tasker\'a</string>
-    <string name="tag_more_automation_type_tasker_content">Start a Tasker task when this automation is invoked.</string>
+    <string name="tag_more_automation_type_tasker_content">Uruchom zadanie Tasker po wywołaniu tej automatyzacji.</string>
     <string name="tag_more_automation_type_tasker_dialog_title">Wystąpił błąd</string>
-    <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
+    <string name="tag_more_automation_type_tasker_dialog_content">Nie znaleziono zadań Tasker. Aby korzystać z tej opcji, upewnij się, że masz utworzone co najmniej jedno zadanie i że włączono opcję „Dostęp zewnętrzny” w menu Ustawienia > Różne.</string>
     <string name="tag_more_automation_type_tasker_dialog_close">Zamknij</string>
     <string name="button_volume_level_off">Wyciszony</string>
     <string name="button_volume_level_low">Niska</string>
@@ -545,7 +546,7 @@
     <string name="lost_mode_settings_switch">Włączony</string>
     <string name="lost_mode_settings_category">Personalizacja</string>
     <string name="lost_mode_settings_email">Adres e-mail (wymagane)</string>
-    <string name="lost_mode_settings_disabled">Custom URL is set</string>
+    <string name="lost_mode_settings_disabled">Ustawiono własny adres URL</string>
     <string name="lost_mode_settings_email_cannot_be_empty">Nieprawidłowy adres e-mail</string>
     <string name="lost_mode_settings_phone_number">Kontakt (opcjonalne)</string>
     <string name="lost_mode_settings_phone_number_default">Wprowadź informacje o kontaktach alarmowych na wypadek, gdyby ktoś znalazł Twoje urządzenie i chciał się z Tobą skontaktować</string>
@@ -559,7 +560,7 @@
     <string name="lost_mode_settings_category_advanced">Zaawansowane</string>
     <string name="lost_mode_settings_custom_url_title">Własny adres URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
-    <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
+    <string name="lost_mode_settings_custom_url_content_disconnected">Aby korzystać z tej opcji, połącz się z etykietą</string>
     <string name="lost_mode_settings_custom_url_content_passive">Aby korzystać z tej funkcji, wyłącz tryb pasywny</string>
     <string name="lost_mode_settings_custom_url_warning_title">Ważne ostrzeżenie</string>
     <string name="lost_mode_settings_custom_url_warning_content">Ustawienie niestandardowego adresu URL powoduje nadpisanie oryginalnego adresu zapisanego na SmartTagu. Aplikacja uTag spróbuje utworzyć kopię zapasową oryginalnego adresu, jednak <b>jeśli edytujesz lub wyłączysz Tryb utracony w aplikacji SmartThings, zostanie on bezpowrotnie utracony.</b> Zalecamy bezpieczne przechowywanie drugiej, zewnętrznej kopii oryginalnego adresu URL.</string>
@@ -584,7 +585,7 @@
     <string name="lost_mode_custom_url_warning" maxLength="40">Nie edytuj ani wylaczaj. Sprawdz wiki</string>
     <!-- Predefined lost messages (displayed locally only) -->
     <string name="this_smarttag_has_been_lost">Ten SmartTag został zgubiony.</string>
-    <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
+    <string name="this_is_a_lost_item">To zgubiony przedmiot, który jest dla mnie bardzo ważny. Proszę o pomoc w jego odzyskaniu.</string>
     <string name="im_tracking_this_item">Śledzę ten przedmiot i próbuję go odnaleźć. Proszę o kontakt.</string>
     <string name="help_my_lost_pet_come_back_home">Proszę o kontakt i pomoc w odnalezieniu mojego zaginionego zwierzaka.</string>
     <!-- Passive Mode -->
@@ -596,10 +597,10 @@
     <string name="passive_mode_lost_functionality_bull2">Dzwonienie do etykiety jest niedostępne</string>
     <string name="passive_mode_lost_functionality_bull3">Funkcja Znajdź moje urządzenie jest niedostępna</string>
     <string name="passive_mode_lost_functionality_bull4">Niestandardowe automatyzacje są niedostępne</string>
-    <string name="passive_mode_lost_functionality_bull5">Setting a custom lost mode URL is unavailable</string>
+    <string name="passive_mode_lost_functionality_bull5">Ustawienie niestandardowego URL Trybu Zgubione urządzenie jest niedostępne</string>
     <string name="passive_mode_lost_functionality_bull6">Po otwarciu SmartThings połączenie ze SmartTagiem może potrwać minutę lub dwie</string>
     <string name="passive_mode_lost_functionality_bull7">Powiadomienia o pozostawionej etykiecie mogą być opóźnione</string>
-    <string name="passive_mode_lost_functionality_footer"><b>You can disable Passive Mode at any time, without needing to be in range of the Tag, even temporarily to regain these functions as required.</b></string>
+    <string name="passive_mode_lost_functionality_footer"><b>Możesz wyłączyć Tryb pasywny w dowolnym momencie, bez potrzeby bycia w zasięgu etykiety, nawet tymczasowo, aby odzyskać dostęp do potrzebnych funkcji.</b></string>
     <string name="passive_mode_disabled_dialog_content">Tryb pasywny został wyłączony, SmartThings może zająć parę minut, aby ponownie połączyć się z Twoim Tagiem, jeżeli jest w pobliżu. Jeżeli się nie połączy, otwórz SmartThings, by połączyć się z nim ręcznie.</string>
     <!-- Battery levels -->
     <string name="battery_unknown">Nieznany</string>
@@ -648,20 +649,20 @@
     <string name="tag_pin_entry_content">Wprowadź swój PIN dla %1s, aby odszyfrować jego lokalizację.</string>
     <string name="tag_pin_entry_content_alt">Wprowadź kod PIN %1s, aby uzyskać jego lokalizację.</string>
     <string name="tag_pin_entry_error">Wprowadzono nieprawidłowy kod PIN, spróbuj ponownie</string>
-    <string name="tag_pin_entry_save">Securely store PIN on device to prevent needing to enter again</string>
+    <string name="tag_pin_entry_save">Bezpiecznie przechowuj kod PIN na urządzeniu, aby uniknąć konieczności jego ponownego wpisywania</string>
     <!-- Settings > Encryption -->
     <string name="settings_encryption_set_pin_title">Ustawianie kodu PIN</string>
-    <string name="settings_encryption_set_pin_content">Set a PIN for offline location encryption</string>
+    <string name="settings_encryption_set_pin_content">Ustaw kod PIN do szyfrowania lokalizacji offline</string>
     <string name="settings_encryption_reset_pin_title">Resetuj kod PIN</string>
     <string name="settings_encryption_reset_pin_content">Ustawiony %1s</string>
     <string name="settings_encryption_require_biometrics_title">Wymagaj biometrii do zmiany kodu PIN</string>
     <string name="settings_encryption_require_biometrics_content">Wymagaj użycia silnych zabezpieczeń biometrycznych, takich jak odcisk palca, do dodania lub zmiany kodu PIN. Domyślnie do uwierzytelniania można użyć kodu PIN blokady ekranu, co wiąże się z ryzykiem podglądania.</string>
     <string name="settings_encryption_error_dialog_title">Wystąpił błąd</string>
-    <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
+    <string name="settings_encryption_error_dialog_content">Wystąpił błąd podczas wczytywania informacji o szyfrowaniu, sprawdź swoje połączenie i spróbuj ponownie później</string>
     <string name="settings_encryption_error_dialog_close">Zamknij</string>
     <string name="settings_encryption_category_pin">PIN lokalizacji w trybie offline</string>
     <string name="settings_encryption_footer_title">Próbujesz włączyć lub wyłączyć szyfrowanie lokalizacji?</string>
-    <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
+    <string name="settings_encryption_footer_content">Można to zrobić w ustawieniach etykiety, dostępnych w menu \"Więcej\" widoku mapy</string>
     <string name="settings_encryption_reset_warning_dialog_title">Zresetować kod PIN?</string>
     <string name="settings_encryption_reset_warning_dialog_content">Jeśli zresetujesz kod PIN, wszystkie obecnie zgłoszone informacje na temat Twojego urządzenia zostaną usunięte. Jeżeli po zresetowaniu urządzenia zostanie ponownie wykryta jego lokalizacja, zostaniesz poproszony o wprowadzenie nowego kodu PIN.</string>
     <string name="settings_encryption_reset_warning_dialog_positive">Resetuj</string>
@@ -711,8 +712,8 @@
     <string name="about_version">Wersja %1s\nAutorstwa Kieron Quinn</string>
     <string name="about_contributors">Współtwórcy</string>
     <string name="about_crowdin">Crowdin</string>
-    <string name="about_debug_enabled">Developer options enabled</string>
-    <string name="about_debug_disabled">Developer options disabled</string>
+    <string name="about_debug_enabled">Opcję programisty włączone</string>
+    <string name="about_debug_disabled">Opcje programisty wyłączone</string>
     <!-- Contributors -->
     <string name="contributors_oneui_title">OneUI Project</string>
     <string name="contributors_oneui_content">Komponenty, styl i ikony OneUI</string>
@@ -722,8 +723,8 @@
     <string name="snackbar_update">Dostępna jest nowa wersja</string>
     <string name="snackbar_update_multiple">Aktualizacje dostępne</string>
     <string name="snackbar_update_button">Wyświetl</string>
-    <string name="update_notification">uTag version %1s</string>
-    <string name="update_notification_mod">SmartThings version %1s</string>
+    <string name="update_notification">Wersja %1s uTag</string>
+    <string name="update_notification_mod">Wersja %1s SmartThings</string>
     <string name="update_title_utag">Aktualizacja uTag</string>
     <string name="update_title_smartthings">Aktualizacja SmartThings</string>
     <string name="update_heading">Dostępna jest aktualizacja uTag</string>
@@ -787,7 +788,7 @@
     <string name="search_nearby_searching_content">Upewnij się, że %1s jest w zasięgu Bluetooth</string>
     <string name="search_nearby_timeout_title">Błąd połączenia</string>
     <string name="search_nearby_timeout_content">Nie udało się połączyć z etykietą. Upewnij się, że jest w zasięgu Bluetooth i spróbuj ponownie.</string>
-    <string name="search_nearby_timeout_content_alt">Odłączono od twojej etykiety. Upewnij się, że jest w zasięgu Bluetooth i spróbuj ponownie.</string>
+    <string name="search_nearby_timeout_content_alt">Odłączono od etykiety. Upewnij się, że jest w zasięgu Bluetooth i spróbuj ponownie.</string>
     <string name="search_nearby_timeout_close">Zamknij</string>
     <string name="search_nearby_uwb_disabled_title">UWB wyłączone</string>
     <string name="search_nearby_uwb_disabled_content">Precyzyjne znajdowanie Ultra-wideband jest dostępne na twoim urządzeniu. Włączyć funkcję UWB, aby używać tej funkcji?</string>
@@ -799,7 +800,7 @@
     <string name="search_nearby_bluetooth_disabled_negative">Anuluj</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings działa w tle</string>
-    <string name="notification_content_smartthings">uTag utrzymuje działanie SmartThings w tle. Naciśnij i przytrzymaj, aby ukryć to powiadomienie.</string>
+    <string name="notification_content_smartthings">Aplikacja uTag utrzymuje działanie SmartThings w tle. Przytrzymaj, aby ukryć to powiadomienie.</string>
     <string name="notification_title_background_service_zero">Nie połączono z żadną etykietą</string>
     <string name="notification_title_background_service_one">Połączono z %1d etykietą</string>
     <string name="notification_title_background_service_other">Połączono z %1d etykietami</string>
@@ -813,9 +814,9 @@
     <string name="notification_content_background_service_permissions">SmartThings wymaga dodatkowych uprawnień do działania uTag, naciśnij aby uzyskać więcej informacji</string>
     <string name="notification_action_background_service_error_action">Spróbuj ponownie</string>
     <string name="notification_title_bluetooth_error">Bluetooth jest wyłączony</string>
-    <string name="notification_content_bluetooth_error">uTag wymaga Bluetooth do łączenia się z etykietami, naciśnij, aby go włączyć</string>
+    <string name="notification_content_bluetooth_error">uTag potrzebuje Bluetooth do łączenia się z etykietami, naciśnij, aby go włączyć</string>
     <string name="notification_title_disconnect">Alert o pozostawieniu</string>
-    <string name="notification_content_disconnect">Pozostawiono urządzenie %1s!</string>
+    <string name="notification_content_disconnect">Urządzenie %1s zostało pozostawione!</string>
     <!-- Logged out notification -->
     <string name="notification_title_logged_out">Wylogowano</string>
     <string name="notification_content_logged_out">Zostałeś wylogowany ze SmartThings. Naciśnij, aby zalogować się ponownie.</string>
@@ -870,8 +871,8 @@
     <string name="safe_area_type_title">Wybór bezpiecznych miejsc</string>
     <string name="safe_area_type_location_permission_title">Wymagane uprawnienia do lokalizacji</string>
     <string name="safe_area_type_location_permission_content">Aplikacja uTag wymaga uprawnień do lokalizacji, aby korzystać z bezpiecznych miejsc. Ze względu na ograniczenia systemu Android nazwa sieci Wi-Fi oraz adresy MAC są traktowane jak dane lokalizacji.</string>
-    <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
-    <string name="safe_area_type_background_location_permission_content">uTag requires background location permissions update Safe Areas while not in the foreground.</string>
+    <string name="safe_area_type_background_location_permission_title">Wymagane uprawnienia do lokalizacji w tle</string>
+    <string name="safe_area_type_background_location_permission_content">Aplikacja uTag wymaga uprawnień do lokalizacji w tle, aby aktualizować bezpieczne miejsca, gdy działa w tle.</string>
     <string name="safe_area_type_grant">Przyznaj uprawnienie</string>
     <string name="safe_area_type_toast">Przyznaj w ustawieniach</string>
     <string name="safe_area_category_settings">Ustawienia</string>
@@ -1046,19 +1047,19 @@
     <string name="restore_progress_restoring_wifi_safe_areas">Przywracanie bezpiecznych miejsc Wi-Fi…</string>
     <string name="restore_progress_restoring_unknown_tags">Przywracanie przyjaznych etykiet…</string>
     <string name="restore_progress_restoring_settings">Przywracanie ustawień…</string>
-    <string name="restore_progress_restoring_complete">Przywracanie zakończone</string>
+    <string name="restore_progress_restoring_complete">Przywracanie kopii zapasowej zakończone</string>
     <string name="restore_progress_restoring_complete_content">Kopia zapasowa została przywrócona. Może być konieczne ponowne skonfigurowanie niektórych opcji, takich jak niestandardowe automatyzacje, aby zsynchronizować je z etykietą.</string>
     <string name="bottom_nav_settings">Ustawienia</string>
     <string name="bottom_nav_updates">Aktualizacje</string>
     <!-- Updates -->
     <string name="updates_title">Aktualizacje</string>
     <string name="updates_utag_available_title">Dostępna aktualizacja uTag</string>
-    <string name="updates_utag_available_content">Version %1s (current %1s)</string>
+    <string name="updates_utag_available_content">Wersja %1s (najnowsza %1s)</string>
     <string name="updates_utag_available_action">Wyświetl aktualizacje</string>
     <string name="updates_utag_updated_title">uTag jest aktualny</string>
     <string name="updates_utag_updated_content">Wersja %1s</string>
     <string name="updates_smartthings_available_title">Dostępna jest aktualizacja SmartThings</string>
-    <string name="updates_smartthings_available_content">Wersja %1s (zainstalowana %1s)</string>
+    <string name="updates_smartthings_available_content">Wersja %1s (najnowsza %1s)</string>
     <string name="updates_smartthings_available_action">Wyświetl aktualizacje</string>
     <string name="updates_smartthings_updated_title">SmartThings jest aktualne</string>
     <string name="updates_smartthings_updated_content">Wersja %1s</string>
