@@ -78,7 +78,7 @@
     <string name="settings_main_mod_error_title">Błąd</string>
     <string name="settings_main_mod_warning_title">Uwaga</string>
     <string name="settings_main_mod_no_smartthings_content">uTag nie udało się połączyć ze SmartThings. Upewnij się, że wciąż jest zainstalowane i spróbuj ponownie później. Jeżeli zostało odinstalowane, postępuj zgodnie z instrukcjami na karcie Aktualizacje, aby je ponownie zainstalować.</string>
-    <string name="settings_main_mod_not_activated_xposed_content">Modyfikacja u Tag dla SmartThings nie jest włączona. Jeśli korzystasz z Xposed, upewnij się, że moduł jest aktywny i uruchom ponownie urządzenie. Jeśli nie używasz Xposed, wykonaj instrukcje instalacji zmodyfikowanej wersji SmartThings w sekcji „Aktualizacje\".</string>
+    <string name="settings_main_mod_not_activated_xposed_content">Modyfikacja u Tag dla SmartThings nie jest włączona. Jeśli korzystasz z Xposed, upewnij się, że moduł jest aktywny i uruchom ponownie urządzenie. Jeśli nie używasz Xposed, wykonaj instrukcje instalacji zmodyfikowanej wersji SmartThings w sekcji „Aktualizacje”.</string>
     <string name="settings_main_mod_not_activated_patch_content">Modyfikacja uTag dla SmartThings nie jest włączona. Aby to naprawić, wykonaj instrukcje instalacji zmodyfikowanej wersji SmartThings w sekcji \"Aktualizacje\".</string>
     <string name="settings_main_mod_outdated_xposed_content">Modyfikacja uTag dla SmartThings jest nieaktualna. Niektóre funkcje mogą działać nieprawidłowo lub wcale. Wymuś zatrzymanie SmartThings albo uruchom ponownie urządzenie, aby to naprawić.</string>
     <string name="settings_main_mod_outdated_patch_content">Modyfikacja uTag dla SmartThings jest nieaktualna. Niektóre funkcje mogą działać nieprawidłowo lub wcale. Zaktualizuj SmartThings w sekcji „Aktualizacje”, aby rozwiązać problem.</string>
@@ -93,11 +93,11 @@
     <string name="settings_main_permissions_action">Przyznaj w ustawieniach</string>
     <string name="settings_main_category_settings">Ustawienia</string>
     <string name="settings_main_location_title">Lokalizacja i wyszukiwanie</string>
-    <string name="settings_main_location_content">Opcje aktualizacji lokalizacji, wyszukiwania w pobliżu, widżetów, nieznanych etykiet, sieci i bezpiecznych miejsc</string>
+    <string name="settings_main_location_content">Lokalizacja, szukanie w pobliżu, widżety, nieznane etykiety, sieć i bezpieczne miejsca</string>
     <string name="settings_main_map_title">Mapa</string>
     <string name="settings_main_map_content">Ustawienia i styl mapy dla funkcji znajdź i historii lokalizacji</string>
     <string name="settings_main_security_title">Ochrona i szyfrowanie</string>
-    <string name="settings_main_security_content">Szyfrowanie lokalizacji w trybie offline i logowanie biometryczne</string>
+    <string name="settings_main_security_content">Szyfrowanie lokalizacji w trybie offline i biometria</string>
     <string name="settings_main_updates_content_disabled">Powiadomienia o aktualizacji są wyłączone w ustawieniach systemu</string>
     <string name="settings_main_category_help">Pomoc</string>
     <string name="settings_main_faq_title">Często zadawane pytania</string>
@@ -110,7 +110,7 @@
     <string name="settings_main_advanced_content">Opcje języka, trybu influencera i analityki</string>
     <string name="settings_main_category_account">Konto</string>
     <string name="settings_main_category_samsung_account_title">Konto Samsung</string>
-    <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s (%1s)</string>
+    <string name="settings_main_category_samsung_account_content">Zalogowano jako %1s\n(%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Wystąpił błąd podczas uzyskiwania danych konta</string>
     <string name="settings_main_sign_out_title">Wyloguj</string>
     <string name="settings_main_sign_out_content">Czy chcesz się wylogować ze swojego konta Samsung? Aby dalej śledzić SmartTagi, konieczne będzie ponowne zalogowanie się\n\n<b>Uwaga</b> Mimo komunikatu wyświetlanego na kolejnej stronie nie zostaniesz wylogowany z innych aplikacji Samsunga na tym urządzeniu.</string>
@@ -138,7 +138,7 @@
     <string name="settings_location_uts_title">Szukaj nieznanych etykiet</string>
     <string name="settings_location_uts_content">Wyszukuj nieznane etykiety i powiadamiaj o możliwości śledzenia</string>
     <string name="settings_location_category_widget_title">Widżety</string>
-    <string name="settings_location_widget_period_title">Częstotliwość odświeżania widżetów</string>
+    <string name="settings_location_widget_period_title">Częstotliwość odś. widżetów</string>
     <string name="settings_location_widget_period_content">Jak często aktualizować widżety uTag: %1s</string>
     <string name="settings_location_widget_period_content_disabled">Nie dodano żadnych widżetów</string>
     <string name="settings_location_widget_period_never_content">Odświeży się tylko, gdy naciśniesz przycisk odśwież lub przy aktualizacji pozycji Taga przez uTag</string>
@@ -147,7 +147,7 @@
     <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
     <string name="settings_location_uwb_content">Używaj precyzyjnego znajdowania (UWB), jeśli jest wspierane przez Twoją etykietę.</string>
-    <string name="settings_location_uwb_long_distance_title">Kierunkowe znajdowanie na większą odległość</string>
+    <string name="settings_location_uwb_long_distance_title">Kierunkowe znajdowanie na odległość</string>
     <string name="settings_location_uwb_long_distance_content">Pozwala na kierunkowe precyzyjne znajdowanie z większej odległości, co może powodować błędne wskazania kierunku, gdy etykieta nie jest w zasięgu wzroku.</string>
     <string name="settings_location_uwb_disabled">Niedostępne na Twoim urządzeniu</string>
     <string name="settings_location_units_title">Jednostki odległości</string>
@@ -160,8 +160,8 @@
     <string name="settings_chaser_info_title">Wspieranie sieci Samsung Find</string>
     <string name="settings_chaser_info_content">Po włączeniu uTag będzie wysyłać lokalizację wykrytych w pobliżu etykiet podczas odświeżania lokalizacji, aby pomóc innym użytkownikom SmartTagów w znalezieniu ich przedmiotów.\n\nLokalizacje są całkowicie anonimowe i mogą być szyfrowane, jeśli etykieta ma włączone szyfrowanie lokalizacji.</string>
     <string name="settings_chaser_count_title">Twój wkład</string>
-    <string name="settings_chaser_count_content_one">Pomogłeś %1d raz w lokalizacji przedmiotu w sieci Znajdź moje urządzenie</string>
-    <string name="settings_chaser_count_content_other">Pomogłeś %1d razy w lokalizacji przedmiotu w sieci Znajdź moje urządzenie</string>
+    <string name="settings_chaser_count_content_one">Pomogłeś %1d raz w lokalizacji przedmiotu w sieci Samsung Find</string>
+    <string name="settings_chaser_count_content_other">Pomogłeś %1d razy w lokalizacji przedmiotu w sieci Samsung Find</string>
     <string name="settings_chaser_error_title">Błąd</string>
     <string name="settings_chaser_error_content">Wystąpił błąd podczas ładowania certyfikatu wymaganego dla tej funkcji, więc nie jest ona dostępna na Twoim urządzeniu.</string>
     <string name="settings_chaser_toast">Przyznaj w ustawieniach</string>
@@ -181,10 +181,10 @@
     <string name="settings_uts_list_unknown_tag_content">Ostatnio widziany: %1s</string>
     <string name="settings_uts_list_unknown_tag_content_at">Ostatnio widziano o %1s</string>
     <string name="settings_uts_list_unknown_tag_safe">Resetuj przyjazne etykiety</string>
-    <string name="settings_uts_list_empty_title">Nie napotkano nieznanych etykiet</string>
+    <string name="settings_uts_list_empty_title">Nie znaleziono nieznanych etykiet</string>
     <string name="settings_uts_list_empty_content">Nie wykryto w pobliżu żadnych etykiet lub nie spełniły one kryteriów wskazujących na możliwość śledzenia.\n\nAby etykieta wywołała alert o nieznanej etykiecie, musi pozostawać rozłączona z właścicielem przez 24 godziny oraz zostać wykryta w wielu lokalizacjach (oddalonych od siebie o co najmniej 500 metrów) w ciągu co najmniej 30 minut.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_title">Usunąć etykiety oznaczone jako przyjazne?</string>
-    <string name="settings_uts_list_tag_clear_safe_dialog_content">Zresetuje to bezpieczne etykiety, wyświetli wszystkie nieznane etykiety na liście i będzie pokazywać powiadomienia, jeśli zostaną one ponownie wykryte.</string>
+    <string name="settings_uts_list_tag_clear_safe_dialog_content">Zresetuje to przyjazne etykiety, wyświetli wszystkie nieznane etykiety na liście i będzie pokazywać powiadomienia, jeśli zostaną one ponownie wykryte.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">Wyczyść</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">Anuluj</string>
     <string name="settings_uts_tag_title">Nieznana etykieta w pobliżu</string>
@@ -239,14 +239,14 @@
     <string name="settings_advanced_auto_dismiss_notifications_title">Automatycznie usuwaj powiadomienia o pozostawieniu</string>
     <string name="settings_advanced_auto_dismiss_notifications_content">Automatycznie usuwaj powiadomienia o pozostawieniu i cele Smartspacer kiedy Tag znów znajdzie się w zasięgu.\n\n<b>Uwaga:</b>Może to powodować powiadomienia widmo, jeśli Tag wróci w zasięg zanim zobaczysz powiadomienie.</string>
     <string name="settings_advanced_prevent_overmature_title">Zapobiegaj trybowi \"overmature\" offline</string>
-    <string name="settings_advanced_prevent_overmature_content">Zapobiega przejściu posiadanej etykiety w tryb „overmature\" offline, który normalnie jest aktywowany po około 24 godzinach od rozłączenia z urządzeniem. Włączenie tej opcji uniemożliwia pojawianie się etykiety w skanach nieznanych etykiet, gdy znajduje się w pobliżu Twojego urządzenia\n\n<b>Uwaga:</b> Może to spowodować rzadsze aktualizacje lokalizacji z innych urządzeń Samsung, gdy Tag jest blisko tego urządzenia.</string>
+    <string name="settings_advanced_prevent_overmature_content">Zapobiega przejściu posiadanej etykiety w tryb „overmature” offline, który normalnie jest aktywowany po około 24 godzinach od rozłączenia z urządzeniem. Włączenie tej opcji uniemożliwia pojawianie się etykiety w skanach nieznanych etykiet, gdy znajduje się w pobliżu Twojego urządzenia\n\n<b>Uwaga:</b> Może to spowodować rzadsze aktualizacje lokalizacji z innych urządzeń Samsung, gdy Tag jest blisko tego urządzenia.</string>
     <string name="settings_advanced_debug_title">Tryb debugowania</string>
     <string name="settings_advanced_debug_content">Włącza bardziej szczegółowe rejestrowanie i elementy interfejsu debugowania w celach testowych</string>
     <string name="settings_advanced_language">Język</string>
     <string name="settings_advanced_clear_addresses_title">Usuń zapisane adresy</string>
     <string name="settings_advanced_clear_addresses_content">Czyści lokalną, zaszyfrowaną pamięć adresów z lokalizacji etykiet oraz historii lokalizacji</string>
     <string name="settings_advanced_clear_addresses_dialog_title">Wyczyścić zapisane adresy?</string>
-    <string name="settings_advanced_clear_addresses_dialog_content">Addresses for Tag locations and location history will need to be rebuilt when next required, which may take some time and use data.</string>
+    <string name="settings_advanced_clear_addresses_dialog_content">Adresy lokalizacji etykiet i historii lokalizacji będą musiały zostać ponownie pobrane przy kolejnym użyciu. Może to chwilę potrwać i spowodować zużycie danych.</string>
     <string name="settings_advanced_clear_addresses_dialog_positive">Wyczyść</string>
     <string name="settings_advanced_clear_addresses_toast">Usunięto zapisane adresy</string>
     <string name="settings_language_info_title">Uwaga</string>
@@ -312,8 +312,8 @@
     <string name="map_timestamp_hour_ago">%1d godzinę temu</string>
     <string name="map_timestamp_hours_ago">%1d godzin temu</string>
     <string name="map_searching_dialog_title">Nie udało się połączyć z etykietą</string>
-    <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
-    <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
+    <string name="map_searching_dialog_content">uTag nie udało połączyć się z %1s. Upewnij się, że znajdujesz się w zasięgu Bluetooth, i spróbuj ponownie. Jeśli problem nadal występuje, uruchom ponownie aplikacje SmartThings i uTag.\n\nJeśli jesteś poza zasięgiem i szukasz etykiety, włącz tryb wyszukiwania. Otrzymasz powiadomienie, gdy zostanie ona odnaleziona przez inne urządzenie.</string>
+    <string name="map_searching_dialog_enable_searching">Włącz Tryb wyszukiwania</string>
     <string name="map_searching_dialog_cancel">Zamknij</string>
     <string name="map_allow_access_dialog_title">Udostępnić lokalizację?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[Lokalizacja etykiety i Twojego urządzenia będzie udostępniana członkowi, gdy etykieta połączy się z Twoim urządzeniem. Możesz w dowolnym momencie zakończyć udostępnianie lokalizacji, przechodząc do ustawień aplikacji uTag. Samsung będzie gromadzić dane lokalizacji i udostępniać je członkom, a także przetwarzać te dane zgodnie z ich <a href="%1s">Zasadami prywatności</a>]]></string>
@@ -384,7 +384,7 @@
     <string name="tag_location_history_info_content_header">Złożone z %1d lokalizacji</string>
     <string name="tag_location_history_info_content_item">Lokalizacja %1d:\n\nSzerokość geograficzna: %1s\nDługość geograficzna: %1s\nCzas: %1s\nDokładność: %1s\nPrędkość: %1s\nRSSI: %1s\nBateria: %1s\nMetoda: %1s\nHost lokalizacji: %1s\nW pobliżu: %1s\nNa żądanie: %1s\nID połączonego użytkownika: %1s\nID połączonego urządzenia: %1s\nStatus D2D: %1s\nByło szyfrowane: %1s</string>
     <!-- More page -->
-    <string name="tag_more_search_nearby">Znajdowanie w pobliżu</string>
+    <string name="tag_more_search_nearby">Szukaj w pobliżu</string>
     <string name="tag_more_search_nearby_disabled">Aby korzystać z tej funkcji, wyłącz tryb pasywny</string>
     <string name="tag_more_navigate">Nawiguj</string>
     <string name="tag_more_category_notifications">Powiadomienia</string>
@@ -408,7 +408,7 @@
     <string name="tag_more_notify_when_disconnected_notifications_dnd_title">Włączono tryb Nie przeszkadzać</string>
     <string name="tag_more_notify_when_disconnected_notifications_dnd_content">Tryb Nie przeszkadzać jest włączony, a kanał powiadomień <b>Alerty o pozostawieniu</b> nie został dodany do wyjątków, więc możesz nie zauważyć alertów o pozostawieniu</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Wymagane uprawnienie</string>
-    <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
+    <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">Aplikacja uTag wymaga uprawnienia \"Powiadomienia pełnoekranowe”, aby móc włączyć dzwonienie w tle</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Zezwól w ustawieniach</string>
     <string name="tag_more_lost_mode_title">Tryb Zgubione urządzenie</string>
     <string name="tag_more_category_protect">Ochrona</string>
@@ -450,10 +450,10 @@
     <string name="tag_more_find_device_notifications_silenced_content">Kategoria powiadomień <b>Znajdź moje urządzenie</b> została wyciszona, przez co uTag nie będzie mogło włączyć dzwonka. Ustaw ją na <b>Domyślne</b> i włącz <b>Pokazuj na ekranie</b>, aby umożliwić dzwonienie</string>
     <string name="tag_more_find_device_full_screen_permission_required_title">Permission required</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">Aplikacja uTag wymaga uprawnienia „Powiadomienia pełnoekranowe”, aby móc włączyć dzwonienie w tle</string>
-    <string name="tag_more_find_device_full_screen_permission_required_action">Allow permission in settings</string>
-    <string name="tag_more_find_device_pet_walking_enabled_title">Pet Walking is Enabled</string>
-    <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
-    <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
+    <string name="tag_more_find_device_full_screen_permission_required_action">Zezwól w ustawieniach</string>
+    <string name="tag_more_find_device_pet_walking_enabled_title">Włączono Tryb Spacer z pupilem</string>
+    <string name="tag_more_find_device_pet_walking_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Rozpocznij spacer z pupilem” dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również rozpocząć spacer z pupilem na innym urządzeniu. Aby temu zapobiec, wyłącz opcję „Rozpocznij spacer z pupilem”.\n\n<b>Uwaga:</b> Tryb Spacer z pupilem nie jest obecnie obsługiwany przez aplikację uTag.</string>
+    <string name="tag_more_find_device_pet_walking_disable_action">Wyłącz Rozpocznij spacer z pupilem</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Włączone na urządzeniu Samsung</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Znajdź mój telefon lub tablet\" dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również spowodować dzwonienie innego urządzenia. Aby temu zapobiec, wyłącz tę opcję.</string>
     <string name="tag_more_find_device_remote_ring_disable_action">Wyłącz Znajdź mój telefon lub tablet</string>
@@ -471,7 +471,7 @@
     <string name="tag_more_find_device_footer_bull4">Jeśli ekran twojego urządzenia jest wyłączony podczas odtwarzania dźwięku, ekran włączy się i wyświetli komunikat na pełnym ekranie aż do jego wyłączenia.</string>
     <string name="tag_more_find_device_footer_bull5"><b>Jeśli z tym SmartTagiem połączonych jest wiele urządzeń, sygnał odbierze tylko pierwsze z nich. Ta opcja działa najlepiej, gdy SmartTag jest połączony tylko z tym urządzeniem i nie jest udostępniany.</b></string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_title">Udostępniona etykieta</string>
-    <string name="tag_more_find_device_shared_tag_warning_dialog_content">This Tag is shared with other users. The Find my Device option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may ring the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
+    <string name="tag_more_find_device_shared_tag_warning_dialog_content">Ta etykieta jest udostępniana innym użytkownikom. Gdy z etykietą połączonych jest jednocześnie kilka urządzeń, opcja \"Znajdź moje urządzenie” wysyła sygnał naciśnięcia przycisku tylko do tego, które połączyło się jako pierwsze. Jeśli udostępniasz etykietę innemu domownikowi, naciśnięcie przycisku może spowodować dzwonienie na niewłaściwym urządzeniu lub na żadnym. Dlatego ta opcja działa najlepiej z etykietami, które nie są udostępniane.</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">Rozumiem</string>
     <string name="tag_more_find_device_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="tag_more_automation_title">Niestandardowe automatyzacje</string>
@@ -522,7 +522,7 @@
     <string name="tag_more_automation_type_tasker_dialog_title">Wystąpił błąd</string>
     <string name="tag_more_automation_type_tasker_dialog_content">No Tasker tasks found. Make sure you\'ve created at least one Task, and that \"External Access\" in Tasker\'s Settings &gt; Misc is enabled to use this option.</string>
     <string name="tag_more_automation_type_tasker_dialog_close">Zamknij</string>
-    <string name="button_volume_level_off">Wyciszona</string>
+    <string name="button_volume_level_off">Wyciszony</string>
     <string name="button_volume_level_low">Niska</string>
     <string name="button_volume_level_high">Wysoka</string>
     <!-- More Battery Dialog -->
@@ -735,7 +735,7 @@
     <string name="update_done_content_smartthings"><b>Uwaga:</b> Etykiety mogą się rozłączyć podczas procesu aktualizacji.</string>
     <string name="update_done_action">Rozpocznij instalację</string>
     <string name="update_action">Pobierz</string>
-    <string name="update_action_alt">Alternative download</string>
+    <string name="update_action_alt">Alternatywne pobieranie</string>
     <string name="download_manager_description">Pobieranie aktualizacji…</string>
     <string name="download_manager_description_mod">Pobieranie SmartThings…</string>
     <string name="update_downloader_downloading_title">Pobieranie aktualizacji…</string>
@@ -806,19 +806,19 @@
     <string name="notification_title_background_service_passive">%1s (W Trybie pasywnym)</string>
     <string name="notification_title_background_service_error_short">uTag</string>
     <string name="notification_title_background_service_error">Błąd uTag</string>
-    <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
+    <string name="notification_content_background_service_error">Nie udało się połączyć z SmartThings. Naciśnij, aby uzyskać więcej informacji.</string>
     <string name="notification_title_background_service_battery">Wyłącz optymalizację baterii</string>
     <string name="notification_content_background_service_battery">uTag wymaga wyłączenia optymalizacji baterii dla %1s, naciśnij aby wyłączyć</string>
     <string name="notification_title_background_service_permissions">Błąd uTag</string>
-    <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
+    <string name="notification_content_background_service_permissions">SmartThings wymaga dodatkowych uprawnień do działania uTag, naciśnij aby uzyskać więcej informacji</string>
     <string name="notification_action_background_service_error_action">Spróbuj ponownie</string>
     <string name="notification_title_bluetooth_error">Bluetooth jest wyłączony</string>
-    <string name="notification_content_bluetooth_error">uTag requires Bluetooth to connect to your Tags, tap to enable</string>
+    <string name="notification_content_bluetooth_error">uTag wymaga Bluetooth do łączenia się z etykietami, naciśnij, aby go włączyć</string>
     <string name="notification_title_disconnect">Alert o pozostawieniu</string>
     <string name="notification_content_disconnect">Pozostawiono urządzenie %1s!</string>
     <!-- Logged out notification -->
     <string name="notification_title_logged_out">Wylogowano</string>
-    <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
+    <string name="notification_content_logged_out">Zostałeś wylogowany ze SmartThings. Naciśnij, aby zalogować się ponownie.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Znajdź moje urządzenie</string>
     <string name="notification_content_find_my_device_delay">%1s za chwilę uruchomi dzwonek na tym urządzeniu</string>
@@ -826,7 +826,7 @@
     <string name="notification_content_find_my_device">%1s próbuje znaleźć to urządzenie</string>
     <string name="notification_content_find_my_device_generic">Twój SmartTag próbuje znaleźć to urządzenie</string>
     <string name="notification_action_find_my_device">Zatrzymaj</string>
-    <string name="notification_content_find_my_device_error">Unable to start ringing as Find my Device is not set up correctly, check the Tag\'s settings for more info</string>
+    <string name="notification_content_find_my_device_error">Nie można rozpocząć dzwonienia, ponieważ opcja Znajdź moje urządzenie nie jest poprawnie skonfigurowana. Sprawdź ustawienia etykiety, aby uzyskać więcej informacji</string>
     <!-- Unknown Tag -->
     <string name="notification_title_unknown_tag_one">Wykryto nieznaną etykietę</string>
     <string name="notification_title_unknown_tag_other">Wykryto nieznane etykiety</string>
@@ -834,7 +834,7 @@
     <string name="notification_content_unknown_tag_other">Wykryto nieznane etykiety, które mogą Cię śledzić. Dotknij, aby uzyskać więcej informacji.</string>
     <!-- Automation -->
     <string name="notification_title_automation">Automatyzacja</string>
-    <string name="notification_content_automation_error">Unable to start this automation as uTag is not set up correctly. Check the Tag\'s settings for more info</string>
+    <string name="notification_content_automation_error">Nie można uruchomić tej automatyzacji, ponieważ uTag nie jest poprawnie skonfigurowane. Sprawdź ustawienia etykiety, aby uzyskać więcej informacji</string>
     <!-- Refresh Periods -->
     <string name="refresh_period_five_minutes">Co 5 minut</string>
     <string name="refresh_period_ten_minutes">Co 10 minut</string>
@@ -851,8 +851,8 @@
     <string name="refresh_period_never">Nigdy</string>
     <!-- Safe Area -->
     <string name="notification_title_safe_area">Bezpieczne miejsce</string>
-    <string name="notification_content_safe_area_error_permissions">Unable to set up uTag Safe Areas. Check Location permissions are set to \"Allow all the time\" for uTag.</string>
-    <string name="notification_content_safe_area_error_location">Unable to get location to update your Safe Areas. Disconnect notifications may be incorrect.</string>
+    <string name="notification_content_safe_area_error_permissions">Nie można skonfigurować bezpiecznych miejsc uTag. Sprawdź, czy uprawnienia do lokalizacji dla uTag są ustawione na \"Zawsze zezwalaj”.</string>
+    <string name="notification_content_safe_area_error_location">Nie udało się pobrać lokalizacji, aby zaktualizować bezpieczne miejsca. Powiadomienia o rozłączeniu mogą być nieprawidłowe.</string>
     <string name="notification_action_safe_area_retry">Spróbuj ponownie</string>
     <string name="safe_area_save">Zapisz</string>
     <string name="safe_area_delete">Usuń</string>
@@ -872,13 +872,13 @@
     <string name="safe_area_type_location_permission_content">Aplikacja uTag wymaga uprawnień do lokalizacji, aby korzystać z bezpiecznych miejsc. Ze względu na ograniczenia systemu Android nazwa sieci Wi-Fi oraz adresy MAC są traktowane jak dane lokalizacji.</string>
     <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
     <string name="safe_area_type_background_location_permission_content">uTag requires background location permissions update Safe Areas while not in the foreground.</string>
-    <string name="safe_area_type_grant">Grant Permission</string>
+    <string name="safe_area_type_grant">Przyznaj uprawnienie</string>
     <string name="safe_area_type_toast">Przyznaj w ustawieniach</string>
     <string name="safe_area_category_settings">Ustawienia</string>
     <string name="safe_area_show_image_title">Pokaż obraz mapy</string>
     <string name="safe_area_show_image_content">Wyświetlaj w powiadomieniu statyczną mapę z ostatnią lokalizacją etykiety, jeśli jest dostępna.</string>
     <string name="safe_area_show_image_content_biometrics"><b>Ostrzeżenie:</b> Włączono logowanie biometryczne w aplikacji uTag. Ta opcja pokaże ostatnią lokalizację etykiety bez konieczności weryfikacji biometrycznej. Zachowaj ostrożność.</string>
-    <string name="safe_area_type_location_title">Miejsce</string>
+    <string name="safe_area_type_location_title">Miejsca</string>
     <string name="safe_area_type_location_content">Aktywuj to bezpieczne miejsce w promieniu wybranego obszaru</string>
     <string name="safe_area_type_wifi_title">Sieci Wi-Fi</string>
     <string name="safe_area_type_wifi_content">Aktywuj to bezpieczne miejsce po połączeniu z wybraną siecią Wi-Fi</string>
@@ -894,7 +894,7 @@
     <string name="safe_area_wifi_mac_content_empty">Adres MAC sieci Wi-Fi</string>
     <string name="safe_area_wifi_mac_dialog_message">Wprowadź adres MAC sieci Wi-Fi, przy połączeniu z którą to bezpieczne miejsce będzie aktywne. Opcjonalne, ale przydatne, jeśli masz kilka sieci Wi-Fi o tej samej nazwie.</string>
     <string name="safe_area_wifi_exit_buffer_title">Okres buforowy</string>
-    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy czas między opuszczeniem bezpiecznego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest przydatny, gdy Wi‑Fi lub Bluetooth rozłącza się, mimo że Tag nie opuścił bezpiecznego miejsca.</string>
+    <string name="safe_area_wifi_exit_buffer_content">Dodatkowy czas między opuszczeniem bezpiecznego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nJest przydatny, gdy Wi‑Fi lub Bluetooth rozłącza się, mimo że etykieta nie opuściła bezpiecznego miejsca.</string>
     <string name="safe_area_wifi_invalid_ssid">Wprowadź nazwę sieci Wi-Fi</string>
     <string name="safe_area_wifi_invalid_mac">Wprowadź prawidłowy adres MAC</string>
     <string name="safe_area_location_name_toast">Dotknij mapy lub przeciągnij znacznik, aby przenieść bezpieczne miejsce</string>
@@ -904,7 +904,7 @@
     <string name="safe_area_location_radius_title">Promień</string>
     <string name="safe_area_location_radius_content">Rozmiar tego bezpiecznego miejsca</string>
     <string name="safe_area_location_exit_buffer_title">Okres przejściowy</string>
-    <string name="safe_area_location_exit_buffer_content">Dodatkowy okres przejściowy między opuszczeniem tego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nPrzydatne, gdy opuścisz miejsce wcześniej niż Tag, mimo że Tag nadal znajduje się w bezpiecznym miejscu.</string>
+    <string name="safe_area_location_exit_buffer_content">Dodatkowy okres przejściowy między opuszczeniem tego miejsca a uznaniem Taga za \"niebezpieczny\": %1s.\n\nPrzydatne, gdy opuścisz miejsce wcześniej niż Tag, mimo że etykieta nadal znajduje się w bezpiecznym miejscu.</string>
     <string name="safe_area_location_error_dialog_title">Nie udało się uzyskać lokalizacji</string>
     <string name="safe_area_location_error_dialog_content">Nie udało się uzyskać Twojej lokalizacji, spróbuj ponownie później</string>
     <string name="safe_area_location_error_dialog_close">Zamknij</string>
@@ -918,8 +918,8 @@
     <string name="safe_area_buffer_fifteen">15 Minut</string>
     <!-- Unsupported Intent dialog -->
     <string name="unsupported_intent_dialog_title">Nieobsługiwane</string>
-    <string name="unsupported_intent_dialog_content_generic">This action is currently not supported by uTag. If you think this is an error, please open a GitHub issue with a screenshot of this dialog - but make sure there\'s not an already open issue for this action type first.\n\nAction type: %1s</string>
-    <string name="unsupported_intent_dialog_content_pet">Pet Walking is currently not supported by uTag. If you\'d use this feature, please thumb up the issue on the GitHub.</string>
+    <string name="unsupported_intent_dialog_content_generic">Ta akcja nie jest obecnie obsługiwana przez aplikację uTag. Jeśli uważasz, że to błąd, zgłoś problem na GitHubie, dołączając zrzut ekranu tego okna - ale najpierw upewnij się, że nie ma już otwartego zgłoszenia dla tego typu akcji.\n\nTyp akcji: %1s</string>
+    <string name="unsupported_intent_dialog_content_pet">Tryb Spacer z pupilem nie jest obecnie obsługiwany przez uTag. Jeśli chciałbyś zobaczyć tę funkcję w niedalekiej przyszłości, zareaguj kciukiem w górę w zgłoszeniu na GitHubie.</string>
     <string name="unsupported_intent_dialog_close">Zamknij</string>
     <string name="unsupported_intent_dialog_github">GitHub</string>
     <!-- Location Staleness -->
@@ -960,7 +960,7 @@
     <string name="widget_configuration_preview_loading">Wczytywanie podglądu…</string>
     <string name="widget_configuration_options_label">Opcje</string>
     <string name="widget_configuration_location_devices_title">Wybrane etykiety</string>
-    <string name="widget_configuration_location_devices_content">Wybierz Tagi do pokazania na tym widżecie</string>
+    <string name="widget_configuration_location_devices_content">Wybierz etykiety do pokazania na tym widżecie</string>
     <string name="widget_configuration_location_click_device_title">Otwierana etykieta</string>
     <string name="widget_configuration_location_click_device_content">Etykieta, która zostanie wyświetlona w uTag po naciśnięciu widżetu: %1s</string>
     <string name="widget_configuration_location_status_device_title">Etykieta priorytetowa</string>
