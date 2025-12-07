@@ -173,7 +173,7 @@
     <string name="settings_uts_view_unknown_title">Pokaż nieznane etykiety</string>
     <string name="settings_uts_list_title">Pokaż nieznane etykiety</string>
     <string name="settings_uts_list_info_title">Nieznane etykiety</string>
-    <string name="settings_uts_list_info_content">Unknown Tags are stored for 24 hours. If you interact with them, no indication is sent to their owner.</string>
+    <string name="settings_uts_list_info_content">Nieznane etykiety są przechowywane przez 24 godziny. Jeśli wejdziesz z nimi w interakcję, do ich właściciela nie zostanie wysłana żadna informacja.</string>
     <string name="settings_uts_category_settings">Ustawienia</string>
     <string name="settings_uts_sensitivity_title">Czułość</string>
     <string name="settings_uts_sensitivity_content">Wyższa czułość może powodować fałszywe alarmy, za to niższa czułość może wydłużyć czas wykrywania nieznanego Tagu, który Cię śledzi.</string>
@@ -183,7 +183,7 @@
     <string name="settings_uts_list_unknown_tag_safe">Resetuj przyjazne etykiety</string>
     <string name="settings_uts_list_empty_title">Nie napotkano nieznanych etykiet</string>
     <string name="settings_uts_list_empty_content">Nie wykryto w pobliżu żadnych etykiet lub nie spełniły one kryteriów wskazujących na możliwość śledzenia.\n\nAby etykieta wywołała alert o nieznanej etykiecie, musi pozostawać rozłączona z właścicielem przez 24 godziny oraz zostać wykryta w wielu lokalizacjach (oddalonych od siebie o co najmniej 500 metrów) w ciągu co najmniej 30 minut.</string>
-    <string name="settings_uts_list_tag_clear_safe_dialog_title">Clear Safe Tags?</string>
+    <string name="settings_uts_list_tag_clear_safe_dialog_title">Usunąć etykiety oznaczone jako przyjazne?</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_content">Zresetuje to bezpieczne etykiety, wyświetli wszystkie nieznane etykiety na liście i będzie pokazywać powiadomienia, jeśli zostaną one ponownie wykryte.</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_positive">Wyczyść</string>
     <string name="settings_uts_list_tag_clear_safe_dialog_negative">Anuluj</string>
@@ -316,11 +316,11 @@
     <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
     <string name="map_searching_dialog_cancel">Zamknij</string>
     <string name="map_allow_access_dialog_title">Udostępnić lokalizację?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[Lokalizacja etykiety i Twojego urządzenia będzie udostępniana członkowi, gdy etykieta połączy się z Twoim urządzeniem. Możesz w dowolnym momencie zakończyć udostępnianie lokalizacji, przechodząc do ustawień aplikacji uTag. Samsung będzie gromadzić dane lokalizacji i udostępniać je członkom, a także przetwarzać te dane zgodnie z ich <a href="%1s">Zasadami prywatności</a>]]></string>
     <string name="map_allow_access_dialog_positive">Udostępnij</string>
     <string name="map_allow_access_dialog_negative">Anuluj</string>
     <string name="map_passive_mode_dialog_title">Włączono tryb pasywny</string>
-    <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
+    <string name="map_passive_mode_dialog_content_ring">Dla tej etykiety włączony jest tryb pasywny. Aby umożliwić dzwonienie, wyłącz go w menu „Więcej”.\n\n<b>Uwaga:</b> Po zadzwonieniu na etykietę możesz ponownie włączyć tryb pasywny.</string>
     <string name="map_passive_mode_dialog_content_search_nearby">Tryb pasywny jest obecnie włączony dla tej etykiety, wyłącz go w zakładce \"więcej\" ustawień, aby użyć opcji Szukaj w pobliżu.\n\n<b>Uwaga:</b>Możesz ponownie włączyć tryb pasywny później.</string>
     <string name="map_offline_dialog_title">Nie udało się odświeżyć</string>
     <string name="map_offline_dialog_content">Aplikacja uTag nie mogła odświeżyć lokalizacji Twojego SmartTaga. Sprawdź połączenie sieciowe i spróbuj ponownie. Nadal możesz sprawdzić ostatni znany stan SmartTaga oraz funkcje Bluetooth, gdy znajdujesz się w jego pobliżu.</string>
@@ -336,7 +336,7 @@
     <string name="tag_picker_favourites_tip_content">Set your Tags as a favourites and they will show on the map as well as your selected Tag</string>
     <string name="tag_picker_favourites_tip_action">Edytuj ulubione</string>
     <string name="tag_picker_shared">Etykieta użytkownika %1s</string>
-    <string name="tag_picker_selected">Selected</string>
+    <string name="tag_picker_selected">Wybrane</string>
     <string name="tag_picker_agreement_required">Agreement required</string>
     <string name="tag_picker_not_allowed">Niedozwolone</string>
     <string name="tag_picker_shared_and_selected">Etykieta użytkownika %1s • wybrana</string>
@@ -369,11 +369,11 @@
     <string name="tag_location_history_delete_dialog_delete">Usuń</string>
     <string name="tag_location_history_delete_error">Wystąpił błąd, spróbuj ponownie.</string>
     <string name="tag_location_history_delete_disabled">Usuwanie jest niedostępne, ponieważ włączony jest Tryb influencera</string>
-    <string name="tag_location_history_decrypt_failed">Some locations may not be shown as they could not be decrypted</string>
+    <string name="tag_location_history_decrypt_failed">Niektóre lokalizacje mogą nie być wyświetlane, ponieważ nie udało się ich odszyfrować</string>
     <string name="tag_location_history_export">Eksportuj historię</string>
     <string name="tag_location_history_export_disabled">Eksportowanie zostało wyłączone przez tryb influencera</string>
     <string name="tag_location_history_export_dialog_content">Ta opcja eksportuje historię lokalizacji dla %1s z ostatnich 7 dni do pliku CSV. Zawiera kilka dodatkowych informacji, które nie są wyświetlane w aplikacji, takich jak poziom baterii, siła sygnału i źródło aktualizacji (w miarę dostępności).\n\nNależy pamiętać, że nie można ponownie zaimportować tych danych, ta opcja dotyczy wyłącznie zewnętrznej analizy historii.</string>
-    <string name="tag_location_history_export_dialog_warning"><b>Note:</b> Locations which failed to decrypt will be omitted from the export.</string>
+    <string name="tag_location_history_export_dialog_warning"><b>Uwaga:</b> Lokalizacje, których nie udało się odszyfrować, zostaną pominięte podczas eksportu.</string>
     <string name="tag_location_history_export_dialog_export">Eksportuj</string>
     <string name="tag_location_history_export_dialog_cancel">Anuluj</string>
     <string name="tag_location_history_export_error_toast">Brak historii do eksportu</string>
@@ -398,13 +398,13 @@
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Włączono</string>
     <string name="tag_more_notify_when_disconnected_switch">Włączono</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_title">Bezpieczne miejsca</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_content">Bezpieczne miejsca to obszary, w których możesz pozostawić etykietę bez otrzymywania powiadomień. Istnieją dwa rodzaje bezpiecznych miejsc:\n\n• Miejsce: aktywne, gdy znajdujesz się w określonym promieniu od wybranej lokalizacji.\n• Sieć Wi-Fi: aktywne, gdy masz połączenie z wybraną siecią Wi-Fi.</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Powiadomienia wyłączone</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Powiadomienia aplikacji uTag są wyłączone. Aby ta opcja działała, należy je włączyć</string>
-    <string name="tag_more_notify_when_disconnected_notifications_disabled_content_channel">The <b>Left Behind Alerts</b> notification channel is disabled, it must be enabled for this option to work</string>
+    <string name="tag_more_notify_when_disconnected_notifications_disabled_content_channel">Kategoria powiadomień <b>Alerty o pozostawieniu</b> jest wyłączona. Aby ta opcja działała, należy ją włączyć</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_action">Ustawienia powiadomień</string>
     <string name="tag_more_notify_when_disconnected_notifications_silenced_title">Powiadomienia wyciszone</string>
-    <string name="tag_more_notify_when_disconnected_notifications_silenced_content">The <b>Left Behind Alerts</b> notification channel has been silenced, so you may not notice left behind alerts</string>
+    <string name="tag_more_notify_when_disconnected_notifications_silenced_content">Kategoria powiadomień <b>Alerty o pozostawieniu</b> została wyciszona, przez co możesz nie zauważyć alertów o pozostawieniu</string>
     <string name="tag_more_notify_when_disconnected_notifications_dnd_title">Włączono tryb Nie przeszkadzać</string>
     <string name="tag_more_notify_when_disconnected_notifications_dnd_content">Tryb Nie przeszkadzać jest włączony, a kanał powiadomień <b>Alerty o pozostawieniu</b> nie został dodany do wyjątków, więc możesz nie zauważyć alertów o pozostawieniu</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Wymagane uprawnienie</string>
@@ -444,10 +444,10 @@
     <string name="tag_more_find_device_category_settings">Ustawienia</string>
     <string name="tag_more_find_device_notifications_disabled_title">Powiadomienia wyłączone</string>
     <string name="tag_more_find_device_notifications_disabled_content">Powiadomienia aplikacji uTag są wyłączone. Aby ta opcja działała, należy je włączyć</string>
-    <string name="tag_more_find_device_notifications_disabled_content_channel">The <b>Find my Device</b> notification channel is disabled, it must be enabled for this option to work</string>
+    <string name="tag_more_find_device_notifications_disabled_content_channel">Kategoria powiadomień <b>Znajdź moje urządzenie</b> jest wyłączona. Aby ta opcja działała, należy ją włączyć</string>
     <string name="tag_more_find_device_notifications_disabled_action">Ustawienia powiadomień</string>
     <string name="tag_more_find_device_notifications_silenced_title">Powiadomienia wyciszone</string>
-    <string name="tag_more_find_device_notifications_silenced_content">The <b>Find my Device</b> notification channel has been silenced, so uTag will not be able to start ringing. Set it to <b>Default</b> and enable <b>Pop on screen</b> to allow ringing</string>
+    <string name="tag_more_find_device_notifications_silenced_content">Kategoria powiadomień <b>Znajdź moje urządzenie</b> została wyciszona, przez co uTag nie będzie mogło włączyć dzwonka. Ustaw ją na <b>Domyślne</b> i włącz <b>Pokazuj na ekranie</b>, aby umożliwić dzwonienie</string>
     <string name="tag_more_find_device_full_screen_permission_required_title">Permission required</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_find_device_full_screen_permission_required_action">Allow permission in settings</string>
@@ -455,8 +455,8 @@
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Włączone na urządzeniu Samsung</string>
-    <string name="tag_more_find_device_remote_ring_enabled_content">A Samsung phone or tablet has the \"Find phone or tablet\" option enabled for this Tag in SmartThings. Using this option may also ring another device. Disable find phone or tablet in order to prevent this.</string>
-    <string name="tag_more_find_device_remote_ring_disable_action">Disable find phone or tablet</string>
+    <string name="tag_more_find_device_remote_ring_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Znajdź mój telefon lub tablet\" dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również spowodować dzwonienie innego urządzenia. Aby temu zapobiec, wyłącz tę opcję.</string>
+    <string name="tag_more_find_device_remote_ring_disable_action">Wyłącz Znajdź mój telefon lub tablet</string>
     <string name="tag_more_find_device_vibrate_title">Wibracje</string>
     <string name="tag_more_find_device_vibrate_content">Włącz wibracje podczas dzwonienia, aby było lepiej słyszalne</string>
     <string name="tag_more_find_device_delay_title">Opóźnienie przed dzwonieniem</string>
@@ -485,12 +485,12 @@
     <string name="tag_more_automation_press_content">Uruchom %1s</string>
     <string name="tag_more_automation_press_content_unset">Nie przypisano akcji</string>
     <string name="tag_more_automation_press_content_error">Wymagane dodatkowe uprawnienie</string>
-    <string name="tag_more_automation_press_content_disabled">Disable the \"Pressed\" Automation action in SmartThings to use this option</string>
+    <string name="tag_more_automation_press_content_disabled">Aby korzystać z tej opcji, wyłącz akcję automatyzacji „Naciśnięto” w aplikacji SmartThings</string>
     <string name="tag_more_automation_held_title">Przytrzymano</string>
     <string name="tag_more_automation_held_content">Uruchom %1s</string>
     <string name="tag_more_automation_held_content_unset">Nie przypisano akcji</string>
     <string name="tag_more_automation_held_content_error">Wymagane dodatkowe uprawnienie</string>
-    <string name="tag_more_automation_held_content_disabled">Disable the \"Held\" Automation action in SmartThings to use this option</string>
+    <string name="tag_more_automation_held_content_disabled">Aby korzystać z tej opcji, wyłącz akcję automatyzacji „Przytrzymano” w aplikacji SmartThings</string>
     <string name="tag_more_automation_footer_title">Niestandardowe automatyzacje</string>
     <string name="tag_more_automation_footer_content">Ta opcja umożliwia ustawienie niestandardowych akcji po naciśnięciu i przytrzymaniu przycisku na urządzeniu %1s. <b>Jest to alternatywa dla wbudowanych opcji SmartThings</b>, która posiada pewne ograniczenia:</string>
     <string name="tag_more_automation_footer_bull1">Ta opcja działa tylko wtedy, gdy urządzenie jest połączone z etykietą.</string>
@@ -501,7 +501,7 @@
     <string name="tag_more_automation_category_options">Opcje</string>
     <string name="tag_more_automation_volume">Głośność przycisku</string>
     <string name="tag_more_automation_error_dialog_title">Wystąpił błąd</string>
-    <string name="tag_more_automation_error_dialog_content">An error occurred loading your automations. Check your connection and try again.</string>
+    <string name="tag_more_automation_error_dialog_content">Wystąpił błąd podczas wczytywania Twoich automatyzacji. Sprawdź połączenie sieciowe i spróbuj ponownie.</string>
     <string name="tag_more_automation_error_dialog_close">Zamknij</string>
     <string name="tag_more_automation_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="tag_more_automation_permission_title">Dodatkowe kroki konfiguracji</string>
@@ -551,7 +551,7 @@
     <string name="lost_mode_settings_phone_number_default">Wprowadź informacje o kontaktach alarmowych na wypadek, gdyby ktoś znalazł Twoje urządzenie i chciał się z Tobą skontaktować</string>
     <string name="lost_mode_settings_message">Wiadomość</string>
     <string name="lost_mode_settings_error_dialog_title">Wystąpił błąd</string>
-    <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
+    <string name="lost_mode_settings_error_dialog_content">Wystąpił błąd podczas wczytywania ustawień Trybu Zgubione urządzenie, sprawdź swoje połączenie i spróbuj ponownie później</string>
     <string name="lost_mode_settings_error_dialog_close">Zamknij</string>
     <string name="lost_mode_settings_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
@@ -585,8 +585,8 @@
     <!-- Predefined lost messages (displayed locally only) -->
     <string name="this_smarttag_has_been_lost">Ten SmartTag został zgubiony.</string>
     <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
-    <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
-    <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
+    <string name="im_tracking_this_item">Śledzę ten przedmiot i próbuję go odnaleźć. Proszę o kontakt.</string>
+    <string name="help_my_lost_pet_come_back_home">Proszę o kontakt i pomoc w odnalezieniu mojego zaginionego zwierzaka.</string>
     <!-- Passive Mode -->
     <string name="passive_mode_enabled_switch">Włączony</string>
     <string name="passive_mode_info_title">Czym jest tryb pasywny?</string>
@@ -608,7 +608,7 @@
     <string name="battery_sufficient">Wystarczający</string>
     <!-- Only used in export -->
     <string name="battery_full">Pełny</string>
-    <string name="battery_update">Updated %1s</string>
+    <string name="battery_update">Zaktualizowano %1s</string>
     <!-- Device Types -->
     <string name="device_type_galaxy_phone">Telefon Galaxy</string>
     <string name="device_type_galaxy_tablet">Tablet Galaxy</string>
@@ -616,12 +616,12 @@
     <string name="device_type_none_galaxy_tablet">Inny tablet</string>
     <!-- D2D Status -->
     <string name="d2d_status_connected">Połączono</string>
-    <string name="d2d_status_scanned">Scanned</string>
+    <string name="d2d_status_scanned">Zeskanowano</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Lokalizuj swoje SmartTagi w każdym miejscu i o każdej porze</string>
-    <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
-    <string name="privacy_notice_agree">Zgadzam się</string>
-    <string name="privacy_notice_disagree">Disagree</string>
+    <string name="privacy_notice_content"><![CDATA[Aby kontynuować, zaakceptuj <a href="%1s">Użycie informacji o lokalizacji</a>.<br><br>Więcej informacji znajdziesz w <a href="%1s">Zasadach prywatności</a> konta Samsung.]]></string>
+    <string name="privacy_notice_agree">Akceptuję</string>
+    <string name="privacy_notice_disagree">Nie akceptuję</string>
     <string name="privacy_notice_error_dialog_title">Wystąpił błąd</string>
     <string name="privacy_notice_error_dialog_content">Wystąpił błąd podczas wczytywania informacji o Zasadach prywatności Samsung. Sprawdź połączenie sieciowe i spróbuj ponownie.</string>
     <string name="privacy_notice_error_dialog_close">Zamknij</string>
@@ -724,8 +724,8 @@
     <string name="snackbar_update_button">Wyświetl</string>
     <string name="update_notification">uTag version %1s</string>
     <string name="update_notification_mod">SmartThings version %1s</string>
-    <string name="update_title_utag">uTag update</string>
-    <string name="update_title_smartthings">SmartThings update</string>
+    <string name="update_title_utag">Aktualizacja uTag</string>
+    <string name="update_title_smartthings">Aktualizacja SmartThings</string>
     <string name="update_heading">uTag update available</string>
     <string name="update_heading_smartthings">SmartThings update available</string>
     <string name="update_subheading">%1s → %1s</string>
@@ -1014,7 +1014,7 @@
     <string name="backup_creating_notify_disconnect_configs_backup">Backing up notify when left behind configuration…</string>
     <string name="backup_creating_passive_mode_configs_backup">Tworzenie kopii zapasowej ustawień trybu pasywnego…</string>
     <string name="backup_creating_wifi_safe_areas_backup">Tworzenie kopii zapasowej bezpiecznych sieci Wi-Fi…</string>
-    <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
+    <string name="backup_creating_unknown_tags_backup">Tworzenie kopii zapasowej bezpiecznych etykiet…</string>
     <string name="backup_creating_settings_backup">Tworzenie kopii zapasowej ustawień…</string>
     <string name="backup_created">Utworzono kopię zapasową</string>
     <string name="backup_error">Wystąpił błąd</string>
@@ -1028,7 +1028,7 @@
     <string name="restore_location_safe_areas_title">Przywróć bezpieczne miejsca</string>
     <string name="restore_notify_disconnect_configs_title">Restore Notify when Left Behind configuration</string>
     <string name="restore_passive_mode_configs_title">Restore Passive Mode configuration</string>
-    <string name="restore_unknown_tags_title">Restore Safe Tags</string>
+    <string name="restore_unknown_tags_title">Przywróć przyjazne etykiety</string>
     <string name="restore_unknown_tags_subtitle">For Unknown Tag scans</string>
     <string name="restore_wifi_safe_areas_title">Przywróć bezpieczne sieci Wi-Fi</string>
     <string name="restore_settings_title">Przywróć ustawienia uTag</string>
@@ -1044,7 +1044,7 @@
     <string name="restore_progress_restoring_notify_disconnect_configs">Restoring notify when left behind configuration…</string>
     <string name="restore_progress_restoring_passive_mode_configs">Restoring passive mode configuration…</string>
     <string name="restore_progress_restoring_wifi_safe_areas">Przywracanie bezpiecznych miejsc Wi-Fi…</string>
-    <string name="restore_progress_restoring_unknown_tags">Restoring Safe Tags…</string>
+    <string name="restore_progress_restoring_unknown_tags">Przywracanie przyjaznych etykiet…</string>
     <string name="restore_progress_restoring_settings">Przywracanie ustawień…</string>
     <string name="restore_progress_restoring_complete">Przywracanie zakończone</string>
     <string name="restore_progress_restoring_complete_content">Your backup has been restored. You may need to re-configure some options, such as Custom Automations, to synchronise them with the Tag.</string>
