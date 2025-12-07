@@ -110,7 +110,7 @@
     <string name="settings_main_advanced_content">Language, content creator mode and analytics options</string>
     <string name="settings_main_category_account">Account</string>
     <string name="settings_main_category_samsung_account_title">Samsung Account</string>
-    <string name="settings_main_category_samsung_account_content">Signed in as %1s (%1s)</string>
+    <string name="settings_main_category_samsung_account_content">Signed in as %1s\n(%1s)</string>
     <string name="settings_main_category_samsung_account_content_error">Error getting account details</string>
     <string name="settings_main_sign_out_title">Sign out</string>
     <string name="settings_main_sign_out_content">Sign out of your Samsung Account? This will require you to sign back in again to track SmartTags\n\n<b>Note:</b> Despite what the next sign out page will say, this will not sign you out of other Samsung apps on your device.</string>
