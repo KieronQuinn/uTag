@@ -305,7 +305,7 @@
     <string name="map_add_to_homescreen">Dodaj do ekranu głównego</string>
     <string name="map_settings">Ustawienia</string>
     <string name="map_timestamp_last_updated">Ostatnia aktualizacja: %1s</string>
-    <string name="map_timestamp_unknown">Unknown</string>
+    <string name="map_timestamp_unknown">Nieznana</string>
     <string name="map_timestamp_now">Teraz</string>
     <string name="map_timestamp_minute_ago">%1d minutę temu</string>
     <string name="map_timestamp_minutes_ago">%1d minut temu</string>
@@ -393,8 +393,8 @@
     <string name="tag_more_notify_when_disconnected_title">Powiadom o zostawieniu</string>
     <string name="tag_more_notify_when_disconnected_content_warning">Nie działa. Dotknij, aby uzyskać więcej informacji.</string>
     <string name="tag_more_notify_when_disconnected_content_disabled">Powiadom gdy %1s zostanie odłączony od tego urządzenia i nie znajduje się w bezpiecznym obszarze</string>
-    <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
-    <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
+    <string name="tag_more_notify_when_disconnected_content_enabled_one">Włączono • %1d bezpieczne miejsce</string>
+    <string name="tag_more_notify_when_disconnected_content_enabled_other">Włączono • %1d bezpieczne miejsca</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Włączono</string>
     <string name="tag_more_notify_when_disconnected_switch">Włączono</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_title">Bezpieczne miejsca</string>
@@ -559,7 +559,7 @@
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
     <string name="lost_mode_settings_category_advanced">Zaawansowane</string>
     <string name="lost_mode_settings_custom_url_title">Własny adres URL</string>
-    <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
+    <string name="lost_mode_settings_custom_url_content_unset">Ustaw niestandardowy adres URL do otwarcia, gdy etykieta zostanie przyłożona do innego urządzenia</string>
     <string name="lost_mode_settings_custom_url_content_disconnected">Aby korzystać z tej opcji, połącz się z etykietą</string>
     <string name="lost_mode_settings_custom_url_content_passive">Aby korzystać z tej funkcji, wyłącz tryb pasywny</string>
     <string name="lost_mode_settings_custom_url_warning_title">Ważne ostrzeżenie</string>
@@ -571,11 +571,11 @@
     <string name="lost_mode_settings_custom_url_lost_content">Lost Mode has been modified using SmartThings while a custom URL was set. Your original Lost Mode URL has been lost. To fix this and allow usage of normal Lost Mode again, set the custom URL back to your original URL from your external backup. If you don\'t have it backed up, you will need to factory reset your Tag.</string>
     <string name="lost_mode_settings_custom_url_set_title">Własny adres URL</string>
     <string name="lost_mode_settings_custom_url_set_summary">Ustaw niestandardowy adres URL, który zostanie otwarty po zbliżeniu urządzenia do etykiety. <b>Przed użyciem tej funkcji upewnij się, że masz kopię zapasową oryginalnego adresu URL.</b></string>
-    <string name="lost_mode_settings_custom_url_set_dialog_message">Enter a custom URL, or the original URL to reset</string>
+    <string name="lost_mode_settings_custom_url_set_dialog_message">Wprowadź własny adres URL lub oryginalny adres URL, aby zresetować</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_title">Wystąpił błąd</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Uwaga</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag nie jest w stanie zweryfikować Aplikacja, czy ten adres URL wiadomości o zgubieniu jest właściwy dla tej etykiety. Ustawienie nieprawidłowego adresu URL spowoduje, że opcje trybu zgubienia nie będą działać. Aby kontynuować, potwierdź, że ten adres jest prawidłowy.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Potwierdź</string>
     <string name="lost_mode_settings_custom_url_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="lost_mode_settings_custom_url_invalid_url_toast">Nieprawidłowy adres URL</string>
