@@ -451,9 +451,9 @@
     <string name="tag_more_find_device_full_screen_permission_required_title">Wymagane uprawnienie</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">Aplikacja uTag wymaga uprawnienia „Powiadomienia pełnoekranowe”, aby móc włączyć dzwonienie w tle</string>
     <string name="tag_more_find_device_full_screen_permission_required_action">Zezwól w ustawieniach</string>
-    <string name="tag_more_find_device_pet_walking_enabled_title">Włączono Tryb Spacer z pupilem</string>
+    <string name="tag_more_find_device_pet_walking_enabled_title">Włączono Tryb Spaceru ze zwierzakiem</string>
     <string name="tag_more_find_device_pet_walking_enabled_content">Na telefonie lub tablecie Samsung włączono opcję „Rozpocznij spacer z pupilem” dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również rozpocząć spacer z pupilem na innym urządzeniu. Aby temu zapobiec, wyłącz opcję „Rozpocznij spacer z pupilem”.\n\n<b>Uwaga:</b> Tryb Spacer z pupilem nie jest obecnie obsługiwany przez aplikację uTag.</string>
-    <string name="tag_more_find_device_pet_walking_disable_action">Wyłącz Rozpocznij spacer z pupilem</string>
+    <string name="tag_more_find_device_pet_walking_disable_action">Wyłącz Rozpocznij spacer ze zwierzakiem</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Włączone na urządzeniu Samsung</string>
     <string name="tag_more_find_device_remote_ring_enabled_content">Na telefonie lub tablecie Samsung włączono opcję \"Znajdź mój telefon lub tablet\" dla tej etykiety w aplikacji SmartThings. Użycie tej opcji może również spowodować dzwonienie innego urządzenia. Aby temu zapobiec, wyłącz tę opcję.</string>
     <string name="tag_more_find_device_remote_ring_disable_action">Wyłącz Znajdź mój telefon lub tablet</string>
@@ -920,7 +920,7 @@
     <!-- Unsupported Intent dialog -->
     <string name="unsupported_intent_dialog_title">Nieobsługiwane</string>
     <string name="unsupported_intent_dialog_content_generic">Ta akcja nie jest obecnie obsługiwana przez aplikację uTag. Jeśli uważasz, że to błąd, zgłoś problem na GitHubie, dołączając zrzut ekranu tego okna - ale najpierw upewnij się, że nie ma już otwartego zgłoszenia dla tego typu akcji.\n\nTyp akcji: %1s</string>
-    <string name="unsupported_intent_dialog_content_pet">Tryb Spacer z pupilem nie jest obecnie obsługiwany przez uTag. Jeśli chciałbyś zobaczyć tę funkcję w niedalekiej przyszłości, zareaguj kciukiem w górę w zgłoszeniu na GitHubie.</string>
+    <string name="unsupported_intent_dialog_content_pet">Tryb Spaceru ze zwierzakiem nie jest dostępny w uTag. Jeśli chciałbyś zobaczyć tę funkcję w niedalekiej przyszłości, zareaguj kciukiem w górę w zgłoszeniu na GitHubie.</string>
     <string name="unsupported_intent_dialog_close">Zamknij</string>
     <string name="unsupported_intent_dialog_github">GitHub</string>
     <!-- Location Staleness -->
