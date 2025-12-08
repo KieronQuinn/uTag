@@ -800,7 +800,7 @@
     <string name="search_nearby_bluetooth_disabled_negative">Anuluj</string>
     <!-- Foreground service -->
     <string name="notification_title_smartthings">SmartThings działa w tle</string>
-    <string name="notification_content_smartthings">Aplikacja uTag utrzymuje działanie SmartThings w tle. Przytrzymaj, aby ukryć to powiadomienie.</string>
+    <string name="notification_content_smartthings">uTag utrzymuje działanie SmartThings w tle. Przytrzymaj, aby ukryć to powiadomienie.</string>
     <string name="notification_title_background_service_zero">Nie połączono z żadną etykietą</string>
     <string name="notification_title_background_service_one">Połączono z %1d etykietą</string>
     <string name="notification_title_background_service_other">Połączono z %1d etykietami</string>
