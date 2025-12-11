@@ -556,7 +556,7 @@
     <string name="lost_mode_settings_error_dialog_close">Zamknij</string>
     <string name="lost_mode_settings_error_toast">Wystąpił błąd, spróbuj ponownie</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
-    <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
+    <string name="lost_mode_custom_url_set_content">Twoja etykieta ma ustawiony niestandardowy adres URL, którego nie można zmienić, dopóki nie zostanie połączona.\n\n<b>Uwaga:</b> Nie próbuj zmieniać ustawień Trybu zgubienia na innym urządzeniu przez SmartThings. To nie zadziała i może skutkować utratą oryginalnego adresu URL etykiety.</string>
     <string name="lost_mode_settings_category_advanced">Zaawansowane</string>
     <string name="lost_mode_settings_custom_url_title">Własny adres URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Ustaw niestandardowy adres URL do otwarcia, gdy etykieta zostanie przyłożona do innego urządzenia</string>
@@ -573,7 +573,7 @@
     <string name="lost_mode_settings_custom_url_set_summary">Ustaw niestandardowy adres URL, który zostanie otwarty po zbliżeniu urządzenia do etykiety. <b>Przed użyciem tej funkcji upewnij się, że masz kopię zapasową oryginalnego adresu URL.</b></string>
     <string name="lost_mode_settings_custom_url_set_dialog_message">Wprowadź własny adres URL lub oryginalny adres URL, aby zresetować</string>
     <string name="lost_mode_settings_custom_url_set_error_dialog_title">Wystąpił błąd</string>
-    <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
+    <string name="lost_mode_settings_custom_url_set_error_dialog_content">Ten adres URL wiadomości o zgubieniu należy do innej etykiety. Jeśli próbujesz zresetować adres URL swojej etykiety, wklej jej poprawny, oryginalny adres URL.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Uwaga</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag nie jest w stanie zweryfikować Aplikacja, czy ten adres URL wiadomości o zgubieniu jest właściwy dla tej etykiety. Ustawienie nieprawidłowego adresu URL spowoduje, że opcje trybu zgubienia nie będą działać. Aby kontynuować, potwierdź, że ten adres jest prawidłowy.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Potwierdź</string>
