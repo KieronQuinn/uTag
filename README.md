@@ -39,6 +39,8 @@ Join the uTag Discord server for any further queries
 
 > **Note:** This section is only for people who wish to compile uTag from source for themselves. Most people should follow the instructions above to download and install the APK.
 
+### Manual building
+
 If you want to compile uTag yourself, some additional setup is required:
 
 1. Clone the repository as normal.
@@ -88,6 +90,33 @@ MAPS_API_KEY=<Maps API key>
 21. Open the patched SmartThings. It may take a short while to setup, once completed you can sign in, then continue to use uTag as normal, it will detect the patched SmartThings automatically and skip trying to download the precompiled version.
 
 > **Note:** When SmartThings or uTag is updated, you will need to repeat steps 8 to 21. 
+
+### Easy manual building
+
+1. Clone the repository as normal.
+2. Download [this APK](https://www.apkmirror.com/apk/samsung-electronics-co-ltd/find-my-mobile/find-my-mobile-7-3-18-2-release/samsung-find-my-mobile-lite-7-3-18-2-android-apk-download/) of Samsung Find my Mobile Lite.
+3. Download the latest APK of [SmartThings](https://www.apkmirror.com/apk/samsung-electronics-co-ltd/samsung-smartthings-samsung-connect/).
+4. Open the auto-generated `local.properties` file and set it up as follows:
+
+```properties
+sdk.dir=<path to android sdk>
+storeFile=<path to keystore>
+storePassword=<keystore password>
+keyAlias=<key alias>
+keyPassword=<key password>
+```
+
+5. Create a Google Maps API key on the [Google Cloud console](https://console.cloud.google.com),
+   then create a `secrets.properties` file and set it up as follows:
+
+```properties
+MAPS_API_KEY=<Maps API key>
+```
+   also copy the `google-services.json` file to the root folder.
+
+6. In a terminal assert that the environment variable JAVA_HOME is set: `export JAVA_HOME=/home/user/Documents/Softwares/android-studio/jbr`
+7. Run `FIND_MY_MOBILE_LITE_APK=<path to Find my Mobile Lite apk> SMART_THINGS_APK=<path to SmartThings apk> ./build.sh`
+8. Install both uTag and Smart Things modded apks.
 
 ## Documentation
 
