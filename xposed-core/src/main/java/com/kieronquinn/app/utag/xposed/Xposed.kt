@@ -394,7 +394,9 @@ class Xposed: IXposedHookLoadPackage {
                     className = "com.google.firebase.messaging.FirebaseMessagingService"}
             }.findMethod { matcher {
                 usingStrings("FirebaseApp has not being initialized. Device might be in direct boot mode. Skip exporting delivery metrics to Big Query")
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_FIREBASE_PUSH_INTENT, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     private fun LoadPackageParam.hookOneConnectPushNotifications(context: Context) {
@@ -704,12 +706,18 @@ class Xposed: IXposedHookLoadPackage {
         val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_IS_FMM_SUPPORTED)
             ?.getMethodInstance(classLoader)
         savedMethod
-            ?: dexkitbridge.findClass { matcher {
-                usingStrings("isSupportFindMyMobileFeature")
-            } }.findMethod { matcher {
-                modifiers = Modifier.PUBLIC
-                usingStrings("isSupportFindMyMobileFeature")
-            }}.singleOrNull()?.getMethodInstance(classLoader)
+            ?: (dexkitbridge.findClass {
+                matcher {
+                    usingStrings("isSupportFindMyMobileFeature")
+                }
+            }.findMethod {
+                matcher {
+                    modifiers = Modifier.PUBLIC
+                    usingStrings("isSupportFindMyMobileFeature")
+                }
+            }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_IS_FMM_SUPPORTED, it) }
+                ?.getMethodInstance (classLoader))
     }
 
     /**
@@ -1139,7 +1147,9 @@ class Xposed: IXposedHookLoadPackage {
                 matcher {
                     usingStrings("PRINT_SECURE_LOG : ")
                 }
-            }.singleOrNull()?.getInstance(classLoader)
+            }.singleOrNull()
+                ?.also { saveClass(SharedPrefsKey.SHARED_PREF_KEY_DEBUG_CLASS, it) }
+                ?.getInstance(classLoader)
     }
 
     /**
@@ -1168,7 +1178,9 @@ class Xposed: IXposedHookLoadPackage {
                 usingStrings(" isSyncAllProceeding:")
             } }.findMethod { matcher {
                 usingStrings(" isSyncAllProceeding:")
-            }}.singleOrNull()?.getMethodInstance(classLoader)
+            }}.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_QCSERVICE_RUNNABLE_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     /**
@@ -1201,7 +1213,9 @@ class Xposed: IXposedHookLoadPackage {
             } }.findMethod { matcher {
                 usingStrings("Disconnect non priority connections.")
                 modifiers = Modifier.PUBLIC
-            }}.singleOrNull()?.getMethodInstance(classLoader)
+            }}.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_DISCONNECT_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     private fun findMethodForceDisconnect(classLoader: ClassLoader): Method? = run {
@@ -1212,7 +1226,9 @@ class Xposed: IXposedHookLoadPackage {
                 usingStrings("] | Characteristics: [")} }
                 .findMethod { matcher {
                     usingStrings("forceDisconnect")
-                }}.singleOrNull()?.getMethodInstance(classLoader)
+                }}.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     /**
@@ -1251,7 +1267,9 @@ class Xposed: IXposedHookLoadPackage {
             }.findMethod { matcher {
                 usingStrings("publishDeviceStatus", "id is null.")
                 modifiers = Modifier.PUBLIC
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_PUBLISH_DEVICE_STATUS_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     /**
@@ -1293,7 +1311,9 @@ class Xposed: IXposedHookLoadPackage {
             } }.findMethod { matcher {
                 usingStrings(" | uuidConnectionAvailable: ")
                 modifiers = Modifier.PUBLIC
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SMART_TAG_CONNECT_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
 
@@ -1330,7 +1350,9 @@ class Xposed: IXposedHookLoadPackage {
             } }.findMethod { matcher {
                 usingStrings("updateDeviceBleThings:for in deviceTagConnectionCallbackHashMap")
                 modifiers = Modifier.PUBLIC
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SCAN_NOTIFY_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     private fun findMethodDeviceBleThingsManagerScanRepository(classLoader: ClassLoader): Method? = run {
@@ -1342,7 +1364,9 @@ class Xposed: IXposedHookLoadPackage {
             } }.findMethod { matcher {
                 usingStrings("smartTagRepository")
                 modifiers = Modifier.PUBLIC
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_SCAN_REPOSITORY_METHOD, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     private fun LoadPackageParam.hookDeviceBleThingsManager(context: Context) {
@@ -1406,7 +1430,9 @@ class Xposed: IXposedHookLoadPackage {
         savedClass
             ?: dexkitbridge.findClass { matcher {
                 usingStrings("Ignore  device is null")
-            } }.singleOrNull()?.getInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveClass(SharedPrefsKey.SHARED_PREF_KEY_SCAN_CALLBACK_CLASS, it) }
+                ?.getInstance(classLoader)
     }
 
     /**
@@ -1447,7 +1473,9 @@ class Xposed: IXposedHookLoadPackage {
             } }.findMethod { matcher {
                 usingStrings("one_connect_force_stop_discovery_app_background_test")
                 modifiers = Modifier.PUBLIC or Modifier.STATIC or Modifier.FINAL
-            } }.singleOrNull()?.getMethodInstance(classLoader)
+            } }.singleOrNull()
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_ALLOW_SCANNING, it) }
+                ?.getMethodInstance(classLoader)
     }
 
     /**
