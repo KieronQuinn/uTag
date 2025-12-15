@@ -18,8 +18,8 @@
     <string name="setup_mod_oneui_title">OneUI wurde erkannt</string>
     <string name="setup_mod_oneui_desc">Dieses Gerät scheint OneUI auszuführen. Die Verwendung von uTag auf einem Gerät, das SmartThings Find offiziell unterstützt, kann die Funktionalität einschränken, einige SmartThings Funktionen verhindern oder unerwartete Fehler verursachen. <b>Die Unterstützung für OneUI ist experimentell und funktioniert möglicherweise nicht auf Ihrem Gerät. Bitte melden Sie keine Fehler, die auf diesem Gerät auftreten.</b> Sie müssen sich im Browser bei SmartThings anmelden, anstatt das Samsung Konto auf Ihrem Gerät zu verwenden.</string>
     <string name="setup_mod_oneui_continue">Fortsetzen</string>
-    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
-    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
+    <string name="setup_mod_oneui_incompatible_title">Inkompatible OneUI Version Erkannt</string>
+    <string name="setup_mod_oneui_incompatible_desc">Dieses Gerät läuft auf einer OneUI Version die nicht mit der SmartThings Mod kompatibel ist die benötigt ist damit uTag Funktioniert. Bitte benutzen sie stattdessen die offizielle Samsung find App.</string>
     <string name="setup_mod_downloading">SmartThings wird heruntergeladen…</string>
     <string name="setup_mod_setting_up">Mod… wird eingerichtet</string>
     <string name="setup_mod_setting_up_subtitle">Dies kann einen Moment</string>
@@ -155,7 +155,7 @@
     <string name="settings_location_units_metric">Metrisch</string>
     <string name="settings_location_units_imperial">Imperial</string>
     <!-- Settings > Location > Chaser -->
-    <string name="settings_chaser_title">Find my Everything Network</string>
+    <string name="settings_chaser_title">Find my Everything Netzwerk</string>
     <string name="settings_chaser_switch">Aktiviert</string>
     <string name="settings_chaser_info_title">Beitragen zum Samsung Find my Everything-Netzwerk</string>
     <string name="settings_chaser_info_content">Wenn aktiviert, sendet uTag den Standort der in der Nähe erkannten Tags während der Aktualisierung des Standorts, um anderen SmartTag-Benutzern bei der Lokalisierung ihrer Objekte zu helfen.\n\nStandorte sind komplett anonym und können verschlüsselt werden, wenn der Tag Standortverschlüsselung aktiviert ist.</string>
@@ -239,7 +239,7 @@
     <string name="settings_advanced_auto_dismiss_notifications_title">Zurückgelassen Benachrichtigungen automatisch schließen</string>
     <string name="settings_advanced_auto_dismiss_notifications_content">Benachrichtigung automatisch ausblenden, wenn Links hinter den Benachrichtigungen &amp; Smartspacer Ziele angezeigt werden, wenn der Tag wieder in Reichweite ist.\n\n<b>Wichtig:</b> Dies kann zu \"Geister\"-Sounds &amp; -Vibrationen führen, wenn der Tag in Reichweite kommt bevor Du die Benachrichtigung siehst.</string>
     <string name="settings_advanced_prevent_overmature_title">Dauerhaften Offlinezustand verhindern.</string>
-    <string name="settings_advanced_prevent_overmature_content">Prevent an owned Tag from entering \"overmature\" offline, which is normally triggered when disconnected from a device for roughly 24 hours. Enabling this option prevents the Tag appearing in unknown Tag scans, when it is near your device.\n\n<b>Note:</b> This may cause fewer location updates from other Samsung devices when the Tag is near to this device.</string>
+    <string name="settings_advanced_prevent_overmature_content">Verhindert das einer von ihren Tags in den \"overmature\" offline zustand kommt, der normalerweise ausgelöst wird wenn der Tag ungefähr 24 stunden mit keinem Gerät verbunden war. Das aktivieren dieser Option verhindert das der Tag in unbekannten Tag scans auftaucht, wenn es in der Nähe ihres Gerätes ist. \n\n<b>Anmerkung:</b> dies könnte verursachen das es weniger Standort updates durch andere Samsung Geräte gibt wenn dieser tag diesem Gerät nah ist.</string>
     <string name="settings_advanced_debug_title">Debug-Modus</string>
     <string name="settings_advanced_debug_content">Aktiviert einige ausführlichere Protokollierung von &amp; Debug-UI-Komponenten zum Testen</string>
     <string name="settings_advanced_language">Sprache</string>
@@ -277,10 +277,10 @@
     <string name="map_error_mod_not_activated_xposed_content">Die uTag Mod für SmartThings ist nicht aktiviert. Wenn Du Xposed verwendest, aktiviere ihn und starte das Gerät neu. Wenn Du Xposed nicht verwendest, folgen den Anweisungen, um die modifizierten SmartThings zu installieren.</string>
     <string name="map_error_mod_not_activated_patch_content">Der uTag Mod für SmartThings ist nicht aktiviert. Folge den Anweisungen, um die modifizierten SmartThings aus den uTag Einstellungen zu installieren.</string>
     <string name="map_warning_mod_outdated_xposed_content">Die uTag-Mod für SmartThings ist veraltet. Möglicherweise ist die uTag-Funktionalität eingeschränkt oder funktioniert gar nicht. Beenden Sie SmartThings zwangsweise oder starten Sie Ihr Gerät neu, um dies zu beheben.</string>
-    <string name="map_warning_mod_outdated_patch_content">The uTag mod for SmartThings is outdated. uTag functionality may not work correctly, or at all. Update SmartThings from uTag\'s settings to fix this.</string>
-    <string name="map_warning_mod_newer_xposed_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Force stop SmartThings or reboot your device to fix this.</string>
-    <string name="map_warning_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the settings to fix this.</string>
-    <string name="map_error_permissions_content">SmartThings requires the \"Allow always\" location permission, please grant it in Settings to continue</string>
+    <string name="map_warning_mod_outdated_patch_content">Die uTag Modifikation für SmartThings ist veraltet. uTag Funktionalitäten könnten eventuell nicht richtig funktionieren, oder überhaupt nicht. Aktualisieren die SmartThings über die uTag Einstellungen um den Fehler zu beheben.</string>
+    <string name="map_warning_mod_newer_xposed_content">Die uTag Modifikation für SmartThings ist neuer als uTag. uTag Funktionalitäten könnten eventuell nicht richtig funktionieren oder überhaupt nicht. Um dies zu beheben muss SmartThings entweder zum schließen gezwungen werden oder das Gerät muss neugestartet werden.</string>
+    <string name="map_warning_mod_newer_patch_content">Die uTag Modifikation für SmartThings ist neuer als uTag. uTag Funktionalitäten könnten eventuell nicht richtig funktionieren, oder überhaupt nicht. Aktualisieren sie uTag über die uTag Einstellungen um den Fehler zu beheben.</string>
+    <string name="map_error_permissions_content">SmartThings benötigt die \"immer zulassen\" Standort Berechtigung, bitte lassen sie diese in den Einstellungen zu um fortzufahren</string>
     <string name="map_error_permissions_button">Einstellungen öffnen</string>
     <string name="map_network_error">Ein Netzwerkfehler ist aufgetreten, versuche es später noch einmal </string>
     <string name="map_location_error">Lokalisierung fehlgeschlagen, bewege dich etwas in der Umgebung</string>
