@@ -70,6 +70,10 @@
     <string name="account_error_title">Hata</string>
     <string name="account_error_content">Oturum açma işlemi başlatılırken bir hata oluştu, lütfen bağlantınızı kontrol edip tekrar deneyin</string>
     <string name="account_error_try_again">Tekrar Dene</string>
+    <string name="account_chrome_warning_title">Sign in with Google</string>
+    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">Hata</string>
     <string name="login_response_error_content">Oturum açma işlemi tamamlanırken bir hata oluştu, lütfen tekrar deneyin</string>
     <string name="login_response_error_close">Kapat</string>
@@ -144,6 +148,8 @@
     <string name="settings_location_widget_period_never_content">Yalnızca bir widget üzerindeki yenile düğmesine dokunduğunuzda veya bir Etiketin konumu uTag tarafından güncellendiğinde yenilenir</string>
     <string name="settings_location_widget_battery_saver_title">Pil Tasarrufunda Widget Yenileme</string>
     <string name="settings_location_widget_battery_saver_content">Pil Tasarrufu etkinken widget\'ları yenile</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Yakında Ara</string>
     <string name="settings_location_uwb_title">Hassas Bulma</string>
     <string name="settings_location_uwb_content">Etiketiniz tarafından desteklendiği yerlerde hassas bulma (UWB) kullanın.</string>
@@ -316,7 +322,7 @@
     <string name="map_searching_dialog_enable_searching">Arama Modunu Etkinleştir</string>
     <string name="map_searching_dialog_cancel">Kapat</string>
     <string name="map_allow_access_dialog_title">Konum paylaşılsın mı?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[Etiket cihazı mobil cihazınıza bağlandığında, Etiket\'in ve mobil cihazınızın konumu konum üyenizle paylaşılacaktır. uTag ayarlarına giderek konum paylaşımını istediğiniz zaman durdurabilirsiniz. Samsung, konumu toplayacak ve konum üyeleriyle paylaşacak, ayrıca bu tür verileri <a href="%1s">Gizlilik Bildirimi</a>\'ne uygun olarak işleyecektir.]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[Etiket cihazı mobil cihazınıza bağlandığında, Etiket'in ve mobil cihazınızın konumu konum üyenizle paylaşılacaktır. uTag ayarlarına giderek konum paylaşımını istediğiniz zaman durdurabilirsiniz. Samsung, konumu toplayacak ve konum üyeleriyle paylaşacak, ayrıca bu tür verileri <a href="%1s">Gizlilik Bildirimi</a>'ne uygun olarak işleyecektir.]]></string>
     <string name="map_allow_access_dialog_positive">Paylaş</string>
     <string name="map_allow_access_dialog_negative">İptal</string>
     <string name="map_passive_mode_dialog_title">Pasif Mod Etkin</string>
@@ -324,6 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Bu Etiket için şu anda Pasif Mod etkindir, Yakında Ara\'yı kullanmak için \"Daha Fazla\" ayarları menüsünden devre dışı bırakın.\n\n<b>Not:</b> Etiketi aradıktan sonra Pasif Modu yeniden etkinleştirebilirsiniz.</string>
     <string name="map_offline_dialog_title">Yenileme Başarısız</string>
     <string name="map_offline_dialog_content">uTag, Etiketinizin konumunu yenileyemedi. Ağ bağlantınızı kontrol edip tekrar deneyin. Etiketinizin son bilinen durumunu ve Etiketin yakınındayken Bluetooth işlevselliğini hala görüntüleyebilirsiniz.</string>
+    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Etiket Seç</string>
     <string name="tag_picker_show_all_markers_title">Haritada tüm Etiketleri göster</string>
@@ -619,7 +626,7 @@
     <string name="d2d_status_scanned">Tarandı</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Etiketlerinizi her zaman, her yerde bulun</string>
-    <string name="privacy_notice_content"><![CDATA[Devam etmek için <a href="%1s">Konum Bilgilerinin Kullanımı</a>\'nı kabul edin.<br><br>Daha fazla bilgi için Samsung hesabı <a href="%1s">Gizlilik Bildirimi</a>\'ne bakın.]]></string>
+    <string name="privacy_notice_content"><![CDATA[Devam etmek için <a href="%1s">Konum Bilgilerinin Kullanımı</a>'nı kabul edin.<br><br>Daha fazla bilgi için Samsung hesabı <a href="%1s">Gizlilik Bildirimi</a>'ne bakın.]]></string>
     <string name="privacy_notice_agree">Kabul Et</string>
     <string name="privacy_notice_disagree">Kabul Etme</string>
     <string name="privacy_notice_error_dialog_title">Hata</string>
