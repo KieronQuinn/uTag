@@ -70,6 +70,10 @@
     <string name="account_error_title">錯誤</string>
     <string name="account_error_content">啟動登入過程時發生錯誤，請檢查您的連接並重試</string>
     <string name="account_error_try_again">重試</string>
+    <string name="account_chrome_warning_title">Sign in with Google</string>
+    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">錯誤</string>
     <string name="login_response_error_content">完成登入過程時發生錯誤，請再試一次</string>
     <string name="login_response_error_close">關閉</string>
@@ -144,6 +148,8 @@
     <string name="settings_location_widget_period_never_content">僅在您點擊小工具上的刷新或標籤的位置由 uTag 更新時刷新</string>
     <string name="settings_location_widget_battery_saver_title">電池省電模式下的小工具刷新</string>
     <string name="settings_location_widget_battery_saver_content">在啟用電池省電模式時刷新小工具</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">附近搜索</string>
     <string name="settings_location_uwb_title">精確查找</string>
     <string name="settings_location_uwb_content">在支持的情況下使用精確查找（UWB）。</string>
@@ -324,6 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">當前已為此標籤啟用被動模式，請在「更多」設定選單中禁用它以使用附近搜尋。\n\n<b>注意：</b>您可以在搜尋標籤後重新啟用被動模式。</string>
     <string name="map_offline_dialog_title">無法刷新</string>
     <string name="map_offline_dialog_content">uTag無法刷新您的標籤位置。請檢查您的網路連接，然後再試一次。在靠近標籤時，您仍然可以查看標籤的最後已知狀態和藍牙功能。</string>
+    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">選擇標籤</string>
     <string name="tag_picker_show_all_markers_title">在地圖上顯示所有標籤</string>
