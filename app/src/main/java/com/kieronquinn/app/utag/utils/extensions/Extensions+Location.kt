@@ -4,7 +4,6 @@ import android.content.Context
 import android.location.Address
 import android.location.Geocoder
 import android.location.Geocoder.GeocodeListener
-import android.location.Location
 import android.os.Build
 import androidx.annotation.RequiresApi
 import com.google.android.gms.maps.model.LatLng
@@ -53,10 +52,55 @@ private fun Geocoder.geocodeLegacy(location: LatLng): Address? {
     }
 }
 
-fun Address.merge(separator: String = ", "): String {
+fun Address.merge(location: LatLng, separator: String = ", "): String {
     val lines = ArrayList<String>()
     for(i in 0 .. maxAddressLineIndex) {
         lines.add(getAddressLine(i))
     }
-    return lines.joinToString(separator)
+    return lines.joinToString(separator).ifBlank {
+        mergeFallback()
+    }.ifBlank {
+        "${location.latitude}, ${location.longitude}"
+    }
+}
+
+/**
+ *  getAddressLine is not guaranteed to be filled, this has caused issues in the past with custom
+ *  geocoders (eg. GrapheneOS), so a fallback is used to provide a "best guess" address based on
+ *  available data.
+ */
+fun Address.mergeFallback(separator: String = ", "): String {
+    val components = mutableListOf<String>()
+
+    if (!thoroughfare.isNullOrBlank()) {
+        if (!subThoroughfare.isNullOrBlank()) {
+            components.add("$subThoroughfare $thoroughfare")
+        } else {
+            components.add(thoroughfare)
+        }
+    } else if (!subThoroughfare.isNullOrBlank()) {
+        components.add(subThoroughfare)
+    }
+
+    if (!locality.isNullOrBlank()) {
+        components.add(locality)
+    } else if (!subLocality.isNullOrBlank()) {
+        components.add(subLocality)
+    }
+
+    if (!adminArea.isNullOrBlank()) {
+        components.add(adminArea)
+    } else if (!subAdminArea.isNullOrBlank()) {
+        components.add(subAdminArea)
+    }
+
+    if (!postalCode.isNullOrBlank()) {
+        components.add(postalCode)
+    }
+
+    if (!countryName.isNullOrBlank()) {
+        components.add(countryName)
+    }
+
+    return components.joinToString(separator)
 }

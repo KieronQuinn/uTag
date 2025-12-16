@@ -277,6 +277,14 @@ private fun PackageManager.getPackageInstallerPackageName(): String? {
         ?.packageName
 }
 
+fun PackageManager.getLauncherPackageName(): String? {
+    val launcherIntent = Intent(Intent.ACTION_MAIN).apply {
+        addCategory(Intent.CATEGORY_HOME)
+    }
+    return launcherIntent.resolveActivityInfo(this, PackageManager.MATCH_DEFAULT_ONLY)
+        ?.packageName
+}
+
 private fun SensorManager.listener(sensor: Sensor, delay: Long) = callbackFlow<FloatArray> {
     var lastEmission = 0L
     val listener = object : SensorEventListener {

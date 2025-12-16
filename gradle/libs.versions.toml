@@ -39,7 +39,6 @@ playServices = "4.4.2"
 playServicesOssPlugin = "0.10.6"
 playServicesOssLibrary = "17.1.0"
 googleMapsSecrets = "2.0.1"
-dexplore = "1.4.5"
 glide = "4.16.0"
 lottie = "6.4.1"
 kotlinDateRange = "1.0.0"
@@ -99,7 +98,6 @@ retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", ver
 play-services-maps = { group = "com.google.android.gms", name = "play-services-maps", version.ref = "playServicesMaps" }
 play-services-location = { group = "com.google.android.gms", name = "play-services-location", version.ref = "playServicesLocation" }
 play-services-oss = { group = "com.google.android.gms", name = "play-services-oss-licenses", version.ref = "playServicesOssLibrary" }
-dexplore = { group = "io.github.neonorbit", name = "dexplore", version.ref = "dexplore" }
 glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
 lottie = { group = "com.airbnb.android", name = "lottie", version.ref = "lottie" }
 kotlin-date-range = { group = "me.moallemi.tools", name = "kotlin-date-range", version.ref = "kotlinDateRange" }

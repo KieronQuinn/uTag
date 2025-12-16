@@ -90,3 +90,7 @@ There's a few things that could cause this:
 This sometimes happens if you're using SmartThings with Xposed (rooted). Clear the data of 
 SmartThings, open it (the mod may take a moment to re-initialise), sign in and then reboot your 
 device. This resets the notification token.
+
+# Why is uTag not available on Google Play or F-Droid?
+uTag requires modifying the SmartThings app and installs an APK to do so, which is not allowed on 
+Google Play or F-Droid.

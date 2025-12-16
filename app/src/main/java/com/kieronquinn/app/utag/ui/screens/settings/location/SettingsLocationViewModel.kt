@@ -41,6 +41,7 @@ abstract class SettingsLocationViewModel: ViewModel() {
     abstract fun onWidgetPeriodClicked()
     abstract fun onWidgetPeriodChanged(period: WidgetRefreshPeriod)
     abstract fun onWidgetBatterySaverChanged(enabled: Boolean)
+    abstract fun onAllowNonLauncherWidgetsChanged(enabled: Boolean)
     abstract fun onUseUwbChanged(enabled: Boolean)
     abstract fun onAllowLongDistanceUwbChanged(enabled: Boolean)
     abstract fun onUnitsChanged(units: Units)
@@ -73,7 +74,8 @@ abstract class SettingsLocationViewModel: ViewModel() {
     data class WidgetSettings(
         val available: Boolean,
         val period: WidgetRefreshPeriod,
-        val batterySaver: Boolean
+        val batterySaver: Boolean,
+        val allowNonLauncherWidgets: Boolean
     )
 
     data class ChaserSettings(
@@ -108,6 +110,7 @@ class SettingsLocationViewModelImpl(
     private val widgetBatterySaver = encryptedSettingsRepository.widgetRefreshOnBatterySaver
     private val chaserEnabled = encryptedSettingsRepository.networkContributionsEnabled
     private val utsEnabled = encryptedSettingsRepository.utsScanEnabled
+    private val allowNonLauncherWidgets = encryptedSettingsRepository.allowNonLauncherWidgets
 
     private val chaserAvailable = chaserRepository.certificate.filterNotNull().map {
         it is ChaserCertificate.Certificate
@@ -149,9 +152,15 @@ class SettingsLocationViewModelImpl(
         widgetRepository.hasWidgets(),
         historyWidgetRepository.hasWidgets(),
         widgetPeriod.asFlow(),
-        widgetBatterySaver.asFlow()
-    ) { hasWidgets, hasHistoryWidgets, period, batterySaver ->
-        WidgetSettings(hasWidgets || hasHistoryWidgets, period, batterySaver)
+        widgetBatterySaver.asFlow(),
+        allowNonLauncherWidgets.asFlow()
+    ) { hasWidgets, hasHistoryWidgets, period, batterySaver, allowNonLauncherWidgets ->
+        WidgetSettings(
+            hasWidgets || hasHistoryWidgets,
+            period,
+            batterySaver,
+            allowNonLauncherWidgets
+        )
     }
 
     override val state = combine(
@@ -272,6 +281,12 @@ class SettingsLocationViewModelImpl(
     override fun onWidgetBatterySaverChanged(enabled: Boolean) {
         viewModelScope.launch {
             widgetBatterySaver.set(enabled)
+        }
+    }
+
+    override fun onAllowNonLauncherWidgetsChanged(enabled: Boolean) {
+        viewModelScope.launch {
+            allowNonLauncherWidgets.set(enabled)
         }
     }
 

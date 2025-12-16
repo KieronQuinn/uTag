@@ -50,9 +50,10 @@ class GeocoderRepositoryImpl(
         val format: String.() -> String? = {
             if(firstLineOnly) firstLineOrNull() else this
         }
-        return (getCachedAddressOrNull(roundedLocation) ?: context.geocode(location)?.merge()?.also {
-            cacheAddress(roundedLocation, it)
-        })?.format()
+        return (getCachedAddressOrNull(roundedLocation) ?: context.geocode(location)
+            ?.merge(location)
+            ?.also { cacheAddress(roundedLocation, it) })
+            ?.format()
     }
 
     override suspend fun clearCache() {

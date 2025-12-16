@@ -36,6 +36,7 @@ import com.google.android.gms.maps.model.MarkerOptions
 import com.kieronquinn.app.utag.Application.Companion.PACKAGE_NAME_ONECONNECT
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.databinding.FragmentTagMapBinding
+import com.kieronquinn.app.utag.model.GeoLocation
 import com.kieronquinn.app.utag.repositories.ApiRepository.Companion.FIND_PRIVACY_URL
 import com.kieronquinn.app.utag.repositories.SettingsRepository.MapStyle
 import com.kieronquinn.app.utag.repositories.SettingsRepository.MapTheme
@@ -71,6 +72,7 @@ import me.saket.bettermovementmethod.BetterLinkMovementMethod
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 import java.lang.ref.WeakReference
+import java.time.Instant
 
 class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding::inflate) {
 
@@ -547,6 +549,10 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
             locationState is LocationState.NotAllowed -> getString(R.string.tag_picker_not_allowed)
             else -> getString(R.string.map_address_unknown)
         }
+        val geoLocation = when {
+            locationState is LocationState.Location -> locationState.geoLocation
+            else -> null
+        }
         val statuses = ArrayList<String>()
         if(!state.tagState.device.isOwner) {
             val memberName = state.knownTagMembers?.get(state.tagState.device.ownerId)
@@ -580,6 +586,12 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
         }else{
             tagMapCardLocationHistoryOrSearchNearby.setIconResource(R.drawable.ic_location_history)
             tagMapCardLocationHistoryOrSearchNearby.text = getString(R.string.map_location_history)
+        }
+        if(state.debug && geoLocation != null) {
+            tagMapCardAddress.setOnLongClickListener {
+                showLocationInfoDialog(geoLocation)
+                true
+            }
         }
         whenResumed {
             if(locationState is LocationState.PINRequired || locationState is LocationState.NoKeys) {
@@ -810,6 +822,34 @@ class TagMapFragment: BoundFragment<FragmentTagMapBinding>(FragmentTagMapBinding
     private fun showAddToHomeDialog() {
         val shortcutInfo = ShortcutInfo.Builder(requireContext(), "utag").build()
         shortcutManager.requestPinShortcut(shortcutInfo, null)
+    }
+
+    private fun showLocationInfoDialog(location: GeoLocation) = whenResumed {
+        val message = getString(
+            R.string.map_debug_info,
+            location.latitude.toString(),
+            location.longitude.toString(),
+            Instant.ofEpochMilli(location.time).toString(),
+            location.accuracy.toString(),
+            location.speed?.toString(),
+            location.rssi?.toString(),
+            location.battery?.let { getString(it.labelRaw) },
+            location.method,
+            location.findHost?.let { getString(it.label) },
+            location.nearby?.toString(),
+            location.onDemand?.toString(),
+            location.connectedUserId,
+            location.connectedDeviceId,
+            location.d2dStatus?.let { getString(it.label) },
+            location.wasEncrypted.toString()
+        )
+        AlertDialog.Builder(requireContext()).apply {
+            setTitle(R.string.tag_location_history_info_title)
+            setMessage(message)
+            setPositiveButton(android.R.string.ok) { dialog, _ ->
+                dialog.dismiss()
+            }
+        }.show()
     }
 
 }

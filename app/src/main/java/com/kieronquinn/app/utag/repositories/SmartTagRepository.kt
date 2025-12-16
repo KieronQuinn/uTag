@@ -8,16 +8,17 @@ import android.util.Base64
 import com.google.android.gms.maps.model.LatLng
 import com.kieronquinn.app.smartspacer.sdk.provider.SmartspacerComplicationProvider
 import com.kieronquinn.app.utag.BuildConfig
-import com.kieronquinn.app.utag.components.bluetooth.ConnectedTagConnection
 import com.kieronquinn.app.utag.components.bluetooth.RemoteTagConnection
 import com.kieronquinn.app.utag.model.BatteryLevel
 import com.kieronquinn.app.utag.model.ChaserRegion
 import com.kieronquinn.app.utag.model.DeviceInfo
 import com.kieronquinn.app.utag.model.EncryptedValue
+import com.kieronquinn.app.utag.model.GeoLocation
 import com.kieronquinn.app.utag.model.database.UTagDatabase
 import com.kieronquinn.app.utag.providers.ConnectedSmartspacerComplication
 import com.kieronquinn.app.utag.repositories.ApiRepository.GetLocationResult
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.Companion.ACTION_REFRESH_TAG_STATES
+import com.kieronquinn.app.utag.repositories.SmartTagRepository.Companion.refreshTagStates
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.TagData
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.TagState
 import com.kieronquinn.app.utag.repositories.SmartTagRepository.TagState.Loaded.LocationState
@@ -162,6 +163,7 @@ interface SmartTagRepository: RoomEncryptionFailedCallback {
                     val address: String?,
                     val time: Long,
                     val isEncrypted: Boolean,
+                    val geoLocation: GeoLocation,
                     override val cached: Boolean
                 ): LocationState(cached)
                 data class PINRequired(
@@ -400,7 +402,14 @@ class SmartTagRepositoryImpl(
                 is GetLocationResult.Location -> {
                     val latLng = LatLng(it.location.latitude, it.location.longitude)
                     val address = geocoderRepository.geocode(latLng)
-                    Location(latLng, address, it.location.time, it.isEncrypted, it.cached)
+                    Location(
+                        latLng,
+                        address,
+                        it.location.time,
+                        it.isEncrypted,
+                        it.location,
+                        it.cached
+                    )
                 }
                 is GetLocationResult.PINRequired -> {
                     LocationState.PINRequired(it.time, it.cached)
