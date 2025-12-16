@@ -107,7 +107,8 @@ abstract class TagMapViewModel: ViewModel() {
             val requiresMutualAgreement: Boolean,
             val region: String,
             val enableBluetoothPendingIntent: PendingIntent?,
-            val swapLocationHistory: Boolean
+            val swapLocationHistory: Boolean,
+            val debug: Boolean
         ): State() {
             override fun isBusy() = isRefreshing
         }
@@ -371,9 +372,10 @@ class TagMapViewModelImpl(
     private val uiOptions = combine(
         showAddToHome,
         suppressErrors,
-        settingsRepository.mapSwapLocationHistory.asFlow()
-    ) { showAddToHome, suppressErrors, swapLocationHistory ->
-        Triple(showAddToHome, suppressErrors, swapLocationHistory)
+        settingsRepository.mapSwapLocationHistory.asFlow(),
+        encryptedSettingsRepository.isDebugModeEnabled(viewModelScope)
+    ) { showAddToHome, suppressErrors, swapLocationHistory, debug ->
+        UiOptions(showAddToHome, suppressErrors, swapLocationHistory, debug == true)
     }
 
     private val options = combine(
@@ -384,9 +386,10 @@ class TagMapViewModelImpl(
         consentInfo
     ) { insets, requirements, isRefreshingOrSyncing, uiOptions, consentInfo ->
         val region = consentInfo?.region ?: return@combine null
-        val showAddToHome = uiOptions.first
-        val suppressErrors = uiOptions.second
-        val swapLocationHistory = uiOptions.third
+        val showAddToHome = uiOptions.showAddToHome
+        val suppressErrors = uiOptions.suppressErrors
+        val swapLocationHistory = uiOptions.swapLocationHistory
+        val debug = uiOptions.debug
         Options(
             insets,
             requirements,
@@ -394,7 +397,8 @@ class TagMapViewModelImpl(
             showAddToHome,
             region,
             suppressErrors,
-            swapLocationHistory
+            swapLocationHistory,
+            debug
         )
     }
 
@@ -487,7 +491,8 @@ class TagMapViewModelImpl(
                     tagState.requiresAgreement(),
                     options.region,
                     device.enableBlueooth,
-                    options.swapLocationHistory
+                    options.swapLocationHistory,
+                    options.debug
                 )
             }
             tagState is TagState.Error -> State.Error(ErrorType.Generic(tagState.code))
@@ -792,7 +797,8 @@ class TagMapViewModelImpl(
         val showAddToHome: Boolean,
         val region: String,
         val suppressErrors: Boolean,
-        val swapLocationHistory: Boolean
+        val swapLocationHistory: Boolean,
+        val debug: Boolean
     ) {
         data class Requirements(
             val moduleState: ModuleState?,
@@ -804,5 +810,12 @@ class TagMapViewModelImpl(
         data class Loaded(val states: Map<String, TagState>?): TagStates()
         data class Error(val code: Int): TagStates()
     }
+
+    private data class UiOptions(
+        val showAddToHome: Boolean,
+        val suppressErrors: Boolean,
+        val swapLocationHistory: Boolean,
+        val debug: Boolean
+    )
 
 }

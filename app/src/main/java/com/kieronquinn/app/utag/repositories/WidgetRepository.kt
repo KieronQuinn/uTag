@@ -14,7 +14,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.kieronquinn.app.utag.Application.Companion.isMainProcess
-import com.kieronquinn.app.utag.BuildConfig
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.model.EncryptedValueConverter.ENCRYPTION_TRANSFORMATION
 import com.kieronquinn.app.utag.model.database.UTagDatabase
@@ -37,7 +36,6 @@ import com.kieronquinn.app.utag.utils.extensions.toEncryptedValue
 import com.kieronquinn.app.utag.utils.extensions.toStringSet
 import com.kieronquinn.app.utag.utils.room.RoomEncryptionHelper.RoomEncryptionFailedCallback
 import com.kieronquinn.app.utag.xposed.extensions.TagActivity_createIntent
-import com.kieronquinn.app.utag.xposed.extensions.applySecurity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.flow.Flow

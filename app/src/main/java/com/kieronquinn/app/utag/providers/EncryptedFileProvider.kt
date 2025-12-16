@@ -4,10 +4,13 @@ import android.content.ContentProvider
 import android.content.ContentValues
 import android.database.Cursor
 import android.net.Uri
+import android.os.Build
 import android.os.ParcelFileDescriptor
 import com.kieronquinn.app.utag.BuildConfig
+import com.kieronquinn.app.utag.repositories.EncryptedSettingsRepository
 import com.kieronquinn.app.utag.repositories.HistoryWidgetRepository
 import com.kieronquinn.app.utag.repositories.WidgetRepository
+import com.kieronquinn.app.utag.utils.extensions.getLauncherPackageName
 import com.kieronquinn.app.utag.xposed.extensions.provideContext
 import org.koin.android.ext.android.inject
 import java.io.File
@@ -42,6 +45,7 @@ class EncryptedFileProvider: ContentProvider() {
 
     private val widgetRepository by inject<WidgetRepository>()
     private val historyWidgetRepository by inject<HistoryWidgetRepository>()
+    private val settings by inject<EncryptedSettingsRepository>()
 
     private val encryptedImagesDirectory by lazy {
         File(provideContext().filesDir, "images")
@@ -52,11 +56,14 @@ class EncryptedFileProvider: ContentProvider() {
     }
 
     override fun openFile(uri: Uri, mode: String): ParcelFileDescriptor? {
-        val allowedPackages = widgetRepository.getAllowedPackages() +
-                historyWidgetRepository.getAllowedPackages() + PACKAGE_ALLOWLIST
-        val calling = callingPackage
-        if(calling != null && !allowedPackages.contains(calling)) {
-            throw SecurityException("$calling is not allowed to access encrypted files")
+        if(Build.VERSION.SDK_INT < 36 || !settings.allowNonLauncherWidgets.getSync()) {
+            val allowedPackages = widgetRepository.getAllowedPackages() +
+                    historyWidgetRepository.getAllowedPackages() + PACKAGE_ALLOWLIST +
+                    requireContext().packageManager.getLauncherPackageName()
+            val calling = callingPackage
+            if (calling != null && !allowedPackages.contains(calling)) {
+                throw SecurityException("$calling is not allowed to access encrypted files")
+            }
         }
         val filename = uri.lastPathSegment ?: return null
         val file = File(encryptedImagesDirectory, filename).takeIf {

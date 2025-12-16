@@ -369,7 +369,7 @@ class Application: Application(), LifecycleEventObserver {
         viewModel<SetupPermissionsViewModel> { SetupPermissionsViewModelImpl(get(), get(), get(), get(), get(), get()) }
         viewModel<SetupChaserViewModel> { SetupChaserViewModelImpl(get(), get()) }
         viewModel<SetupUtsViewModel> { SetupUtsViewModelImpl(get(), get()) }
-        viewModel<SetupAccountViewModel> { SetupAccountViewModelImpl(get(), get()) }
+        viewModel<SetupAccountViewModel> { SetupAccountViewModelImpl(get(), get(), get()) }
         viewModel<AuthResponseViewModel> { AuthResponseViewModelImpl(get(), get()) }
         viewModel<TagRootViewModel> { TagRootViewModelImpl(get(), get()) }
         viewModel<TagMapViewModel> { deviceId ->

@@ -3,6 +3,7 @@ package com.kieronquinn.app.utag.ui.screens.settings.location
 import android.icu.util.LocaleData
 import android.icu.util.LocaleData.MeasurementSystem
 import android.icu.util.ULocale
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import androidx.preference.PreferenceGroup
@@ -231,6 +232,14 @@ class SettingsLocationFragment: BaseSettingsFragment(), BackAvailable {
                     state.period != WidgetRefreshPeriod.NEVER
             isEnabled = state.available && state.period != WidgetRefreshPeriod.NEVER
             onChange<Boolean> { viewModel.onWidgetBatterySaverChanged(it) }
+        }
+        if(Build.VERSION.SDK_INT >= 36) {
+            switchPreference {
+                title = getString(R.string.settings_location_widget_allow_non_launcher_title)
+                summary = getText(R.string.settings_location_widget_allow_non_launcher_content)
+                isChecked = state.allowNonLauncherWidgets
+                onChange<Boolean> { viewModel.onAllowNonLauncherWidgetsChanged(it) }
+            }
         }
     }
     

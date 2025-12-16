@@ -186,6 +186,15 @@ interface EncryptedSettingsRepository: BaseSettingsRepository {
     val overmatureOfflinePreventionEnabled: UTagSetting<Boolean>
 
     /**
+     *  Android 16+
+     *
+     *  Allow non-launchers to access encrypted files for widgets, since it's no longer possible
+     *  to detect which apps are using them automatically.
+     */
+    @IgnoreInBackup
+    val allowNonLauncherWidgets: UTagSetting<Boolean>
+
+    /**
      *  The encryption key used to encrypt sensitive data stored in the Room database.
      */
     fun getDatabaseEncryptionKey(): SecretKey
@@ -342,6 +351,9 @@ class EncryptedSettingsRepositoryImpl(
 
         private const val KEY_OVERMATURE_OFFLINE_PREVENTION = "overmature_offline_prevention"
         private const val DEFAULT_OVERMATURE_OFFLINE_PREVENTION = true
+
+        private const val KEY_ALLOW_NON_LAUNCHERS = "allow_non_launchers"
+        private const val DEFAULT_ALLOW_NON_LAUNCHERS = false
     }
 
     override val authServerUrl = string(KEY_AUTH_SERVER_URL, "")
@@ -419,6 +431,11 @@ class EncryptedSettingsRepositoryImpl(
     override val overmatureOfflinePreventionEnabled = boolean(
         KEY_OVERMATURE_OFFLINE_PREVENTION,
         DEFAULT_OVERMATURE_OFFLINE_PREVENTION
+    )
+
+    override val allowNonLauncherWidgets = boolean(
+        KEY_ALLOW_NON_LAUNCHERS,
+        DEFAULT_ALLOW_NON_LAUNCHERS
     )
 
     private val encryptionKey = string(KEY_ENCRYPTION_KEY, "")

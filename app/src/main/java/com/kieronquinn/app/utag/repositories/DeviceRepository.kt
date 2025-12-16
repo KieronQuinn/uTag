@@ -12,6 +12,7 @@ import com.kieronquinn.app.utag.model.DeviceInfo
 import com.kieronquinn.app.utag.model.database.cache.CacheItem.CacheType
 import com.kieronquinn.app.utag.networking.model.smartthings.GetDeviceResponse
 import com.kieronquinn.app.utag.networking.services.DeviceService
+import com.kieronquinn.app.utag.networking.services.DeviceService.Companion.GET_DEVICES_URL
 import com.kieronquinn.app.utag.repositories.CacheRepository.Companion.getCache
 import com.kieronquinn.app.utag.utils.extensions.dip
 import com.kieronquinn.app.utag.utils.extensions.get
@@ -60,7 +61,16 @@ class DeviceRepositoryImpl(
     }.build()
 
     private suspend fun getTagDevices(includeNotOwned: Boolean = false): List<GetDeviceResponse>? {
-        return deviceService.getDevices().get(CacheType.DEVICES, name = "devices")?.items?.filter {
+        val allDevices = ArrayList<GetDeviceResponse>()
+        var url: String? = GET_DEVICES_URL
+        while(url != null) {
+            val devices = deviceService.getDevices(url).get(name = "devices")
+                ?: return cacheRepository.getCache(CacheType.DEVICES)
+            allDevices.addAll(devices.items)
+            url = devices.links.next?.href
+        }
+        cacheRepository.setCache(CacheType.DEVICES, data = allDevices)
+        return allDevices.filter {
             it.ocfDeviceType == DEVICE_TYPE_TAG && (it.isAllowed() || includeNotOwned)
         }
     }

@@ -5,9 +5,11 @@ import android.text.SpannableStringBuilder
 import android.view.View
 import androidx.annotation.ArrayRes
 import androidx.annotation.StringRes
+import androidx.appcompat.app.AlertDialog
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.ui.base.BackAvailable
 import com.kieronquinn.app.utag.ui.base.BaseSettingsFragment
+import com.kieronquinn.app.utag.ui.screens.setup.account.SetupAccountViewModel.Event
 import com.kieronquinn.app.utag.ui.screens.setup.account.SetupAccountViewModel.State
 import com.kieronquinn.app.utag.utils.extensions.appendBullet
 import com.kieronquinn.app.utag.utils.extensions.whenResumed
@@ -23,6 +25,7 @@ class SetupAccountFragment: BaseSettingsFragment(), BackAvailable {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setupState()
+        setupEvents()
     }
 
     private fun setupState() {
@@ -43,6 +46,20 @@ class SetupAccountFragment: BaseSettingsFragment(), BackAvailable {
                 setLoading(true)
                 viewModel.onOpenBrowser(state.url)
             }
+        }
+    }
+
+    private fun setupEvents() {
+        whenResumed {
+            viewModel.events.collect {
+                handleEvents(it)
+            }
+        }
+    }
+
+    private fun handleEvents(event: Event) {
+        when(event) {
+            Event.THIRD_PARTY_BROWSER_PROMPT -> showBrowserWarning()
         }
     }
 
@@ -78,6 +95,25 @@ class SetupAccountFragment: BaseSettingsFragment(), BackAvailable {
                 }
             }
         }
+    }
+
+    private fun showBrowserWarning() {
+        AlertDialog.Builder(requireContext()).apply {
+            setTitle(R.string.account_chrome_warning_title)
+            setMessage(R.string.account_chrome_warning_content)
+            setPositiveButton(R.string.account_chrome_warning_use_chrome) { _, _ ->
+                val state = viewModel.state.value
+                if(state is State.OpenBrowser) {
+                    viewModel.onOpenBrowser(state.url, forceChrome = true)
+                }
+            }
+            setNegativeButton(R.string.account_chrome_warning_use_ignore) { _, _ ->
+                val state = viewModel.state.value
+                if(state is State.OpenBrowser) {
+                    viewModel.onOpenBrowser(state.url, ignoreChrome = true)
+                }
+            }
+        }.show()
     }
 
     private fun createInfo(
