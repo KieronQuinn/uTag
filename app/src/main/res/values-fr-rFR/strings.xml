@@ -70,6 +70,10 @@
     <string name="account_error_title">Erreur</string>
     <string name="account_error_content">Une erreur s\'est produite lors du processus de connexion, veuillez vérifier votre connexion et réessayer</string>
     <string name="account_error_try_again">Réessayer</string>
+    <string name="account_chrome_warning_title">Sign in with Google</string>
+    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">Erreur</string>
     <string name="login_response_error_content">Une erreur est survenue lors de la finalisation de la connexion, veuillez réessayer</string>
     <string name="login_response_error_close">Fermer</string>
@@ -144,6 +148,8 @@
     <string name="settings_location_widget_period_never_content">Ne sera actualisé que si vous appuyez sur actualiser un widget ou si un tag est mis à jour par uTag</string>
     <string name="settings_location_widget_battery_saver_title">Rafraîchissement du widget sur l\'économiseur de batterie</string>
     <string name="settings_location_widget_battery_saver_content">Rafraîchir les widgets lorsque l\'économiseur de batterie est activé</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Rechercher à proximité</string>
     <string name="settings_location_uwb_title">Recherche précise</string>
     <string name="settings_location_uwb_content">Utilisez la recherche précise (UWB) s\'il est pris en charge par votre Tag.</string>
@@ -316,7 +322,7 @@
     <string name="map_searching_dialog_enable_searching">Activer le mode de recherche</string>
     <string name="map_searching_dialog_cancel">Fermer</string>
     <string name="map_allow_access_dialog_title">Partager votre position ?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n\'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[La position de votre Tag et de votre appareil mobile sera partagée avec votre membre de localisation quand le Tag se connecte à votre appareil mobile. Vous pouvez arrêter de partager votre localisation n'importe quand depuis les paramètres de uTag. Samsung collectera votre position et la partagera avec les membres de localisation, ainsi que traîter ces données en accord avec sa <a href="%1s">Politique de confidentialité</a>]]></string>
     <string name="map_allow_access_dialog_positive">Partager</string>
     <string name="map_allow_access_dialog_negative">Annuler</string>
     <string name="map_passive_mode_dialog_title">Mode Passif activé</string>
@@ -324,6 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Le mode Passif est actuellement activé pour ce Tag, désactivez-le dans le menu de paramètres \"Plus\" pour utiliser la recherche à proximité.\n\n<b>Note :</b> Vous pouvez réactiver le mode Passif après avoir recherché le Tag.</string>
     <string name="map_offline_dialog_title">Échec de rafraîchissement</string>
     <string name="map_offline_dialog_content">uTag n\'a pas pu rafraîchir la position de votre Tag. Vérifiez votre connexion réseau et réessayez. Vous pouvez toujours voir le dernier état connu de votre Tag et utiliser la fonctionnalité Bluetooth à proximité du Tag.</string>
+    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Sélectionner le Tag</string>
     <string name="tag_picker_show_all_markers_title">Montrer tous les Tags sur la carte</string>
@@ -619,7 +626,7 @@
     <string name="d2d_status_scanned">Scanné</string>
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Localisez vos Tags n\'importe quand, n\'importe où</string>
-    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l\'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d\'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
+    <string name="privacy_notice_content"><![CDATA[Pour continuer, veuillez accepter l'<a href="%1s">Utilisation des informations de localisation</a>.<br><br>Pour plus d'informations, consultez la <a href="%1s">Politique de confidentialité</a> du compte Samsung.]]></string>
     <string name="privacy_notice_agree">J\'accepte</string>
     <string name="privacy_notice_disagree">Je refuse</string>
     <string name="privacy_notice_error_dialog_title">Erreur</string>

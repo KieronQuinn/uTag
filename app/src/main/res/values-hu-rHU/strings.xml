@@ -70,6 +70,10 @@
     <string name="account_error_title">Hiba</string>
     <string name="account_error_content">Egy hiba lépett fel a belépés közben, kérjük ellenőrizze a csatlakozását, és próbálja újra</string>
     <string name="account_error_try_again">Próbáld újra</string>
+    <string name="account_chrome_warning_title">Sign in with Google</string>
+    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">Hiba</string>
     <string name="login_response_error_content">Egy hiba lépett fel a belépés befejezése közben, kérem próbálja újra</string>
     <string name="login_response_error_close">Bezár</string>
@@ -144,6 +148,8 @@
     <string name="settings_location_widget_period_never_content">Csak akkor frissül, ha megérinti a frissítést egy widgeten, vagy ha a uTag frissíti a Tag helyét</string>
     <string name="settings_location_widget_battery_saver_title">Widget frissítés Akkumulátorkímélő módban</string>
     <string name="settings_location_widget_battery_saver_content">Widgetek frissítése, amikor az Akkumulátorkímélő mód engedélyezve van</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Keresés a közelben</string>
     <string name="settings_location_uwb_title">Pontos keresés</string>
     <string name="settings_location_uwb_content">Pontos keresés (UWB) használata, ha a Tag támogatja.</string>
@@ -324,6 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">A Passzív mód jelenleg engedélyezve van ehhez a Tag-hez, tiltsa le a \"Továbbiak\" beállítási menüben a Közeli keresés használatához.\n\n<b>Megjegyzés:</b> A Tag keresése után újra engedélyezheti a Passzív módot.</string>
     <string name="map_offline_dialog_title">Nem sikerült a frissítés</string>
     <string name="map_offline_dialog_content">A uTag nem tudta frissíteni a Tag helyét. Ellenőrizze a hálózati kapcsolatot, és próbálja újra. A Tag utolsó ismert állapotát és a Bluetooth funkcióit továbbra is megtekintheti, ha a Tag közelében van.</string>
+    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Címke kiválasztása</string>
     <string name="tag_picker_show_all_markers_title">Összes Tag megjelenítése a térképen</string>
