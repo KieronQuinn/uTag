@@ -208,7 +208,7 @@ class Xposed: IXposedHookLoadPackage {
             ;
 
             fun getKey(version: Long): String {
-                return "${key}_$version"
+                return "${key}_v2_$version"
             }
 
             companion object {
