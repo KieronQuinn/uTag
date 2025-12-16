@@ -70,6 +70,10 @@
     <string name="account_error_title">Błąd</string>
     <string name="account_error_content">Wystąpił błąd podczas uruchamiania procesu logowania, sprawdź połączenie i spróbuj ponownie</string>
     <string name="account_error_try_again">Spróbuj ponownie</string>
+    <string name="account_chrome_warning_title">Sign in with Google</string>
+    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">Wystąpił błąd w procesie logowania się, spróbuj ponownie</string>
     <string name="login_response_error_close">Zamknij</string>
@@ -144,6 +148,8 @@
     <string name="settings_location_widget_period_never_content">Odświeży się tylko, gdy naciśniesz przycisk odśwież lub przy aktualizacji pozycji Taga przez uTag</string>
     <string name="settings_location_widget_battery_saver_title">Odświeżaj przy oszczędzaniu energii</string>
     <string name="settings_location_widget_battery_saver_content">Odświeża widżety, gdy jest włączone oszczędzanie energii</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
     <string name="settings_location_uwb_content">Używaj precyzyjnego znajdowania (UWB), jeśli jest wspierane przez Twoją etykietę.</string>
@@ -324,6 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Tryb pasywny jest obecnie włączony dla tej etykiety, wyłącz go w zakładce \"więcej\" ustawień, aby użyć opcji Szukaj w pobliżu.\n\n<b>Uwaga:</b>Możesz ponownie włączyć tryb pasywny później.</string>
     <string name="map_offline_dialog_title">Nie udało się odświeżyć</string>
     <string name="map_offline_dialog_content">Aplikacja uTag nie mogła odświeżyć lokalizacji Twojego SmartTaga. Sprawdź połączenie sieciowe i spróbuj ponownie. Nadal możesz sprawdzić ostatni znany stan SmartTaga oraz funkcje Bluetooth, gdy znajdujesz się w jego pobliżu.</string>
+    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Wybierz etykietę</string>
     <string name="tag_picker_show_all_markers_title">Pokaż wszystkie etykiety na mapie</string>
