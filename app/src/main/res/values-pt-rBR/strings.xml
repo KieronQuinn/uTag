@@ -18,8 +18,8 @@
     <string name="setup_mod_oneui_title">OneUI detectado</string>
     <string name="setup_mod_oneui_desc">Este dispositivo está rodando a OneUI. Usar o uTag em um dispositivo que possui suporte oficial para o SmartThings Find pode restringir sua funcionalidade, fazer com que funções do SmartThings não funcionem direito ou causar erros inesperados. <b>O suporte para OneUI é experimental e pode não funcionar no seu dispositivo. Por favor não reporte bugs que ocorrerem neste dispositivo.</b> Você deverá acessar o SmartThings através de um navegador, ao invés de usar a Conta Samsung que você já tem no dispositivo.</string>
     <string name="setup_mod_oneui_continue">Continuar</string>
-    <string name="setup_mod_oneui_incompatible_title">Incompatible OneUI Version Detected</string>
-    <string name="setup_mod_oneui_incompatible_desc">This device is running a version of OneUI which is not compatible with the SmartThings Mod required for uTag to function. Please use the official Samsung Find app instead.</string>
+    <string name="setup_mod_oneui_incompatible_title">Detectada versão incompatível da OneUI</string>
+    <string name="setup_mod_oneui_incompatible_desc">Este dispositivo está executando uma versão da OneUI que não é compatível com o Mod SmartThings necessário para a uTag funcionar. Por favor, utilize o aplicativo Samsung App oficial.</string>
     <string name="setup_mod_downloading">Transferindo SmartThings…</string>
     <string name="setup_mod_setting_up">Configurando o mod…</string>
     <string name="setup_mod_setting_up_subtitle">Isso pode demorar um pouquinho</string>
@@ -52,8 +52,8 @@
     <string name="permission_smartthings_battery_title">Desabilitar otimizações de bateriar para o SmartThings</string>
     <string name="permission_smartthings_battery_content">Isso é necessário para manter as tags conectadas por Bluetooth em segundo plano</string>
     <string name="permission_battery_disable">Desabilitar</string>
-    <string name="permission_analytics_title">Analytics &amp; Crash Reporting</string>
-    <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
+    <string name="permission_analytics_title">Dados de uso &amp; Relatórios de falhas</string>
+    <string name="permission_analytics_content">Habilitar dados de uso anônimos &amp; relatórios de falhar para ajudar o desenvolvimento da uTag</string>
     <string name="permission_analytics_allow">Permitir</string>
     <string name="permission_analytics_deny">Negar</string>
     <!-- Sign in -->
