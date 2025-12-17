@@ -727,7 +727,7 @@
     <string name="contributors_icons_title">Dodatkowe ikony</string>
     <string name="contributors_icons_content">Dodatkowe ikony z Material Design Icons (licencja Pictogrammers Free License)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Dostępna jest nowa wersja</string>
+    <string name="snackbar_update">Dostępna jest aktualizacja</string>
     <string name="snackbar_update_multiple">Aktualizacje dostępne</string>
     <string name="snackbar_update_button">Wyświetl</string>
     <string name="update_notification">Wersja %1s uTag</string>
@@ -751,9 +751,9 @@
     <string name="update_dialog_failed_content">Sprawdź połączenie sieciowe i spróbuj ponownie</string>
     <string name="update_dialog_failed_close">Zamknij</string>
     <string name="update_downloader_github">Pobierz w przeglądarce</string>
-    <string name="update_notification_title">Dostępna jest nowa wersja uTag</string>
+    <string name="update_notification_title">Aktualizacja uTag</string>
     <string name="update_notification_content">Dostępna jest aktualizacja aplikacji uTag (z %1s na %1s)</string>
-    <string name="update_notification_smartthings_title">Dostępna jest nowa wersja SmartThings</string>
+    <string name="update_notification_smartthings_title">Aktualizacja SmartThings</string>
     <string name="update_notification_smartthings_content">Dostępna jest aktualizacja SmartThings (z %1s na %1s)</string>
     <string name="update_notification_multiple_title">Dostępne aktualizacje</string>
     <string name="update_notification_multiple_content">Dostępne są aktualizacje aplikacji uTag i SmartThings</string>
