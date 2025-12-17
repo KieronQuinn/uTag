@@ -72,7 +72,7 @@
     <string name="account_error_try_again">Spróbuj ponownie</string>
     <string name="account_chrome_warning_title">Sign in with Google</string>
     <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
-    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
+    <string name="account_chrome_warning_use_chrome">Użyj Chrome</string>
     <string name="account_chrome_warning_use_ignore">Ignore</string>
     <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">Wystąpił błąd w procesie logowania się, spróbuj ponownie</string>
@@ -148,7 +148,7 @@
     <string name="settings_location_widget_period_never_content">Odświeży się tylko, gdy naciśniesz przycisk odśwież lub przy aktualizacji pozycji Taga przez uTag</string>
     <string name="settings_location_widget_battery_saver_title">Odświeżaj przy oszczędzaniu energii</string>
     <string name="settings_location_widget_battery_saver_content">Odświeża widżety, gdy jest włączone oszczędzanie energii</string>
-    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Zezwól na widżety poza ekranem głównym</string>
     <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
@@ -1061,12 +1061,12 @@
     <!-- Updates -->
     <string name="updates_title">Aktualizacje</string>
     <string name="updates_utag_available_title">Dostępna aktualizacja uTag</string>
-    <string name="updates_utag_available_content">Wersja %1s (najnowsza %1s)</string>
+    <string name="updates_utag_available_content">Wersja %1s (zainstalowana %1s)</string>
     <string name="updates_utag_available_action">Wyświetl aktualizacje</string>
     <string name="updates_utag_updated_title">uTag jest aktualny</string>
     <string name="updates_utag_updated_content">Wersja %1s</string>
     <string name="updates_smartthings_available_title">Dostępna jest aktualizacja SmartThings</string>
-    <string name="updates_smartthings_available_content">Wersja %1s (najnowsza %1s)</string>
+    <string name="updates_smartthings_available_content">Wersja %1s (zainstalowana %1s)</string>
     <string name="updates_smartthings_available_action">Wyświetl aktualizacje</string>
     <string name="updates_smartthings_updated_title">SmartThings jest aktualne</string>
     <string name="updates_smartthings_updated_content">Wersja %1s</string>
