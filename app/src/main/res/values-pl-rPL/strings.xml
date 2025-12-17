@@ -70,8 +70,8 @@
     <string name="account_error_title">Błąd</string>
     <string name="account_error_content">Wystąpił błąd podczas uruchamiania procesu logowania, sprawdź połączenie i spróbuj ponownie</string>
     <string name="account_error_try_again">Spróbuj ponownie</string>
-    <string name="account_chrome_warning_title">Sign in with Google</string>
-    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
+    <string name="account_chrome_warning_title">Zaloguj się przez Google</string>
+    <string name="account_chrome_warning_content">Z powodu błędu Samsunga opcja \"Zaloguj się przez Google\" może nie działać na Twojej przeglądarce. Jeśli chcesz z niej skorzystać, użyj przeglądarki Chrome. W przeciwnym razie zignoruj to ostrzeżenie.</string>
     <string name="account_chrome_warning_use_chrome">Użyj Chrome</string>
     <string name="account_chrome_warning_use_ignore">Ignoruj</string>
     <string name="login_response_error_title">Błąd</string>
