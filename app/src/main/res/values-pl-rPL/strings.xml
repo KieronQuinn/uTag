@@ -73,7 +73,7 @@
     <string name="account_chrome_warning_title">Sign in with Google</string>
     <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
     <string name="account_chrome_warning_use_chrome">Użyj Chrome</string>
-    <string name="account_chrome_warning_use_ignore">Ignore</string>
+    <string name="account_chrome_warning_use_ignore">Ignoruj</string>
     <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">Wystąpił błąd w procesie logowania się, spróbuj ponownie</string>
     <string name="login_response_error_close">Zamknij</string>
@@ -330,7 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Tryb pasywny jest obecnie włączony dla tej etykiety, wyłącz go w zakładce \"więcej\" ustawień, aby użyć opcji Szukaj w pobliżu.\n\n<b>Uwaga:</b>Możesz ponownie włączyć tryb pasywny później.</string>
     <string name="map_offline_dialog_title">Nie udało się odświeżyć</string>
     <string name="map_offline_dialog_content">Aplikacja uTag nie mogła odświeżyć lokalizacji Twojego SmartTaga. Sprawdź połączenie sieciowe i spróbuj ponownie. Nadal możesz sprawdzić ostatni znany stan SmartTaga oraz funkcje Bluetooth, gdy znajdujesz się w jego pobliżu.</string>
-    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
+    <string name="map_debug_info">Szerokość geograficzna: %1s\nDługość geograficzna: %1s\nCzas: %1s\nDokładność: %1s\nPrędkość: %1s\nRSSI: %1s\nBateria: %1s\nMetoda: %1s\nHost lokalizacji: %1s\nW pobliżu: %1s\nNa żądanie: %1s\nID połączonego użytkownika: %1s\nID połączonego urządzenia: %1s\nStatus D2D: %1s\nByło szyfrowane: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Wybierz etykietę</string>
     <string name="tag_picker_show_all_markers_title">Pokaż wszystkie etykiety na mapie</string>
