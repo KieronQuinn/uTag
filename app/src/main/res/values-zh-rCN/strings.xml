@@ -53,7 +53,7 @@
     <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
     <string name="permission_battery_disable">Disable</string>
     <string name="permission_analytics_title">Analytics &amp; Crash Reporting</string>
-    <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
+    <string name="permission_analytics_content">启用匿名分析 &amp; 崩溃报告以帮助uTag的开发</string>
     <string name="permission_analytics_allow">Allow</string>
     <string name="permission_analytics_deny">Deny</string>
     <!-- Sign in -->
