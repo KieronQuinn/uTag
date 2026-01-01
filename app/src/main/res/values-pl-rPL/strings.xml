@@ -70,10 +70,10 @@
     <string name="account_error_title">Błąd</string>
     <string name="account_error_content">Wystąpił błąd podczas uruchamiania procesu logowania, sprawdź połączenie i spróbuj ponownie</string>
     <string name="account_error_try_again">Spróbuj ponownie</string>
-    <string name="account_chrome_warning_title">Sign in with Google</string>
-    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
-    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
-    <string name="account_chrome_warning_use_ignore">Ignore</string>
+    <string name="account_chrome_warning_title">Zaloguj się przez Google</string>
+    <string name="account_chrome_warning_content">Z powodu błędu Samsunga opcja \"Zaloguj się przez Google\" może nie działać na Twojej przeglądarce. Jeśli chcesz z niej skorzystać, użyj przeglądarki Chrome. W przeciwnym razie zignoruj to ostrzeżenie.</string>
+    <string name="account_chrome_warning_use_chrome">Użyj Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignoruj</string>
     <string name="login_response_error_title">Błąd</string>
     <string name="login_response_error_content">Wystąpił błąd w procesie logowania się, spróbuj ponownie</string>
     <string name="login_response_error_close">Zamknij</string>
@@ -148,7 +148,7 @@
     <string name="settings_location_widget_period_never_content">Odświeży się tylko, gdy naciśniesz przycisk odśwież lub przy aktualizacji pozycji Taga przez uTag</string>
     <string name="settings_location_widget_battery_saver_title">Odświeżaj przy oszczędzaniu energii</string>
     <string name="settings_location_widget_battery_saver_content">Odświeża widżety, gdy jest włączone oszczędzanie energii</string>
-    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
+    <string name="settings_location_widget_allow_non_launcher_title">Zezwól na widżety poza ekranem głównym</string>
     <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
     <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
@@ -330,7 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Tryb pasywny jest obecnie włączony dla tej etykiety, wyłącz go w zakładce \"więcej\" ustawień, aby użyć opcji Szukaj w pobliżu.\n\n<b>Uwaga:</b>Możesz ponownie włączyć tryb pasywny później.</string>
     <string name="map_offline_dialog_title">Nie udało się odświeżyć</string>
     <string name="map_offline_dialog_content">Aplikacja uTag nie mogła odświeżyć lokalizacji Twojego SmartTaga. Sprawdź połączenie sieciowe i spróbuj ponownie. Nadal możesz sprawdzić ostatni znany stan SmartTaga oraz funkcje Bluetooth, gdy znajdujesz się w jego pobliżu.</string>
-    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
+    <string name="map_debug_info">Szerokość geograficzna: %1s\nDługość geograficzna: %1s\nCzas: %1s\nDokładność: %1s\nPrędkość: %1s\nRSSI: %1s\nBateria: %1s\nMetoda: %1s\nHost lokalizacji: %1s\nW pobliżu: %1s\nNa żądanie: %1s\nID połączonego użytkownika: %1s\nID połączonego urządzenia: %1s\nStatus D2D: %1s\nByło szyfrowane: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Wybierz etykietę</string>
     <string name="tag_picker_show_all_markers_title">Pokaż wszystkie etykiety na mapie</string>
@@ -727,7 +727,7 @@
     <string name="contributors_icons_title">Dodatkowe ikony</string>
     <string name="contributors_icons_content">Dodatkowe ikony z Material Design Icons (licencja Pictogrammers Free License)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Dostępna jest nowa wersja</string>
+    <string name="snackbar_update">Dostępna jest aktualizacja</string>
     <string name="snackbar_update_multiple">Aktualizacje dostępne</string>
     <string name="snackbar_update_button">Wyświetl</string>
     <string name="update_notification">Wersja %1s uTag</string>
@@ -751,9 +751,9 @@
     <string name="update_dialog_failed_content">Sprawdź połączenie sieciowe i spróbuj ponownie</string>
     <string name="update_dialog_failed_close">Zamknij</string>
     <string name="update_downloader_github">Pobierz w przeglądarce</string>
-    <string name="update_notification_title">Dostępna jest nowa wersja uTag</string>
+    <string name="update_notification_title">Aktualizacja uTag</string>
     <string name="update_notification_content">Dostępna jest aktualizacja aplikacji uTag (z %1s na %1s)</string>
-    <string name="update_notification_smartthings_title">Dostępna jest nowa wersja SmartThings</string>
+    <string name="update_notification_smartthings_title">Aktualizacja SmartThings</string>
     <string name="update_notification_smartthings_content">Dostępna jest aktualizacja SmartThings (z %1s na %1s)</string>
     <string name="update_notification_multiple_title">Dostępne aktualizacje</string>
     <string name="update_notification_multiple_content">Dostępne są aktualizacje aplikacji uTag i SmartThings</string>
@@ -1061,12 +1061,12 @@
     <!-- Updates -->
     <string name="updates_title">Aktualizacje</string>
     <string name="updates_utag_available_title">Dostępna aktualizacja uTag</string>
-    <string name="updates_utag_available_content">Wersja %1s (najnowsza %1s)</string>
+    <string name="updates_utag_available_content">Wersja %1s (zainstalowana %1s)</string>
     <string name="updates_utag_available_action">Wyświetl aktualizacje</string>
     <string name="updates_utag_updated_title">uTag jest aktualny</string>
     <string name="updates_utag_updated_content">Wersja %1s</string>
     <string name="updates_smartthings_available_title">Dostępna jest aktualizacja SmartThings</string>
-    <string name="updates_smartthings_available_content">Wersja %1s (najnowsza %1s)</string>
+    <string name="updates_smartthings_available_content">Wersja %1s (zainstalowana %1s)</string>
     <string name="updates_smartthings_available_action">Wyświetl aktualizacje</string>
     <string name="updates_smartthings_updated_title">SmartThings jest aktualne</string>
     <string name="updates_smartthings_updated_content">Wersja %1s</string>

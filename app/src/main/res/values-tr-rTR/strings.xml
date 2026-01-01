@@ -70,10 +70,10 @@
     <string name="account_error_title">Hata</string>
     <string name="account_error_content">Oturum açma işlemi başlatılırken bir hata oluştu, lütfen bağlantınızı kontrol edip tekrar deneyin</string>
     <string name="account_error_try_again">Tekrar Dene</string>
-    <string name="account_chrome_warning_title">Sign in with Google</string>
-    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
-    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
-    <string name="account_chrome_warning_use_ignore">Ignore</string>
+    <string name="account_chrome_warning_title">Google ile giriş yap</string>
+    <string name="account_chrome_warning_content">Samsung ile ilgili bir sorun nedeniyle Google ile oturum açma seçeneği tarayıcınızda çalışmayabilir. Bu seçeneğe ihtiyacınız varsa lütfen Chrome kullanarak oturum açın. Aksi takdirde bu uyarıyı yok sayabilirsiniz.</string>
+    <string name="account_chrome_warning_use_chrome">Chrome kullan</string>
+    <string name="account_chrome_warning_use_ignore">Yoksay</string>
     <string name="login_response_error_title">Hata</string>
     <string name="login_response_error_content">Oturum açma işlemi tamamlanırken bir hata oluştu, lütfen tekrar deneyin</string>
     <string name="login_response_error_close">Kapat</string>
@@ -148,8 +148,8 @@
     <string name="settings_location_widget_period_never_content">Yalnızca bir widget üzerindeki yenile düğmesine dokunduğunuzda veya bir Etiketin konumu uTag tarafından güncellendiğinde yenilenir</string>
     <string name="settings_location_widget_battery_saver_title">Pil Tasarrufunda Widget Yenileme</string>
     <string name="settings_location_widget_battery_saver_content">Pil Tasarrufu etkinken widget\'ları yenile</string>
-    <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
-    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
+    <string name="settings_location_widget_allow_non_launcher_title">Başlatıcı Olmayan Widget\'lara İzin Ver</string>
+    <string name="settings_location_widget_allow_non_launcher_content">Mevcut başlatıcınız olmayan uygulamaların uTag widget\'larını kullanmasına izin verin. <b>Lockscreen Widgets and Drawer gibi üçüncü taraf bir uygulama kullanıyorsanız bu seçeneği etkinleştirin.</b></string>
     <string name="settings_location_category_search_nearby_title">Yakında Ara</string>
     <string name="settings_location_uwb_title">Hassas Bulma</string>
     <string name="settings_location_uwb_content">Etiketiniz tarafından desteklendiği yerlerde hassas bulma (UWB) kullanın.</string>
@@ -330,7 +330,7 @@
     <string name="map_passive_mode_dialog_content_search_nearby">Bu Etiket için şu anda Pasif Mod etkindir, Yakında Ara\'yı kullanmak için \"Daha Fazla\" ayarları menüsünden devre dışı bırakın.\n\n<b>Not:</b> Etiketi aradıktan sonra Pasif Modu yeniden etkinleştirebilirsiniz.</string>
     <string name="map_offline_dialog_title">Yenileme Başarısız</string>
     <string name="map_offline_dialog_content">uTag, Etiketinizin konumunu yenileyemedi. Ağ bağlantınızı kontrol edip tekrar deneyin. Etiketinizin son bilinen durumunu ve Etiketin yakınındayken Bluetooth işlevselliğini hala görüntüleyebilirsiniz.</string>
-    <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
+    <string name="map_debug_info">Enlem: %1s\nBoylam: %1s\nZaman damgası: %1s\nDoğruluk: %1s\nHız: %1s\nRssi: %1s\nPil: %1s\nYöntem: %1s\nBulunan ana makine: %1s\nYakında: %1s\nTalep Üzerine: %1s\nBağlı Kullanıcı ID: %1s\nBağlı Cihaz ID: %1s\nD2D Durumu: %1s\nŞifreli miydi: %1s</string>
     <!-- Tag Picker -->
     <string name="tag_picker_title">Etiket Seç</string>
     <string name="tag_picker_show_all_markers_title">Haritada tüm Etiketleri göster</string>
