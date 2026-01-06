@@ -14,11 +14,13 @@ import android.bluetooth.le.ScanCallback
 import android.bluetooth.le.ScanFilter
 import android.bluetooth.le.ScanResult
 import android.bluetooth.le.ScanSettings
+import android.content.BroadcastReceiver
 import android.content.ComponentName
 import android.content.ContentProvider
 import android.content.Context
 import android.content.ContextWrapper
 import android.content.Intent
+import android.content.IntentFilter
 import android.content.ServiceConnection
 import android.content.SharedPreferences
 import android.content.pm.ApplicationInfo
@@ -90,7 +92,10 @@ class Xposed: IXposedHookLoadPackage {
     companion object {
         init { System.loadLibrary("dexkit") }
 
-        private val LOG_TAG_DEBUG = "uTag-xposed: "
+        private const val LOG_TAG_DEBUG = "uTag-xposed: "
+
+        private var CALLING_PACKAGE_FORCE_ALLOW = false
+
         private val CALLING_PACKAGES_ALLOWLIST = setOf(
             "com.samsung.android.oneconnect.onboarding.launcher.prepare.checker.category.",
             "com.samsung.android.oneconnect.pluginsupport.installation.",
@@ -144,6 +149,7 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect", "com.samsung.android.plugin.fme.MainActivity"
         )
 
+        private const val ACTION_RESUME = "com.samsung.android.plugin.PLUGIN_ACTIVITY_RESUME"
         private const val ACTIVITY_SHORTCUT =
             "com.samsung.android.oneconnect.ui.DummyActivityForShortcut"
 
@@ -204,7 +210,8 @@ class Xposed: IXposedHookLoadPackage {
             SHARED_PREF_KEY_FORCE_DISCONNECT_METHOD("force_disconnect_method"),
             SHARED_PREF_KEY_FIREBASE_PUSH_INTENT("firebase_push_intent"),
             SHARED_PREF_KEY_IS_FMM_SUPPORTED("is_fmm_supported"),
-            SHARED_PREF_KEY_ALLOW_SCANNING("allow_scanning"),
+            SHARED_PREF_KEY_PARSE_PACKET("parse_packet"),
+            SHARED_PREF_KEY_SMART_TAG_CACHED_RESOURCE("smart_tag_cached_resource"),
             ;
 
             fun getKey(version: Long): String {
@@ -310,7 +317,6 @@ class Xposed: IXposedHookLoadPackage {
         findMethodDeviceBleThingsManagerScanNotify(classLoader)
         findMethodDeviceBleThingsManagerScanRepository(classLoader)
         findClassScanCallBack(classLoader)
-        findMethodAllowScanning(classLoader)
         findClassDebug(classLoader)
         findMethodDisconnect(classLoader)
         findMethodForceDisconnect(classLoader)
@@ -333,13 +339,14 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookSmartTagGattConnecter(this)
         lpparam.hookDeviceBleThingsManager(this)
         lpparam.hookScanCallback(this)
-        lpparam.hookAllowScanning(this)
+        lpparam.hookParsePacket(this)
         lpparam.hookDebug(this)
         lpparam.hookCheckDisconnect(this)
         lpparam.hookOneConnectPushNotifications(this)
         lpparam.hookSamsungAccount()
         lpparam.hookShortcutActivity()
         lpparam.hookPlatformVersion()
+        lpparam.hookPluginForeground()
         if (requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
                 applySecurity(this@handleLoadApplication)
@@ -814,6 +821,37 @@ class Xposed: IXposedHookLoadPackage {
         )
     }
 
+    /**
+     *  Sends "resume" event for uTag as a plugin when SmartThings starts & registers the
+     *  receiver, allowing background scans. We never send the pause because we want to keep
+     *  allowing them in the background.
+     */
+    private fun LoadPackageParam.hookPluginForeground() {
+        XposedHelpers.findAndHookMethod(
+            "androidx.core.content.ContextCompat",
+            classLoader,
+            "registerReceiver",
+            Context::class.java,
+            BroadcastReceiver::class.java,
+            IntentFilter::class.java,
+            Integer.TYPE,
+            object: XC_MethodHook() {
+                override fun afterHookedMethod(param: MethodHookParam) {
+                    super.afterHookedMethod(param)
+                    val context = param.args[0] as Context
+                    val intentFilter = param.args[2] as IntentFilter
+                    if(intentFilter.matchAction(ACTION_RESUME)) {
+                        val intent = Intent(ACTION_RESUME).apply {
+                            `package` = PACKAGE_NAME_ONECONNECT
+                            putExtra("PLUGIN_APPID", "uTag")
+                        }
+                        context.sendBroadcast(intent)
+                    }
+                }
+            }
+        )
+    }
+
     private fun Activity.showUTagUninstalledDialog() {
         AlertDialog.Builder(this).apply {
             //No access to resources at this point, so English only
@@ -1121,6 +1159,10 @@ class Xposed: IXposedHookLoadPackage {
                     override fun afterHookedMethod(param: MethodHookParam) {
                         super.afterHookedMethod(param)
                         val callingClass = getCallingInformation()?.first ?: return
+                        if (CALLING_PACKAGE_FORCE_ALLOW) {
+                            param.result = true
+                            return
+                        }
                         //Classes on the denylist are forced to false to prevent crashes
                         if (CALLING_PACKAGES_DENYLIST.any { callingClass.startsWith(it) }) {
                             param.result = false
@@ -1369,6 +1411,17 @@ class Xposed: IXposedHookLoadPackage {
                 ?.getMethodInstance(classLoader)
     }
 
+    private fun findClassSmartTagCachedResource(classLoader: ClassLoader): Class<*>? = run {
+        val savedClass =
+            getSavedClass(SharedPrefsKey.SHARED_PREF_KEY_SMART_TAG_CACHED_RESOURCE)?.getInstance(classLoader)
+        savedClass
+            ?: dexkitbridge.findClass { matcher {
+                usingStrings("serviceData privacyId: ")
+            } }.singleOrNull()
+                ?.also { saveClass(SharedPrefsKey.SHARED_PREF_KEY_SMART_TAG_CACHED_RESOURCE, it) }
+                ?.getInstance(classLoader)
+    }
+
     private fun LoadPackageParam.hookDeviceBleThingsManager(context: Context) {
         val notifyMethod = findMethodDeviceBleThingsManagerScanNotify(classLoader)?: run {
             context.logException("uTag: Failed to hook DeviceBleThingsManager (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
@@ -1378,10 +1431,10 @@ class Xposed: IXposedHookLoadPackage {
             context.logException("uTag: Failed to hook DeviceBleThingsManager (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
             return
         }
-        val smartTagCachedResource = XposedHelpers.findClass(
-            "com.samsung.android.oneconnect.feature.blething.tag.repository.SmartTagCachedResource",
-            classLoader
-        )
+        val smartTagCachedResource = findClassSmartTagCachedResource(classLoader) ?: run {
+            context.logException("uTag: Failed to find SmartTagCachedResource (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
+            return
+        }
         val lookupMethods = smartTagCachedResource.getAllInterfaces().firstNotNullOfOrNull { int ->
             int.declaredMethods.filter {
                 it.returnType.methods.any { m -> m.name == "getServiceData" }
@@ -1464,34 +1517,46 @@ class Xposed: IXposedHookLoadPackage {
         )
     }
 
-    private fun findMethodAllowScanning(classLoader: ClassLoader): Method? = run {
-        val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_ALLOW_SCANNING)
+    private fun findMethodParsePacket(classLoader: ClassLoader): Method? = run {
+        val savedMethod = getSavedMethod(SharedPrefsKey.SHARED_PREF_KEY_PARSE_PACKET)
             ?.getMethodInstance(classLoader)
         savedMethod
             ?: dexkitbridge.findClass { matcher {
-                usingStrings("one_connect_force_stop_discovery_app_background_test")
+                usingStrings(" deviceBleThing ")
             } }.findMethod { matcher {
-                usingStrings("one_connect_force_stop_discovery_app_background_test")
+                usingStrings(" deviceBleThing ")
                 modifiers = Modifier.PUBLIC or Modifier.STATIC or Modifier.FINAL
             } }.singleOrNull()
-                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_ALLOW_SCANNING, it) }
+                ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_PARSE_PACKET, it) }
                 ?.getMethodInstance(classLoader)
     }
 
     /**
-     *  Uses Dexkit to find the AllowScanning method, to always allow scanning
+     *  Uses Dexkit to find the parsePacket method, and override the device check when it is being
+     *  invoked for the first time (lazy check)
      */
-    private fun LoadPackageParam.hookAllowScanning(context: Context) {
-        val method = findMethodAllowScanning(classLoader) ?: run {
-            context.logException("uTag: Failed to hook Allow Scanning (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
+    private fun LoadPackageParam.hookParsePacket(context: Context) {
+        val method = findMethodParsePacket(classLoader) ?: run {
+            context.logException("uTag: Failed to hook Parse Packet (${packageInfo.versionName}, ${BuildConfig.XPOSED_CODE})")
             return
         }
+
+        var isInParsePacketForFirstTime = true
         XposedBridge.hookMethod(
             method,
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
-                    param.result = false
+                    if(isInParsePacketForFirstTime) {
+                        CALLING_PACKAGE_FORCE_ALLOW = true
+                    }
+                }
+
+                override fun afterHookedMethod(param: MethodHookParam?) {
+                    if(isInParsePacketForFirstTime) {
+                        CALLING_PACKAGE_FORCE_ALLOW = false
+                        isInParsePacketForFirstTime = false
+                    }
                 }
             }
         )
