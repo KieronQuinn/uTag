@@ -1,9 +1,9 @@
 {
-   "version": "1.0.11",
-   "version_code": 1011,
+   "version": "1.0.12",
+   "version_code": 1012,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Vastly improved mod application time when SmartThings is installed or updated, thanks to work by @thelittlefireman. This also makes it much more reliable on GrapheneOS.",
-   "file_size": 182462638
+   "release_notes": "- Updated SmartThings to 1.8.41.23",
+   "file_size": 183469992
 }
