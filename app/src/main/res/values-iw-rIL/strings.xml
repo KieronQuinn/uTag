@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">uTag</string>
     <string name="app_name_st">SmartThings</string>
-    <string name="shortcut_name_find">Find</string>
+    <string name="shortcut_name_find">חיפוש</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
     <string name="hooking_progress_toast">Applying mods, please wait…</string>

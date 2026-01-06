@@ -70,10 +70,10 @@
     <string name="account_error_title">Erreur</string>
     <string name="account_error_content">Une erreur s\'est produite lors du processus de connexion, veuillez vérifier votre connexion et réessayer</string>
     <string name="account_error_try_again">Réessayer</string>
-    <string name="account_chrome_warning_title">Sign in with Google</string>
-    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
-    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
-    <string name="account_chrome_warning_use_ignore">Ignore</string>
+    <string name="account_chrome_warning_title">Connexion avec Google</string>
+    <string name="account_chrome_warning_content">À cause d\'un problème de Samsung, l\'option de Connexion avec Google pourrait ne pas fonctionner dans votre navigateur. Si vous avez besoin de cette option, utilisez Chrome pour vous connecter. Sinon, vous pouvez ignorer cet avertissement.</string>
+    <string name="account_chrome_warning_use_chrome">Utiliser Chrome</string>
+    <string name="account_chrome_warning_use_ignore">Ignorer</string>
     <string name="login_response_error_title">Erreur</string>
     <string name="login_response_error_content">Une erreur est survenue lors de la finalisation de la connexion, veuillez réessayer</string>
     <string name="login_response_error_close">Fermer</string>

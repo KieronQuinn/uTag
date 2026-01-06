@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">uTag</string>
     <string name="app_name_st">SmartThings</string>
-    <string name="shortcut_name_find">Find</string>
+    <string name="shortcut_name_find">查找</string>
     <string name="subtitle_split">%1s • %1s</string>
     <!-- Hooking toast message (via provider) -->
     <string name="hooking_progress_toast">Applying mods, please wait…</string>
@@ -53,8 +53,8 @@
     <string name="permission_smartthings_battery_content">This is required to keep Tags connected over Bluetooth in the background</string>
     <string name="permission_battery_disable">Disable</string>
     <string name="permission_analytics_title">Analytics &amp; Crash Reporting</string>
-    <string name="permission_analytics_content">Enable anonymous analytics &amp; crash reporting to help in the development of uTag</string>
-    <string name="permission_analytics_allow">Allow</string>
+    <string name="permission_analytics_content">启用匿名分析 &amp; 崩溃报告以帮助uTag的开发</string>
+    <string name="permission_analytics_allow">允许</string>
     <string name="permission_analytics_deny">Deny</string>
     <!-- Sign in -->
     <string name="setup_account">Account</string>
@@ -90,7 +90,7 @@
     <string name="settings_main_mod_newer_patch_content">The uTag mod for SmartThings is newer than uTag. uTag functionality may not work correctly, or at all. Update uTag from the Updates tab to fix this.</string>
     <string name="settings_main_xposed_error_content">The uTag SmartThings modification is not installed. If you are using Xposed, make sure it\'s enabled for SmartThings and reboot your device. If you\'re not rooted, make sure the modified version is installed.</string>
     <string name="settings_main_smartthings_title">Looking for SmartTag options?</string>
-    <string name="settings_main_smartthings_content">Settings &amp; tracking for SmartTags can be accessed from the SmartThings app</string>
+    <string name="settings_main_smartthings_content">SmartTags的设置 &amp; 跟踪功能可以从SmartThings应用访问</string>
     <string name="settings_main_smartthings_open">Open SmartThings</string>
     <string name="settings_main_permissions_title">Additional Permissions Required</string>
     <string name="settings_main_permissions_content">SmartThings requires the \"Allow all the time\" location permission &amp; \"Nearby devices\"</string>
