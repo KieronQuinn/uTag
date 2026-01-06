@@ -22,7 +22,6 @@ fun getAuthIntent(url: String, forceChrome: Boolean = false): Intent {
         setBookmarksButtonEnabled(false)
         setDownloadButtonEnabled(false)
     }.build().intent.apply {
-        addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY)
         addFlags(Intent.FLAG_ACTIVITY_EXCLUDE_FROM_RECENTS)
         data = url.toUri()
         if(forceChrome) {
