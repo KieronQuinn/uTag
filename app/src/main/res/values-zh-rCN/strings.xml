@@ -5,7 +5,7 @@
     <string name="shortcut_name_find">查找</string>
     <string name="subtitle_split">%1s / %1s</string>
     <!-- Hooking toast message (via provider) -->
-    <string name="hooking_progress_toast">Applying mods, please wait…</string>
+    <string name="hooking_progress_toast">正在应用修改，请稍后…</string>
     <!-- Landing -->
     <string name="landing_get_started">开始</string>
     <string name="landing_not_signed_in">您需要先完成设置，打开 uTag才能继续</string>
@@ -215,19 +215,19 @@
     <string name="settings_uts_sensitivity_very_low">非常低</string>
     <!-- Settings > Map -->
     <string name="settings_map_show_location_title">显示地点</string>
-    <string name="settings_map_show_location_content">Show your location on the map, where available</string>
-    <string name="settings_map_show_location_toast">Grant precise location permission</string>
-    <string name="settings_map_style_title">Map Type</string>
-    <string name="settings_map_style_normal">Default</string>
-    <string name="settings_map_style_terrain">Terrain</string>
-    <string name="settings_map_style_satellite">Satellite</string>
-    <string name="settings_map_theme_title">Map Theme</string>
-    <string name="settings_map_theme_light">Light</string>
-    <string name="settings_map_theme_dark">Dark</string>
-    <string name="settings_map_theme_system">Match system</string>
-    <string name="settings_map_theme_disabled">Not available for this map type</string>
-    <string name="settings_map_show_buildings_title">Show Buildings</string>
-    <string name="settings_map_show_buildings_content">Show building outlines, where available</string>
+    <string name="settings_map_show_location_content">在地图上显示您的位置，如果有的话</string>
+    <string name="settings_map_show_location_toast">授予精确位置权限</string>
+    <string name="settings_map_style_title">地图类型</string>
+    <string name="settings_map_style_normal">默认</string>
+    <string name="settings_map_style_terrain">地形</string>
+    <string name="settings_map_style_satellite">卫星</string>
+    <string name="settings_map_theme_title">地图主题</string>
+    <string name="settings_map_theme_light">亮色主题</string>
+    <string name="settings_map_theme_dark">深色主题</string>
+    <string name="settings_map_theme_system">匹配系统</string>
+    <string name="settings_map_theme_disabled">此地图类型不可用</string>
+    <string name="settings_map_show_buildings_title">显示建筑</string>
+    <string name="settings_map_show_buildings_content">在可用的地方显示建筑轮廓</string>
     <string name="settings_map_swap_location_history_title">Show Search Nearby</string>
     <string name="settings_map_swap_location_history_content">Show Search Nearby button on map card instead of Location History. When enabled, Location History can be accessed from the \"More\" screen.</string>
     <!-- Settings > Encryption -->
