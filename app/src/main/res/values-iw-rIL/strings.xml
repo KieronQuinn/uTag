@@ -78,7 +78,7 @@
     <string name="login_response_error_content">An error occurred finishing the sign in process, please try again</string>
     <string name="login_response_error_close">Close</string>
     <!-- Settings -->
-    <string name="settings_main_title">uTag Settings</string>
+    <string name="settings_main_title">הגדרות יוטאג</string>
     <string name="settings_main_mod_error_title">Error</string>
     <string name="settings_main_mod_warning_title">Warning</string>
     <string name="settings_main_mod_no_smartthings_content">uTag could not connect to SmartThings. Check it\'s installed and try again later. If it\'s no longer installed, follow the instructions on the Updates tab to reinstall it.</string>
