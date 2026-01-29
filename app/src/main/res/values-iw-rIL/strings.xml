@@ -8,7 +8,7 @@
     <string name="hooking_progress_toast">Applying mods, please wait…</string>
     <!-- Landing -->
     <string name="landing_get_started">Get Started</string>
-    <string name="landing_not_signed_in">You need to finish setup first, open uTag to continue</string>
+    <string name="landing_not_signed_in">אתה צריך לסיים התקנה, פתח יוטאג להמשך</string>
     <string name="landing_open">Open uTag</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
