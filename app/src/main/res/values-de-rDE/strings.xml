@@ -70,10 +70,10 @@
     <string name="account_error_title">Fehler</string>
     <string name="account_error_content">Beim Starten des Anmeldeprozesses ist ein Fehler aufgetreten. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut</string>
     <string name="account_error_try_again">Erneut versuchen</string>
-    <string name="account_chrome_warning_title">Sign in with Google</string>
-    <string name="account_chrome_warning_content">Due to a Samsung issue, the Sign in with Google option may not work on your browser. If you require this option, please use Chrome to sign in. Otherwise, you can ignore this warning.</string>
-    <string name="account_chrome_warning_use_chrome">Use Chrome</string>
-    <string name="account_chrome_warning_use_ignore">Ignore</string>
+    <string name="account_chrome_warning_title">Mit Google anmelden</string>
+    <string name="account_chrome_warning_content">Aufgrund eines Samsung Problems funktioniert die Option Anmeldung mit Google unter Umständen nicht in Ihrem Browser. Wenn Sie diese Option benötigen, benutzen Sie bitte Chrome, um sich anzumelden. Andernfalls können Sie diese Warnung ignorieren.</string>
+    <string name="account_chrome_warning_use_chrome">Chrome verwenden</string>
+    <string name="account_chrome_warning_use_ignore">Ignorieren</string>
     <string name="login_response_error_title">Fehler</string>
     <string name="login_response_error_content">Beim Abschluss des Anmeldevorgangs ist ein Fehler aufgetreten, bitte versuchen Sie es erneut</string>
     <string name="login_response_error_close">Schließen</string>
@@ -149,7 +149,7 @@
     <string name="settings_location_widget_battery_saver_title">Widget beim Energiesparmodus aktualisieren</string>
     <string name="settings_location_widget_battery_saver_content">Widgets aktualisieren, wenn Energiesparmodus aktiviert ist</string>
     <string name="settings_location_widget_allow_non_launcher_title">Allow Non-Launcher Widgets</string>
-    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
+    <string name="settings_location_widget_allow_non_launcher_content">Erlaube Apps, die nicht Ihr aktueller Launcher sind, uTag Widgets zu verwenden. <b>Wenn Sie eine Drittanbieter-App wie Lockscreen Widgets und Drawer verwenden, aktivieren Sie diese Option.</b></string>
     <string name="settings_location_category_search_nearby_title">In der Nähe suchen</string>
     <string name="settings_location_uwb_title">Präzise Suche</string>
     <string name="settings_location_uwb_content">Benutzen Sie die genaue Suche (UWB), soweit sie von Ihrem Tag unterstützt wird.</string>
@@ -291,7 +291,7 @@
     <string name="map_network_error">Ein Netzwerkfehler ist aufgetreten, versuche es später noch einmal </string>
     <string name="map_location_error">Lokalisierung fehlgeschlagen, bewege dich etwas in der Umgebung</string>
     <string name="map_connection_error_title">Verbindungsfehler</string>
-    <string name="map_connection_error_content">uTag couldn\'t connect to %1s as the maximum number of connections have been reached. Disconnect another device which is connected to it, if you think this is incorrect, try rebooting your device.</string>
+    <string name="map_connection_error_content">uTag konnte keine Verbindung zu %1s herstellen, da die maximale Anzahl an Verbindungen erreicht wurde. Trennen Sie ein anderes Gerät, das mit ihm verbunden ist, falls Sie denken, dass dies nicht korrekt ist, versuchen Sie Ihr Gerät neu zu starten.</string>
     <string name="map_connection_error_close">Schließen</string>
     <string name="map_address_encrypted">Verschlüsselter Standort</string>
     <string name="map_address_unknown">Unbekannte Adresse</string>
@@ -299,7 +299,7 @@
     <string name="map_owner">%1s\'s Tag</string>
     <string name="map_owner_generic">Freigegebener Tag</string>
     <string name="map_allow_location_access_title">Zugriff auf Ihren Standort erlauben</string>
-    <string name="map_allow_location_access_content">To locate and control this Tag, you need to allow uTag and SmartThings to access your location.</string>
+    <string name="map_allow_location_access_content">Um diesen Tag zu finden und zu kontrollieren, müssen Sie uTag und SmartThings den Zugriff auf Ihren Standort gestatten.</string>
     <string name="map_passive">Passiver Modus</string>
     <string name="map_time_unknown">Unbekannte Zeit</string>
     <string name="map_bluetooth_disabled">Bluetooth deaktiviert</string>
@@ -322,12 +322,12 @@
     <string name="map_searching_dialog_enable_searching">Suchmodus aktivieren</string>
     <string name="map_searching_dialog_cancel">Schließen</string>
     <string name="map_allow_access_dialog_title">Standort teilen?</string>
-    <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
+    <string name="map_allow_access_dialog_content"><![CDATA[Der Standort des Tags und Ihres Mobilgeräts wird mit Ihrem Standortmitglied geteilt, wenn sich das Tag-Gerät mit Ihrem mobilen Gerät verbindet. Du kannst die Standortfreigabe jederzeit beenden, indem du in die uTag Einstellungen wechselst. Samsung wird Standort sammeln und mit den Standortmitgliedern teilen sowie die Verarbeitung dieser Daten in Übereinstimmung mit der <a href="%1s">Datenschutzerklärung</a>]]></string>
     <string name="map_allow_access_dialog_positive">Teilen</string>
     <string name="map_allow_access_dialog_negative">Abbrechen</string>
     <string name="map_passive_mode_dialog_title">Passivmodus aktiviert</string>
-    <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
-    <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
+    <string name="map_passive_mode_dialog_content_ring">Passivmodus ist derzeit für diesen Tag aktiviert, deaktivieren Sie ihn in den \"Mehr\"-Einstellungen um Klingeln zu erlauben.\n\n<b>Hinweis:</b> Sie können den Passivmodus nach dem Klingeln des Tags wieder aktivieren.</string>
+    <string name="map_passive_mode_dialog_content_search_nearby">Passivmodus ist derzeit für diesen Tag aktiviert, deaktivieren Sie ihn in den \"Mehr\"-Einstellungen um Klingeln zu erlauben.\n\n<b>Hinweis:</b> Sie können den Passivmodus nach dem Klingeln des Tags wieder aktivieren.</string>
     <string name="map_offline_dialog_title">Fehler beim Aktualisieren</string>
     <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
     <string name="map_debug_info">Latitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
