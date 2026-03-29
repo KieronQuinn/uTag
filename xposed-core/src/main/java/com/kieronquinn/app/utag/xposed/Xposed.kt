@@ -129,8 +129,8 @@ class Xposed: IXposedHookLoadPackage {
 
         private const val SHARED_PREFS_NAME = "utag"
         private const val PACKAGE_SAMSUNG_ACCOUNT = "com.osp.app.signin"
-        private const val CLASS_CLOUD_NOTIFICATION_MANAGER =
-            "com.samsung.android.oneconnect.notification.CloudNotificationManager"
+        private const val PACKAGE_CLOUD_NOTIFICATION_MANAGER =
+            "com.samsung.android.oneconnect.notification."
 
         private const val LOCATION_TIMEOUT = 30_000L //30 seconds
         //Last version before lockups started
@@ -743,7 +743,7 @@ class Xposed: IXposedHookLoadPackage {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
                     val calling = getCallingInformation()?.first ?: return
-                    if(calling == CLASS_CLOUD_NOTIFICATION_MANAGER) {
+                    if(calling.startsWith(PACKAGE_CLOUD_NOTIFICATION_MANAGER)) {
                         param.result = true
                     }
                 }
@@ -1598,12 +1598,13 @@ class Xposed: IXposedHookLoadPackage {
     }
 
     private fun getCallingInformation(): Triple<String, String, List<String>>? {
-        val classes = Thread.currentThread().stackTrace.map { Pair(it.className, it.methodName) }
-        val lspIndex = classes.indexOfFirst { it.first == "LSPHooker_" }
-        if(lspIndex == -1 || lspIndex == classes.size) return null
-        val classList = classes.map { it.first }
-        val result = classes[lspIndex + 1]
-        return Triple(result.first, result.second, classList)
+        val stackTrace = Thread.currentThread().stackTrace
+        val classList = stackTrace.map { it.className }
+        // Because Samsung strips the code filenames, we can abuse this to find the immediate caller
+        val caller = stackTrace.firstOrNull {
+            !it.className.startsWith(BuildConfig.PACKAGE_NAME) && it.fileName == "SourceFile"
+        } ?: return null
+        return Triple(caller.className, caller.methodName, classList)
     }
 
     private fun Context.logException(title: String, throwable: Throwable? = null) {

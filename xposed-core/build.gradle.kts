@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
-val xposedName = "1.0.12"
-val xposedCode = 1012
+val xposedName = "1.0.13"
+val xposedCode = 1013
 
 android {
     namespace = "com.kieronquinn.app.utag.xposed.core"
@@ -17,6 +17,7 @@ android {
         consumerProguardFiles("consumer-rules.pro")
         buildConfigField("int", "XPOSED_CODE", xposedCode.toString())
         buildConfigField("String", "XPOSED_NAME", "\"$xposedName\"")
+        buildConfigField("String", "PACKAGE_NAME", "\"com.kieronquinn.app.utag\"")
     }
 
     buildTypes {
