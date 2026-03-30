@@ -132,6 +132,13 @@ class Xposed: IXposedHookLoadPackage {
         private const val PACKAGE_CLOUD_NOTIFICATION_MANAGER =
             "com.samsung.android.oneconnect.notification."
 
+        private val HOOK_CLASS_NAMES = setOf("LSPHooker_")
+
+        private val R8_CLASS_NAMES = setOf(
+            "SourceFile", // Raw Xposed
+            null // Patched APK
+        )
+
         private const val LOCATION_TIMEOUT = 30_000L //30 seconds
         //Last version before lockups started
         private const val PLATFORM_VERSION_OVERRIDE = 101600001
@@ -1602,7 +1609,9 @@ class Xposed: IXposedHookLoadPackage {
         val classList = stackTrace.map { it.className }
         // Because Samsung strips the code filenames, we can abuse this to find the immediate caller
         val caller = stackTrace.firstOrNull {
-            !it.className.startsWith(BuildConfig.PACKAGE_NAME) && it.fileName == "SourceFile"
+            !it.className.startsWith(BuildConfig.PACKAGE_NAME)
+                    && !HOOK_CLASS_NAMES.contains(it.className)
+                    && R8_CLASS_NAMES.contains(it.fileName)
         } ?: return null
         return Triple(caller.className, caller.methodName, classList)
     }

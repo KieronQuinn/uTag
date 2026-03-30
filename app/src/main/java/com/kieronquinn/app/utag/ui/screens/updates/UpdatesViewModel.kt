@@ -119,7 +119,7 @@ class UpdatesViewModelImpl(
         options,
         updatesAvailable.filterNotNull()
     ) { utag, smartthings, module, options, updatesAvailable ->
-        val updates = options.first
+        val updatesEnabled = options.first
         val debugMode = options.second
         val smartThingsVersionCode = when(module) {
             is ModuleState.Installed -> module.versionCode
@@ -146,8 +146,8 @@ class UpdatesViewModelImpl(
             smartThingsVersionName,
             smartthings?.takeUnless { it.versionCode == smartThingsVersionCode },
             smartThingsState,
-            updates,
             updatesAvailable,
+            updatesEnabled,
             debugMode
         )
     }.stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
