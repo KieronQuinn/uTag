@@ -32,8 +32,8 @@ fun getKeystoreProperties(): Properties? {
     return properties
 }
 
-val tagName = "1.0.15"
-val tagCode = 1015
+val tagName = "1.0.16"
+val tagCode = 1016
 
 android {
     namespace = "com.kieronquinn.app.utag"

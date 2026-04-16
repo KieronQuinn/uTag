@@ -132,7 +132,7 @@ class Xposed: IXposedHookLoadPackage {
         private const val PACKAGE_CLOUD_NOTIFICATION_MANAGER =
             "com.samsung.android.oneconnect.notification."
 
-        private val HOOK_CLASS_NAMES = setOf("LSPHooker_")
+        private val HOOK_CLASS_NAMES = setOf("LSPHooker_", "Vector_")
 
         private val R8_CLASS_NAMES = setOf(
             "SourceFile", // Raw Xposed
