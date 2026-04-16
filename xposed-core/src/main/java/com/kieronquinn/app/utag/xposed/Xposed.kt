@@ -37,6 +37,7 @@ import com.kieronquinn.app.utag.model.LocationStaleness
 import com.kieronquinn.app.utag.service.ILocationCallback
 import com.kieronquinn.app.utag.service.IServiceConnection
 import com.kieronquinn.app.utag.service.IUTagSmartThingsForegroundService
+import com.kieronquinn.app.utag.xposed.Xposed.Companion.HOOK_CLASS_NAMES
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SCAN_TYPE_UTAG
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SERVICE_ID
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SharedPrefsKey.Companion.areAllKeysPresent
@@ -133,11 +134,6 @@ class Xposed: IXposedHookLoadPackage {
             "com.samsung.android.oneconnect.notification."
 
         private val HOOK_CLASS_NAMES = setOf("LSPHooker_", "Vector_")
-
-        private val R8_CLASS_NAMES = setOf(
-            "SourceFile", // Raw Xposed
-            null // Patched APK
-        )
 
         private const val LOCATION_TIMEOUT = 30_000L //30 seconds
         //Last version before lockups started
@@ -335,10 +331,10 @@ class Xposed: IXposedHookLoadPackage {
         hookActivity()
         hookWebView()
         deleteVmfDenylist()
-        lpparam.hookRootChecks()
+        lpparam.hookRootChecks(this)
         lpparam.hookIsFmmSupported(this)
         lpparam.hookStartScan()
-        lpparam.hookTagDozeModeService()
+        lpparam.hookTagDozeModeService(this)
         lpparam.hookCapsuleProvider()
         lpparam.hookSystemInfo(this)
         lpparam.hookQcServiceRunnable(this)
@@ -378,7 +374,7 @@ class Xposed: IXposedHookLoadPackage {
      *  SmartThings checks for rooted devices but only on non-debug builds. We spoof a debug build
      *  but only for the SCMainActivity caller.
      */
-    private fun LoadPackageParam.hookRootChecks() {
+    private fun LoadPackageParam.hookRootChecks(context: Context) {
         XposedHelpers.findAndHookMethod(
             "android.app.ContextImpl",
             classLoader,
@@ -386,9 +382,10 @@ class Xposed: IXposedHookLoadPackage {
             object: XC_MethodHook() {
                 override fun afterHookedMethod(param: MethodHookParam) {
                     super.afterHookedMethod(param)
-                    val isFromMainActivity = getCallingInformation()?.third?.any {
-                        it == "com.samsung.android.oneconnect.ui.scmain.SCMainActivity"
-                    } ?: return
+                    val isFromMainActivity = context.getCallingInformation("root checks")
+                        ?.third?.any {
+                            it == "com.samsung.android.oneconnect.ui.scmain.SCMainActivity"
+                        } ?: return
                     if(isFromMainActivity) {
                         val info = param.result as ApplicationInfo
                         info.flags = info.flags or ApplicationInfo.FLAG_DEBUGGABLE
@@ -519,7 +516,7 @@ class Xposed: IXposedHookLoadPackage {
      *  if the service is ours by looking for this custom content in the last onStartCommand intent
      *  or bind intent.
      */
-    private fun LoadPackageParam.hookTagDozeModeService() {
+    private fun LoadPackageParam.hookTagDozeModeService(context: Context) {
         val clazz = "com.samsung.android.oneconnect.manager.TagDozeModeService"
         var lastIntent: Intent? = null
         val isUtag = {
@@ -594,7 +591,7 @@ class Xposed: IXposedHookLoadPackage {
                     super.beforeHookedMethod(param)
                     val notificationContent = lastIntent?.getStringExtra(EXTRA_NOTIFICATION_CONTENT)
                         ?: return
-                    if (getCallingInformation()?.first == clazz) {
+                    if (context.getCallingInformation("setContentText")?.first == clazz) {
                         //Replace notification text with our own
                         param.args[0] = notificationContent as CharSequence
                         //Hide the time since this notification will be shown indefinitely
@@ -613,7 +610,7 @@ class Xposed: IXposedHookLoadPackage {
                     super.beforeHookedMethod(param)
                     val notificationContent = lastIntent?.getStringExtra(EXTRA_NOTIFICATION_CONTENT)
                         ?: return
-                    if (getCallingInformation()?.first == clazz) {
+                    if (context.getCallingInformation("bigText")?.first == clazz) {
                         //Replace notification big text with our own
                         param.args[0] = notificationContent as CharSequence
                     }
@@ -749,7 +746,7 @@ class Xposed: IXposedHookLoadPackage {
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
-                    val calling = getCallingInformation()?.first ?: return
+                    val calling = context.getCallingInformation("FMM")?.first ?: return
                     if(calling.startsWith(PACKAGE_CLOUD_NOTIFICATION_MANAGER)) {
                         param.result = true
                     }
@@ -1165,7 +1162,8 @@ class Xposed: IXposedHookLoadPackage {
                 object: XC_MethodHook() {
                     override fun afterHookedMethod(param: MethodHookParam) {
                         super.afterHookedMethod(param)
-                        val callingClass = getCallingInformation()?.first ?: return
+                        val callingClass = context.getCallingInformation("system info")
+                            ?.first ?: return
                         if (CALLING_PACKAGE_FORCE_ALLOW) {
                             param.result = true
                             return
@@ -1604,20 +1602,51 @@ class Xposed: IXposedHookLoadPackage {
         ).commit()
     }
 
-    private fun getCallingInformation(): Triple<String, String, List<String>>? {
+    private fun Context.getCallingInformation(name: String): Triple<String, String, List<String>>? {
         val stackTrace = Thread.currentThread().stackTrace
         val classList = stackTrace.map { it.className }
-        // Because Samsung strips the code filenames, we can abuse this to find the immediate caller
-        val caller = stackTrace.firstOrNull {
-            !it.className.startsWith(BuildConfig.PACKAGE_NAME)
-                    && !HOOK_CLASS_NAMES.contains(it.className)
-                    && R8_CLASS_NAMES.contains(it.fileName)
-        } ?: return null
+        val caller = stackTrace.firstItemWithLineNumberAfterHooks()
+            ?: stackTrace.firstItemWithLineNumberAfterWithout() ?: run {
+                logException("Failed to find caller for $name", Throwable())
+                return null
+            }
         return Triple(caller.className, caller.methodName, classList)
     }
 
+    /**
+     *  Look for [HOOK_CLASS_NAMES] and take the first item following it with a line number
+     */
+    private fun Array<StackTraceElement>.firstItemWithLineNumberAfterHooks(): StackTraceElement? {
+        return indexOfLast {
+            HOOK_CLASS_NAMES.contains(it.className)
+        }.takeIf { it > 0 }?.let { index ->
+            drop(index + 1).firstOrNull {
+                it.hasLineNumber()
+            }
+        }
+    }
+
+    /**
+     *  Use the lack of line numbers only to extract the caller, by looking for the last item
+     *  without a line number and returning the next item after it with one
+     */
+    private fun Array<StackTraceElement>.firstItemWithLineNumberAfterWithout(): StackTraceElement? {
+        return indexOfLast {
+            !it.hasLineNumber()
+        }.takeIf { it > 0 }?.let { index ->
+            drop(index).firstOrNull {
+                it.hasLineNumber()
+            }
+        }
+    }
+
+    private fun StackTraceElement.hasLineNumber() = lineNumber >= 0
+
     private fun Context.logException(title: String, throwable: Throwable? = null) {
         XposedBridge.log(title)
+        if (throwable != null) {
+            XposedBridge.log(throwable)
+        }
         XposedCrashReportProvider_reportNonFatal(this, XposedException(title, throwable))
     }
 
