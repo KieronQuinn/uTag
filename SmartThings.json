@@ -1,9 +1,9 @@
 {
-   "version": "1.0.14",
-   "version_code": 1014,
+   "version": "1.0.15",
+   "version_code": 1015,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Android 17 Beta 3 support\n- Minor bugfixes",
-   "file_size": 184879016
+   "release_notes": "- Updated to SmartThings v1.8.45.24\n- Support for Vector (formerly JingMatrix's LSPosed fork)",
+   "file_size": 185566850
 }
