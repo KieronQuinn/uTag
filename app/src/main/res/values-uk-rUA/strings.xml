@@ -12,9 +12,9 @@
     <string name="landing_open">Відкрити uTag</string>
     <!-- Mod download -->
     <string name="setup_mod_title">SmartThings</string>
-    <string name="setup_mod_info_title">SmartThings Mod</string>
+    <string name="setup_mod_info_title">Модифікація SmartThings</string>
     <string name="setup_mod_info_content">In order to work with uTag and bypass Samsung\'s requirements, a modified version of SmartThings is required. uTag will guide you through downloading and installing it.\n\n<b>Note:</b> If your device is rooted with Xposed installed, make sure SmartThings is set up, enable the uTag Xposed module, force stop SmartThings and return to uTag to skip this step.</string>
-    <string name="setup_mod_info_action">Start mod download</string>
+    <string name="setup_mod_info_action">Почати завантаження модифікації</string>
     <string name="setup_mod_oneui_title">Виявлено OneUI</string>
     <string name="setup_mod_oneui_desc">This device appears to be running OneUI. Using uTag on a device that officially supports SmartThings Find may restrict functionality, break some SmartThings features or cause unexpected errors. <b>OneUI support is experimental, it may not work on your device. Please do not report bugs that occur on this device.</b> You will be required to sign in to SmartThings from the browser, rather than it using the Samsung Account already on your device.</string>
     <string name="setup_mod_oneui_continue">Продовжити</string>
@@ -304,7 +304,7 @@
     <string name="map_time_unknown">Невідомий час</string>
     <string name="map_bluetooth_disabled">Bluetooth вимкнено</string>
     <string name="map_offline">Не вдалося оновити</string>
-    <string name="map_ring">Ring</string>
+    <string name="map_ring">Дзвінок</string>
     <string name="map_location_history">Location history</string>
     <string name="map_refresh">Оновити</string>
     <string name="map_more">Більше</string>
@@ -319,7 +319,7 @@
     <string name="map_timestamp_hours_ago">%1d годин(и) тому</string>
     <string name="map_searching_dialog_title">Failed to connect to Tag</string>
     <string name="map_searching_dialog_content">uTag couldn\'t connect to your %1s. Make sure you\'re in Bluetooth range and try again, restart SmartThings &amp; uTag if the problem persists.\n\nIf you are out of range and searching for your Tag, enable searching mode. You will be notified when it is found by another device.</string>
-    <string name="map_searching_dialog_enable_searching">Enable Searching Mode</string>
+    <string name="map_searching_dialog_enable_searching">Увімкнути режим пошуку</string>
     <string name="map_searching_dialog_cancel">Закрити</string>
     <string name="map_allow_access_dialog_title">Share location?</string>
     <string name="map_allow_access_dialog_content"><![CDATA[The location of the Tag and your mobile device will be shared with your location member when the Tag device connects to your mobile device. You can stop sharing location at any time by going into the uTag settings. Samsung will collect location and share it with the location members, as well as processing such data in accordance with its <a href="%1s">Privacy Notice</a>]]></string>
@@ -345,7 +345,7 @@
     <string name="tag_picker_shared">%1s\'s Tag</string>
     <string name="tag_picker_selected">Selected</string>
     <string name="tag_picker_agreement_required">Agreement required</string>
-    <string name="tag_picker_not_allowed">Not allowed</string>
+    <string name="tag_picker_not_allowed">Не дозволено</string>
     <string name="tag_picker_shared_and_selected">%1s\'s Tag • Selected</string>
     <string name="tag_picker_error_dialog_title">Помилка</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
@@ -370,10 +370,10 @@
     <string name="tag_location_history_error_content">An error occurred when loading your location history, check your connection and try again later.</string>
     <string name="tag_location_history_error_close">Закрити</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
-    <string name="tag_location_history_delete">Delete history</string>
+    <string name="tag_location_history_delete">Видалити історію</string>
     <string name="tag_location_history_delete_dialog_content">Delete all location history for %1s?</string>
     <string name="tag_location_history_delete_dialog_cancel">Скасувати</string>
-    <string name="tag_location_history_delete_dialog_delete">Delete</string>
+    <string name="tag_location_history_delete_dialog_delete">Видалити</string>
     <string name="tag_location_history_delete_error">An error occurred, please try again.</string>
     <string name="tag_location_history_delete_disabled">Delete disabled as Content Creator mode is enabled</string>
     <string name="tag_location_history_decrypt_failed">Some locations may not be shown as they could not be decrypted</string>
@@ -381,7 +381,7 @@
     <string name="tag_location_history_export_disabled">Exporting is disabled as Content Creator mode is enabled</string>
     <string name="tag_location_history_export_dialog_content">This option exports your last 7 days of location history for %1s to a CSV file. It includes some extra information that isn\'t displayed in the app, such as battery levels, signal strength and update source (where available).\n\nPlease note that it is not possible to re-import this data, this option is purely for external analysis of histories.</string>
     <string name="tag_location_history_export_dialog_warning"><b>Note:</b> Locations which failed to decrypt will be omitted from the export.</string>
-    <string name="tag_location_history_export_dialog_export">Export</string>
+    <string name="tag_location_history_export_dialog_export">Експорт</string>
     <string name="tag_location_history_export_dialog_cancel">Скасувати</string>
     <string name="tag_location_history_export_error_toast">No history to export</string>
     <string name="tag_location_history_export_message">Exporting history, please wait…</string>
@@ -391,7 +391,7 @@
     <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
-    <string name="tag_more_search_nearby">Search nearby</string>
+    <string name="tag_more_search_nearby">Пошук поблизу</string>
     <string name="tag_more_search_nearby_disabled">Disable Passive Mode to use this option</string>
     <string name="tag_more_navigate">Navigate</string>
     <string name="tag_more_category_notifications">Сповіщення</string>
@@ -404,7 +404,7 @@
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Увімкнено</string>
     <string name="tag_more_notify_when_disconnected_switch">Увімкнено</string>
-    <string name="tag_more_notify_when_disconnected_safe_areas_title">Safe Areas</string>
+    <string name="tag_more_notify_when_disconnected_safe_areas_title">Безпечні місця</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_content">Safe Areas are areas where you can leave your Tag behind without being notified. There are two types of Safe Areas:\n\n• Location: Active when you are within a specified radius of a location.\n• Wi-Fi: Active when you are connected to a specified Wi-Fi network.</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_title">Notifications disabled</string>
     <string name="tag_more_notify_when_disconnected_notifications_disabled_content">Notifications for uTag are disabled, they must be enabled for this option to work</string>
@@ -419,8 +419,8 @@
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
     <string name="tag_more_lost_mode_title">Lost mode</string>
     <string name="tag_more_category_protect">Protect</string>
-    <string name="tag_more_lost_mode_on">On</string>
-    <string name="tag_more_lost_mode_off">Off</string>
+    <string name="tag_more_lost_mode_on">Увімк</string>
+    <string name="tag_more_lost_mode_off">Вимк</string>
     <string name="tag_more_category_share">Share</string>
     <string name="tag_more_shareable">Share this Tag\'s location</string>
     <string name="tag_more_shareable_content">Share the location of this Tag to members you share your SmartThings household with</string>
@@ -442,7 +442,7 @@
     <string name="tag_more_end_to_end_content_network">Could not get encryption key state, check your network connection</string>
     <string name="tag_more_end_to_end_content_passive">Disable Passive Mode to use this option</string>
     <string name="tag_more_category_automations">Smart button action</string>
-    <string name="tag_more_find_device_title">Find my Device</string>
+    <string name="tag_more_find_device_title">Знайти мій пристрій</string>
     <string name="tag_more_find_device_content">Double press the Tag\'s button to make this device ring</string>
     <string name="tag_more_find_device_content_disabled">Disable Passive Mode to use this option</string>
     <string name="tag_more_find_device_content_enabled">Увімкнено</string>
@@ -470,7 +470,7 @@
     <string name="tag_more_find_device_delay_content">Wait 5 seconds before starting to ring, if you accidentally trigger Find my Device this option allows you to cancel before noise is made.</string>
     <string name="tag_more_find_device_volume_title">Volume</string>
     <string name="tag_more_find_device_volume_content">The volume your device will ring at.\n\n<b>Warning:</b> Setting a low volume &amp; disabling vibration may make your device ringing hard to hear!</string>
-    <string name="tag_more_find_device_footer_title">Find my Device</string>
+    <string name="tag_more_find_device_footer_title">Знайти мій пристрій</string>
     <string name="tag_more_find_device_footer_content">When you double press the button on %1s, your phone will start ringing for 60 seconds, or until stopped.</string>
     <string name="tag_more_find_device_footer_bull1">This option only works when your device is connected to your Tag.</string>
     <string name="tag_more_find_device_footer_bull2">Your device will ring regardless of Do Not Disturb being enabled.</string>
@@ -479,7 +479,7 @@
     <string name="tag_more_find_device_footer_bull5"><b>If multiple devices are connected to this Tag, only the first will receive the button press - this option works best with a Tag that is only connected to this device, and not shared.</b></string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_title">Shared Tag Warning</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_content">This Tag is shared with other users. The Find my Device option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may ring the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
-    <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">Understood</string>
+    <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">Зрозуміло</string>
     <string name="tag_more_find_device_error_toast">An error occurred, please try again</string>
     <string name="tag_more_automation_title">Custom Automations</string>
     <string name="tag_more_automation_content">Set custom actions for pressing &amp; holding Tag button</string>
@@ -520,7 +520,7 @@
     <string name="tag_more_automation_type_app_title">Launch App</string>
     <string name="tag_more_automation_type_app_content">Start an app when this automation is invoked.</string>
     <string name="tag_more_automation_type_camera_title">Launch Camera</string>
-    <string name="tag_more_automation_type_camera_title_short">Camera</string>
+    <string name="tag_more_automation_type_camera_title_short">Камера</string>
     <string name="tag_more_automation_type_camera_content">Start the default camera app, or the locked camera if the device is locked (where available).</string>
     <string name="tag_more_automation_type_shortcut_title">Launch Shortcut</string>
     <string name="tag_more_automation_type_shortcut_content">Start an app\'s shortcut when this automation is invoked.</string>
@@ -533,11 +533,11 @@
     <string name="button_volume_level_low">Low</string>
     <string name="button_volume_level_high">High</string>
     <!-- More Battery Dialog -->
-    <string name="tag_more_battery_dialog_title">Battery information</string>
+    <string name="tag_more_battery_dialog_title">Інформація про акумулятор</string>
     <string name="tag_more_battery_dialog_content">The battery level only updates when the Tag is near this phone or another Galaxy device. If the Tag\'s battery is low, you won\'t be able to install updates or the find the Tag using UWB.</string>
-    <string name="tag_more_battery_dialog_sufficient">• Sufficient: 16–100%</string>
-    <string name="tag_more_battery_dialog_low">• Low: 6–15%</string>
-    <string name="tag_more_battery_dialog_very_low">• Very Low: 0–5%</string>
+    <string name="tag_more_battery_dialog_sufficient">• Достатній: 16–100%</string>
+    <string name="tag_more_battery_dialog_low">• Низький: 6–15%</string>
+    <string name="tag_more_battery_dialog_very_low">• Критичний: 0–5%</string>
     <!-- Lost Mode -->
     <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
@@ -582,7 +582,7 @@
     <string name="lost_mode_settings_custom_url_set_error_dialog_content">This Lost Message URL is for a different Tag. If you are trying to reset the URL for your Tag, please paste in the correct original URL for this Tag.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_title">Увага</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
-    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Confirm</string>
+    <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Підтвердити</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
     <string name="lost_mode_settings_custom_url_invalid_url_toast">Invalid URL</string>
     <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
@@ -595,8 +595,8 @@
     <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
     <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
     <!-- Passive Mode -->
-    <string name="passive_mode_enabled_switch">Enabled</string>
-    <string name="passive_mode_info_title">What is Passive Mode?</string>
+    <string name="passive_mode_enabled_switch">Увімкнено</string>
+    <string name="passive_mode_info_title">Що таке Пасивний режим?</string>
     <string name="passive_mode_info_content">Passive Mode disconnects your Tag from your device, keeping it in a \"scanned\" state when SmartThings isn\'t open. This disables some uTag functionality, but still allows location updates from your device.\n\n<b>When Passive Mode is enabled and SmartThings is not open, your Tag may also get location updates from other Samsung devices in addition to this device, so long as it\'s not connected to another device using uTag or SmartThings.</b></string>
     <string name="passive_mode_lost_functionality_title">Functionality Impacted by Passive Mode</string>
     <string name="passive_mode_lost_functionality_bull1">Search Nearby is unavailable</string>
@@ -609,7 +609,7 @@
     <string name="passive_mode_lost_functionality_footer"><b>You can disable Passive Mode at any time, without needing to be in range of the Tag, even temporarily to regain these functions as required.</b></string>
     <string name="passive_mode_disabled_dialog_content">Passive mode has been disabled, SmartThings may take a couple of minutes to reconnect to your Tag if it\'s nearby. If it does not, open SmartThings to connect to it manually.</string>
     <!-- Battery levels -->
-    <string name="battery_unknown">Unknown</string>
+    <string name="battery_unknown">Невідомо</string>
     <string name="battery_very_low">Battery replacement required</string>
     <string name="battery_low">Low</string>
     <string name="battery_sufficient">Sufficient</string>
@@ -627,8 +627,8 @@
     <!-- Privacy notice -->
     <string name="privacy_notice_title">Locate your Tags anytime, anywhere</string>
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
-    <string name="privacy_notice_agree">Agree</string>
-    <string name="privacy_notice_disagree">Disagree</string>
+    <string name="privacy_notice_agree">Згода</string>
+    <string name="privacy_notice_disagree">Не згоден</string>
     <string name="privacy_notice_error_dialog_title">Помилка</string>
     <string name="privacy_notice_error_dialog_content">An error occurred loading Samsung\'s Privacy Policy information. Check your connection and try again.</string>
     <string name="privacy_notice_error_dialog_close">Закрити</string>
@@ -663,15 +663,15 @@
     <string name="settings_encryption_reset_pin_content">Set on %1s</string>
     <string name="settings_encryption_require_biometrics_title">Require Biometrics to Modify PIN</string>
     <string name="settings_encryption_require_biometrics_content">Require the use of strong biometrics, such as fingerprint, to add or change your PIN. By default, the device\'s lock screen PIN can be used to authenticate, which may be susceptible to shoulder surfing.</string>
-    <string name="settings_encryption_error_dialog_title">Error</string>
+    <string name="settings_encryption_error_dialog_title">Помилка</string>
     <string name="settings_encryption_error_dialog_content">An error occurred when loading encryption information, check your connection and try again</string>
-    <string name="settings_encryption_error_dialog_close">Close</string>
+    <string name="settings_encryption_error_dialog_close">Закрити</string>
     <string name="settings_encryption_category_pin">Offline Location PIN</string>
     <string name="settings_encryption_footer_title">Trying to enable or disable location encryption?</string>
     <string name="settings_encryption_footer_content">This can be done in the settings for a specific Tag, accessed in the \"More\" menu from the map</string>
     <string name="settings_encryption_reset_warning_dialog_title">Reset PIN</string>
     <string name="settings_encryption_reset_warning_dialog_content">If you reset your PIN, all location history which was reported by other Galaxy devices with encryption enabled will be deleted. Once a location has been reported from another Galaxy device after you change your PIN, you will be asked to enter your new PIN to decrypt it.</string>
-    <string name="settings_encryption_reset_warning_dialog_positive">Reset</string>
+    <string name="settings_encryption_reset_warning_dialog_positive">Скинути</string>
     <string name="settings_encryption_biometrics_failed_title">Biometric Error</string>
     <string name="settings_encryption_biometrics_failed_content">Could not authenticate.\n\nIf you need to add or change your PIN and cannot use biometrics, clear uTag\'s data and sign in again.</string>
     <string name="settings_encryption_pin_timeout_never">Ніколи</string>
@@ -716,48 +716,48 @@
     <string name="donate">Пожертва</string>
     <string name="bluesky">Follow me on Bluesky</string>
     <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
-    <string name="about_contributors">Contributors</string>
+    <string name="about_contributors">Учасники проєкту</string>
     <string name="about_crowdin">Crowdin</string>
     <string name="about_debug_enabled">Developer options enabled</string>
     <string name="about_debug_disabled">Developer options disabled</string>
     <!-- Contributors -->
     <string name="contributors_oneui_title">OneUI Project</string>
     <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
-    <string name="contributors_icons_title">Additional Icons</string>
+    <string name="contributors_icons_title">Додаткові значки</string>
     <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
     <!-- Update downloader -->
-    <string name="snackbar_update">Update available</string>
-    <string name="snackbar_update_multiple">Updates available</string>
+    <string name="snackbar_update">Доступне оновлення</string>
+    <string name="snackbar_update_multiple">Доступні оновлення</string>
     <string name="snackbar_update_button">View</string>
-    <string name="update_notification">uTag version %1s</string>
-    <string name="update_notification_mod">SmartThings version %1s</string>
-    <string name="update_title_utag">uTag update</string>
-    <string name="update_title_smartthings">SmartThings update</string>
-    <string name="update_heading">uTag update available</string>
-    <string name="update_heading_smartthings">SmartThings update available</string>
+    <string name="update_notification">Версія uTag %1s</string>
+    <string name="update_notification_mod">Версія SmartThings %1s</string>
+    <string name="update_title_utag">Оновлення uTag</string>
+    <string name="update_title_smartthings">Оновлення SmartThings</string>
+    <string name="update_heading">Доступне оновлення uTag</string>
+    <string name="update_heading_smartthings">Доступне оновлення SmartThings</string>
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Зміни</string>
-    <string name="update_done_title">Ready to install</string>
+    <string name="update_done_title">Готове до встановлення</string>
     <string name="update_done_content_utag"><b>Note:</b> Your Tags may disconnect during the update process.</string>
     <string name="update_done_content_smartthings"><b>Note:</b> Your Tags may disconnect during the update process.</string>
-    <string name="update_done_action">Start Install</string>
+    <string name="update_done_action">Почати установку</string>
     <string name="update_action">Завантажити</string>
-    <string name="update_action_alt">Alternative download</string>
-    <string name="download_manager_description">Downloading update…</string>
-    <string name="download_manager_description_mod">Downloading SmartThings…</string>
-    <string name="update_downloader_downloading_title">Downloading update…</string>
-    <string name="update_dialog_failed_title">Download failed</string>
-    <string name="update_dialog_failed_content">Check your connection and try again later</string>
+    <string name="update_action_alt">Альтернативне завантаження</string>
+    <string name="download_manager_description">Завантаження оновлення…</string>
+    <string name="download_manager_description_mod">Завантаження SmartThings…</string>
+    <string name="update_downloader_downloading_title">Завантаження оновлення…</string>
+    <string name="update_dialog_failed_title">Не вдалося завантажити</string>
+    <string name="update_dialog_failed_content">Перевірте з\'єднання і повторіть спробу пізніше</string>
     <string name="update_dialog_failed_close">Закрити</string>
-    <string name="update_downloader_github">Download via browser</string>
-    <string name="update_notification_title">uTag update available</string>
-    <string name="update_notification_content">An update is available for uTag (%1s to %1s)</string>
-    <string name="update_notification_smartthings_title">SmartThings update available</string>
-    <string name="update_notification_smartthings_content">An update is available for SmartThings (%1s to %1s)</string>
-    <string name="update_notification_multiple_title">Updates available</string>
-    <string name="update_notification_multiple_content">Updates are available for uTag and SmartThings</string>
+    <string name="update_downloader_github">Завантажити через браузер</string>
+    <string name="update_notification_title">Доступне оновлення uTag</string>
+    <string name="update_notification_content">Для uTag доступне оновлення (з %1s до %1s)</string>
+    <string name="update_notification_smartthings_title">Доступне оновлення SmartThings</string>
+    <string name="update_notification_smartthings_content">Для SmartThings доступне оновлення (з %1s до %1s)</string>
+    <string name="update_notification_multiple_title">Доступні оновлення</string>
+    <string name="update_notification_multiple_content">Доступні оновлення для uTag та SmartThings</string>
     <!-- Notification channels -->
-    <string name="notification_channel_updates_title">uTag Updates</string>
+    <string name="notification_channel_updates_title">Оновлення uTag</string>
     <string name="notification_channel_updates_content">Notifications shown when there is an update for uTag</string>
     <string name="notification_channel_foreground_service_title">Background Service</string>
     <string name="notification_channel_foreground_service_content">Notifications shown when uTag is running in the background</string>
@@ -795,7 +795,7 @@
     <string name="search_nearby_timeout_title">Connection Error</string>
     <string name="search_nearby_timeout_content">Failed to connect to your Tag. Make sure it\'s in Bluetooth range and try again.</string>
     <string name="search_nearby_timeout_content_alt">Disconnected from your Tag. Make sure it\'s in Bluetooth range and try again.</string>
-    <string name="search_nearby_timeout_close">Close</string>
+    <string name="search_nearby_timeout_close">Закрити</string>
     <string name="search_nearby_uwb_disabled_title">UWB Disabled</string>
     <string name="search_nearby_uwb_disabled_content">Ultra-wideband, precise searching is available on your device but UWB is disabled. Enable UWB to allow precise searching?</string>
     <string name="search_nearby_uwb_disabled_positive">Увімкнути</string>
@@ -812,7 +812,7 @@
     <string name="notification_title_background_service_other">%1d Tags connected</string>
     <string name="notification_title_background_service_passive">%1s (Passive)</string>
     <string name="notification_title_background_service_error_short">uTag</string>
-    <string name="notification_title_background_service_error">uTag Error</string>
+    <string name="notification_title_background_service_error">Помилка uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
     <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
     <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
@@ -848,11 +848,11 @@
     <string name="refresh_period_fifteen_minutes">15 хвилин</string>
     <string name="refresh_period_twenty_minutes">20 хвилин</string>
     <string name="refresh_period_thirty_minutes">30 хвилин</string>
-    <string name="refresh_period_sixty_minutes">1 hour</string>
-    <string name="refresh_period_two_hours">2 hours</string>
-    <string name="refresh_period_three_hours">3 hours</string>
-    <string name="refresh_period_four_hours">4 hours</string>
-    <string name="refresh_period_six_hours">6 hours</string>
+    <string name="refresh_period_sixty_minutes">1 година</string>
+    <string name="refresh_period_two_hours">2 години</string>
+    <string name="refresh_period_three_hours">3 години</string>
+    <string name="refresh_period_four_hours">4 години</string>
+    <string name="refresh_period_six_hours">6 годин</string>
     <string name="refresh_period_twelve_hours">12 hours</string>
     <string name="refresh_period_twenty_four_hours">24 hours</string>
     <string name="refresh_period_never">Never</string>
@@ -864,13 +864,13 @@
     <string name="safe_area_save">Зберегти</string>
     <string name="safe_area_delete">Видалити</string>
     <string name="safe_area_active">Active</string>
-    <string name="safe_area_add">Add Safe Area</string>
-    <string name="safe_area_inactive">Inactive</string>
-    <string name="safe_area_dialog_delete_title">Delete Safe Area?</string>
+    <string name="safe_area_add">Додати безпечне місце</string>
+    <string name="safe_area_inactive">Неактивне</string>
+    <string name="safe_area_dialog_delete_title">Видалити безпечне місце?</string>
     <string name="safe_area_dialog_delete_content">Are you sure you want to delete %1s? This cannot be undone. Deleting a Safe Area will remove it from any Tags it is enabled for.</string>
     <string name="safe_area_dialog_delete_delete">Видалити</string>
     <string name="safe_area_dialog_delete_cancel">Скасувати</string>
-    <string name="safe_area_dialog_save_title">Save Changes?</string>
+    <string name="safe_area_dialog_save_title">Зберегти зміни?</string>
     <string name="safe_area_dialog_save_content">Would you like to save your changes?</string>
     <string name="safe_area_dialog_save_save">Зберегти</string>
     <string name="safe_area_dialog_save_dont_save">Не зберігати</string>
@@ -879,7 +879,7 @@
     <string name="safe_area_type_location_permission_content">uTag requires location permissions to use Safe Areas. Android restrictions mean Wi-Fi network name &amp; MAC Addresses are treated as location data.</string>
     <string name="safe_area_type_background_location_permission_title">Background Location Permissions Required</string>
     <string name="safe_area_type_background_location_permission_content">uTag requires background location permissions update Safe Areas while not in the foreground.</string>
-    <string name="safe_area_type_grant">Grant Permission</string>
+    <string name="safe_area_type_grant">Надати дозвіл</string>
     <string name="safe_area_type_toast">Grant in settings</string>
     <string name="safe_area_category_settings">Налаштування</string>
     <string name="safe_area_show_image_title">Show Map Image</string>
@@ -914,20 +914,20 @@
     <string name="safe_area_location_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that you leave the location before the Tag disconnects, but that it was left within the Safe Area.</string>
     <string name="safe_area_location_error_dialog_title">Couldn\'t get location</string>
     <string name="safe_area_location_error_dialog_content">Could not get your location, try again later</string>
-    <string name="safe_area_location_error_dialog_close">Close</string>
-    <string name="safe_area_buffer_none">None</string>
-    <string name="safe_area_buffer_one">1 Minute</string>
-    <string name="safe_area_buffer_two">2 Minutes</string>
-    <string name="safe_area_buffer_three">3 Minutes</string>
-    <string name="safe_area_buffer_four">4 Minutes</string>
+    <string name="safe_area_location_error_dialog_close">Закрити</string>
+    <string name="safe_area_buffer_none">Немає</string>
+    <string name="safe_area_buffer_one">1 хвилина</string>
+    <string name="safe_area_buffer_two">2 хвилини</string>
+    <string name="safe_area_buffer_three">3 хвилини</string>
+    <string name="safe_area_buffer_four">4 хвилини</string>
     <string name="safe_area_buffer_five">5 хвилин</string>
     <string name="safe_area_buffer_ten">10 хвилин</string>
     <string name="safe_area_buffer_fifteen">15 хвилин</string>
     <!-- Unsupported Intent dialog -->
-    <string name="unsupported_intent_dialog_title">Unsupported</string>
+    <string name="unsupported_intent_dialog_title">Не підтримується</string>
     <string name="unsupported_intent_dialog_content_generic">This action is currently not supported by uTag. If you think this is an error, please open a GitHub issue with a screenshot of this dialog - but make sure there\'s not an already open issue for this action type first.\n\nAction type: %1s</string>
     <string name="unsupported_intent_dialog_content_pet">Pet Walking is currently not supported by uTag. If you\'d use this feature, please thumb up the issue on the GitHub.</string>
-    <string name="unsupported_intent_dialog_close">Close</string>
+    <string name="unsupported_intent_dialog_close">Закрити</string>
     <string name="unsupported_intent_dialog_github">GitHub</string>
     <!-- Location Staleness -->
     <string name="location_staleness_none">Disabled</string>
@@ -949,24 +949,24 @@
     <string name="widget_timestamp">Updated: %1s</string>
     <string name="widget_description">Display Tag locations on a map</string>
     <string name="widget_history_description">Display a Tag\'s location history on a map</string>
-    <string name="widget_dialog_not_setup_title">uTag not set up</string>
+    <string name="widget_dialog_not_setup_title">uTag не налаштовано</string>
     <string name="widget_dialog_not_setup_content">Set up uTag first before adding a widget</string>
-    <string name="widget_dialog_not_setup_open">Open uTag</string>
+    <string name="widget_dialog_not_setup_open">Відкрити uTag</string>
     <string name="widget_configuration_set_device">Set a Tag to display first</string>
-    <string name="widget_configuration_dialog_save_title">Save Changes?</string>
+    <string name="widget_configuration_dialog_save_title">Зберегти зміни?</string>
     <string name="widget_configuration_dialog_save_content">Would you like to save your changes?</string>
-    <string name="widget_configuration_dialog_save_save">Save</string>
-    <string name="widget_configuration_dialog_save_dont_save">Don\'t Save</string>
-    <string name="widget_configuration_save">Save</string>
-    <string name="widget_configuration_error_dialog_title">Error</string>
+    <string name="widget_configuration_dialog_save_save">Зберегти</string>
+    <string name="widget_configuration_dialog_save_dont_save">Не зберігати</string>
+    <string name="widget_configuration_save">Зберегти</string>
+    <string name="widget_configuration_error_dialog_title">Помилка</string>
     <string name="widget_configuration_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
-    <string name="widget_configuration_error_dialog_close">Close</string>
-    <string name="widget_configuration_preview_label">Preview</string>
+    <string name="widget_configuration_error_dialog_close">Закрити</string>
+    <string name="widget_configuration_preview_label">Передогляд</string>
     <string name="widget_configuration_preview_empty">Select a Tag to view a preview</string>
     <string name="widget_configuration_preview_error">Error loading preview, try again later</string>
     <string name="widget_configuration_preview_loading">Loading preview…</string>
-    <string name="widget_configuration_options_label">Options</string>
-    <string name="widget_configuration_location_devices_title">Selected Tags</string>
+    <string name="widget_configuration_options_label">Параметри</string>
+    <string name="widget_configuration_location_devices_title">Вибрані мітки</string>
     <string name="widget_configuration_location_devices_content">Select Tags to show in this widget</string>
     <string name="widget_configuration_location_click_device_title">Launch Tag</string>
     <string name="widget_configuration_location_click_device_content">The Tag to display in uTag when this widget is clicked: %1s</string>
@@ -1024,10 +1024,10 @@
     <string name="backup_creating_unknown_tags_backup">Backing up Safe Tags…</string>
     <string name="backup_creating_settings_backup">Backing up settings…</string>
     <string name="backup_created">Backup created</string>
-    <string name="backup_error">Error</string>
+    <string name="backup_error">Помилка</string>
     <!-- Restore -->
     <string name="restore_error_dialog_title">Error Loading Backup</string>
-    <string name="restore_error_dialog_close">Close</string>
+    <string name="restore_error_dialog_close">Закрити</string>
     <string name="restore_category_options">Restore Options</string>
     <string name="restore_automation_configs_title">Restore Custom Automations</string>
     <string name="restore_automation_configs_content">You may need to re-enable custom automations for each Tag to synchronise them</string>
@@ -1059,23 +1059,23 @@
     <string name="bottom_nav_updates">Оновлення</string>
     <!-- Updates -->
     <string name="updates_title">Оновлення</string>
-    <string name="updates_utag_available_title">uTag Update Available</string>
-    <string name="updates_utag_available_content">Version %1s (current %1s)</string>
-    <string name="updates_utag_available_action">View update</string>
-    <string name="updates_utag_updated_title">uTag is up to date</string>
-    <string name="updates_utag_updated_content">Version %1s</string>
-    <string name="updates_smartthings_available_title">SmartThings Update Available</string>
-    <string name="updates_smartthings_available_content">Version %1s (current %1s)</string>
-    <string name="updates_smartthings_available_action">View update</string>
-    <string name="updates_smartthings_updated_title">SmartThings is up to date</string>
-    <string name="updates_smartthings_updated_content">Version %1s</string>
+    <string name="updates_utag_available_title">Доступне оновлення uTag</string>
+    <string name="updates_utag_available_content">Версія %1s (поточна %1s)</string>
+    <string name="updates_utag_available_action">Переглянути оновлення</string>
+    <string name="updates_utag_updated_title">uTag актуальний</string>
+    <string name="updates_utag_updated_content">Версія %1s</string>
+    <string name="updates_smartthings_available_title">Доступне оновлення SmartThings</string>
+    <string name="updates_smartthings_available_content">Версія %1s (поточна %1s)</string>
+    <string name="updates_smartthings_available_action">Переглянути оновлення</string>
+    <string name="updates_smartthings_updated_title">SmartThings актуальний</string>
+    <string name="updates_smartthings_updated_content">Версія %1s</string>
     <string name="updates_smartthings_external_title">SmartThings</string>
     <string name="updates_smartthings_external_content">SmartThings updates on your device are handled externally</string>
     <string name="updates_smartthings_external_content_play">SmartThings updates on your device are handled by Google Play</string>
-    <string name="updates_smartthings_not_installed_title">SmartThings Not Installed</string>
+    <string name="updates_smartthings_not_installed_title">SmartThings не встановлено</string>
     <string name="updates_smartthings_not_installed_content">You must have SmartThings installed for uTag to work, please re-run setup to install it and set it up.</string>
     <string name="updates_smartthings_not_installed_action">Re-run setup</string>
-    <string name="updates_smartthings_not_modded_title">SmartThings Not Modified</string>
+    <string name="updates_smartthings_not_modded_title">SmartThings не модифіковано</string>
     <string name="updates_smartthings_not_modded_content">You must have the modified build of SmartThings installed for uTag to work, please re-run setup to install it and set it up.\n\n<b>Note:</b> If your device is rooted with Xposed installed, enable the uTag Xposed module, force stop SmartThings and return to uTag to fix this.</string>
     <string name="updates_smartthings_not_modded_action">Re-run setup</string>
     <string name="updates_rerun_setup_dialog_title">Re-run Setup?</string>
