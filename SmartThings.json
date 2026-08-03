@@ -1,9 +1,9 @@
 {
-   "version": "1.0.16",
-   "version_code": 1016,
+   "version": "1.0.17",
+   "version_code": 1017,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated to SmartThings v1.8.47.24",
+   "release_notes": "- Updated SmartThings mod (v1.8.47.24) with Wear OS Watch 5 compatibility and LSPatch 0.6",
    "file_size": 179671330
 }
