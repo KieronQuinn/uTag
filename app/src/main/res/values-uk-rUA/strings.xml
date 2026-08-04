@@ -326,7 +326,7 @@
     <string name="map_allow_access_dialog_positive">Поділитися</string>
     <string name="map_allow_access_dialog_negative">Скасувати</string>
     <string name="map_passive_mode_dialog_title">Пасивний режим увімкнено</string>
-    <string name="map_passive_mode_dialog_content_ring">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to allow ringing.\n\n<b>Note:</b> You can re-enable Passive Mode after ringing the Tag.</string>
+    <string name="map_passive_mode_dialog_content_ring">Для цієї мітки наразі увімкнено пасивний режим, вимкніть його у пункті налаштувань \"Більше\", щоб дозволити відтворення звуку.\n\n<b>Примітка:</b> Ви можете повторно увімкнути пасивний режим після дзвінка мітки.</string>
     <string name="map_passive_mode_dialog_content_search_nearby">Passive Mode is currently enabled for this Tag, disable it in the \"More\" settings menu to use Search Nearby.\n\n<b>Note:</b> You can re-enable Passive Mode after searching for the Tag.</string>
     <string name="map_offline_dialog_title">Не вдалося оновити</string>
     <string name="map_offline_dialog_content">uTag was unable to refresh your Tag\'s location. Check your network connection and try again. You can still view the last known state of your Tag and Bluetooth functionality when near the Tag.</string>
@@ -355,13 +355,13 @@
     <string name="tag_picker_menu_select_none">Unfavourite all</string>
     <string name="tag_picker_add_to_home">Додати на головний екран</string>
     <!-- Ring dialog -->
-    <string name="tag_ring_title">Ring your tag</string>
+    <string name="tag_ring_title">Відтворити звук на мітці</string>
     <string name="tag_ring_content_start">%1s will start ringing when you tap Start.</string>
     <string name="tag_ring_content_stop">Tap Stop when you find your tag.</string>
     <string name="tag_ring_content_network">Your SmartTag will start ringing when it is located by another device, or this device connects to it.</string>
     <string name="tag_ring_start">Старт</string>
     <string name="tag_ring_stop">Стоп</string>
-    <string name="tag_ring_error">An error occurred, please try again</string>
+    <string name="tag_ring_error">Трапилася помилка, будь ласка, спробуйте знову</string>
     <!-- Location history -->
     <string name="tag_location_history_loading">Loading may take a while for new areas while the encrypted address database is built, or when there are many encrypted locations to decrypt.</string>
     <string name="tag_location_history_progress">%1d%%</string>
@@ -383,22 +383,22 @@
     <string name="tag_location_history_export_dialog_warning"><b>Note:</b> Locations which failed to decrypt will be omitted from the export.</string>
     <string name="tag_location_history_export_dialog_export">Експорт</string>
     <string name="tag_location_history_export_dialog_cancel">Скасувати</string>
-    <string name="tag_location_history_export_error_toast">No history to export</string>
-    <string name="tag_location_history_export_message">Exporting history, please wait…</string>
+    <string name="tag_location_history_export_error_toast">Немає історії для експорту</string>
+    <string name="tag_location_history_export_message">Експорт історії, будь ласка, зачекайте…</string>
     <string name="tag_location_history_export_success_toast">Експорт завершено</string>
-    <string name="tag_location_history_export_failed_toast">Export failed</string>
+    <string name="tag_location_history_export_failed_toast">Помилка експорту</string>
     <string name="tag_location_history_info_title">Інформація про розташування</string>
-    <string name="tag_location_history_info_content_header">Compiled from %1d location(s)</string>
+    <string name="tag_location_history_info_content_header">Зібрано з %1d розташувань</string>
     <string name="tag_location_history_info_content_item">Location %1d:\n\nLatitude: %1s\nLongitude: %1s\nTimestamp: %1s\nAccuracy: %1s\nSpeed: %1s\nRssi: %1s\nBattery: %1s\nMethod: %1s\nFind host: %1s\nNearby: %1s\nOn Demand: %1s\nConnected User ID: %1s\nConnected Device ID: %1s\nD2D Status: %1s\nWas Encrypted: %1s</string>
     <!-- More page -->
     <string name="tag_more_search_nearby">Пошук поблизу</string>
-    <string name="tag_more_search_nearby_disabled">Disable Passive Mode to use this option</string>
-    <string name="tag_more_navigate">Navigate</string>
+    <string name="tag_more_search_nearby_disabled">Для використання цієї опції вимкніть пасивний режим</string>
+    <string name="tag_more_navigate">Навігація</string>
     <string name="tag_more_category_notifications">Сповіщення</string>
-    <string name="tag_more_notify_when_found">Notify me when it\'s found</string>
-    <string name="tag_more_notify_when_found_dialog">You\'ll only be notified once when your device is found. If you lose the device again, you\'ll need to turn this on again</string>
+    <string name="tag_more_notify_when_found">Повідомити мене, коли його буде знайдено</string>
+    <string name="tag_more_notify_when_found_dialog">Ви будете повідомлені лише раз, коли Ваш пристрій буде знайдений. Якщо Ви втратите його знову, знадобиться повторно увімкнути цю опцію</string>
     <string name="tag_more_notify_when_disconnected_title">Notify when left behind</string>
-    <string name="tag_more_notify_when_disconnected_content_warning">Not working. Tap for more info.</string>
+    <string name="tag_more_notify_when_disconnected_content_warning">Не працює. Торкніться, щоб дізнатися більше.</string>
     <string name="tag_more_notify_when_disconnected_content_disabled">Notify when %1s is disconnected from this device and not in a Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
@@ -417,7 +417,7 @@
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Потрібен дозвіл</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
-    <string name="tag_more_lost_mode_title">Lost mode</string>
+    <string name="tag_more_lost_mode_title">Режим втрати</string>
     <string name="tag_more_category_protect">Захистити</string>
     <string name="tag_more_lost_mode_on">Увімк</string>
     <string name="tag_more_lost_mode_off">Вимк</string>
@@ -458,7 +458,7 @@
     <string name="tag_more_find_device_full_screen_permission_required_title">Потрібен дозвіл</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
     <string name="tag_more_find_device_full_screen_permission_required_action">Allow permission in settings</string>
-    <string name="tag_more_find_device_pet_walking_enabled_title">Pet Walking is Enabled</string>
+    <string name="tag_more_find_device_pet_walking_enabled_title">Вигулювання тварини увімкнено</string>
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
     <string name="tag_more_find_device_remote_ring_enabled_title">Увімкнено на пристрої Samsung</string>
@@ -539,7 +539,7 @@
     <string name="tag_more_battery_dialog_low">• Низький: 6–15%</string>
     <string name="tag_more_battery_dialog_very_low">• Критичний: 0–5%</string>
     <!-- Lost Mode -->
-    <string name="lost_mode_guide_description">Protect your Tag by turning on Lost mode when you can\'t find your Tag.</string>
+    <string name="lost_mode_guide_description">Захишає Вашу мітку шляхом увімкнення режиму втрати, коли Ви не можете знайти власну мітку.</string>
     <string name="lost_mode_guide_description_how_tag">How does SmartThings Find protect your SmartTag with Lost mode?</string>
     <string name="emergency_contact_and_message">Emergency contact info and message</string>
     <string name="emergency_contact_and_message_description">Show your emergency contact information and a message for the person who finds this Tag.</string>
