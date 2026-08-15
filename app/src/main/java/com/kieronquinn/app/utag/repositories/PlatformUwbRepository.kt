@@ -17,10 +17,12 @@ import android.ranging.raw.RawResponderRangingConfig
 import android.ranging.uwb.UwbAddress
 import android.ranging.uwb.UwbComplexChannel
 import android.ranging.uwb.UwbRangingParams
+import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.uwb.RangingMeasurement
 import androidx.core.uwb.UwbAddress as JetpackUwbAddress
 import com.google.uwb.support.fira.FiraOpenSessionParams
+import com.kieronquinn.app.utag.BuildConfig
 import com.kieronquinn.app.utag.components.bluetooth.RemoteTagConnection
 import com.kieronquinn.app.utag.components.uwb.UwbConfig
 import com.kieronquinn.app.utag.repositories.UwbRepository.Companion.randomCodeIndex
@@ -36,6 +38,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.suspendCancellableCoroutine
 import kotlinx.coroutines.withTimeoutOrNull
 import java.util.concurrent.atomic.AtomicBoolean
+import kotlin.math.abs
 import kotlin.coroutines.resume
 
 /**
@@ -70,7 +73,9 @@ class PlatformUwbRepository(private val context: Context): UwbRepository {
         onEnd: () -> Unit
     ): Flow<UwbEvent?> {
         return callbackFlow {
+            debugLog("Starting Android platform UWB ranging")
             val finished = AtomicBoolean(false)
+            var angleUnit = AngleUnit.RADIANS
 
             fun finish(event: UwbEvent, notifyEnd: Boolean = true) {
                 if(!finished.compareAndSet(false, true)) return
@@ -83,18 +88,25 @@ class PlatformUwbRepository(private val context: Context): UwbRepository {
             val localAddress = UwbAddress.createRandomShortAddress()
             val preference = try {
                 config.getParams().toRangingPreference(localAddress)
-            }catch (_: Exception) {
+            }catch (e: Exception) {
+                debugLog("Failed to create ranging preference", e)
                 finish(UwbEvent.Failed(null))
                 return@callbackFlow
             }
 
             val callback = object: RangingSession.Callback {
                 override fun onOpened() {
+                    debugLog("Platform ranging session opened; requesting tag ranging start")
                     launch {
                         val jetpackAddress = JetpackUwbAddress(localAddress.addressBytes)
-                        val didStart = runCatching {
+                        val startResult = runCatching {
                             tagConnection.startRanging(config, jetpackAddress)
-                        }.getOrDefault(false)
+                        }
+                        val didStart = startResult.getOrDefault(false)
+                        startResult.exceptionOrNull()?.let {
+                            debugLog("Tag ranging start threw an exception", it)
+                        }
+                        debugLog("Tag ranging start acknowledged=$didStart")
                         if(didStart) {
                             trySend(UwbEvent.Started)
                         }else{
@@ -104,27 +116,47 @@ class PlatformUwbRepository(private val context: Context): UwbRepository {
                 }
 
                 override fun onOpenFailed(reason: Int) {
+                    debugLog("Platform ranging session failed to open: reason=$reason")
                     finish(UwbEvent.Failed(reason))
                 }
 
-                override fun onStarted(peer: RangingDevice, technology: Int) = Unit
+                override fun onStarted(peer: RangingDevice, technology: Int) {
+                    debugLog("Platform ranging started: technology=$technology")
+                }
 
                 override fun onResults(peer: RangingDevice, data: RangingData) {
                     val distance = data.distance ?: return
+                    if(angleUnit == AngleUnit.RADIANS && data.hasAngleOutsideRadianRange()) {
+                        angleUnit = AngleUnit.DEGREES
+                        debugLog("Raw angle exceeded +/-PI; switching session to degrees mode")
+                    }
+                    if(BuildConfig.DEBUG) {
+                        Log.d(
+                            TAG,
+                            "Raw result: distance=${distance.toDebugString("m")}, " +
+                                    "azimuth=${data.azimuth.toDebugString(angleUnit.label)}, " +
+                                    "elevation=${data.elevation.toDebugString(angleUnit.label)}, " +
+                                    "angleUnit=$angleUnit, " +
+                                    "technology=${data.rangingTechnology}, " +
+                                    "timestampMs=${data.timestampMillis}"
+                        )
+                    }
                     trySend(
                         UwbEvent.Report(
-                            data.azimuth?.toJetpackAngle(),
-                            data.elevation?.toJetpackAngle(),
+                            data.azimuth?.toJetpackAngle(angleUnit),
+                            data.elevation?.toJetpackAngle(angleUnit),
                             RangingMeasurement(distance.measurement.toFloat())
                         )
                     )
                 }
 
                 override fun onStopped(peer: RangingDevice, technology: Int) {
+                    debugLog("Platform ranging stopped: technology=$technology")
                     finish(UwbEvent.Ended)
                 }
 
                 override fun onClosed(reason: Int) {
+                    debugLog("Platform ranging session closed: reason=$reason")
                     if(reason == RangingSession.Callback.REASON_LOCAL_REQUEST) {
                         finished.compareAndSet(false, true)
                         close()
@@ -138,7 +170,8 @@ class PlatformUwbRepository(private val context: Context): UwbRepository {
                 val session = rangingManager.createRangingSession(context.mainExecutor, callback)
                     ?: error("Unable to create ranging session")
                 session.start(preference)
-            }catch (_: Exception) {
+            }catch (e: Exception) {
+                debugLog("Failed to create or start platform ranging session", e)
                 finish(UwbEvent.Failed(null))
                 null
             }
@@ -230,12 +263,45 @@ class PlatformUwbRepository(private val context: Context): UwbRepository {
         ).setSessionConfig(sessionConfig).build()
     }
 
-    private fun android.ranging.RangingMeasurement.toJetpackAngle(): RangingMeasurement {
-        return RangingMeasurement(Math.toRadians(measurement).toFloat())
+    private fun RangingData.hasAngleOutsideRadianRange(): Boolean {
+        return listOfNotNull(azimuth, elevation).any {
+            abs(it.measurement) > Math.PI
+        }
+    }
+
+    private fun android.ranging.RangingMeasurement.toJetpackAngle(
+        angleUnit: AngleUnit
+    ): RangingMeasurement {
+        val radians = when(angleUnit) {
+            AngleUnit.RADIANS -> measurement
+            AngleUnit.DEGREES -> Math.toRadians(measurement)
+        }
+        return RangingMeasurement(radians.toFloat())
+    }
+
+    private fun android.ranging.RangingMeasurement?.toDebugString(unit: String): String {
+        return this?.let {
+            "${it.measurement}$unit (confidence=${it.confidence})"
+        } ?: "null"
+    }
+
+    private fun debugLog(message: String, throwable: Throwable? = null) {
+        if(!BuildConfig.DEBUG) return
+        if(throwable != null) {
+            Log.e(TAG, message, throwable)
+        }else{
+            Log.d(TAG, message)
+        }
     }
 
     companion object {
+        private const val TAG = "uTagUwb"
         private const val CAPABILITIES_TIMEOUT_MILLIS = 2_000L
+    }
+
+    private enum class AngleUnit(val label: String) {
+        RADIANS("rad"),
+        DEGREES("deg")
     }
 
 }
