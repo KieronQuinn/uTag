@@ -41,6 +41,9 @@
     <!-- Required by AndroidX UWB -->
     <uses-permission android:name="android.permission.UWB_RANGING"/>
 
+    <!-- Required by the Android 16 platform ranging API -->
+    <uses-permission android:name="android.permission.RANGING"/>
+
     <application
         android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"

@@ -37,7 +37,7 @@ val tagCode = 1017
 
 android {
     namespace = "com.kieronquinn.app.utag"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.kieronquinn.app.utag"
@@ -106,6 +106,10 @@ android {
         generateLocaleConfig = true
     }
     project.tasks.preBuild.dependsOn("fmm")
+}
+
+tasks.withType<JavaCompile>().configureEach {
+    exclude("**/byRounds/**")
 }
 
 /**
