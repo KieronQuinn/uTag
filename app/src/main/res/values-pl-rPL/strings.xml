@@ -738,9 +738,9 @@
     <string name="update_heading_smartthings">Dostępna jest aktualizacja SmartThings</string>
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Lista zmian</string>
-    <string name="update_done_title">Gotowe do instalacji</string>
-    <string name="update_done_content_utag"><b>Uwaga:</b> Etykiety mogą się rozłączyć podczas procesu aktualizacji.</string>
-    <string name="update_done_content_smartthings"><b>Uwaga:</b> Etykiety mogą się rozłączyć podczas procesu aktualizacji.</string>
+    <string name="update_done_title">Gotowa do instalacji</string>
+    <string name="update_done_content_utag"><b>Uwaga:</b> Etykiety mogą się rozłączyć podczas aktualizacji.</string>
+    <string name="update_done_content_smartthings"><b>Uwaga:</b> Etykiety mogą się rozłączyć podczas aktualizacji.</string>
     <string name="update_done_action">Rozpocznij instalację</string>
     <string name="update_action">Pobierz</string>
     <string name="update_action_alt">Alternatywne pobieranie</string>
@@ -752,11 +752,11 @@
     <string name="update_dialog_failed_close">Zamknij</string>
     <string name="update_downloader_github">Pobierz w przeglądarce</string>
     <string name="update_notification_title">Aktualizacja uTag</string>
-    <string name="update_notification_content">Dostępna jest aktualizacja aplikacji uTag (z %1s na %1s)</string>
+    <string name="update_notification_content">uTag (%1s → %1s)</string>
     <string name="update_notification_smartthings_title">Aktualizacja SmartThings</string>
-    <string name="update_notification_smartthings_content">Dostępna jest aktualizacja SmartThings (z %1s na %1s)</string>
+    <string name="update_notification_smartthings_content">SmartThings (%1s → %1s)</string>
     <string name="update_notification_multiple_title">Dostępne aktualizacje</string>
-    <string name="update_notification_multiple_content">Dostępne są aktualizacje aplikacji uTag i SmartThings</string>
+    <string name="update_notification_multiple_content">uTag i SmartThings</string>
     <!-- Notification channels -->
     <string name="notification_channel_updates_title">Aktualizacje uTag</string>
     <string name="notification_channel_updates_content">Powiadomienia wyświetlane, gdy dostępna jest aktualizacja aplikacji uTag</string>
