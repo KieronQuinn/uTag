@@ -149,7 +149,7 @@
     <string name="settings_location_widget_battery_saver_title">Odświeżaj przy oszczędzaniu energii</string>
     <string name="settings_location_widget_battery_saver_content">Odświeża widżety, gdy jest włączone oszczędzanie energii</string>
     <string name="settings_location_widget_allow_non_launcher_title">Zezwól na widżety poza ekranem głównym</string>
-    <string name="settings_location_widget_allow_non_launcher_content">Allow apps that are not your current launcher to use uTag widgets. <b>If you are using a third party app like Lockscreen Widgets and Drawer, enable this option.</b></string>
+    <string name="settings_location_widget_allow_non_launcher_content">Pozwala aplikacjom spoza domyślnego ekranu głównego używać widżetów uTag. <b>Włącz, jeśli używasz np. Lockscreen Widgets lub Drawer.</b></string>
     <string name="settings_location_category_search_nearby_title">Znajdowanie w pobliżu</string>
     <string name="settings_location_uwb_title">Precyzyjne znajdowanie</string>
     <string name="settings_location_uwb_content">Używaj precyzyjnego znajdowania (UWB), jeśli jest wspierane przez Twoją etykietę.</string>
@@ -214,13 +214,13 @@
     <string name="settings_uts_sensitivity_low">Niska</string>
     <string name="settings_uts_sensitivity_very_low">Bardzo niska</string>
     <!-- Settings > Map -->
-    <string name="settings_map_show_location_title">Pokaż lokalizację</string>
+    <string name="settings_map_show_location_title">Pokaż obecne położenie</string>
     <string name="settings_map_show_location_content">Pokaż swoją lokalizację na mapie, kiedy ta jest dostępna</string>
     <string name="settings_map_show_location_toast">Udziel dostępu do dokładnej lokalizacji</string>
     <string name="settings_map_style_title">Typ mapy</string>
     <string name="settings_map_style_normal">Domyślny</string>
     <string name="settings_map_style_terrain">Teren</string>
-    <string name="settings_map_style_satellite">Satelita</string>
+    <string name="settings_map_style_satellite">Satelitarna</string>
     <string name="settings_map_theme_title">Motyw mapy</string>
     <string name="settings_map_theme_light">Jasny</string>
     <string name="settings_map_theme_dark">Ciemny</string>
@@ -713,7 +713,7 @@
     <!-- About Footer -->
     <string name="xda_thread">XDA</string>
     <string name="github">GitHub</string>
-    <string name="libraries">Biblioteki firm trzecich</string>
+    <string name="libraries">Licencje firm trzecich</string>
     <string name="donate">Darowizny</string>
     <string name="bluesky">Obserwuj na Bluesky</string>
     <string name="about_version">Wersja %1s\nAutorstwa Kieron Quinn</string>
@@ -1037,7 +1037,7 @@
     <string name="restore_notify_disconnect_configs_title">Przywieźć ustawienia Powiadom o zostawieniu</string>
     <string name="restore_passive_mode_configs_title">Przywróć ustawienia Trybu pasywnego</string>
     <string name="restore_unknown_tags_title">Przywróć przyjazne etykiety</string>
-    <string name="restore_unknown_tags_subtitle">For Unknown Tag scans</string>
+    <string name="restore_unknown_tags_subtitle">Dla szukania niezn. SmartTagów</string>
     <string name="restore_wifi_safe_areas_title">Przywróć bezpieczne sieci Wi-Fi</string>
     <string name="restore_settings_title">Przywróć ustawienia uTag</string>
     <string name="restore_settings_content">Zawiera ustawienia skanowania, lokalizacji, mapy i odświeżania</string>
