@@ -3,8 +3,8 @@ plugins {
     alias(libs.plugins.kotlin.android)
 }
 
-val xposedName = "1.0.16"
-val xposedCode = 1016
+val xposedName = "1.0.17"
+val xposedCode = 1017
 
 android {
     namespace = "com.kieronquinn.app.utag.xposed.core"
