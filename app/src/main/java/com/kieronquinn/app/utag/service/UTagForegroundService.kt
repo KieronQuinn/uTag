@@ -236,7 +236,7 @@ class UTagForegroundService: LifecycleService() {
     private var remoteForegroundService: IUTagSmartThingsForegroundService? = null
     private var isDisconnecting = false
     private var isSettingUpSafeAreas = false
-    private var notificationHash: Int? = null
+    private var ongoingNotificationContent: OngoingNotificationContent? = null
 
     private val tagStateChangeBus = MutableStateFlow(System.currentTimeMillis())
     private val safeAreaSetupBus = MutableStateFlow(System.currentTimeMillis())
@@ -482,14 +482,17 @@ class UTagForegroundService: LifecycleService() {
     override fun onCreate() {
         super.onCreate()
         log("Service created")
+        val initialContent = getOngoingNotificationContent(isError = false)
         val notification = notifications.createNotification(NotificationChannel.FOREGROUND_SERVICE) {
-            it.ongoing()
+            it.ongoing(initialContent)
         }
         //Clear any existing error notifications
         notifications.cancelNotification(NotificationId.FOREGROUND_SERVICE_ERROR)
         if (powerManager.isIgnoringBatteryOptimizations(BuildConfig.APPLICATION_ID) &&
             startForeground(NotificationId.FOREGROUND_SERVICE, notification)
         ) {
+            //Remember what was just posted, so the first update does not repeat it
+            ongoingNotificationContent = initialContent
             tryConnectToService()
             tryConnectToForegroundService()
             setupBluetoothReceiver()
@@ -733,14 +736,16 @@ class UTagForegroundService: LifecycleService() {
             delay(5_000L)
             log("Connecting to service (attempt 2)")
             if(!connectToService()) {
-                //Clear the hash so retry immediately shows the regular notification
-                notificationHash = null
+                //Record the error text, so a repeated failure does not post the same notification
+                //again, but a successful retry still restores the regular one
+                val errorContent = getOngoingNotificationContent(isError = true)
+                ongoingNotificationContent = errorContent
                 //Update the ongoing notification
                 notifications.showNotification(
                     NotificationId.FOREGROUND_SERVICE,
                     NotificationChannel.FOREGROUND_SERVICE
                 ) {
-                    it.ongoing(isError = true)
+                    it.ongoing(errorContent, isError = true)
                 }
                 //Also show a higher priority error notification
                 notifications.showNotification(
@@ -1012,7 +1017,9 @@ class UTagForegroundService: LifecycleService() {
             knownTagNames.filterNotNull(),
             passiveModeRepository.passiveModeConfigs
         ) { knownTagNames, _ ->
-            updateNotification(true)
+            //A renamed Tag, or one entering or leaving passive mode, changes the notification text,
+            //which updateNotification now detects on its own
+            updateNotification()
             if(knownTagNames.isEmpty() && !hasTriedToLoadDeviceIds) {
                 hasTriedToLoadDeviceIds = true
                 deviceRepository.getDeviceIds()
@@ -1174,15 +1181,30 @@ class UTagForegroundService: LifecycleService() {
         tagDisconnectNotificationJobs.remove(id)
     }
 
-    private fun NotificationCompat.Builder.ongoing(
-        isError: Boolean = false
-    ) = apply {
+    /**
+     *  The text the ongoing notification shows to the user. The notification is only posted again
+     *  when this changes, so a Tag which drops and reconnects into the state it was already in
+     *  does not produce a second, identical notification.
+     */
+    private data class OngoingNotificationContent(
+        val title: String,
+        val content: String?
+    )
+
+    /**
+     *  Works out what the ongoing notification should say. This is the only place the title and
+     *  text are decided, so the value compared in [updateNotification] is always exactly what the
+     *  user would see.
+     */
+    private fun getOngoingNotificationContent(isError: Boolean): OngoingNotificationContent {
         val connectedTags = tagConnections.filterValues { it is ConnectedTagConnection }
         val passiveTags = tagConnections.filterValues { it is ScannedTagConnection }.filterKeys {
             passiveModeRepository.isInPassiveMode(it, ignoreBypass = true)
         }
         val allTags = connectedTags + passiveTags
         val tagCount = allTags.size
+        //Sorted so the same set of Tags always produces the same text. The connections are held in
+        //a ConcurrentHashMap, whose iteration order is not guaranteed to survive a reconnect.
         val tagNames = allTags.entries.mapNotNull {
             //Non-passive scanned states are filtered out above
             val isPassive = it.value is ScannedTagConnection
@@ -1191,11 +1213,7 @@ class UTagForegroundService: LifecycleService() {
                     getString(R.string.notification_title_background_service_passive, name)
                 }else name
             }
-        }
-        val notificationIntent =
-            Intent(this@UTagForegroundService, MainActivity::class.java).apply {
-                addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
-            }
+        }.sorted()
         val title = when {
             isError -> {
                 getString(R.string.notification_title_background_service_error_short)
@@ -1221,8 +1239,29 @@ class UTagForegroundService: LifecycleService() {
             }
             else -> null
         }
+        return OngoingNotificationContent(title, content)
+    }
+
+    /**
+     *  [content] is passed in rather than worked out here, so the text that gets posted is always
+     *  the exact text the caller recorded as current. Working it out again would read the Tag
+     *  connections a second time, which can change in between.
+     */
+    private fun NotificationCompat.Builder.ongoing(
+        content: OngoingNotificationContent,
+        isError: Boolean = false
+    ) = apply {
+        val title = content.title
+        val notificationIntent =
+            Intent(this@UTagForegroundService, MainActivity::class.java).apply {
+                addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+            }
         setContentTitle(title)
-        setContentText(content)
+        setContentText(content.content)
+        //No effect while the channel is IMPORTANCE_LOW, which emits no sound, vibration or ticker.
+        //It is here because the user can raise the channel's importance in system settings, and the
+        //app never lowers it again. Without this, every Tag connect would then chime.
+        setOnlyAlertOnce(true)
         setSmallIcon(R.drawable.ic_notification)
         setOngoing(true)
         setShowWhen(false)
@@ -1357,6 +1396,8 @@ class UTagForegroundService: LifecycleService() {
         )
         setContentTitle(getString(R.string.notification_title_bluetooth_error))
         setContentText(getString(R.string.notification_content_bluetooth_error))
+        //Shares the ongoing notification's ID and channel, so it gets the same treatment
+        setOnlyAlertOnce(true)
         setSmallIcon(R.drawable.ic_notification_error)
         setOngoing(true)
         setAutoCancel(false)
@@ -1563,24 +1604,31 @@ class UTagForegroundService: LifecycleService() {
         }
     }
 
-    private suspend fun updateNotification(force: Boolean = false) {
-        //Prevent updating the notification if the state hasn't actually changed
+    private suspend fun updateNotification() {
         val bluetoothEnabled = bluetoothEnabled.value.enabled
-        val notificationHash = listOf(tagConnections, bluetoothEnabled).hashCode()
-        if(this.notificationHash != notificationHash || force) {
-            this.notificationHash = notificationHash
-            val bluetoothIntent = if(!bluetoothEnabled) {
-                smartThingsRepository.getEnableBluetoothIntent()
-            }else null
-            notifications.showNotification(
-                NotificationId.FOREGROUND_SERVICE,
-                NotificationChannel.FOREGROUND_SERVICE
-            ) {
-                if(bluetoothEnabled) {
-                    it.ongoing()
-                }else{
-                    it.bluetoothError(bluetoothIntent)
-                }
+        val content = if(bluetoothEnabled) {
+            getOngoingNotificationContent(isError = false)
+        }else{
+            OngoingNotificationContent(
+                getString(R.string.notification_title_bluetooth_error),
+                getString(R.string.notification_content_bluetooth_error)
+            )
+        }
+        //Posting the notification again moves it back to the top of the shade, and brings it back
+        //if the user has dismissed it. Only do that when the text has actually changed.
+        if(ongoingNotificationContent == content) return
+        ongoingNotificationContent = content
+        val bluetoothIntent = if(!bluetoothEnabled) {
+            smartThingsRepository.getEnableBluetoothIntent()
+        }else null
+        notifications.showNotification(
+            NotificationId.FOREGROUND_SERVICE,
+            NotificationChannel.FOREGROUND_SERVICE
+        ) {
+            if(bluetoothEnabled) {
+                it.ongoing(content)
+            }else{
+                it.bluetoothError(bluetoothIntent)
             }
         }
     }
