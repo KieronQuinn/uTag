@@ -38,7 +38,6 @@ import com.kieronquinn.app.utag.service.ILocationCallback
 import com.kieronquinn.app.utag.service.IServiceConnection
 import com.kieronquinn.app.utag.service.IUTagSmartThingsForegroundService
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.HOOK_CLASS_NAMES
-import com.kieronquinn.app.utag.xposed.Xposed.Companion.SCAN_TYPE_UTAG
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SERVICE_ID
 import com.kieronquinn.app.utag.xposed.Xposed.Companion.SharedPrefsKey.Companion.areAllKeysPresent
 import com.kieronquinn.app.utag.xposed.core.BuildConfig
@@ -76,11 +75,11 @@ import kotlinx.coroutines.withTimeoutOrNull
 import org.json.JSONException
 import org.json.JSONObject
 import org.luckypray.dexkit.DexKitBridge
+import org.luckypray.dexkit.query.enums.StringMatchType
 import org.luckypray.dexkit.result.ClassData
 import org.luckypray.dexkit.result.MethodData
 import org.luckypray.dexkit.wrap.DexClass
 import org.luckypray.dexkit.wrap.DexMethod
-import java.io.File
 import java.lang.ref.WeakReference
 import java.lang.reflect.Method
 import java.lang.reflect.Modifier
@@ -136,8 +135,6 @@ class Xposed: IXposedHookLoadPackage {
         private val HOOK_CLASS_NAMES = setOf("LSPHooker_", "Vector_")
 
         private const val LOCATION_TIMEOUT = 30_000L //30 seconds
-        //Last version before lockups started
-        private const val PLATFORM_VERSION_OVERRIDE = 101600001
 
         //Copied from main module
         const val APPLICATION_ID = "com.kieronquinn.app.utag"
@@ -330,7 +327,6 @@ class Xposed: IXposedHookLoadPackage {
         hookViewMap()
         hookActivity()
         hookWebView()
-        deleteVmfDenylist()
         lpparam.hookRootChecks(this)
         lpparam.hookIsFmmSupported(this)
         lpparam.hookStartScan()
@@ -348,7 +344,6 @@ class Xposed: IXposedHookLoadPackage {
         lpparam.hookOneConnectPushNotifications(this)
         lpparam.hookSamsungAccount()
         lpparam.hookShortcutActivity()
-        lpparam.hookPlatformVersion()
         lpparam.hookPluginForeground()
         if (requiresSetup) {
             sendBroadcast(Intent(ACTION_HOOKING_FINISHED).apply {
@@ -358,16 +353,6 @@ class Xposed: IXposedHookLoadPackage {
         }
 
         logDebug("End main hooking process")
-    }
-
-    private fun Context.deleteVmfDenylist() {
-        val filesDir = filesDir?.takeIf { it.exists() } ?: return
-        val rootDir = filesDir.parentFile?.takeIf { it.exists() } ?: return
-        val vmfDir = File(rootDir, "vmf").takeIf { it.exists() } ?: return
-        val apkDir = File(vmfDir, "apk").takeIf { it.exists() } ?: return
-        VMF_DENYLIST.forEach { name ->
-            File(apkDir, name).takeIf { file -> file.exists() }?.deleteRecursively()
-        }
     }
 
     /**
@@ -805,26 +790,6 @@ class Xposed: IXposedHookLoadPackage {
         )
     }
 
-    private fun LoadPackageParam.hookPlatformVersion() {
-        val pluginInfoRequest = XposedHelpers.findClass(
-            "com.samsung.android.pluginplatform.service.store.StorePluginInfoRequest",
-            classLoader
-        )
-        XposedBridge.hookAllMethods(
-            pluginInfoRequest,
-            "getPlatformVersion",
-            object: XC_MethodHook() {
-                override fun afterHookedMethod(param: MethodHookParam) {
-                    super.afterHookedMethod(param)
-                    val currentVersion = (param.result as String).toLongOrNull() ?: return
-                    if(currentVersion > PLATFORM_VERSION_OVERRIDE) {
-                        param.result = PLATFORM_VERSION_OVERRIDE.toString()
-                    }
-                }
-            }
-        )
-    }
-
     /**
      *  Sends "resume" event for uTag as a plugin when SmartThings starts & registers the
      *  receiver, allowing background scans. We never send the pause because we want to keep
@@ -1222,18 +1187,17 @@ class Xposed: IXposedHookLoadPackage {
             ?.getMethodInstance(classLoader)
         savedMethod
             ?: dexkitbridge.findClass { matcher {
-                usingStrings(" isSyncAllProceeding:")
+                usingStrings("shouldStopService")
             } }.findMethod { matcher {
-                usingStrings(" isSyncAllProceeding:")
+                usingStrings("shouldStopService")
             }}.singleOrNull()
                 ?.also { saveMethod(SharedPrefsKey.SHARED_PREF_KEY_QCSERVICE_RUNNABLE_METHOD, it) }
                 ?.getMethodInstance(classLoader)
     }
 
     /**
-     *  Uses Dexkit to find the QcService runnable class, and hook the method which checks for
-     *  whether the service should be stopped, and neutralise it. We want to prevent ST from being
-     *  killed as much as possible.
+     *  Uses Dexkit to find the QcService runnable class, and hook the method which stops the
+     *  service, neutralising it. We want to prevent ST from being killed as much as possible.
      */
     private fun LoadPackageParam.hookQcServiceRunnable(context: Context) {
         val method = findMethodQcServiceRunnable(classLoader) ?: run {
@@ -1245,7 +1209,7 @@ class Xposed: IXposedHookLoadPackage {
             object: XC_MethodHook() {
                 override fun beforeHookedMethod(param: MethodHookParam) {
                     super.beforeHookedMethod(param)
-                    param.result = false
+                    param.result = Unit
                 }
             }
         )
@@ -1487,7 +1451,7 @@ class Xposed: IXposedHookLoadPackage {
             ?.getInstance(classLoader)
         savedClass
             ?: dexkitbridge.findClass { matcher {
-                usingStrings("Ignore  device is null")
+                usingStrings(listOf("Ignore  device is null"), matchType = StringMatchType.Equals)
             } }.singleOrNull()
                 ?.also { saveClass(SharedPrefsKey.SHARED_PREF_KEY_SCAN_CALLBACK_CLASS, it) }
                 ?.getInstance(classLoader)
