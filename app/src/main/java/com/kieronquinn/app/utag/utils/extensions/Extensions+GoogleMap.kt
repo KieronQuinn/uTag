@@ -51,45 +51,51 @@ suspend fun Context.generateGoogleMap(
     withContext(Dispatchers.Main) {
         val options = GoogleMapOptions().liteMode(true)
         val mapView = MapView(this@generateGoogleMap, options)
-        mapView.onCreate(null)
-        mapView.onResume()
-        mapView.getMap().run {
-            setPadding(padding.left, padding.top, padding.right, padding.bottom)
-            mapView.layoutParams = ViewGroup.LayoutParams(width, height)
-            if(moveWatermark) {
-                val watermark = mapView.findViewWithTag<View>("GoogleWatermark")
-                watermark.updateLayoutParams<RelativeLayout.LayoutParams> {
-                    addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0)
-                    addRule(RelativeLayout.ALIGN_PARENT_LEFT, 0)
-                    addRule(RelativeLayout.ALIGN_PARENT_START, 0)
-                    addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE)
-                    addRule(RelativeLayout.ALIGN_PARENT_END, RelativeLayout.TRUE)
+        try {
+            mapView.onCreate(null)
+            mapView.onResume()
+            mapView.getMap().run {
+                setPadding(padding.left, padding.top, padding.right, padding.bottom)
+                mapView.layoutParams = ViewGroup.LayoutParams(width, height)
+                if(moveWatermark) {
+                    val watermark = mapView.findViewWithTag<View>("GoogleWatermark")
+                    watermark.updateLayoutParams<RelativeLayout.LayoutParams> {
+                        addRule(RelativeLayout.ALIGN_PARENT_BOTTOM, 0)
+                        addRule(RelativeLayout.ALIGN_PARENT_LEFT, 0)
+                        addRule(RelativeLayout.ALIGN_PARENT_START, 0)
+                        addRule(RelativeLayout.ALIGN_PARENT_TOP, RelativeLayout.TRUE)
+                        addRule(RelativeLayout.ALIGN_PARENT_END, RelativeLayout.TRUE)
+                    }
+                }
+                mapView.measure(
+                    MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
+                    MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
+                )
+                mapView.layout(0, 0, width, height)
+                modifier(this)
+                val addedMarkers = markers(this)
+                val bounds = LatLngBounds.builder()
+                addedMarkers.forEach {
+                    addMarker(it)
+                    bounds.include(it.position)
+                }
+                moveCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 0))
+                if(maxZoomLevel != null && cameraPosition.zoom > maxZoomLevel) {
+                    moveCamera(CameraUpdateFactory.zoomTo(maxZoomLevel))
+                }
+                if(zoomOut) {
+                    moveCamera(CameraUpdateFactory.zoomOut())
+                }
+                awaitReady()
+                generateSnapshot().also {
+                    clear()
                 }
             }
-            mapView.measure(
-                MeasureSpec.makeMeasureSpec(width, MeasureSpec.EXACTLY),
-                MeasureSpec.makeMeasureSpec(height, MeasureSpec.EXACTLY)
-            )
-            mapView.layout(0, 0, width, height)
-            modifier(this)
-            val addedMarkers = markers(this)
-            val bounds = LatLngBounds.builder()
-            addedMarkers.forEach {
-                addMarker(it)
-                bounds.include(it.position)
-            }
-            moveCamera(CameraUpdateFactory.newLatLngBounds(bounds.build(), 0))
-            if(maxZoomLevel != null && cameraPosition.zoom > maxZoomLevel) {
-                moveCamera(CameraUpdateFactory.zoomTo(maxZoomLevel))
-            }
-            if(zoomOut) {
-                moveCamera(CameraUpdateFactory.zoomOut())
-            }
-            awaitReady()
-            generateSnapshot().also {
-                clear()
-            }
-        }.also {
+        } finally {
+            //Always tear the MapView down, including when withTimeout cancels while waiting for the
+            //map to load or snapshot. Otherwise every timed out render leaks the MapView, its views
+            //and its native renderer, and the service process grows for as long as it runs.
+            mapView.onPause()
             mapView.removeAllViews()
             mapView.onDestroy()
         }
