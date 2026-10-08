@@ -369,7 +369,7 @@ class Xposed: IXposedHookLoadPackage {
                     super.afterHookedMethod(param)
                     val isFromMainActivity = context.getCallingInformation("root checks")
                         ?.third?.any {
-                            it == "com.samsung.android.oneconnect.ui.scmain.SCMainActivity"
+                            it == "com.samsung.android.oneconnect.ui.STEntryActivity"
                         } ?: return
                     if(isFromMainActivity) {
                         val info = param.result as ApplicationInfo
