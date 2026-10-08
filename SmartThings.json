@@ -1,9 +1,9 @@
 {
-   "version": "1.0.17",
-   "version_code": 1017,
+   "version": "1.0.18",
+   "version_code": 1018,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
-   "release_notes": "- Updated to SmartThings v1.8.51.30",
+   "release_notes": "- Updated to SmartThings v1.8.51.30\n- Fixed root check not being bypassed on devices running Magisk",
    "file_size": 172369664
 }
