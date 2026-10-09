@@ -44,7 +44,7 @@
     <string name="permission_smartthings_title">Required SmartThings Permissions</string>
     <string name="permission_smartthings_content">SmartThings requires the following permissions in order for uTag to be able to scan for and connect to your SmartTag:\n- Location (<b>set to \"Allow all the time\"</b>)\n- Bluetooth / Nearby Devices</string>
     <string name="permission_smartthings_grant">Дозволити у Налаштуваннях</string>
-    <string name="permission_notification_title">Notification Permission</string>
+    <string name="permission_notification_title">Дозвіл на сповіщення</string>
     <string name="permission_notification_content">uTag requires permission to show notifications in order to display updates</string>
     <string name="permission_notification_grant">Дозволити</string>
     <string name="permission_battery_title">Disable Battery Optimisations for uTag</string>
@@ -350,14 +350,14 @@
     <string name="tag_picker_error_dialog_title">Помилка</string>
     <string name="tag_picker_error_dialog_content">An error occurred loading your Tags. Check your connection and try again.</string>
     <string name="tag_picker_error_dialog_close">Закрити</string>
-    <string name="tag_picker_error_toast">An error occurred, please try again</string>
-    <string name="tag_picker_menu_select_all">Favourite all</string>
+    <string name="tag_picker_error_toast">Трапилася помилка, будь ласка, спробуйте знову</string>
+    <string name="tag_picker_menu_select_all">Позначити улюбленим усе</string>
     <string name="tag_picker_menu_select_none">Unfavourite all</string>
     <string name="tag_picker_add_to_home">Додати на головний екран</string>
     <!-- Ring dialog -->
     <string name="tag_ring_title">Відтворити звук на мітці</string>
     <string name="tag_ring_content_start">%1s will start ringing when you tap Start.</string>
-    <string name="tag_ring_content_stop">Tap Stop when you find your tag.</string>
+    <string name="tag_ring_content_stop">Натисніть \"Стоп\", коли знайдете свою мітку.</string>
     <string name="tag_ring_content_network">Your SmartTag will start ringing when it is located by another device, or this device connects to it.</string>
     <string name="tag_ring_start">Старт</string>
     <string name="tag_ring_stop">Стоп</string>
@@ -365,17 +365,17 @@
     <!-- Location history -->
     <string name="tag_location_history_loading">Loading may take a while for new areas while the encrypted address database is built, or when there are many encrypted locations to decrypt.</string>
     <string name="tag_location_history_progress">%1d%%</string>
-    <string name="tag_location_history_empty">No locations for this day</string>
+    <string name="tag_location_history_empty">Немає розташувань цього дня</string>
     <string name="tag_location_history_error_title">Помилка</string>
     <string name="tag_location_history_error_content">An error occurred when loading your location history, check your connection and try again later.</string>
     <string name="tag_location_history_error_close">Закрити</string>
     <string name="tag_location_history_timestamp_multiple">%1s\n-\n%1s</string>
     <string name="tag_location_history_delete">Видалити історію</string>
-    <string name="tag_location_history_delete_dialog_content">Delete all location history for %1s?</string>
+    <string name="tag_location_history_delete_dialog_content">Видалити всю історію розташувань для %1s?</string>
     <string name="tag_location_history_delete_dialog_cancel">Скасувати</string>
     <string name="tag_location_history_delete_dialog_delete">Видалити</string>
-    <string name="tag_location_history_delete_error">An error occurred, please try again.</string>
-    <string name="tag_location_history_delete_disabled">Delete disabled as Content Creator mode is enabled</string>
+    <string name="tag_location_history_delete_error">Трапилася помилка, будь ласка, спробуйте знову.</string>
+    <string name="tag_location_history_delete_disabled">Видалення вимкнено, оскільки увімкнений режим творця контенту</string>
     <string name="tag_location_history_decrypt_failed">Some locations may not be shown as they could not be decrypted</string>
     <string name="tag_location_history_export">Експорт історії</string>
     <string name="tag_location_history_export_disabled">Exporting is disabled as Content Creator mode is enabled</string>
@@ -400,8 +400,8 @@
     <string name="tag_more_notify_when_disconnected_title">Notify when left behind</string>
     <string name="tag_more_notify_when_disconnected_content_warning">Не працює. Торкніться, щоб дізнатися більше.</string>
     <string name="tag_more_notify_when_disconnected_content_disabled">Notify when %1s is disconnected from this device and not in a Safe Area</string>
-    <string name="tag_more_notify_when_disconnected_content_enabled_one">Enabled • %1d Safe Area</string>
-    <string name="tag_more_notify_when_disconnected_content_enabled_other">Enabled • %1d Safe Areas</string>
+    <string name="tag_more_notify_when_disconnected_content_enabled_one">Увімкнено • %1d безпечне місце</string>
+    <string name="tag_more_notify_when_disconnected_content_enabled_other">Увімкнено • %1d безпечні місця</string>
     <string name="tag_more_notify_when_disconnected_content_enabled_none">Увімкнено</string>
     <string name="tag_more_notify_when_disconnected_switch">Увімкнено</string>
     <string name="tag_more_notify_when_disconnected_safe_areas_title">Безпечні місця</string>
@@ -416,7 +416,7 @@
     <string name="tag_more_notify_when_disconnected_notifications_dnd_content">Do not Disturb is enabled and the <b>Left Behind Alerts</b> notification channel is not excluded, so you may not notice left behind alerts</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_title">Потрібен дозвіл</string>
     <string name="tag_more_notify_when_disconnected_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
-    <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Allow permission in settings</string>
+    <string name="tag_more_notify_when_disconnected_full_screen_permission_required_action">Надати дозвіл у налаштуваннях</string>
     <string name="tag_more_lost_mode_title">Режим втрати</string>
     <string name="tag_more_category_protect">Захистити</string>
     <string name="tag_more_lost_mode_on">Увімк</string>
@@ -433,20 +433,20 @@
     <string name="tag_more_error_title">Помилка</string>
     <string name="tag_more_error_content">An error occurred when loading your Tag\'s settings, check your connection and try again later.</string>
     <string name="tag_more_error_close">Закрити</string>
-    <string name="tag_more_error_toast">An error occurred, please try again</string>
+    <string name="tag_more_error_toast">Трапилася помилка, будь ласка, спробуйте знову</string>
     <string name="tag_more_shareable_dialog">You can set which members of your SmartThings shared household this Tag is shared with by selecting the \"Home\" icon on the main screen of SmartThings.</string>
     <string name="tag_more_end_to_end_title">Encrypt offline location</string>
     <string name="tag_more_end_to_end_content">Encrypt future location updates from other people\'s Galaxy devices for this Tag. You will be required to enter your encryption PIN to access these locations.</string>
     <string name="tag_more_end_to_end_content_pin">Set a PIN in the encryption settings to use this option</string>
-    <string name="tag_more_end_to_end_content_disabled">Connect to your Tag to use this option</string>
+    <string name="tag_more_end_to_end_content_disabled">Під\'єднайтеся до своєї мітки, щоб використовувати цю опцію</string>
     <string name="tag_more_end_to_end_content_network">Could not get encryption key state, check your network connection</string>
     <string name="tag_more_end_to_end_content_passive">Disable Passive Mode to use this option</string>
-    <string name="tag_more_category_automations">Smart button action</string>
+    <string name="tag_more_category_automations">Дія розумної кнопки</string>
     <string name="tag_more_find_device_title">Знайти мій пристрій</string>
     <string name="tag_more_find_device_content">Double press the Tag\'s button to make this device ring</string>
     <string name="tag_more_find_device_content_disabled">Disable Passive Mode to use this option</string>
     <string name="tag_more_find_device_content_enabled">Увімкнено</string>
-    <string name="tag_more_find_device_content_error">Not working. Tap for more info.</string>
+    <string name="tag_more_find_device_content_error">Не працює. Торкніться, щоб дізнатися більше.</string>
     <string name="tag_more_find_device_switch">Enable Find my Device</string>
     <string name="tag_more_find_device_category_settings">Налаштування</string>
     <string name="tag_more_find_device_notifications_disabled_title">Сповіщення вимкнено</string>
@@ -457,7 +457,7 @@
     <string name="tag_more_find_device_notifications_silenced_content">The <b>Find my Device</b> notification channel has been silenced, so uTag will not be able to start ringing. Set it to <b>Default</b> and enable <b>Pop on screen</b> to allow ringing</string>
     <string name="tag_more_find_device_full_screen_permission_required_title">Потрібен дозвіл</string>
     <string name="tag_more_find_device_full_screen_permission_required_content">uTag requires the \"full screen intents\" permission to start ringing from the background</string>
-    <string name="tag_more_find_device_full_screen_permission_required_action">Allow permission in settings</string>
+    <string name="tag_more_find_device_full_screen_permission_required_action">Надати дозвіл у налаштуваннях</string>
     <string name="tag_more_find_device_pet_walking_enabled_title">Вигулювання тварини увімкнено</string>
     <string name="tag_more_find_device_pet_walking_enabled_content">A Samsung phone or tablet has the \"Start walk with pet\" option enabled for this Tag in SmartThings. Using this option may also start pet walking on another device. Disable start walk with pet in order to prevent this.\n\n<b>Note:</b> Pet Walking is currently unsupported by uTag.</string>
     <string name="tag_more_find_device_pet_walking_disable_action">Disable start walk with pet</string>
@@ -480,12 +480,12 @@
     <string name="tag_more_find_device_shared_tag_warning_dialog_title">Shared Tag Warning</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_content">This Tag is shared with other users. The Find my Device option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may ring the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
     <string name="tag_more_find_device_shared_tag_warning_dialog_dismiss">Зрозуміло</string>
-    <string name="tag_more_find_device_error_toast">An error occurred, please try again</string>
+    <string name="tag_more_find_device_error_toast">Трапилася помилка, будь ласка, спробуйте знову</string>
     <string name="tag_more_automation_title">Custom Automations</string>
     <string name="tag_more_automation_content">Set custom actions for pressing &amp; holding Tag button</string>
     <string name="tag_more_automation_content_disabled">Connect to your Tag to use this option</string>
-    <string name="tag_more_automation_content_disabled_passive">Disable Passive Mode to use this option</string>
-    <string name="tag_more_automation_shared_tag_warning_dialog_title">Shared Tag Warning</string>
+    <string name="tag_more_automation_content_disabled_passive">Для використання цієї опції вимкніть пасивний режим</string>
+    <string name="tag_more_automation_shared_tag_warning_dialog_title">Попередження про спільні мітки</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_content">This Tag is shared with other users. The Automations option only sends button press events to the first device connected to a Tag, if multiple are connected at once. If you share your Tag with another household member, pressing the button may send the event the wrong device, or none at all. Therefore, this option works best with Tags that are not shared, if you have one.</string>
     <string name="tag_more_automation_shared_tag_warning_dialog_dismiss">Зрозуміло</string>
     <string name="tag_more_automation_press_title">Натиснуто</string>
@@ -496,7 +496,7 @@
     <string name="tag_more_automation_held_title">Утримувати</string>
     <string name="tag_more_automation_held_content">Запустити %1s</string>
     <string name="tag_more_automation_held_content_unset">Дія не встановлена</string>
-    <string name="tag_more_automation_held_content_error">Additional permission required</string>
+    <string name="tag_more_automation_held_content_error">Необхідний додатковий дозвіл</string>
     <string name="tag_more_automation_held_content_disabled">Disable the \"Held\" Automation action in SmartThings to use this option</string>
     <string name="tag_more_automation_footer_title">Custom Automations</string>
     <string name="tag_more_automation_footer_content">This option allows you to set custom actions for pressing &amp; holding the button on %1s. <b>This is alternative to the built-in options in SmartThings</b>, and has some limitations:</string>
@@ -516,7 +516,7 @@
     <string name="tag_more_automation_permission_allow_content">Надати дозвіл \"Показувати поверх інших додатків\"</string>
     <string name="tag_more_automation_permission_restricted_title">Обмежені налаштування</string>
     <string name="tag_more_automation_permission_restricted_content">If you get a message stating that \"Display over other apps\" is a <b>Restricted Setting</b>, you will need to allow restricted settings in the app info for uTag.\n\nTo do this:\n• Open the App Info page for uTag\n• In the overflow menu, select \"Allow restricted settings\"\n• Return to uTag and try to enable the \"Display over other apps\" permission again.</string>
-    <string name="tag_more_automation_permission_restricted_action">Open App Info</string>
+    <string name="tag_more_automation_permission_restricted_action">Інформація про додаток</string>
     <string name="tag_more_automation_type_app_title">Запустити додаток</string>
     <string name="tag_more_automation_type_app_content">Start an app when this automation is invoked.</string>
     <string name="tag_more_automation_type_camera_title">Запустити камеру</string>
@@ -560,17 +560,17 @@
     <string name="lost_mode_settings_error_dialog_title">Помилка</string>
     <string name="lost_mode_settings_error_dialog_content">An error occurred when loading your Lost Mode Settings, check your connection and try again</string>
     <string name="lost_mode_settings_error_dialog_close">Закрити</string>
-    <string name="lost_mode_settings_error_toast">An error occurred, please try again</string>
+    <string name="lost_mode_settings_error_toast">Трапилася помилка, будь ласка, спробуйте знову</string>
     <string name="lost_mode_custom_url_set_title">Custom URL Set</string>
     <string name="lost_mode_custom_url_set_content">Your Tag has a custom URL set, which cannot be modified unless it is connected.\n\n<b>Important:</b> Please do not try to bypass this by changing the Lost Mode settings on another device using SmartThings, this will not work and may lose your Tag\'s original Lost Mode URL.</string>
     <string name="lost_mode_settings_category_advanced">Advanced</string>
     <string name="lost_mode_settings_custom_url_title">Custom URL</string>
     <string name="lost_mode_settings_custom_url_content_unset">Set a custom URL to open when this Tag is tapped by another device</string>
-    <string name="lost_mode_settings_custom_url_content_disconnected">Connect to your Tag to use this option</string>
-    <string name="lost_mode_settings_custom_url_content_passive">Disable Passive Mode to use this option</string>
+    <string name="lost_mode_settings_custom_url_content_disconnected">Під\'єднайтеся до своєї мітки, щоб використовувати цю опцію</string>
+    <string name="lost_mode_settings_custom_url_content_passive">Для використання цієї опції вимкніть пасивний режим</string>
     <string name="lost_mode_settings_custom_url_warning_title">Важливе попередження</string>
     <string name="lost_mode_settings_custom_url_warning_content">Setting a custom URL overwrites the original URL which is stored on the Tag. uTag will try to keep the original URL backed up, however <b>if you edit or turn off Lost Mode using the SmartThings app, it will be lost permanently</b>. You are advised to keep a second, external copy of this original URL stored safely elsewhere.</string>
-    <string name="lost_mode_settings_custom_url_warning_action">Copy original URL</string>
+    <string name="lost_mode_settings_custom_url_warning_action">Скопіювати оригінальний URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_label">%1s\'s original URL</string>
     <string name="lost_mode_settings_custom_url_warning_action_toast">Copied to clipboard</string>
     <string name="lost_mode_settings_custom_url_lost_title">Важливе попередження</string>
@@ -584,16 +584,16 @@
     <string name="lost_mode_settings_custom_url_set_warning_dialog_content">uTag cannot verify this Lost Message URL is the correct one for this Tag. Setting the incorrect URL will cause the Lost Mode options to not work, please confirm this is the correct URL to continue.</string>
     <string name="lost_mode_settings_custom_url_set_warning_dialog_confirm">Підтвердити</string>
     <string name="lost_mode_settings_custom_url_error_toast">An error occurred, please try again</string>
-    <string name="lost_mode_settings_custom_url_invalid_url_toast">Invalid URL</string>
+    <string name="lost_mode_settings_custom_url_invalid_url_toast">Неправильний URL</string>
     <string name="lost_mode_settings_custom_url_footer_title">About Custom URL</string>
     <string name="lost_mode_settings_custom_url_footer_content">Setting a custom URL allows you to fully customise what happens when a device with NFC enabled is tapped on your Tag. It can be set to any URL, much like a writable NFC tag.\n\n<b>Important:</b> You can only write a custom URL when the Tag is connected, so ideally this should be a page you can edit to add contact details to later if required.</string>
     <!-- Sent to server when a custom URL is set and displayed in SmartThings as a final warning. Max length is strict due to average display limit. Only a-Z, 1-9 and periods allowed. -->
     <string name="lost_mode_custom_url_warning" maxLength="40">Do not edit or turn off. See uTag Wiki.</string>
     <!-- Predefined lost messages (displayed locally only) -->
-    <string name="this_smarttag_has_been_lost">This SmartTag has been lost.</string>
-    <string name="this_is_a_lost_item">This is a lost item that\'s important to me, so please help me get it back.</string>
-    <string name="im_tracking_this_item">I\'m tracking this item and trying to find it, so please contact me.</string>
-    <string name="help_my_lost_pet_come_back_home">Please contact me and help my lost pet come back home.</string>
+    <string name="this_smarttag_has_been_lost">Цей SmartTag було втрачено.</string>
+    <string name="this_is_a_lost_item">Це загублений предмет, який є важливим для мене, тому, будь ласка, допоможіть мені його повернути.</string>
+    <string name="im_tracking_this_item">Я відстежую цей предмет і намагаюся знайти його, тому, будь ласка, зв\'яжіться зі мною.</string>
+    <string name="help_my_lost_pet_come_back_home">Будь ласка, зв\'яжіться зі мною та допоможіть моїй загубленій тваринці дістатися додому.</string>
     <!-- Passive Mode -->
     <string name="passive_mode_enabled_switch">Увімкнено</string>
     <string name="passive_mode_info_title">Що таке Пасивний режим?</string>
@@ -610,7 +610,7 @@
     <string name="passive_mode_disabled_dialog_content">Passive mode has been disabled, SmartThings may take a couple of minutes to reconnect to your Tag if it\'s nearby. If it does not, open SmartThings to connect to it manually.</string>
     <!-- Battery levels -->
     <string name="battery_unknown">Невідомо</string>
-    <string name="battery_very_low">Battery replacement required</string>
+    <string name="battery_very_low">Необхідна заміна акумулятора</string>
     <string name="battery_low">Низький</string>
     <string name="battery_sufficient">Достатній</string>
     <!-- Only used in export -->
@@ -623,9 +623,9 @@
     <string name="device_type_none_galaxy_tablet">Не планшет Galaxy</string>
     <!-- D2D Status -->
     <string name="d2d_status_connected">Під\'єднано</string>
-    <string name="d2d_status_scanned">Scanned</string>
+    <string name="d2d_status_scanned">Відскановано</string>
     <!-- Privacy notice -->
-    <string name="privacy_notice_title">Locate your Tags anytime, anywhere</string>
+    <string name="privacy_notice_title">Знайте розташування Ваших міток у будь-який час і будь-де</string>
     <string name="privacy_notice_content"><![CDATA[To continue, agree to the <a href="%1s">Use of Location Information</a>.<br><br>For more information, see the Samsung account <a href="%1s"> Privacy Notice"</a>.]]></string>
     <string name="privacy_notice_agree">Згода</string>
     <string name="privacy_notice_disagree">Не згоден</string>
@@ -638,7 +638,7 @@
     <string name="fme_opt_in_positive">Увімкнути</string>
     <string name="fme_opt_in_negative">Не зараз</string>
     <!-- UTS opt-in -->
-    <string name="uts_opt_in_title">Unknown Tag Scanning</string>
+    <string name="uts_opt_in_title">Сканування невідомих міток</string>
     <string name="uts_opt_in_content">uTag can automatically scan for unknown Tags and note their location during location refreshes. If they meet the criteria for you possibly being tracked, a notification will be displayed for you to take action.\n\nFor a Tag to trigger an Unknown Tag Alert, it must be disconnected from its owner for 24 hours, and been detected in multiple locations (at least 500 metres apart) over the space of at least 30 minutes.</string>
     <string name="uts_opt_in_positive">Увімкнути</string>
     <string name="uts_opt_in_negative">Не зараз</string>
@@ -672,7 +672,7 @@
     <string name="settings_encryption_reset_warning_dialog_title">Скинути ПІН</string>
     <string name="settings_encryption_reset_warning_dialog_content">If you reset your PIN, all location history which was reported by other Galaxy devices with encryption enabled will be deleted. Once a location has been reported from another Galaxy device after you change your PIN, you will be asked to enter your new PIN to decrypt it.</string>
     <string name="settings_encryption_reset_warning_dialog_positive">Скинути</string>
-    <string name="settings_encryption_biometrics_failed_title">Biometric Error</string>
+    <string name="settings_encryption_biometrics_failed_title">Помилка біометрії</string>
     <string name="settings_encryption_biometrics_failed_content">Could not authenticate.\n\nIf you need to add or change your PIN and cannot use biometrics, clear uTag\'s data and sign in again.</string>
     <string name="settings_encryption_pin_timeout_never">Ніколи</string>
     <string name="settings_encryption_pin_timeout_subtitle">You will only be asked for your PIN after uTag is restarted or your device is rebooted</string>
@@ -706,7 +706,7 @@
     <string name="biometric_prompt_content_disable">Verify biometrics to disable</string>
     <string name="biometric_prompt_content_change_pin">Authenticate to modify your PIN</string>
     <string name="biometric_prompt_content_negative">Скасувати</string>
-    <string name="biometric_prompt_error_title">Biometric Error</string>
+    <string name="biometric_prompt_error_title">Помилка біометрії</string>
     <string name="biometric_prompt_error_content">Could not authenticate.\n\nIf you need to access uTag and cannot use Biometrics, clear uTag\'s data and sign in again.</string>
     <string name="biometric_prompt_error_close">Закрити</string>
     <!-- About Footer -->
@@ -714,15 +714,15 @@
     <string name="github">GitHub</string>
     <string name="libraries">Сторонні бібліотеки</string>
     <string name="donate">Пожертва</string>
-    <string name="bluesky">Follow me on Bluesky</string>
-    <string name="about_version">Version %1s\nCreated by Kieron Quinn</string>
+    <string name="bluesky">Стежте за мною на Bluesky</string>
+    <string name="about_version">Версія %1s\nАвтор - К\'єрон Квінн (Kieron Quinn)</string>
     <string name="about_contributors">Учасники проєкту</string>
     <string name="about_crowdin">Crowdin</string>
-    <string name="about_debug_enabled">Developer options enabled</string>
-    <string name="about_debug_disabled">Developer options disabled</string>
+    <string name="about_debug_enabled">Параметри розробника увімкнено</string>
+    <string name="about_debug_disabled">Параметри розробника вимкнено</string>
     <!-- Contributors -->
-    <string name="contributors_oneui_title">OneUI Project</string>
-    <string name="contributors_oneui_content">OneUI UI components, styling and icons port</string>
+    <string name="contributors_oneui_title">Проєкт OneUI</string>
+    <string name="contributors_oneui_content">Компоненти інтерфейсу One UI, портація стилів та іконок</string>
     <string name="contributors_icons_title">Додаткові значки</string>
     <string name="contributors_icons_content">Additional icons from Material Design Icons (Pictogrammers Free Licence)</string>
     <!-- Update downloader -->
@@ -738,8 +738,8 @@
     <string name="update_subheading">%1s → %1s</string>
     <string name="update_changes">Зміни</string>
     <string name="update_done_title">Готове до встановлення</string>
-    <string name="update_done_content_utag"><b>Note:</b> Your Tags may disconnect during the update process.</string>
-    <string name="update_done_content_smartthings"><b>Note:</b> Your Tags may disconnect during the update process.</string>
+    <string name="update_done_content_utag"><b>Увага:</b> Ваші мітки можуть бути від\'єднані під час процесу оновлення.</string>
+    <string name="update_done_content_smartthings"><b>Увага:</b> Ваші мітки можуть бути від\'єднані під час процесу оновлення.</string>
     <string name="update_done_action">Почати установку</string>
     <string name="update_action">Завантажити</string>
     <string name="update_action_alt">Альтернативне завантаження</string>
