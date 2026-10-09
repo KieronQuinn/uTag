@@ -758,13 +758,13 @@
     <string name="update_notification_multiple_content">Доступні оновлення для uTag та SmartThings</string>
     <!-- Notification channels -->
     <string name="notification_channel_updates_title">Оновлення uTag</string>
-    <string name="notification_channel_updates_content">Notifications shown when there is an update for uTag</string>
-    <string name="notification_channel_foreground_service_title">Background Service</string>
-    <string name="notification_channel_foreground_service_content">Notifications shown when uTag is running in the background</string>
+    <string name="notification_channel_updates_content">Сповіщення показуються за наявності оновлення uTag</string>
+    <string name="notification_channel_foreground_service_title">Фонова служба</string>
+    <string name="notification_channel_foreground_service_content">Сповіщення показуються, коли uTag працює у фоні</string>
     <string name="notification_channel_error_title">Помилки</string>
     <string name="notification_channel_error_content">Notifications shown if uTag encounters an issue</string>
     <string name="notification_channel_find_title">Find my Device</string>
-    <string name="notification_channel_find_content">Notifications shown when you use uTag to find your device by double pressing a Tag\'s button</string>
+    <string name="notification_channel_find_content">Сповіщення показуються, коли Ви використовуєте uTag, щоб знайти власний пристрій шляхом подвійного натискання кнопки мітки</string>
     <string name="notification_channel_left_behind_title">Left Behind Alerts</string>
     <string name="notification_channel_left_behind_content">Notifications shown when you leave a Tag behind and have \"Notify when left behind\" enabled</string>
     <string name="notification_channel_unknown_tag_title">Unknown Tag Alerts</string>
@@ -772,7 +772,7 @@
     <!-- Search nearby -->
     <string name="nearby_loading">З\'єднання з %1s…</string>
     <string name="nearby_loading_sub"><b>Note:</b> If your Tag is nearby but failing to connect, try turning Bluetooth off and on again or rebooting.</string>
-    <string name="nearby_its_far_away">It\'s far away</string>
+    <string name="nearby_its_far_away">Вона далеко</string>
     <string name="nearby_its_here">Вона тут</string>
     <string name="nearby_its_near_you">Вона поруч з Вами</string>
     <string name="nearby_its_not_far_from_here">Вона недалеко звідси</string>
@@ -785,14 +785,14 @@
     <string name="nearby_look_down">Подивіться вниз</string>
     <string name="nearby_go_forward">Ідіть вперед</string>
     <string name="nearby_its_behind_you">Вона позаду вас</string>
-    <string name="nearby_move_around">Move around to find the Tag</string>
+    <string name="nearby_move_around">Озирніться навколо, щоб знайти мітку</string>
     <string name="nearby_signal_weaker">Сигнал стає слабшим</string>
     <string name="nearby_signal_stronger">Сигнал стає сильнішим</string>
     <string name="nearby_hold_upright">Hold your device upright</string>
-    <string name="nearby_suggest_ring">Can\'t see it? Try ringing the Tag</string>
+    <string name="nearby_suggest_ring">Не бачите її? Спробуйте увімкнути дзвінок мітки</string>
     <string name="search_nearby_searching_title">Пошук…</string>
-    <string name="search_nearby_searching_content">Make sure %1s is in Bluetooth range</string>
-    <string name="search_nearby_timeout_title">Connection Error</string>
+    <string name="search_nearby_searching_content">Переконайтеся, що %1s знаходиться в межах дії Bluetooth</string>
+    <string name="search_nearby_timeout_title">Помилка з’єднання</string>
     <string name="search_nearby_timeout_content">Failed to connect to your Tag. Make sure it\'s in Bluetooth range and try again.</string>
     <string name="search_nearby_timeout_content_alt">Disconnected from your Tag. Make sure it\'s in Bluetooth range and try again.</string>
     <string name="search_nearby_timeout_close">Закрити</string>
@@ -805,18 +805,18 @@
     <string name="search_nearby_bluetooth_disabled_positive">Увімкнути</string>
     <string name="search_nearby_bluetooth_disabled_negative">Скасувати</string>
     <!-- Foreground service -->
-    <string name="notification_title_smartthings">SmartThings is running</string>
+    <string name="notification_title_smartthings">SmartThings працює</string>
     <string name="notification_content_smartthings">uTag is keeping SmartThings running in the background. Long press to hide this notification.</string>
-    <string name="notification_title_background_service_zero">No Tags connected</string>
-    <string name="notification_title_background_service_one">%1d Tag connected</string>
-    <string name="notification_title_background_service_other">%1d Tags connected</string>
+    <string name="notification_title_background_service_zero">Немає під\'єднаних міток</string>
+    <string name="notification_title_background_service_one">Під\'єднано %1d мітку</string>
+    <string name="notification_title_background_service_other">Під\'єднано %1d міток</string>
     <string name="notification_title_background_service_passive">%1s (Passive)</string>
     <string name="notification_title_background_service_error_short">uTag</string>
     <string name="notification_title_background_service_error">Помилка uTag</string>
     <string name="notification_content_background_service_error">Failed to connect to SmartThings. Tap for more info.</string>
     <string name="notification_title_background_service_battery">Disable Battery Optimisation</string>
     <string name="notification_content_background_service_battery">uTag requires battery optimisation be disabled for %1s, tap to disable</string>
-    <string name="notification_title_background_service_permissions">uTag Error</string>
+    <string name="notification_title_background_service_permissions">Помилка uTag</string>
     <string name="notification_content_background_service_permissions">SmartThings requires extra permissions for uTag to work, tap for more info</string>
     <string name="notification_action_background_service_error_action">Повторити</string>
     <string name="notification_title_bluetooth_error">Bluetooth вимкнено</string>
@@ -824,8 +824,8 @@
     <string name="notification_title_disconnect">Left Behind Alert</string>
     <string name="notification_content_disconnect">Your %1s has been left behind!</string>
     <!-- Logged out notification -->
-    <string name="notification_title_logged_out">Signed Out</string>
-    <string name="notification_content_logged_out">You have been signed out of SmartThings. Tap to sign in again.</string>
+    <string name="notification_title_logged_out">Виконано вихід</string>
+    <string name="notification_content_logged_out">Ви вийшли зі SmartThings. Натисніть, щоб увійти знову.</string>
     <!-- Find my Device -->
     <string name="notification_title_find_my_device">Find my Device</string>
     <string name="notification_content_find_my_device_delay">%1s is about to ring this device</string>
@@ -893,7 +893,7 @@
     <string name="safe_area_wifi_name_content_empty">Automatically generate</string>
     <string name="safe_area_wifi_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, the network name will be used instead.</string>
     <string name="safe_area_wifi_ssid_title">Назва мережі</string>
-    <string name="safe_area_wifi_ssid_content_empty">The name (SSID) of the Wi-Fi network</string>
+    <string name="safe_area_wifi_ssid_content_empty">Назва (SSID) мережі WiFi</string>
     <string name="safe_area_wifi_ssid_dialog_message">Enter the network name (SSID) of the Wi-Fi network this Safe Area will be active when connected to. Case sensitive, blank spaces around the name will be removed.</string>
     <string name="safe_area_wifi_mac_toggle_title_title">Require MAC Address</string>
     <string name="safe_area_wifi_mac_toggle_title_content"><b>Optional:</b> Limit this Safe Area to a specific Wi-Fi MAC address, which may be useful if you have multiple Wi-Fi networks with the same name.</string>
@@ -902,14 +902,14 @@
     <string name="safe_area_wifi_mac_dialog_message">Enter the MAC address of the Wi-Fi network this Safe Area will be active when connected to. Optional, useful if you have multiple Wi-Fi networks using the same name.</string>
     <string name="safe_area_wifi_exit_buffer_title">Exit Buffer</string>
     <string name="safe_area_wifi_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that your Wi-Fi disconnects before the Tag does, but that it was left within the Safe Area.</string>
-    <string name="safe_area_wifi_invalid_ssid">Enter a network name</string>
-    <string name="safe_area_wifi_invalid_mac">Enter a valid MAC address</string>
+    <string name="safe_area_wifi_invalid_ssid">Уведіть назву мережі</string>
+    <string name="safe_area_wifi_invalid_mac">Уведіть коректну MAC-адресу</string>
     <string name="safe_area_location_name_toast">Tap the map or drag the marker to move the Safe Area</string>
     <string name="safe_area_location_name_title">Назва</string>
     <string name="safe_area_location_name_content_empty">Automatically generate</string>
     <string name="safe_area_location_name_dialog_message">Enter a memorable name for this Safe Area. If left blank, uTag will try to generate one from the approximate address of the location.</string>
     <string name="safe_area_location_radius_title">Радіус</string>
-    <string name="safe_area_location_radius_content">The size of this safe area</string>
+    <string name="safe_area_location_radius_content">Розмір цього безпечного місця</string>
     <string name="safe_area_location_exit_buffer_title">Exit Buffer</string>
     <string name="safe_area_location_exit_buffer_content">Additional buffer time between exiting this Safe Area and Tags being considered \"unsafe\": %1s.\n\nThis is useful if you find that you leave the location before the Tag disconnects, but that it was left within the Safe Area.</string>
     <string name="safe_area_location_error_dialog_title">Couldn\'t get location</string>
@@ -939,10 +939,10 @@
     <string name="widget_location">Розташування мітки</string>
     <string name="widget_history">Історія розташування мітки</string>
     <string name="widget_preview_status">Оновлено: 18:06</string>
-    <string name="widget_error_location">Error getting location</string>
-    <string name="widget_error_locations">Error getting locations</string>
-    <string name="widget_error_no_location">No location available</string>
-    <string name="widget_error_no_locations">No locations available</string>
+    <string name="widget_error_location">Помилка отримання розташування</string>
+    <string name="widget_error_locations">Помилка отримання розташувань</string>
+    <string name="widget_error_no_location">Розташування не доступне</string>
+    <string name="widget_error_no_locations">Розташування не доступні</string>
     <string name="widget_error_encryption">PIN required to get location, tap to open uTag and enter your PIN</string>
     <string name="widget_error_toast_location">Failed to get one or more Tag locations, they will not be displayed</string>
     <string name="widget_error_toast_encryption">Failed to decrypt one or more Tag locations, open uTag and enter your PIN to display them</string>
@@ -954,7 +954,7 @@
     <string name="widget_dialog_not_setup_open">Відкрити uTag</string>
     <string name="widget_configuration_set_device">Set a Tag to display first</string>
     <string name="widget_configuration_dialog_save_title">Зберегти зміни?</string>
-    <string name="widget_configuration_dialog_save_content">Would you like to save your changes?</string>
+    <string name="widget_configuration_dialog_save_content">Ви бажаєте зберегти зроблені зміни?</string>
     <string name="widget_configuration_dialog_save_save">Зберегти</string>
     <string name="widget_configuration_dialog_save_dont_save">Не зберігати</string>
     <string name="widget_configuration_save">Зберегти</string>
