@@ -1,6 +1,6 @@
 {
-   "version": "1.0.20",
-   "version_code": 1020,
+   "version": "1.0.19",
+   "version_code": 1019,
    "download": "https://github.com/KieronQuinn/uTag/releases/download/smartthings/SmartThings.apk",
    "download_alt": "https://github.com/KieronQuinn/uTag/releases/tag/smartthings",
    "download_filename": "SmartThings.apk",
