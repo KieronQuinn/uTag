@@ -37,6 +37,7 @@ android {
         sourceCompatibility = JavaVersion.VERSION_21
         targetCompatibility = JavaVersion.VERSION_21
     }
+    buildToolsVersion = libs.versions.build.tools.get()
 }
 
 dependencies {

@@ -32,8 +32,8 @@ fun getKeystoreProperties(): Properties? {
     return properties
 }
 
-val tagName = "1.0.20"
-val tagCode = 1020
+val tagName = "1.0.21"
+val tagCode = 1021
 
 android {
     namespace = "com.kieronquinn.app.utag"
@@ -106,6 +106,7 @@ android {
         generateLocaleConfig = true
     }
     project.tasks.preBuild.dependsOn("fmm")
+    buildToolsVersion = libs.versions.build.tools.get()
 }
 
 tasks.withType<JavaCompile>().configureEach {
