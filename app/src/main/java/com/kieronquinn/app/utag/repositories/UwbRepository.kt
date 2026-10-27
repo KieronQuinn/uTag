@@ -18,6 +18,9 @@ interface UwbRepository {
         @SuppressLint("NewApi")
         fun getImplementation(context: Context): UwbRepository {
             return when {
+                Build.VERSION.SDK_INT >= 36 -> {
+                    PlatformUwbRepository(context)
+                }
                 Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
                     JetpackUwbRepository(context)
                 }
