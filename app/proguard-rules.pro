@@ -31,6 +31,7 @@
 
 # Keep models untouched so their metadata is kept
 -keep class com.kieronquinn.app.utag.model.** { *; }
+-keep class com.kieronquinn.app.utag.networking.model.** { *; }
 
 # Keep Commons Hex encoder
 -keep class org.apache.commons.codec.binary.Hex { *; }

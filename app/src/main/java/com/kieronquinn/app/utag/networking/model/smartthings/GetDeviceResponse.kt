@@ -16,7 +16,7 @@ data class GetDeviceResponse(
     @SerializedName("icons")
     val icons: Icons,
     @SerializedName("bleD2D")
-    val bleD2D: BleD2D,
+    val bleD2D: BleD2D?,
     @SerializedName("components")
     val components: List<Components>,
     @SerializedName("ocfDeviceType")
