@@ -19,6 +19,8 @@ import com.kieronquinn.app.utag.utils.extensions.get
 import com.kieronquinn.app.utag.utils.extensions.scaleAndRecycle
 import com.kieronquinn.app.utag.utils.extensions.url
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.sync.Semaphore
+import kotlinx.coroutines.sync.withPermit
 import kotlinx.coroutines.withContext
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -54,6 +56,7 @@ class DeviceRepositoryImpl(
     private val smartTagRepository by inject<SmartTagRepository>()
     private val resources = context.resources
     private val glide = Glide.with(context)
+    private val deviceInfoSemaphore = Semaphore(permits = 2)
     private val bitmapCache = HashMap<BitmapCacheEntry, Pair<Bitmap, Bitmap>>()
 
     private val okHttpClient = OkHttpClient().newBuilder().apply {
@@ -81,7 +84,7 @@ class DeviceRepositoryImpl(
         }?.map { it.deviceId }
     }
 
-    override suspend fun getDeviceInfo(deviceId: String): DeviceInfo? {
+    override suspend fun getDeviceInfo(deviceId: String): DeviceInfo? = deviceInfoSemaphore.withPermit {
         val userId = encryptedSettingsRepository.userId.getOrNull() ?: return null
         return deviceService.getDevice(deviceId).get(CacheType.DEVICE_INFO, deviceId, name = "info")
             ?.toDeviceInfo(userId)
@@ -89,13 +92,14 @@ class DeviceRepositoryImpl(
 
     override suspend fun getDevices(includeNotOwned: Boolean): List<DeviceInfo>? {
         val userId = encryptedSettingsRepository.userId.getOrNull() ?: return null
-        return getTagDevices(includeNotOwned)?.map {
+        return getTagDevices(includeNotOwned)?.mapNotNull {
             it.toDeviceInfo(userId)
         }
     }
 
-    private suspend fun GetDeviceResponse.toDeviceInfo(userId: String): DeviceInfo {
-        val isOwner = bleD2D.metadata.onboardedBy.saGuid == userId
+    private suspend fun GetDeviceResponse.toDeviceInfo(userId: String): DeviceInfo? {
+        val metadata = bleD2D?.metadata ?: return null
+        val isOwner = metadata.onboardedBy.saGuid == userId
         val hasUwb = components.any { components ->
             components.capabilities.any { capability ->
                 capability.id == "tag.uwbActivation" && capability.version != null
@@ -104,9 +108,9 @@ class DeviceRepositoryImpl(
         val iconUrl = getFinalUrl(icons.colouredIcon)
         val disconnectedIconUrl = getFinalUrl(icons.disconnectedIcon)
         val shareable = if(isOwner) {
-            bleD2D.metadata.shareable.enabled
+            metadata.shareable.enabled
         }else{
-            bleD2D.metadata.shareable.enabled && bleD2D.metadata.shareable.members?.any {
+            metadata.shareable.enabled && metadata.shareable.members?.any {
                 it.saGuid == userId
             } == true
         }
@@ -116,21 +120,21 @@ class DeviceRepositoryImpl(
             name,
             label,
             iconUrl,
-            bleD2D.metadata.vendor.mnId,
-            bleD2D.metadata.vendor.setupId,
-            bleD2D.metadata.vendor.modelName,
+            metadata.vendor.mnId,
+            metadata.vendor.setupId,
+            metadata.vendor.modelName,
             disconnectedIconUrl,
             iconUrl.loadMarkerIcons(),
             isOwner,
-            bleD2D.metadata.battery?.level,
-            (bleD2D.metadata.battery?.updated)?.let { updated -> updated * 1000L },
+            metadata.battery?.level,
+            (metadata.battery?.updated)?.let { updated -> updated * 1000L },
             shareable,
-            bleD2D.metadata.shareable.enabled,
-            bleD2D.metadata.searchingStatus,
-            bleD2D.metadata.e2eEncryption.enabled,
+            metadata.shareable.enabled,
+            metadata.searchingStatus,
+            metadata.e2eEncryption.enabled,
             hasUwb,
-            bleD2D.metadata.petWalking.enabled,
-            bleD2D.metadata.remoteRing.enabled
+            metadata.petWalking.enabled,
+            metadata.remoteRing.enabled
         )
     }
 
@@ -209,8 +213,9 @@ class DeviceRepositoryImpl(
 
     private suspend fun GetDeviceResponse.isAllowed(): Boolean {
         val userId = encryptedSettingsRepository.userId.getOrNull() ?: return false
-        val isOwner = bleD2D.metadata.onboardedBy.saGuid == userId
-        val shareable = bleD2D.metadata.shareable.enabled
+        val metadata = bleD2D?.metadata ?: return false
+        val isOwner = metadata.onboardedBy.saGuid == userId
+        val shareable = metadata.shareable.enabled
         return isOwner || shareable
     }
 
