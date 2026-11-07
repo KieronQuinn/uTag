@@ -24,6 +24,7 @@ class SmartThingsUpdateFragment: BaseSettingsFragment(), BackAvailable {
 
     private val markwon by inject<Markwon>()
     private val args by navArgs<SmartThingsUpdateFragmentArgs>()
+    private var errorDialog: AlertDialog? = null
 
     private val viewModel by viewModel<SmartThingsUpdateViewModel> {
         parametersOf(args.release)
@@ -49,6 +50,7 @@ class SmartThingsUpdateFragment: BaseSettingsFragment(), BackAvailable {
     }
 
     private fun handleState(state: State) {
+        if(state !is State.Failed) errorDialog?.dismiss()
         when(state) {
             is State.Info -> setupInfo(state)
             is State.Downloading -> {
@@ -58,10 +60,10 @@ class SmartThingsUpdateFragment: BaseSettingsFragment(), BackAvailable {
                     state.downloadState.percentage
                 )
             }
-            is State.SettingUpHooks -> setLoading(true, getSettingUpText())
+            is State.CheckingUpdate, is State.SettingUpHooks -> setLoading(true, getSettingUpText())
             is State.StartInstall -> setupStartInstall()
-            is State.Failed -> showErrorDialog()
-            is State.Complete -> viewModel.onCloseClicked()
+            is State.Failed -> showErrorDialog(state)
+            is State.Complete -> viewModel.onComplete()
         }
     }
 
@@ -118,16 +120,27 @@ class SmartThingsUpdateFragment: BaseSettingsFragment(), BackAvailable {
         }
     }
 
-    private fun showErrorDialog() {
-        AlertDialog.Builder(requireContext()).apply {
-            setTitle(R.string.update_dialog_failed_title)
-            setMessage(R.string.update_dialog_failed_content)
+    private fun showErrorDialog(error: State.Failed) {
+        if(errorDialog?.isShowing == true) return
+        errorDialog = AlertDialog.Builder(requireContext()).apply {
+            setTitle(R.string.setup_mod_error_title)
+            setMessage(error.message)
             setCancelable(false)
             setPositiveButton(R.string.update_dialog_failed_close) { dialog, _ ->
                 dialog.dismiss()
                 viewModel.onCloseClicked()
             }
-        }.show()
+            if(error.canRetry) {
+                setNegativeButton(R.string.setup_mod_error_retry) { dialog, _ ->
+                    dialog.dismiss()
+                    viewModel.onRetryClicked()
+                }
+            }
+        }.show().also { dialog ->
+            dialog.setOnDismissListener {
+                if(errorDialog === dialog) errorDialog = null
+            }
+        }
     }
 
 }
