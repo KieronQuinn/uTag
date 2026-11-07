@@ -18,22 +18,27 @@ import com.kieronquinn.app.utag.repositories.SmartThingsRepository.ModuleState
 import com.kieronquinn.app.utag.repositories.UpdateRepository
 import com.kieronquinn.app.utag.ui.screens.setup.mod.SetupModViewModel.State.Error.ErrorReason
 import com.kieronquinn.app.utag.utils.extensions.broadcastReceiverAsFlow
+import com.kieronquinn.app.utag.utils.extensions.createApkInstallIntent
 import com.kieronquinn.app.utag.utils.extensions.isOneUI
 import com.kieronquinn.app.utag.utils.extensions.isOneUICompatible
 import com.kieronquinn.app.utag.xposed.Xposed
 import com.kieronquinn.app.utag.xposed.extensions.isPackageInstalled
 import com.kieronquinn.app.utag.xposed.extensions.isSmartThingsModded
+import com.kieronquinn.app.utag.xposed.extensions.verifySecurity
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.catch
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
-import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.mapLatest
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withTimeoutOrNull
 
 abstract class SetupModViewModel: ViewModel() {
 
@@ -45,6 +50,7 @@ abstract class SetupModViewModel: ViewModel() {
     abstract fun onUninstallClicked()
     abstract fun onInstallClicked()
     abstract fun onSetupClicked()
+    abstract fun onRetryClicked()
     abstract fun onCloseClicked()
     abstract fun onNext()
 
@@ -62,9 +68,20 @@ abstract class SetupModViewModel: ViewModel() {
         data class Error(val reason: ErrorReason): State() {
             enum class ErrorReason(@StringRes val message: Int) {
                 FAILED_TO_GET(R.string.setup_mod_error_failed_to_get),
-                FAILED_TO_DOWNLOAD(R.string.setup_mod_error_failed_to_download)
+                FAILED_TO_DOWNLOAD(R.string.setup_mod_error_failed_to_download),
+                HOOKS_TIMEOUT(R.string.setup_mod_error_hooks_timeout),
+                MODULE_TIMEOUT(R.string.setup_mod_error_module_timeout),
+                NO_INSTALLER(R.string.setup_mod_error_no_installer)
             }
         }
+    }
+
+    companion object {
+        /**
+         *  How long to wait for SmartThings to report that the hooks are set up before assuming
+         *  the modded build is never going to answer (ie. it crashes on launch).
+         */
+        const val HOOKS_TIMEOUT = 30_000L
     }
 
 }
@@ -74,7 +91,7 @@ class SetupModViewModelImpl(
     private val navigation: SetupNavigation,
     private val downloadRepository: DownloadRepository,
     updateRepository: UpdateRepository,
-    context: Context
+    private val context: Context
 ): SetupModViewModel() {
 
     private val backingState = MutableStateFlow<State>(State.Loading)
@@ -110,23 +127,48 @@ class SetupModViewModelImpl(
         context.getString(R.string.update_notification_mod, version)
     }
 
-    private val moduleState = resumeBus.mapLatest {
-        smartThingsRepository.getModuleState()
-    }
+    private val moduleState = resumeBus.flatMapLatest {
+        flow {
+            emit(ModuleCheck.Pending)
+            if(!context.packageManager.isPackageInstalled(PACKAGE_NAME_ONECONNECT)) {
+                emit(ModuleCheck.Ready(null))
+                return@flow
+            }
+            emit(withTimeoutOrNull(SetupModViewModel.HOOKS_TIMEOUT) {
+                ModuleCheck.Ready(smartThingsRepository.getModuleStateForRecovery())
+            } ?: ModuleCheck.TimedOut)
+        }.catch { emit(ModuleCheck.TimedOut) }
+    }.stateIn(viewModelScope, SharingStarted.Eagerly, ModuleCheck.Pending)
 
     private val modRelease = flow {
         emit(updateRepository.getModRelease())
     }
 
-    private val areHooksSetup = resumeBus.mapLatest {
-        smartThingsRepository.areHooksSetup()
-    }
-
-    private val hookFinishedReceiver = context.broadcastReceiverAsFlow(
-        IntentFilter(Xposed.ACTION_HOOKING_FINISHED)
-    ).map {
-        true
+    private val areHooksSetup = resumeBus.flatMapLatest {
+        flow {
+            emit(false)
+            emit(withTimeoutOrNull(SetupModViewModel.HOOKS_TIMEOUT) {
+                smartThingsRepository.areHooksReadyForRecovery()
+            } ?: false)
+        }.catch { emit(false) }
     }.stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    private val hookFinishedReceiver = MutableStateFlow(false)
+
+    init {
+        viewModelScope.launch {
+            context.broadcastReceiverAsFlow(IntentFilter(Xposed.ACTION_HOOKING_FINISHED))
+                .collect { intent ->
+                    try {
+                        intent.verifySecurity(PACKAGE_NAME_ONECONNECT)
+                    }catch (_: RuntimeException) {
+                        // Ignore missing, invalid, or malformed security tags.
+                        return@collect
+                    }
+                    hookFinishedReceiver.value = true
+                }
+        }
+    }
 
     private val hooksReady = combine(
         hookFinishedReceiver,
@@ -164,19 +206,28 @@ class SetupModViewModelImpl(
         )
     }
 
-    override val state = combine(
+    private val setupState = combine(
         backingState,
         modRelease,
         smartThings,
         moduleState,
         downloadState
-    ) { backing, release, smartThings, module, download ->
+    ) { backing, release, smartThings, moduleCheck, download ->
         val smartThingsInstalled = smartThings.isSmartThingsInstalled
         val modInstalled = smartThings.isSmartThingsModded
         val hooksReady = smartThings.hooksReady
         val isOneUICompatible = smartThings.isOneUICompatible
         when {
-            backing is State.Loading && module.canContinue() -> State.Complete
+            backing is State.Loading && moduleCheck is ModuleCheck.Pending -> State.Loading
+            backing is State.Loading && moduleCheck is ModuleCheck.TimedOut && smartThingsInstalled -> {
+                when {
+                    hooksReady -> State.Complete
+                    modInstalled -> State.Error(ErrorReason.HOOKS_TIMEOUT)
+                    else -> State.Error(ErrorReason.MODULE_TIMEOUT)
+                }
+            }
+            backing is State.Loading &&
+                (moduleCheck as? ModuleCheck.Ready)?.module.canContinue() -> State.Complete
             isOneUICompatible != null -> State.OneUI(isOneUICompatible)
             //If the user hasn't interacted yet, show info
             backing is State.Loading && release != null -> {
@@ -228,6 +279,17 @@ class SetupModViewModelImpl(
         }
     }.stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
 
+    //Start the timer only while waiting for hooks, and restart it after returning to setup.
+    override val state = combine(setupState, resumeBus) { state, _ -> state }
+        .flatMapLatest { current ->
+            if(current != State.SettingUpHooks) return@flatMapLatest flowOf(current)
+            flow {
+                emit(current)
+                delay(SetupModViewModel.HOOKS_TIMEOUT)
+                emit(State.Error(ErrorReason.HOOKS_TIMEOUT))
+            }
+        }.stateIn(viewModelScope, SharingStarted.Eagerly, State.Loading)
+
     private fun ModuleState?.canContinue(): Boolean {
         return when(this) {
             //We allow newer & outdated builds here to not block the user
@@ -267,6 +329,9 @@ class SetupModViewModelImpl(
 
     override fun onUninstallClicked() {
         viewModelScope.launch {
+            //Allow a cancelled uninstall to show the timeout again, even if no resume occurs.
+            hookFinishedReceiver.value = false
+            resumeBus.value += 1
             Intent(Intent.ACTION_DELETE).apply {
                 data = Uri.parse("package:${PACKAGE_NAME_ONECONNECT}")
                 addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -280,14 +345,14 @@ class SetupModViewModelImpl(
     override fun onInstallClicked() {
         viewModelScope.launch {
             val uri = (state.value as? State.Install)?.installUri ?: return@launch
-            Intent(Intent.ACTION_VIEW, uri).apply {
-                putExtra(Intent.EXTRA_NOT_UNKNOWN_SOURCE, true)
-                setDataAndType(uri, "application/vnd.android.package-archive")
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK)
-                addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-            }.also {
-                navigation.navigate(it)
+            hookFinishedReceiver.value = false
+            val intent = context.createApkInstallIntent(uri)
+            if(intent == null) {
+                backingState.emit(State.Error(ErrorReason.NO_INSTALLER))
+                return@launch
+            }
+            navigation.navigate(intent) {
+                backingState.emit(State.Error(ErrorReason.NO_INSTALLER))
             }
         }
     }
@@ -298,6 +363,10 @@ class SetupModViewModelImpl(
                 Intent(smartThingsRepository.getLaunchIntent() ?: return@launch)
             )
         }
+    }
+
+    override fun onRetryClicked() {
+        resumeBus.value += 1
     }
 
     override fun onCloseClicked() {
@@ -329,5 +398,11 @@ class SetupModViewModelImpl(
         val hooksReady: Boolean,
         val isOneUICompatible: Boolean? //null = not OneUI
     )
+
+    private sealed class ModuleCheck {
+        data object Pending: ModuleCheck()
+        data object TimedOut: ModuleCheck()
+        data class Ready(val module: ModuleState?): ModuleCheck()
+    }
 
 }
