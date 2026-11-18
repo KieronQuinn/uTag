@@ -7,7 +7,6 @@ import android.text.style.RelativeSizeSpan
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.navigation.fragment.navArgs
-import com.kieronquinn.app.utag.BuildConfig
 import com.kieronquinn.app.utag.R
 import com.kieronquinn.app.utag.ui.base.BackAvailable
 import com.kieronquinn.app.utag.ui.base.BaseSettingsFragment
@@ -94,7 +93,7 @@ class SmartThingsUpdateFragment: BaseSettingsFragment(), BackAvailable {
             title = getString(R.string.update_heading_smartthings)
             summary = getString(
                 R.string.update_subheading,
-                BuildConfig.VERSION_NAME,
+                com.kieronquinn.app.utag.xposed.core.BuildConfig.XPOSED_NAME,
                 state.release.version
             )
         }
