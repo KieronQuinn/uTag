@@ -37,6 +37,11 @@
     <string name="setup_mod_error_title">Error</string>
     <string name="setup_mod_error_failed_to_get">Failed to load the latest version of the SmartThings mod from the server. Check your connection and try again later.</string>
     <string name="setup_mod_error_failed_to_download">Failed to download the SmartThings mod. Check your connection and try again later.</string>
+    <string name="setup_mod_error_hooks_timeout">SmartThings did not respond after the mod was installed, which usually means it is crashing on launch. Open SmartThings manually to check for an error, or uninstall it and install the mod again. Uninstalling clears SmartThings data from this device and requires you to sign in again.</string>
+    <string name="setup_mod_error_module_timeout">Could not check the installed SmartThings app. Open SmartThings to check for an error, then try again.</string>
+    <string name="setup_mod_error_uninstall">Uninstall SmartThings</string>
+    <string name="setup_mod_error_retry">Try again</string>
+    <string name="setup_mod_error_no_installer">No app on this device can install packages. Enable the system package installer and try again.</string>
     <string name="setup_mod_error_close">Close</string>
     <string name="setup_mod_metered_dialog_title">Large Download Warning</string>
     <string name="setup_mod_metered_dialog_content">The SmartThings mod APK file is %1s. Continue to download the file?</string>
@@ -783,6 +788,7 @@
     <string name="update_done_content_utag"><b>Note:</b> Your Tags may disconnect during the update process.</string>
     <string name="update_done_content_smartthings"><b>Note:</b> Your Tags may disconnect during the update process.</string>
     <string name="update_done_action">Start Install</string>
+    <string name="update_error_hooks_timeout">SmartThings did not respond after the update. Open SmartThings to check for an error, then try again.</string>
     <string name="update_action">Download</string>
     <string name="update_action_alt">Alternative download</string>
     <string name="download_manager_description">Downloading update…</string>

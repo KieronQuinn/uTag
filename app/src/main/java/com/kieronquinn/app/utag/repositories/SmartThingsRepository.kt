@@ -28,8 +28,12 @@ import com.kieronquinn.app.utag.xposed.Xposed.Companion.CapsuleProviderMethod.GE
 import com.kieronquinn.app.utag.xposed.extensions.getRequiredOneConnectPermissions
 import com.kieronquinn.app.utag.xposed.extensions.isPackageInstalled
 import com.kieronquinn.app.utag.xposed.extensions.isSmartThingsModded
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.async
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.util.UUID
@@ -79,6 +83,9 @@ interface SmartThingsRepository {
      */
     suspend fun getModuleState(): ModuleState?
 
+    /** A probe that can be timed out without waiting for a blocked provider. */
+    suspend fun getModuleStateForRecovery(): ModuleState?
+
     /**
      *  Binds a remote service in SmartThings, bypassing permission and exported requirements
      */
@@ -125,6 +132,9 @@ interface SmartThingsRepository {
      *  Returns whether the Xposed module has its dynamic hooks set up
      */
     suspend fun areHooksSetup(): Boolean
+
+    /** A probe that can be timed out without waiting for a blocked provider. */
+    suspend fun areHooksReadyForRecovery(): Boolean
 
     /**
      *  [isUTagBuild] indicates whether the build of SmartThings that's installed is signed with
@@ -208,6 +218,12 @@ class SmartThingsRepositoryImpl(
     private val scope = MainScope()
     private val packageManager = context.packageManager
 
+    // The provider's synchronous Binder calls may never return. Keep at most one outstanding
+    // call of each kind for this singleton, independently of a screen's lifetime.
+    private val recoveryProbeScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val recoveryModuleProbe = RecoveryProbe(recoveryProbeScope) { getModuleState() }
+    private val recoveryHooksProbe = RecoveryProbe(recoveryProbeScope) { areHooksSetup() }
+
     override val smartThingsVersion = try {
         packageManager.getPackageInfo(PACKAGE_NAME_ONECONNECT, 0).versionName
             ?: FALLBACK_VERSION
@@ -229,6 +245,10 @@ class SmartThingsRepositoryImpl(
     override fun getLaunchIntent(): Intent? {
         return packageManager.getLaunchIntentForPackage(PACKAGE_NAME_ONECONNECT)
     }
+
+    override suspend fun getModuleStateForRecovery() = recoveryModuleProbe.awaitFresh()
+
+    override suspend fun areHooksReadyForRecovery() = recoveryHooksProbe.awaitFresh()
 
     override suspend fun getModuleState(): ModuleState? {
         return withContext(Dispatchers.IO) {
@@ -328,4 +348,24 @@ class SmartThingsRepositoryImpl(
         }
     }
 
+}
+
+/** A timed-out caller never cancels the provider call or starts another while it is blocked. */
+private class RecoveryProbe<T>(
+    private val scope: CoroutineScope,
+    private val probe: suspend () -> T
+) {
+    private var inFlight: Deferred<T>? = null
+
+    suspend fun awaitFresh(): T {
+        // A call started by an earlier generation may report an old installation state.
+        val previous = synchronized(this) { inFlight?.takeUnless { it.isCompleted } }
+        previous?.join()
+        val current = synchronized(this) {
+            inFlight?.takeUnless { it.isCompleted } ?: scope.async { probe() }.also {
+                inFlight = it
+            }
+        }
+        return current.await()
+    }
 }

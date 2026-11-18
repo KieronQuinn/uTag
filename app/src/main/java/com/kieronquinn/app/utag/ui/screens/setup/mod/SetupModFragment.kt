@@ -21,7 +21,7 @@ import org.koin.androidx.viewmodel.ext.android.viewModel
 class SetupModFragment: BaseSettingsFragment(), BackAvailable {
 
     private val viewModel by viewModel<SetupModViewModel>()
-    private var isShowingErrorDialog = false
+    private var errorDialog: AlertDialog? = null
 
     private val connectivityManager by lazy {
         requireContext().getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
@@ -47,6 +47,7 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
     }
 
     private fun handleState(state: State) {
+        if(state !is State.Error) errorDialog?.dismiss()
         when(state) {
             is State.Loading -> setLoading(true)
             is State.Info -> handleInfo(state)
@@ -151,9 +152,8 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
     }
 
     private fun showErrorDialog(errorReason: ErrorReason) {
-        if(isShowingErrorDialog) return
-        isShowingErrorDialog = true
-        AlertDialog.Builder(requireContext()).apply {
+        if(errorDialog?.isShowing == true) return
+        errorDialog = AlertDialog.Builder(requireContext()).apply {
             setTitle(R.string.setup_mod_error_title)
             setMessage(errorReason.message)
             setCancelable(false)
@@ -161,7 +161,24 @@ class SetupModFragment: BaseSettingsFragment(), BackAvailable {
                 dialog.dismiss()
                 viewModel.onCloseClicked()
             }
-        }.show()
+            //Offer to remove SmartThings if the mod never reports back.
+            if(errorReason == ErrorReason.HOOKS_TIMEOUT) {
+                setNegativeButton(R.string.setup_mod_error_uninstall) { dialog, _ ->
+                    dialog.dismiss()
+                    viewModel.onUninstallClicked()
+                }
+            }
+            if(errorReason == ErrorReason.MODULE_TIMEOUT) {
+                setNegativeButton(R.string.setup_mod_error_retry) { dialog, _ ->
+                    dialog.dismiss()
+                    viewModel.onRetryClicked()
+                }
+            }
+        }.show().also { dialog ->
+            dialog.setOnDismissListener {
+                if(errorDialog === dialog) errorDialog = null
+            }
+        }
     }
 
     private fun showMeteredConnectionDialog(fileSize: Long) {
